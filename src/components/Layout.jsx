@@ -1,0 +1,31 @@
+import TopHeader from './TopHeader';
+import Header from './Header';
+import MobileMenu from './MobileMenu';
+import FooterArea from './FooterArea';
+import ScrollToTop from './ScrollToTop';
+
+const Layout = ({ children }) => {
+    return (
+        <>
+            <TopHeader />
+            <Header />
+            <MobileMenu />
+            {children}
+            <FooterArea />
+            <ScrollToTop />
+            {/* Search Popup */}
+            <div className="search-popup">
+                <button className="close-search style-two"><span className="flaticon-multiply"><i className="far fa-times-circle"></i></span></button>
+                <button className="close-search"><i className="bi bi-arrow-up"></i></button>
+                <form method="post" action="#">
+                    <div className="form-group">
+                        <input type="search" name="search-field" placeholder="Search Here" required="" />
+                        <button type="submit"><i className="fa fa-search"></i></button>
+                    </div>
+                </form>
+            </div>
+        </>
+    );
+};
+
+export default Layout;
