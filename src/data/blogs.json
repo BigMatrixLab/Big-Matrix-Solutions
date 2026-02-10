@@ -1,0 +1,74 @@
+[
+    {
+        "id": 1,
+        "slug": "solution-this-business-for-is-marketing-blog",
+        "title": "Solution This Business For is Marketing Blog",
+        "admin": "Mera",
+        "comments": "04",
+        "image": "/assets/images/inner-images/blog-1.jpg",
+        "category": "Cyber Security",
+        "desc": "Monotonectally granular to front markets task data semper maecenas ferform",
+        "date": "Jan 10, 2024",
+        "content": "Monotonectally synergize granular markets and front markets. Collaboratively visualize strategic infomediaries after multimedia based models. Synergistically task state of the art infrastructures for professionally optimize interdependent intellectual interoperable connect best practices. Progressively fabricate done"
+    },
+    {
+        "id": 2,
+        "slug": "easy-and-most-powerful-server-and-platform",
+        "title": "Easy and Most Powerful Server and Platform.",
+        "admin": "Mera",
+        "comments": "04",
+        "image": "/assets/images/inner-images/blog-2.jpg",
+        "category": "Marketing",
+        "desc": "Monotonectally granular to front markets task data semper maecenas ferform",
+        "date": "Feb 15, 2024",
+        "content": "Monotonectally synergize granular markets and front markets. Collaboratively visualize strategic infomediaries after multimedia based models. Synergistically task state of the art infrastructures for professionally optimize interdependent intellectual interoperable connect best practices. Progressively fabricate done"
+    },
+    {
+        "id": 3,
+        "slug": "in-eu-fringilla-accumsan-purusvel-sollicitudin",
+        "title": "In eu fringilla, accumsan purusvel sollicitudin.",
+        "admin": "Mera",
+        "comments": "04",
+        "image": "/assets/images/inner-images/blog-3.jpg",
+        "category": "Software",
+        "desc": "Monotonectally granular to front markets task data semper maecenas ferform",
+        "date": "Mar 20, 2024",
+        "content": "Monotonectally synergize granular markets and front markets. Collaboratively visualize strategic infomediaries after multimedia based models. Synergistically task state of the art infrastructures for professionally optimize interdependent intellectual interoperable connect best practices. Progressively fabricate done"
+    },
+    {
+        "id": 4,
+        "slug": "vivamus-vehicula-nl-purus-at-eros-interdum",
+        "title": "Vivamus vehicula nl purus at eros interdum.",
+        "admin": "Mera",
+        "comments": "04",
+        "image": "/assets/images/inner-images/blog-4.jpg",
+        "category": "Android",
+        "desc": "Monotonectally granular to front markets task data semper maecenas ferform",
+        "date": "Apr 05, 2024",
+        "content": "Monotonectally synergize granular markets and front markets. Collaboratively visualize strategic infomediaries after multimedia based models. Synergistically task state of the art infrastructures for professionally optimize interdependent intellectual interoperable connect best practices. Progressively fabricate done"
+    },
+    {
+        "id": 5,
+        "slug": "optimizing-it-infrastructure-for-cost-efficiency",
+        "title": "Optimizing IT Infrastructure for Cost Efficiency.",
+        "admin": "Mera",
+        "comments": "04",
+        "image": "/assets/images/inner-images/blog-5.jpg",
+        "category": "UI Design",
+        "desc": "Monotonectally granular to front markets task data semper maecenas ferform",
+        "date": "May 25, 2024",
+        "content": "Monotonectally synergize granular markets and front markets. Collaboratively visualize strategic infomediaries after multimedia based models. Synergistically task state of the art infrastructures for professionally optimize interdependent intellectual interoperable connect best practices. Progressively fabricate done"
+    },
+    {
+        "id": 6,
+        "slug": "business-rules-of-running-to-web-solution",
+        "title": "Business Rules of Running to Web Solution.",
+        "admin": "Mera",
+        "comments": "04",
+        "image": "/assets/images/inner-images/blog-6.jpg",
+        "category": "Solutions",
+        "desc": "Monotonectally granular to front markets task data semper maecenas ferform",
+        "date": "Jun 12, 2024",
+        "content": "Monotonectally synergize granular markets and front markets. Collaboratively visualize strategic infomediaries after multimedia based models. Synergistically task state of the art infrastructures for professionally optimize interdependent intellectual interoperable connect best practices. Progressively fabricate done"
+    }
+]

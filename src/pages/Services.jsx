@@ -1,18 +1,7 @@
-import React from 'react';
-import Breadcrumb from '../components/Breadcrumb';
+import servicesData from '../data/services.json';
+import { Link } from 'react-router-dom';
 
 const Services = () => {
-    const services = [
-        { title: "Cloud Services", icon: "/assets/images/service-inner/service-icon-1.png", desc: "Monotonectal grants to business visualize provid solution services business provid done" },
-        { title: "IT Management", icon: "/assets/images/service-inner/service-icon-2.png", desc: "Monotonectal grants to business visualize provid solution services business provid done" },
-        { title: "Software Renew", icon: "/assets/images/service-inner/service-icon-3.png", desc: "Monotonectal grants to business visualize provid solution services business provid done" },
-        { title: "Machine Learning", icon: "/assets/images/service-inner/service-icon-4.png", desc: "Monotonectal grants to business visualize provid solution services business provid done" },
-        { title: "Digital Marketing", icon: "/assets/images/service-inner/service-icon-5.png", desc: "Monotonectal grants to business visualize provid solution services business provid done" },
-        { title: "Web Development", icon: "/assets/images/service-inner/service-icon-6.png", desc: "Monotonectal grants to business visualize provid solution services business provid done" },
-        { title: "Cyber Security", icon: "/assets/images/service-inner/service-icon-7.png", desc: "Monotonectal grants to business visualize provid solution services business provid done" },
-        { title: "Data Analytic", icon: "/assets/images/service-inner/service-icon-8.png", desc: "Monotonectal grants to business visualize provid solution services business provid done" },
-    ];
-
     return (
         <>
             <Breadcrumb pageTitle="Our Service" breadcrumbItem="Service" />
@@ -30,8 +19,8 @@ const Services = () => {
                         </div>
                     </div>
                     <div className="row">
-                        {services.map((service, index) => (
-                            <div className="col-lg-3 col-md-6" key={index}>
+                        {servicesData.map((service) => (
+                            <div className="col-lg-3 col-md-6" key={service.id}>
                                 <div className="single-service-box">
                                     <div className="service-icon">
                                         <img src={service.icon} alt={service.title} />
@@ -39,7 +28,7 @@ const Services = () => {
                                     <div className="service-content">
                                         <h4>{service.title}</h4>
                                         <p>{service.desc}</p>
-                                        <a href="#">Learn More <i className="bi bi-arrow-right"></i></a>
+                                        <Link to={`/service/${service.slug}`}>Learn More <i className="bi bi-arrow-right"></i></Link>
                                     </div>
                                 </div>
                             </div>

@@ -31,23 +31,9 @@ const Header = () => {
                     <div className="col-lg-9">
                         <div className="header-menu">
                             <ul>
-                                <li className="menu-item-has-children"><Link to="/">Home<i className="fas fa-chevron-down"></i></Link>
-                                    <ul className="sub-menu">
-                                        <li><Link to="/">Home 1</Link></li>
-                                    </ul>
-                                </li>
-                                <li className="menu-item-has-children"><Link to="#">About<i className="fas fa-chevron-down"></i></Link>
-                                    <ul className="sub-menu">
-                                        <li><Link to="/about-1">About Us 1</Link></li>
-                                        <li><Link to="/about-2">About Us 2</Link></li>
-                                    </ul>
-                                </li>
-                                <li className="menu-item-has-children"><Link to="/service">Service<i className="fas fa-chevron-down"></i></Link>
-                                    <ul className="sub-menu">
-                                        <li><Link to="/service">Service</Link></li>
-                                        <li><Link to="/service-details">Service Details</Link></li>
-                                    </ul>
-                                </li>
+                                <li><Link to="/">Home</Link></li>
+                                <li><Link to="/about">About</Link></li>
+                                <li><Link to="/service">Service</Link></li>
                                 <li className="menu-item-has-children"><Link to="#">Pages<i className="fas fa-chevron-down"></i></Link>
                                     <ul className="sub-menu">
                                         <li><Link to="/mission">Mission Vision</Link></li>
@@ -62,7 +48,6 @@ const Header = () => {
                                 <li className="menu-item-has-children"><Link to="/blog">Blog<i className="fas fa-chevron-down"></i></Link>
                                     <ul className="sub-menu">
                                         <li><Link to="/blog">Blog Grid</Link></li>
-                                        <li><Link to="/blog-list">Blog List</Link></li>
                                         <li><Link to="/blog-details">Blog Details</Link></li>
                                     </ul>
                                 </li>

@@ -1,11 +1,30 @@
 import React from 'react';
+import { useParams, Link } from 'react-router-dom';
 import Breadcrumb from '../components/Breadcrumb';
 import BrandArea from '../components/BrandArea';
+import servicesData from '../data/services.json';
 
 const ServiceDetails = () => {
+    const { slug } = useParams();
+    const service = servicesData.find(s => s.slug === slug);
+
+    if (!service) {
+        return (
+            <>
+                <Breadcrumb pageTitle="Service Not Found" breadcrumbItem="Service" />
+                <div className="services-details-area">
+                    <div className="container text-center">
+                        <h2>Service not found</h2>
+                        <Link to="/service" className="btn btn-primary mt-4">Back to Services</Link>
+                    </div>
+                </div>
+            </>
+        );
+    }
+
     return (
         <>
-            <Breadcrumb pageTitle="Service Details" breadcrumbItem="Service" />
+            <Breadcrumb pageTitle={service.title} breadcrumbItem="Service" />
 
             {/* Services Details Area */}
             <div className="services-details-area">
@@ -15,12 +34,12 @@ const ServiceDetails = () => {
                             <div className="row">
                                 <div className="col-lg-12">
                                     <div className="services-details-thumb">
-                                        <img src="/assets/images/service-inner/service-details.jpg" alt="" />
+                                        <img src={service.image} alt={service.title} />
                                     </div>
                                     <div className="services-details-content">
-                                        <h4 className="services-details-title">Appropriately engage leading-edge</h4>
-                                        <p className="services-details-desc">Alternative innovation to ethical network environmental whiteboard pursue compelling results for premier methods empowerment. Dramatically architect go forward opportunities before user-centric partnerships. Credibly implement exceptional </p>
-                                        <p className="services-details-desc">Continually fashion orthogonal leadership skills whereas wireless metrics. Uniquely syndicate exceptional opportunities with interdependent users. Globally enhance fully tested meta-services rather than pandemic solutions. Proactively integrate client-integrate go forward architectures and turnkey meta-services. Interactively harness integrated ROI whereas frictionless products.</p>
+                                        <h4 className="services-details-title">{service.title}</h4>
+                                        <p className="services-details-desc">{service.desc}</p>
+                                        <p className="services-details-desc">{service.longDescription}</p>
                                     </div>
                                     <div className="row">
                                         <div className="col-lg-6 col-md-6">
@@ -100,11 +119,15 @@ const ServiceDetails = () => {
                                         </div>
                                         <div className="widget-category">
                                             <ul>
-                                                <li><a href="#"><img src="/assets/images/service-inner/category-icon.png" alt="" />App Development<i className="bi bi-arrow-right"></i></a></li>
-                                                <li><a href="#"><img src="/assets/images/service-inner/category-icon.png" alt="" />IT Solution<i className="bi bi-arrow-right"></i></a></li>
-                                                <li><a href="#"><img src="/assets/images/service-inner/category-icon.png" alt="" />Digital Marketing<i className="bi bi-arrow-right"></i></a></li>
-                                                <li><a href="#"><img src="/assets/images/service-inner/category-icon.png" alt="" />Web Design<i className="bi bi-arrow-right"></i></a></li>
-                                                <li><a href="#"><img src="/assets/images/service-inner/category-icon.png" alt="" />Web Development<i className="bi bi-arrow-right"></i></a></li>
+                                                {servicesData.slice(0, 5).map(s => (
+                                                    <li key={s.id}>
+                                                        <Link to={`/service/${s.slug}`}>
+                                                            <img src="/assets/images/service-inner/category-icon.png" alt="" />
+                                                            {s.title}
+                                                            <i className="bi bi-arrow-right"></i>
+                                                        </Link>
+                                                    </li>
+                                                ))}
                                             </ul>
                                         </div>
                                     </div>
@@ -125,7 +148,7 @@ const ServiceDetails = () => {
                                         <h3 className="widget-sidber-contact-number">+123 (4567) 890</h3>
                                         <span className="widget-sidber-contact-gmail"><i className="bi bi-envelope-fill"></i> example@gmail.com</span>
                                         <div className="widget-sidber-contact-btn">
-                                            <a href="/contact">Contact Us <i className="bi bi-arrow-right"></i></a>
+                                            <Link to="/contact">Contact Us <i className="bi bi-arrow-right"></i></Link>
                                         </div>
                                     </div>
                                 </div>

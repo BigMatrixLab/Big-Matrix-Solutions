@@ -1,28 +1,47 @@
 import React from 'react';
+import { useParams, Link } from 'react-router-dom';
 import Breadcrumb from '../components/Breadcrumb';
 import BrandArea from '../components/BrandArea';
+import blogsData from '../data/blogs.json';
 
 const BlogDetails = () => {
+    const { slug } = useParams();
+    const post = blogsData.find(b => b.slug === slug);
+
+    if (!post) {
+        return (
+            <>
+                <Breadcrumb pageTitle="Blog Post Not Found" breadcrumbItem="Blog" />
+                <div className="blog-details-area">
+                    <div className="container text-center">
+                        <h2>Blog post not found</h2>
+                        <Link to="/blog" className="btn btn-primary mt-4">Back to Blog</Link>
+                    </div>
+                </div>
+            </>
+        );
+    }
+
     return (
         <>
-            <Breadcrumb pageTitle="Blog Details" breadcrumbItem="Blog" />
+            <Breadcrumb pageTitle={post.title} breadcrumbItem="Blog" />
 
             <div className="blog-details-area">
                 <div className="container">
                     <div className="row">
                         <div className="col-lg-8">
                             <div className="blog-details-thumb">
-                                <img src="/assets/images/inner-images/blog-1.jpg" alt="" />
+                                <img src={post.image} alt={post.title} />
                             </div>
                             <div className="blog-details-content">
                                 <div className="blog-meta">
-                                    <span><i className="bi bi-person"></i>By Admin</span>
-                                    <span><i className="bi bi-calendar3"></i>20 March, 2024</span>
-                                    <span><i className="bi bi-chat-left-text"></i>04 Comments</span>
+                                    <span><i className="bi bi-person"></i>By {post.admin}</span>
+                                    <span><i className="bi bi-calendar3"></i>{post.date}</span>
+                                    <span><i className="bi bi-chat-left-text"></i>{post.comments} Comments</span>
                                 </div>
-                                <h4 className="blog-details-title">Solution This Business For is Marketing Blog</h4>
-                                <p className="blog-details-desc">Alternative innovation to ethical network environmental whiteboard pursue compelling results for premier methods empowerment. Dramatically architect go forward opportunities before user-centric partnerships. Credibly implement exceptional </p>
-                                <p className="blog-details-desc">Continually fashion orthogonal leadership skills whereas wireless metrics. Uniquely syndicate exceptional opportunities with interdependent users. Globally enhance fully tested meta-services rather than pandemic solutions. Proactively integrate client-integrate go forward architectures and turnkey meta-services. Interactively harness integrated ROI whereas frictionless products.</p>
+                                <h4 className="blog-details-title">{post.title}</h4>
+                                <p className="blog-details-desc">{post.desc}</p>
+                                <p className="blog-details-desc">{post.content}</p>
 
                                 <blockquote>
                                     "Monotonectally synergize granular top visualize strategic infomediaries after task state of the art infrastructures digital agency"
@@ -38,10 +57,9 @@ const BlogDetails = () => {
                                 </div>
                                 <div className="widget-category">
                                     <ul>
-                                        <li><a href="#">IT Solution<i className="bi bi-arrow-right"></i></a></li>
-                                        <li><a href="#">Cloud Services<i className="bi bi-arrow-right"></i></a></li>
-                                        <li><a href="#">Data Analysis<i className="bi bi-arrow-right"></i></a></li>
-                                        <li><a href="#">Marketing<i className="bi bi-arrow-right"></i></a></li>
+                                        {[...new Set(blogsData.map(b => b.category))].map((cat, idx) => (
+                                            <li key={idx}><Link to="/blog">{cat}<i className="bi bi-arrow-right"></i></Link></li>
+                                        ))}
                                     </ul>
                                 </div>
                             </div>

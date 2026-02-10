@@ -30,28 +30,14 @@ const MobileMenu = () => {
                         </Link>
                         <nav className="mean-nav" style={{ display: isOpen ? 'block' : 'none' }}>
                             <ul className="nav_scroll">
-                                <li className="menu-item-has-children">
-                                    <Link to="#" onClick={(e) => { e.preventDefault(); toggleSubMenu(1); }}>Home</Link>
-                                    <ul className="sub-menu" style={{ display: activeSubMenu === 1 ? 'block' : 'none' }}>
-                                        <li><Link to="/" onClick={handleLinkClick}>Home 1</Link></li>
-                                    </ul>
-                                    <Link className="mean-expand" to="#" onClick={(e) => { e.preventDefault(); toggleSubMenu(1); }} style={{ fontSize: '18px' }}>{activeSubMenu === 1 ? '-' : '+'}</Link>
+                                <li>
+                                    <Link to="/" onClick={handleLinkClick}>Home</Link>
                                 </li>
-                                <li className="menu-item-has-children">
-                                    <Link to="#" onClick={(e) => { e.preventDefault(); toggleSubMenu(2); }}>About</Link>
-                                    <ul className="sub-menu" style={{ display: activeSubMenu === 2 ? 'block' : 'none' }}>
-                                        <li><Link to="/about-1" onClick={handleLinkClick}>About Us 1</Link></li>
-                                        <li><Link to="/about-2" onClick={handleLinkClick}>About Us 2</Link></li>
-                                    </ul>
-                                    <Link className="mean-expand" to="#" onClick={(e) => { e.preventDefault(); toggleSubMenu(2); }} style={{ fontSize: '18px' }}>{activeSubMenu === 2 ? '-' : '+'}</Link>
+                                <li>
+                                    <Link to="/about" onClick={handleLinkClick}>About</Link>
                                 </li>
-                                <li className="menu-item-has-children">
-                                    <Link to="#" onClick={(e) => { e.preventDefault(); toggleSubMenu(3); }}>Service</Link>
-                                    <ul className="sub-menu" style={{ display: activeSubMenu === 3 ? 'block' : 'none' }}>
-                                        <li><Link to="/service" onClick={handleLinkClick}>Service</Link></li>
-                                        <li><Link to="/service-details" onClick={handleLinkClick}>Service Details</Link></li>
-                                    </ul>
-                                    <Link className="mean-expand" to="#" onClick={(e) => { e.preventDefault(); toggleSubMenu(3); }} style={{ fontSize: '18px' }}>{activeSubMenu === 3 ? '-' : '+'}</Link>
+                                <li>
+                                    <Link to="/service" onClick={handleLinkClick}>Service</Link>
                                 </li>
                                 <li className="menu-item-has-children">
                                     <Link to="#" onClick={(e) => { e.preventDefault(); toggleSubMenu(4); }}>Pages</Link>
@@ -70,7 +56,6 @@ const MobileMenu = () => {
                                     <Link to="#" onClick={(e) => { e.preventDefault(); toggleSubMenu(5); }}>Blog</Link>
                                     <ul className="sub-menu" style={{ display: activeSubMenu === 5 ? 'block' : 'none' }}>
                                         <li><Link to="/blog" onClick={handleLinkClick}>Blog Grid</Link></li>
-                                        <li><Link to="/blog-list" onClick={handleLinkClick}>Blog List</Link></li>
                                         <li><Link to="/blog-details" onClick={handleLinkClick}>Blog Details</Link></li>
                                     </ul>
                                     <Link className="mean-expand" to="#" onClick={(e) => { e.preventDefault(); toggleSubMenu(5); }} style={{ fontSize: '18px' }}>{activeSubMenu === 5 ? '-' : '+'}</Link>

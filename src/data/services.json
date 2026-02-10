@@ -1,0 +1,74 @@
+[
+    {
+        "id": 1,
+        "slug": "cloud-services",
+        "title": "Cloud Services",
+        "icon": "/assets/images/service-inner/service-icon-1.png",
+        "desc": "Monotonectal grants to business visualize provid solution services business provid done",
+        "longDescription": "Alternative innovation to ethical network environmental whiteboard pursue compelling results for premier methods empowerment. Dramatically architect go forward opportunities before user-centric partnerships. Credibly implement exceptional. Continually fashion orthogonal leadership skills whereas wireless metrics. Uniquely syndicate exceptional opportunities with interdependent users. Globally enhance fully tested meta-services rather than pandemic solutions. Proactively integrate client-integrate go forward architectures and turnkey meta-services. Interactively harness integrated ROI whereas frictionless products.",
+        "image": "/assets/images/inner-images/service-details.jpg"
+    },
+    {
+        "id": 2,
+        "slug": "it-management",
+        "title": "IT Management",
+        "icon": "/assets/images/service-inner/service-icon-2.png",
+        "desc": "Monotonectal grants to business visualize provid solution services business provid done",
+        "longDescription": "Our IT Management services provide comprehensive oversight of your organization's technology systems, ensuring reliability and peak performance. We handle everything from infrastructure monitoring to strategic planning, allowing you to focus on your core business objectives with confidence.",
+        "image": "/assets/images/inner-images/service-details.jpg"
+    },
+    {
+        "id": 3,
+        "slug": "software-renew",
+        "title": "Software Renew",
+        "icon": "/assets/images/service-inner/service-icon-3.png",
+        "desc": "Monotonectal grants to business visualize provid solution services business provid done",
+        "longDescription": "Modernize your legacy systems with our software renewal services. We specialize in refactoring, updating, and optimizing existing codebases to meet modern standards, improving scalability, security, and user experience without the need for a total rebuild.",
+        "image": "/assets/images/inner-images/service-details.jpg"
+    },
+    {
+        "id": 4,
+        "slug": "machine-learning",
+        "title": "Machine Learning",
+        "icon": "/assets/images/service-inner/service-icon-4.png",
+        "desc": "Monotonectal grants to business visualize provid solution services business provid done",
+        "longDescription": "Leverage the power of AI with our custom machine learning solutions. From predictive analytics to natural language processing, we build intelligent systems that learn from your data to drive automation and insightful decision-making.",
+        "image": "/assets/images/inner-images/service-details.jpg"
+    },
+    {
+        "id": 5,
+        "slug": "digital-marketing",
+        "title": "Digital Marketing",
+        "icon": "/assets/images/service-inner/service-icon-5.png",
+        "desc": "Monotonectal grants to business visualize provid solution services business provid done",
+        "longDescription": "Expand your reach and engage your audience through data-driven digital marketing strategies. We provide a full suite of services including SEO, PPC, social media management, and content creation to help your brand thrive in the digital landscape.",
+        "image": "/assets/images/inner-images/service-details.jpg"
+    },
+    {
+        "id": 6,
+        "slug": "web-development",
+        "title": "Web Development",
+        "icon": "/assets/images/service-inner/service-icon-6.png",
+        "desc": "Monotonectal grants to business visualize provid solution services business provid done",
+        "longDescription": "We build high-performance, responsive websites and web applications tailored to your business needs. Utilizing the latest technologies, we ensure your online presence is fast, secure, and provides an exceptional user experience on all devices.",
+        "image": "/assets/images/inner-images/service-details.jpg"
+    },
+    {
+        "id": 7,
+        "slug": "cyber-security",
+        "title": "Cyber Security",
+        "icon": "/assets/images/service-inner/service-icon-7.png",
+        "desc": "Monotonectal grants to business visualize provid solution services business provid done",
+        "longDescription": "Protect your digital assets with our robust cyber security solutions. We offer vulnerability assessments, network protection, and security auditing to defend your business against evolving cyber threats and ensure data integrity.",
+        "image": "/assets/images/inner-images/service-details.jpg"
+    },
+    {
+        "id": 8,
+        "slug": "data-analytic",
+        "title": "Data Analytic",
+        "icon": "/assets/images/service-inner/service-icon-8.png",
+        "desc": "Monotonectal grants to business visualize provid solution services business provid done",
+        "longDescription": "Turn your data into actionable insights. Our data analytics services help you understand trends, optimize operations, and uncover new opportunities through advanced visualization and statistical modeling.",
+        "image": "/assets/images/inner-images/service-details.jpg"
+    }
+]
