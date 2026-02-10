@@ -44,7 +44,7 @@ const ProjectDetails = () => {
                                     <h4>Project Information</h4>
                                     <ul>
                                         <li><span>Category :</span> IT Solution</li>
-                                        <li><span>Client :</span> Big-Matrix</li>
+                                        <li><span>Client :</span> Big-Matrix Solutions</li>
                                         <li><span>Date :</span> 20 March, 2024</li>
                                         <li><span>Location :</span> New York, USA</li>
                                         <li><span>Duration :</span> 6 Months</li>

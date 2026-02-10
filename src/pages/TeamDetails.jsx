@@ -21,7 +21,7 @@ const TeamDetails = () => {
                                 <div className="team-details-content">
                                     <div className="team-member-title">
                                         <h4>Anowar Hossin Omio</h4>
-                                        <p>Big-Matrix Founder & CEO</p>
+                                        <p>Big-Matrix Solutions Founder & CEO</p>
                                     </div>
                                     <p className="desc">Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor creative labore et dolore magna aliqua ipsum suspendisse ultrices gravida commodo viverra accu eiusmod tempor incididunt ut labore et dolore magna aliqua.</p>
                                 </div>

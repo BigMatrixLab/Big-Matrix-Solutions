@@ -6,8 +6,8 @@ const Project = () => {
     const projects = [
         { title: "Analytics", category: "Database Design", image: "/assets/images/inner-images/project-1.jpg" },
         { title: "Marketing", category: "Digital Marketing", image: "/assets/images/inner-images/project-2.jpg" },
-        { title: "Toptech", category: "Tech Cover Industry", image: "/assets/images/inner-images/project-3.jpg" },
-        { title: "Big Matrix", category: "Software Development", image: "/assets/images/inner-images/project-3.jpg" },
+        { title: "Big-Matrix Solutions", category: "Tech Cover Industry", image: "/assets/images/inner-images/project-3.jpg" },
+        { title: "Big-Matrix Solutions", category: "Software Development", image: "/assets/images/inner-images/project-3.jpg" },
         { title: "Global Solution", category: "IT Infrastructure", image: "/assets/images/inner-images/project-1.jpg" },
         { title: "Future Tech", category: "Cloud Computing", image: "/assets/images/inner-images/project-2.jpg" },
     ];
@@ -55,7 +55,7 @@ const Project = () => {
                     <div className="row align-items-center">
                         <div className="col-lg-6">
                             <div className="section-title left inner-style">
-                                <h1>Get Latest Update from Big-Matrix</h1>
+                                <h1>Get Latest Update from Big-Matrix Solutions</h1>
                                 <h1>Stay Connect with Us</h1>
                             </div>
                         </div>

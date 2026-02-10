@@ -72,7 +72,7 @@ const FooterArea = () => {
                         <div className="row">
                             <div className="col-lg-6 col-md-6">
                                 <div className="footer-bottom-content">
-                                    <p>© 2024 Big-Matrix. Designed By Dream IT Solution</p>
+                                    <p>© 2024 Big-Matrix Solutions. Designed By Dream IT Solution</p>
                                 </div>
                             </div>
                             <div className="col-lg-6 col-md-6">
