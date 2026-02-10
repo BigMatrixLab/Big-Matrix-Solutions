@@ -1,4 +1,3 @@
-import TopHeader from './TopHeader';
 import Header from './Header';
 import MobileMenu from './MobileMenu';
 import FooterArea from './FooterArea';
@@ -7,7 +6,6 @@ import ScrollToTop from './ScrollToTop';
 const Layout = ({ children }) => {
     return (
         <>
-            <TopHeader />
             <Header />
             <MobileMenu />
             {children}

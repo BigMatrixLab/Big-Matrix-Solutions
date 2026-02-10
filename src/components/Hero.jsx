@@ -17,10 +17,10 @@ const Hero = () => {
                         </div>
                         <div className="hero-button">
                             <Link to="/contact">Lets Talk<i className="bi bi-arrow-right"></i></Link>
-                            <Link className="button-two" to="/about-1">Read More<i className="bi bi-arrow-right"></i></Link>
+                            <Link className="button-two" to="/about">Read More<i className="bi bi-arrow-right"></i></Link>
                         </div>
                     </div>
-                    <div className="col-lg-4">
+                    <div className="col-lg-4 d-none d-lg-block">
                         <div className="hero-right">
                             <div className="hero-thumb">
                                 <img src="/assets/images/home-2/hero-thumb.png" alt="" />

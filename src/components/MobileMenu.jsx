@@ -21,10 +21,13 @@ const MobileMenu = () => {
     };
 
     return (
-        <div className="mobile-menu-area sticky d-sm-block d-md-block d-lg-none">
+        <div className="mobile-menu-area sticky d-block d-lg-none">
             <div className="mobile-menu">
                 <nav className="header-menu">
                     <div className="mean-bar">
+                        <div className="mean-logo">
+                            <Link to="/"><img src="/assets/images/home-1/logo.png" alt="logo" style={{ maxHeight: '40px' }} /></Link>
+                        </div>
                         <Link to="#" className="meanmenu-reveal" style={{ right: 0, left: 'auto', textAlign: 'center', textIndent: 0, fontSize: '18px' }} onClick={(e) => { e.preventDefault(); toggleMenu(); }}>
                             <span></span><span></span><span></span>
                         </Link>
@@ -52,13 +55,8 @@ const MobileMenu = () => {
                                     </ul>
                                     <Link className="mean-expand" to="#" onClick={(e) => { e.preventDefault(); toggleSubMenu(4); }} style={{ fontSize: '18px' }}>{activeSubMenu === 4 ? '-' : '+'}</Link>
                                 </li>
-                                <li className="menu-item-has-children">
-                                    <Link to="#" onClick={(e) => { e.preventDefault(); toggleSubMenu(5); }}>Blog</Link>
-                                    <ul className="sub-menu" style={{ display: activeSubMenu === 5 ? 'block' : 'none' }}>
-                                        <li><Link to="/blog" onClick={handleLinkClick}>Blog Grid</Link></li>
-                                        <li><Link to="/blog-details" onClick={handleLinkClick}>Blog Details</Link></li>
-                                    </ul>
-                                    <Link className="mean-expand" to="#" onClick={(e) => { e.preventDefault(); toggleSubMenu(5); }} style={{ fontSize: '18px' }}>{activeSubMenu === 5 ? '-' : '+'}</Link>
+                                <li>
+                                    <Link to="/blog" onClick={handleLinkClick}>Blog</Link>
                                 </li>
                                 <li><Link to="/contact" onClick={handleLinkClick}>Contact</Link></li>
                             </ul>

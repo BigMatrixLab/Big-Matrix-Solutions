@@ -20,7 +20,7 @@ const Header = () => {
     }, []);
 
     return (
-        <div className="header-area style-two" id="sticky-header">
+        <div className="header-area style-two d-none d-lg-block" id="sticky-header">
             <div className="container">
                 <div className="row align-items-center">
                     <div className="col-lg-3">
@@ -45,12 +45,7 @@ const Header = () => {
                                         <li><Link to="/faqs">Faqs</Link></li>
                                     </ul>
                                 </li>
-                                <li className="menu-item-has-children"><Link to="/blog">Blog<i className="fas fa-chevron-down"></i></Link>
-                                    <ul className="sub-menu">
-                                        <li><Link to="/blog">Blog Grid</Link></li>
-                                        <li><Link to="/blog-details">Blog Details</Link></li>
-                                    </ul>
-                                </li>
+                                <li><Link to="/blog">Blog</Link></li>
                                 <li><Link to="/contact">Contact</Link></li>
                             </ul>
                             <div className="header-search-icon search-box-outer">

@@ -74,7 +74,7 @@ const AboutArea = () => {
                                 </div>
                             </div>
                             <div className="toptech-button style-one">
-                                <Link to="/about-1">About More<i className="bi bi-arrow-right-circle-fill"></i></Link>
+                                <Link to="/about">About More<i className="bi bi-arrow-right-circle-fill"></i></Link>
                             </div>
                             <div className="about-shape-two">
                                 <img src="/assets/images/home-2/about-shape2.png" alt="" />

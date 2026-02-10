@@ -1,5 +1,8 @@
+import React from 'react';
 import blogsData from '../data/blogs.json';
 import { Link } from 'react-router-dom';
+import Breadcrumb from '../components/Breadcrumb';
+import BrandArea from '../components/BrandArea';
 
 const Blog = () => {
     return (

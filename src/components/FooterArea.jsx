@@ -17,7 +17,7 @@ const FooterArea = () => {
                                 digital agency in north</p>
                         </div>
                         <div className="toptech-button inner-style">
-                            <Link to="/about-1">Discover More<i className="bi bi-arrow-right-short"></i></Link>
+                            <Link to="/about">Discover More<i className="bi bi-arrow-right-short"></i></Link>
                         </div>
                     </div>
                     <div className="col-lg-2 col-md-6">
@@ -27,7 +27,7 @@ const FooterArea = () => {
                             </div>
                             <div className="footer-widget-menu">
                                 <ul>
-                                    <li><Link to="/about-1"><i className="bi bi-arrow-right-circle"></i>About</Link></li>
+                                    <li><Link to="/about"><i className="bi bi-arrow-right-circle"></i>About</Link></li>
                                     <li><Link to="/team"><i className="bi bi-arrow-right-circle"></i>Our Team</Link></li>
                                     <li><Link to="/blog"><i className="bi bi-arrow-right-circle"></i>Latest Blog</Link></li>
                                     <li><Link to="/careers"><i className="bi bi-arrow-right-circle"></i>Careers</Link></li>
@@ -71,9 +71,11 @@ const FooterArea = () => {
                     <div className="footer-bottom-area">
                         <div className="row">
                             <div className="col-lg-6 col-md-6">
+
                                 <div className="footer-bottom-content">
-                                    <p>© 2024 Big-Matrix Solutions. Designed By Dream IT Solution</p>
+                                    <p>© {new Date().getFullYear()} Big-Matrix Solutions.</p>
                                 </div>
+
                             </div>
                             <div className="col-lg-6 col-md-6">
                                 <div className="footer-botton-social-icon">

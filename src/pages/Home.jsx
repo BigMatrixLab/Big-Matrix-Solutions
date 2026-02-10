@@ -1,6 +1,3 @@
-import TopHeader from '../components/TopHeader';
-import Header from '../components/Header';
-import MobileMenu from '../components/MobileMenu';
 import Hero from '../components/Hero';
 import FeatureArea from '../components/FeatureArea';
 import AboutArea from '../components/AboutArea';
@@ -15,8 +12,6 @@ import ContactInfoArea from '../components/ContactInfoArea';
 import PricingArea from '../components/PricingArea';
 import BlogArea from '../components/BlogArea';
 import BrandArea from '../components/BrandArea';
-import FooterArea from '../components/FooterArea';
-import ScrollToTop from '../components/ScrollToTop';
 
 const Home = () => {
     return (
