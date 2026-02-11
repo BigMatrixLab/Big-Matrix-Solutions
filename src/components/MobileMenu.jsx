@@ -42,21 +42,11 @@ const MobileMenu = () => {
                                 <li>
                                     <Link to="/service" onClick={handleLinkClick}>Service</Link>
                                 </li>
-                                <li className="menu-item-has-children">
-                                    <Link to="#" onClick={(e) => { e.preventDefault(); toggleSubMenu(4); }}>Team</Link>
-                                    <ul className="sub-menu" style={{ display: activeSubMenu === 4 ? 'block' : 'none' }}>
-                                        <li><Link to="/team" onClick={handleLinkClick}>Our Team</Link></li>
-                                        <li><Link to="/team-details" onClick={handleLinkClick}>Team Details</Link></li>
-                                    </ul>
-                                    <Link className="mean-expand" to="#" onClick={(e) => { e.preventDefault(); toggleSubMenu(4); }} style={{ fontSize: '18px' }}>{activeSubMenu === 4 ? '-' : '+'}</Link>
+                                <li>
+                                    <Link to="/team" onClick={handleLinkClick}>Team</Link>
                                 </li>
-                                <li className="menu-item-has-children">
-                                    <Link to="#" onClick={(e) => { e.preventDefault(); toggleSubMenu(5); }}>Projects</Link>
-                                    <ul className="sub-menu" style={{ display: activeSubMenu === 5 ? 'block' : 'none' }}>
-                                        <li><Link to="/project" onClick={handleLinkClick}>Our Project</Link></li>
-                                        <li><Link to="/project-details" onClick={handleLinkClick}>Project Details</Link></li>
-                                    </ul>
-                                    <Link className="mean-expand" to="#" onClick={(e) => { e.preventDefault(); toggleSubMenu(5); }} style={{ fontSize: '18px' }}>{activeSubMenu === 5 ? '-' : '+'}</Link>
+                                <li>
+                                    <Link to="/project" onClick={handleLinkClick}>Projects</Link>
                                 </li>
                                 <li>
                                     <Link to="/careers" onClick={handleLinkClick}>Careers</Link>

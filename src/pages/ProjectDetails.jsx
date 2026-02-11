@@ -35,42 +35,119 @@ const ProjectDetails = () => {
                                 <img src={project.image} alt={project.title} />
                             </div>
                         </div>
+                    </div>
+                    <div className="row">
                         <div className="col-lg-8">
-                            <div className="project-details-content">
-                                <h4 className="project-details-title">{project.title}</h4>
-                                <p className="project-details-desc">{project.desc}</p>
-                                <p className="project-details-desc">{project.longDesc}</p>
+                            <div className="row">
+                                <div className="col-lg-12">
+                                    <div className="project-details-content">
+                                        <h4>Intro of the project</h4>
+                                        <p className="project-details-desc">{project.desc}</p>
+                                        <p className="project-details-desc">{project.longDesc}</p>
 
-                                <div className="row mt-4">
-                                    <div className="col-lg-6 col-md-6">
-                                        <div className="project-details-inner-thumb">
-                                            <img src="/assets/images/inner-images/project-1.jpg" alt="" />
+                                        <h3>Challenge and solution</h3>
+                                        <p className="project-details-desc">Innovate wireless e-markets for inexpensive e-markets. Monotonectally grow progressive processes before seamless ideas facilitate an expanded array of scenarios rather than backend users.</p>
+
+                                        <div className="row align-items-center">
+                                            <div className="col-lg-6">
+                                                <div className="project-details-item-images">
+                                                    <img src="/assets/images/inner-images/project-1.jpg" alt="" />
+                                                </div>
+                                            </div>
+                                            <div className="col-lg-6">
+                                                <div className="project-details-list-item">
+                                                    <h4>Project Benefits</h4>
+                                                    <ul>
+                                                        <li><i className="bi bi-check-circle-fill"></i>Innovate wireless market</li>
+                                                        <li><i className="bi bi-check-circle-fill"></i>Productivate resource sucking</li>
+                                                        <li><i className="bi bi-check-circle-fill"></i>Proactively unleash oriented communities</li>
+                                                        <li><i className="bi bi-check-circle-fill"></i>Credibly develop progressive archi</li>
+                                                        <li><i className="bi bi-check-circle-fill"></i>Phosfluorescently to customer</li>
+                                                    </ul>
+                                                </div>
+                                            </div>
                                         </div>
-                                    </div>
-                                    <div className="col-lg-6 col-md-6">
-                                        <div className="project-details-inner-thumb">
-                                            <img src="/assets/images/inner-images/project-2.jpg" alt="" />
+                                        <div className="project-details-text">
+                                            <p>Competently architect intermandated deliverables client niches continually underwhelm</p>
                                         </div>
+
+                                        <p className="project-details-desc">Appropriately communicate economically sound e-commerce after enterprise services. Dramatically target cross-media solutions and error-free platforms.</p>
                                     </div>
                                 </div>
-                                <h4 className="project-details-title">What the Benefits?</h4>
-                                <p className="project-details-desc">{project.benefits}</p>
                             </div>
                         </div>
                         <div className="col-lg-4">
-                            <div className="project-details-sidebar">
-                                <div className="project-details-sidebar-content">
-                                    <h4>Project Information</h4>
-                                    <ul>
-                                        <li><span>Category :</span> {project.category}</li>
-                                        <li><span>Client :</span> {project.client}</li>
-                                        <li><span>Date :</span> {project.date}</li>
-                                        <li><span>Location :</span> {project.location}</li>
-                                        <li><span>Duration :</span> {project.duration}</li>
-                                    </ul>
+                            <div className="row">
+                                <div className="col-lg-12">
+                                    <div className="project-details-right">
+                                        <div className="project-details-info">
+                                            <p>Clients :</p>
+                                            <h6>{project.client}</h6>
+                                        </div>
+                                        <div className="project-details-info">
+                                            <p>Category :</p>
+                                            <h6>{project.category}</h6>
+                                        </div>
+                                        <div className="project-details-info">
+                                            <p>Starting Date :</p>
+                                            <h6>{project.date}</h6>
+                                        </div>
+                                        <div className="project-details-info">
+                                            <p>Location :</p>
+                                            <h6>{project.location}</h6>
+                                        </div>
+                                        <div className="project-details-info">
+                                            <p>Project Value :</p>
+                                            <h6>{project.value || "$6,500.00"}</h6>
+                                        </div>
+                                    </div>
+                                    <div className="widget-sidber-contact-box">
+                                        <div className="widget-sidber-contact">
+                                            <img src="/assets/images/inner-images/sidber-cont-icon.png" alt="" />
+                                        </div>
+                                        <p className="widget-sidber-contact-text">Call Us Anytime</p>
+                                        <h3 className="widget-sidber-contact-number">+123 (4567) 890</h3>
+                                        <span className="widget-sidber-contact-gmail"><i className="bi bi-envelope-fill"></i> info@bigmatrix.com</span>
+                                        <div className="widget-sidber-contact-btn">
+                                            <Link to="/contact">Contact Us <i className="bi bi-arrow-right"></i></Link>
+                                        </div>
+                                    </div>
                                 </div>
                             </div>
                         </div>
+                    </div>
+                </div>
+            </div>
+
+            {/* Similar Projects Area */}
+            <div className="project-area inner-style">
+                <div className="container">
+                    <div className="row">
+                        <div className="col-lg-12 text-center">
+                            <div className="section-title center inner-style">
+                                <h4>latest works </h4>
+                                <h1>Similar Completed Projects</h1>
+                            </div>
+                        </div>
+                    </div>
+                    <div className="row">
+                        {projectData.filter(p => p.slug !== slug).slice(0, 3).map((item, index) => (
+                            <div className="col-lg-4 col-md-6" key={index}>
+                                <div className="single-project-box">
+                                    <div className="project-thumb">
+                                        <img src={item.image} alt={item.title} />
+                                    </div>
+                                    <div className="project-content">
+                                        <h4>{item.title}</h4>
+                                        <Link to={`/project/${item.slug}`}>{item.category}</Link>
+                                        <Link className="project-button" to={`/project/${item.slug}`}>View Details<i className="bi bi-arrow-right-short"></i></Link>
+                                        <div className="project-shape">
+                                            <img src="/assets/images/inner-images/project-shape.png" alt="" />
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
+                        ))}
                     </div>
                 </div>
             </div>

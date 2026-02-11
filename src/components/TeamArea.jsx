@@ -1,5 +1,6 @@
 import React, { useState } from 'react';
 import { Link } from 'react-router-dom';
+import teamData from '../data/team.json';
 
 const TeamArea = () => {
     const [activeTeamId, setActiveTeamId] = useState(null);
@@ -12,12 +13,7 @@ const TeamArea = () => {
         }
     };
 
-    const teamMembers = [
-        { id: 1, name: 'John D. Alexon', role: 'UI Designer', img: '/assets/images/team/team-1.png' },
-        { id: 2, name: 'Alexina Gomez', role: 'HR Manager', img: '/assets/images/team/team-2.png' },
-        { id: 3, name: 'Antoine Brown', role: 'Developer', img: '/assets/images/team/team-3.png' },
-        { id: 4, name: 'Carolina Scott', role: 'UI Designer', img: '/assets/images/team/team-4.png' }
-    ];
+    const teamMembers = teamData.slice(0, 4);
 
     return (
         <div className="team-area style-two">
@@ -41,10 +37,10 @@ const TeamArea = () => {
                         <div className="col-lg-3 col-md-6" key={member.id}>
                             <div className="single-team-box">
                                 <div className="team-thumb">
-                                    <img src={member.img} alt={member.name} />
+                                    <img src={member.image} alt={member.name} />
                                 </div>
                                 <div className="team-content">
-                                    <h4><Link to="/team-details">{member.name}</Link></h4>
+                                    <h4><Link to={`/team/${member.slug}`}>{member.name}</Link></h4>
                                     <p>{member.role}</p>
                                     <div className="team-shape">
                                         <img src="/assets/images/team/team-shape.png" alt="" />

@@ -156,34 +156,88 @@ const AboutOne = () => {
                 </div>
             </div>
 
-            {/* Mission Vision Area */}
-            <div className="mission-area">
+            {/* Mission Vison Area */}
+            <div className="mission-area inner-style">
                 <div className="container">
-                    <div className="row align-items-center">
+                    <div className="row">
                         <div className="col-lg-6">
                             <div className="mission-thumb">
-                                <img src="/assets/images/inner-images/mission-thumb.jpg" alt="" />
+                                <img src="/assets/images/inner-images/mission-1.jpg" alt="" />
                             </div>
                         </div>
                         <div className="col-lg-6">
-                            <div className="mission-content">
-                                <div className="section-title left">
+                            <div className="mission-box">
+                                <div className="mission-content">
                                     <h4>Our Mission</h4>
-                                    <h1>Innovative Solutions for Business Success</h1>
-                                    <p>Monotonectally synergize granular top visualize strategic infomediaries after task state of the art infrastructures digital agency in north.</p>
+                                    <div className="single-icon-box">
+                                        <div className="single-icon-thumb">
+                                            <i className="bi bi-check"></i>
+                                        </div>
+                                        <div className="sigle-icon-desc">
+                                            <p>We Communicate clearly, because in a world crowded with over-the-top marketing. simple wins.</p>
+                                        </div>
+                                    </div>
+                                    <div className="single-icon-box">
+                                        <div className="single-icon-thumb">
+                                            <i className="bi bi-check"></i>
+                                        </div>
+                                        <div className="sigle-icon-desc">
+                                            <p>We are not rock stars, ninjas or any other disingenuous buzz term. We are creative professionals.</p>
+                                        </div>
+                                    </div>
+                                    <div className="single-icon-box">
+                                        <div className="single-icon-thumb">
+                                            <i className="bi bi-check"></i>
+                                        </div>
+                                        <div className="sigle-icon-desc">
+                                            <p>Before you can market a business, you need to know its story support staff that’s always there when you need us..</p>
+                                        </div>
+                                    </div>
                                 </div>
-                                <div className="mission-list">
-                                    <ul>
-                                        <li><i className="bi bi-check-circle-fill"></i> Best IT Solutions</li>
-                                        <li><i className="bi bi-check-circle-fill"></i> Expert Team Members</li>
-                                        <li><i className="bi bi-check-circle-fill"></i> 24/7 Customer Support</li>
-                                    </ul>
+                                <div className="mission-button">
+                                    <a href="#">Find out more</a>
                                 </div>
-                                <div className="section-title left mt-5">
-                                    <h4>Our Vision</h4>
-                                    <h1>Leading the Industry with Technology</h1>
-                                    <p>Continually fashion orthogonal leadership skills whereas wireless metrics. Uniquely syndicate exceptional opportunities with interdependent users.</p>
+                            </div>
+                        </div>
+                    </div>
+                    <div className="row mt-5">
+                        <div className="col-lg-6">
+                            <div className="mission-box two">
+                                <div className="mission-content">
+                                    <h4>Our Drive and Vision</h4>
+                                    <div className="single-icon-box">
+                                        <div className="single-icon-thumb">
+                                            <i className="bi bi-check"></i>
+                                        </div>
+                                        <div className="sigle-icon-desc">
+                                            <p>We Communicate clearly, because in a world crowded with over-the-top marketing. simple wins.</p>
+                                        </div>
+                                    </div>
+                                    <div className="single-icon-box">
+                                        <div className="single-icon-thumb">
+                                            <i className="bi bi-check"></i>
+                                        </div>
+                                        <div className="sigle-icon-desc">
+                                            <p>We are not rock stars, ninjas or any other disingenuous buzz term. We are creative professionals.</p>
+                                        </div>
+                                    </div>
+                                    <div className="single-icon-box">
+                                        <div className="single-icon-thumb">
+                                            <i className="bi bi-check"></i>
+                                        </div>
+                                        <div className="sigle-icon-desc">
+                                            <p>Before you can market a business, you need to know its story support staff that’s always there when you need us..</p>
+                                        </div>
+                                    </div>
                                 </div>
+                                <div className="mission-button">
+                                    <a href="#">Find out more</a>
+                                </div>
+                            </div>
+                        </div>
+                        <div className="col-lg-6">
+                            <div className="mission-thumb two">
+                                <img src="/assets/images/inner-images/mission-2.jpg" alt="" />
                             </div>
                         </div>
                     </div>
@@ -194,40 +248,52 @@ const AboutOne = () => {
             <CounterArea />
             <TestimonialArea />
 
-            {/* Faq Area */}
-            <div className="faq-area">
+            {/* Faqs Area */}
+            <div className="faqs-area inner-style">
                 <div className="container">
-                    <div className="row">
-                        <div className="col-lg-12">
-                            <div className="section-title center">
-                                <h4>Frequently Asked Questions</h4>
-                                <h1>Common Question & Answers</h1>
+                    <div className="row align-items-center">
+                        <div className="col-lg-6">
+                            <div className="section-title left inner-style">
+                                <h4>Our Help & Faq Us </h4>
+                                <h1>Navigating FAQs with Speed</h1>
+                                <h1>and Precision"</h1>
+                                <p>Business tailored it design, management & support services needs to be
+                                    business agency elit, sed do eiusmod tempor proved.</p>
+                            </div>
+                            <div className="faqs-thumb mb-4">
+                                <img src="/assets/images/inner-images/faqs-1.jpg" alt="" />
+                            </div>
+                            <div className="faqs-thumb mb-4">
+                                <img src="/assets/images/inner-images/faqs-2.jpg" alt="" />
+                            </div>
+                            <div className="faqs-icon-box">
+                                <div className="faqs-icon-thumb">
+                                    <img src="/assets/images/inner-images/faqs-icon-s.png" alt="" />
+                                </div>
+                                <div className="faqs-icon-content">
+                                    <p>Business tailored it design, management & support services busines agency elit sed do eiusmod tempor proved
+                                        business task state of the art infrastructures for you.</p>
+                                </div>
                             </div>
                         </div>
-                    </div>
-                    <div className="row">
                         <div className="col-lg-6">
-                            <div className="faq-content">
-                                <div className="single-faq-box">
-                                    <h4>How to register a new account?</h4>
-                                    <p>Alternative innovation to ethical network environmental whiteboard pursue compelling results for premier methods empowerment.</p>
-                                </div>
-                                <div className="single-faq-box">
-                                    <h4>What is the payment method?</h4>
-                                    <p>Alternative innovation to ethical network environmental whiteboard pursue compelling results for premier methods empowerment.</p>
-                                </div>
-                            </div>
-                        </div>
-                        <div className="col-lg-6">
-                            <div className="faq-content">
-                                <div className="single-faq-box">
-                                    <h4>Is there any discount for students?</h4>
-                                    <p>Alternative innovation to ethical network environmental whiteboard pursue compelling results for premier methods empowerment.</p>
-                                </div>
-                                <div className="single-faq-box">
-                                    <h4>How can I contact support?</h4>
-                                    <p>Alternative innovation to ethical network environmental whiteboard pursue compelling results for premier methods empowerment.</p>
-                                </div>
+                            <div className="faqs-container">
+                                {[
+                                    { q: "Project Horizon Redevelopment", a: "Credibly conceptualize multifunctional human capital after that awesome revenue superior scenarios. Collaboratively myocardinate flexible social marketing working technologies and robust services available" },
+                                    { q: "What is your professional passion?", a: "Credibly conceptualize multifunctional human capital after that awesome revenue superior scenarios. Collaboratively myocardinate flexible social marketing working technologies and robust services available" },
+                                    { q: "Service Horizon Business low", a: "Credibly conceptualize multifunctional human capital after that awesome revenue superior scenarios. Collaboratively myocardinate flexible social marketing working technologies and robust services available" },
+                                    { q: "Business Solution Redevelopment", a: "Credibly conceptualize multifunctional human capital after that awesome revenue superior scenarios. Collaboratively myocardinate flexible social marketing working technologies and robust services available" },
+                                    { q: "Do you have any custom services?", a: "Credibly conceptualize multifunctional human capital after that awesome revenue superior scenarios. Collaboratively myocardinate flexible social marketing working technologies and robust services available" }
+                                ].map((faq, index) => (
+                                    <div className="faq-singular" key={index}>
+                                        <h2 className="faq-question">
+                                            <img src="/assets/images/inner-images/faqs-icon1.png" alt="" /> {faq.q}
+                                        </h2>
+                                        <div className="faq-answer">
+                                            <div className="desc">{faq.a}</div>
+                                        </div>
+                                    </div>
+                                ))}
                             </div>
                         </div>
                     </div>

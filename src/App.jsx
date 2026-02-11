@@ -15,6 +15,7 @@ import Careers from './pages/Careers';
 import Faqs from './pages/Faqs';
 import Mission from './pages/Mission';
 import Contact from './pages/Contact';
+import ScrollToTopOnNavigation from './components/ScrollToTopOnNavigation';
 
 function App() {
   useEffect(() => {
@@ -24,6 +25,7 @@ function App() {
 
   return (
     <Layout>
+      <ScrollToTopOnNavigation />
       <Routes>
         <Route path="/" element={<Home />} />
         <Route path="/about" element={<AboutOne />} />

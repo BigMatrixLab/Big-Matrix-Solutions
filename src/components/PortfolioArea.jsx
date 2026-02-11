@@ -4,9 +4,9 @@ import { Link } from 'react-router-dom';
 const PortfolioArea = () => {
     const [filter, setFilter] = useState('*');
     const [items, setItems] = useState([
-        { id: 1, category: 'technology', image: '/assets/images/home-2/portfolio-1.png', title: 'Business Growth with Big-Matrix Solutions Agency', number: '01' },
-        { id: 2, category: 'designing', image: '/assets/images/home-2/portfolio-2.png', title: 'Desktop Application Development', number: '02' },
-        { id: 3, category: 'bussiness', image: '/assets/images/home-2/portfolio-3.png', title: 'Illustration and Vector Design for Add', number: '03' },
+        { id: 1, category: 'technology', image: '/assets/images/home-2/portfolio-1.png', title: 'Business Growth with Big-Matrix Solutions Agency', number: '01', slug: 'analytics-dashboard' },
+        { id: 2, category: 'designing', image: '/assets/images/home-2/portfolio-2.png', title: 'Desktop Application Development', number: '02', slug: 'digital-marketing' },
+        { id: 3, category: 'bussiness', image: '/assets/images/home-2/portfolio-3.png', title: 'Illustration and Vector Design for Add', number: '03', slug: 'cloud-migration' },
     ]);
     const [filteredItems, setFilteredItems] = useState(items);
 
@@ -59,7 +59,7 @@ const PortfolioArea = () => {
                                         <h1>{item.number}</h1>
                                     </div>
                                     <div className="portfolio-title">
-                                        <Link to="/project-details">{item.title} <i className="bi bi-plus"></i></Link>
+                                        <Link to={`/project/${item.slug}`}>{item.title} <i className="bi bi-plus"></i></Link>
                                     </div>
                                 </div>
                             </div>
