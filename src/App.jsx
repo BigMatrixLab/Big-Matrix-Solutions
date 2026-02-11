@@ -19,8 +19,12 @@ import ScrollToTopOnNavigation from './components/ScrollToTopOnNavigation';
 
 function App() {
   useEffect(() => {
-    // Handle Loader
-    document.body.classList.add('loaded');
+    // Handle Loader - show for at least 1 second
+    const timer = setTimeout(() => {
+      document.body.classList.add('loaded');
+    }, 1000);
+
+    return () => clearTimeout(timer);
   }, []);
 
   return (
@@ -38,6 +42,8 @@ function App() {
         <Route path="/blog" element={<Blog />} />
         <Route path="/blog/:slug" element={<BlogDetails />} />
         <Route path="/careers" element={<Careers />} />
+        <Route path="/faqs" element={<Faqs />} />
+        <Route path="/mission" element={<Mission />} />
         <Route path="/contact" element={<Contact />} />
       </Routes>
     </Layout>

@@ -1,0 +1,8 @@
+<svg xmlns="http://www.w3.org/2000/svg" width="500" height="350" viewBox="0 0 500 350">
+  <rect width="500" height="350" fill="#F3F4F6"/>
+  <g transform="translate(250, 175)">
+    <rect x="-180" y="-120" width="360" height="240" fill="#E5E7EB" rx="8"/>
+    <circle cx="0" cy="-30" r="40" fill="#8B5CF6" opacity="0.2"/>
+    <text x="0" y="70" text-anchor="middle" font-family="Arial, sans-serif" font-size="20" fill="#6B7280">Service Benefits 2</text>
+  </g>
+</svg>
