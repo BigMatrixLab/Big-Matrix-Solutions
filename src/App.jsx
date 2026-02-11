@@ -30,14 +30,12 @@ function App() {
         <Route path="/service" element={<Services />} />
         <Route path="/service/:slug" element={<ServiceDetails />} />
         <Route path="/team" element={<Team />} />
-        <Route path="/team-details" element={<TeamDetails />} />
+        <Route path="/team/:slug" element={<TeamDetails />} />
         <Route path="/project" element={<Project />} />
-        <Route path="/project-details" element={<ProjectDetails />} />
+        <Route path="/project/:slug" element={<ProjectDetails />} />
         <Route path="/blog" element={<Blog />} />
         <Route path="/blog/:slug" element={<BlogDetails />} />
         <Route path="/careers" element={<Careers />} />
-        <Route path="/faqs" element={<Faqs />} />
-        <Route path="/mission" element={<Mission />} />
         <Route path="/contact" element={<Contact />} />
       </Routes>
     </Layout>

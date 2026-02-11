@@ -1,16 +1,12 @@
 import React from 'react';
+import { Link } from 'react-router-dom';
 import Breadcrumb from '../components/Breadcrumb';
 import BrandArea from '../components/BrandArea';
 
+import projectData from '../data/projects.json';
+
 const Project = () => {
-    const projects = [
-        { title: "Analytics", category: "Database Design", image: "/assets/images/inner-images/project-1.jpg" },
-        { title: "Marketing", category: "Digital Marketing", image: "/assets/images/inner-images/project-2.jpg" },
-        { title: "Big-Matrix Solutions", category: "Tech Cover Industry", image: "/assets/images/inner-images/project-3.jpg" },
-        { title: "Big-Matrix Solutions", category: "Software Development", image: "/assets/images/inner-images/project-3.jpg" },
-        { title: "Global Solution", category: "IT Infrastructure", image: "/assets/images/inner-images/project-1.jpg" },
-        { title: "Future Tech", category: "Cloud Computing", image: "/assets/images/inner-images/project-2.jpg" },
-    ];
+    const projects = projectData;
 
     return (
         <>
@@ -36,8 +32,8 @@ const Project = () => {
                                     </div>
                                     <div className="project-content">
                                         <h4>{item.title}</h4>
-                                        <a href="#">{item.category}</a>
-                                        <a className="project-button" href="/project-details">View Details<i className="bi bi-arrow-right-short"></i></a>
+                                        <Link to={`/project/${item.slug}`}>{item.category}</Link>
+                                        <Link className="project-button" to={`/project/${item.slug}`}>View Details<i className="bi bi-arrow-right-short"></i></Link>
                                         <div className="project-shape">
                                             <img src="/assets/images/inner-images/project-shape.png" alt="" />
                                         </div>

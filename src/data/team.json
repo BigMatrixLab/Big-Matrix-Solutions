@@ -1,0 +1,126 @@
+[
+    {
+        "id": 1,
+        "name": "Arianna Bibi",
+        "role": "Web Developer",
+        "image": "/assets/images/home-1/team1.jpg",
+        "slug": "arianna-bibi",
+        "desc": "Arianna is a highly skilled Web Developer with over 5 years of experience in creating dynamic and responsive websites. She specializes in React and modern CSS frameworks.",
+        "phone": "+123 (4567) 890",
+        "email": "arianna@big-matrix.com",
+        "location": "New York, USA",
+        "skills": [
+            {
+                "name": "Web Development",
+                "value": "95%"
+            },
+            {
+                "name": "React JS",
+                "value": "90%"
+            }
+        ],
+        "projects": [
+            {
+                "name": "E-commerce Platform",
+                "value": "95%"
+            },
+            {
+                "name": "SaaS Dashboard",
+                "value": "85%"
+            }
+        ]
+    },
+    {
+        "id": 2,
+        "name": "Nazmul Hossen",
+        "role": "UI/UX Designer",
+        "image": "/assets/images/home-1/team2.jpg",
+        "slug": "nazmul-hossen",
+        "desc": "Nazmul is a creative UI/UX Designer dedicated to crafting intuitive and beautiful user experiences. He has a keen eye for detail and a passion for user-centric design.",
+        "phone": "+123 (4567) 891",
+        "email": "nazmul@big-matrix.com",
+        "location": "Dhaka, Bangladesh",
+        "skills": [
+            {
+                "name": "UI/UX Design",
+                "value": "98%"
+            },
+            {
+                "name": "Figma",
+                "value": "95%"
+            }
+        ],
+        "projects": [
+            {
+                "name": "Mobile App UI",
+                "value": "92%"
+            },
+            {
+                "name": "Brand Identity",
+                "value": "88%"
+            }
+        ]
+    },
+    {
+        "id": 3,
+        "name": "Roman Soltana",
+        "role": "Manager",
+        "image": "/assets/images/home-1/team3.jpg",
+        "slug": "roman-soltana",
+        "desc": "Roman is an experienced Project Manager who ensures that all projects are delivered on time and within budget. He is an expert in agile methodologies.",
+        "phone": "+123 (4567) 892",
+        "email": "roman@big-matrix.com",
+        "location": "London, UK",
+        "skills": [
+            {
+                "name": "Project Management",
+                "value": "95%"
+            },
+            {
+                "name": "Agile",
+                "value": "92%"
+            }
+        ],
+        "projects": [
+            {
+                "name": "Corporate Website",
+                "value": "90%"
+            },
+            {
+                "name": "Digital Marketing",
+                "value": "85%"
+            }
+        ]
+    },
+    {
+        "id": 4,
+        "name": "Ghaura Mogibor",
+        "role": "UI/UX Developer",
+        "image": "/assets/images/home-1/team4.jpg",
+        "slug": "ghaura-mogibor",
+        "desc": "Ghaura bridges the gap between design and development. He is a UI/UX Developer who creates functional and beautiful front-end components.",
+        "phone": "+123 (4567) 893",
+        "email": "ghaura@big-matrix.com",
+        "location": "Berlin, Germany",
+        "skills": [
+            {
+                "name": "Front-end Dev",
+                "value": "94%"
+            },
+            {
+                "name": "UI Implementation",
+                "value": "96%"
+            }
+        ],
+        "projects": [
+            {
+                "name": "Web Application",
+                "value": "93%"
+            },
+            {
+                "name": "Animation Library",
+                "value": "87%"
+            }
+        ]
+    }
+]

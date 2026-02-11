@@ -1,11 +1,30 @@
 import React from 'react';
+import { useParams, Link } from 'react-router-dom';
 import Breadcrumb from '../components/Breadcrumb';
 import BrandArea from '../components/BrandArea';
+import projectData from '../data/projects.json';
 
 const ProjectDetails = () => {
+    const { slug } = useParams();
+    const project = projectData.find(p => p.slug === slug);
+
+    if (!project) {
+        return (
+            <>
+                <Breadcrumb pageTitle="Project Not Found" breadcrumbItem="Project" />
+                <div className="project-details-area">
+                    <div className="container text-center">
+                        <h2>Project not found</h2>
+                        <Link to="/project" className="btn btn-primary mt-4">Back to Projects</Link>
+                    </div>
+                </div>
+            </>
+        );
+    }
+
     return (
         <>
-            <Breadcrumb pageTitle="Project Details" breadcrumbItem="Project" />
+            <Breadcrumb pageTitle={project.title} breadcrumbItem="Project" />
 
             {/* Project Details Area */}
             <div className="project-details-area">
@@ -13,14 +32,14 @@ const ProjectDetails = () => {
                     <div className="row">
                         <div className="col-lg-12">
                             <div className="project-details-thumb">
-                                <img src="/assets/images/inner-images/project-details.jpg" alt="" />
+                                <img src={project.image} alt={project.title} />
                             </div>
                         </div>
                         <div className="col-lg-8">
                             <div className="project-details-content">
-                                <h4 className="project-details-title">Appropriately engage leading-edge</h4>
-                                <p className="project-details-desc">Alternative innovation to ethical network environmental whiteboard pursue compelling results for premier methods empowerment. Dramatically architect go forward opportunities before user-centric partnerships. Credibly implement exceptional </p>
-                                <p className="project-details-desc">Continually fashion orthogonal leadership skills whereas wireless metrics. Uniquely syndicate exceptional opportunities with interdependent users. Globally enhance fully tested meta-services rather than pandemic solutions. Proactively integrate client-integrate go forward architectures and turnkey meta-services. Interactively harness integrated ROI whereas frictionless products.</p>
+                                <h4 className="project-details-title">{project.title}</h4>
+                                <p className="project-details-desc">{project.desc}</p>
+                                <p className="project-details-desc">{project.longDesc}</p>
 
                                 <div className="row mt-4">
                                     <div className="col-lg-6 col-md-6">
@@ -35,7 +54,7 @@ const ProjectDetails = () => {
                                     </div>
                                 </div>
                                 <h4 className="project-details-title">What the Benefits?</h4>
-                                <p className="project-details-desc">Alternative innovation to ethical network environmental whiteboard pursue compelling results for premier methods empowerment. Dramatically architect go forward opportunities </p>
+                                <p className="project-details-desc">{project.benefits}</p>
                             </div>
                         </div>
                         <div className="col-lg-4">
@@ -43,11 +62,11 @@ const ProjectDetails = () => {
                                 <div className="project-details-sidebar-content">
                                     <h4>Project Information</h4>
                                     <ul>
-                                        <li><span>Category :</span> IT Solution</li>
-                                        <li><span>Client :</span> Big-Matrix Solutions</li>
-                                        <li><span>Date :</span> 20 March, 2024</li>
-                                        <li><span>Location :</span> New York, USA</li>
-                                        <li><span>Duration :</span> 6 Months</li>
+                                        <li><span>Category :</span> {project.category}</li>
+                                        <li><span>Client :</span> {project.client}</li>
+                                        <li><span>Date :</span> {project.date}</li>
+                                        <li><span>Location :</span> {project.location}</li>
+                                        <li><span>Duration :</span> {project.duration}</li>
                                     </ul>
                                 </div>
                             </div>

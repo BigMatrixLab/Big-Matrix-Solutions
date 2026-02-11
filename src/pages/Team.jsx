@@ -1,14 +1,10 @@
 import React from 'react';
+import { Link } from 'react-router-dom';
 import Breadcrumb from '../components/Breadcrumb';
+import teamData from '../data/team.json';
 
 const Team = () => {
-    const teamMembers = [
-        { name: "Arianna Bibi", role: "Web Developer", image: "/assets/images/home-1/team1.jpg" },
-        { name: "Nazmul Hossen", role: "UI/UX Designer", image: "/assets/images/home-1/team2.jpg" },
-        { name: "Roman Soltana", role: "Manager", image: "/assets/images/home-1/team3.jpg" },
-        { name: "Ghaura Mogibor", role: "UI/UX Developer", image: "/assets/images/home-1/team4.jpg" },
-        // Adding more members to fill the grid if needed, or just these 4 as per template
-    ];
+    const teamMembers = teamData;
 
     return (
         <>
@@ -40,7 +36,7 @@ const Team = () => {
                                     </div>
                                     <div className="team-content">
                                         <div className="team-bio">
-                                            <h4>{member.name}</h4>
+                                            <h4><Link to={`/team/${member.slug}`}>{member.name}</Link></h4>
                                             <p>{member.role}</p>
                                         </div>
                                         <div className="team-social-icon">

@@ -1,11 +1,30 @@
 import React from 'react';
+import { useParams, Link } from 'react-router-dom';
 import Breadcrumb from '../components/Breadcrumb';
 import BrandArea from '../components/BrandArea';
+import teamData from '../data/team.json';
 
 const TeamDetails = () => {
+    const { slug } = useParams();
+    const member = teamData.find(m => m.slug === slug);
+
+    if (!member) {
+        return (
+            <>
+                <Breadcrumb pageTitle="Member Not Found" breadcrumbItem="Team" />
+                <div className="team-details-area">
+                    <div className="container text-center">
+                        <h2>Team member not found</h2>
+                        <Link to="/team" className="btn btn-primary mt-4">Back to Team</Link>
+                    </div>
+                </div>
+            </>
+        );
+    }
+
     return (
         <>
-            <Breadcrumb pageTitle="Team Details" breadcrumbItem="Team" />
+            <Breadcrumb pageTitle={member.name} breadcrumbItem="Team" />
 
             {/* Team Details Area */}
             <div className="team-details-area">
@@ -13,17 +32,17 @@ const TeamDetails = () => {
                     <div className="row align-items-center">
                         <div className="col-lg-6">
                             <div className="team-thumb">
-                                <img src="/assets/images/team/team-details.jpg" alt="" />
+                                <img src={member.image} alt={member.name} />
                             </div>
                         </div>
                         <div className="col-lg-6">
                             <div className="team-details-right">
                                 <div className="team-details-content">
                                     <div className="team-member-title">
-                                        <h4>Anowar Hossin Omio</h4>
-                                        <p>Big-Matrix Solutions Founder & CEO</p>
+                                        <h4>{member.name}</h4>
+                                        <p>{member.role}</p>
                                     </div>
-                                    <p className="desc">Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor creative labore et dolore magna aliqua ipsum suspendisse ultrices gravida commodo viverra accu eiusmod tempor incididunt ut labore et dolore magna aliqua.</p>
+                                    <p className="desc">{member.desc}</p>
                                 </div>
                                 <div className="row add-bg">
                                     <div className="col-lg-6 col-md-6">
@@ -33,7 +52,7 @@ const TeamDetails = () => {
                                             </div>
                                             <div className="contact-info-content">
                                                 <h4>Call us Any time</h4>
-                                                <p>+123 (4567) 890</p>
+                                                <p>{member.phone}</p>
                                             </div>
                                         </div>
                                     </div>
@@ -44,7 +63,7 @@ const TeamDetails = () => {
                                             </div>
                                             <div className="contact-info-content">
                                                 <h4>Send E-Mail</h4>
-                                                <p>info@gmail.com</p>
+                                                <p>{member.email}</p>
                                             </div>
                                         </div>
                                     </div>
@@ -64,7 +83,7 @@ const TeamDetails = () => {
                                     </div>
                                     <div className="contact-info-content">
                                         <h4>Location</h4>
-                                        <p>21 King Street 5th Floor Hamilton, Ontario Canada</p>
+                                        <p>{member.location}</p>
                                     </div>
                                 </div>
                             </div>
@@ -75,18 +94,14 @@ const TeamDetails = () => {
                             <div className="team-details-skills">
                                 <h4>My Skills</h4>
                                 <div className="wrapper">
-                                    <div className="skill">
-                                        <p>Design Analytics</p>
-                                        <div className="skill-bar skill1">
-                                            <span className="skill-count1">95%</span>
+                                    {member.skills.map((skill, index) => (
+                                        <div className="skill" key={index}>
+                                            <p>{skill.name}</p>
+                                            <div className={`skill-bar skill${index + 1}`}>
+                                                <span className={`skill-count${index + 1}`}>{skill.value}</span>
+                                            </div>
                                         </div>
-                                    </div>
-                                    <div className="skill">
-                                        <p>Software Development</p>
-                                        <div className="skill-bar skill2">
-                                            <span className="skill-count2">85%</span>
-                                        </div>
-                                    </div>
+                                    ))}
                                 </div>
                             </div>
                         </div>
@@ -94,18 +109,14 @@ const TeamDetails = () => {
                             <div className="team-details-skills">
                                 <h4>Success Project </h4>
                                 <div className="wrapper">
-                                    <div className="skill">
-                                        <p>UI/UX Design & Development</p>
-                                        <div className="skill-bar skill1">
-                                            <span className="skill-count1">95%</span>
+                                    {member.projects.map((project, index) => (
+                                        <div className="skill" key={index}>
+                                            <p>{project.name}</p>
+                                            <div className={`skill-bar skill${index + 1}`}>
+                                                <span className={`skill-count${index + 1}`}>{project.value}</span>
+                                            </div>
                                         </div>
-                                    </div>
-                                    <div className="skill">
-                                        <p>Content Strategy</p>
-                                        <div className="skill-bar skill2">
-                                            <span className="skill-count2">85%</span>
-                                        </div>
-                                    </div>
+                                    ))}
                                 </div>
                             </div>
                         </div>

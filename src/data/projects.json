@@ -1,0 +1,44 @@
+[
+    {
+        "id": 1,
+        "title": "Analytics Dashboard",
+        "category": "Database Design",
+        "image": "/assets/images/inner-images/project-1.jpg",
+        "slug": "analytics-dashboard",
+        "desc": "A comprehensive analytics dashboard for data-driven decisions.",
+        "longDesc": "This project involved creating a real-time analytics dashboard that processes large datasets to provide actionable insights. We implemented advanced data visualization techniques and a scalable backend infrastructure.",
+        "client": "Data Corp",
+        "date": "20 March, 2024",
+        "location": "New York, USA",
+        "duration": "6 Months",
+        "benefits": "Improved data visibility by 60% and reduced reporting time by 40%."
+    },
+    {
+        "id": 2,
+        "title": "Digital Marketing Campaign",
+        "category": "Digital Marketing",
+        "image": "/assets/images/inner-images/project-2.jpg",
+        "slug": "digital-marketing",
+        "desc": "Innovative marketing strategy to reach global audiences.",
+        "longDesc": "We developed and executed a multi-channel digital marketing campaign that increased brand awareness and user engagement. The campaign included SEO, SMM, and targeted ad placements.",
+        "client": "Global Reach",
+        "date": "15 April, 2024",
+        "location": "Miami, USA",
+        "duration": "4 Months",
+        "benefits": "Increased conversion rate by 25% and social media following by 50k."
+    },
+    {
+        "id": 3,
+        "title": "Cloud Migration",
+        "category": "Cloud Computing",
+        "image": "/assets/images/inner-images/project-3.jpg",
+        "slug": "cloud-migration",
+        "desc": "Seamless transition to secure cloud infrastructure.",
+        "longDesc": "This project focused on migrating a legacy on-premise system to a modern cloud-based architecture. We ensured zero downtime and enhanced security during the transition.",
+        "client": "Legacy Tech",
+        "date": "10 May, 2024",
+        "location": "Austin, USA",
+        "duration": "8 Months",
+        "benefits": "Reduced server costs by 30% and improved system reliability to 99.9%."
+    }
+]
