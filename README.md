@@ -1,6 +1,6 @@
-# Big-Matrix Solutions
+# Big-Martrix Solutions
 
-Big-Matrix Solutions is a premium IT agency providing innovative digital solutions including Web Development, Software Engineering, and Strategic Digital Marketing.
+Big-Martrix Solutions is a premium IT agency providing innovative digital solutions including Web Development, Software Engineering, and Strategic Digital Marketing.
 
 ## Tech Stack
 - **Frontend**: React.js, Vite

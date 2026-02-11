@@ -1,4 +1,4 @@
-import React from 'react';
+import React, { useState } from 'react';
 import Breadcrumb from '../components/Breadcrumb';
 import TeamArea from '../components/TeamArea';
 import CounterArea from '../components/CounterArea';
@@ -6,6 +6,12 @@ import TestimonialArea from '../components/TestimonialArea';
 import BrandArea from '../components/BrandArea';
 
 const AboutOne = () => {
+    const [activeIndex, setActiveIndex] = useState(0);
+
+    const toggleFAQ = (index) => {
+        setActiveIndex(activeIndex === index ? null : index);
+    };
+
     return (
         <>
             <Breadcrumb pageTitle="About Us" />
@@ -266,15 +272,7 @@ const AboutOne = () => {
                             <div className="faqs-thumb mb-4">
                                 <img src="/assets/images/inner-images/faqs-2.jpg" alt="" />
                             </div>
-                            <div className="faqs-icon-box">
-                                <div className="faqs-icon-thumb">
-                                    <img src="/assets/images/inner-images/faqs-icon-s.png" alt="" />
-                                </div>
-                                <div className="faqs-icon-content">
-                                    <p>Business tailored it design, management & support services busines agency elit sed do eiusmod tempor proved
-                                        business task state of the art infrastructures for you.</p>
-                                </div>
-                            </div>
+
                         </div>
                         <div className="col-lg-6">
                             <div className="faqs-container">
@@ -285,8 +283,8 @@ const AboutOne = () => {
                                     { q: "Business Solution Redevelopment", a: "Credibly conceptualize multifunctional human capital after that awesome revenue superior scenarios. Collaboratively myocardinate flexible social marketing working technologies and robust services available" },
                                     { q: "Do you have any custom services?", a: "Credibly conceptualize multifunctional human capital after that awesome revenue superior scenarios. Collaboratively myocardinate flexible social marketing working technologies and robust services available" }
                                 ].map((faq, index) => (
-                                    <div className="faq-singular" key={index}>
-                                        <h2 className="faq-question">
+                                    <div className={`faq-singular ${activeIndex === index ? 'active' : ''}`} key={index}>
+                                        <h2 className="faq-question" onClick={() => toggleFAQ(index)}>
                                             <img src="/assets/images/inner-images/faqs-icon1.png" alt="" /> {faq.q}
                                         </h2>
                                         <div className="faq-answer">

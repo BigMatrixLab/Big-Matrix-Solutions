@@ -8,7 +8,12 @@ const FooterArea = () => {
                 <div className="row">
                     <div className="col-lg-4 col-md-6">
                         <div className="footer-logo">
-                            <Link to="/"><img src="/assets/images/logo-2.png" alt="" /></Link>
+                            <Link to="/" className="d-flex align-items-center">
+                                <img src="/assets/images/big_matrix_cube_logo.png" alt="logo" style={{ maxHeight: '60px' }} />
+                                <span className="logo-text ms-2" style={{ fontWeight: 'bold', fontSize: '24px', lineHeight: '1.2', color: '#fff' }}>
+                                    Big-Martrix<br />Solutions
+                                </span>
+                            </Link>
                         </div>
                         <div className="footer-widget-desc">
                             <p>Monotonectally synergize granular top
@@ -73,7 +78,7 @@ const FooterArea = () => {
                             <div className="col-lg-6 col-md-6">
 
                                 <div className="footer-bottom-content">
-                                    <p>© {new Date().getFullYear()} Big-Matrix Solutions.</p>
+                                    <p>© {new Date().getFullYear()} Big-Martrix Solutions.</p>
                                 </div>
 
                             </div>

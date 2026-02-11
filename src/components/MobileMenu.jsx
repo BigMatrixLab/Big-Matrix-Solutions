@@ -26,7 +26,12 @@ const MobileMenu = () => {
                 <nav className="header-menu">
                     <div className="mean-bar">
                         <div className="mean-logo">
-                            <Link to="/"><img src="/assets/images/home-1/logo.png" alt="logo" style={{ maxHeight: '40px' }} /></Link>
+                            <Link to="/" className="d-flex align-items-center">
+                                <img src="/assets/images/big_matrix_cube_logo.png" alt="logo" style={{ maxHeight: '40px' }} />
+                                <span className="logo-text ms-2" style={{ fontWeight: 'bold', fontSize: '16px', lineHeight: '1.2', color: '#000' }}>
+                                    Big-Martrix<br />Solutions
+                                </span>
+                            </Link>
                         </div>
                         <Link to="#" className="meanmenu-reveal" style={{ right: 0, left: 'auto', textAlign: 'center', textIndent: 0, fontSize: '18px' }} onClick={(e) => { e.preventDefault(); toggleMenu(); }}>
                             <span></span><span></span><span></span>

@@ -28,7 +28,12 @@ const Header = () => {
                 <div className="row align-items-center">
                     <div className="col-lg-3">
                         <div className="header-logo">
-                            <Link to="/"><img src="/assets/images/home-1/logo.png" alt="logo" /></Link>
+                            <Link to="/" className="d-flex align-items-center">
+                                <img src="/assets/images/big_matrix_cube_logo.png" alt="logo" style={{ maxHeight: '50px' }} />
+                                <span className="logo-text ms-2" style={{ fontWeight: 'bold', fontSize: '20px', lineHeight: '1.2', display: 'inline-block', color: '#000' }}>
+                                    Big-Martrix<br />Solutions
+                                </span>
+                            </Link>
                         </div>
                     </div>
                     <div className="col-lg-9">
