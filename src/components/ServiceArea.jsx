@@ -9,9 +9,9 @@ const ServiceArea = () => {
                 <div className="row">
                     <div className="col-lg-12 text-center">
                         <div className="section-title center style-two">
-                            <h4>IT Support For Business </h4>
-                            <h1>Ensuring Your Success Trusted</h1>
-                            <h1>IT Services Source</h1>
+                            <h4>Our Research Solutions</h4>
+                            <h1>Cutting-Edge Technology for</h1>
+                            <h1>Healthcare Innovation</h1>
                         </div>
                     </div>
                 </div>

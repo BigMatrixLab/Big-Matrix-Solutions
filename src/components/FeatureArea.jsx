@@ -12,8 +12,8 @@ const FeatureArea = () => {
                                 <img src="/assets/images/home-2/feature-icon1.png" alt="" />
                             </div>
                             <div className="feature-content">
-                                <h4>18+ Year Experience</h4>
-                                <p>Monotonically synergize grants to business visualize strategic infomediaries</p>
+                                <h4>AI-Powered Analytics</h4>
+                                <p>Machine learning models transforming medical data into actionable clinical insights</p>
                                 <Link to="/service">Read More</Link>
                             </div>
                         </div>
@@ -24,8 +24,8 @@ const FeatureArea = () => {
                                 <img src="/assets/images/home-2/feature-icon2.png" alt="" />
                             </div>
                             <div className="feature-content">
-                                <h4>Dedicated Members</h4>
-                                <p>Monotonically synergize grants to business visualize strategic infomediaries</p>
+                                <h4>Big Data Solutions</h4>
+                                <p>Scalable infrastructure for processing and analyzing massive healthcare datasets</p>
                                 <Link to="/service">Read More</Link>
                             </div>
                         </div>
@@ -36,8 +36,8 @@ const FeatureArea = () => {
                                 <img src="/assets/images/home-2/feature-icon3.png" alt="" />
                             </div>
                             <div className="feature-content">
-                                <h4>Valuable Supports</h4>
-                                <p>Monotonically synergize grants to business visualize strategic infomediaries</p>
+                                <h4>Data Security</h4>
+                                <p>Enterprise-grade security ensuring privacy and compliance with healthcare standards</p>
                                 <Link to="/service">Read More</Link>
                             </div>
                         </div>

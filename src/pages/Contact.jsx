@@ -37,9 +37,11 @@ const Contact = () => {
                                             <div className="single-input-box">
                                                 <select name="place" id="place">
                                                     <option value="">Subject</option>
-                                                    <option value="web">Web Development </option>
-                                                    <option value="design">Design </option>
-                                                    <option value="marketing">Marketing</option>
+                                                    <option value="research">Research Collaboration</option>
+                                                    <option value="software">Software Solutions</option>
+                                                    <option value="consulting">AI Consulting</option>
+                                                    <option value="partnership">Partnership Inquiry</option>
+                                                    <option value="other">Other</option>
                                                 </select>
                                             </div>
                                         </div>

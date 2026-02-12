@@ -26,10 +26,10 @@ const AboutArea = () => {
                     <div className="col-lg-6">
                         <div className="about-right">
                             <div className="section-title left style-two">
-                                <h4>IT Support For Business</h4>
-                                <h1>Ensuring Your Success Trusted</h1>
-                                <h1>IT Services Source</h1>
-                                <p>Monotonectally synergize granular markets and front markets. Collaboratively visualize strategic infomediaries after multimedia based models. Synergistically task state of the art infrastructures for</p>
+                                <h4>Big-Matrix Lab Development Wing</h4>
+                                <h1>Transforming Healthcare with</h1>
+                                <h1>AI-Powered Solutions</h1>
+                                <p>We develop cutting-edge software solutions and tools for medical research and clinical workflows. Our development wing specializes in creating AI-powered diagnostic systems, machine learning models, and data analytics platforms that accelerate medical discoveries and improve patient outcomes.</p>
                             </div>
                             <div className="row">
                                 <div className="col-lg-6 col-md-6">
@@ -38,7 +38,7 @@ const AboutArea = () => {
                                             <img src="/assets/images/home-2/about-icon1.png" alt="" />
                                         </div>
                                         <div className="about-icon-box-content">
-                                            <h4>100% Money Back Gaurentee</h4>
+                                            <h4>Trusted Research Solutions</h4>
                                         </div>
                                     </div>
                                 </div>
@@ -47,7 +47,7 @@ const AboutArea = () => {
                                         <div className="about-icon">
                                             <img src="/assets/images/home-2/about-icon2.png" alt="" />
                                         </div>
-                                        <div className="about-icon-box-content">
+                                        <div className="about-icon-box-content">\n                                            <h4>Enterprise-Grade Security</h4>
                                             <h4>Expert & Dedicated Team Members</h4>
                                         </div>
                                     </div>

@@ -15,11 +15,10 @@ const FooterArea = () => {
                                 </span>
                             </Link>
                         </div>
-                        <div className="footer-widget-desc">
-                            <p>Monotonectally synergize granular top
-                                visualize strategic infomediaries afters
-                                task state of the art infrastructures
-                                digital agency in north</p>
+                        <div class="footer-widget-desc">
+                            <p>Development wing of Big-Matrix Lab at North South University.
+                                Revolutionizing healthcare through cutting-edge AI, big data analytics,
+                                and biomedical research to accelerate medical discoveries.</p>
                         </div>
                         <div className="toptech-button inner-style">
                             <Link to="/about">Discover More<i className="bi bi-arrow-right-short"></i></Link>
@@ -48,11 +47,11 @@ const FooterArea = () => {
                             </div>
                             <div className="footer-widget-menu">
                                 <ul>
-                                    <li><Link to="/service"><i className="bi bi-arrow-right-circle"></i>IT Solutions</Link></li>
-                                    <li><Link to="/service"><i className="bi bi-arrow-right-circle"></i>Cyber Security</Link></li>
-                                    <li><Link to="/service"><i className="bi bi-arrow-right-circle"></i>Digital Marketing</Link></li>
-                                    <li><Link to="/service"><i className="bi bi-arrow-right-circle"></i>Brand Identity</Link></li>
-                                    <li><Link to="/service"><i className="bi bi-arrow-right-circle"></i>SEO Marketing</Link></li>
+                                    <li><Link to="/service"><i className="bi bi-arrow-right-circle"></i>AI in Healthcare</Link></li>
+                                    <li><Link to="/service"><i className="bi bi-arrow-right-circle"></i>Machine Learning</Link></li>
+                                    <li><Link to="/service"><i className="bi bi-arrow-right-circle"></i>Big Data Solutions</Link></li>
+                                    <li><Link to="/service"><i className="bi bi-arrow-right-circle"></i>Medical Imaging</Link></li>
+                                    <li><Link to="/service"><i className="bi bi-arrow-right-circle"></i>Research Software</Link></li>
                                 </ul>
                             </div>
                         </div>
@@ -60,15 +59,13 @@ const FooterArea = () => {
                     <div className="col-lg-3 col-md-6">
                         <div className="footer-widget-content">
                             <div className="footer-widget-title">
-                                <h4>Newsletter</h4>
+                                <h4>Contact Us</h4>
                             </div>
-                            <p className="f-desc-2">Subscribe our Latest Newsletter</p>
-                            <form action="#" onSubmit={(e) => e.preventDefault()}>
-                                <div className="footer-newslatter-box">
-                                    <input type="text" name="Email" placeholder="Enter Your E-Mail" required />
-                                    <button type="submit">Subscribe</button>
-                                </div>
-                            </form>
+                            <div className="footer-contact-info">
+                                <p><i className="bi bi-envelope"></i> bigmatrixlab@gmail.com</p>
+                                <p><i className="bi bi-telephone"></i> +880-2-55668200 (Ext: 6212)</p>
+                                <p><i className="bi bi-geo-alt"></i> SAC-1025, North South University<br />Bashundhara, Dhaka-1229, Bangladesh</p>
+                            </div>
                         </div>
                     </div>
                 </div>
@@ -78,17 +75,17 @@ const FooterArea = () => {
                             <div className="col-lg-6 col-md-6">
 
                                 <div className="footer-bottom-content">
-                                    <p>© {new Date().getFullYear()} Big-Martrix Solutions.</p>
+                                    <p>© {new Date().getFullYear()} Big-Matrix Lab. All rights reserved.</p>
                                 </div>
 
                             </div>
                             <div className="col-lg-6 col-md-6">
                                 <div className="footer-botton-social-icon">
                                     <ul>
-                                        <li><Link to="#"><i className="fa-brands fa-facebook-f"></i></Link></li>
-                                        <li><Link to="#"><i className="fa-brands fa-twitter"></i></Link></li>
-                                        <li><Link to="#"><i className="fa-brands fa-linkedin-in"></i></Link></li>
-                                        <li><Link to="#"><i className="fa-brands fa-pinterest-p"></i></Link></li>
+                                        <li><a href="https://www.facebook.com/profile.php?id=61566031568599" target="_blank" rel="noopener noreferrer"><i className="fa-brands fa-facebook-f"></i></a></li>
+                                        <li><a href="https://github.com/uddinmonir" target="_blank" rel="noopener noreferrer"><i className="fa-brands fa-github"></i></a></li>
+                                        <li><a href="https://scholar.google.com/citations?user=ZcKnA_AAAAAJ&hl=en" target="_blank" rel="noopener noreferrer"><i className="fa-brands fa-google"></i></a></li>
+                                        <li><a href="https://big-matrix.com" target="_blank" rel="noopener noreferrer"><i className="fa-solid fa-globe"></i></a></li>
                                     </ul>
                                 </div>
                             </div>

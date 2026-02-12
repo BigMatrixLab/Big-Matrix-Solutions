@@ -1,124 +1,124 @@
 [
     {
         "id": 1,
-        "name": "Arianna Bibi",
-        "role": "Web Developer",
+        "name": "Prof. Dr. M. Monir Uddin",
+        "role": "Team Leader",
         "image": "/assets/images/home-1/team1.jpg",
-        "slug": "arianna-bibi",
-        "desc": "Arianna is a highly skilled Web Developer with over 5 years of experience in creating dynamic and responsive websites. She specializes in React and modern CSS frameworks.",
-        "phone": "+123 (4567) 890",
-        "email": "arianna@big-martrix.com",
-        "location": "New York, USA",
+        "slug": "monir-uddin",
+        "desc": "Professor at the Department of Mathematics & Physics, North South University, Dhaka, Bangladesh. Leading cutting-edge research in AI, healthcare, and mathematical modeling.",
+        "phone": "+880-2-55668200 (Ext: 6212)",
+        "email": "monir.uddin@northsouth.edu",
+        "location": "Dhaka, Bangladesh",
         "skills": [
             {
-                "name": "Web Development",
-                "value": "95%"
+                "name": "AI in Healthcare",
+                "value": "98%"
             },
             {
-                "name": "React JS",
-                "value": "90%"
+                "name": "Mathematical Modeling",
+                "value": "95%"
             }
         ],
         "projects": [
             {
-                "name": "E-commerce Platform",
+                "name": "Breast Cancer AI System",
                 "value": "95%"
             },
             {
-                "name": "SaaS Dashboard",
-                "value": "85%"
+                "name": "Model Order Reduction",
+                "value": "92%"
             }
         ]
     },
     {
         "id": 2,
-        "name": "Nazmul Hossen",
-        "role": "UI/UX Designer",
+        "name": "Prof. Dr. Md. Abdul Hakim Khan",
+        "role": "Advisor",
         "image": "/assets/images/home-1/team2.jpg",
-        "slug": "nazmul-hossen",
-        "desc": "Nazmul is a creative UI/UX Designer dedicated to crafting intuitive and beautiful user experiences. He has a keen eye for detail and a passion for user-centric design.",
-        "phone": "+123 (4567) 891",
-        "email": "nazmul@big-martrix.com",
+        "slug": "abdul-hakim-khan",
+        "desc": "Professor at the Department of Mathematics, Bangladesh University of Engineering and Technology (BUET), Dhaka. Expert in computational mathematics and numerical methods.",
+        "phone": "+880-2-55668200",
+        "email": "mahkhan@math.buet.ac.bd",
         "location": "Dhaka, Bangladesh",
         "skills": [
             {
-                "name": "UI/UX Design",
+                "name": "Computational Mathematics",
                 "value": "98%"
             },
             {
-                "name": "Figma",
-                "value": "95%"
+                "name": "Numerical Methods",
+                "value": "96%"
             }
         ],
         "projects": [
             {
-                "name": "Mobile App UI",
-                "value": "92%"
+                "name": "Large-Scale Systems",
+                "value": "90%"
             },
             {
-                "name": "Brand Identity",
+                "name": "Algorithm Development",
                 "value": "88%"
             }
         ]
     },
     {
         "id": 3,
-        "name": "Roman Soltana",
-        "role": "Manager",
+        "name": "Prof. Dr. Shirin Tarafder",
+        "role": "Advisor",
         "image": "/assets/images/home-1/team3.jpg",
-        "slug": "roman-soltana",
-        "desc": "Roman is an experienced Project Manager who ensures that all projects are delivered on time and within budget. He is an expert in agile methodologies.",
-        "phone": "+123 (4567) 892",
-        "email": "roman@big-martrix.com",
-        "location": "London, UK",
+        "slug": "shirin-tarafder",
+        "desc": "Former Dean, Faculty of Basic Science and Paraclinical Science, Bangladesh Medical University (BMU), Dhaka, Bangladesh. Expert in medical sciences and healthcare research.",
+        "phone": "+880-2-55668200",
+        "email": "starafder2007@yahoo.com",
+        "location": "Dhaka, Bangladesh",
         "skills": [
             {
-                "name": "Project Management",
+                "name": "Medical Research",
                 "value": "95%"
             },
             {
-                "name": "Agile",
+                "name": "Healthcare Strategy",
                 "value": "92%"
             }
         ],
         "projects": [
             {
-                "name": "Corporate Website",
+                "name": "Medical AI Systems",
                 "value": "90%"
             },
             {
-                "name": "Digital Marketing",
+                "name": "Clinical Research",
                 "value": "85%"
             }
         ]
     },
     {
         "id": 4,
-        "name": "Ghaura Mogibor",
-        "role": "UI/UX Developer",
+        "name": "Research Team Member",
+        "role": "AI/ML Engineer",
         "image": "/assets/images/home-1/team4.jpg",
-        "slug": "ghaura-mogibor",
-        "desc": "Ghaura bridges the gap between design and development. He is a UI/UX Developer who creates functional and beautiful front-end components.",
-        "phone": "+123 (4567) 893",
-        "email": "ghaura@big-martrix.com",
-        "location": "Berlin, Germany",
+        "slug": "research-engineer",
+        "desc": "Dedicated AI/ML engineer working on cutting-edge healthcare AI solutions, medical image analysis, and deep learning systems for diagnostic applications.",
+        "phone": "+880-2-55668200",
+        "email": "bigmatrixlab@gmail.com",
+        "location": "Dhaka, Bangladesh",
         "skills": [
             {
-                "name": "Front-end Dev",
+                "name": "Deep Learning",
                 "value": "94%"
             },
             {
-                "name": "UI Implementation",
-                "value": "96%"
+                "name": "Medical AI",
+                "value": "90%"
             }
         ],
         "projects": [
             {
-                "name": "Web Application",
+                "name": "Cervix Analysis System",
                 "value": "93%"
             },
             {
-                "name": "Animation Library",
+                "name": "Breast Cancer Detection",
                 "value": "87%"
             }
         ]

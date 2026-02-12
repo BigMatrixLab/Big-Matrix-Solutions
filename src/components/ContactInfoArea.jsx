@@ -11,8 +11,8 @@ const ContactInfoArea = () => {
                                 <i className="fa-solid fa-phone"></i>
                             </div>
                             <div className="contact-info-content">
-                                <h4>Call us Any time</h4>
-                                <p>+123 (4567) 890</p>
+                                <h4>Call Us</h4>
+                                <p>+880-2-55668200 (Ext: 6212)</p>
                             </div>
                         </div>
                     </div>
@@ -23,18 +23,18 @@ const ContactInfoArea = () => {
                             </div>
                             <div className="contact-info-content">
                                 <h4>Send E-Mail</h4>
-                                <p>info@gmail.com</p>
+                                <p>bigmatrixlab@gmail.com</p>
                             </div>
                         </div>
                     </div>
                     <div className="col-lg-4 col-md-6">
                         <div className="contact-info-box">
                             <div className="contact-info-icon">
-                                <i className="fa-regular fa-clock"></i>
+                                <i className="fa-solid fa-location-dot"></i>
                             </div>
                             <div className="contact-info-content">
-                                <h4>Opening Hours</h4>
-                                <p>Mon - Fri (8.00 - 5.00)</p>
+                                <h4>Location</h4>
+                                <p>Bashundhara, Dhaka-1229, Bangladesh</p>
                             </div>
                         </div>
                     </div>

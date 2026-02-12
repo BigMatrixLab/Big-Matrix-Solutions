@@ -262,7 +262,7 @@ const AboutOne = () => {
                             <div className="section-title left inner-style">
                                 <h4>Our Help & Faq Us </h4>
                                 <h1>Navigating FAQs with Speed</h1>
-                                <h1>and Precision"</h1>
+                                <h1>and Precision</h1>
                                 <p>Business tailored it design, management & support services needs to be
                                     business agency elit, sed do eiusmod tempor proved.</p>
                             </div>
