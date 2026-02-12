@@ -69,8 +69,8 @@ Tags: consulting, finance, corporate, business, consultant, multipurpose, techno
 .header-menu ul li a {
     display: inline-block;
     font-weight: 600;
-    font-size: 17px;
-    padding: 20px 0;
+    font-size: 18px;
+    padding: 30px 0;
     text-transform: capitalize;
     color: #fff;
     transition: 0.5s;
@@ -2283,7 +2283,7 @@ Tags: consulting, finance, corporate, business, consultant, multipurpose, techno
     filter: drop-shadow(0px 10px 10px rgba(207, 218, 235, 0.2));
     background-color: #ffffff;
     text-align: center;
-    padding: 24px 20px 80px;
+    padding: 20px 20px 50px;
     border-radius: 4px;
     clip-path: polygon(0 0, 100% 0%, 100% 100%, 50% 78%, 0 100%);
     transition: 0.5s;
@@ -2299,12 +2299,12 @@ Tags: consulting, finance, corporate, business, consultant, multipurpose, techno
 }
 
 .style-two .team-content h4 {
-    font-size: 24px;
+    font-size: 22px;
     font-weight: 600;
-    margin: 0 0 8px;
+    margin: 0 0 6px;
     transition: 0.5s;
-    min-height: 32px;
-    line-height: 1.3;
+    max-height: 56px;
+    line-height: 28px;
     display: -webkit-box;
     -webkit-line-clamp: 2;
     line-clamp: 2;
@@ -2320,7 +2320,7 @@ Tags: consulting, finance, corporate, business, consultant, multipurpose, techno
 
 .style-two .team-content p {
     margin: 0;
-    font-size: 15px;
+    font-size: 14px;
     line-height: 1.4;
 }
 
@@ -2332,8 +2332,7 @@ Tags: consulting, finance, corporate, business, consultant, multipurpose, techno
 
 .style-two .team-socila-icon-box {
     position: absolute;
-    left: 50%;
-    transform: translateX(-50%);
+    left: 125px;
     bottom: -21px;
 }
 

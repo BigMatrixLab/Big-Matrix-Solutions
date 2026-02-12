@@ -1,7 +1,6 @@
 import React, { useState } from 'react';
 import Breadcrumb from '../components/Breadcrumb';
 import TeamArea from '../components/TeamArea';
-import CounterArea from '../components/CounterArea';
 import TestimonialArea from '../components/TestimonialArea';
 import BrandArea from '../components/BrandArea';
 
@@ -251,7 +250,6 @@ const AboutOne = () => {
             </div>
 
             <TeamArea />
-            <CounterArea />
             <TestimonialArea />
 
             {/* Faqs Area */}
