@@ -25,7 +25,7 @@ const Services = () => {
                             <div className="col-lg-3 col-md-6" key={service.id}>
                                 <div className="single-service-box">
                                     <div className="service-icon">
-                                        <img src={service.icon} alt={service.title} />
+                                        <i className={service.icon}></i>
                                     </div>
                                     <div className="service-content">
                                         <h4>{service.title}</h4>

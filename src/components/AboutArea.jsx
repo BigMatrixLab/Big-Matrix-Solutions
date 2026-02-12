@@ -16,9 +16,9 @@ const AboutArea = () => {
                             </div>
                             <div className="about-conter-box">
                                 <div className="about-counter-title">
-                                    <h4>18</h4>
+                                    <h4>10</h4>
                                     <span>+</span>
-                                    <p>Years Of <br /> Experiences </p>
+                                    <p>Completed <br /> Projects </p>
                                 </div>
                             </div>
                         </div>
@@ -29,7 +29,7 @@ const AboutArea = () => {
                                 <h4>Big-Matrix Lab Development Wing</h4>
                                 <h1>Transforming Healthcare with</h1>
                                 <h1>AI-Powered Solutions</h1>
-                                <p>We develop cutting-edge software solutions and tools for medical research and clinical workflows. Our development wing specializes in creating AI-powered diagnostic systems, machine learning models, and data analytics platforms that accelerate medical discoveries and improve patient outcomes.</p>
+                                <p style={{ textAlign: 'justify' }}>We develop cutting-edge software solutions and tools for medical research and clinical workflows. Our development wing specializes in creating AI-powered diagnostic systems, machine learning models, and data analytics platforms that accelerate medical discoveries and improve patient outcomes.</p>
                             </div>
                             <div className="row">
                                 <div className="col-lg-6 col-md-6">
@@ -47,7 +47,7 @@ const AboutArea = () => {
                                         <div className="about-icon">
                                             <img src="/assets/images/home-2/about-icon2.png" alt="" />
                                         </div>
-                                        <div className="about-icon-box-content">\n                                            <h4>Enterprise-Grade Security</h4>
+                                        <div className="about-icon-box-content">
                                             <h4>Expert & Dedicated Team Members</h4>
                                         </div>
                                     </div>
@@ -74,7 +74,7 @@ const AboutArea = () => {
                                 </div>
                             </div>
                             <div className="toptech-button style-one">
-                                <Link to="/about">About More<i className="bi bi-arrow-right-circle-fill"></i></Link>
+                                <Link to="/about">Learn More<i className="bi bi-arrow-right-circle-fill"></i></Link>
                             </div>
                             <div className="about-shape-two">
                                 <img src="/assets/images/home-2/about-shape2.png" alt="" />

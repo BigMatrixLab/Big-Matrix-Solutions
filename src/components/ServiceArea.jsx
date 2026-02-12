@@ -20,7 +20,7 @@ const ServiceArea = () => {
                         <div className="col-lg-4 col-md-6" key={service.id}>
                             <div className="single-services-box">
                                 <div className="service-icon-thumb">
-                                    <img src={service.icon} alt={service.title} />
+                                    <i className={service.icon}></i>
                                 </div>
                                 <div className="service-number">
                                     <h1>0{index + 1}</h1>

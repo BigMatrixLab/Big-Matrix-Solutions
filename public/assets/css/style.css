@@ -1914,6 +1914,12 @@ Tags: consulting, finance, corporate, business, consultant, multipurpose, techno
     position: relative;
 }
 
+.style-two .about-thumb img {
+    width: 570px;
+    height: 614px;
+    object-fit: cover;
+}
+
 .style-two .about-shape {
     position: absolute;
     right: 76px;
@@ -2066,17 +2072,21 @@ Tags: consulting, finance, corporate, business, consultant, multipurpose, techno
     z-index: 1;
     margin-bottom: 25px;
     border-radius: 5px;
+    overflow: hidden;
+    min-height: 320px;
+    display: flex;
+    flex-direction: column;
 }
 
 .style-two .single-services-box:before {
     position: absolute;
     content: "";
-    left: 50%;
+    right: 0;
     top: 0;
     width: 0;
     height: 100%;
     background: #0B5ADB;
-    transition: .5s;
+    transition: all 0.5s;
     z-index: -1;
     border-radius: 5px;
 }
@@ -2088,15 +2098,20 @@ Tags: consulting, finance, corporate, business, consultant, multipurpose, techno
 
 .service-icon-thumb {
     position: relative;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    width: 80px;
+    height: 80px;
 }
 
 .service-icon-thumb:before {
     position: absolute;
     content: "";
-    left: -8px;
-    top: -7px;
-    width: 40px;
-    height: 40px;
+    left: 0;
+    top: 0;
+    width: 80px;
+    height: 80px;
     background: #E6EEFB;
     transition: .5s;
     z-index: -1;
@@ -2107,12 +2122,19 @@ Tags: consulting, finance, corporate, business, consultant, multipurpose, techno
     background: #2F73E0;
 }
 
-.service-icon-thumb img {
+.service-icon-thumb img,
+.service-icon-thumb i {
     transition: 0.5s;
+    font-size: 50px;
+    color: #0C59DB;
 }
 
 .style-two .single-services-box:hover .service-icon-thumb img {
     filter: brightness(0) invert(1);
+}
+
+.style-two .single-services-box:hover .service-icon-thumb i {
+    color: #ffffff;
 }
 
 .style-two .service-number h1 {
@@ -2131,6 +2153,11 @@ Tags: consulting, finance, corporate, business, consultant, multipurpose, techno
     margin: 0;
 }
 
+.style-two .single-services-box:hover .service-number h1 {
+    background: #E6EEFB;
+    color: #154EDA;
+}
+
 .style-two .service-content h4 {
     font-size: 26px;
     line-height: 50px;
@@ -2138,6 +2165,12 @@ Tags: consulting, finance, corporate, business, consultant, multipurpose, techno
     font-weight: 700;
     margin: 16px 0 12px 0;
     transition: 0.5s;
+    min-height: 50px;
+    display: -webkit-box;
+    -webkit-line-clamp: 1;
+    -webkit-box-orient: vertical;
+    overflow: hidden;
+    text-overflow: ellipsis;
 }
 
 .style-two .single-services-box:hover .service-content h4,
@@ -2149,6 +2182,11 @@ Tags: consulting, finance, corporate, business, consultant, multipurpose, techno
     margin: 0 0 24px;
     transition: 0.5s;
     color: #686868;
+    display: -webkit-box;
+    -webkit-line-clamp: 3;
+    -webkit-box-orient: vertical;
+    overflow: hidden;
+    text-overflow: ellipsis;
 }
 
 .style-two .single-services-box:hover .service-content p {
@@ -4676,6 +4714,30 @@ Tags: consulting, finance, corporate, business, consultant, multipurpose, techno
     background-color: #ffffff;
     border-radius: 3px;
     margin-bottom: 64px;
+    position: relative;
+    z-index: 1;
+    overflow: hidden;
+    min-height: 330px;
+    display: flex;
+    flex-direction: column;
+}
+
+.inner-style .single-service-box:before {
+    position: absolute;
+    content: "";
+    right: 0;
+    top: 0;
+    width: 0;
+    height: 100%;
+    background: #0B5ADB;
+    transition: all 0.5s;
+    z-index: -1;
+    border-radius: 3px;
+}
+
+.inner-style .single-service-box:hover:before {
+    left: 0;
+    width: 100%;
 }
 
 .inner-style .service-icon {
@@ -4684,10 +4746,24 @@ Tags: consulting, finance, corporate, business, consultant, multipurpose, techno
     border-radius: 43px;
     background-color: #f3f8fd;
     border: 2px solid #ffffff;
-    line-height: 80px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
     position: relative;
     top: -38px;
     margin: auto;
+    z-index: 1;
+}
+
+.inner-style .service-icon img,
+.inner-style .service-icon i {
+    font-size: 50px;
+    color: #0C59DB;
+    transition: 0.5s;
+}
+
+.inner-style .single-service-box:hover .service-icon i {
+    color: #ffffff;
 }
 
 .inner-style .service-icon:before {
@@ -4711,10 +4787,31 @@ Tags: consulting, finance, corporate, business, consultant, multipurpose, techno
     font-size: 24px;
     font-weight: 600;
     margin: 0 0 14px;
+    transition: 0.5s;
+    min-height: 30px;
+    display: -webkit-box;
+    -webkit-line-clamp: 1;
+    -webkit-box-orient: vertical;
+    overflow: hidden;
+    text-overflow: ellipsis;
+}
+
+.inner-style .single-service-box:hover .service-content h4 {
+    color: #ffffff;
 }
 
 .inner-style .service-content p {
     color: #686868;
+    transition: 0.5s;
+    display: -webkit-box;
+    -webkit-line-clamp: 3;
+    -webkit-box-orient: vertical;
+    overflow: hidden;
+    text-overflow: ellipsis;
+}
+
+.inner-style .single-service-box:hover .service-content p {
+    color: #ffffff;
 }
 
 .inner-style .service-content a {
@@ -4729,7 +4826,7 @@ Tags: consulting, finance, corporate, business, consultant, multipurpose, techno
 }
 
 .inner-style .single-service-box:hover .service-content a {
-    background: transparent;
+    background: #ffffff;
     color: #0C59DB;
 }
 

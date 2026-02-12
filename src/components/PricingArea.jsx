@@ -43,7 +43,7 @@ const PricingArea = () => {
                             <div className="single-pricing-box">
                                 <div className="pricing-body">
                                     <Link className="pricing-tag" to="#">Business</Link>
-                                    <span className="pricing-text">For 1 Years </span>
+                                    <span className="pricing-text">Per Project</span>
                                     <h4 className="pricing">$39. <span>98</span></h4>
                                 </div>
                                 <div className="pricing-content">
@@ -60,7 +60,7 @@ const PricingArea = () => {
                             <div className="single-pricing-box two">
                                 <div className="pricing-body">
                                     <Link className="pricing-tag" to="#">Popular</Link>
-                                    <span className="pricing-text">For 1 Month </span>
+                                    <span className="pricing-text">Per Month</span>
                                     <h4 className="pricing">$49. <span>90</span></h4>
                                 </div>
                                 <div className="pricing-content">

@@ -3,72 +3,64 @@
         "id": 1,
         "slug": "ai-healthcare",
         "title": "AI in Healthcare",
-        "icon": "/assets/images/service-inner/service-icon-1.png",
+        "icon": "far fa-heart",
         "desc": "Exploring innovative applications of artificial intelligence in healthcare, focusing on diagnostic tools, patient care optimization, and medical image analysis.",
-        "longDescription": "We develop cutting-edge AI solutions for healthcare that transform how medical professionals diagnose, treat, and care for patients. Our systems utilize advanced machine learning models that analyze complex medical data and images to provide actionable insights. From automated diagnostic tools to predictive patient care systems, we're revolutionizing healthcare delivery through intelligent technology that improves accuracy and outcomes.",
-        "image": "/assets/images/inner-images/service-details.jpg"
+        "longDescription": "We develop cutting-edge AI solutions for healthcare that transform how medical professionals diagnose, treat, and care for patients. Our systems utilize advanced machine learning models that analyze complex medical data and images to provide actionable insights. From automated diagnostic tools to predictive patient care systems, we're revolutionizing healthcare delivery through intelligent technology that improves accuracy and outcomes."
     },
     {
         "id": 2,
         "slug": "machine-learning",
         "title": "Machine Learning & Deep Learning",
-        "icon": "/assets/images/service-inner/service-icon-4.png",
+        "icon": "far fa-lightbulb",
         "desc": "Advancing the frontiers of deep learning through innovative architectures, algorithms, and applications in various domains.",
-        "longDescription": "Our machine learning and deep learning services push the boundaries of what's possible with artificial intelligence. We develop custom neural network architectures, optimize training algorithms, and create models that can learn from complex, multi-dimensional data. Whether it's computer vision, natural language processing, or predictive analytics, we build intelligent systems that deliver real-world value across healthcare, research, and industry applications.",
-        "image": "/assets/images/inner-images/service-details.jpg"
+        "longDescription": "Our machine learning and deep learning services push the boundaries of what's possible with artificial intelligence. We develop custom neural network architectures, optimize training algorithms, and create models that can learn from complex, multi-dimensional data. Whether it's computer vision, natural language processing, or predictive analytics, we build intelligent systems that deliver real-world value across healthcare, research, and industry applications."
     },
     {
         "id": 3,
         "slug": "big-data-solutions",
         "title": "Big Data Solutions",
-        "icon": "/assets/images/service-inner/service-icon-8.png",
+        "icon": "far fa-hdd",
         "desc": "Scalable infrastructure for processing and analyzing massive healthcare datasets with real-time capabilities.",
-        "longDescription": "Handle massive volumes of data with our scalable big data solutions designed specifically for healthcare and research institutions. We build robust data pipelines, distributed processing systems, and high-performance analytics platforms that can process terabytes of medical data in real-time. Our solutions ensure data integrity, security, and compliance while providing the computational power needed for breakthrough discoveries.",
-        "image": "/assets/images/inner-images/service-details.jpg"
+        "longDescription": "Handle massive volumes of data with our scalable big data solutions designed specifically for healthcare and research institutions. We build robust data pipelines, distributed processing systems, and high-performance analytics platforms that can process terabytes of medical data in real-time. Our solutions ensure data integrity, security, and compliance while providing the computational power needed for breakthrough discoveries."
     },
     {
         "id": 4,
         "slug": "mathematical-modeling",
         "title": "Mathematical Modeling",
-        "icon": "/assets/images/service-inner/service-icon-3.png",
+        "icon": "far fa-chart-bar",
         "desc": "Developing sophisticated mathematical models and computational methods to solve complex real-world problems in science and engineering.",
-        "longDescription": "We create advanced mathematical models that simulate and analyze complex systems in healthcare and biomedical research. Our expertise includes differential equations, statistical modeling, optimization algorithms, and numerical methods. These models help researchers understand disease progression, optimize treatment protocols, and predict outcomes with unprecedented accuracy.",
-        "image": "/assets/images/inner-images/service-details.jpg"
+        "longDescription": "We create advanced mathematical models that simulate and analyze complex systems in healthcare and biomedical research. Our expertise includes differential equations, statistical modeling, optimization algorithms, and numerical methods. These models help researchers understand disease progression, optimize treatment protocols, and predict outcomes with unprecedented accuracy."
     },
     {
         "id": 5,
         "slug": "model-order-reduction",
         "title": "Model Order Reduction",
-        "icon": "/assets/images/service-inner/service-icon-2.png",
+        "icon": "far fa-compress-arrows-alt",
         "desc": "Reducing computational complexity of large-scale mathematical models in numerical simulations while maintaining accuracy.",
-        "longDescription": "Model Order Reduction (MOR) is essential for making large-scale dynamical systems computationally tractable. We develop robust algorithms and software that reduce the complexity of mathematical models without sacrificing accuracy. Our methods enable faster simulations, real-time analysis, and efficient optimization of complex systems in engineering and scientific applications.",
-        "image": "/assets/images/inner-images/service-details.jpg"
+        "longDescription": "Model Order Reduction (MOR) is essential for making large-scale dynamical systems computationally tractable. We develop robust algorithms and software that reduce the complexity of mathematical models without sacrificing accuracy. Our methods enable faster simulations, real-time analysis, and efficient optimization of complex systems in engineering and scientific applications."
     },
     {
         "id": 6,
         "slug": "medical-image-analysis",
         "title": "Medical Image Analysis",
-        "icon": "/assets/images/service-inner/service-icon-1.png",
+        "icon": "far fa-images",
         "desc": "Advanced AI-powered systems for analyzing medical images including mammograms, X-rays, and other diagnostic imaging.",
-        "longDescription": "Our medical image analysis solutions leverage state-of-the-art deep learning to assist radiologists and healthcare professionals in detecting diseases earlier and more accurately. We create specialized models for different imaging modalities that can segment anatomical structures, identify anomalies, and generate comprehensive diagnostic reports automatically.",
-        "image": "/assets/images/inner-images/service-details.jpg"
+        "longDescription": "Our medical image analysis solutions leverage state-of-the-art deep learning to assist radiologists and healthcare professionals in detecting diseases earlier and more accurately. We create specialized models for different imaging modalities that can segment anatomical structures, identify anomalies, and generate comprehensive diagnostic reports automatically."
     },
     {
         "id": 7,
         "slug": "data-security",
         "title": "Data Security & Compliance",
-        "icon": "/assets/images/service-inner/service-icon-7.png",
+        "icon": "far fa-shield-alt",
         "desc": "Enterprise-grade security ensuring complete privacy and compliance with healthcare standards and regulations.",
-        "longDescription": "We implement comprehensive security measures to protect sensitive medical data. Our solutions ensure HIPAA compliance, implement end-to-end encryption, and utilize secure cloud infrastructure. We understand the critical importance of patient privacy and data integrity in healthcare applications, and our systems are built with security as a foundational principle.",
-        "image": "/assets/images/inner-images/service-details.jpg"
+        "longDescription": "We implement comprehensive security measures to protect sensitive medical data. Our solutions ensure HIPAA compliance, implement end-to-end encryption, and utilize secure cloud infrastructure. We understand the critical importance of patient privacy and data integrity in healthcare applications, and our systems are built with security as a foundational principle."
     },
     {
         "id": 8,
         "slug": "research-software",
         "title": "Research Software Development",
-        "icon": "/assets/images/service-inner/service-icon-6.png",
+        "icon": "far fa-file-code",
         "desc": "Custom software tools and platforms designed specifically for medical research, data analysis, and clinical workflows.",
-        "longDescription": "We build specialized software solutions that empower researchers and clinicians to work more effectively. From e-learning platforms for medical education to comprehensive analysis tools for research data, our software is designed with the end-user in mind. We create intuitive interfaces, powerful backends, and robust systems that facilitate breakthrough research and improved patient care.",
-        "image": "/assets/images/inner-images/service-details.jpg"
+        "longDescription": "We build specialized software solutions that empower researchers and clinicians to work more effectively. From e-learning platforms for medical education to comprehensive analysis tools for research data, our software is designed with the end-user in mind. We create intuitive interfaces, powerful backends, and robust systems that facilitate breakthrough research and improved patient care."
     }
 ]

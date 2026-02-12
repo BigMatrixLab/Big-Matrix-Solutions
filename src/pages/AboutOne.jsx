@@ -104,9 +104,9 @@ const AboutOne = () => {
                                         <img src="/assets/images/about-inner/about-counter-icon.png" alt="" />
                                     </div>
                                     <div className="about-counter-content">
-                                        <h4>283</h4>
-                                        <span>K+</span>
-                                        <p>Complete Project</p>
+                                        <h4>10</h4>
+                                        <span>+</span>
+                                        <p>Completed Projects</p>
                                     </div>
                                 </div>
                                 <div className="about-shape">
@@ -118,8 +118,8 @@ const AboutOne = () => {
                             <div className="abour-right">
                                 <div className="section-title left inner-style">
                                     <h4>IT Support for Business</h4>
-                                    <h1>About is Over 291+ Company</h1>
-                                    <h1>Business Solution.</h1>
+                                    <h1>Successfully Delivered 10+</h1>
+                                    <h1>Healthcare Projects</h1>
                                     <p className="section-desc">Monotonectally synergize granular markets and front markets. Collaboratively
                                         visualize strategic infomediaries after multimedia based models. Synergistically
                                         task state of the art infrastructures for</p>
