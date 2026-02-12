@@ -1,14 +1,15 @@
+import { Outlet } from 'react-router-dom';
 import Header from './Header';
 import MobileMenu from './MobileMenu';
 import FooterArea from './FooterArea';
 import ScrollToTop from './ScrollToTop';
 
-const Layout = ({ children }) => {
+const Layout = () => {
     return (
         <>
             <Header />
             <MobileMenu />
-            {children}
+            <Outlet />
             <FooterArea />
             <ScrollToTop />
             {/* Search Popup */}

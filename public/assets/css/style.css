@@ -1643,13 +1643,31 @@ Tags: consulting, finance, corporate, business, consultant, multipurpose, techno
    <!--Toptech hero Area Home Two All Css-->
 =========================================================---*/
 .style-two.hero-area {
-    background: url(../images/home-2/hero-bg.png);
+    background: url(../images/home-2/hero-bg.jpg);
     background-repeat: no-repeat;
     background-size: cover;
     background-position: center center;
     height: 800px;
     overflow: hidden;
     padding-bottom: 80px;
+    position: relative;
+}
+
+.style-two.hero-area::before {
+    content: '';
+    position: absolute;
+    top: 0;
+    left: 0;
+    right: 0;
+    bottom: 0;
+    background: rgba(0, 0, 0, 0.5);
+    /* 50% dark overlay */
+    z-index: 1;
+}
+
+.style-two.hero-area .container {
+    position: relative;
+    z-index: 2;
 }
 
 .style-two .hero-content h4 {

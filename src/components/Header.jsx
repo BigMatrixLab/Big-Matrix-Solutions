@@ -1,8 +1,5 @@
 import React, { useEffect } from 'react';
 import { Link } from 'react-router-dom';
-import servicesData from '../data/services.json';
-import teamData from '../data/team.json';
-import projectData from '../data/projects.json';
 
 const Header = () => {
 
