@@ -70,7 +70,7 @@ Tags: consulting, finance, corporate, business, consultant, multipurpose, techno
     display: inline-block;
     font-weight: 600;
     font-size: 17px;
-    padding: 40px 0;
+    padding: 20px 0;
     text-transform: capitalize;
     color: #fff;
     transition: 0.5s;
@@ -1016,10 +1016,22 @@ Tags: consulting, finance, corporate, business, consultant, multipurpose, techno
 
 .style-one .single-team-box {
     position: relative;
+    margin-bottom: 30px;
+}
+
+.style-one .single-team-box .team-thumb {
+    width: 100%;
+    height: 350px;
+    overflow: hidden;
+    border-radius: 10px;
+    position: relative;
 }
 
 .style-one .single-team-box img {
     width: 100%;
+    height: 100%;
+    object-fit: cover;
+    object-position: center;
     border-radius: 10px;
 }
 
@@ -2168,6 +2180,7 @@ Tags: consulting, finance, corporate, business, consultant, multipurpose, techno
     min-height: 50px;
     display: -webkit-box;
     -webkit-line-clamp: 1;
+    line-clamp: 1;
     -webkit-box-orient: vertical;
     overflow: hidden;
     text-overflow: ellipsis;
@@ -2184,6 +2197,7 @@ Tags: consulting, finance, corporate, business, consultant, multipurpose, techno
     color: #686868;
     display: -webkit-box;
     -webkit-line-clamp: 3;
+    line-clamp: 3;
     -webkit-box-orient: vertical;
     overflow: hidden;
     text-overflow: ellipsis;
@@ -2242,22 +2256,40 @@ Tags: consulting, finance, corporate, business, consultant, multipurpose, techno
 .style-two .single-team-box {
     margin-bottom: 30px;
     position: relative;
+    display: block;
+}
+
+.style-two .team-thumb {
+    width: 100%;
+    height: 350px;
+    overflow: hidden;
+    position: relative;
+    border-radius: 10px 10px 0 0;
+    display: block;
 }
 
 .style-two .team-thumb img {
     width: 100%;
+    height: 100%;
+    object-fit: cover;
+    object-position: center;
+    border-radius: 10px 10px 0 0;
+    display: block;
 }
 
 .style-two .team-content {
     position: relative;
+    width: 100%;
     filter: drop-shadow(0px 10px 10px rgba(207, 218, 235, 0.2));
     background-color: #ffffff;
     text-align: center;
-    padding: 24px 0 75px;
+    padding: 24px 20px 80px;
     border-radius: 4px;
     clip-path: polygon(0 0, 100% 0%, 100% 100%, 50% 78%, 0 100%);
     transition: 0.5s;
     height: 159px;
+    box-sizing: border-box;
+    display: block;
 }
 
 .style-two .single-team-box:hover .team-content {
@@ -2269,8 +2301,16 @@ Tags: consulting, finance, corporate, business, consultant, multipurpose, techno
 .style-two .team-content h4 {
     font-size: 24px;
     font-weight: 600;
-    margin: 0 0 4px;
+    margin: 0 0 8px;
     transition: 0.5s;
+    min-height: 32px;
+    line-height: 1.3;
+    display: -webkit-box;
+    -webkit-line-clamp: 2;
+    line-clamp: 2;
+    -webkit-box-orient: vertical;
+    overflow: hidden;
+    text-overflow: ellipsis;
 }
 
 .style-two .single-team-box:hover .team-content p,
@@ -2279,7 +2319,9 @@ Tags: consulting, finance, corporate, business, consultant, multipurpose, techno
 }
 
 .style-two .team-content p {
-    margin: 2px 0 0;
+    margin: 0;
+    font-size: 15px;
+    line-height: 1.4;
 }
 
 .style-two .team-shape {
@@ -2290,12 +2332,14 @@ Tags: consulting, finance, corporate, business, consultant, multipurpose, techno
 
 .style-two .team-socila-icon-box {
     position: absolute;
-    left: 125px;
+    left: 50%;
+    transform: translateX(-50%);
     bottom: -21px;
 }
 
 .style-two .team-share {
     display: inline-block;
+    border: white 2px solid;
     font-size: 14px;
     color: #fff;
     background: #0c5adb;
@@ -4791,6 +4835,7 @@ Tags: consulting, finance, corporate, business, consultant, multipurpose, techno
     min-height: 30px;
     display: -webkit-box;
     -webkit-line-clamp: 1;
+    line-clamp: 1;
     -webkit-box-orient: vertical;
     overflow: hidden;
     text-overflow: ellipsis;
@@ -4805,6 +4850,7 @@ Tags: consulting, finance, corporate, business, consultant, multipurpose, techno
     transition: 0.5s;
     display: -webkit-box;
     -webkit-line-clamp: 3;
+    line-clamp: 3;
     -webkit-box-orient: vertical;
     overflow: hidden;
     text-overflow: ellipsis;
@@ -6637,6 +6683,23 @@ button.icons {
     background-repeat: no-repeat;
     background-size: cover;
     background-position: center center;
+}
+
+.team-details-area .team-thumb {
+    width: 100%;
+    max-width: 550px;
+    margin: 0 auto;
+    border-radius: 10px;
+    overflow: hidden;
+}
+
+.team-details-area .team-thumb img {
+    width: 100%;
+    height: auto;
+    max-height: 600px;
+    object-fit: cover;
+    object-position: center;
+    border-radius: 10px;
 }
 
 .team-details-area .team-member-title h4 {

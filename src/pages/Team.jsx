@@ -1,17 +1,28 @@
-import React from 'react';
+import React, { useState } from 'react';
 import { Link } from 'react-router-dom';
 import Breadcrumb from '../components/Breadcrumb';
 import teamData from '../data/team.json';
+import TeamCard from '../components/TeamCard';
 
 const Team = () => {
+    const [activeTeamId, setActiveTeamId] = useState(null);
+
+    const toggleSocial = (id) => {
+        if (activeTeamId === id) {
+            setActiveTeamId(null);
+        } else {
+            setActiveTeamId(id);
+        }
+    };
+
     const teamMembers = teamData;
 
     return (
         <>
             <Breadcrumb pageTitle="Our Team" breadcrumbItem="Team" />
 
-            {/* Team Area Style One */}
-            <div className="team-area style-one inner">
+            {/* Team Area Style Two */}
+            <div className="team-area style-two">
                 <div className="container">
                     <div className="row">
                         <div className="col-lg-6">
@@ -23,31 +34,18 @@ const Team = () => {
                         </div>
                         <div className="col-lg-6">
                             <div className="toptech-button style-one">
-                                <a href="#">All Member<i className="bi bi-arrow-right-circle-fill"></i></a>
+                                <Link to="/team">All Members<i className="bi bi-arrow-right-circle-fill"></i></Link>
                             </div>
                         </div>
                     </div>
                     <div className="row">
-                        {teamMembers.map((member, index) => (
-                            <div className="col-lg-3 col-md-6" key={index}>
-                                <div className="single-team-box">
-                                    <div className="team-thumb">
-                                        <img src={member.image} alt={member.name} />
-                                    </div>
-                                    <div className="team-content">
-                                        <div className="team-bio">
-                                            <h4><Link to={`/team/${member.slug}`}>{member.name}</Link></h4>
-                                            <p>{member.role}</p>
-                                        </div>
-                                        <div className="team-social-icon">
-                                            <ul>
-                                                <li><a href="#"><i className="fa-brands fa-facebook-f"></i></a></li>
-                                                <li><a href="#"><i className="fa-brands fa-twitter"></i></a></li>
-                                                <li><a href="#"><i className="fa-brands fa-youtube"></i></a></li>
-                                            </ul>
-                                        </div>
-                                    </div>
-                                </div>
+                        {teamMembers.map((member) => (
+                            <div className="col-lg-3 col-md-6" key={member.id}>
+                                <TeamCard 
+                                    member={member} 
+                                    activeTeamId={activeTeamId} 
+                                    onToggleSocial={toggleSocial} 
+                                />
                             </div>
                         ))}
                     </div>
@@ -60,8 +58,8 @@ const Team = () => {
                     <div className="row align-items-center">
                         <div className="col-lg-6">
                             <div className="section-title left inner-style">
-                                <h1>Get Latest Update from Big-Martrix Solutions</h1>
-                                <h1>Stay Connect with Us</h1>
+                                <h1>Get Latest Update from Big-Matrix Solutions</h1>
+                                <h1>Stay Connected with Us</h1>
                             </div>
                         </div>
                         <div className="col-lg-6">

@@ -29,7 +29,7 @@ const MobileMenu = () => {
                             <Link to="/" className="d-flex align-items-center">
                                 <img src="/assets/images/big_matrix_cube_logo.png" alt="logo" style={{ maxHeight: '40px' }} />
                                 <span className="logo-text ms-2" style={{ fontWeight: 'bold', fontSize: '16px', lineHeight: '1.2', color: '#000' }}>
-                                    Big-Martrix<br />Solutions
+                                    Big-Matrix<br />Solutions
                                 </span>
                             </Link>
                         </div>

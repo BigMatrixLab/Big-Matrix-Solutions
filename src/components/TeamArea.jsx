@@ -1,6 +1,7 @@
 import React, { useState } from 'react';
 import { Link } from 'react-router-dom';
 import teamData from '../data/team.json';
+import TeamCard from './TeamCard';
 
 const TeamArea = () => {
     const [activeTeamId, setActiveTeamId] = useState(null);
@@ -35,33 +36,11 @@ const TeamArea = () => {
                 <div className="row">
                     {teamMembers.map((member) => (
                         <div className="col-lg-3 col-md-6" key={member.id}>
-                            <div className="single-team-box">
-                                <div className="team-thumb">
-                                    <img src={member.image} alt={member.name} />
-                                </div>
-                                <div className="team-content">
-                                    <h4><Link to={`/team/${member.slug}`}>{member.name}</Link></h4>
-                                    <p>{member.role}</p>
-                                    <div className="team-shape">
-                                        <img src="/assets/images/team/team-shape.png" alt="" />
-                                    </div>
-                                </div>
-                                <div className="team-socila-icon-box">
-                                    <div className="team-share" onClick={() => toggleSocial(member.id)}>
-                                        <div className="team-share-icon">
-                                            <span><i className="bi bi-share"></i></span>
-                                        </div>
-                                    </div>
-                                    <div className={`team-social-icon ${activeTeamId === member.id ? 'active' : ''}`}>
-                                        <ul>
-                                            <li><Link to="#"><i className="fab fa-facebook-f"></i></Link></li>
-                                            <li><Link to="#"><i className="fab fa-twitter"></i></Link></li>
-                                            <li><Link to="#"><i className="fab fa-instagram"></i></Link></li>
-                                            <li><Link to="#"><i className="fa-brands fa-pinterest-p"></i></Link></li>
-                                        </ul>
-                                    </div>
-                                </div>
-                            </div>
+                            <TeamCard 
+                                member={member} 
+                                activeTeamId={activeTeamId} 
+                                onToggleSocial={toggleSocial} 
+                            />
                         </div>
                     ))}
                 </div>

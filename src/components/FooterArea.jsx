@@ -11,7 +11,7 @@ const FooterArea = () => {
                             <Link to="/" className="d-flex align-items-center">
                                 <img src="/assets/images/big_matrix_cube_logo.png" alt="logo" style={{ maxHeight: '60px' }} />
                                 <span className="logo-text ms-2" style={{ fontWeight: 'bold', fontSize: '24px', lineHeight: '1.2', color: '#fff' }}>
-                                    Big-Martrix<br />Solutions
+                                    Big-Matrix<br />Solutions
                                 </span>
                             </Link>
                         </div>

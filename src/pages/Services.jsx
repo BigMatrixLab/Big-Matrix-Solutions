@@ -15,7 +15,7 @@ const Services = () => {
                         <div className="col-lg-12 text-center">
                             <div className="section-title center inner-style">
                                 <h4>What We Provides?</h4>
-                                <h1>Provide Interective IT Solution</h1>
+                                <h1>Provide Interactive IT Solution</h1>
                                 <h1>Business Services</h1>
                             </div>
                         </div>
@@ -45,8 +45,8 @@ const Services = () => {
                     <div className="row align-items-center">
                         <div className="col-lg-6">
                             <div className="section-title left inner-style">
-                                <h1>Get Latest Update from Big-Martrix Solutions</h1>
-                                <h1>Stay Connect with Us</h1>
+                                <h1>Get Latest Update from Big-Matrix Solutions</h1>
+                                <h1>Stay Connected with Us</h1>
                             </div>
                         </div>
                         <div className="col-lg-6">
