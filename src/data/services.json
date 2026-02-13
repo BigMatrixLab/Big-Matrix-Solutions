@@ -19,7 +19,7 @@
         "id": 3,
         "slug": "pharmaceutical-intelligence",
         "title": "Pharmaceutical Intelligence & Drug Analytics",
-        "icon": "far fa-pills",
+        "icon": "far fa-briefcase-medical",
         "desc": "Advanced analytics for drug demand forecasting, supply chain optimization, market intelligence, clinical data analysis, and production planning.",
         "longDescription": "Empower your pharmaceutical operations with enterprise-grade intelligence systems. Our platforms provide drug demand forecasting using predictive models, supply chain optimization algorithms, comprehensive market intelligence dashboards, clinical data analytics for drug development, production planning systems, and public health-driven pharmaceutical insights. These solutions position you as enterprise and government-ready, delivering strategic advantages in competitive pharmaceutical markets."
     },
@@ -70,5 +70,13 @@
         "icon": "far fa-shield-alt",
         "desc": "Healthcare-grade security, end-to-end encryption, access control systems, and compliance-ready infrastructure meeting HIPAA, GDPR, and industry standards.",
         "longDescription": "Protect your organization with enterprise-grade cybersecurity and compliance solutions. We implement healthcare-grade security measures, end-to-end encryption protocols, granular access control systems, secure authentication mechanisms, and comprehensive compliance frameworks. Our solutions ensure HIPAA, GDPR, and industry-specific regulatory compliance while protecting sensitive data with multiple layers of security, intrusion detection, and continuous monitoring."
+    },
+    {
+        "id": 10,
+        "slug": "national-health-public-policy",
+        "title": "National-Scale Digital Health & Public Policy Intelligence",
+        "icon": "far fa-flag",
+        "desc": "Enterprise solutions for Ministries of Health, Government Bodies, and International NGOs including disease surveillance, policy simulation, and nationwide health resource optimization.",
+        "longDescription": "Position your organization as a strategic partner for national and international health initiatives. We deliver nationwide disease surveillance platforms for real-time tracking and mapping of infectious diseases, public health resource optimization tools that help governments manage hospital bed availability and medical staff distribution, policy impact simulation systems using Big Data to model healthcare policy outcomes, interoperability standard implementation (HL7, FHIR) for regional healthcare network communication, and epidemic & outbreak prediction systems with early-warning capabilities that combine local clinical data with global health trends to prevent pandemics."
     }
 ]

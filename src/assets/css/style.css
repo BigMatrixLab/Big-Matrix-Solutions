@@ -1894,7 +1894,7 @@ Tags: consulting, finance, corporate, business, consultant, multipurpose, techno
     margin-bottom: 25px;
     border-radius: 5px;
     overflow: hidden;
-    min-height: 320px;
+    min-height: 400px;
     display: flex;
     flex-direction: column;
 }
@@ -1979,17 +1979,23 @@ Tags: consulting, finance, corporate, business, consultant, multipurpose, techno
     color: #E6EEFB;
 }
 
+.style-two .service-content {
+    display: flex;
+    flex-direction: column;
+    flex-grow: 1;
+}
+
 .style-two .service-content h4 {
     font-size: 26px;
-    line-height: 50px;
+    line-height: 32px;
     color: #041424;
     font-weight: 700;
-    margin: 16px 0 12px 0;
+    margin: 16px 0 8px 0;
     transition: 0.5s;
-    min-height: 50px;
+    min-height: auto;
     display: -webkit-box;
-    -webkit-line-clamp: 1;
-    line-clamp: 1;
+    -webkit-line-clamp: 2;
+    line-clamp: 2;
     -webkit-box-orient: vertical;
     overflow: hidden;
     text-overflow: ellipsis;
@@ -2001,7 +2007,7 @@ Tags: consulting, finance, corporate, business, consultant, multipurpose, techno
 }
 
 .style-two .service-content p {
-    margin: 0 0 24px;
+    margin: 0 0 16px;
     transition: 0.5s;
     color: #686868;
     display: -webkit-box;
@@ -2025,6 +2031,7 @@ Tags: consulting, finance, corporate, business, consultant, multipurpose, techno
     color: #fff;
     font-weight: 600;
     font-family: "Rajdhani";
+    margin-top: auto;
 }
 
 .style-two .single-services-box:hover .service-content a {
