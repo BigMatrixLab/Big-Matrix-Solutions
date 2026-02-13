@@ -7,6 +7,7 @@ import PortfolioArea from '../components/PortfolioArea';
 import CounterArea from '../components/CounterArea';
 import WorkingProcessArea from '../components/WorkingProcessArea';
 import TestimonialArea from '../components/TestimonialArea';
+import VideoArea from '../components/VideoArea';
 import ContactInfoArea from '../components/ContactInfoArea';
 import PricingArea from '../components/PricingArea';
 import BlogArea from '../components/BlogArea';
@@ -24,6 +25,7 @@ const Home = () => {
             <PortfolioArea />
             <WorkingProcessArea />
             <TestimonialArea />
+            <VideoArea />
             <ContactInfoArea />
             <PricingArea />
             <BlogArea />

@@ -1,18 +1,25 @@
 import React from 'react';
 import { Swiper, SwiperSlide } from 'swiper/react';
-import { Autoplay, Navigation } from 'swiper/modules';
+import { Autoplay, Navigation, Pagination } from 'swiper/modules';
 import 'swiper/css';
 import 'swiper/css/navigation';
+import 'swiper/css/pagination';
+import testimonialsData from '../data/testimonials.json';
 
 const TestimonialArea = () => {
 
     // Swiper options based on original owl carousel settings
     const swiperOptions = {
-        modules: [Autoplay, Navigation],
+        modules: [Autoplay, Navigation, Pagination],
         loop: true,
         autoplay: {
             delay: 10000,
             disableOnInteraction: false,
+        },
+        pagination: {
+            clickable: true,
+            bulletClass: 'swiper-pagination-bullet owl-dot',
+            bulletActiveClass: 'swiper-pagination-bullet-active active',
         },
         navigation: true, // You might need to style the swiper navigation buttons or create custom ones
         breakpoints: {
@@ -36,106 +43,28 @@ const TestimonialArea = () => {
                 </div>
                 <div className="row">
                     <Swiper {...swiperOptions} className="testi-list-1">
-                        <SwiperSlide>
-                            <div className="col-lg-12 text-center">
-                                <div className="single-testimonial-box">
-                                    <div className="testi-desc">
-                                        <p>Completely extend leveraged customer service rather than performance based imperatives.
-                                            magnetic relationships rather than leveraged e-markets. Rapidiously transform timely niches
-                                            technology. Enthusiastically e-enable global e-markets for cooperative e-business.
-                                            Authoritatively deliver highly efficient expertise</p>
-                                    </div>
-                                    <div className="testi-rating">
-                                        <ul>
-                                            <li><i className="bi bi-star-fill"></i></li>
-                                            <li><i className="bi bi-star-fill"></i></li>
-                                            <li><i className="bi bi-star-fill"></i></li>
-                                            <li><i className="bi bi-star-fill"></i></li>
-                                            <li><i className="bi bi-star-fill"></i></li>
-                                        </ul>
-                                    </div>
-                                    <div className="testi-author">
-                                        <h4>Venkatesh Iyer</h4>
-                                        <p>UI Designer</p>
+                        {testimonialsData.map((testimonial) => (
+                            <SwiperSlide key={testimonial.id}>
+                                <div className="col-lg-12 text-center">
+                                    <div className="single-testimonial-box">
+                                        <div className="testi-desc">
+                                            <p>{testimonial.feedback}</p>
+                                        </div>
+                                        <div className="testi-rating">
+                                            <ul>
+                                                {[...Array(testimonial.rating)].map((_, i) => (
+                                                    <li key={i}><i className="bi bi-star-fill"></i></li>
+                                                ))}
+                                            </ul>
+                                        </div>
+                                        <div className="testi-author">
+                                            <h4>{testimonial.name}</h4>
+                                            <p>{testimonial.designation}</p>
+                                        </div>
                                     </div>
                                 </div>
-                            </div>
-                        </SwiperSlide>
-                        <SwiperSlide>
-                            <div className="col-lg-12 text-center">
-                                <div className="single-testimonial-box">
-                                    <div className="testi-desc">
-                                        <p>Completely extend leveraged customer service rather than performance based imperatives.
-                                            magnetic relationships rather than leveraged e-markets. Rapidiously transform timely niches
-                                            technology. Enthusiastically e-enable global e-markets for cooperative e-business.
-                                            Authoritatively deliver highly efficient expertise</p>
-                                    </div>
-                                    <div className="testi-rating">
-                                        <ul>
-                                            <li><i className="bi bi-star-fill"></i></li>
-                                            <li><i className="bi bi-star-fill"></i></li>
-                                            <li><i className="bi bi-star-fill"></i></li>
-                                            <li><i className="bi bi-star-fill"></i></li>
-                                            <li><i className="bi bi-star-fill"></i></li>
-                                        </ul>
-                                    </div>
-                                    <div className="testi-author">
-                                        <h4>John D. Alexon</h4>
-                                        <p>UI Designer</p>
-                                    </div>
-                                </div>
-                            </div>
-                        </SwiperSlide>
-                        <SwiperSlide>
-                            <div className="col-lg-12 text-center">
-                                <div className="single-testimonial-box">
-                                    <div className="testi-desc">
-                                        <p>Completely extend leveraged customer service rather than performance based imperatives.
-                                            magnetic relationships rather than leveraged e-markets. Rapidiously transform timely niches
-                                            technology. Enthusiastically e-enable global e-markets for cooperative e-business.
-                                            Authoritatively deliver highly efficient expertise</p>
-                                    </div>
-                                    <div className="testi-rating">
-                                        <ul>
-                                            <li><i className="bi bi-star-fill"></i></li>
-                                            <li><i className="bi bi-star-fill"></i></li>
-                                            <li><i className="bi bi-star-fill"></i></li>
-                                            <li><i className="bi bi-star-fill"></i></li>
-                                            <li><i className="bi bi-star-fill"></i></li>
-                                        </ul>
-                                    </div>
-                                    <div className="testi-author">
-                                        <h4>Alex Brock </h4>
-                                        <p>UI Designer</p>
-                                    </div>
-                                </div>
-                            </div>
-                        </SwiperSlide>
-                        <SwiperSlide>
-                            <div className="col-lg-12 text-center">
-                                <div className="single-testimonial-box">
-                                    <div className="testi-desc">
-                                        <p>Completely extend leveraged customer service rather than performance based imperatives.
-                                            magnetic relationships rather than leveraged e-markets. Rapidiously transform timely niches
-                                            technology. Enthusiastically e-enable global e-markets for cooperative e-business.
-                                            Authoritatively deliver highly efficient expertise</p>
-                                    </div>
-                                    <div className="testi-rating">
-                                        <ul>
-                                            <li><i className="bi bi-star-fill"></i></li>
-                                            <li><i className="bi bi-star-fill"></i></li>
-                                            <li><i className="bi bi-star-fill"></i></li>
-                                            <li><i className="bi bi-star-fill"></i></li>
-                                            <li><i className="bi bi-star-fill"></i></li>
-                                        </ul>
-                                    </div>
-                                    <div className="testi-author">
-                                        <h4>Abhishek Sharma</h4>
-                                        <p>UI Designer</p>
-                                    </div>
-                                </div>
-                            </div>
-                        </SwiperSlide>
+                            </SwiperSlide>
+                        ))}
                     </Swiper>
                 </div>
             </div>

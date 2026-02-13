@@ -1134,7 +1134,7 @@ Tags: consulting, finance, corporate, business, consultant, multipurpose, techno
     color: #041424;
     width: 65%;
     margin: auto;
-    margin-top: 176px;
+    margin-top: 30px;
 }
 
 .style-one .testi-rating {
@@ -2752,6 +2752,7 @@ Tags: consulting, finance, corporate, business, consultant, multipurpose, techno
     z-index: 1;
     overflow: hidden;
     gap: 29px;
+    height: 100%;
 }
 
 .style-two .contact-info-box:before {
@@ -8994,4 +8995,41 @@ Awards One Css
 .loaded .loader {
     top: -100%;
     opacity: 0;
+}
+
+/* Custom Testimonial Styles */
+
+
+.testi-list-1 .swiper-pagination {
+    position: relative;
+    margin-top: 30px;
+    text-align: center;
+}
+
+.owl-dot {
+    width: 12px;
+    height: 12px;
+    background: #d6d6d6;
+    border-radius: 50%;
+    display: inline-block;
+    margin: 0 6px;
+    cursor: pointer;
+    transition: all 0.3s ease;
+    border: none;
+}
+
+.owl-dot.active {
+    background: #0c5adb;
+    position: relative;
+}
+
+.owl-dot.active::after {
+    content: '';
+    position: absolute;
+    top: -5px;
+    left: -5px;
+    right: -5px;
+    bottom: -5px;
+    border: 2px solid #0c5adb;
+    border-radius: 50%;
 }
