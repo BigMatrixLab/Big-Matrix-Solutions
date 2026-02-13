@@ -21,15 +21,13 @@ const Header = () => {
                 }
             }
         };
-
         window.addEventListener('scroll', handleScroll);
-        // Check initial scroll position
+       
         handleScroll();
-
         return () => window.removeEventListener('scroll', handleScroll);
     }, []);
 
-    // Determine header classes based on page and scroll state
+ 
     const getHeaderClasses = () => {
         let classes = 'header-area style-two d-none d-lg-block';
         if (isHomePage && !isScrolled) {
@@ -44,9 +42,8 @@ const Header = () => {
                 <div className="row align-items-center">
                     <div className="col-lg-3">
                         <div className="header-logo">
-                            <Link to="/" className="d-flex align-items-center">
-                                <img src="/assets/images/big_matrix_cube_logo.png" alt="logo" style={{ maxHeight: '100px' }} />
-
+                            <Link to="/">
+                                <img src="/assets/images/big_matrix_cube.png" alt="logo" style={{ maxHeight: '80px' }} />
                             </Link>
                         </div>
                     </div>

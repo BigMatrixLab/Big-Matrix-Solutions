@@ -1454,7 +1454,7 @@ Tags: consulting, finance, corporate, business, consultant, multipurpose, techno
    <!--Toptech hero Area Home Two All Css-->
 =========================================================---*/
 .style-two.hero-area {
-    background: url(/assets/images/home-2/hero-bg.jpg);
+    /* Background removed for Vanta.js animation */
     background-repeat: no-repeat;
     background-size: cover;
     background-position: center center;
@@ -1471,8 +1471,8 @@ Tags: consulting, finance, corporate, business, consultant, multipurpose, techno
     left: 0;
     right: 0;
     bottom: 0;
-    background: rgba(0, 0, 0, 0.5);
-    /* 50% dark overlay */
+    /* Reduced overlay for better Vanta.js visibility */
+    background: rgba(0, 0, 0, 0.2);
     z-index: 1;
 }
 
@@ -1602,6 +1602,10 @@ Tags: consulting, finance, corporate, business, consultant, multipurpose, techno
     position: relative;
     z-index: 1;
     margin-bottom: 23px;
+    min-height: 450px;
+    display: flex;
+    flex-direction: column;
+    justify-content: flex-start;
 }
 
 .style-two .single-feature-box:before {
@@ -1648,6 +1652,12 @@ Tags: consulting, finance, corporate, business, consultant, multipurpose, techno
     background: url(/assets/images/home-2/feature-shape-2.png);
     background-repeat: no-repeat;
     background-position: center;
+}
+
+.style-two .feature-content {
+    display: flex;
+    flex-direction: column;
+    flex-grow: 1;
 }
 
 .style-two .feature-content h4 {

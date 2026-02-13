@@ -17,6 +17,7 @@ import Mission from './pages/Mission';
 import Contact from './pages/Contact';
 import NotFound from './pages/NotFound';
 import ScrollToTopOnNavigation from './components/ScrollToTopOnNavigation';
+import './assets/css/preloader.css';
 
 function App() {
   useEffect(() => {
@@ -30,7 +31,15 @@ function App() {
 
   return (
     <>
+      {/* --- Preloader HTML --- */}
+      <div id="preloader">
+        <div className="loader-content">
+          <img src="/assets/images/Loading_Animation.gif" alt="Loading..." />
+        </div>
+      </div>
+
       <ScrollToTopOnNavigation />
+      
       <Routes>
         {/* Routes with Layout (Header/Footer) */}
         <Route element={<Layout />}>
@@ -50,7 +59,7 @@ function App() {
           <Route path="/contact" element={<Contact />} />
         </Route>
         
-        {/* 404 Page without Layout for full-screen aesthetic experience */}
+        {/* 404 Page */}
         <Route path="*" element={<NotFound />} />
       </Routes>
     </>

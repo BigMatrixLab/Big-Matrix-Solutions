@@ -1,0 +1,100 @@
+/* Fixed top bar for mobile */
+.mobile-header-bar {
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100%;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding: 15px 20px;
+    z-index: 900;
+    transition: all 0.3s ease;
+}
+
+/* State: Home page + Not Scrolled */
+.transparent-mobile {
+    background: transparent;
+    color: white; /* Hamburger icon color */
+}
+
+/* State: Scrolled or Other pages */
+.white-mobile {
+    background: #ffffff;
+    color: #333; /* Hamburger icon color */
+    box-shadow: 0 2px 10px rgba(0,0,0,0.1);
+}
+
+.mobile-menu-toggle {
+    background: none;
+    border: none;
+    color: inherit; /* Takes color from parent class */
+    cursor: pointer;
+}
+
+/* Off-canvas Side Panel (White background) */
+.side-nav {
+    position: fixed;
+    top: 0;
+    right: -100%;
+    width: 280px;
+    height: 100vh;
+    background: #ffffff;
+    z-index: 1000;
+    transition: right 0.4s cubic-bezier(0.16, 1, 0.3, 1);
+    display: flex;
+    flex-direction: column;
+}
+
+.side-nav.open {
+    right: 0;
+}
+
+/* Force vertical menu items */
+.nav-links {
+    list-style: none;
+    padding: 0;
+    margin: 0;
+    display: flex;
+    flex-direction: column; /* VERTICAL STACK */
+}
+
+.nav-links li {
+    width: 100%;
+    border-bottom: 1px solid #f2f2f2;
+}
+
+.nav-links li a {
+    display: block; /* Full width row */
+    padding: 20px 25px;
+    color: #222;
+    text-decoration: none;
+    font-size: 16px;
+    font-weight: 500;
+}
+
+/* Close Button */
+.side-nav-header {
+    padding: 20px;
+    display: flex;
+    justify-content: flex-end;
+}
+
+.close-btn {
+    background: none;
+    border: none;
+    font-size: 32px;
+    color: #333;
+    cursor: pointer;
+}
+
+/* Dimmer Overlay */
+.menu-overlay {
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100vw;
+    height: 100vh;
+    background: rgba(0, 0, 0, 0.4);
+    z-index: 999;
+}

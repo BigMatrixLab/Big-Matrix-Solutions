@@ -12,8 +12,8 @@ const FeatureArea = () => {
                                 <img src="/assets/images/home-2/feature-icon1.png" alt="" />
                             </div>
                             <div className="feature-content">
-                                <h4>AI-Powered Analytics</h4>
-                                <p>Machine learning models transforming medical data into actionable clinical insights</p>
+                                <h4>Enterprise Infrastructure</h4>
+                                <p>Scalable Ecosystem Architecture Subtext: We design integrated platforms that bridge the gap between AI diagnostics, EMR systems, and hospital management, creating a seamless digital backbone for modern healthcare.</p>
                                 <Link to="/service">Read More</Link>
                             </div>
                         </div>
@@ -24,9 +24,9 @@ const FeatureArea = () => {
                                 <img src="/assets/images/home-2/feature-icon2.png" alt="" />
                             </div>
                             <div className="feature-content">
-                                <h4>Big Data Solutions</h4>
-                                <p>Scalable infrastructure for processing and analyzing massive healthcare datasets</p>
-                                <Link to="/service">Read More</Link>
+                                <h4>Innovation Lab</h4>
+                                <p>Advanced R&D Facility Subtext: Our dedicated research division pioneers custom Deep Learning models and LLM frameworks, ensuring your organization stays ahead with proprietary, state-of-the-art intelligence.</p>
+                                <Link to="https://big-matrix.com/">Our Research</Link>
                             </div>
                         </div>
                     </div>
@@ -36,9 +36,9 @@ const FeatureArea = () => {
                                 <img src="/assets/images/home-2/feature-icon3.png" alt="" />
                             </div>
                             <div className="feature-content">
-                                <h4>Data Security</h4>
-                                <p>Enterprise-grade security ensuring privacy and compliance with healthcare standards</p>
-                                <Link to="/service">Read More</Link>
+                                <h4>Global Compliance</h4>
+                                <p>Secure & Regulatory Ready Subtext: Engineering with a "Security-First" mindset, we ensure all systems meet rigorous international standards for data privacy, clinical safety, and pharmaceutical compliance.</p>
+                                <Link to="/about">Security Standards</Link>
                             </div>
                         </div>
                     </div>
