@@ -26,10 +26,8 @@ const Header = () => {
                     <div className="col-lg-3">
                         <div className="header-logo">
                             <Link to="/" className="d-flex align-items-center">
-                                <img src="/assets/images/big_matrix_cube_logo.png" alt="logo" style={{ maxHeight: '65px' }} />
-                                <span className="logo-text ms-2" style={{ fontWeight: 'bold', fontSize: '24px', lineHeight: '1.2', display: 'inline-block', color: '#000' }}>
-                                    Big-Matrix<br />Solutions
-                                </span>
+                                <img src="/assets/images/big_matrix_cube_logo.png" alt="logo" style={{ maxHeight: '100px' }} />
+
                             </Link>
                         </div>
                     </div>

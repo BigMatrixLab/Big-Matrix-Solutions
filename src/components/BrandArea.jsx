@@ -13,73 +13,42 @@ const BrandArea = () => {
             disableOnInteraction: false,
         },
         breakpoints: {
-            0: { slidesPerView: 1 },
-            480: { slidesPerView: 2 },
-            768: { slidesPerView: 3 },
-            992: { slidesPerView: 4 },
-            1200: { slidesPerView: 5 },
+            0: { slidesPerView: 2 },
+            480: { slidesPerView: 3 },
+            768: { slidesPerView: 4 },
+            992: { slidesPerView: 5 },
+            1200: { slidesPerView: 6 },
         }
     };
+
+    // Fallback if twitter-x is not available in older versions
+    const safeBrandIcons = [
+        "bi bi-google",
+        "bi bi-microsoft",
+        "bi bi-apple",
+        "bi bi-github",
+        "bi bi-facebook",
+        "bi bi-twitter",
+        "bi bi-linkedin",
+        "bi bi-youtube"
+    ];
 
     return (
         <div className="brand-area style-two">
             <div className="container">
                 <div className="row">
                     <Swiper {...swiperOptions} className="brand-list-1">
-                        <SwiperSlide>
-                            <div className="col-lg-12">
-                                <div className="single-brand-box">
-                                    <div className="brand-thumb">
-                                        <img src="/assets/images/home-2/brand-1.png" alt="" />
+                        {safeBrandIcons.map((icon, index) => (
+                            <SwiperSlide key={index}>
+                                <div className="col-lg-12">
+                                    <div className="single-brand-box hook-box">
+                                        <div className="brand-thumb">
+                                            <i className={icon} style={{ fontSize: '3rem', color: '#6c757d', transition: '0.3s' }}></i>
+                                        </div>
                                     </div>
                                 </div>
-                            </div>
-                        </SwiperSlide>
-                        <SwiperSlide>
-                            <div className="col-lg-12">
-                                <div className="single-brand-box">
-                                    <div className="brand-thumb">
-                                        <img src="/assets/images/home-2/brand-2.png" alt="" />
-                                    </div>
-                                </div>
-                            </div>
-                        </SwiperSlide>
-                        <SwiperSlide>
-                            <div className="col-lg-12">
-                                <div className="single-brand-box">
-                                    <div className="brand-thumb">
-                                        <img src="/assets/images/home-2/brand-3.png" alt="" />
-                                    </div>
-                                </div>
-                            </div>
-                        </SwiperSlide>
-                        <SwiperSlide>
-                            <div className="col-lg-12">
-                                <div className="single-brand-box">
-                                    <div className="brand-thumb">
-                                        <img src="/assets/images/home-2/brand-4.png" alt="" />
-                                    </div>
-                                </div>
-                            </div>
-                        </SwiperSlide>
-                        <SwiperSlide>
-                            <div className="col-lg-12">
-                                <div className="single-brand-box">
-                                    <div className="brand-thumb">
-                                        <img src="/assets/images/home-2/brand-5.png" alt="" />
-                                    </div>
-                                </div>
-                            </div>
-                        </SwiperSlide>
-                        <SwiperSlide>
-                            <div className="col-lg-12">
-                                <div className="single-brand-box">
-                                    <div className="brand-thumb">
-                                        <img src="/assets/images/home-2/brand-4.png" alt="" />
-                                    </div>
-                                </div>
-                            </div>
-                        </SwiperSlide>
+                            </SwiperSlide>
+                        ))}
                     </Swiper>
                 </div>
             </div>

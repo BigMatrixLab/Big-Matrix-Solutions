@@ -2409,11 +2409,8 @@ Tags: consulting, finance, corporate, business, consultant, multipurpose, techno
    <!--Toptech Counter Area Css Style Two-->
 =========================================================---*/
 .style-two.counter-area {
-    background: url(../images/home-2/counter-bg.jpg);
-    background-repeat: no-repeat;
-    background-size: cover;
-    background-position: center center;
-    padding: 75px 0 63px;
+    background: #0c5adb;
+    padding: 40px 0;
 }
 
 .style-two .counter-box {
@@ -2448,7 +2445,7 @@ Tags: consulting, finance, corporate, business, consultant, multipurpose, techno
     background-repeat: no-repeat;
     background-size: cover;
     background-position: center center;
-    padding: 118px 0 100px;
+    padding: 100px 0 100px;
 }
 
 .style-two.portfolio-area .container-fluid {
@@ -2547,7 +2544,7 @@ Tags: consulting, finance, corporate, business, consultant, multipurpose, techno
 
 .style-two .portfolio-title a i {
     display: inline-block;
-    background: #0B59D7;
+    background: #0C5ADB;
     color: #fff;
     width: 48px;
     height: 48px;
@@ -2559,6 +2556,7 @@ Tags: consulting, finance, corporate, business, consultant, multipurpose, techno
     right: -72px;
     opacity: 0;
     transition: 0.5s;
+    z-index: 50;
 }
 
 .style-two .single-portfolio-box:hover .portfolio-title a i {

@@ -4,6 +4,9 @@ import { BrowserRouter } from 'react-router-dom'
 import { HelmetProvider } from 'react-helmet-async'
 import App from './App.jsx'
 import './index.css'
+import './assets/css/style.css'
+import './assets/css/responsive.css'
+import './assets/css/coustom-animation.css'
 
 ReactDOM.createRoot(document.getElementById('root')).render(
   <React.StrictMode>
