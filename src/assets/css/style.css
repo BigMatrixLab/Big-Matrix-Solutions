@@ -1887,7 +1887,7 @@ Tags: consulting, finance, corporate, business, consultant, multipurpose, techno
 }
 
 .style-two .single-services-box {
-    padding: 37px 0 30px 40px;
+    padding: 37px 40px 30px 40px;
     background-color: #fff;
     position: relative;
     z-index: 1;
@@ -2010,6 +2010,7 @@ Tags: consulting, finance, corporate, business, consultant, multipurpose, techno
     -webkit-box-orient: vertical;
     overflow: hidden;
     text-overflow: ellipsis;
+    text-align: justify;
 }
 
 .style-two .single-services-box:hover .service-content p {

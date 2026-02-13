@@ -26,7 +26,7 @@ const AboutArea = () => {
                     <div className="col-lg-6">
                         <div className="about-right">
                             <div className="section-title left style-two">
-                                <h4>Big-Matrix Lab Development Wing</h4>
+                                <h4>Big-Matrix Research & Development Lab</h4>
                                 <h1>Transforming Healthcare with</h1>
                                 <h1>AI-Powered Solutions</h1>
                                 <p style={{ textAlign: 'justify' }}>We develop cutting-edge software solutions and tools for medical research and clinical workflows. Our development wing specializes in creating AI-powered diagnostic systems, machine learning models, and data analytics platforms that accelerate medical discoveries and improve patient outcomes.</p>
@@ -74,7 +74,7 @@ const AboutArea = () => {
                                 </div>
                             </div>
                             <div className="toptech-button style-one">
-                                <Link to="/about">Learn More<i className="bi bi-arrow-right-circle-fill"></i></Link>
+                                <Link to="https://big-matrix.com/">Learn More<i className="bi bi-arrow-right-circle-fill"></i></Link>
                             </div>
                             <div className="about-shape-two">
                                 <img src="/assets/images/home-2/about-shape2.png" alt="" />
