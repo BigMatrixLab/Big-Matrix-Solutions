@@ -13,32 +13,34 @@
         "duration": "1 year (Started from April 2022)",
         "benefits": "Enhanced accuracy and efficiency in detecting breast abnormalities, early identification of potential cancerous lesions, improved clinical decision-making, and enhanced healthcare delivery."
     },
+    
+    
     {
-        "id": 2,
-        "title": "Cervix Analysis System",
-        "category": "Medical Imaging",
-        "image": "https://images.unsplash.com/photo-1576086213369-97a306d36557?auto=format&fit=crop&q=80&w=600",
-        "slug": "cervix-analysis",
-        "desc": "AI-powered cervical imaging analysis system for medical diagnostics.",
-        "longDesc": "An innovative AI system designed to analyze cervical imaging for early detection of abnormalities. The platform uses advanced computer vision and machine learning techniques to assist medical professionals in accurate diagnosis and treatment planning. The system provides automated segmentation and classification of cervical images with high precision.",
-        "client": "Big-Matrix Lab",
-        "date": "2022-2023",
-        "location": "North South University, Dhaka",
-        "duration": "Completed",
-        "benefits": "Enhanced diagnostic accuracy and streamlined cervical cancer screening processes."
+        "id": 4,
+        "title": "BM-Academy",
+        "category": "EdTech Platform",
+        "image": "/assets/images/projects/BM-Academy.png",
+        "slug": "bm-academy",
+        "desc": "Comprehensive EdTech platform for medical research education, deep learning training, and research paper publication guidance.",
+        "longDesc": "BM-Academy is an innovative educational technology platform designed to empower medical professionals and researchers through quality education and cutting-edge learning experiences. The platform offers live and recorded courses focusing on research methodology in medical engineering with deep learning, clinical research, medical writing, data analysis, ethics, and neuroscience. Key features include dataset selection and preprocessing training, model development and optimization guidance, qualitative and quantitative analysis techniques, scientific research paper writing with LaTeX, high-quality figure preparation, and comprehensive journal selection and submission guidance. With flexible group enrollment options, lifetime course access, professional certification, and live support, BM-Academy transforms careers by providing expert-led courses trusted by leading institutions. The platform has successfully served thousands of students with a 90% completion rate, offering comprehensive support from data preprocessing to research publication.",
+        "client": "Big-Matrix Solutions",
+        "date": "2024-Present",
+        "location": "Online Platform",
+        "duration": "Ongoing",
+        "benefits": "Transformed careers for thousands of students, 90% course completion rate, comprehensive research publication support, lifetime access to cutting-edge medical research education, and professional certification."
     },
     {
-        "id": 3,
-        "title": "Model Reduction Algorithms",
-        "category": "Mathematical Algorithms",
-        "image": "https://images.unsplash.com/photo-1509228468518-180dd4864904?auto=format&fit=crop&q=80&w=600",
-        "slug": "model-reduction",
-        "desc": "Mathematical algorithms and software for model reduction of large-scale dynamical systems.",
-        "longDesc": "This research project focuses on developing robust algorithms and software for Model Order Reduction (MOR) of large-scale dynamical systems. The main goal is to create efficient computational methods that reduce the complexity of mathematical models while maintaining accuracy. These algorithms are essential for real-time simulations in engineering and scientific applications.",
-        "client": "BANBEIS Research Grant",
-        "date": "2019-2020",
-        "location": "North South University, Dhaka",
-        "duration": "Completed",
-        "benefits": "Significantly reduced computational time for large-scale system simulations by 70%."
+        "id": 5,
+        "title": "Big-Matrix Project Management Platform",
+        "category": "Project Management",
+        "image": "/assets/images/projects/PM-Dashboard.jpeg",
+        "slug": "bm-project-management",
+        "desc": "Comprehensive project management platform built to solve real-world collaboration challenges, featuring task tracking, team workload management, and project progress monitoring.",
+        "longDesc": "Big-Matrix Project Management Platform is a sophisticated solution developed internally to address the complex challenges of managing multiple concurrent projects across distributed teams. Built on the principle of solving problems as they arise with our technical expertise, this platform emerged from our own operational needs and has become an essential tool for orchestrating our diverse portfolio of healthcare AI, research, and software development initiatives. The platform features comprehensive project tracking with real-time status updates, granular task management with priority levels and due dates, team workload distribution and capacity planning, progress visualization through intuitive dashboards, milestone tracking and deadline management, and collaborative features for seamless team communication. With support for multiple project types ranging from AI research to software development, the system provides complete visibility into active projects, completed tasks, and team member assignments. The dashboard offers at-a-glance metrics including active project counts, total task statistics, completion rates, and team member distribution, enabling informed decision-making and efficient resource allocation across the organization.",
+        "client": "Big-Matrix Solutions (Internal)",
+        "date": "2023-Present",
+        "location": "Internal Platform",
+        "duration": "Ongoing",
+        "benefits": "Streamlined project coordination across multiple concurrent initiatives, improved team collaboration and communication, enhanced visibility into project progress and resource allocation, reduced project management overhead, and increased overall operational efficiency."
     }
 ]

@@ -35,7 +35,7 @@ const CounterArea = () => {
                 <div className="row">
                     <div className="col-lg-12 text-center">
                         <div className="section-title center style-two">
-                            <h2 style={{color: "#ffffff", paddingBottom:"10px", marginBottom: "10px"}}>Our Trusted Partners</h2>
+                            <h2 style={{color: "#ffffff", paddingBottom:"10px", marginBottom: "40px"}}>Our Trusted Partners</h2>
                         </div>
                     </div>
                 </div>

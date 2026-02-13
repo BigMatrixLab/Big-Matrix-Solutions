@@ -32,27 +32,8 @@ const PortfolioArea = () => {
                 </div>
             </div>
 
-            <div className="container-fluid">
-                <div className="row">
-                    <div className="col-md-12">
-                        <div className="portfolio_nav">
-                            <div className="portfolio_menu">
-                                <ul className="menu-filtering">
-                                    <li className={filter === '*' ? "current_menu_item" : ""} onClick={() => setFilter('*')}>All Projects</li>
-                                    {categories.map((category, index) => (
-                                        <li 
-                                            key={index}
-                                            className={filter === category ? "current_menu_item" : ""} 
-                                            onClick={() => setFilter(category)}
-                                        >
-                                            {category}
-                                        </li>
-                                    ))}
-                                </ul>
-                            </div>
-                        </div>
-                    </div>
-                </div>
+            <div className="container">
+               
                 <div className="row image_load">
                     {filteredItems.map((item, index) => (
                         <div key={item.id} className={`col-lg-4 col-md-6 grid-item d-flex ${item.category.toLowerCase().replace(/\s+/g, '-')}`}>

@@ -20,9 +20,7 @@ const FooterArea = () => {
                                 Revolutionizing healthcare through cutting-edge AI, big data analytics,
                                 and biomedical research to accelerate medical discoveries.</p>
                         </div>
-                        <div className="toptech-button inner-style">
-                            <Link to="/about">Discover More<i className="bi bi-arrow-right-short"></i></Link>
-                        </div>
+                       
                     </div>
                     <div className="col-lg-2 col-md-6">
                         <div className="footer-widget-content">
@@ -83,9 +81,8 @@ const FooterArea = () => {
                                 <div className="footer-botton-social-icon">
                                     <ul>
                                         <li><a href="https://www.facebook.com/profile.php?id=61566031568599" target="_blank" rel="noopener noreferrer"><i className="fa-brands fa-facebook-f"></i></a></li>
-                                        <li><a href="https://github.com/uddinmonir" target="_blank" rel="noopener noreferrer"><i className="fa-brands fa-github"></i></a></li>
-                                        <li><a href="https://scholar.google.com/citations?user=ZcKnA_AAAAAJ&hl=en" target="_blank" rel="noopener noreferrer"><i className="fa-brands fa-google"></i></a></li>
-                                        <li><a href="https://big-matrix.com" target="_blank" rel="noopener noreferrer"><i className="fa-solid fa-globe"></i></a></li>
+                                        <li><a href="https://github.com/BigMatrixLab" target="_blank" rel="noopener noreferrer"><i className="fa-brands fa-github"></i></a></li>
+                                         <li><a href="https://big-matrix.com" target="_blank" rel="noopener noreferrer"><i className="fa-solid fa-globe"></i></a></li>
                                     </ul>
                                 </div>
                             </div>
