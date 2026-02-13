@@ -49,8 +49,8 @@ const PortfolioArea = () => {
                 </div>
                 <div className="row image_load">
                     {filteredItems.map(item => (
-                        <div key={item.id} className={`col-lg-4 col-md-6 grid-item ${item.category}`}>
-                            <div className="single-portfolio-box">
+                        <div key={item.id} className={`col-lg-4 col-md-6 grid-item d-flex ${item.category}`}>
+                            <div className="single-portfolio-box w-100 mb-5">
                                 <div className="portfolio-thumb">
                                     <img src={item.image} alt="" />
                                 </div>

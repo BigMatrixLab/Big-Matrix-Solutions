@@ -1,0 +1,253 @@
+/*---=====================================================
+   <!--Toptech About Area Css Inner Style One-->
+=========================================================---*/
+.inner-style-one.about-area {
+    background: url(/assets/images/about-inner/about-bg.jpg);
+    background-position: center;
+    background-repeat: no-repeat;
+    background-size: cover;
+    padding: 120px 0 125px;
+    /* Reduced top padding */
+}
+
+.inner-style-one .about-left {
+    position: relative;
+    z-index: 1;
+}
+
+.inner-style-one .about-thumb {
+    position: relative;
+    display: flex;
+    align-items: flex-end;
+}
+
+.inner-style-one .about-thumb .main-img {
+    width: 280px;
+    height: 400px;
+    object-fit: cover;
+    border-radius: 10px;
+    z-index: 2;
+    box-shadow: 0 10px 30px rgba(0, 0, 0, 0.1);
+}
+
+.inner-style-one .about-thumb-two {
+    margin-left: -80px;
+    margin-bottom: -40px;
+    z-index: 1;
+}
+
+.inner-style-one .about-thumb-two img {
+    width: 380px;
+    height: 480px;
+    object-fit: cover;
+    border-radius: 10px;
+    box-shadow: 0 10px 30px rgba(0, 0, 0, 0.1);
+}
+
+.inner-style-one .about-award-box {
+    background: #041424;
+    display: flex;
+    align-items: center;
+    padding: 20px 30px;
+    width: auto;
+    border-radius: 8px;
+    gap: 15px;
+    position: absolute;
+    top: 40px;
+    right: 0px;
+    z-index: 3;
+    animation: bounceleft 4s linear infinite;
+    box-shadow: 0 10px 30px rgba(0, 0, 0, 0.2);
+}
+
+.inner-style-one .about-award-content h4 {
+    font-size: 18px;
+    color: #fff;
+    font-weight: 600;
+    margin: 0;
+}
+
+.inner-style-one .about-award-content p {
+    font-size: 14px;
+    color: #0c5adb;
+    font-weight: 500;
+    margin: 0;
+}
+
+.inner-style-one .about-conuter-box {
+    background: #0c5adb;
+    text-align: center;
+    width: 200px;
+    height: 200px;
+    border-radius: 50%;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    border: 8px solid #fff;
+    position: absolute;
+    bottom: -20px;
+    left: 80px;
+    z-index: 5;
+    padding: 10px;
+    box-shadow: 0 10px 30px rgba(0, 0, 0, 0.1);
+}
+
+.inner-style-one .about-counter-icon i {
+    font-size: 40px;
+    color: #fff;
+    line-height: 1;
+    margin-bottom: 5px;
+}
+
+.inner-style-one .about-counter-content {
+    margin: 0;
+    line-height: 1.2;
+}
+
+.inner-style-one .about-counter-content h4 {
+    color: #fff;
+    font-size: 32px;
+    display: inline-block;
+    font-weight: 700;
+    margin: 0;
+}
+
+.inner-style-one .about-counter-content span {
+    color: #fff;
+    font-size: 32px;
+    font-weight: 700;
+}
+
+.inner-style-one .about-counter-content p {
+    color: #fff;
+    font-size: 14px;
+    margin: 2px 0 0;
+    line-height: 1;
+}
+
+.inner-style-one .about-shape {
+    position: absolute;
+    bottom: -40px;
+    left: 40px;
+    z-index: -1;
+    opacity: 0.5;
+}
+
+.inner-style-one .about-right {
+    padding-left: 60px;
+}
+
+.inner-style-one .about-list-item ul li {
+    color: #041424;
+    margin-bottom: 12px;
+    font-weight: 500;
+    list-style: none;
+    /* Add list style none just in case */
+}
+
+.inner-style-one .about-list-item ul li i {
+    color: #0c5adb;
+    font-size: 20px;
+    margin-right: 10px;
+}
+
+.inner-style-one .about-text {
+    margin-top: 20px;
+}
+
+.inner-style-one .about-number h4 {
+    font-size: 22px;
+    font-weight: 600;
+    color: #0c5adb;
+    border: 5px solid #0c5adb;
+    width: 65px;
+    height: 65px;
+    text-align: center;
+    border-radius: 50%;
+    line-height: 55px;
+    /* Adjusted for border */
+    background: #eff6fd;
+}
+
+.inner-style-one .about-company {
+    background-color: #eff6fd;
+    padding: 23px 29px 27px;
+    display: flex;
+    border-radius: 7px;
+    margin-top: 38px;
+}
+
+.inner-style-one .about-company-icon i {
+    display: inline-block;
+    font-size: 40px;
+    color: #0c5adb;
+    margin-right: 20px;
+}
+
+.inner-style-one .about-company-desc p {
+    font-size: 18px;
+    font-style: italic;
+    margin: 0;
+}
+
+/*section-title-inner-style*/
+.inner-style.section-title.left {
+    margin-bottom: 30px;
+}
+
+.inner-style.section-title.left h4 {
+    font-size: 18px;
+    color: #0c5adb;
+    font-weight: 600;
+    margin: 0 0 17px;
+}
+
+.inner-style.section-title.left h1 {
+    font-size: 48px;
+    line-height: 1.2;
+    margin-bottom: 20px;
+    font-weight: 700;
+}
+
+.inner-style.section-title.left p.section-desc {
+    margin: 0;
+    width: 100%;
+    margin-top: 19px;
+}
+
+.inner-style.toptech-button a {
+    display: inline-block;
+    background: #0c5adb;
+    border: 1px solid #0c5adb;
+    color: #fff;
+    padding: 14px 35px;
+    font-size: 16px;
+    font-weight: 500;
+    border-radius: 5px;
+    margin-top: 38px;
+    position: relative;
+    transition: 0.5s;
+    z-index: 1;
+}
+
+.inner-style.toptech-button a:hover {
+    color: #0c5adb;
+}
+
+.inner-style.toptech-button a:before {
+    position: absolute;
+    content: "";
+    width: 0;
+    height: 100%;
+    right: 0;
+    top: 0;
+    background: #fff;
+    z-index: -1;
+    transition: 0.5s;
+    border-radius: 5px;
+}
+
+.inner-style.toptech-button a:hover:before {
+    width: 100%;
+}

@@ -1,0 +1,133 @@
+/*---=====================================================
+   <!--Toptech Blog Area Css Style One-->
+=========================================================---*/
+.style-one.blog-area {
+    padding: 107px 0 100px;
+}
+
+.style-one .single-blog-box {
+    margin-bottom: 20px;
+    border-radius: 8px;
+    background-color: #ffffff;
+    border: 1px solid rgba(29, 33, 36, 0.12);
+    position: relative;
+    z-index: 1;
+    transition: .5s;
+    overflow: hidden;
+    padding: 24px;
+    padding-bottom: 19px;
+    display: flex;
+    flex-direction: column;
+    height: 100%;
+    width: 100%;
+}
+
+.style-one .blog-thumb {
+    overflow: hidden;
+    height: 220px;
+    /* Constant height for thumbnails */
+    width: 100%;
+}
+
+.style-one .blog-thumb img {
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+    /* Normalize images */
+    transition: 0.5s;
+}
+
+.style-one .single-blog-box:hover .blog-thumb img {
+    transform: scale(1.2);
+}
+
+.style-one .blog-content {
+    padding: 28px 0 30px;
+    flex-grow: 1;
+    /* Push the bottom section to the end */
+    display: flex;
+    flex-direction: column;
+}
+
+.style-one .blog-meta span {
+    display: inline-block;
+    text-transform: uppercase;
+    font-weight: 500;
+    font-family: 'Rajdhani', sans-serif;
+}
+
+.style-one .blog-meta i {
+    display: inline-block;
+    color: #0c5adb;
+    font-size: 15px;
+    padding-right: 7px;
+}
+
+.style-one .blog-content a {
+    display: -webkit-box;
+    -webkit-line-clamp: 2;
+    line-clamp: 2;
+    /* Added for compatibility */
+    -webkit-box-orient: vertical;
+    overflow: hidden;
+    font-size: 22px;
+    color: #232323;
+    font-weight: 700;
+    font-family: 'Rajdhani', sans-serif;
+    margin-top: 14px;
+    line-height: 28px;
+    transition: 0.5s;
+}
+
+.style-one .blog-content a:hover {
+    color: #0c5adb;
+}
+
+.style-one .blog-buttom {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    border-top: 1px solid rgba(29, 33, 36, 0.12);
+    padding-top: 20px;
+}
+
+.style-one .blog-author span {
+    display: inline-block;
+    color: #232323;
+    font-size: 16px;
+    margin: 0;
+    font-weight: 600;
+    font-family: 'Rajdhani', sans-serif;
+}
+
+.style-one .blog-author i {
+    display: inline-block;
+    margin-right: 10px;
+    color: #222;
+}
+
+.style-one .blog-button a {
+    display: inline-block;
+    color: #232323;
+    font-family: 'Rajdhani', sans-serif;
+    font-weight: 600;
+    transition: .5s;
+    font-size: 17px;
+}
+
+.style-one .blog-button a:hover {
+    color: #0c5adb !important;
+}
+
+.style-one .blog-button i {
+    display: inline-block;
+    font-size: 20px;
+    position: relative;
+    top: 2px;
+    transition: 0.5s;
+    color: #232323;
+}
+
+.style-one .blog-button a:hover i {
+    color: #0c5adb !important;
+}

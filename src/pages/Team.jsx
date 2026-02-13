@@ -59,7 +59,7 @@ const Team = () => {
                         <div className="col-lg-6">
                             <div className="section-title left inner-style">
                                 <h1>Get Latest Update from Big-Matrix Solutions</h1>
-                                <h1>Stay Connected with Us</h1>
+                                <h2 style={{ color: "#fff" }}>Stay Connected with Us</h2>
                             </div>
                         </div>
                         <div className="col-lg-6">

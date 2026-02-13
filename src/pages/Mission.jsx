@@ -1,6 +1,5 @@
 import React from 'react';
 import Breadcrumb from '../components/Breadcrumb';
-import BrandArea from '../components/BrandArea';
 
 const Mission = () => {
     return (
@@ -188,7 +187,6 @@ const Mission = () => {
                 </div>
             </div>
 
-            <BrandArea />
         </>
     );
 };

@@ -2,7 +2,6 @@ import React, { useState } from 'react';
 import Breadcrumb from '../components/Breadcrumb';
 import TeamArea from '../components/TeamArea';
 import TestimonialArea from '../components/TestimonialArea';
-import BrandArea from '../components/BrandArea';
 
 const AboutOne = () => {
     const [activeIndex, setActiveIndex] = useState(0);
@@ -87,11 +86,14 @@ const AboutOne = () => {
                         <div className="col-lg-6">
                             <div className="about-left">
                                 <div className="about-thumb">
-                                    <img src="/assets/images/about-inner/about-thumb.jpg" alt="" />
+                                    <img src="https://images.unsplash.com/photo-1573496359142-b8d87734a5a2?auto=format&fit=crop&q=80&w=600" alt="" className="main-img" />
+                                    <div className="about-thumb-two">
+                                        <img src="https://images.unsplash.com/photo-1519085360753-af0119f7cbe7?auto=format&fit=crop&q=80&w=600" alt="" />
+                                    </div>
                                 </div>
-                                <div className="abour-award-box">
+                                <div className="about-award-box">
                                     <div className="about-award-icon">
-                                        <img src="/assets/images/about-inner/about-award-icon.png" alt="" />
+                                        <i className="bi bi-award" style={{ fontSize: '30px', color: '#0c5adb' }}></i>
                                     </div>
                                     <div className="about-award-content">
                                         <h4>Award Wining</h4>
@@ -100,12 +102,12 @@ const AboutOne = () => {
                                 </div>
                                 <div className="about-conuter-box">
                                     <div className="about-counter-icon">
-                                        <img src="/assets/images/about-inner/about-counter-icon.png" alt="" />
+                                        <i className="bi bi-person-check" style={{ fontSize: '40px', color: '#fff' }}></i>
                                     </div>
                                     <div className="about-counter-content">
-                                        <h4>10</h4>
+                                        <h4>283 K</h4>
                                         <span>+</span>
-                                        <p>Completed Projects</p>
+                                        <p>Complete Project</p>
                                     </div>
                                 </div>
                                 <div className="about-shape">
@@ -114,11 +116,10 @@ const AboutOne = () => {
                             </div>
                         </div>
                         <div className="col-lg-6">
-                            <div className="abour-right">
+                            <div className="about-right">
                                 <div className="section-title left inner-style">
                                     <h4>IT Support for Business</h4>
-                                    <h1>Successfully Delivered 10+</h1>
-                                    <h1>Healthcare Projects</h1>
+                                    <h1>About is Over 291+ Company Business Solution.</h1>
                                     <p className="section-desc">Monotonectally synergize granular markets and front markets. Collaboratively
                                         visualize strategic infomediaries after multimedia based models. Synergistically
                                         task state of the art infrastructures for</p>
@@ -127,8 +128,8 @@ const AboutOne = () => {
                                     <div className="col-lg-6 col-md-6">
                                         <div className="about-list-item">
                                             <ul>
-                                                <li><i className="bi bi-check"></i>Company and Research</li>
-                                                <li><i className="bi bi-check"></i>Business and research</li>
+                                                <li><i className="bi bi-check2"></i>Company and Research</li>
+                                                <li><i className="bi bi-check2"></i>Business and research</li>
                                             </ul>
                                         </div>
                                     </div>
@@ -296,7 +297,6 @@ const AboutOne = () => {
                 </div>
             </div>
 
-            <BrandArea />
         </>
     );
 };

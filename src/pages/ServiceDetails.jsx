@@ -1,7 +1,6 @@
 import React from 'react';
 import { useParams, Link } from 'react-router-dom';
 import Breadcrumb from '../components/Breadcrumb';
-import BrandArea from '../components/BrandArea';
 import servicesData from '../data/services.json';
 
 const ServiceDetails = () => {
@@ -158,7 +157,6 @@ const ServiceDetails = () => {
                 </div>
             </div>
 
-            <BrandArea />
         </>
     );
 };

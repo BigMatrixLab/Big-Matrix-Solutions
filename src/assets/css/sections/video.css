@@ -1,0 +1,49 @@
+/*---=====================================================
+   <!--Toptech Video Area Css Home Two-->
+=========================================================---*/
+.style-two.video-area {
+    padding: 0px 0 159px;
+    /* Removed top padding entirely */
+    background: url(/assets/images/home-2/video-bg.jpg);
+    background-repeat: no-repeat;
+    background-size: cover;
+}
+
+.style-two.video-area .section-title h1 {
+    color: #fff;
+}
+
+.style-two .video-button {
+    text-align: center;
+}
+
+.style-two .video-button i {
+    display: inline-block;
+    background: #0B59D7;
+    color: #fff;
+    width: 70px;
+    height: 70px;
+    text-align: center;
+    line-height: 72px;
+    font-size: 35px;
+    border-radius: 50%;
+    -webkit-animation: ripple-white 1s linear infinite;
+    animation: ripple-blue 1s linear infinite;
+    -webkit-transition: 0.5s;
+}
+
+@keyframes ripple-blue {
+    0% {
+        -webkit-box-shadow: 0 0 0 0 rgba(255, 255, 255, 0.3),
+            0 0 0 10px rgba(255, 255, 255, 0.3), 0 0 0 20px rgba(255, 255, 255, 0.3);
+        box-shadow: 0 0 0 0 rgba(255, 255, 255, 0.3),
+            0 0 0 10px rgba(255, 255, 255, 0.3), 0 0 0 20px rgba(255, 255, 255, 0.3);
+    }
+
+    100% {
+        -webkit-box-shadow: 0 0 0 10px rgba(255, 255, 255, 0.3),
+            0 0 0 20px rgba(255, 255, 255, 0.3), 0 0 0 30px rgba(255, 255, 255, 0);
+        box-shadow: 0 0 0 10px rgba(255, 255, 255, 0.3),
+            0 0 0 20px rgba(255, 255, 255, 0.3), 0 0 0 30px rgba(255, 255, 255, 0);
+    }
+}

@@ -1,0 +1,141 @@
+/*---=====================================================
+   <!--Toptech Careers Area Css Redesign-->
+=========================================================---*/
+.careers-area.inner-style {
+    padding: 100px 0;
+    background: #f8fbff;
+    /* Very light blue background like the image */
+}
+
+/* Header Section */
+.career-header {
+    margin-bottom: 60px;
+    padding-bottom: 40px;
+    border-bottom: 1px solid #e1e8f0;
+}
+
+.header-title {
+    font-size: 32px;
+    font-weight: 600;
+    color: #1d2124;
+    font-family: "Rajdhani", sans-serif;
+    margin: 0;
+}
+
+.header-title span {
+    color: #0c5adb;
+}
+
+.header-desc {
+    font-size: 16px;
+    color: #6c757d;
+    line-height: 1.6;
+    margin: 0;
+}
+
+.header-desc span {
+    color: #0c5adb;
+    font-weight: 600;
+}
+
+/* Job List Section */
+.job-list-wrapper {
+    display: flex;
+    flex-direction: column;
+}
+
+.job-row-item {
+    padding: 45px 0;
+    border-bottom: 1px solid #e1e8f0;
+    transition: all 0.3s ease;
+}
+
+.job-row-item:last-child {
+    border-bottom: none;
+}
+
+.job-meta {
+    display: flex;
+    align-items: center;
+    gap: 15px;
+    margin-bottom: 15px;
+}
+
+.job-badge {
+    background: #0061f2;
+    color: #fff;
+    padding: 6px 18px;
+    border-radius: 30px;
+    font-size: 13px;
+    font-weight: 600;
+    text-transform: capitalize;
+}
+
+.job-location {
+    font-size: 14px;
+    color: #8a94a6;
+    font-weight: 500;
+}
+
+.job-title {
+    font-size: 26px;
+    font-weight: 700;
+    color: #1d2124;
+    margin: 0;
+    font-family: "Rajdhani", sans-serif;
+}
+
+.job-description {
+    font-size: 16px;
+    color: #6c757d;
+    line-height: 1.6;
+    margin: 0;
+    padding-right: 20px;
+}
+
+/* Apply Now Button */
+.apply-btn {
+    display: inline-block;
+    padding: 14px 45px;
+    border-radius: 40px;
+    background: #fff;
+    color: #1d2124;
+    border: 1px solid #d1d9e2;
+    font-size: 16px;
+    font-weight: 600;
+    transition: all 0.3s ease;
+    text-decoration: none;
+}
+
+.apply-btn:hover {
+    background: #0c5adb;
+    color: #fff;
+    border-color: #0c5adb;
+    transform: translateY(-2px);
+    box-shadow: 0 10px 20px rgba(12, 90, 219, 0.15);
+}
+
+/* Responsive Styles */
+@media (max-width: 991px) {
+    .header-title {
+        margin-bottom: 20px;
+        text-align: center;
+    }
+
+    .header-desc {
+        text-align: center;
+    }
+
+    .job-row-item {
+        text-align: center;
+    }
+
+    .job-meta {
+        justify-content: center;
+    }
+
+    .job-description {
+        margin: 20px 0;
+        padding-right: 0;
+    }
+}

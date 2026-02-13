@@ -1,6 +1,5 @@
 import React from 'react';
 import Breadcrumb from '../components/Breadcrumb';
-import BrandArea from '../components/BrandArea';
 
 const Faqs = () => {
     return (
@@ -46,7 +45,6 @@ const Faqs = () => {
                 </div>
             </div>
 
-            <BrandArea />
         </>
     );
 };

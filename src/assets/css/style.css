@@ -1,3 +1,10 @@
+@import "./sections/testimonial.css";
+@import "./sections/video.css";
+@import "./sections/blog.css";
+@import "./sections/blog-details.css";
+@import "./sections/about.css";
+@import "./sections/careers.css";
+
 /*==============================================
 Template Name: Toptech - Toptech It Solutions HTML5 Template 
 Author:  https://themeforest.net/user/dreamit-solution
@@ -1113,292 +1120,11 @@ Tags: consulting, finance, corporate, business, consultant, multipurpose, techno
 }
 
 
-/*---=====================================================
-   <!--Toptech Testimonial Area Css Style One-->
-=========================================================---*/
-.style-one.testimonial-area {
-    background: url(/assets/images/home-1/testi-bg.jpg);
-    background-repeat: no-repeat;
-    background-size: cover;
-    background-position: center center;
-    padding: 110px 0 60px;
-}
-
-.style-one.testimonial-area .section-title.center {
-    margin-bottom: 14px;
-}
-
-.style-one .testi-desc p {
-    font-size: 20px;
-    line-height: 34px;
-    color: #041424;
-    width: 65%;
-    margin: auto;
-    margin-top: 30px;
-}
-
-.style-one .testi-rating {
-    margin-top: 20px;
-}
-
-.style-one .testi-rating ul li {
-    display: inline-block;
-}
-
-.style-one .testi-rating ul li i {
-    color: #FF9100;
-    margin: 0 3px;
-}
-
-.style-one .testi-author h4 {
-    font-size: 24px;
-    margin: 53px 0 5px;
-    font-weight: 600;
-    position: relative;
-}
-
-.style-one .testi-author h4:before {
-    position: absolute;
-    content: "";
-    width: 28px;
-    height: 2px;
-    left: 0;
-    right: 0;
-    top: -25px;
-    background: #0B59D7;
-    margin: auto;
-}
-
-.style-one.testimonial-area .owl-dots {
-    position: absolute;
-    top: 36px;
-    left: 0;
-    right: 0;
-    text-align: center;
-}
-
-.style-one.testimonial-area .owl-dot {
-    background: url(/assets/images/home-1/testi-1.png) !important;
-    background-repeat: no-repeat !important;
-    background-size: cover !important;
-    background-position: center center;
-    width: 100px;
-    height: 100px;
-    margin: 0 22px;
-    display: inline-block;
-}
-
-.style-one.testimonial-area .owl-dot:nth-child(2) {
-    background: url(/assets/images/home-1/testi-2.png) !important;
-    background-repeat: no-repeat !important;
-    background-size: cover !important;
-    background-position: center center;
-}
-
-.style-one.testimonial-area .owl-dot:nth-child(3) {
-    background: url(/assets/images/home-1/testi-3.png) !important;
-    background-repeat: no-repeat !important;
-    background-size: cover !important;
-    background-position: center center;
-}
-
-.style-one.testimonial-area .owl-dot:nth-child(4) {
-    background: url(/assets/images/home-1/testi-4.png) !important;
-    background-repeat: no-repeat !important;
-    background-size: cover !important;
-    background-position: center center;
-}
-
-.style-one.testimonial-area .owl-dot.active {
-    transform: scale(1.1);
-    border: 6px solid #0c5adb;
-    border-radius: 50%;
-}
-
-.style-one.testimonial-area .owl-prev {
-    display: inline-block;
-    position: absolute;
-    left: 14px;
-    top: 31%;
-}
-
-.style-one.testimonial-area .owl-prev i {
-    display: inline-block;
-    width: 60px;
-    height: 60px;
-    border-radius: 30px;
-    filter: drop-shadow(0px 10px 10px rgba(207, 218, 235, 0.2));
-    background-color: #ffffff;
-    line-height: 60px;
-    color: #0c5adb;
-    font-size: 20px;
-    transition: 0.5s;
-    text-align: center;
-    line-height: 65px;
-}
-
-.style-one.testimonial-area .owl-next {
-    display: inline-block;
-    position: absolute;
-    right: 9px;
-    top: 31%;
-}
-
-.style-one.testimonial-area .owl-next i {
-    display: inline-block;
-    width: 60px;
-    height: 60px;
-    border-radius: 30px;
-    filter: drop-shadow(0px 10px 10px rgba(207, 218, 235, 0.2));
-    background-color: #ffffff;
-    line-height: 65px;
-    color: #0c5adb;
-    font-size: 20px;
-    transition: 0.5s;
-    text-align: center;
-}
-
-.style-one.testimonial-area .owl-next i,
-.style-one.testimonial-area .owl-prev i:hover {
-    background: #0c5adb;
-    color: #fff;
-}
+/* Moved to sections/testimonial.css */
 
 
 
-/*---=====================================================
-   <!--Toptech Blog Area Css Style One-->
-=========================================================---*/
-.style-one.blog-area {
-    padding: 107px 0 100px;
-}
-
-.style-one .single-blog-box {
-    margin-bottom: 20px;
-    border-radius: 8px;
-    background-color: #ffffff;
-    border: 1px solid rgba(29, 33, 36, 0.12);
-    position: relative;
-    z-index: 1;
-    transition: .5s;
-    overflow: hidden;
-    padding: 24px;
-    padding-bottom: 19px;
-    display: flex;
-    flex-direction: column;
-    height: 100%;
-    width: 100%;
-}
-
-.style-one .blog-thumb {
-    overflow: hidden;
-    height: 220px;
-    /* Constant height for thumbnails */
-    width: 100%;
-}
-
-.style-one .blog-thumb img {
-    width: 100%;
-    height: 100%;
-    object-fit: cover;
-    /* Normalize images */
-    transition: 0.5s;
-}
-
-.style-one .single-blog-box:hover .blog-thumb img {
-    transform: scale(1.2);
-}
-
-.style-one .blog-content {
-    padding: 28px 0 30px;
-    flex-grow: 1;
-    /* Push the bottom section to the end */
-    display: flex;
-    flex-direction: column;
-}
-
-.style-one .blog-meta span {
-    display: inline-block;
-    text-transform: uppercase;
-    font-weight: 500;
-    font-family: 'Rajdhani', sans-serif;
-}
-
-.style-one .blog-meta i {
-    display: inline-block;
-    color: #0c5adb;
-    font-size: 15px;
-    padding-right: 7px;
-}
-
-.style-one .blog-content a {
-    display: -webkit-box;
-    -webkit-line-clamp: 2;
-    line-clamp: 2;
-    /* Added for compatibility */
-    -webkit-box-orient: vertical;
-    overflow: hidden;
-    font-size: 22px;
-    color: #232323;
-    font-weight: 700;
-    font-family: 'Rajdhani', sans-serif;
-    margin-top: 14px;
-    line-height: 28px;
-    transition: 0.5s;
-}
-
-.style-one .blog-content a:hover {
-    color: #0c5adb;
-}
-
-.style-one .blog-buttom {
-    display: flex;
-    justify-content: space-between;
-    align-items: center;
-    border-top: 1px solid rgba(29, 33, 36, 0.12);
-    padding-top: 20px;
-}
-
-.style-one .blog-author span {
-    display: inline-block;
-    color: #232323;
-    font-size: 16px;
-    margin: 0;
-    font-weight: 600;
-    font-family: 'Rajdhani', sans-serif;
-}
-
-.style-one .blog-author i {
-    display: inline-block;
-    margin-right: 10px;
-    color: #222;
-}
-
-.style-one .blog-button a {
-    display: inline-block;
-    color: #232323;
-    font-family: 'Rajdhani', sans-serif;
-    font-weight: 600;
-    transition: .5s;
-    font-size: 17px;
-}
-
-.style-one .blog-button a:hover {
-    color: #0c5adb !important;
-}
-
-.style-one .blog-button i {
-    display: inline-block;
-    font-size: 20px;
-    position: relative;
-    top: 2px;
-    transition: 0.5s;
-    color: #232323;
-}
-
-.style-one .blog-button a:hover i {
-    color: #0c5adb !important;
-}
+/* Moved secondary blog styles to sections/blog.css */
 
 
 /*---=====================================================
@@ -2525,10 +2251,21 @@ Tags: consulting, finance, corporate, business, consultant, multipurpose, techno
 
 .style-two .single-portfolio-box {
     position: relative;
+    display: flex;
+    flex-direction: column;
+    height: 100%;
+}
+
+.style-two .portfolio-thumb {
+    height: 380px;
+    overflow: hidden;
+    border-radius: 10px;
 }
 
 .style-two .portfolio-thumb img {
     width: 100%;
+    height: 100%;
+    object-fit: cover;
     border-radius: 10px;
 }
 
@@ -2711,55 +2448,7 @@ Tags: consulting, finance, corporate, business, consultant, multipurpose, techno
 }
 
 
-/*---=====================================================
-   <!--Toptech Video Area Css Home Two-->
-=========================================================---*/
-.style-two.video-area {
-    padding: 60px 0 159px;
-    background: url(/assets/images/home-2/video-bg.jpg);
-    background-repeat: no-repeat;
-    background-size: cover;
-}
-
-.style-two.video-area .section-title h1 {
-    color: #fff;
-}
-
-.style-two .video-button {
-    text-align: center;
-}
-
-.style-two .video-button i {
-    display: inline-block;
-    background: #0B59D7;
-    color: #fff;
-    width: 70px;
-    height: 70px;
-    text-align: center;
-    line-height: 72px;
-    font-size: 35px;
-    border-radius: 50%;
-    -webkit-animation: ripple-white 1s linear infinite;
-    animation: ripple-blue 1s linear infinite;
-    -webkit-transition: 0.5s;
-}
-
-
-@keyframes ripple-blue {
-    0% {
-        -webkit-box-shadow: 0 0 0 0 rgba(255, 255, 255, 0.3),
-            0 0 0 10px rgba(255, 255, 255, 0.3), 0 0 0 20px rgba(255, 255, 255, 0.3);
-        box-shadow: 0 0 0 0 rgba(255, 255, 255, 0.3),
-            0 0 0 10px rgba(255, 255, 255, 0.3), 0 0 0 20px rgba(255, 255, 255, 0.3);
-    }
-
-    100% {
-        -webkit-box-shadow: 0 0 0 10px rgba(255, 255, 255, 0.3),
-            0 0 0 20px rgba(255, 255, 255, 0.3), 0 0 0 30px rgba(255, 255, 255, 0);
-        box-shadow: 0 0 0 10px rgba(255, 255, 255, 0.3),
-            0 0 0 20px rgba(255, 255, 255, 0.3), 0 0 0 30px rgba(255, 255, 255, 0);
-    }
-}
+/* Moved to sections/video.css */
 
 
 /*---=====================================================
@@ -4247,249 +3936,7 @@ Tags: consulting, finance, corporate, business, consultant, multipurpose, techno
 /*---=====================================================
    <!--Toptech About Area Css Inner Style One-->
 =========================================================---*/
-.inner-style-one.about-area {
-    background: url(/assets/images/about-inner/about-bg.jpg);
-    background-position: center;
-    background-repeat: no-repeat;
-    background-size: cover;
-    padding: 246px 0 125px;
-    margin-top: -154px;
-}
-
-.inner-style-one .about-left {
-    position: relative;
-    z-index: 1;
-    left: -68px;
-}
-
-.inner-style-one .abour-award-box {
-    background: #041424;
-    display: flex;
-    align-items: center;
-    padding: 25px 49px 22px;
-    width: 47%;
-    border-radius: 5px;
-    gap: 23px;
-    position: absolute;
-    top: 49px;
-    right: -30px;
-    animation: bounceleft 4s linear infinite;
-}
-
-.inner-style-one .about-award-content h4 {
-    font-size: 20px;
-    color: #fff;
-    font-weight: 600;
-    margin: 0 0 4px;
-    border-bottom: 1px solid #fff;
-    padding-bottom: 6px;
-}
-
-.inner-style-one .about-award-content p {
-    font-size: 20px;
-    color: #fff;
-    font-weight: 600;
-    font-family: "Rajdhani", sans-serif;
-    margin: 0;
-}
-
-.inner-style-one .about-conuter-box {
-    background: #0c5adb;
-    text-align: center;
-    width: 220px;
-    height: 220px;
-    border-radius: 50%;
-    line-height: 81px;
-    padding-top: 14px;
-    border: 6px solid #fff;
-    position: absolute;
-    bottom: 107px;
-    left: 163px;
-}
-
-.inner-style-one .about-counter-content {
-    margin-top: -14px;
-}
-
-.inner-style-one .about-counter-content span,
-.inner-style-one .about-counter-content h4 {
-    color: #fff;
-    font-size: 45px;
-    display: inline-block;
-    font-weight: 700;
-    font-family: "Rajdhani";
-}
-
-.inner-style-one .about-counter-content p {
-    color: #fff;
-    margin: -13px 0 0;
-    line-height: 0;
-}
-
-.inner-style-one .about-shape {
-    position: absolute;
-    bottom: 11px;
-    left: 152px;
-    z-index: -1;
-    animation: bounce 4s linear infinite;
-}
-
-.inner-style-one .abour-right {
-    padding-left: 40px;
-}
-
-.inner-style-one .about-list-item ul li {
-    color: #041424;
-    margin: 0;
-    line-height: 35px;
-}
-
-.inner-style-one .about-list-item ul li i {
-    display: inline-block;
-    color: #0c5adb;
-    font-size: 26px;
-    position: relative;
-    top: 4px;
-    margin-right: 12px;
-}
-
-.inner-style-one .about-text {
-    display: flex;
-    align-items: center;
-    gap: 27px;
-}
-
-.inner-style-one .about-number h4 {
-    font-size: 22px;
-    font-weight: 600;
-    color: #0c5adb;
-    border: 2px solid #0c5adb;
-    width: 65px;
-    height: 65px;
-    text-align: center;
-    border-radius: 50%;
-    line-height: 65px;
-}
-
-.inner-style-one .about-text-content h4 {
-    font-size: 24px;
-    margin: 0 0 0;
-    font-weight: 600;
-}
-
-.inner-style-one .about-text-content p {
-    font-size: 18px;
-    color: #686868;
-    margin: 0px 0 0;
-}
-
-.inner-style-one .about-company {
-    background-color: #eff6fd;
-    padding: 23px 29px 27px;
-    display: flex;
-    border-radius: 7px;
-    margin-top: 38px;
-}
-
-.inner-style-one .about-company-icon i {
-    display: inline-block;
-    font-size: 40px;
-    color: #0c5adb;
-    margin-right: 20px;
-}
-
-.inner-style-one .about-company-desc p {
-    font-size: 18px;
-    font-style: italic;
-    margin: 0;
-}
-
-
-
-/*section-title-inner-style*/
-.inner-style.section-title.left {
-    margin-bottom: 27px;
-}
-
-.inner-style.section-title.left h4 {
-    font-size: 18px;
-    color: #0c5adb;
-    font-weight: 600;
-    margin: 0 0 17px;
-}
-
-.inner-style.section-title.left h1 {
-    font-size: 42px;
-    font-weight: 700;
-    line-height: 40px;
-}
-
-.inner-style.section-title.left p.section-desc {
-    margin: 0;
-    width: 100%;
-    margin-top: 19px;
-}
-
-/*section-title-center*/
-.inner-style.section-title.center {
-    margin-bottom: 27px;
-}
-
-.inner-style.section-title.center h4 {
-    font-size: 18px;
-    color: #0c5adb;
-    font-weight: 600;
-    margin: 0 0 17px;
-}
-
-.inner-style.section-title.center h1 {
-    font-size: 42px;
-    font-weight: 700;
-    line-height: 40px;
-}
-
-.inner-style.section-title.center p.section-desc {
-    margin: 0;
-    width: 100%;
-    margin-top: 19px;
-}
-
-.inner-style.toptech-button a {
-    display: inline-block;
-    background: #0c5adb;
-    border: 1px solid #0c5adb;
-    color: #fff;
-    padding: 14px 35px;
-    font-size: 16px;
-    font-weight: 500;
-    border-radius: 5px;
-    margin-top: 38px;
-    position: relative;
-    transition: 0.5s;
-    z-index: 1;
-}
-
-.inner-style.toptech-button a:hover {
-    color: #0c5adb;
-}
-
-.inner-style.toptech-button a:before {
-    position: absolute;
-    content: "";
-    width: 0;
-    height: 100%;
-    right: 0;
-    top: 0;
-    background: #fff;
-    z-index: -1;
-    transition: 0.5s;
-    border-radius: 5px;
-}
-
-.inner-style.toptech-button a:hover:before {
-    width: 100%;
-    left: 0;
-}
+/* Moved secondary about styles to sections/about.css */
 
 .inner-style.toptech-button i {
     display: inline-block;
@@ -5136,8 +4583,19 @@ Tags: consulting, finance, corporate, business, consultant, multipurpose, techno
     margin-top: 35px;
 }
 
+.project-details-thumb {
+    text-align: center;
+    margin-bottom: 40px;
+}
+
 .project-details-thumb img {
-    width: 100%;
+    width: 80vw;
+    max-width: 100%;
+    height: 75vh;
+    object-fit: cover;
+    border-radius: 10px;
+    display: block;
+    margin: 0 auto;
 }
 
 .project-details-content h4 {
@@ -5233,10 +4691,21 @@ a.project-details-text {
 
 .inner-style .single-project-box {
     margin-bottom: 28px;
+    display: flex;
+    flex-direction: column;
+    height: 100%;
+}
+
+.inner-style .project-thumb {
+    height: 280px;
+    overflow: hidden;
+    border-radius: 5px 5px 0 0;
 }
 
 .inner-style .project-thumb img {
     width: 100%;
+    height: 100%;
+    object-fit: cover;
 }
 
 .inner-style .project-content {
@@ -6241,109 +5710,7 @@ button.icons {
 /*---=====================================================
    <!--Toptech Careers Area Css-->
 =========================================================---*/
-.inner-style.careers-area {
-    padding: 119px 0 95px;
-    background: #F5F8FD;
-}
-
-.inner-style.careers-area .row.title {
-    margin-bottom: 84px;
-}
-
-.inner-style .careers-content h4 {
-    color: #041424;
-    font-size: 24px;
-    margin: 0;
-    font-weight: 600;
-}
-
-.inner-style .careers-content a {
-    display: inline-block;
-    color: #0c5adb;
-    font-weight: 600;
-    font-family: "Rajdhani";
-}
-
-
-.inner-style .careers-desc p {
-    width: 67%;
-    float: right;
-    margin: 0;
-}
-
-.inner-style .careers-desc a {
-    display: inline-block;
-    color: #0c5adb;
-    font-weight: 600;
-    font-family: "Rajdhani";
-}
-
-.inner-style .job-item-content span {
-    border-radius: 15px;
-    background-color: #0c5adb;
-    display: inline-block;
-    color: #fff;
-    padding: 2px 25px;
-}
-
-.inner-style span.location {
-    background: transparent !important;
-    font-size: 14px;
-    color: #686868 !important;
-    font-weight: 400;
-    font-family: "Nunito";
-    padding: 0 !important;
-    margin-left: 18px;
-}
-
-.inner-style .job-item-content h4 {
-    font-size: 26px;
-    color: #041424;
-    font-weight: 600;
-    font-family: "Rajdhani";
-    margin: 19px 0 0;
-}
-
-.inner-style .job-desc p {
-    margin: 0;
-    width: 100%;
-}
-
-.inner-style .job-apply-button {
-    text-align: right;
-}
-
-.inner-style .job-apply-button a {
-    display: inline-block;
-    border: 2px solid #2222;
-    padding: 14px 58px;
-    border-radius: 30px;
-    color: #041424;
-    font-weight: 500;
-    transition: 0.5s;
-}
-
-.inner-style .job-apply-button a:hover {
-    border: 2px solid #0C5ADB;
-    background: #0C5ADB;
-    color: #fff;
-}
-
-.inner-style.careers-area .row.add-border {
-    border-top: 2px solid #E7E7E7;
-    padding-top: 82px;
-    padding-bottom: 73px;
-}
-
-.inner-style .job-requirements-content h4 {
-    color: #041424;
-    font-weight: 600;
-    margin: 27px 0 29px;
-}
-
-.inner-style .job-requirements-content p {
-    margin: 0 0 54px;
-}
+/* Moved careers styles to sections/careers.css */
 
 .inner-style .single-feature-box {
     text-align: center;
@@ -8888,21 +8255,22 @@ Awards One Css
     right: 0;
     width: 100%;
     height: 100%;
-    transition: 0.8s 1s ease;
+    background: #1a1a1a;
+    transition: transform 0.8s ease-in-out;
     z-index: 99999;
+    display: flex;
+    align-items: center;
+    justify-content: center;
 }
 
 .loader {
     position: relative;
     display: block;
     z-index: 201;
-    top: 50%;
-    left: 50%;
     width: 100px;
     height: 100px;
-    margin: -50px 0 0 -50px;
     border-radius: 50%;
-    transition: all 1s 1s ease;
+    transition: all 0.5s ease;
     border: 3px solid transparent;
     border-top-color: #f3297c;
     -webkit-animation: spin 1.5s linear infinite;
@@ -8993,76 +8361,18 @@ Awards One Css
     }
 }
 
+/* Remove the old left/right sections - not needed for slide-up effect */
 .loader-wrapper .loder-section {
-    position: fixed;
-    top: 0;
-    width: 50%;
-    height: 100%;
-    background: #111;
-    z-index: 2;
+    display: none;
 }
 
-.loader-wrapper .loder-section.left-section {
-    left: 0;
-    transition: 1s 1.4s ease;
-}
-
-.loader-wrapper .loder-section.right-section {
-    right: 0;
-    transition: 1s 1.4s ease;
-}
-
-/*/ When page loaded /*/
-.loaded .loder-section.left-section {
-    left: -100%;
-}
-
-.loaded .loder-section.right-section {
-    right: -100%;
-}
-
+/*/ When page loaded - slide entire screen upward /*/
 .loaded .loader-wrapper {
-    visibility: hidden;
+    transform: translateY(-100%);
 }
 
 .loaded .loader {
-    top: -100%;
     opacity: 0;
 }
 
-/* Custom Testimonial Styles */
-
-
-.testi-list-1 .swiper-pagination {
-    position: relative;
-    margin-top: 30px;
-    text-align: center;
-}
-
-.owl-dot {
-    width: 12px;
-    height: 12px;
-    background: #d6d6d6;
-    border-radius: 50%;
-    display: inline-block;
-    margin: 0 6px;
-    cursor: pointer;
-    transition: all 0.3s ease;
-    border: none;
-}
-
-.owl-dot.active {
-    background: #0c5adb;
-    position: relative;
-}
-
-.owl-dot.active::after {
-    content: '';
-    position: absolute;
-    top: -5px;
-    left: -5px;
-    right: -5px;
-    bottom: -5px;
-    border: 2px solid #0c5adb;
-    border-radius: 50%;
-}
+/* Moved to sections/testimonial.css */

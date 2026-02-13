@@ -1,7 +1,6 @@
 import React from 'react';
 import { Link } from 'react-router-dom';
 import Breadcrumb from '../components/Breadcrumb';
-import BrandArea from '../components/BrandArea';
 
 import projectData from '../data/projects.json';
 
@@ -25,8 +24,8 @@ const Project = () => {
                     </div>
                     <div className="row">
                         {projects.map((item, index) => (
-                            <div className="col-lg-4 col-md-6" key={index}>
-                                <div className="single-project-box">
+                            <div className="col-lg-4 col-md-6 d-flex" key={index}>
+                                <div className="single-project-box w-100">
                                     <div className="project-thumb">
                                         <img src={item.image} alt={item.title} />
                                     </div>
@@ -108,7 +107,6 @@ const Project = () => {
                 </div>
             </div>
 
-            <BrandArea />
         </>
     );
 };

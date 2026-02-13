@@ -1,0 +1,92 @@
+/*---=====================================================
+   <!--Toptech Testimonial Area Css Style One-->
+=========================================================---*/
+.style-one.testimonial-area {
+    background: url(/assets/images/home-1/testi-bg.jpg);
+    background-repeat: no-repeat;
+    background-size: cover;
+    background-position: center center;
+    padding: 110px 0 20px;
+    /* Reduced bottom padding */
+}
+
+.style-one.testimonial-area .section-title.center {
+    margin-bottom: 14px;
+}
+
+.style-one .testi-desc p {
+    font-size: 20px;
+    line-height: 34px;
+    color: #041424;
+    width: 65%;
+    margin: auto;
+    margin-top: 30px;
+}
+
+.style-one .testi-rating {
+    margin-top: 20px;
+}
+
+.style-one .testi-rating ul li {
+    display: inline-block;
+}
+
+.style-one .testi-rating ul li i {
+    color: #FF9100;
+    margin: 0 3px;
+}
+
+.style-one .testi-author h4 {
+    font-size: 24px;
+    margin: 53px 0 5px;
+    font-weight: 600;
+    position: relative;
+}
+
+.style-one .testi-author h4:before {
+    position: absolute;
+    content: "";
+    width: 28px;
+    height: 2px;
+    left: 0;
+    right: 0;
+    top: -25px;
+    background: #0B59D7;
+    margin: auto;
+}
+
+/* Pagination / Swiper Compatibility */
+.testi-list-1 .swiper-pagination {
+    position: relative;
+    margin-top: 10px;
+    /* Reduced from 30px */
+    text-align: center;
+}
+
+.owl-dot {
+    width: 12px;
+    height: 12px;
+    background: #d6d6d6;
+    border-radius: 50%;
+    display: inline-block;
+    margin: 0 6px;
+    cursor: pointer;
+    transition: all 0.3s ease;
+    border: none;
+}
+
+.owl-dot.active {
+    background: #0c5adb;
+    position: relative;
+}
+
+.owl-dot.active::after {
+    content: '';
+    position: absolute;
+    top: -5px;
+    left: -5px;
+    right: -5px;
+    bottom: -5px;
+    border: 2px solid #0c5adb;
+    border-radius: 50%;
+}

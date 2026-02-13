@@ -1,6 +1,5 @@
 import React from 'react';
 import Breadcrumb from '../components/Breadcrumb';
-import BrandArea from '../components/BrandArea';
 
 const Contact = () => {
     return (
@@ -104,8 +103,8 @@ const Contact = () => {
                         <div className="col-lg-12">
                             <iframe
                                 title="map"
-                                src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d3650.325396876019!2d90.36098897592879!3d23.80702538659894!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x3755c105f81691d5%3A0x4aa9bd97de918f7b!2sSher-E-Bangla%20National%20Cricket%20Stadium!5e0!3m2!1sen!2sbd!4v1715077171980!5m2!1sen!2sbd"
-                                style={{ border: 0, width: '100%', height: '450px' }}
+                                src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d3650.0980914516545!2d90.4255566!3d23.815110699999995!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x3755c64c103a8093%3A0xd660a4f50365294a!2sNorth%20South%20University!5e0!3m2!1sen!2sbd!4v1770986969556!5m2!1sen!2sbd"
+                                style={{ border: 0, width: '100%', height: '650px' }}
                                 allowFullScreen=""
                                 loading="lazy"
                             ></iframe>
@@ -114,7 +113,6 @@ const Contact = () => {
                 </div>
             </div>
 
-            <BrandArea />
         </>
     );
 };

@@ -2,7 +2,6 @@ import React from 'react';
 import blogsData from '../data/blogs.json';
 import { Link } from 'react-router-dom';
 import Breadcrumb from '../components/Breadcrumb';
-import BrandArea from '../components/BrandArea';
 
 const Blog = () => {
     return (
@@ -14,7 +13,7 @@ const Blog = () => {
                 <div className="container">
                     <div className="row">
                         {blogsData.map((post) => (
-                            <div className="col-lg-4 col-md-6" key={post.id}>
+                            <div className="col-lg-4 col-md-6 mb-4 d-flex" key={post.id}>
                                 <div className="single-blog-box">
                                     <div className="blog-thumb">
                                         <img src={post.image} alt={post.title} />
@@ -42,7 +41,6 @@ const Blog = () => {
                 </div>
             </div>
 
-            <BrandArea />
         </>
     );
 };
