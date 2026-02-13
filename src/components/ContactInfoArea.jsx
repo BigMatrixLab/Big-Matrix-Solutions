@@ -5,7 +5,7 @@ const ContactInfoArea = () => {
         <div className="contact-info-area style-two">
             <div className="container">
                 <div className="row">
-                    <div className="col-lg-4 col-md-6">
+                    <div className="col-lg-4 col-md-6 mb-4 d-flex">
                         <div className="contact-info-box">
                             <div className="contact-info-icon">
                                 <i className="fa-solid fa-phone"></i>
@@ -16,7 +16,7 @@ const ContactInfoArea = () => {
                             </div>
                         </div>
                     </div>
-                    <div className="col-lg-4 col-md-6">
+                    <div className="col-lg-4 col-md-6 mb-4 d-flex">
                         <div className="contact-info-box">
                             <div className="contact-info-icon">
                                 <i className="fa-regular fa-envelope"></i>
@@ -27,7 +27,7 @@ const ContactInfoArea = () => {
                             </div>
                         </div>
                     </div>
-                    <div className="col-lg-4 col-md-6">
+                    <div className="col-lg-4 col-md-6 mb-4 d-flex">
                         <div className="contact-info-box">
                             <div className="contact-info-icon">
                                 <i className="fa-solid fa-location-dot"></i>
