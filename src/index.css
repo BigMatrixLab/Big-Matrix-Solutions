@@ -151,3 +151,78 @@ body.loaded .loader-wrapper {
   padding-left: 30px;
   color: #0066cc;
 }
+
+/* Partners Carousel Styles */
+.partners-area {
+  padding: 80px 0;
+  background: linear-gradient(135deg, #0651d4 0%, #0a4bc7 100%);
+  overflow: hidden;
+}
+
+.partners-carousel-wrapper {
+  overflow: hidden;
+  width: 100%;
+  position: relative;
+}
+
+.partners-carousel {
+  display: flex;
+  gap: 60px;
+  animation: scrollPartners 30s linear infinite;
+  width: fit-content;
+}
+
+.partners-carousel:hover {
+  animation-play-state: paused;
+}
+
+.partner-item {
+  flex-shrink: 0;
+  width: 200px;
+  height: 120px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  padding: 20px;
+  background: #fff;
+  border-radius: 10px;
+  box-shadow: 0 2px 10px rgba(0, 0, 0, 0.08);
+  transition: all 0.3s ease;
+}
+
+.partner-item:hover {
+  transform: translateY(-5px);
+  box-shadow: 0 0 30px rgba(255, 255, 255, 0.8), 0 0 50px rgba(6, 81, 212, 0.6);
+}
+
+.partner-item img {
+  max-width: 100%;
+  max-height: 100%;
+  object-fit: contain;
+  transition: all 0.3s ease;
+}
+
+@keyframes scrollPartners {
+  0% {
+    transform: translateX(0);
+  }
+  100% {
+    transform: translateX(-50%);
+  }
+}
+
+/* Responsive adjustments */
+@media (max-width: 768px) {
+  .partners-area {
+    padding: 60px 0;
+  }
+  
+  .partner-item {
+    width: 150px;
+    height: 100px;
+  }
+  
+  .partners-carousel {
+    gap: 40px;
+  }
+}
