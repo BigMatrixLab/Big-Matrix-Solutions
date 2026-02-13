@@ -16,7 +16,7 @@ const BlogArea = () => {
                 </div>
                 <div className="row">
                     {blogsData.slice(0, 3).map((post) => (
-                        <div className="col-lg-4 col-md-6" key={post.id}>
+                        <div className="col-lg-4 col-md-6 mb-4 d-flex" key={post.id}>
                             <div className="single-blog-box">
                                 <div className="blog-thumb">
                                     <img src={post.image} alt={post.title} />
