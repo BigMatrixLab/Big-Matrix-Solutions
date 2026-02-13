@@ -1,26 +1,45 @@
-import React, { useEffect } from 'react';
-import { Link } from 'react-router-dom';
+import React, { useEffect, useState } from 'react';
+import { Link, useLocation } from 'react-router-dom';
 
 const Header = () => {
+    const [isScrolled, setIsScrolled] = useState(false);
+    const location = useLocation();
+    const isHomePage = location.pathname === '/';
 
     useEffect(() => {
         const handleScroll = () => {
             const header = document.getElementById('sticky-header');
+            const scrolled = window.scrollY > 100;
+
             if (header) {
-                if (window.scrollY > 100) {
+                if (scrolled) {
                     header.classList.add('sticky');
+                    setIsScrolled(true);
                 } else {
                     header.classList.remove('sticky');
+                    setIsScrolled(false);
                 }
             }
         };
 
         window.addEventListener('scroll', handleScroll);
+        // Check initial scroll position
+        handleScroll();
+
         return () => window.removeEventListener('scroll', handleScroll);
     }, []);
 
+    // Determine header classes based on page and scroll state
+    const getHeaderClasses = () => {
+        let classes = 'header-area style-two d-none d-lg-block';
+        if (isHomePage && !isScrolled) {
+            classes += ' transparent-header';
+        }
+        return classes;
+    };
+
     return (
-        <div className="header-area style-two d-none d-lg-block" id="sticky-header">
+        <div className={getHeaderClasses()} id="sticky-header">
             <div className="container">
                 <div className="row align-items-center">
                     <div className="col-lg-3">

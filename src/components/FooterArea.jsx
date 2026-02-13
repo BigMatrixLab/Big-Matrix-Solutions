@@ -9,8 +9,10 @@ const FooterArea = () => {
                     <div className="col-lg-4 col-md-6">
                         <div className="footer-logo">
                             <Link to="/" className="d-flex align-items-center">
-                                <img src="/assets/images/big_matrix_cube_logo.png" alt="logo" style={{ maxHeight: '120px' }} />
-
+                                <img src="/assets/images/big_matrix_cube.png" alt="logo" style={{ maxHeight: '120px' }} />
+                                <span className="logo-text ms-3" style={{ fontWeight: 'bold', fontSize: '28px', lineHeight: '1.2', color: '#fff' }}>
+                                    Big-Matrix<br />Solutions
+                                </span>
                             </Link>
                         </div>
                         <div class="footer-widget-desc">
