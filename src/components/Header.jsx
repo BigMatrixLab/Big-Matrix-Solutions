@@ -43,7 +43,7 @@ const Header = () => {
                     <div className="col-lg-3">
                         <div className="header-logo">
                             <Link to="/">
-                                <img src="/assets/images/big_matrix_cube.png" alt="logo" style={{ maxHeight: '80px' }} />
+                                <img src="/assets/images/big_matrix_cube_logo.png" alt="logo" style={{ maxHeight: '80px' }} />
                             </Link>
                         </div>
                     </div>

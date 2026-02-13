@@ -6,6 +6,7 @@ body {
   padding: 0;
   font-family: 'Rajdhani', sans-serif;
   overflow-x: hidden;
+  background-color: #F3F7FD;
 }
 
 /* Old Loader Styles - No longer used (now using preloader.css) */

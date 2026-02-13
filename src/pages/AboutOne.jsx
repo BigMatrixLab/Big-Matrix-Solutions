@@ -139,7 +139,7 @@ const AboutOne = () => {
                                         <div className="sigle-icon-desc">
                                             <p>We Communicate clearly, because in a world crowded with over-the-top marketing. simple wins.</p>
                                         </div>
-                                    </div>
+                                </div>
                                     <div className="single-icon-box">
                                         <div className="single-icon-thumb">
                                             <i className="bi bi-check"></i>
