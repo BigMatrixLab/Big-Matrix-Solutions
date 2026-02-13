@@ -31,7 +31,7 @@ function App() {
 
   return (
     <>
-      {/* --- Preloader HTML --- */}
+     
       <div id="preloader">
         <div className="loader-content">
           <img src="/assets/images/Loading_Animation.gif" alt="Loading..." />
@@ -41,7 +41,7 @@ function App() {
       <ScrollToTopOnNavigation />
       
       <Routes>
-        {/* Routes with Layout (Header/Footer) */}
+       
         <Route element={<Layout />}>
           <Route path="/" element={<Home />} />
           <Route path="/about" element={<AboutOne />} />
@@ -59,7 +59,7 @@ function App() {
           <Route path="/contact" element={<Contact />} />
         </Route>
         
-        {/* 404 Page */}
+       
         <Route path="*" element={<NotFound />} />
       </Routes>
     </>

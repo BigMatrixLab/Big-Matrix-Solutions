@@ -8,8 +8,8 @@ body {
   overflow-x: hidden;
 }
 
-/* Loader Styles */
-.loader-wrapper {
+/* Old Loader Styles - No longer used (now using preloader.css) */
+/* .loader-wrapper {
   position: fixed;
   top: 0;
   left: 0;
@@ -44,7 +44,7 @@ body.loaded .loader-wrapper {
   opacity: 0;
   visibility: hidden;
   pointer-events: none;
-}
+} */
 
 /* Fix for potential white screen / layout issues */
 #root {
