@@ -154,9 +154,19 @@ body.loaded .loader-wrapper {
 
 /* Partners Carousel Styles */
 .partners-area {
-  padding: 80px 0;
-  background: linear-gradient(135deg, #0651d4 0%, #0a4bc7 100%);
+  padding: 0;
+  background: url(/assets/images/partner-bg.jpg) center center no-repeat;
+  background-size: 100% 100%;
+  position: relative;
   overflow: hidden;
+  height: auto;
+  aspect-ratio: 16 / 3;
+  display: flex;
+  align-items: center;
+}
+
+.partners-area .container {
+  padding: 60px 0;
 }
 
 .partners-carousel-wrapper {
@@ -192,7 +202,7 @@ body.loaded .loader-wrapper {
 
 .partner-item:hover {
   transform: translateY(-5px);
-  box-shadow: 0 0 30px rgba(255, 255, 255, 0.8), 0 0 50px rgba(6, 81, 212, 0.6);
+  box-shadow: 0 5px 20px rgba(0, 0, 0, 0.15);
 }
 
 .partner-item img {

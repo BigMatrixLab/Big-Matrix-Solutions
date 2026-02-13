@@ -1,14 +1,14 @@
 import React, { useState, useEffect } from 'react';
 import { Link } from 'react-router-dom';
+import projectsData from '../data/projects.json';
 
 const PortfolioArea = () => {
     const [filter, setFilter] = useState('*');
-    const [items, setItems] = useState([
-        { id: 1, category: 'technology', image: '/assets/images/home-2/portfolio-1.png', title: 'Business Growth with Big-Matrix Solutions Agency', number: '01', slug: 'analytics-dashboard' },
-        { id: 2, category: 'designing', image: '/assets/images/home-2/portfolio-2.png', title: 'Desktop Application Development', number: '02', slug: 'digital-marketing' },
-        { id: 3, category: 'bussiness', image: '/assets/images/home-2/portfolio-3.png', title: 'Illustration and Vector Design for Add', number: '03', slug: 'cloud-migration' },
-    ]);
-    const [filteredItems, setFilteredItems] = useState(items);
+    const [items] = useState(projectsData);
+    const [filteredItems, setFilteredItems] = useState(projectsData);
+
+    // Get unique categories from projects
+    const categories = [...new Set(projectsData.map(item => item.category))];
 
     useEffect(() => {
         if (filter === '*') {
@@ -24,9 +24,9 @@ const PortfolioArea = () => {
                 <div className="row">
                     <div className="col-lg-12 text-center">
                         <div className="section-title center style-two">
-                            <h4>IT Support For Business</h4>
-                            <h1>Ensuring Your Success Trusted</h1>
-                            <h1>IT Services Source</h1>
+                            <h2 style={{color: "#0C5ADB", paddingBottom:"10px"}}>Our Projects</h2>
+                            <h1>Innovative Solutions in Action</h1>
+                            <h1>Transforming Healthcare & Technology</h1>
                         </div>
                     </div>
                 </div>
@@ -38,25 +38,31 @@ const PortfolioArea = () => {
                         <div className="portfolio_nav">
                             <div className="portfolio_menu">
                                 <ul className="menu-filtering">
-                                    <li className={filter === '*' ? "current_menu_item" : ""} onClick={() => setFilter('*')}> All items </li>
-                                    <li className={filter === 'technology' ? "current_menu_item" : ""} onClick={() => setFilter('technology')}>Technology </li>
-                                    <li className={filter === 'designing' ? "current_menu_item" : ""} onClick={() => setFilter('designing')}>Designing </li>
-                                    <li className={filter === 'bussiness' ? "current_menu_item" : ""} onClick={() => setFilter('bussiness')}> Bussiness </li>
+                                    <li className={filter === '*' ? "current_menu_item" : ""} onClick={() => setFilter('*')}>All Projects</li>
+                                    {categories.map((category, index) => (
+                                        <li 
+                                            key={index}
+                                            className={filter === category ? "current_menu_item" : ""} 
+                                            onClick={() => setFilter(category)}
+                                        >
+                                            {category}
+                                        </li>
+                                    ))}
                                 </ul>
                             </div>
                         </div>
                     </div>
                 </div>
                 <div className="row image_load">
-                    {filteredItems.map(item => (
-                        <div key={item.id} className={`col-lg-4 col-md-6 grid-item d-flex ${item.category}`}>
+                    {filteredItems.map((item, index) => (
+                        <div key={item.id} className={`col-lg-4 col-md-6 grid-item d-flex ${item.category.toLowerCase().replace(/\s+/g, '-')}`}>
                             <div className="single-portfolio-box w-100 mb-5">
                                 <div className="portfolio-thumb">
-                                    <img src={item.image} alt="" />
+                                    <img src={item.image} alt={item.title} />
                                 </div>
                                 <div className="portfolio-content">
                                     <div className="portfolio-number">
-                                        <h1>{item.number}</h1>
+                                        <h1>{String(index + 1).padStart(2, '0')}</h1>
                                     </div>
                                     <div className="portfolio-title">
                                         <Link to={`/project/${item.slug}`}>{item.title} <i className="bi bi-plus"></i></Link>

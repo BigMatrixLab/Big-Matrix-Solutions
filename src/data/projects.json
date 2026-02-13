@@ -1,17 +1,17 @@
 [
     {
         "id": 1,
-        "title": "Breast Cancer Assessment System",
+        "title": "Multimodal AI for Breast Cancer Diagnosis",
         "category": "AI in Healthcare",
-        "image": "https://images.unsplash.com/photo-1581594693702-fbdc51b2763b?auto=format&fit=crop&q=80&w=600",
-        "slug": "breast-cancer-ai",
-        "desc": "Multimodal deep learning framework for comprehensive breast cancer diagnosis and segmentation.",
-        "longDesc": "This groundbreaking project utilizes advanced multimodal AI for breast cancer diagnosis through precision segmentation and comprehensive report generation from mammographic images. The system employs state-of-the-art deep learning architectures to analyze medical imaging data and provide accurate, automated diagnostic assistance to healthcare professionals.",
-        "client": "Big-Matrix Lab",
-        "date": "2021-2022",
+        "image": "/assets/images/projects/Rad analysis.png",
+        "slug": "nsu_ctrg_2021_2022_breast_cancer",
+        "desc": "Precision segmentation and comprehensive report generation from mammograms using multimodal AI for enhanced breast cancer diagnosis.",
+        "longDesc": "This project, funded by North South University under project ID CTRG-21-SEPS-15, aims to advance breast cancer diagnosis through the development of cutting-edge techniques for precision segmentation and comprehensive report generation from mammographic images. Led by Dr. Mohammad Monir Uddin, the project leverages advanced image processing and machine learning methodologies to enhance the accuracy and efficiency of detecting and characterizing breast abnormalities in mammograms. The primary objective is to create a robust system capable of precise segmentation of regions of interest in mammographic images, enabling early and accurate identification of potential cancerous lesions. Additionally, the project focuses on generating detailed diagnostic reports that provide actionable insights for medical professionals, thereby improving clinical decision-making and patient outcomes. By integrating computational intelligence with medical imaging, this initiative seeks to address critical challenges in breast cancer diagnostics, contributing to reduced mortality rates and enhanced healthcare delivery.",
+        "client": "North South University",
+        "date": "2022",
         "location": "North South University, Dhaka",
-        "duration": "Ongoing",
-        "benefits": "Improved early detection accuracy and reduced diagnostic time for radiologists."
+        "duration": "1 year (Started from April 2022)",
+        "benefits": "Enhanced accuracy and efficiency in detecting breast abnormalities, early identification of potential cancerous lesions, improved clinical decision-making, and enhanced healthcare delivery."
     },
     {
         "id": 2,
