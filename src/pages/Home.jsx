@@ -11,7 +11,6 @@ import VideoArea from '../components/VideoArea';
 import ContactInfoArea from '../components/ContactInfoArea';
 import PricingArea from '../components/PricingArea';
 import BlogArea from '../components/BlogArea';
-import BrandArea from '../components/BrandArea';
 
 const Home = () => {
     return (
@@ -29,7 +28,6 @@ const Home = () => {
             <ContactInfoArea />
             <PricingArea />
             <BlogArea />
-            <BrandArea />
         </>
     );
 };
