@@ -6094,6 +6094,33 @@ button.icons {
     color: #fff;
 }
 
+.mission-icon-box {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    padding: 50px;
+}
+
+.mission-icon-box i {
+    font-size: 200px;
+    color: #0c5adb;
+    opacity: 0.2;
+    transition: all 0.5s;
+}
+
+.mission-icon-box:hover i {
+    opacity: 0.4;
+    transform: scale(1.1);
+}
+
+.mission-description {
+    font-size: 18px;
+    color: #666;
+    margin-bottom: 30px;
+    font-weight: 500;
+    line-height: 1.8;
+}
+
 /*---=====================================================
    <!--Toptech Choose us Area Css-->
 =========================================================---*/
