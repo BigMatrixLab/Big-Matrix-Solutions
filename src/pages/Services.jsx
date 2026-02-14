@@ -8,8 +8,8 @@ const Services = () => {
         <>
             <Breadcrumb pageTitle="Our Service" breadcrumbItem="Service" />
 
-            {/* Service Area Inner Style */}
-            <div className="service-area inner-style" style={{paddingTop: "50px"}}>
+            {/* Service Grid Area */}
+            <div className="blog-grid-area" style={{paddingTop: "100px", paddingBottom: "100px"}}>
                 <div className="container">
                     <div className="row">
                         <div className="col-lg-12 text-center">
@@ -20,9 +20,9 @@ const Services = () => {
                             </div>
                         </div>
                     </div>
-                    <div className="row justify-content-center">
+                    <div className="row">
                         {servicesData.map((service) => (
-                            <div className="col-lg-4 col-md-6 col-sm-1" key={service.id}>
+                            <div className="col-lg-4 col-md-6 mb-4 d-flex" key={service.id}>
                                 <ServiceCard service={service} />
                             </div>
                         ))}
