@@ -46,7 +46,7 @@ const PortfolioArea = () => {
                                         <h1>{String(index + 1).padStart(2, '0')}</h1>
                                     </div>
                                     <div className="portfolio-title">
-                                        <Link to={`/project/${item.slug}`}>{item.title} <i className="bi bi-plus"></i></Link>
+                                        <Link to={`/project/${item.slug}`}>{item.title}</Link>
                                     </div>
                                 </div>
                             </div>

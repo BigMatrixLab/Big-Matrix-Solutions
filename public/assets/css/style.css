@@ -1284,14 +1284,21 @@ Tags: consulting, finance, corporate, business, consultant, multipurpose, techno
     overflow: hidden;
     padding: 24px;
     padding-bottom: 19px;
+    height: 100%;
+    display: flex;
+    flex-direction: column;
 }
 
 .style-one .blog-thumb {
     overflow: hidden;
+    height: 250px;
+    border-radius: 5px;
 }
 
 .style-one .blog-thumb img {
     width: 100%;
+    height: 100%;
+    object-fit: cover;
     transition: 0.5s;
 }
 
@@ -1301,6 +1308,9 @@ Tags: consulting, finance, corporate, business, consultant, multipurpose, techno
 
 .style-one .blog-content {
     padding: 28px 0 30px;
+    display: flex;
+    flex-direction: column;
+    flex-grow: 1;
 }
 
 .style-one .blog-meta span {
@@ -1326,6 +1336,8 @@ Tags: consulting, finance, corporate, business, consultant, multipurpose, techno
     margin-top: 14px;
     line-height: 30px;
     transition: 0.5s;
+    min-height: 60px;
+    flex-grow: 1;
 }
 
 .style-one .blog-content a:hover {
@@ -2555,8 +2567,8 @@ Tags: consulting, finance, corporate, business, consultant, multipurpose, techno
     border-radius: 50% 50% 50% 0;
     text-align: center;
     position: absolute;
-    top: -84px;
-    right: -72px;
+    top: -44px;
+    right: 10px;
     opacity: 0;
     transition: 0.5s;
     z-index: 50;
@@ -5630,15 +5642,18 @@ p.services-details-desc {
 
 .blog-details-thumb {
     overflow: hidden;
+    height: 450px;
 }
 
 .blog-details-thumb img {
     width: 100%;
+    height: 100%;
+    object-fit: cover;
     transition: 0.5s;
 }
 
 .blog-details-thumb img:hover {
-    transform: scale(1.2) skew(-10deg);
+    transform: scale(1.1);
 }
 
 .blog-details-content {

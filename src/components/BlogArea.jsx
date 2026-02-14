@@ -28,9 +28,6 @@ const BlogArea = () => {
                                     <Link to={`/blog/${post.slug}`}>{post.title}</Link>
                                 </div>
                                 <div className="blog-buttom">
-                                    <div className="blog-author">
-                                        <span><i className="bi bi-person-circle"></i>By {post.admin}</span>
-                                    </div>
                                     <div className="blog-button">
                                         <Link to={`/blog/${post.slug}`}>Read More<i className="bi bi-arrow-right-short"></i></Link>
                                     </div>

@@ -2383,8 +2383,8 @@ Tags: consulting, finance, corporate, business, consultant, multipurpose, techno
     border-radius: 50% 50% 50% 0;
     text-align: center;
     position: absolute;
-    top: -84px;
-    right: -72px;
+    top: -44px;
+    right: 10px;
     opacity: 0;
     transition: 0.5s;
     z-index: 50;
@@ -5191,15 +5191,18 @@ p.services-details-desc {
 
 .blog-details-thumb {
     overflow: hidden;
+    height: 450px;
 }
 
 .blog-details-thumb img {
     width: 100%;
+    height: 100%;
+    object-fit: cover;
     transition: 0.5s;
 }
 
 .blog-details-thumb img:hover {
-    transform: scale(1.2) skew(-10deg);
+    transform: scale(1.1);
 }
 
 .blog-details-content {
@@ -5631,14 +5634,28 @@ button.icons {
     padding: 20px 21px 31px;
     position: relative;
     margin-bottom: 21px;
+    height: 100%;
+    display: flex;
+    flex-direction: column;
+}
+
+.blog-grid-area .blog-thumb {
+    height: 250px;
+    overflow: hidden;
+    border-radius: 5px;
 }
 
 .blog-grid-area .blog-thumb img {
     width: 100%;
+    height: 100%;
+    object-fit: cover;
 }
 
 .blog-grid-area .blog-content {
     padding: 25px 22px 3px;
+    display: flex;
+    flex-direction: column;
+    flex-grow: 1;
 }
 
 .blog-grid-area .blog-meta {
@@ -5703,6 +5720,8 @@ button.icons {
     color: #041424;
     font-weight: 700;
     font-family: "Rajdhani";
+    display: block;
+    min-height: 64px;
 }
 
 .blog-grid-area .blog-title a:hover {
@@ -5711,6 +5730,7 @@ button.icons {
 
 .blog-grid-area .blog-title p {
     margin: 12px 0 0;
+    flex-grow: 1;
 }
 
 .blog-grid-area .blog-category a {

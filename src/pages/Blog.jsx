@@ -20,8 +20,7 @@ const Blog = () => {
                                     </div>
                                     <div className="blog-content">
                                         <div className="blog-meta">
-                                            <span>Admin: {post.admin}</span>
-                                            <span>Comments ({post.comments})</span>
+                                            <span>{post.date}</span>
                                         </div>
                                         <div className="blog-title">
                                             <Link to={`/blog/${post.slug}`}>{post.title}</Link>
