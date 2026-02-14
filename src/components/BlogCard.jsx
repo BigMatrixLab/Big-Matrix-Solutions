@@ -9,8 +9,8 @@ const BlogCard = ({ post }) => {
             </div>
             <div className="blog-content">
                 <div className="blog-meta">
-                    <span>{post.date}</span>
-                </div>
+                                        <span><i className="bi bi-calendar-check-fill"></i> {post.date}</span>
+                                    </div>
                 <div className="blog-title">
                     <Link to={`/blog/${post.slug}`}>{post.title}</Link>
                     <p>{post.desc}</p>
