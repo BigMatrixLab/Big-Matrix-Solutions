@@ -16,11 +16,11 @@ const BlogCard = ({ post }) => {
                     <p>{post.desc}</p>
                 </div>
                 <div className="service-btn-wrapper">
-    <Link to={`/blog/${post.slug}`} className="service-btn">
-        Learn More
-        <i className="bi bi-arrow-right"></i>
-    </Link>
-</div>
+            <Link to={`/blog/${post.slug}`} className="service-btn">
+              Learn More
+             <i className="bi bi-arrow-right"></i>
+            </Link>
+            </div>
 
 
                             

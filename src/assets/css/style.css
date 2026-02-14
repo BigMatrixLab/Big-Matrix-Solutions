@@ -5813,7 +5813,7 @@ button.icons {
 }
 
 .blog-grid-area .blog-content {
-    padding: 25px 22px 3px;
+    padding-top: 25px;
     display: flex;
     flex-direction: column;
     flex-grow: 1;
