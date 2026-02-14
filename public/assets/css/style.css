@@ -2215,8 +2215,10 @@ Tags: consulting, finance, corporate, business, consultant, multipurpose, techno
     line-clamp: 3;
     -webkit-box-orient: vertical;
     overflow: hidden;
-    text-overflow: ellipsis;
+    text-overflow: hidden;
+    
 }
+
 
 .style-two .single-services-box:hover .service-content p {
     color: #fff;
@@ -2347,7 +2349,8 @@ Tags: consulting, finance, corporate, business, consultant, multipurpose, techno
 
 .style-two .team-socila-icon-box {
     position: absolute;
-    left: 125px;
+    left: 50%;
+    transform: translateX(-50%);
     bottom: -21px;
 }
 
@@ -2376,7 +2379,8 @@ Tags: consulting, finance, corporate, business, consultant, multipurpose, techno
 .style-two .team-social-icon {
     position: relative;
     top: -81px;
-    left: -27px;
+    left: 0;
+    text-align: center;
 }
 
 .style-two .team-social-icon ul li {
@@ -4765,11 +4769,12 @@ Tags: consulting, finance, corporate, business, consultant, multipurpose, techno
     background: #ffffff;
     text-align: center;
     transition: all 0.3s ease;
-    padding: 40px 30px 35px;
+    padding: 40px 30px 30px;
     border: 1px solid #e8e8e8;
     border-radius: 8px;
     margin-bottom: 30px;
-    min-height: 320px;
+    height: 420px;
+    max-height: 420px;
     display: flex;
     flex-direction: column;
 }
@@ -4804,19 +4809,27 @@ Tags: consulting, finance, corporate, business, consultant, multipurpose, techno
     font-weight: 600;
     margin: 0 0 15px;
     color: #041424;
-    min-height: 30px;
+    height: 58px;
     display: -webkit-box;
-    -webkit-line-clamp: 1;
-    line-clamp: 1;
+    -webkit-line-clamp: 2;
+    line-clamp: 2;
     -webkit-box-orient: vertical;
     overflow: hidden;
     text-overflow: ellipsis;
+    line-height: 1.3;
+}
+
+.inner-style .service-content {
+    display: flex;
+    flex-direction: column;
+    flex: 1;
 }
 
 .inner-style .service-content p {
     color: #666666;
     font-size: 15px;
     line-height: 1.7;
+    height: 77px;
     margin-bottom: 20px;
     display: -webkit-box;
     -webkit-line-clamp: 3;
