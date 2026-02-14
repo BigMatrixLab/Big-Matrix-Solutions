@@ -864,7 +864,7 @@ Tags: consulting, finance, corporate, business, consultant, multipurpose, techno
     z-index: 2;
     transition: 0.5s;
     background: #CEDEF7;
-    font-family: 'Nunito', sans-serif;
+    font-family: 'Rajdhani', sans-serif;
 }
 
 .faq-singular.active .faq-question {
@@ -1428,7 +1428,7 @@ Tags: consulting, finance, corporate, business, consultant, multipurpose, techno
     display: inline-block;
     color: #fff;
     line-height: 45px;
-    font-family: "Nunito";
+    font-family: "Rajdhani";
     transition: 0.5s;
 }
 
@@ -1456,7 +1456,7 @@ Tags: consulting, finance, corporate, business, consultant, multipurpose, techno
 
 .style-one .footer-newslatter-box input::placeholder {
     color: #fff;
-    font-family: "Nunito";
+    font-family: "Rajdhani";
     opacity: 0.5;
 }
 
@@ -1614,7 +1614,7 @@ Tags: consulting, finance, corporate, business, consultant, multipurpose, techno
     font-size: 16px;
     text-transform: capitalize;
     color: #000048;
-    font-family: 'Nunito';
+    font-family: 'Rajdhani';
     transition: 0.5s;
 }
 
@@ -1634,7 +1634,7 @@ Tags: consulting, finance, corporate, business, consultant, multipurpose, techno
     transition: .5s;
     text-transform: capitalize;
     font-weight: 600;
-    font-family: "Nunito", ui-sans-serif;
+    font-family: "Rajdhani", ui-sans-serif;
     transition: 0.5s;
 }
 
@@ -1736,7 +1736,7 @@ Tags: consulting, finance, corporate, business, consultant, multipurpose, techno
     position: relative;
     z-index: 1;
     font-size: 16px;
-    font-family: 'Nunito', sans-serif;
+    font-family: 'Rajdhani', sans-serif;
     margin-right: 17px;
     transition: 0.5s;
 }
@@ -2691,7 +2691,7 @@ Tags: consulting, finance, corporate, business, consultant, multipurpose, techno
     font-size: 16px;
     color: #ffffff;
     font-weight: 400;
-    font-family: "Nunito";
+    font-family: "Rajdhani";
     text-align: center;
     transition: .5s;
 }
@@ -2884,7 +2884,7 @@ Tags: consulting, finance, corporate, business, consultant, multipurpose, techno
     font-size: 16px;
     color: #ffffff;
     font-weight: 400;
-    font-family: "Nunito";
+    font-family: "Rajdhani";
 }
 
 .style-two .faq-singular .faq-question:before {
@@ -3160,7 +3160,7 @@ Tags: consulting, finance, corporate, business, consultant, multipurpose, techno
     position: relative;
     z-index: 1;
     font-size: 16px;
-    font-family: 'Nunito', sans-serif;
+    font-family: 'Rajdhani', sans-serif;
     margin-right: 17px;
 }
 
@@ -3807,7 +3807,7 @@ Tags: consulting, finance, corporate, business, consultant, multipurpose, techno
     font-size: 16px;
     color: #686868;
     font-weight: 400;
-    font-family: "Nunito";
+    font-family: "Rajdhani";
 }
 
 .style-three .pricing-list ul li {
@@ -3818,7 +3818,7 @@ Tags: consulting, finance, corporate, business, consultant, multipurpose, techno
     font-size: 16px;
     color: #041424;
     font-weight: 500;
-    font-family: "Nunito";
+    font-family: "Rajdhani";
     display: inline-block;
     background: #E6EEFB;
     padding: 12px 30px;
@@ -4007,7 +4007,7 @@ Tags: consulting, finance, corporate, business, consultant, multipurpose, techno
 .style-three .single-input-box input::placeholder {
     color: #686868;
     font-weight: 300;
-    font-family: "Nunito";
+    font-family: "Rajdhani";
 }
 
 .style-three .single-input-box select {
@@ -4032,7 +4032,7 @@ Tags: consulting, finance, corporate, business, consultant, multipurpose, techno
 .style-three .single-input-box textarea::placeholder {
     color: #686868;
     font-weight: 300;
-    font-family: "Nunito";
+    font-family: "Rajdhani";
 }
 
 .style-three .massage-sent-button button {
@@ -4757,7 +4757,7 @@ Tags: consulting, finance, corporate, business, consultant, multipurpose, techno
 =========================================================---*/
 .inner-style.service-area {
     padding: 121px 0 60px;
-    background: #ffffff;
+    background: linear-gradient(135deg, #f8f9fa 0%, #ffffff 100%);
 }
 
 .inner-style.service-area .section-title.center {
@@ -4768,55 +4768,91 @@ Tags: consulting, finance, corporate, business, consultant, multipurpose, techno
 .inner-style .single-service-box {
     background: #ffffff;
     text-align: center;
-    transition: all 0.3s ease;
-    padding: 40px 30px 30px;
+    transition: all 0.4s cubic-bezier(0.4, 0, 0.2, 1);
+    padding: 45px 35px 40px;
     border: 1px solid #e8e8e8;
-    border-radius: 8px;
+    border-radius: 16px;
     margin-bottom: 30px;
-    height: 420px;
-    max-height: 420px;
+    height: 450px;
+    max-height: 450px;
     display: flex;
     flex-direction: column;
+    box-shadow: 0 4px 20px rgba(0, 0, 0, 0.06);
+    position: relative;
+    overflow: hidden;
+}
+
+.inner-style .single-service-box::before {
+    content: "";
+    position: absolute;
+    top: 0;
+    left: 0;
+    right: 0;
+    height: 4px;
+    background: linear-gradient(90deg, #0C59DB 0%, #0a47a8 100%);
+    transform: scaleX(0);
+    transition: transform 0.4s ease;
+}
+
+.inner-style .single-service-box:hover::before {
+    transform: scaleX(1);
 }
 
 .inner-style .single-service-box:hover {
     border-color: #0C59DB;
-    transform: translateY(-5px);
+    transform: translateY(-8px);
+    box-shadow: 0 12px 40px rgba(12, 89, 219, 0.15);
 }
 
 .inner-style .service-icon {
-    width: 70px;
-    height: 70px;
+    width: 80px;
+    height: 80px;
     display: flex;
     align-items: center;
     justify-content: center;
-    margin: 0 auto 25px;
+    margin: 0 auto 28px;
+    background: linear-gradient(135deg, #e3f0ff 0%, #f0f7ff 100%);
+    border-radius: 50%;
+    position: relative;
+    transition: all 0.4s cubic-bezier(0.4, 0, 0.2, 1);
+}
+
+.inner-style .single-service-box:hover .service-icon {
+    background: linear-gradient(135deg, #0C59DB 0%, #0a47a8 100%);
+    transform: scale(1.08) rotate(5deg);
 }
 
 .inner-style .service-icon img,
 .inner-style .service-icon i {
-    font-size: 40px;
+    font-size: 42px;
     color: #0C59DB;
-    transition: color 0.3s ease;
+    transition: all 0.4s ease;
 }
 
 .inner-style .single-service-box:hover .service-icon i {
-    color: #0848a8;
+    color: #ffffff;
+    transform: scale(1.1);
 }
 
 .inner-style .service-content h4 {
-    font-size: 22px;
-    font-weight: 600;
-    margin: 0 0 15px;
+    font-size: 23px;
+    font-weight: 700;
+    margin: 0 0 18px;
     color: #041424;
-    height: 58px;
+    height: 62px;
     display: -webkit-box;
     -webkit-line-clamp: 2;
     line-clamp: 2;
     -webkit-box-orient: vertical;
     overflow: hidden;
     text-overflow: ellipsis;
-    line-height: 1.3;
+    line-height: 1.35;
+    transition: color 0.3s ease;
+    letter-spacing: -0.3px;
+}
+
+.inner-style .single-service-box:hover .service-content h4 {
+    color: #0C59DB;
 }
 
 .inner-style .service-content {
@@ -4828,9 +4864,9 @@ Tags: consulting, finance, corporate, business, consultant, multipurpose, techno
 .inner-style .service-content p {
     color: #666666;
     font-size: 15px;
-    line-height: 1.7;
-    height: 77px;
-    margin-bottom: 20px;
+    line-height: 1.75;
+    height: 79px;
+    margin-bottom: 25px;
     display: -webkit-box;
     -webkit-line-clamp: 3;
     line-clamp: 3;
@@ -4840,25 +4876,54 @@ Tags: consulting, finance, corporate, business, consultant, multipurpose, techno
 }
 
 .inner-style .service-content a {
-    display: inline-block;
+    display: inline-flex;
+    align-items: center;
+    gap: 6px;
     color: #0C59DB;
-    padding: 0;
-    transition: color 0.3s ease;
-    font-weight: 500;
+    padding: 12px 28px;
+    transition: all 0.3s ease;
+    font-weight: 600;
     font-size: 15px;
     text-decoration: none;
     margin-top: auto;
+    border-radius: 50px;
+    background: transparent;
+    border: 2px solid #0C59DB;
+    position: relative;
+    overflow: hidden;
+    z-index: 1;
+}
+
+.inner-style .service-content a::before {
+    content: "";
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 0;
+    height: 100%;
+    background: #0C59DB;
+    transition: width 0.4s ease;
+    z-index: -1;
+    border-radius: 50px;
+}
+
+.inner-style .service-content a:hover::before {
+    width: 100%;
 }
 
 .inner-style .service-content a:hover {
-    color: #0848a8;
+    color: #ffffff;
+    transform: translateX(3px);
 }
 
 .inner-style .service-content i {
     display: inline-block;
-    position: relative;
-    top: 2px;
-    left: 3px;
+    transition: transform 0.3s ease;
+    font-size: 14px;
+}
+
+.inner-style .service-content a:hover i {
+    transform: translateX(4px);
 }
 
 
@@ -5045,7 +5110,7 @@ Tags: consulting, finance, corporate, business, consultant, multipurpose, techno
     z-index: 2;
     transition: 0.5s;
     background: #fff;
-    font-family: 'Nunito', sans-serif;
+    font-family: 'Rajdhani', sans-serif;
 }
 
 .inner-style .faq-singular {
@@ -6139,7 +6204,7 @@ button.icons {
     line-height: 26px;
     color: #ffffff;
     font-weight: 400;
-    font-family: "Nunito";
+    font-family: "Rajdhani";
     background: #0C5ADB;
     padding: 7px 38px;
     position: absolute;
@@ -6160,23 +6225,65 @@ button.icons {
     transform: rotate(45deg);
 }
 
-.blog-grid-area .blog-button i {
-    background: #0D5ADE;
-    display: inline-block;
-    color: #fff;
-    width: 46px;
-    height: 46px;
-    text-align: center;
-    line-height: 43px;
-    border-radius: 50%;
+.blog-grid-area .blog-button {
+    margin-top: 15px;
+}
+
+.blog-grid-area .blog-button a {
+    display: inline-flex;
+    align-items: center;
+    gap: 6px;
+    color: #0C59DB;
+    padding: 10px 24px;
+    transition: all 0.3s ease;
+    font-weight: 600;
     font-size: 14px;
-    transform: rotate(-50deg);
-    border: 2px solid #fff;
+    text-decoration: none;
+    border-radius: 50px;
+    background: transparent;
+    border: 2px solid #0C59DB;
+    position: relative;
+    overflow: hidden;
+    z-index: 1;
+}
+
+.blog-grid-area .blog-button a::before {
+    content: "";
     position: absolute;
-    top: 192px;
-    right: 41px;
-    opacity: 0;
-    transition: 0.5s;
+    top: 0;
+    left: 0;
+    width: 0;
+    height: 100%;
+    background: #0C59DB;
+    transition: width 0.4s ease;
+    z-index: -1;
+    border-radius: 50px;
+}
+
+.blog-grid-area .blog-button a:hover::before {
+    width: 100%;
+}
+
+.blog-grid-area .blog-button a:hover {
+    color: #ffffff;
+    transform: translateX(3px);
+}
+
+.blog-grid-area .blog-button i {
+    font-size: 14px;
+    transition: transform 0.3s ease;
+    position: static;
+    opacity: 1;
+    background: transparent;
+    color: inherit;
+    width: auto;
+    height: auto;
+    border: none;
+    transform: none;
+}
+
+.blog-grid-area .blog-button a:hover i {
+    transform: translateX(4px);
 }
 
 .blog-grid-area .single-blog-box:hover .blog-button i {
@@ -6241,7 +6348,7 @@ button.icons {
     font-size: 14px;
     color: #686868 !important;
     font-weight: 400;
-    font-family: "Nunito";
+    font-family: "Rajdhani";
     padding: 0 !important;
     margin-left: 18px;
 }
@@ -6648,7 +6755,7 @@ button.icons {
     font-size: 18px;
     color: #041424;
     font-weight: 400;
-    font-family: "Nunito";
+    font-family: "Rajdhani";
     margin-bottom: 19px;
     margin-left: 27px;
     position: relative;
@@ -7190,7 +7297,7 @@ span.flaticon-multiply i {
     font-size: 16px;
     color: #041424;
     font-weight: 500;
-    font-family: "Nunito";
+    font-family: "Rajdhani";
     text-transform: capitalize;
 }
 
@@ -7206,7 +7313,7 @@ span.flaticon-multiply i {
     text-transform: uppercase;
     color: #ffffff;
     font-weight: 500;
-    font-family: "Nunito";
+    font-family: "Rajdhani";
     border-radius: 30px;
     padding: 15px 35px;
     position: relative;
@@ -7235,7 +7342,7 @@ span.flaticon-multiply i {
     line-height: 48px;
     color: #041424;
     font-weight: 500;
-    font-family: "Nunito";
+    font-family: "Rajdhani";
     margin-right: 20px;
 }
 
@@ -7351,7 +7458,7 @@ span.flaticon-multiply i {
     font-size: 16px;
     color: #ffffff;
     font-weight: 500;
-    font-family: "Nunito";
+    font-family: "Rajdhani";
     background: #0C59DB;
     padding: 17px 34px;
     border-radius: 30px;
@@ -7540,7 +7647,7 @@ span.flaticon-multiply i {
     line-height: 28px;
     color: #686868;
     font-weight: 400;
-    font-family: "Nunito";
+    font-family: "Rajdhani";
     margin: 0;
     padding: 19px 0 0;
     width: 85%;
@@ -7601,7 +7708,7 @@ span.flaticon-multiply i {
     line-height: 28px;
     color: #686868;
     font-weight: 400;
-    font-family: "Nunito";
+    font-family: "Rajdhani";
     margin: 0;
     overflow: hidden;
 }
@@ -7721,7 +7828,7 @@ span.flaticon-multiply i {
     font-size: 16px;
     color: #ffffff;
     font-weight: 500;
-    font-family: "Nunito";
+    font-family: "Rajdhani";
     z-index: 1;
 }
 
@@ -7843,7 +7950,7 @@ span.flaticon-multiply i {
     line-height: 28px;
     color: #ffffff;
     font-weight: 400;
-    font-family: "Nunito";
+    font-family: "Rajdhani";
     margin: 0;
 }
 
@@ -7885,7 +7992,7 @@ span.flaticon-multiply i {
     line-height: 26px;
     color: #ffffff;
     font-weight: 400;
-    font-family: "Nunito";
+    font-family: "Rajdhani";
     margin: 0;
     padding: 0 0 35px;
 }
@@ -7895,7 +8002,7 @@ span.flaticon-multiply i {
     font-size: 16px;
     color: #ffffff;
     font-weight: 500;
-    font-family: "Nunito";
+    font-family: "Rajdhani";
     background: #262664;
     border-radius: 30px;
     padding: 12px 29px 12px;
@@ -8011,7 +8118,7 @@ span.flaticon-multiply i {
     line-height: 26px;
     color: #ffffff;
     font-weight: 400;
-    font-family: "Nunito";
+    font-family: "Rajdhani";
 }
 
 .work-area.style-foure .work-single-box:hover .work-icon a i {
@@ -8082,7 +8189,7 @@ span.flaticon-multiply i {
     line-height: 26px;
     color: #686868;
     font-weight: 400;
-    font-family: "Nunito";
+    font-family: "Rajdhani";
     padding: 30px 0 0;
     width: 84%;
 }
@@ -8097,7 +8204,7 @@ span.flaticon-multiply i {
     line-height: 48px;
     color: #686868;
     font-weight: 500;
-    font-family: "Nunito";
+    font-family: "Rajdhani";
 }
 
 .dreamit-button2 a i {
@@ -8175,7 +8282,7 @@ span.flaticon-multiply i {
     line-height: 28px;
     color: #ffffff;
     font-weight: 400;
-    font-family: "Nunito";
+    font-family: "Rajdhani";
     margin: 0;
     padding: 12px 0 14px;
 }
@@ -8185,7 +8292,7 @@ span.flaticon-multiply i {
     font-size: 16px;
     color: #ffffff;
     font-weight: 500;
-    font-family: "Nunito";
+    font-family: "Rajdhani";
     position: relative;
     z-index: 1;
 }
@@ -8307,7 +8414,7 @@ span.flaticon-multiply i {
     line-height: 26px;
     color: #ffffff;
     font-weight: 400;
-    font-family: "Nunito";
+    font-family: "Rajdhani";
     margin: 0;
 }
 
@@ -8408,7 +8515,7 @@ span.flaticon-multiply i {
     font-size: 16px;
     color: #686868;
     font-weight: 400;
-    font-family: "Nunito";
+    font-family: "Rajdhani";
     display: inline-block;
 }
 
@@ -8432,7 +8539,7 @@ span.flaticon-multiply i {
     font-size: 15px;
     color: #686868;
     font-weight: 400;
-    font-family: "Nunito";
+    font-family: "Rajdhani";
     margin: 0;
     margin-left: 44%;
 }
@@ -8442,7 +8549,7 @@ span.flaticon-multiply i {
     line-height: 26px;
     color: #686868;
     font-weight: 400;
-    font-family: "Nunito";
+    font-family: "Rajdhani";
     margin: 0;
 }
 
@@ -8723,7 +8830,7 @@ Awards One Css
     font-size: 24px;
     color: #ffffff;
     font-weight: 700;
-    font-family: "Nunito";
+    font-family: "Rajdhani";
     margin-top: 0;
     margin-bottom: 32px;
 }
@@ -8735,14 +8842,14 @@ Awards One Css
     line-height: 41px;
     color: #ffffff;
     font-weight: 400;
-    font-family: "Nunito";
+    font-family: "Rajdhani";
 }
 
 .footer-area.style-foure .footer-widget-menu ul li {
     font-size: 16px;
     line-height: 51px;
     font-weight: 400;
-    font-family: "Nunito";
+    font-family: "Rajdhani";
     color: #B9B7C5;
 }
 
@@ -8765,7 +8872,7 @@ Awards One Css
     line-height: 28px;
     color: #B9B7C5;
     font-weight: 400;
-    font-family: "Nunito";
+    font-family: "Rajdhani";
     margin: 0;
     margin-bottom: 39px;
 }
@@ -8782,7 +8889,7 @@ Awards One Css
     line-height: 28px;
     color: #ffffff;
     font-weight: 400;
-    font-family: "Nunito";
+    font-family: "Rajdhani";
 }
 
 .footer-area.style-foure .footer-newslatter-box input::placeholder {
@@ -8791,7 +8898,7 @@ Awards One Css
     line-height: 28px;
     color: #ffffff;
     font-weight: 400;
-    font-family: "Nunito";
+    font-family: "Rajdhani";
 }
 
 .footer-area.style-foure .footer-newslatter-box button {
@@ -8800,7 +8907,7 @@ Awards One Css
     font-size: 16px;
     color: #ffffff;
     font-weight: 500;
-    font-family: "Nunito";
+    font-family: "Rajdhani";
     background: #0C59DB;
     border: none;
     width: 42%;

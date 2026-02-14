@@ -50,7 +50,7 @@ const TeamDetails = () => {
                                                 <i className="fa-solid fa-phone"></i>
                                             </div>
                                             <div className="contact-info-content">
-                                                <h4>Call us Any time</h4>
+                                                <h4>Contact</h4>
                                                 <p>{member.phone}</p>
                                             </div>
                                         </div>
@@ -61,7 +61,7 @@ const TeamDetails = () => {
                                                 <i className="fa-regular fa-envelope"></i>
                                             </div>
                                             <div className="contact-info-content">
-                                                <h4>Send E-Mail</h4>
+                                                <h4>E-Mail</h4>
                                                 <p>{member.email}</p>
                                             </div>
                                         </div>
@@ -88,38 +88,7 @@ const TeamDetails = () => {
                             </div>
                         </div>
                     </div>
-                    <div className="row">
-                        <div className="col-lg-6">
-                            <div className="team-details-skills">
-                                <h4>My Skills</h4>
-                                <div className="wrapper">
-                                    {member.skills.map((skill, index) => (
-                                        <div className="skill" key={index}>
-                                            <p>{skill.name}</p>
-                                            <div className={`skill-bar skill${index + 1}`}>
-                                                <span className={`skill-count${index + 1}`}>{skill.value}</span>
-                                            </div>
-                                        </div>
-                                    ))}
-                                </div>
-                            </div>
-                        </div>
-                        <div className="col-lg-6">
-                            <div className="team-details-skills">
-                                <h4>Success Project </h4>
-                                <div className="wrapper">
-                                    {member.projects.map((project, index) => (
-                                        <div className="skill" key={index}>
-                                            <p>{project.name}</p>
-                                            <div className={`skill-bar skill${index + 1}`}>
-                                                <span className={`skill-count${index + 1}`}>{project.value}</span>
-                                            </div>
-                                        </div>
-                                    ))}
-                                </div>
-                            </div>
-                        </div>
-                    </div>
+                    
                 </div>
             </div>
 

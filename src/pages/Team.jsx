@@ -47,69 +47,6 @@ const Team = () => {
                     </div>
                 </div>
             </div>
-
-            {/* Subscribe Area Style Three */}
-            <div className="subscribe-area style-three">
-                <div className="container">
-                    <div className="row align-items-center">
-                        <div className="col-lg-6">
-                            <div className="section-title left inner-style">
-                                <h1>Get Latest Update from Big-Matrix Solutions</h1>
-                                <h2 style={{ color: "#fff" }}>Stay Connected with Us</h2>
-                            </div>
-                        </div>
-                        <div className="col-lg-6">
-                            <form action="#" onSubmit={(e) => e.preventDefault()}>
-                                <div className="single-subscribe-box">
-                                    <input type="text" name="Email" placeholder="Enter your Email" required />
-                                    <button type="submit">Subscribe</button>
-                                </div>
-                            </form>
-                        </div>
-                    </div>
-                </div>
-            </div>
-
-            {/* Process Area Style Three */}
-            <div className="process-area style-three inner">
-                <div className="container">
-                    <div className="row add-bg">
-                        <div className="col-lg-4 col-md-6">
-                            <div className="single-process-box">
-                                <div className="process-icon">
-                                    <img src="/assets/images/home-3/process-1.png" alt="" />
-                                </div>
-                                <div className="process-content">
-                                    <h4>Account Register</h4>
-                                    <p>Opportunities before extensible market Dramatically pursue us</p>
-                                </div>
-                            </div>
-                        </div>
-                        <div className="col-lg-4 col-md-6">
-                            <div className="single-process-box">
-                                <div className="process-icon">
-                                    <img src="/assets/images/home-3/process-2.png" alt="" />
-                                </div>
-                                <div className="process-content">
-                                    <h4>Add New Card</h4>
-                                    <p>Opportunities before extensible market Dramatically pursue us</p>
-                                </div>
-                            </div>
-                        </div>
-                        <div className="col-lg-4 col-md-6">
-                            <div className="single-process-box">
-                                <div className="process-icon">
-                                    <img src="/assets/images/home-3/process-3.png" alt="" />
-                                </div>
-                                <div className="process-content">
-                                    <h4>Verified Account</h4>
-                                    <p>Opportunities before extensible market Dramatically pursue us</p>
-                                </div>
-                            </div>
-                        </div>
-                    </div>
-                </div>
-            </div>
         </>
     );
 };

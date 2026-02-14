@@ -1,7 +1,7 @@
 import React from 'react';
 import servicesData from '../data/services.json';
-import { Link } from 'react-router-dom';
 import Breadcrumb from '../components/Breadcrumb';
+import ServiceCard from '../components/ServiceCard';
 
 const Services = () => {
     return (
@@ -23,19 +23,7 @@ const Services = () => {
                     <div className="row justify-content-center">
                         {servicesData.map((service) => (
                             <div className="col-lg-4 col-md-6 col-sm-1" key={service.id}>
-                                <div className="single-service-box">
-                                    <div className="service-icon">
-                                        <i className={service.icon}></i>
-                                    </div>
-                                    <div className="service-content">
-                                        <h4>{service.title}</h4>
-                                        <p>{service.desc}</p>
-                                        <Link to={`/service/${service.slug}`}>
-                                            Learn More 
-                                            <i className="bi bi-arrow-right"></i>
-                                        </Link>
-                                    </div>
-                                </div>
+                                <ServiceCard service={service} />
                             </div>
                         ))}
                     </div>
