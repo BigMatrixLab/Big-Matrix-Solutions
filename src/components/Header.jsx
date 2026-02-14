@@ -29,17 +29,23 @@ const Header = () => {
 
  
     const getHeaderClasses = () => {
-        let classes = 'header-area style-two d-none d-lg-block';
-        if (isHomePage && !isScrolled) {
-            classes += ' transparent-header';
+        if (isHomePage) {
+            // Home page: transparent blurred background initially
+            let classes = 'header-area style-two d-none d-lg-block';
+            if (!isScrolled) {
+                classes += ' transparent-header';
+            }
+            return classes;
+        } else {
+            // Inner pages: use inner-style for solid white background
+            return 'header-area inner-style d-none d-lg-block';
         }
-        return classes;
     };
 
     return (
         <div className={getHeaderClasses()} id="sticky-header">
             <div className="container">
-                <div className="row align-items-center justify-content-end">
+                <div className="row align-items-center">
                     <div className="col-lg-3">
                         <div className="header-logo">
                             <Link to="/">
@@ -48,7 +54,7 @@ const Header = () => {
                         </div>
                     </div>
                     <div className="col-lg-9">
-                        <div className="header-menu d-flex justify-content-end w-100">
+                        <div className="header-menu">
                             <ul>
                                 <li><Link to="/">Home</Link></li>
                                 <li><Link to="/about">About</Link></li>

@@ -15,10 +15,8 @@ const FooterArea = () => {
                                 </span>
                             </Link>
                         </div>
-                        <div class="footer-widget-desc">
-                            <p>Development wing of Big-Matrix Lab at North South University.
-                                Revolutionizing healthcare through cutting-edge AI, big data analytics,
-                                and biomedical research to accelerate medical discoveries.</p>
+                        <div className="footer-widget-desc" style={{textAlign: "justify"}}>
+                            <p>We build advanced software ecosystems—from medical diagnostics and hospital systems to industrial automation and predictive analytics—powering the next generation of digital transformation.</p>
                         </div>
                        
                     </div>

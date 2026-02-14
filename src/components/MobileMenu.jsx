@@ -25,10 +25,20 @@ const MobileMenu = () => {
     // Dynamic classes for the top bar
     const getNavbarClasses = () => {
         let classes = 'mobile-header-bar d-lg-none';
-        if (isHomePage && !isScrolled) {
-            classes += ' transparent-mobile';
+        if (isHomePage) {
+            // Home page: transparent when not scrolled, white when scrolled
+            if (!isScrolled) {
+                classes += ' transparent-mobile';
+            } else {
+                classes += ' white-mobile';
+            }
         } else {
-            classes += ' white-mobile';
+            // Inner pages: blurred when not scrolled, solid white when scrolled
+            if (!isScrolled) {
+                classes += ' inner-mobile';
+            } else {
+                classes += ' white-mobile';
+            }
         }
         return classes;
     };
