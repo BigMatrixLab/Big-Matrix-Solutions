@@ -217,16 +217,33 @@ Tags: consulting, finance, corporate, business, consultant, multipurpose, techno
     animation-name: slideInDown;
 }
 
+/* Inner page header - always solid and fixed */
+.header-area.inner-page {
+    background: #fff !important;
+    position: fixed !important;
+    top: 0 !important;
+    left: 0 !important;
+    right: 0 !important;
+    width: 100% !important;
+    z-index: 9999 !important;
+    box-shadow: 0 2px 10px rgba(0, 0, 0, 0.05);
+    margin-bottom: 0 !important;
+}
+
 /* Transparent header for home page */
 .transparent-header {
     background: rgba(255, 255, 255, 0.1) !important;
     backdrop-filter: blur(10px);
     -webkit-backdrop-filter: blur(10px);
-    position: absolute;
-    width: 100%;
+    position: fixed !important;
+    top: 0 !important;
+    left: 0 !important;
+    right: 0 !important;
+    width: 100% !important;
     z-index: 999;
     transition: all 0.5s ease;
     box-shadow: 0 2px 10px rgba(0, 0, 0, 0.05);
+    margin-bottom: 0 !important;
 }
 
 /* When sticky, override transparent */
@@ -242,6 +259,12 @@ Tags: consulting, finance, corporate, business, consultant, multipurpose, techno
     transition: all 0.3s ease;
 }
 
+.transparent-header .header-menu ul li a.active {
+    color: #419aff !important;
+    opacity: 1;
+    font-weight: 700;
+}
+
 .transparent-header .header-menu ul li a:hover {
     color: #fff !important;
     opacity: 1;
@@ -249,11 +272,15 @@ Tags: consulting, finance, corporate, business, consultant, multipurpose, techno
 }
 
 /* Menu text color when sticky */
-.sticky .header-menu ul li a {
+.header-area.style-two.sticky .header-menu ul li a {
     color: #1d2124;
 }
 
-.sticky .header-menu ul li a:hover {
+.header-area.style-two.sticky .header-menu ul li a.active {
+    color: #0B5ADB !important;
+}
+
+.header-area.style-two.sticky .header-menu ul li a:hover {
     color: #0c5adb;
 }
 
@@ -1402,12 +1429,16 @@ Tags: consulting, finance, corporate, business, consultant, multipurpose, techno
 }
 
 .style-two .header-menu ul li a {
-    font-weight: 600;
+    font-weight: 700;
     font-size: 16px;
     text-transform: capitalize;
     color: #000048;
     font-family: 'Nunito';
     transition: 0.5s;
+}
+
+.style-two .header-menu ul li a.active {
+    color: #0B5ADB;
 }
 
 .style-two .header-menu ul li a:hover {
@@ -2155,8 +2186,12 @@ Tags: consulting, finance, corporate, business, consultant, multipurpose, techno
 
 .style-two .team-socila-icon-box {
     position: absolute;
-    left: 125px;
+    left: 50%;
+    transform: translateX(-50%);
     bottom: -21px;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
 }
 
 .style-two .team-share {
@@ -2184,7 +2219,13 @@ Tags: consulting, finance, corporate, business, consultant, multipurpose, techno
 .style-two .team-social-icon {
     position: relative;
     top: -81px;
-    left: -27px;
+    left: 0;
+    text-align: center;
+}
+
+.style-two .team-social-icon ul {
+    display: flex;
+    justify-content: center;
 }
 
 .style-two .team-social-icon ul li {
@@ -2211,6 +2252,13 @@ Tags: consulting, finance, corporate, business, consultant, multipurpose, techno
     visibility: visible;
 }
 
+.style-two .single-team-box:hover .team-social-icon ul li a {
+    transform: translateY(0px);
+    opacity: 1;
+    overflow: hidden;
+    visibility: visible;
+}
+
 .style-two .team-social-icon ul li:nth-child(1) a {
     transition-delay: 0.5s;
 }
@@ -2225,6 +2273,34 @@ Tags: consulting, finance, corporate, business, consultant, multipurpose, techno
 
 .style-two .team-social-icon ul li:nth-child(4) a {
     transition-delay: 0s;
+}
+
+.style-two .single-team-box:hover .team-social-icon ul li:nth-child(1) a {
+    transition-delay: 0.1s;
+}
+
+.style-two .single-team-box:hover .team-social-icon ul li:nth-child(2) a {
+    transition-delay: 0.2s;
+}
+
+.style-two .single-team-box:hover .team-social-icon ul li:nth-child(3) a {
+    transition-delay: 0.3s;
+}
+
+.style-two .single-team-box:hover .team-social-icon ul li:nth-child(4) a {
+    transition-delay: 0.4s;
+}
+
+.style-two .single-team-box:hover .team-social-icon ul li:nth-child(5) a {
+    transition-delay: 0.5s;
+}
+
+.style-two .single-team-box:hover .team-social-icon ul li:nth-child(6) a {
+    transition-delay: 0.6s;
+}
+
+.style-two .single-team-box:hover .team-social-icon ul li:nth-child(7) a {
+    transition-delay: 0.7s;
 }
 
 
@@ -3803,17 +3879,39 @@ Tags: consulting, finance, corporate, business, consultant, multipurpose, techno
 }
 
 .style-three .massage-sent-button button {
-    border-radius: 3px;
+    border-radius: 5px;
     background-color: #0c5adb;
     border: 2px solid #0c5adb;
     color: #fff;
     padding: 15px 38px;
     transition: 0.5s;
+    position: relative;
+    z-index: 1;
+    overflow: hidden;
+    font-weight: 500;
+}
+
+.style-three .massage-sent-button button:before {
+    position: absolute;
+    content: "";
+    width: 0;
+    height: 100%;
+    right: 0;
+    top: 0;
+    background: #fff;
+    z-index: -1;
+    border-radius: 5px;
+    transition: 0.5s;
 }
 
 .style-three .massage-sent-button button:hover {
     color: #0c5adb;
-    background: #fff;
+    border-color: #0c5adb;
+}
+
+.style-three .massage-sent-button button:hover:before {
+    width: 100%;
+    left: 0;
 }
 
 .style-three .single-contact-info-box {
@@ -4913,7 +5011,7 @@ a.project-details-text {
 
 .inner-style .project-thumb {
     height: 280px;
-    overflow: hidden;
+    overflow: visible;
     border-radius: 5px 5px 0 0;
 }
 
@@ -4921,6 +5019,8 @@ a.project-details-text {
     width: 100%;
     height: 100%;
     object-fit: cover;
+    border-radius: 5px 5px 0 0;
+    box-shadow: 0 12px 28px rgba(0, 0, 0, 0.18);
 }
 
 .inner-style .project-content {
@@ -5782,10 +5882,14 @@ button.icons {
     padding: 120px 0 100px;
 }
 
+.blog-grid-area .section-title.center {
+    margin-bottom: 56px;
+}
+
 .blog-grid-area .single-blog-box {
     border-radius: 5px;
-    background-color: #f3f8fd;
-    padding: 20px 21px 31px;
+    background-color: #FFFFFF;
+    padding: 20px 21px 21px;
     position: relative;
     margin-bottom: 21px;
     height: 100%;
@@ -5834,7 +5938,7 @@ button.icons {
     height: 2px;
     left: 0;
     bottom: -26px;
-    background: #fff;
+    background: #F3F7FD;
 }
 
 .blog-grid-area .blog-meta:after {
@@ -6194,7 +6298,7 @@ button.icons {
 
 .inner-style .mission-box {
     background: #f3f8fd;
-    padding: 107px 55px 59px 97px;
+    padding: 50px 50px 50px 90px;
     margin-left: -24px;
 }
 
@@ -6229,13 +6333,13 @@ button.icons {
     height: 45px;
     border-radius: 23px;
     filter: drop-shadow(0px 10px 10px rgba(207, 218, 235, 0.2));
-    background-color: #ffffff;
-    display: inline-block;
+    background-color: #0B5ADB;
+    display: inline-flex;
+    align-items: center;
+    justify-content: center;
     float: left;
-    text-align: center;
-    line-height: 45px;
     font-size: 25px;
-    color: #041424;
+    color: #ffffff;
     margin-right: 16px;
 }
 

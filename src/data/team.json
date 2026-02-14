@@ -2,7 +2,7 @@
     {
         "id": 1,
         "name": "Prof. Dr. M. Monir Uddin",
-        "role": "Co Founder",
+        "role": "Co Founder & Director",
         "image": "https://res.cloudinary.com/dcfny0d5c/image/upload/v1770876609/628129644_122121908115065415_2237224563181312677_n_d4uprj.jpg",
         "slug": "monir-uddin",
         "desc": "Professor at the Department of Mathematics & Physics, North South University, Dhaka, Bangladesh. Leading cutting-edge research in AI, healthcare, and mathematical modeling.",
@@ -219,7 +219,7 @@
     {
         "id": 8,
         "name": "Md. Tanzim Hossain",
-        "role": "Co Founder",
+        "role": "Co Founder & COO",
         "image": "https://res.cloudinary.com/dcfny0d5c/image/upload/v1762248257/big-matrix/photos/Tanzim.jpg",
         "slug": "tanzim-hossain",
         "desc": "Software engineer and AI specialist focusing on developing scalable healthcare solutions and deep learning models.",
@@ -250,7 +250,7 @@
     {
         "id": 9,
         "name": "Istiak Ahmed",
-        "role": "Co Founder",
+        "role": "Co Founder & Research Lead",
         "image": "https://res.cloudinary.com/dcfny0d5c/image/upload/v1762248182/big-matrix/photos/Istiak_Ahmed.jpg",
         "slug": "istiak-ahmed",
         "desc": "Technology innovator specializing in AI implementation and medical image processing for diagnostic applications.",
@@ -281,7 +281,7 @@
     {
         "id": 10,
         "name": "Kazi Shahriar Sanjid",
-        "role": "Co Founder",
+        "role": "Co Founder & CTO",
         "image": "https://res.cloudinary.com/dcfny0d5c/image/upload/v1762248242/big-matrix/photos/sanjid_RcFg8Tz.jpg",
         "slug": "kazi-shahriar-sanjid",
         "desc": "Data scientist with expertise in predictive analytics and AI-powered healthcare solutions for improved patient outcomes.",
@@ -312,7 +312,7 @@
     {
         "id": 11,
         "name": "Md. Nishan Khan",
-        "role": "Co Founder",
+        "role": "Co Founder & Lead Developer",
         "image": "https://res.cloudinary.com/dcfny0d5c/image/upload/v1762248220/big-matrix/photos/NishanKhan.jpg",
         "slug": "nishan-khan",
         "desc": "Full-stack developer and AI engineer building robust healthcare platforms and intelligent medical systems.",
@@ -343,7 +343,7 @@
     {
         "id": 12,
         "name": "Galib Ahmed",
-        "role": "Co Founder",
+        "role": "Co Founder & AI Specialist",
         "image": "https://res.cloudinary.com/dcfny0d5c/image/upload/v1762248181/big-matrix/photos/Galib.jpg",
         "slug": "galib-ahmed",
         "desc": "Machine learning specialist focusing on natural language processing and computer vision for healthcare applications.",
@@ -374,7 +374,7 @@
     {
         "id": 13,
         "name": "Md. Misbah Khan",
-        "role": "Co Founder",
+        "role": "Co Founder & Junior Developer",
         "image": "https://res.cloudinary.com/dcfny0d5c/image/upload/v1762248204/big-matrix/photos/MisbahKhan.jpg",
         "slug": "misbah-khan",
         "desc": "Cloud architect and DevOps specialist ensuring scalable, secure deployment of AI-powered healthcare solutions.",
@@ -405,7 +405,7 @@
     {
         "id": 14,
         "name": "Md. Jobaer Rahman",
-        "role": "Co Founder",
+        "role": "Co Founder & Research Associate",
         "image": "https://res.cloudinary.com/dcfny0d5c/image/upload/v1762248184/big-matrix/photos/JobaerRahman.jpg",
         "slug": "jobaer-rahman",
         "desc": "Backend engineer and database specialist developing efficient data management systems for healthcare applications.",

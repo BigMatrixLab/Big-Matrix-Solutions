@@ -69,7 +69,7 @@ const Contact = () => {
                                     </div>
                                     <div className="contact-info-content">
                                         <p>Call Us</p>
-                                        <h4>+980 123 (4567) 890</h4>
+                                        <h4>+880 2 55668200 (6212)</h4>
                                     </div>
                                 </div>
                                 <div className="contact-info-box">
@@ -78,7 +78,7 @@ const Contact = () => {
                                     </div>
                                     <div className="contact-info-content">
                                         <p>Send E-Mail</p>
-                                        <h4>example@gmail.com</h4>
+                                        <h4>hi@big-matrix.com</h4>
                                     </div>
                                 </div>
                                 <div className="contact-info-box">
@@ -87,7 +87,7 @@ const Contact = () => {
                                     </div>
                                     <div className="contact-info-content">
                                         <p>Office Hours</p>
-                                        <h4>8.00 AM to 5.00 PM</h4>
+                                        <h4>9.00 AM to 5.00 PM</h4>
                                     </div>
                                 </div>
                             </div>

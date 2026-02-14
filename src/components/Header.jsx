@@ -29,17 +29,15 @@ const Header = () => {
 
  
     const getHeaderClasses = () => {
-        if (isHomePage) {
-            // Home page: transparent blurred background initially
-            let classes = 'header-area style-two d-none d-lg-block';
-            if (!isScrolled) {
-                classes += ' transparent-header';
-            }
-            return classes;
+        // Use same behavior for all pages - transparent at top, solid on scroll
+        let classes = 'header-area style-two d-none d-lg-block';
+        
+        if (!isScrolled) {
+            classes += ' transparent-header';
         } else {
-            // Inner pages: use inner-style for solid white background
-            return 'header-area inner-style d-none d-lg-block';
+            classes += ' sticky';
         }
+        return classes;
     };
 
     return (
@@ -56,14 +54,14 @@ const Header = () => {
                     <div className="col-lg-9">
                         <div className="header-menu">
                             <ul>
-                                <li><Link to="/">Home</Link></li>
-                                <li><Link to="/about">About</Link></li>
-                                <li><Link to="/service">Service</Link></li>
-                                <li><Link to="/team">Team</Link></li>
-                                <li><Link to="/project">Projects</Link></li>
-                                <li><Link to="/careers">Careers</Link></li>
-                                <li><Link to="/blog">Blog</Link></li>
-                                <li><Link to="/contact">Contact</Link></li>
+                                <li><Link to="/" className={location.pathname === '/' ? 'active' : ''}>Home</Link></li>
+                                <li><Link to="/about" className={location.pathname === '/about' ? 'active' : ''}>About</Link></li>
+                                <li><Link to="/service" className={location.pathname.startsWith('/service') ? 'active' : ''}>Service</Link></li>
+                                <li><Link to="/team" className={location.pathname.startsWith('/team') ? 'active' : ''}>Team</Link></li>
+                                <li><Link to="/project" className={location.pathname.startsWith('/project') ? 'active' : ''}>Projects</Link></li>
+                                <li><Link to="/careers" className={location.pathname === '/careers' ? 'active' : ''}>Careers</Link></li>
+                                <li><Link to="/blog" className={location.pathname.startsWith('/blog') ? 'active' : ''}>Blog</Link></li>
+                                <li><Link to="/contact" className={location.pathname === '/contact' ? 'active' : ''}>Contact</Link></li>
                             </ul>
                         </div>
                     </div>

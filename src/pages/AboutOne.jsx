@@ -66,19 +66,7 @@ const AboutOne = () => {
             {/* Mission Vison Area */}
             <div className="mission-area inner-style">
                 <div className="container">
-                    {/* Vision */}
-                    <ValueSection
-                        image="/assets/images/Vision.jpg"
-                        title="Our Vision"
-                        description="To architect the intelligent infrastructure of the future."
-                        items={[
-                            "Integrated Ecosystems replace fragmented software, creating seamless connectivity across healthcare, pharma, and industry.",
-                            "AI-Driven Decision Making is the global standard for clinical accuracy, industrial efficiency, and public health safety.",
-                            "Scalable Intelligence is accessible at every level—from individual clinics to national government infrastructures.",
-                            "Data-Driven Prediction eliminates systemic waste and prepares society for future health and industrial challenges."
-                        ]}
-                        reversed={true}
-                    />
+                    
 
                     {/* Mission */}
                     <ValueSection
@@ -91,6 +79,20 @@ const AboutOne = () => {
                             "Empowering Public Health: Providing governments and pharma companies with disease mapping and predictive analytics to manage outbreaks and drug supply chains.",
                             "Bridging Research and Application: Utilizing our dedicated research facility to turn complex mathematical models and deep learning into deployable enterprise solutions.",
                             "Ensuring Secure Scalability: Designing EHR/EMR and management systems that are secure, compliant, and capable of handling massive datasets across multiple industries."
+                        ]}
+                        reversed={true}
+                    />
+
+                    {/* Vision */}
+                    <ValueSection
+                        image="/assets/images/Vision.jpg"
+                        title="Our Vision"
+                        description="To architect the intelligent infrastructure of the future."
+                        items={[
+                            "Integrated Ecosystems replace fragmented software, creating seamless connectivity across healthcare, pharma, and industry.",
+                            "AI-Driven Decision Making is the global standard for clinical accuracy, industrial efficiency, and public health safety.",
+                            "Scalable Intelligence is accessible at every level—from individual clinics to national government infrastructures.",
+                            "Data-Driven Prediction eliminates systemic waste and prepares society for future health and industrial challenges."
                         ]}
                         reversed={false}
                     />

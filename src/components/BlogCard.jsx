@@ -9,23 +9,19 @@ const BlogCard = ({ post }) => {
             </div>
             <div className="blog-content">
                 <div className="blog-meta">
-                                        <span><i className="bi bi-calendar-check-fill"></i> {post.date}</span>
-                                    </div>
+                    <span><i className="bi bi-calendar-check-fill"></i> {post.date}</span>
+                </div>
                 <div className="blog-title">
                     <Link to={`/blog/${post.slug}`}>{post.title}</Link>
-                    <p>{post.desc}</p>
+                    {/* <p>{post.desc}</p> */}
                 </div>
                 <div className="service-btn-wrapper">
-            <Link to={`/blog/${post.slug}`} className="service-btn">
-              Learn More
-             <i className="bi bi-arrow-right"></i>
-            </Link>
+                    <Link to={`/blog/${post.slug}`} className="service-btn">
+                        Learn More
+                        <i className="bi bi-arrow-right"></i>
+                    </Link>
+                </div>
             </div>
-
-
-                            
-            </div>
-            
         </div>
     );
 };

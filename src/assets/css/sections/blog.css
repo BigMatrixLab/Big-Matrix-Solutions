@@ -143,31 +143,53 @@
     display: inline-flex;
     align-items: center;
     justify-content: center;
-    background-color: #0C59DB; /* Your brand blue */
-    color: #ffffff !important; /* Ensure text is white */
+    background-color: #0C59DB;
+    color: #ffffff !important;
     padding: 12px 25px;
     font-size: 15px;
     font-weight: 600;
     border-radius: 5px;
     text-decoration: none;
-    transition: all 0.3s ease-in-out;
+    transition: 0.5s;
     border: 1px solid #0C59DB;
+    width: 100%;
+    position: relative;
+    z-index: 1;
+    overflow: hidden;
+}
+
+/* Sliding background effect on hover */
+.service-btn:before {
+    position: absolute;
+    content: "";
+    width: 0;
+    height: 100%;
+    right: 0;
+    top: 0;
+    background: #fff;
+    z-index: -1;
+    border-radius: 5px;
+    transition: 0.5s;
 }
 
 /* Hover Effect */
 .service-btn:hover {
-    background-color: #0848a8;
-    border-color: #0848a8;
-    color: #ffffff;
-    box-shadow: 0 4px 15px rgba(12, 89, 219, 0.3);
+    color: #0c5adb !important;
+}
+
+.service-btn:hover:before {
+    width: 100%;
+    left: 0;
 }
 
 /* Arrow Icon Animation */
 .service-btn i {
     margin-left: 8px;
-    transition: transform 0.3s ease;
+    transition: 0.5s;
+    color: #fff;
 }
 
 .service-btn:hover i {
-    transform: translateX(5px); /* Moves arrow slightly to the right */
+    transform: translateX(5px);
+    color: #0c5adb;
 }

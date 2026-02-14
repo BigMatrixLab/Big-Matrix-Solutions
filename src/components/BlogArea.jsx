@@ -1,10 +1,11 @@
 import React from 'react';
 import { Link } from 'react-router-dom';
 import blogsData from '../data/blogs.json';
+import BlogCard from './BlogCard';
 
 const BlogArea = () => {
     return (
-        <div className="blog-area style-one home-two">
+        <div className="blog-grid-area" style={{ background: '#F3F8FC', padding: '117px 0 105px' }}>
             <div className="container">
                 <div className="row">
                     <div className="col-lg-12 text-center">
@@ -17,22 +18,7 @@ const BlogArea = () => {
                 <div className="row">
                     {blogsData.slice(0, 3).map((post) => (
                         <div className="col-lg-4 col-md-6 mb-4 d-flex" key={post.id}>
-                            <div className="single-blog-box">
-                                <div className="blog-thumb">
-                                    <img src={post.image} alt={post.title} />
-                                </div>
-                                <div className="blog-content">
-                                    <div className="blog-meta">
-                                        <span><i className="bi bi-calendar-check-fill"></i> {post.date}</span>
-                                    </div>
-                                    <Link to={`/blog/${post.slug}`}>{post.title}</Link>
-                                </div>
-                                <div className="blog-button">
-                                    <div className="blog-button">
-                                        <Link to={`/blog/${post.slug}`}>Read More<i className="bi bi-arrow-right-short"></i></Link>
-                                    </div>
-                                </div>
-                            </div>
+                            <BlogCard post={post} />
                         </div>
                     ))}
                 </div>

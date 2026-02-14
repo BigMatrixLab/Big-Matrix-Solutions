@@ -15,17 +15,21 @@ const TeamCard = ({ member, activeTeamId, onToggleSocial }) => {
                 </div>
             </div>
             <div className="team-socila-icon-box">
-                <div className="team-share" onClick={() => onToggleSocial(member.id)}>
+                <div className="team-share">
                     <div className="team-share-icon">
                         <span><i className="bi bi-share"></i></span>
                     </div>
                 </div>
-                <div className={`team-social-icon ${activeTeamId === member.id ? 'active' : ''}`}>
+                <div className="team-social-icon">
                     <ul>
                         <li><Link to="#"><i className="fab fa-facebook-f"></i></Link></li>
                         <li><Link to="#"><i className="fab fa-twitter"></i></Link></li>
                         <li><Link to="#"><i className="fab fa-instagram"></i></Link></li>
                         <li><Link to="#"><i className="fa-brands fa-pinterest-p"></i></Link></li>
+                        <li><Link to="#"><i className="fab fa-linkedin-in"></i></Link></li>
+                        <li><Link to="#"><i className="fab fa-github"></i></Link></li>
+                        <li><Link to="#"><i className="fas fa-graduation-cap"></i></Link></li>
+                        <li><Link to="#"><i className="fas fa-globe"></i></Link></li>
                     </ul>
                 </div>
             </div>
