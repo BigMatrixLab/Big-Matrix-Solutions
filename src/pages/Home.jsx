@@ -20,9 +20,6 @@ const Home = () => {
             <TeamArea />
             <CounterArea />
             <PortfolioArea />
-            {/* <TestimonialArea />
-            <ContactInfoArea />
-            <PricingArea /> */}
             <BlogArea />
         </>
     );

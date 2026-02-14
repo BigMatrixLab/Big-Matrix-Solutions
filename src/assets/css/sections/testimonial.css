@@ -2,12 +2,7 @@
    <!--Toptech Testimonial Area Css Style One-->
 =========================================================---*/
 .style-one.testimonial-area {
-    background: url(/assets/images/home-1/testi-bg.jpg);
-    background-repeat: no-repeat;
-    background-size: cover;
-    background-position: center center;
     padding: 110px 0 20px;
-    /* Reduced bottom padding */
 }
 
 .style-one.testimonial-area .section-title.center {

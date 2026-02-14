@@ -10,21 +10,8 @@ const AboutOne = () => {
         <>
             <Breadcrumb pageTitle="About Us" />
 
-            {/* Images Area */}
-            <div className="images-area inner-style-one">
-                <div className="container">
-                    <div className="row">
-                        <div className="col-lg-12">
-                            <div className="images-thumb">
-                                <img src="/assets/images/about-inner/about-images.jpg" alt="" />
-                            </div>
-                        </div>
-                    </div>
-                </div>
-            </div>
-
             {/* Feature Area Style Three */}
-            <div className="feature-area style-three">
+            <div className="feature-area style-three" style={{paddingTop: '80px'}}>
                 <div className="container">
                     <div className="row margin-top">
                         <div className="col-lg-3 col-md-6">
@@ -75,8 +62,7 @@ const AboutOne = () => {
                 </div>
             </div>
 
-            <AboutArea />
-
+           
             {/* Mission Vison Area */}
             <div className="mission-area inner-style">
                 <div className="container">

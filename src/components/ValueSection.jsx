@@ -14,14 +14,14 @@ const ValueSection = ({ icon, image, title, description, items, reversed = false
                 <div className={`mission-box ${reversed ? '' : 'two'} h-100`}>
                     <div className="mission-content">
                         <h4>{title}</h4>
-                        {description && <p className="mission-description">{description}</p>}
+                        {description && <p className="mission-description" style={{textAlign: 'justify'}}>{description}</p>}
                         {items && items.map((item, index) => (
                             <div className="single-icon-box" key={index}>
                                 <div className="single-icon-thumb">
                                     <i className="bi bi-check"></i>
                                 </div>
                                 <div className="sigle-icon-desc">
-                                    <p>{item}</p>
+                                    <p style={{textAlign: 'justify'}}>{item}</p>
                                 </div>
                             </div>
                         ))}
