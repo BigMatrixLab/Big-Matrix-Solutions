@@ -23,7 +23,17 @@ function App() {
   useEffect(() => {
     // Handle Loader - show for at least 1 second
     const timer = setTimeout(() => {
-      document.body.classList.add('loaded');
+      const preloader = document.getElementById('preloader');
+      if (preloader) {
+        // Add the loaded class to trigger CSS transition
+        document.documentElement.classList.add('loaded');
+        document.body.classList.add('loaded');
+        
+        // Remove from DOM entirely after transition finishes
+        setTimeout(() => {
+          preloader.style.display = 'none';
+        }, 600);
+      }
     }, 1000);
 
     return () => clearTimeout(timer);
@@ -31,12 +41,7 @@ function App() {
 
   return (
     <>
-     
-      <div id="preloader">
-        <div className="loader-content">
-          <img src="/assets/images/Loading_Animation.gif" alt="Loading..." />
-        </div>
-      </div>
+      {/* Preloader is now in index.html for instant rendering */}
 
       <ScrollToTopOnNavigation />
       
