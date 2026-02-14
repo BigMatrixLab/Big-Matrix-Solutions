@@ -26,7 +26,6 @@ function App() {
       const preloader = document.getElementById('preloader');
       if (preloader) {
         // Add the loaded class to trigger CSS transition
-        document.documentElement.classList.add('loaded');
         document.body.classList.add('loaded');
         
         // Remove from DOM entirely after transition finishes

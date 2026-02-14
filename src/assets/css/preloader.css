@@ -8,11 +8,9 @@ html, body {
   background-color: #0d1117;
 }
 
-/* Prevent scrolling while loading */
-html:not(.loaded),
+/* Prevent scrolling only while loading */
 body:not(.loaded) {
   overflow: hidden !important;
-  height: 100vh;
 }
 
 /* The Full-Screen Overlay */
@@ -50,11 +48,4 @@ body:not(.loaded) {
 body.loaded #preloader {
   opacity: 0;
   visibility: hidden;
-}
-
-/* Restore scrolling after loading */
-html.loaded,
-body.loaded {
-  overflow: auto !important;
-  height: auto;
 }
