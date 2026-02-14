@@ -189,6 +189,7 @@ body.loaded .loader-wrapper {
   gap: 60px;
   animation: scrollPartners 30s linear infinite;
   width: fit-content;
+  padding-top: 10px;
 }
 
 .partners-carousel:hover {
