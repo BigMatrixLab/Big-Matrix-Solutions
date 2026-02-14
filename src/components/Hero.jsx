@@ -1,62 +1,14 @@
-import React, { useEffect, useRef, useState } from 'react';
+import React from 'react';
 import { Link } from 'react-router-dom';
-import { color } from 'three/tsl';
+import { DotLottiePlayer } from '@dotlottie/react-player';
+import '@dotlottie/react-player/dist/index.css';
 
 const Hero = () => {
-    const vantaRef = useRef(null);
-    const vantaEffect = useRef(null);
-    const [vantaLoaded, setVantaLoaded] = useState(false);
-
-    useEffect(() => {
-        // Dynamically import Vanta and Three.js
-        const loadVanta = async () => {
-            try {
-                const THREE = await import('three');
-                const FOG = await import('vanta/dist/vanta.fog.min');
-                
-                if (!vantaEffect.current && vantaRef.current) {
-                    vantaEffect.current = FOG.default({
-                        el: vantaRef.current,
-                        THREE: THREE,
-                        mouseControls: true,
-                        touchControls: true,
-                        gyroControls: false,
-                        minHeight: 200.00,
-                        minWidth: 200.00,
-                        highlightColor: 0x46fc,
-                        midtoneColor: 0xd9271a,
-                        lowlightColor: 0x1e00ff,
-                        baseColor: 0x41698c,
-                        blurFactor: 0.51,
-                        speed: 1.50,
-                        zoom: 0.90
-                    });
-                    setVantaLoaded(true);
-                }
-            } catch (error) {
-                console.error('Vanta initialization error:', error);
-            }
-        };
-
-        loadVanta();
-
-        // Cleanup function
-        return () => {
-            if (vantaEffect.current) {
-                try {
-                    vantaEffect.current.destroy();
-                } catch (error) {
-                    console.error('Vanta cleanup error:', error);
-                }
-            }
-        };
-    }, []);
-
     return (
-        <div ref={vantaRef} className="hero-area style-two d-flex align-items-center">
+        <div className="hero-area style-two d-flex align-items-center" style={{ backgroundImage: `url(/assets/images/Hero_BG.png)` }}>
             <div className="container">
                 <div className="row align-items-center">
-                    <div className="col-lg-8">
+                    <div className="col-lg-7">
                         <div className="hero-content">
                             <h4 style={{ color: '#ED352D', fontWeight: 'bold' }}>Big-Matrix Solutions</h4>
                             <h1> Designing the Future of Intelligent Infrastructure  </h1>
@@ -68,7 +20,14 @@ const Hero = () => {
                             <Link className="button-two" to="/about">Learn More<i className="bi bi-arrow-right"></i></Link>
                         </div>
                     </div>
-              
+                     <div className="col-lg-5 d-flex justify-content-center">
+                        <DotLottiePlayer
+                            src="/assets/images/hero-anim.lottie"
+                            autoplay
+                            loop
+                            style={{ width: 'auto', height: '1000px', scale: '1.3', transformOrigin: 'right center' }}
+                        />
+                    </div>
                 </div>
             </div>
         </div>

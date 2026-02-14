@@ -28,7 +28,7 @@ const AboutOne = () => {
                 <div className="container">
                     <div className="row margin-top">
                         <div className="col-lg-3 col-md-6">
-                            <div className="single-feature-box">
+                            <div className="single-feature-box h-100">
                                 <div className="feature-icon">
                                     <img src="/assets/images/home-3/feature-icon-1.png" alt="" />
                                 </div>
@@ -39,7 +39,7 @@ const AboutOne = () => {
                             </div>
                         </div>
                         <div className="col-lg-3 col-md-6">
-                            <div className="single-feature-box">
+                            <div className="single-feature-box h-100">
                                 <div className="feature-icon">
                                     <img src="/assets/images/home-3/feature-icon-2.png" alt="" />
                                 </div>
@@ -50,7 +50,7 @@ const AboutOne = () => {
                             </div>
                         </div>
                         <div className="col-lg-3 col-md-6">
-                            <div className="single-feature-box">
+                            <div className="single-feature-box h-100">
                                 <div className="feature-icon">
                                     <img src="/assets/images/home-3/feature-icon-3.png" alt="" />
                                 </div>
@@ -61,7 +61,7 @@ const AboutOne = () => {
                             </div>
                         </div>
                         <div className="col-lg-3 col-md-6">
-                            <div className="single-feature-box">
+                            <div className="single-feature-box h-100">
                                 <div className="feature-icon">
                                     <img src="/assets/images/home-3/feature-icon-4.png" alt="" />
                                 </div>
@@ -82,8 +82,8 @@ const AboutOne = () => {
                 <div className="container">
                     {/* Vision */}
                     <ValueSection
-                        icon="bi bi-eye"
-                        title="Vision Statement"
+                        image="/assets/images/Vision.jpg"
+                        title="Our Vision"
                         description="To architect the intelligent infrastructure of the future."
                         items={[
                             "Integrated Ecosystems replace fragmented software, creating seamless connectivity across healthcare, pharma, and industry.",
@@ -96,8 +96,8 @@ const AboutOne = () => {
 
                     {/* Mission */}
                     <ValueSection
-                        icon="bi bi-bullseye"
-                        title="Mission Statement"
+                        image="/assets/images/Mission.jpeg"
+                        title="Our Mission"
                         description="To engineer advanced AI and big data platforms that transform how the world operates."
                         items={[
                             "Developing Clinical Excellence: Building AI-powered diagnostic tools that enhance accuracy in radiology, pathology, and general medicine.",
@@ -109,10 +109,10 @@ const AboutOne = () => {
                         reversed={false}
                     />
 
-                    {/* Core Values */}
+                    
                     <ValueSection
-                        icon="bi bi-lightbulb"
-                        title="Core Values (The Big-Matrix DNA)"
+                        image="/assets/images/Core_Values.jpg"
+                        title="Core Values"
                         items={[
                             "Systemic Innovation: We don't just build apps; we build interconnected ecosystems.",
                             "Scientific Integrity: Every AI model is backed by rigorous research and mathematical validation.",

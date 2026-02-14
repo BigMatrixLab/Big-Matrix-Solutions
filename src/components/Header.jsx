@@ -39,7 +39,7 @@ const Header = () => {
     return (
         <div className={getHeaderClasses()} id="sticky-header">
             <div className="container">
-                <div className="row align-items-center">
+                <div className="row align-items-center justify-content-end">
                     <div className="col-lg-3">
                         <div className="header-logo">
                             <Link to="/">
@@ -48,7 +48,7 @@ const Header = () => {
                         </div>
                     </div>
                     <div className="col-lg-9">
-                        <div className="header-menu">
+                        <div className="header-menu d-flex justify-content-end w-100">
                             <ul>
                                 <li><Link to="/">Home</Link></li>
                                 <li><Link to="/about">About</Link></li>

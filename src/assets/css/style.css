@@ -70,7 +70,7 @@ Tags: consulting, finance, corporate, business, consultant, multipurpose, techno
 
 .header-menu ul li {
     display: inline-block;
-    margin-right: 35px;
+    margin-left: 35px;
 }
 
 .header-menu ul li a {
@@ -1472,7 +1472,9 @@ Tags: consulting, finance, corporate, business, consultant, multipurpose, techno
     right: 0;
     bottom: 0;
     /* Reduced overlay for better Vanta.js visibility */
-    background: rgba(0, 0, 0, 0.2);
+    background: rgba(0, 0, 0, 0.5);
+    backdrop-filter: blur(10px);
+    -webkit-backdrop-filter: blur(10px);
     z-index: 1;
 }
 
@@ -5635,8 +5637,15 @@ button.icons {
     position: relative;
     margin-bottom: 21px;
     height: 100%;
+    border: 1px solid #e2e8f0;
+    transition: all 0.3s ease-in-out;
     display: flex;
     flex-direction: column;
+}
+
+.blog-grid-area .single-blog-box:hover {
+    box-shadow: 0 10px 40px rgba(0,0,0,0.1);
+    transform: translateY(-5px);
 }
 
 .blog-grid-area .blog-thumb {
@@ -6060,7 +6069,7 @@ button.icons {
 }
 
 .inner-style .single-icon-box {
-    margin-bottom: 25px;
+    margin-bottom: 0;
 }
 
 .inner-style .single-icon-thumb i {
