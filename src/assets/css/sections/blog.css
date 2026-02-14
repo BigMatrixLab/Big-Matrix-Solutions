@@ -83,12 +83,12 @@
     color: #0c5adb;
 }
 
-.style-one .blog-buttom {
+.style-one .blog-button {
     display: flex;
     justify-content: space-between;
     align-items: center;
     border-top: 1px solid rgba(29, 33, 36, 0.12);
-    padding-top: 20px;
+   
 }
 
 .style-one .blog-author span {
@@ -130,4 +130,44 @@
 
 .style-one .blog-button a:hover i {
     color: #0c5adb !important;
+}
+
+/* Container to help with alignment */
+.service-btn-wrapper {
+    margin-top: auto; /* Keeps it at the bottom of your card */
+    padding-top: 10px;
+}
+
+/* The Button itself */
+.service-btn {
+    display: inline-flex;
+    align-items: center;
+    justify-content: center;
+    background-color: #0C59DB; /* Your brand blue */
+    color: #ffffff !important; /* Ensure text is white */
+    padding: 12px 25px;
+    font-size: 15px;
+    font-weight: 600;
+    border-radius: 5px;
+    text-decoration: none;
+    transition: all 0.3s ease-in-out;
+    border: 1px solid #0C59DB;
+}
+
+/* Hover Effect */
+.service-btn:hover {
+    background-color: #0848a8;
+    border-color: #0848a8;
+    color: #ffffff;
+    box-shadow: 0 4px 15px rgba(12, 89, 219, 0.3);
+}
+
+/* Arrow Icon Animation */
+.service-btn i {
+    margin-left: 8px;
+    transition: transform 0.3s ease;
+}
+
+.service-btn:hover i {
+    transform: translateX(5px); /* Moves arrow slightly to the right */
 }

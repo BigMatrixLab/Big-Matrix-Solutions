@@ -12,18 +12,15 @@ const ServiceCard = ({ service }) => {
                     <Link to={`/service/${service.slug}`}>{service.title}</Link>
                     <p>{service.desc}</p>
                 </div>
-                <div className="blog-button">
-                    <Link to={`/service/${service.slug}`}>
-                        Learn More
-                        <i className="bi bi-arrow-right"></i>
-                    </Link>
-                </div>
+                
             </div>
-            <div className="blog-category">
-                <Link to={`/service/${service.slug}`}>
-                    <i className={service.icon}></i>
-                </Link>
-            </div>
+           
+            <div className="service-btn-wrapper">
+    <Link to={`/service/${service.slug}`} className="service-btn">
+        Learn More
+        <i className="bi bi-arrow-right"></i>
+    </Link>
+</div>
         </div>
     );
 };

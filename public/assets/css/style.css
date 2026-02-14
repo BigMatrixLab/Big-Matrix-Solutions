@@ -1344,12 +1344,11 @@ Tags: consulting, finance, corporate, business, consultant, multipurpose, techno
     color: #0c5adb;
 }
 
-.style-one .blog-buttom {
+.style-one .blog-button {
     display: flex;
     justify-content: space-between;
     align-items: center;
-    border-top: 1px solid rgba(29, 33, 36, 0.12);
-    padding-top: 20px;
+   
 }
 
 .style-one .blog-author span {
@@ -1387,6 +1386,7 @@ Tags: consulting, finance, corporate, business, consultant, multipurpose, techno
     top: 2px;
     transition: 0.5s;
     color: #232323;
+
 }
 
 .style-one .blog-button a:hover i {

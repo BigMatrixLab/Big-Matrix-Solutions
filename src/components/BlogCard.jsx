@@ -15,16 +15,17 @@ const BlogCard = ({ post }) => {
                     <Link to={`/blog/${post.slug}`}>{post.title}</Link>
                     <p>{post.desc}</p>
                 </div>
-                <div className="blog-button">
-                    <Link to={`/blog/${post.slug}`}>
-                        Learn More
-                        <i className="bi bi-arrow-right"></i>
-                    </Link>
-                </div>
+                <div className="service-btn-wrapper">
+    <Link to={`/blog/${post.slug}`} className="service-btn">
+        Learn More
+        <i className="bi bi-arrow-right"></i>
+    </Link>
+</div>
+
+
+                            
             </div>
-            <div className="blog-category">
-                <Link to={`/blog/${post.slug}`}>{post.category}</Link>
-            </div>
+            
         </div>
     );
 };
