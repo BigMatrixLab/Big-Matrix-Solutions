@@ -35,7 +35,8 @@ const TestimonialArea = () => {
                 <div className="row">
                     <div className="col-lg-12 text-center">
                         <div className="section-title center style-two">
-                            <h4>Testimonial</h4>
+                            
+                             <h2 style={{color: "#0C5ADB", paddingBottom:"10px"}}>Testimonial</h2>
                             <h1>Customer’s Awesome Feedback</h1>
                             <h1>About Our Services</h1>
                         </div>

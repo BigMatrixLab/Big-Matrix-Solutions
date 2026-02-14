@@ -39,7 +39,7 @@ const PortfolioArea = () => {
                         <div key={item.id} className={`col-lg-4 col-md-6 grid-item d-flex ${item.category.toLowerCase().replace(/\s+/g, '-')}`}>
                             <div className="single-portfolio-box w-100 mb-5">
                                 <div className="portfolio-thumb">
-                                    <img src={item.image} alt={item.title} />
+                                    <img src={item.image} alt={item.title} style={{ boxShadow: '0 2px 8px rgba(0, 0, 0, 0.08)' }} />
                                 </div>
                                 <div className="portfolio-content">
                                     <div className="portfolio-number">

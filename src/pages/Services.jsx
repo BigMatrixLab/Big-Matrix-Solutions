@@ -20,9 +20,9 @@ const Services = () => {
                             </div>
                         </div>
                     </div>
-                    <div className="row">
+                    <div className="row justify-content-center">
                         {servicesData.map((service) => (
-                            <div className="col-lg-3 col-md-6" key={service.id}>
+                            <div className="col-lg-3 col-md-6 col-sm-6" key={service.id}>
                                 <div className="single-service-box">
                                     <div className="service-icon">
                                         <i className={service.icon}></i>
@@ -30,7 +30,10 @@ const Services = () => {
                                     <div className="service-content">
                                         <h4>{service.title}</h4>
                                         <p>{service.desc}</p>
-                                        <Link to={`/service/${service.slug}`}>Learn More <i className="bi bi-arrow-right"></i></Link>
+                                        <Link to={`/service/${service.slug}`}>
+                                            Learn More 
+                                            <i className="bi bi-arrow-right"></i>
+                                        </Link>
                                     </div>
                                 </div>
                             </div>

@@ -22,7 +22,7 @@ const TeamArea = () => {
                 <div className="row">
                     <div className="col-lg-7">
                         <div className="section-title left style-two">
-                            <h4>Dedicated Team</h4>
+                             <h2 style={{color: "#0C5ADB", paddingBottom:"10px"}}>Dedicated Team</h2>
                             <h1>Meet Our Dedicated Member</h1>
                             <h1>For Any Enquery</h1>
                         </div>
