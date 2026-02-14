@@ -118,7 +118,7 @@ const ServiceDetails = () => {
                                         </div>
                                         <div className="widget-category">
                                             <ul>
-                                                {servicesData.slice(0, 5).map(s => (
+                                                {servicesData.map(s => (
                                                     <li key={s.id}>
                                                         <Link to={`/service/${s.slug}`}>
                                                             <img src="/assets/images/service-inner/category-icon.png" alt="" />
@@ -135,7 +135,7 @@ const ServiceDetails = () => {
                                             <h4>Downloads</h4>
                                         </div>
                                         <div className="widget-sidber-download-button">
-                                            <a href="#"><i className="bi bi-file-earmark-pdf"></i>Service Report<span><i className="bi bi-download"></i></span></a>
+                                            {/* <a href="#"><i className="bi bi-file-earmark-pdf"></i>Service Report<span><i className="bi bi-download"></i></span></a> */}
                                             <a className="active" href="#"><i className="bi bi-file-earmark-pdf"></i>Download Lists<span><i className="bi bi-download"></i></span></a>
                                         </div>
                                     </div>
@@ -144,8 +144,8 @@ const ServiceDetails = () => {
                                             <img src="/assets/images/inner-images/sidber-cont-icon.png" alt="" />
                                         </div>
                                         <p className="widget-sidber-contact-text">Call Us Anytime</p>
-                                        <h3 className="widget-sidber-contact-number">+123 (4567) 890</h3>
-                                        <span className="widget-sidber-contact-gmail"><i className="bi bi-envelope-fill"></i> example@gmail.com</span>
+                                        <h3 className="widget-sidber-contact-number">+880 2 55668200 (6212)</h3>
+                                        <span className="widget-sidber-contact-gmail"><i className="bi bi-envelope-fill"></i> hi@big-matrix.com</span>
                                         <div className="widget-sidber-contact-btn">
                                             <Link to="/contact">Contact Us <i className="bi bi-arrow-right"></i></Link>
                                         </div>

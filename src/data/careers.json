@@ -7,5 +7,14 @@
         "salary": "Negotiable",
         "workTime": "10am to 5pm",
         "desc": "We are looking for a passionate Junior Software Engineer to join our team in Dhaka. This is a great opportunity to grow your skills and work on exciting projects."
+    },
+    {
+        "id": 2,
+        "title": "Senior Software Engineer",
+        "location": "Dhaka Bangladesh",
+        "type": "Full Time",
+        "salary": "Negotiable",
+        "workTime": "10am to 5pm",
+        "desc": "We are looking for a passionate Senior Software Engineer to join our team in Dhaka. This is a great opportunity to lead projects and mentor junior developers."
     }
 ]

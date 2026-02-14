@@ -18,18 +18,19 @@ const Careers = () => {
                         
                     </div>
 
-                    <div className="row mt-5">
+                    <div className="row">
                         <div className="col-lg-12">
                             <div className="job-list-wrapper">
                                 {jobs.map((job, index) => (
                                     <div className="job-row-item" key={index}>
-                                        <div className="row align-items-center">
+                                        <div className="row align-items-start">
                                             <div className="col-lg-3">
+                                                <h4 className="job-title">{job.title}</h4>
                                                 <div className="job-meta">
                                                     <span className="job-badge">{job.type}</span>
                                                     <span className="job-location">{job.location}</span>
                                                 </div>
-                                                <h4 className="job-title">{job.title}</h4>
+                                                
                                             </div>
                                             <div className="col-lg-6">
                                                 <p className="job-description">{job.desc}</p>

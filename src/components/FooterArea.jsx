@@ -58,9 +58,9 @@ const FooterArea = () => {
                                 <h4>Contact Us</h4>
                             </div>
                             <div className="footer-contact-info">
-                                <p><i className="bi bi-envelope"></i> bigmatrixlab@gmail.com</p>
-                                <p><i className="bi bi-telephone"></i> +880-2-55668200 (Ext: 6212)</p>
-                                <p><i className="bi bi-geo-alt"></i> SAC-1025, North South University<br />Bashundhara, Dhaka-1229, Bangladesh</p>
+                                <p><i className="bi bi-envelope"></i> hi@big-matrix.com</p>
+                                <p><i className="bi bi-telephone"></i> +880 2 55668200 (6212)</p>
+                                <p><i className="bi bi-geo-alt"></i> Bashundhara, Dhaka-1229, Bangladesh</p>
                             </div>
                         </div>
                     </div>

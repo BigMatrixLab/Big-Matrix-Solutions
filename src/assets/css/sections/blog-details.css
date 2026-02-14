@@ -382,13 +382,13 @@
 .widget-categories li a {
     display: flex;
     align-items: center;
-    justify-content: space-between;
     padding: 12px 15px;
     background: #f8faff;
     border-radius: 8px;
     color: #1d2124;
     font-weight: 600;
     transition: all 0.3s ease;
+    text-align: left;
 }
 
 .widget-categories li a:hover {
@@ -398,11 +398,13 @@
 
 .widget-categories li a i {
     margin-right: 10px;
+    flex-shrink: 0;
 }
 
 .widget-categories li a span {
     color: #6c757d;
     font-size: 14px;
+    margin-left: auto;
 }
 
 .widget-categories li a:hover span {

@@ -28,13 +28,13 @@ const TeamDetails = () => {
             {/* Team Details Area */}
             <div className="team-details-area">
                 <div className="container">
-                    <div className="row align-items-center">
-                        <div className="col-lg-6">
+                    <div className="row align-items-start" style={{ gap: 0 }}>
+                        <div className="col-lg-5" style={{ paddingLeft: 10, paddingRight:20 }}>
                             <div className="team-thumb">
                                 <img src={member.image} alt={member.name} />
                             </div>
                         </div>
-                        <div className="col-lg-6">
+                        <div className="col-lg-7" style={{ paddingLeft: 20 }}>
                             <div className="team-details-right">
                                 <div className="team-details-content">
                                     <div className="team-member-title">
@@ -43,8 +43,8 @@ const TeamDetails = () => {
                                     </div>
                                     <p className="desc">{member.desc}</p>
                                 </div>
-                                <div className="row add-bg">
-                                    <div className="col-lg-6 col-md-6">
+                                <div className="d-flex flex-wrap gap-3">
+                                    <div>
                                         <div className="contact-info-box">
                                             <div className="contact-info-icon">
                                                 <i className="fa-solid fa-phone"></i>
@@ -55,7 +55,7 @@ const TeamDetails = () => {
                                             </div>
                                         </div>
                                     </div>
-                                    <div className="col-lg-6 col-md-6">
+                                    <div>
                                         <div className="contact-info-box">
                                             <div className="contact-info-icon">
                                                 <i className="fa-regular fa-envelope"></i>
@@ -75,15 +75,6 @@ const TeamDetails = () => {
                                         <li><a href="#"><i className="fa-brands fa-linkedin-in"></i></a></li>
                                         <li><a href="#"><i className="fa-brands fa-pinterest-p"></i></a></li>
                                     </ul>
-                                </div>
-                                <div className="team-details-location-box">
-                                    <div className="contact-info-icon">
-                                        <i className="bi bi-geo-alt-fill"></i>
-                                    </div>
-                                    <div className="contact-info-content">
-                                        <h4>Location</h4>
-                                        <p>{member.location}</p>
-                                    </div>
                                 </div>
                             </div>
                         </div>

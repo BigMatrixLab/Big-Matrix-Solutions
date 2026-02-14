@@ -111,12 +111,8 @@ const ProjectDetails = () => {
                                             <img src="/assets/images/inner-images/sidber-cont-icon.png" alt="" />
                                         </div>
                                         <p className="widget-sidber-contact-text">Call Us Anytime</p>
-                                        <h3 className="widget-sidber-contact-number">
-                                            {project.contactInfo?.phone || "+880 1234-567890"}
-                                        </h3>
-                                        <span className="widget-sidber-contact-gmail">
-                                            <i className="bi bi-envelope-fill"></i> {project.contactInfo?.email || "info@bigmatrix.com"}
-                                        </span>
+                                        <h3 className="widget-sidber-contact-number">+880 2 55668200 (6212)</h3>
+                                        <span className="widget-sidber-contact-gmail"><i className="bi bi-envelope-fill"></i> hi@big-matrix.com</span>
                                         <div className="widget-sidber-contact-btn">
                                             <Link to="/contact">Contact Us <i className="bi bi-arrow-right"></i></Link>
                                         </div>
