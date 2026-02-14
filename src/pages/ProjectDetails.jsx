@@ -44,33 +44,39 @@ const ProjectDetails = () => {
                                         <p className="project-details-desc">{project.desc}</p>
                                         <p className="project-details-desc">{project.longDesc}</p>
 
-                                        <h3>Challenge and solution</h3>
-                                        <p className="project-details-desc">Innovate wireless e-markets for inexpensive e-markets. Monotonectally grow progressive processes before seamless ideas facilitate an expanded array of scenarios rather than backend users.</p>
+                                        {/* Challenge Section - Optional */}
+                                        {project.challengeSection && (
+                                            <>
+                                                <h3>{project.challengeSection.heading}</h3>
+                                                <p className="project-details-desc">{project.challengeSection.content}</p>
+                                            </>
+                                        )}
 
-                                        <div className="row align-items-center">
-                                            <div className="col-lg-6">
-                                                <div className="project-details-item-images">
-                                                    <img src="/assets/images/inner-images/project-1.jpg" alt="" />
+                                        {/* Benefits List - Optional */}
+                                        {project.benefitsList && project.benefitsList.length > 0 && (
+                                            <div className="row">
+                                                <div className="col-lg-12">
+                                                    <div className="project-details-list-item">
+                                                        <h4>Project Benefits</h4>
+                                                        <ul>
+                                                            {project.benefitsList.map((benefit, index) => (
+                                                                <li key={index}>
+                                                                    <i className="bi bi-check-circle-fill"></i>{benefit}
+                                                                </li>
+                                                            ))}
+                                                        </ul>
+                                                    </div>
                                                 </div>
                                             </div>
-                                            <div className="col-lg-6">
-                                                <div className="project-details-list-item">
-                                                    <h4>Project Benefits</h4>
-                                                    <ul>
-                                                        <li><i className="bi bi-check-circle-fill"></i>Innovate wireless market</li>
-                                                        <li><i className="bi bi-check-circle-fill"></i>Productivate resource sucking</li>
-                                                        <li><i className="bi bi-check-circle-fill"></i>Proactively unleash oriented communities</li>
-                                                        <li><i className="bi bi-check-circle-fill"></i>Credibly develop progressive archi</li>
-                                                        <li><i className="bi bi-check-circle-fill"></i>Phosfluorescently to customer</li>
-                                                    </ul>
-                                                </div>
-                                            </div>
-                                        </div>
-                                        <div className="project-details-text">
-                                            <p>Competently architect intermandated deliverables client niches continually underwhelm</p>
-                                        </div>
+                                        )}
 
-                                        <p className="project-details-desc">Appropriately communicate economically sound e-commerce after enterprise services. Dramatically target cross-media solutions and error-free platforms.</p>
+                                        {/* Additional Sections - Optional */}
+                                        {project.additionalSections && project.additionalSections.map((section, index) => (
+                                            <div key={index}>
+                                                <h3>{section.heading}</h3>
+                                                <p className="project-details-desc">{section.content}</p>
+                                            </div>
+                                        ))}
                                     </div>
                                 </div>
                             </div>
@@ -105,8 +111,12 @@ const ProjectDetails = () => {
                                             <img src="/assets/images/inner-images/sidber-cont-icon.png" alt="" />
                                         </div>
                                         <p className="widget-sidber-contact-text">Call Us Anytime</p>
-                                        <h3 className="widget-sidber-contact-number">+123 (4567) 890</h3>
-                                        <span className="widget-sidber-contact-gmail"><i className="bi bi-envelope-fill"></i> info@bigmatrix.com</span>
+                                        <h3 className="widget-sidber-contact-number">
+                                            {project.contactInfo?.phone || "+880 1234-567890"}
+                                        </h3>
+                                        <span className="widget-sidber-contact-gmail">
+                                            <i className="bi bi-envelope-fill"></i> {project.contactInfo?.email || "info@bigmatrix.com"}
+                                        </span>
                                         <div className="widget-sidber-contact-btn">
                                             <Link to="/contact">Contact Us <i className="bi bi-arrow-right"></i></Link>
                                         </div>

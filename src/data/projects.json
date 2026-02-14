@@ -11,7 +11,27 @@
         "date": "2022",
         "location": "North South University, Dhaka",
         "duration": "1 year (Started from April 2022)",
-        "benefits": "Enhanced accuracy and efficiency in detecting breast abnormalities, early identification of potential cancerous lesions, improved clinical decision-making, and enhanced healthcare delivery."
+        "challengeSection": {
+            "heading": "Challenge and Solution",
+            "content": "The primary challenge in breast cancer diagnosis lies in accurately identifying and segmenting subtle abnormalities in mammographic images while minimizing false positives. Our solution leverages multimodal AI techniques combining advanced deep learning architectures with medical domain knowledge to achieve precise segmentation and generate comprehensive diagnostic reports that aid radiologists in making informed decisions."
+        },
+        "benefitsList": [
+            "Enhanced accuracy in detecting breast abnormalities using state-of-the-art AI models",
+            "Early identification of potential cancerous lesions through precision segmentation",
+            "Automated comprehensive report generation for medical professionals",
+            "Improved clinical decision-making with actionable diagnostic insights",
+            "Reduced diagnostic time while maintaining high accuracy standards"
+        ],
+        "additionalSections": [
+            {
+                "heading": "Technical Innovation",
+                "content": "The system integrates cutting-edge computer vision techniques with medical imaging expertise to deliver robust and reliable diagnostic assistance."
+            }
+        ],
+        "contactInfo": {
+            "phone": "+880 1234-567890",
+            "email": "research@bigmatrix.com"
+        }
     },
     
     
@@ -27,7 +47,21 @@
         "date": "2024-Present",
         "location": "Online Platform",
         "duration": "Ongoing",
-        "benefits": "Transformed careers for thousands of students, 90% course completion rate, comprehensive research publication support, lifetime access to cutting-edge medical research education, and professional certification."
+        "challengeSection": {
+            "heading": "Challenge and Solution",
+            "content": "Medical research education traditionally requires expensive institutional access and lacks practical, hands-on guidance from data preprocessing to publication. BM-Academy solves this by providing comprehensive online courses with lifetime access, combining theoretical knowledge with practical implementation guidance, and offering continuous support throughout the entire research journey."
+        },
+        "benefitsList": [
+            "Expert-led courses covering the complete research lifecycle",
+            "Hands-on training in deep learning and medical data analysis",
+            "LaTeX-based scientific writing and figure preparation skills",
+            "Comprehensive journal selection and submission guidance",
+            "90% course completion rate with professional certification"
+        ],
+        "contactInfo": {
+            "phone": "+880 1234-567890",
+            "email": "academy@bigmatrix.com"
+        }
     },
     {
         "id": 5,
@@ -41,6 +75,20 @@
         "date": "2023-Present",
         "location": "Internal Platform",
         "duration": "Ongoing",
-        "benefits": "Streamlined project coordination across multiple concurrent initiatives, improved team collaboration and communication, enhanced visibility into project progress and resource allocation, reduced project management overhead, and increased overall operational efficiency."
+        "challengeSection": {
+            "heading": "Challenge and Solution",
+            "content": "Managing multiple concurrent projects across distributed teams requires real-time visibility, efficient task allocation, and seamless communication. Our custom-built platform provides a centralized hub for project tracking, offering intuitive dashboards, automated workload distribution, and collaborative tools that have significantly improved our operational efficiency and team coordination."
+        },
+        "benefitsList": [
+            "Real-time project tracking and status monitoring across all initiatives",
+            "Efficient team workload distribution and capacity planning",
+            "Comprehensive task management with priority levels and deadlines",
+            "Intuitive dashboards for quick decision-making",
+            "Enhanced team collaboration and reduced management overhead"
+        ],
+        "contactInfo": {
+            "phone": "+880 1234-567890",
+            "email": "projects@bigmatrix.com"
+        }
     }
 ]

@@ -1,27 +1,9 @@
 import React from 'react';
 import Breadcrumb from '../components/Breadcrumb';
+import careersData from '../data/careers.json';
 
 const Careers = () => {
-    const jobs = [
-        {
-            title: "UI & Web Developer",
-            location: "New York",
-            type: "Full Time",
-            desc: "The process of creating and maintaining websites. HTML, CSS, JavaScript, management systems, creating layouts and designs, simply drag, drop and customize."
-        },
-        {
-            title: "Senior UX Designer",
-            location: "Remote",
-            type: "Part Time",
-            desc: "Focus on user-centric design principles, wireframing, and creating seamless user journeys for complex enterprise applications."
-        },
-        {
-            title: "Project Manager",
-            location: "London, UK",
-            type: "Full Time",
-            desc: "Manage end-to-end product lifecycles, coordinate between stakeholders, and ensure timely delivery of high-quality software projects."
-        },
-    ];
+    const jobs = careersData;
 
     return (
         <>
@@ -57,6 +39,8 @@ const Careers = () => {
                                             </div>
                                             <div className="col-lg-6">
                                                 <p className="job-description">{job.desc}</p>
+                                                {job.salary && <p className="job-info"><strong>Salary:</strong> {job.salary}</p>}
+                                                {job.workTime && <p className="job-info"><strong>Work Time:</strong> {job.workTime}</p>}
                                             </div>
                                             <div className="col-lg-3 text-lg-end">
                                                 <a href="/contact" className="apply-btn">Apply Now</a>
