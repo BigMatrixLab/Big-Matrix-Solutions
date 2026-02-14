@@ -22,7 +22,7 @@ const Services = () => {
                     </div>
                     <div className="row justify-content-center">
                         {servicesData.map((service) => (
-                            <div className="col-lg-3 col-md-6 col-sm-6" key={service.id}>
+                            <div className="col-lg-4 col-md-6 col-sm-1" key={service.id}>
                                 <div className="single-service-box">
                                     <div className="service-icon">
                                         <i className={service.icon}></i>
