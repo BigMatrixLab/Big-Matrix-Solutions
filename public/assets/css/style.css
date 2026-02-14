@@ -1866,8 +1866,9 @@ Tags: consulting, finance, corporate, business, consultant, multipurpose, techno
 }
 
 .style-two .feature-content p {
-    margin: 0 0 20px;
+    margin: 0 0 0;
     transition: 0.5s;
+    flex-grow: 1;
 }
 
 .style-two .single-feature-box:hover .feature-content p {
@@ -1878,7 +1879,7 @@ Tags: consulting, finance, corporate, business, consultant, multipurpose, techno
     padding: 0 0 0 12px;
     color: #fff;
     display: inline-block;
-    margin-top: 0;
+    margin-top: 20px;
     position: relative;
     z-index: 1;
     transition: .5s;
@@ -1895,7 +1896,8 @@ Tags: consulting, finance, corporate, business, consultant, multipurpose, techno
     content: "";
     z-index: 1;
     top: 12px;
-    left: 35px;
+    left: 50%;
+    transform: translateX(-50%);
     width: 30px;
     height: 2px;
     background: #0b59db !important;
@@ -1903,7 +1905,8 @@ Tags: consulting, finance, corporate, business, consultant, multipurpose, techno
 }
 
 .style-two .single-feature-box:hover .feature-content a:after {
-    left: -24px;
+    left: 15px;
+    transform: translateX(0);
     background: #fff !important;
 }
 
