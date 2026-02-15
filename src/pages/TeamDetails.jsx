@@ -1,5 +1,6 @@
 import React from 'react';
 import { useParams, Link } from 'react-router-dom';
+import { Facebook, Twitter, Linkedin } from 'lucide-react';
 import Breadcrumb from '../components/Breadcrumb';
 import teamData from '../data/team.json';
 
@@ -43,8 +44,8 @@ const TeamDetails = () => {
                                     </div>
                                     <p className="desc">{member.desc}</p>
                                 </div>
-                                <div className="d-flex flex-wrap gap-3">
-                                    <div>
+                                <div className="d-flex flex-wrap gap-3 contact-info-wrapper">
+                                    <div className="contact-info-item">
                                         <div className="contact-info-box">
                                             <div className="contact-info-icon">
                                                 <i className="bi bi-telephone-fill"></i>
@@ -55,7 +56,7 @@ const TeamDetails = () => {
                                             </div>
                                         </div>
                                     </div>
-                                    <div>
+                                    <div className="contact-info-item">
                                         <div className="contact-info-box">
                                             <div className="contact-info-icon">
                                                 <i className="bi bi-envelope-fill"></i>
@@ -71,13 +72,13 @@ const TeamDetails = () => {
                                     <ul>
                                         <li>Social Media</li>
                                         {member.social?.facebook && (
-                                            <li><a href={member.social.facebook}><i className="bi bi-facebook" style={{ fontSize: '20px' }}></i></a></li>
+                                            <li><a href={member.social.facebook}><Facebook size={20} /></a></li>
                                         )}
                                         {member.social?.twitter && (
-                                            <li><a href={member.social.twitter}><i className="bi bi-twitter" style={{ fontSize: '20px' }}></i></a></li>
+                                            <li><a href={member.social.twitter}><Twitter size={20} /></a></li>
                                         )}
                                         {member.social?.linkedin && (
-                                            <li><a href={member.social.linkedin}><i className="bi bi-linkedin" style={{ fontSize: '20px' }}></i></a></li>
+                                            <li><a href={member.social.linkedin}><Linkedin size={20} /></a></li>
                                         )}
                                     </ul>
                                 </div>

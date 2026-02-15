@@ -1,5 +1,6 @@
 import React from 'react';
 import { Link } from 'react-router-dom';
+import { Facebook, Github, Globe } from 'lucide-react';
 
 const FooterArea = () => {
     return (
@@ -83,9 +84,9 @@ const FooterArea = () => {
                             <div className="col-lg-6 col-md-6">
                                 <div className="footer-botton-social-icon">
                                     <ul>
-                                        <li><a href="https://www.facebook.com/profile.php?id=61566031568599" target="_blank" rel="noopener noreferrer"><i className="fab fa-facebook-f"></i></a></li>
-                                        <li><a href="https://github.com/BigMatrixLab" target="_blank" rel="noopener noreferrer"><i className="fab fa-github"></i></a></li>
-                                        <li><a href="https://big-matrix.com" target="_blank" rel="noopener noreferrer"><i className="fas fa-globe"></i></a></li>
+                                        <li><a href="https://www.facebook.com/profile.php?id=61566031568599" target="_blank" rel="noopener noreferrer"><Facebook size={18} /></a></li>
+                                        <li><a href="https://github.com/BigMatrixLab" target="_blank" rel="noopener noreferrer"><Github size={18} /></a></li>
+                                        <li><a href="https://big-matrix.com" target="_blank" rel="noopener noreferrer"><Globe size={18} /></a></li>
                                     </ul>
                                 </div>
                             </div>

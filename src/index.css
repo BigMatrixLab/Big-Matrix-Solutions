@@ -295,30 +295,70 @@ body.loaded .loader-wrapper {
   text-decoration: none;
 }
 
-.footer-botton-social-icon ul li a i {
-  font-size: 18px;
-  line-height: 1;
-  vertical-align: middle;
-  font-style: normal;
-  font-variant: normal;
-  text-rendering: auto;
-  -webkit-font-smoothing: antialiased;
-}
-
-/* Ensure Font Awesome icons display */
-.fab, .fas {
-  font-family: 'Font Awesome 6 Free', 'Font Awesome 5 Free', 'Font Awesome 5 Brands', 'FontAwesome';
-  font-weight: 900;
-  display: inline-block;
-}
-
-.fab {
-  font-family: 'Font Awesome 6 Brands', 'Font Awesome 5 Brands', 'FontAwesome';
-  font-weight: 400;
+.footer-botton-social-icon ul li a i,
+.footer-botton-social-icon ul li a svg {
+  display: flex;
+  align-items: center;
+  justify-content: center;
 }
 
 .footer-botton-social-icon ul li a:hover {
   background: #004CD7;
   color: #fff;
   transform: translateY(-3px);
+}
+
+/* Team Details Social Icons - Same styling as footer */
+.team-details-social-icon ul li {
+  display: inline-block;
+}
+
+.team-details-social-icon ul li a {
+  background: #354662;
+  width: 38px;
+  height: 38px;
+  border-radius: 50%;
+  color: #fff;
+  margin-left: 7px;
+  transition: 0.5s;
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+  text-decoration: none;
+}
+
+.team-details-social-icon ul li a i,
+.team-details-social-icon ul li a svg {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
+.team-details-social-icon ul li a:hover {
+  background: #004CD7;
+  color: #fff;
+  transform: translateY(-3px);
+}
+
+/* Contact Info Responsive Layout */
+.contact-info-wrapper {
+  width: 100%;
+}
+
+@media (max-width: 767px) {
+  .contact-info-item {
+    flex: 1 1 100%;
+    width: 100%;
+  }
+  
+  .contact-info-box {
+    width: 100%;
+  }
+}
+
+@media (min-width: 768px) {
+  .contact-info-item {
+    flex: 1;
+    min-width: 0;
+  }
 }
