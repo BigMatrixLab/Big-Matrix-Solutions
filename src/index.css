@@ -500,6 +500,40 @@ body.loaded .loader-wrapper {
 }
 
 /* ============================================
+   PORTFOLIO CARD SPACING FIX
+   ============================================ */
+
+/* Prevent portfolio cards from overlapping each other on mobile/tablet */
+@media (max-width: 991px) {
+  .portfolio-area .grid-item {
+    padding-bottom: 85px !important;
+  }
+}
+
+@media (max-width: 767px) {
+  .portfolio-area .grid-item {
+    padding-bottom: 75px !important;
+  }
+}
+
+@media (max-width: 575px) {
+  .portfolio-area .grid-item {
+    padding-bottom: 70px !important;
+  }
+}
+
+/* ============================================
+   BLOG AREA RESPONSIVE STYLES
+   ============================================ */
+
+/* Remove top padding on mobile for blog area */
+@media (max-width: 767px) {
+  .blog-grid-area {
+    padding-top: 0 !important;
+  }
+}
+
+/* ============================================
    ABOUT SECTION RESPONSIVE STYLES
    ============================================ */
 

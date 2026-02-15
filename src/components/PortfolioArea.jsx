@@ -36,8 +36,8 @@ const PortfolioArea = () => {
                
                 <div className="row image_load">
                     {filteredItems.map((item, index) => (
-                        <div key={item.id} className={`col-lg-4 col-md-6 grid-item d-flex ${item.category.toLowerCase().replace(/\s+/g, '-')}`}>
-                            <div className="single-portfolio-box w-100 mb-5">
+                        <div key={item.id} className={`col-lg-4 col-md-6 col-sm-12 grid-item ${item.category.toLowerCase().replace(/\s+/g, '-')}`}>
+                            <div className="single-portfolio-box w-100">
                                 <div className="portfolio-thumb">
                                     <img src={item.image} alt={item.title} style={{ boxShadow: '0 2px 8px rgba(0, 0, 0, 0.08)' }} />
                                 </div>
