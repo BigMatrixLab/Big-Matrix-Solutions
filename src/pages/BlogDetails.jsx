@@ -1,6 +1,7 @@
 import React from 'react';
 import { useParams, Link } from 'react-router-dom';
 import Breadcrumb from '../components/Breadcrumb';
+import MarkdownRenderer from '../components/MarkdownRenderer';
 import blogsData from '../data/blogs.json';
 
 const BlogDetails = () => {
@@ -40,50 +41,59 @@ const BlogDetails = () => {
                                 <div className="blog-details-content">
                                     <div className="blog-meta">
                                         <span><i className="bi bi-calendar-check"></i> {post.date}</span>
+                                        {post.author && <span><i className="bi bi-person"></i> {post.author}</span>}
                                     </div>
-                                    <h2 className="blog-details-title">{post.title}</h2>
-                                    <p className="blog-details-desc">{post.desc}</p>
-                                    <p className="blog-details-desc">{post.content}</p>
+                                    
+                                    {/* Render markdown content if contentFile exists, otherwise fallback to JSON structure */}
+                                    {post.contentFile ? (
+                                        <MarkdownRenderer contentFile={post.contentFile} />
+                                    ) : (
+                                        <>
+                                            <h2 className="blog-details-title">{post.title}</h2>
+                                            <p className="blog-details-desc">{post.desc}</p>
+                                            <p className="blog-details-desc">{post.content}</p>
 
-                                    {/* Quote Section - Optional */}
-                                    {post.quote && (
-                                        <div className="blog-quote">
-                                            <i className="bi bi-quote"></i>
-                                            <p>{post.quote.text}</p>
-                                            <span>— {post.quote.author}</span>
-                                        </div>
-                                    )}
+                                            {/* Quote Section - Optional */}
+                                            {post.quote && (
+                                                <div className="blog-quote">
+                                                    <i className="bi bi-quote"></i>
+                                                    <p>{post.quote.text}</p>
+                                                    <span>— {post.quote.author}</span>
+                                                </div>
+                                            )}
 
-                                    {/* Dynamic Sections */}
-                                    {post.sections && post.sections.map((section, index) => (
-                                        <div key={index}>
-                                            <h3>{section.heading}</h3>
-                                            <p className="blog-details-desc">{section.content}</p>
-                                        </div>
-                                    ))}
-
-                                    {/* List Items - Optional */}
-                                    {post.listItems && post.listItems.length > 0 && (
-                                        <ul className="blog-list">
-                                            {post.listItems.map((item, index) => (
-                                                <li key={index}>
-                                                    <i className="bi bi-check-circle-fill"></i> {item}
-                                                </li>
-                                            ))}
-                                        </ul>
-                                    )}
-
-                                    {/* Additional Images - Optional */}
-                                    {post.additionalImages && post.additionalImages.length > 0 && (
-                                        <div className="row my-4">
-                                            {post.additionalImages.map((img, index) => (
-                                                <div key={index} className={`col-md-${12 / post.additionalImages.length}`}>
-                                                    <div className="blog-details-image">
-                                                        <img src={img.url} alt={img.alt} />
-                                                    </div>
+                                            {/* Dynamic Sections */}
+                                            {post.sections && post.sections.map((section, index) => (
+                                                <div key={index}>
+                                                    <h3>{section.heading}</h3>
+                                                    <p className="blog-details-desc">{section.content}</p>
                                                 </div>
                                             ))}
-                                        </div>
+
+                                            {/* List Items - Optional */}
+                                            {post.listItems && post.listItems.length > 0 && (
+                                                <ul className="blog-list">
+                                                    {post.listItems.map((item, index) => (
+                                                        <li key={index}>
+                                                            <i className="bi bi-check-circle-fill"></i> {item}
+                                                        </li>
+                                                    ))}
+                                                </ul>
+                                            )}
+
+                                            {/* Additional Images - Optional */}
+                                            {post.additionalImages && post.additionalImages.length > 0 && (
+                                                <div className="row my-4">
+                                                    {post.additionalImages.map((img, index) => (
+                                                        <div key={index} className={`col-md-${12 / post.additionalImages.length}`}>
+                                                            <div className="blog-details-image">
+                                                                <img src={img.url} alt={img.alt} />
+                                                            </div>
+                                                        </div>
+                                                    ))}
+                                                </div>
+                                            )}
+                                        </>
                                     )}
 
                                     {/* Footer with Tags */}

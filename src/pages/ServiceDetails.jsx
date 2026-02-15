@@ -1,11 +1,28 @@
 import React from 'react';
 import { useParams, Link } from 'react-router-dom';
+import html2pdf from 'html2pdf.js';
 import Breadcrumb from '../components/Breadcrumb';
+import MarkdownRenderer from '../components/MarkdownRenderer';
 import servicesData from '../data/services.json';
 
 const ServiceDetails = () => {
     const { slug } = useParams();
     const service = servicesData.find(s => s.slug === slug);
+
+    // PDF download handler
+    const handleDownloadPDF = () => {
+        const content = document.querySelector('.services-details-content');
+        if (content) {
+            const opt = {
+                margin:       0.5,
+                filename:     `${service.title || 'service'}.pdf`,
+                image:        { type: 'jpeg', quality: 0.98 },
+                html2canvas:  { scale: 2 },
+                jsPDF:        { unit: 'in', format: 'letter', orientation: 'portrait' }
+            };
+            html2pdf().set(opt).from(content).save();
+        }
+    };
 
     if (!service) {
         return (
@@ -35,11 +52,30 @@ const ServiceDetails = () => {
                                     <div className="services-details-thumb">
                                         <img src={service.image} alt={service.title} />
                                     </div>
+                                    {/* Download PDF Button */}
+                                    {service.contentFile && (
+                                        <div className="mb-3">
+                                            <button className="btn btn-danger" id="download-pdf-btn" onClick={handleDownloadPDF}>
+                                                <i className="bi bi-file-earmark-pdf"></i> Download PDF
+                                            </button>
+                                        </div>
+                                    )}
                                     <div className="services-details-content">
-                                        <h4 className="services-details-title">{service.title}</h4>
-                                        <p className="services-details-desc">{service.desc}</p>
-                                        <p className="services-details-desc">{service.longDescription}</p>
+                                        {/* Render markdown content if contentFile exists, otherwise fallback to JSON structure */}
+                                        {service.contentFile ? (
+                                            <MarkdownRenderer contentFile={service.contentFile} />
+                                        ) : (
+                                            <>
+                                                <h4 className="services-details-title">{service.title}</h4>
+                                                <p className="services-details-desc">{service.desc}</p>
+                                                <p className="services-details-desc">{service.longDescription}</p>
+                                            </>
+                                        )}
                                     </div>
+                                    
+                                    {/* Keep static sections if no markdown */}
+                                    {!service.contentFile && (
+                                        <>
                                     <div className="row">
                                         <div className="col-lg-6 col-md-6">
                                             <div className="service-details-icon-box">
@@ -106,6 +142,8 @@ const ServiceDetails = () => {
                                             </div>
                                         </div>
                                     </div>
+                                        </>
+                                    )}
                                 </div>
                             </div>
                         </div>

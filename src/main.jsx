@@ -7,6 +7,8 @@ import './index.css'
 import './assets/css/style.css'
 import './assets/css/responsive.css'
 import './assets/css/coustom-animation.css'
+import './assets/css/markdown.css'
+import 'highlight.js/styles/atom-one-dark.css'
 
 ReactDOM.createRoot(document.getElementById('root')).render(
   <React.StrictMode>

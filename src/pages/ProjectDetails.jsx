@@ -1,6 +1,7 @@
 import React from 'react';
 import { useParams, Link } from 'react-router-dom';
 import Breadcrumb from '../components/Breadcrumb';
+import MarkdownRenderer from '../components/MarkdownRenderer';
 import projectData from '../data/projects.json';
 
 const ProjectDetails = () => {
@@ -40,43 +41,50 @@ const ProjectDetails = () => {
                             <div className="row">
                                 <div className="col-lg-12">
                                     <div className="project-details-content">
-                                        <h4>Intro of the project</h4>
-                                        <p className="project-details-desc">{project.desc}</p>
-                                        <p className="project-details-desc">{project.longDesc}</p>
-
-                                        {/* Challenge Section - Optional */}
-                                        {project.challengeSection && (
+                                        {/* Render markdown content if contentFile exists, otherwise fallback to JSON structure */}
+                                        {project.contentFile ? (
+                                            <MarkdownRenderer contentFile={project.contentFile} />
+                                        ) : (
                                             <>
-                                                <h3>{project.challengeSection.heading}</h3>
-                                                <p className="project-details-desc">{project.challengeSection.content}</p>
+                                                <h4>Intro of the project</h4>
+                                                <p className="project-details-desc">{project.desc}</p>
+                                                <p className="project-details-desc">{project.longDesc}</p>
+
+                                                {/* Challenge Section - Optional */}
+                                                {project.challengeSection && (
+                                                    <>
+                                                        <h3>{project.challengeSection.heading}</h3>
+                                                        <p className="project-details-desc">{project.challengeSection.content}</p>
+                                                    </>
+                                                )}
+
+                                                {/* Benefits List - Optional */}
+                                                {project.benefitsList && project.benefitsList.length > 0 && (
+                                                    <div className="row">
+                                                        <div className="col-lg-12">
+                                                            <div className="project-details-list-item">
+                                                                <h4>Project Benefits</h4>
+                                                                <ul>
+                                                                    {project.benefitsList.map((benefit, index) => (
+                                                                        <li key={index}>
+                                                                            <i className="bi bi-check-circle-fill"></i>{benefit}
+                                                                        </li>
+                                                                    ))}
+                                                                </ul>
+                                                            </div>
+                                                        </div>
+                                                    </div>
+                                                )}
+
+                                                {/* Additional Sections - Optional */}
+                                                {project.additionalSections && project.additionalSections.map((section, index) => (
+                                                    <div key={index}>
+                                                        <h3>{section.heading}</h3>
+                                                        <p className="project-details-desc">{section.content}</p>
+                                                    </div>
+                                                ))}
                                             </>
                                         )}
-
-                                        {/* Benefits List - Optional */}
-                                        {project.benefitsList && project.benefitsList.length > 0 && (
-                                            <div className="row">
-                                                <div className="col-lg-12">
-                                                    <div className="project-details-list-item">
-                                                        <h4>Project Benefits</h4>
-                                                        <ul>
-                                                            {project.benefitsList.map((benefit, index) => (
-                                                                <li key={index}>
-                                                                    <i className="bi bi-check-circle-fill"></i>{benefit}
-                                                                </li>
-                                                            ))}
-                                                        </ul>
-                                                    </div>
-                                                </div>
-                                            </div>
-                                        )}
-
-                                        {/* Additional Sections - Optional */}
-                                        {project.additionalSections && project.additionalSections.map((section, index) => (
-                                            <div key={index}>
-                                                <h3>{section.heading}</h3>
-                                                <p className="project-details-desc">{section.content}</p>
-                                            </div>
-                                        ))}
                                     </div>
                                 </div>
                             </div>
