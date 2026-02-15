@@ -778,3 +778,37 @@ body.loaded .loader-wrapper {
     min-width: 0;
   }
 }
+
+/* ============================================
+   FOOTER RESPONSIVE STYLES
+   ============================================ */
+
+/* Add more gap above sections in footer on mobile */
+@media (max-width: 767px) {
+  .footer-area .footer-widget-content {
+    margin-top: 3rem;
+    padding-left: 2rem;
+  }
+  
+  .footer-area .row > [class*="col-"]:first-child .footer-widget-content {
+    margin-top: 0;
+  }
+  
+  /* Center footer logo and description on mobile */
+  .footer-area .footer-logo {
+    justify-content: center;
+    text-align: center;
+  }
+  
+  .footer-area .footer-logo .d-flex {
+    justify-content: center !important;
+  }
+  
+  .footer-area .footer-widget-desc {
+    text-align: center !important;
+  }
+  
+  .footer-area .footer-widget-desc p {
+    text-align: center !important;
+  }
+}

@@ -58,7 +58,7 @@ const FooterArea = () => {
                             </div>
                         </div>
                     </div>
-                    <div className="col-lg-2 col-md-6">
+                    <div className="col-lg-2 col-md-6 col-sm-12">
                         <div className="footer-widget-content">
                             <div className="footer-widget-title">
                                 <h4>Contact Us</h4>
