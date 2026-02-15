@@ -13,14 +13,24 @@ const ServiceDetails = () => {
     const handleDownloadPDF = () => {
         const content = document.querySelector('.services-details-content');
         if (content) {
-            const opt = {
-                margin:       0.5,
-                filename:     `${service.title || 'service'}.pdf`,
-                image:        { type: 'jpeg', quality: 0.98 },
-                html2canvas:  { scale: 2 },
-                jsPDF:        { unit: 'in', format: 'letter', orientation: 'portrait' }
-            };
-            html2pdf().set(opt).from(content).save();
+            // Wait for all images to load
+            const images = content.querySelectorAll('img');
+            const promises = Array.from(images).map(img => {
+                if (img.complete && img.naturalHeight !== 0) return Promise.resolve();
+                return new Promise(resolve => {
+                    img.onload = img.onerror = resolve;
+                });
+            });
+            Promise.all(promises).then(() => {
+                const opt = {
+                    margin:       0.5,
+                    filename:     `${service.title || 'service'}.pdf`,
+                    image:        { type: 'jpeg', quality: 0.98 },
+                    html2canvas:  { scale: 2, useCORS: true },
+                    jsPDF:        { unit: 'in', format: 'letter', orientation: 'portrait' }
+                };
+                html2pdf().set(opt).from(content).save();
+            });
         }
     };
 
@@ -53,13 +63,7 @@ const ServiceDetails = () => {
                                         <img src={service.image} alt={service.title} />
                                     </div>
                                     {/* Download PDF Button */}
-                                    {service.contentFile && (
-                                        <div className="mb-3">
-                                            <button className="btn btn-danger" id="download-pdf-btn" onClick={handleDownloadPDF}>
-                                                <i className="bi bi-file-earmark-pdf"></i> Download PDF
-                                            </button>
-                                        </div>
-                                    )}
+                                    {/* Download PDF Button removed, now handled in sidebar */}
                                     <div className="services-details-content">
                                         {/* Render markdown content if contentFile exists, otherwise fallback to JSON structure */}
                                         {service.contentFile ? (
@@ -174,7 +178,15 @@ const ServiceDetails = () => {
                                         </div>
                                         <div className="widget-sidber-download-button">
                                             {/* <a href="#"><i className="bi bi-file-earmark-pdf"></i>Service Report<span><i className="bi bi-download"></i></span></a> */}
-                                            <a className="active" href="#"><i className="bi bi-file-earmark-pdf"></i>Download Lists<span><i className="bi bi-download"></i></span></a>
+                                            <button
+                                                className="btn btn-primary w-100 active"
+                                                id="download-pdf-btn"
+                                                type="button"
+                                                onClick={handleDownloadPDF}
+                                                style={{ display: service.contentFile ? 'block' : 'none' }}
+                                            >
+                                                <i className="bi bi-file-earmark-pdf" style={{color:"#fff"}}></i> Download PDF <i className="bi bi-download"  style={{color:"#fff", paddingLeft:"5px"}}></i>
+                                            </button>
                                         </div>
                                     </div>
                                     <div className="widget-sidber-contact-box">
