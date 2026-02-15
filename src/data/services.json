@@ -30,7 +30,7 @@
         "id": 4,
         "slug": "big-data-analytics",
         "title": "Big Data & Advanced Analytics",
-        "icon": "bi bi-database",
+        "icon": "bi bi-diagram-3-fill",
         "image": "https://images.unsplash.com/photo-1551288049-bebda4e38f71?w=800&q=80&auto=format&fit=crop",
         "desc": "Scalable data engineering, predictive modeling, and large-scale processing infrastructure for handling massive healthcare and enterprise datasets.",
         "longDescription": "Handle massive volumes of complex data with our advanced big data solutions. We build robust data pipelines, distributed processing systems, predictive modeling frameworks, and high-performance analytics platforms that process terabytes of information in real-time. Our data engineering expertise ensures data integrity, enables breakthrough insights, and powers intelligent decision-making across healthcare, pharmaceutical, and industrial applications."
