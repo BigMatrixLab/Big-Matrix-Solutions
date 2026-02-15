@@ -534,6 +534,60 @@ body.loaded .loader-wrapper {
 }
 
 /* ============================================
+   MISSION/VISION/VALUES RESPONSIVE STYLES
+   ============================================ */
+
+/* Hide images and make text full-width on mobile */
+@media (max-width: 767px) {
+  .value-section-image {
+    display: none !important;
+  }
+  
+  .value-section-content {
+    max-width: 100% !important;
+    flex: 0 0 100% !important;
+  }
+  
+  .mission-box {
+    width: 100% !important;
+    padding: 2rem 1.5rem !important;
+  }
+  
+  .single-icon-box {
+    display: flex !important;
+    flex-direction: row !important;
+    align-items: flex-start !important;
+    gap: 1rem !important;
+    margin-bottom: 1rem !important;
+  }
+  
+  .single-icon-thumb {
+    flex-shrink: 0 !important;
+    margin-bottom: 0 !important;
+  }
+  
+  .sigle-icon-desc {
+    flex: 1 !important;
+    text-align: left !important;
+  }
+  
+  .sigle-icon-desc p {
+    margin: 0 !important;
+    text-align: left !important;
+  }
+  
+  .mission-content h4 {
+    font-size: 1.5rem !important;
+    margin-bottom: 1rem !important;
+  }
+  
+  .mission-description {
+    font-size: 0.95rem !important;
+    margin-bottom: 1.5rem !important;
+  }
+}
+
+/* ============================================
    ABOUT SECTION RESPONSIVE STYLES
    ============================================ */
 
