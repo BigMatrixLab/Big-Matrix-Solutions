@@ -83,9 +83,9 @@ const FooterArea = () => {
                             <div className="col-lg-6 col-md-6">
                                 <div className="footer-botton-social-icon">
                                     <ul>
-                                        <li><a href="https://www.facebook.com/profile.php?id=61566031568599" target="_blank" rel="noopener noreferrer"><i className="bi bi-facebook"></i></a></li>
-                                        <li><a href="https://github.com/BigMatrixLab" target="_blank" rel="noopener noreferrer"><i className="bi bi-github"></i></a></li>
-                                        <li><a href="https://big-matrix.com" target="_blank" rel="noopener noreferrer"><i className="bi bi-globe"></i></a></li>
+                                        <li><a href="https://www.facebook.com/profile.php?id=61566031568599" target="_blank" rel="noopener noreferrer"><i className="fab fa-facebook-f"></i></a></li>
+                                        <li><a href="https://github.com/BigMatrixLab" target="_blank" rel="noopener noreferrer"><i className="fab fa-github"></i></a></li>
+                                        <li><a href="https://big-matrix.com" target="_blank" rel="noopener noreferrer"><i className="fas fa-globe"></i></a></li>
                                     </ul>
                                 </div>
                             </div>
