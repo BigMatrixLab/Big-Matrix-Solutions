@@ -537,8 +537,8 @@ body.loaded .loader-wrapper {
    MISSION/VISION/VALUES RESPONSIVE STYLES
    ============================================ */
 
-/* Hide images and make text full-width on mobile */
-@media (max-width: 767px) {
+/* Hide images and make text full-width on tablet and mobile */
+@media (max-width: 991px) {
   .value-section-image {
     display: none !important;
   }
@@ -584,6 +584,33 @@ body.loaded .loader-wrapper {
   .mission-description {
     font-size: 0.95rem !important;
     margin-bottom: 1.5rem !important;
+  }
+}
+
+/* ============================================
+   FEATURE CARDS MOBILE & TABLET SPACING
+   ============================================ */
+
+/* Add more gap between feature cards on tablet and mobile */
+@media (max-width: 991px) {
+  .feature-area.style-three .row > [class*="col-"] {
+    margin-bottom: 2rem !important;
+  }
+  
+  .feature-area.style-three .single-feature-box {
+    margin-bottom: 0;
+  }
+}
+
+@media (max-width: 767px) {
+  .feature-area.style-three .row > [class*="col-"] {
+    margin-bottom: 2rem !important;
+  }
+}
+
+@media (max-width: 575px) {
+  .feature-area.style-three .row > [class*="col-"] {
+    margin-bottom: 2.5rem !important;
   }
 }
 

@@ -14,7 +14,7 @@ const AboutOne = () => {
             <div className="feature-area style-three" style={{paddingTop: '80px'}}>
                 <div className="container">
                     <div className="row margin-top">
-                        <div className="col-lg-3 col-md-6">
+                        <div className="col-lg-3 col-md-6 col-sm-12">
                             <div className="single-feature-box h-100">
                                 <div className="feature-icon">
                                     <img src="/assets/images/home-3/feature-icon-1.png" alt="" />
@@ -25,7 +25,7 @@ const AboutOne = () => {
                                 </div>
                             </div>
                         </div>
-                        <div className="col-lg-3 col-md-6">
+                        <div className="col-lg-3 col-md-6 col-sm-12">
                             <div className="single-feature-box h-100">
                                 <div className="feature-icon">
                                     <img src="/assets/images/home-3/feature-icon-2.png" alt="" />
@@ -36,7 +36,7 @@ const AboutOne = () => {
                                 </div>
                             </div>
                         </div>
-                        <div className="col-lg-3 col-md-6">
+                        <div className="col-lg-3 col-md-6 col-sm-12">
                             <div className="single-feature-box h-100">
                                 <div className="feature-icon">
                                     <img src="/assets/images/home-3/feature-icon-3.png" alt="" />
@@ -47,7 +47,7 @@ const AboutOne = () => {
                                 </div>
                             </div>
                         </div>
-                        <div className="col-lg-3 col-md-6">
+                        <div className="col-lg-3 col-md-6 col-sm-12">
                             <div className="single-feature-box h-100">
                                 <div className="feature-icon">
                                     <img src="/assets/images/home-3/feature-icon-4.png" alt="" />
@@ -101,6 +101,7 @@ const AboutOne = () => {
                     <ValueSection
                         image="/assets/images/Core_Values.jpg"
                         title="Core Values"
+                        description="The principles that guide our work and define our commitment to excellence."
                         items={[
                             "Systemic Innovation: We don't just build apps; we build interconnected ecosystems.",
                             "Scientific Integrity: Every AI model is backed by rigorous research and mathematical validation.",
