@@ -340,6 +340,165 @@ body.loaded .loader-wrapper {
   transform: translateY(-3px);
 }
 
+/* ============================================
+   HERO SECTION RESPONSIVE STYLES
+   ============================================ */
+
+/* Hero section responsive layout */
+.hero-area {
+  min-height: 100vh;
+  padding: clamp(3rem, 5vw, 5rem) 0;
+}
+
+.hero-animation-wrapper {
+  margin-top: 0;
+}
+
+/* Feature area spacing fix for desktop */
+@media (min-width: 992px) {
+  .style-two.feature-area .row.add-marging {
+    margin-top: -90px;
+  }
+}
+
+@media (max-width: 991px) {
+  .hero-area {
+    min-height: 100vh;
+    padding: 4rem 0 6rem;
+  }
+  
+  /* Remove negative margin on feature area for mobile */
+  .style-two.feature-area .row.add-marging {
+    margin-top: 0 !important;
+  }
+  
+  .hero-animation-wrapper {
+    order: -1;
+    margin-bottom: 1.5rem;
+    margin-top: 0;
+  }
+  
+  .hero-content {
+    text-align: center;
+  }
+  
+  .hero-content h1 {
+    font-size: clamp(1.75rem, 5vw, 2.5rem) !important;
+    line-height: 1.2 !important;
+  }
+  
+  .hero-content h4 {
+    font-size: clamp(1rem, 3vw, 1.25rem) !important;
+    margin-bottom: 0.5rem !important;
+  }
+  
+  .hero-content p {
+    font-size: clamp(0.9rem, 2.5vw, 1rem) !important;
+    margin: 0.75rem auto 1.5rem !important;
+    max-width: 100% !important;
+  }
+  
+  .hero-button {
+    display: flex !important;
+    justify-content: center !important;
+    flex-wrap: wrap;
+    gap: 0.75rem;
+    margin-top: 1.5rem !important;
+  }
+  
+  .hero-button a {
+    font-size: clamp(0.8rem, 2vw, 0.9rem) !important;
+    padding: 0.7rem 1.2rem !important;
+    flex: 0 1 auto;
+    white-space: nowrap;
+  }
+}
+
+@media (max-width: 767px) {
+  .hero-area {
+    min-height: 100vh;
+    padding: 3rem 0 5rem;
+  }
+  
+  .hero-animation-wrapper {
+    padding: 0 1rem;
+    margin-bottom: 1.25rem;
+  }
+  
+  .hero-content {
+    padding: 0 0.5rem;
+  }
+  
+  .hero-button {
+    padding: 0 0.5rem;
+  }
+}
+
+@media (max-width: 575px) {
+  .hero-area {
+    min-height: 100vh;
+    padding: 2.5rem 0 4.5rem;
+  }
+  
+  .hero-animation-wrapper {
+    margin-bottom: 1rem;
+  }
+  
+  .hero-button {
+    display: flex !important;
+    flex-direction: row !important;
+    gap: 0.5rem;
+    padding: 0 0.75rem;
+  }
+  
+  .hero-button a {
+    flex: 1;
+    font-size: 0.75rem !important;
+    padding: 0.65rem 0.8rem !important;
+    text-align: center;
+    justify-content: center;
+  }
+}
+
+/* iPhone SE and very small screens */
+@media (max-width: 375px) {
+  .hero-area {
+    min-height: 110vh;
+    padding: 2rem 0 4rem;
+  }
+  
+  .hero-animation-wrapper {
+    margin-bottom: 0.75rem;
+  }
+  
+  .hero-content h1 {
+    font-size: 1.5rem !important;
+    line-height: 1.3 !important;
+    margin-bottom: 0.75rem !important;
+  }
+  
+  .hero-content h4 {
+    font-size: 0.95rem !important;
+    margin-bottom: 0.4rem !important;
+  }
+  
+  .hero-content p {
+    font-size: 0.85rem !important;
+    line-height: 1.4 !important;
+    margin: 0.5rem auto 1rem !important;
+  }
+  
+  .hero-button {
+    margin-top: 1rem !important;
+    gap: 0.4rem;
+  }
+  
+  .hero-button a {
+    font-size: 0.7rem !important;
+    padding: 0.6rem 0.6rem !important;
+  }
+}
+
 /* Contact Info Responsive Layout */
 .contact-info-wrapper {
   width: 100%;

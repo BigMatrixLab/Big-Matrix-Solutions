@@ -20,12 +20,18 @@ const Hero = () => {
                             <Link className="button-two" to="/about">Learn More<i className="bi bi-arrow-right"></i></Link>
                         </div>
                     </div>
-                     <div className="col-lg-5 d-flex justify-content-center">
+                     <div className="col-lg-5 col-md-12 col-sm-12 d-flex justify-content-center hero-animation-wrapper">
                         <DotLottiePlayer
                             src="/assets/images/hero-anim.lottie"
                             autoplay
                             loop
-                            style={{ width: 'auto', height: '1000px', scale: '1.3', transformOrigin: 'right center' }}
+                            style={{ 
+                                width: '100%', 
+                                maxWidth: '600px',
+                                height: 'auto',
+                                minHeight: '250px',
+                                aspectRatio: '1 / 1'
+                            }}
                         />
                     </div>
                 </div>
