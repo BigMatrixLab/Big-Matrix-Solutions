@@ -3,7 +3,7 @@
         "id": 1,
         "slug": "intelligent-healthcare-pharma",
         "title": "Intelligent Healthcare & Pharmaceutical Systems",
-        "icon": "far fa-hospital",
+        "icon": "bi bi-hospital",
         "image": "https://images.unsplash.com/photo-1576091160399-112ba8d25d1d?w=800&q=80&auto=format&fit=crop",
         "desc": "Comprehensive AI-powered solutions for hospitals, diagnostics, medical imaging, and pharmaceutical intelligence that transform healthcare delivery and pharmaceutical operations.",
         "longDescription": "We develop end-to-end intelligent systems that revolutionize healthcare and pharmaceutical operations. Our solutions integrate AI-driven diagnostics, advanced medical imaging analysis, hospital management systems, and pharmaceutical intelligence platforms. From automated disease detection to drug development analytics, we create comprehensive ecosystems that improve patient outcomes, accelerate drug discovery, and optimize pharmaceutical supply chains."
@@ -12,7 +12,7 @@
         "id": 2,
         "slug": "digital-hospital-infrastructure",
         "title": "Digital Hospital, Laboratory & Clinical Infrastructure",
-        "icon": "far fa-building",
+        "icon": "bi bi-building",
         "image": "https://images.unsplash.com/photo-1519389950473-47ba0277781c?w=800&q=80&auto=format&fit=crop",
         "desc": "Complete digital infrastructure including EMR, EHR, HMS, LIMS, RIS, and Pharmacy Management systems for modern healthcare facilities.",
         "longDescription": "Transform your healthcare facility with our integrated digital infrastructure solutions. We implement and customize Electronic Medical Records (EMR), Electronic Health Records (EHR), Hospital Management Systems (HMS), Laboratory Information Management Systems (LIMS), Radiology Information Systems (RIS), and Pharmacy Management platforms. Our solutions create seamless workflows, improve data accessibility, ensure regulatory compliance, and enhance patient care coordination across all departments."
@@ -21,7 +21,7 @@
         "id": 3,
         "slug": "pharmaceutical-intelligence",
         "title": "Pharmaceutical Intelligence & Drug Analytics",
-        "icon": "fas fa-capsules",
+        "icon": "bi bi-capsule",
         "image": "https://images.unsplash.com/photo-1587854692152-cbe660dbde88?w=800&q=80&auto=format&fit=crop",
         "desc": "Advanced analytics for drug demand forecasting, supply chain optimization, market intelligence, clinical data analysis, and production planning.",
         "longDescription": "Empower your pharmaceutical operations with enterprise-grade intelligence systems. Our platforms provide drug demand forecasting using predictive models, supply chain optimization algorithms, comprehensive market intelligence dashboards, clinical data analytics for drug development, production planning systems, and public health-driven pharmaceutical insights. These solutions position you as enterprise and government-ready, delivering strategic advantages in competitive pharmaceutical markets."
@@ -30,7 +30,7 @@
         "id": 4,
         "slug": "big-data-analytics",
         "title": "Big Data & Advanced Analytics",
-        "icon": "fas fa-database",
+        "icon": "bi bi-database",
         "image": "https://images.unsplash.com/photo-1551288049-bebda4e38f71?w=800&q=80&auto=format&fit=crop",
         "desc": "Scalable data engineering, predictive modeling, and large-scale processing infrastructure for handling massive healthcare and enterprise datasets.",
         "longDescription": "Handle massive volumes of complex data with our advanced big data solutions. We build robust data pipelines, distributed processing systems, predictive modeling frameworks, and high-performance analytics platforms that process terabytes of information in real-time. Our data engineering expertise ensures data integrity, enables breakthrough insights, and powers intelligent decision-making across healthcare, pharmaceutical, and industrial applications."
@@ -39,7 +39,7 @@
         "id": 5,
         "slug": "ai-machine-learning",
         "title": "AI & Machine Learning Engineering",
-        "icon": "fas fa-brain",
+        "icon": "bi bi-cpu",
         "image": "https://images.unsplash.com/photo-1677442136019-21780ecad995?w=800&q=80&auto=format&fit=crop",
         "desc": "Custom AI solutions including deep learning models, Large Language Models (LLMs), RAG systems, and intelligent automation for complex business challenges.",
         "longDescription": "Push the boundaries of artificial intelligence with our cutting-edge machine learning engineering services. We develop custom neural networks, optimize deep learning architectures, build Large Language Model (LLM) systems with Retrieval-Augmented Generation (RAG), and create automation intelligence that transforms business operations. From computer vision and natural language processing to predictive analytics and autonomous systems, we deliver AI solutions that drive measurable business value."
@@ -48,7 +48,7 @@
         "id": 6,
         "slug": "enterprise-saas-platform",
         "title": "Enterprise & SaaS Platform Development",
-        "icon": "fas fa-cloud",
+        "icon": "bi bi-cloud",
         "image": "https://images.unsplash.com/photo-1451187580459-43490279c0fa?w=800&q=80&auto=format&fit=crop",
         "desc": "Scalable enterprise platforms, ERP systems, workflow automation, and AI-driven business systems designed for modern organizations.",
         "longDescription": "Build powerful enterprise and SaaS platforms that scale with your business. We create comprehensive ERP systems, workflow automation tools, multi-tenant SaaS applications, and AI-driven business intelligence platforms. Our solutions feature intuitive user interfaces, robust backend architectures, seamless integrations, and the scalability needed to support growing user bases and evolving business requirements."
@@ -57,7 +57,7 @@
         "id": 7,
         "slug": "industrial-automation",
         "title": "Industrial Automation & Smart Systems",
-        "icon": "fas fa-cogs",
+        "icon": "bi bi-gear",
         "image": "https://images.unsplash.com/photo-1565043589221-1a6fd9ae45c7?w=800&q=80&auto=format&fit=crop",
         "desc": "IoT-enabled systems, machine automation, predictive maintenance, and production optimization for modern manufacturing and industrial operations.",
         "longDescription": "Transform industrial operations with intelligent automation and IoT solutions. We design and implement smart factory systems, predictive maintenance platforms that prevent equipment failures, production optimization algorithms, and comprehensive IoT sensor networks. Our industrial automation solutions reduce operational costs, improve efficiency, minimize downtime, and create data-driven manufacturing environments that adapt to changing production demands."
@@ -66,7 +66,7 @@
         "id": 8,
         "slug": "cloud-devops-architecture",
         "title": "Cloud, DevOps & Scalability Architecture",
-        "icon": "fas fa-server",
+        "icon": "bi bi-hdd-rack",
         "image": "https://images.unsplash.com/photo-1544197150-b99a580bb7a8?w=800&q=80&auto=format&fit=crop",
         "desc": "High-availability cloud infrastructure, microservices architecture, containerization, and cloud-native deployment for enterprise-scale applications.",
         "longDescription": "Build reliable, scalable systems with our cloud and DevOps expertise. We architect high-availability cloud infrastructure using AWS, Azure, and GCP, implement microservices architectures, create containerized applications with Docker and Kubernetes, establish CI/CD pipelines, and design cloud-native solutions that automatically scale to meet demand. Our infrastructure ensures maximum uptime, optimal performance, and seamless deployment workflows."
@@ -75,7 +75,7 @@
         "id": 9,
         "slug": "cybersecurity-compliance",
         "title": "Cybersecurity & Compliance Engineering",
-        "icon": "fas fa-shield-alt",
+        "icon": "bi bi-shield-lock",
         "image": "https://images.unsplash.com/photo-1550751827-4bd374c3f58b?w=800&q=80&auto=format&fit=crop",
         "desc": "Healthcare-grade security, end-to-end encryption, access control systems, and compliance-ready infrastructure meeting HIPAA, GDPR, and industry standards.",
         "longDescription": "Protect your organization with enterprise-grade cybersecurity and compliance solutions. We implement healthcare-grade security measures, end-to-end encryption protocols, granular access control systems, secure authentication mechanisms, and comprehensive compliance frameworks. Our solutions ensure HIPAA, GDPR, and industry-specific regulatory compliance while protecting sensitive data with multiple layers of security, intrusion detection, and continuous monitoring."
@@ -84,7 +84,7 @@
         "id": 10,
         "slug": "national-health-public-policy",
         "title": "National-Scale Digital Health & Public Policy Intelligence",
-        "icon": "fas fa-flag",
+        "icon": "bi bi-flag",
         "image": "https://images.unsplash.com/photo-1454165804606-c3d57bc86b40?w=800&q=80&auto=format&fit=crop",
         "desc": "Enterprise solutions for Ministries of Health, Government Bodies, and International NGOs including disease surveillance, policy simulation, and nationwide health resource optimization.",
         "longDescription": "Position your organization as a strategic partner for national and international health initiatives. We deliver nationwide disease surveillance platforms for real-time tracking and mapping of infectious diseases, public health resource optimization tools that help governments manage hospital bed availability and medical staff distribution, policy impact simulation systems using Big Data to model healthcare policy outcomes, interoperability standard implementation (HL7, FHIR) for regional healthcare network communication, and epidemic & outbreak prediction systems with early-warning capabilities that combine local clinical data with global health trends to prevent pandemics."

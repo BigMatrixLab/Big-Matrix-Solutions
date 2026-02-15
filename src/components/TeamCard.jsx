@@ -22,14 +22,14 @@ const TeamCard = ({ member, activeTeamId, onToggleSocial }) => {
                 </div>
                 <div className="team-social-icon">
                     <ul>
-                        <li><Link to="#"><i className="fab fa-facebook-f"></i></Link></li>
-                        <li><Link to="#"><i className="fab fa-twitter"></i></Link></li>
-                        <li><Link to="#"><i className="fab fa-instagram"></i></Link></li>
-                        <li><Link to="#"><i className="fa-brands fa-pinterest-p"></i></Link></li>
-                        <li><Link to="#"><i className="fab fa-linkedin-in"></i></Link></li>
-                        <li><Link to="#"><i className="fab fa-github"></i></Link></li>
-                        <li><Link to="#"><i className="fas fa-graduation-cap"></i></Link></li>
-                        <li><Link to="#"><i className="fas fa-globe"></i></Link></li>
+                        <li><Link to="#"><i className="bi bi-facebook"></i></Link></li>
+                        <li><Link to="#"><i className="bi bi-twitter-x"></i></Link></li>
+                        <li><Link to="#"><i className="bi bi-instagram"></i></Link></li>
+                        <li><Link to="#"><i className="bi bi-pinterest"></i></Link></li>
+                        <li><Link to="#"><i className="bi bi-linkedin"></i></Link></li>
+                        <li><Link to="#"><i className="bi bi-github"></i></Link></li>
+                        <li><Link to="#"><i className="bi bi-mortarboard"></i></Link></li>
+                        <li><Link to="#"><i className="bi bi-globe"></i></Link></li>
                     </ul>
                 </div>
             </div>
