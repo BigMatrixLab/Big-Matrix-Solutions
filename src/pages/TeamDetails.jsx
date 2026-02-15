@@ -47,7 +47,7 @@ const TeamDetails = () => {
                                     <div>
                                         <div className="contact-info-box">
                                             <div className="contact-info-icon">
-                                                <i className="fa-solid fa-phone"></i>
+                                                <i className="bi bi-telephone-fill"></i>
                                             </div>
                                             <div className="contact-info-content">
                                                 <h4>Contact</h4>
@@ -58,7 +58,7 @@ const TeamDetails = () => {
                                     <div>
                                         <div className="contact-info-box">
                                             <div className="contact-info-icon">
-                                                <i className="fa-regular fa-envelope"></i>
+                                                <i className="bi bi-envelope-fill"></i>
                                             </div>
                                             <div className="contact-info-content">
                                                 <h4>E-Mail</h4>
@@ -70,10 +70,15 @@ const TeamDetails = () => {
                                 <div className="team-details-social-icon">
                                     <ul>
                                         <li>Social Media</li>
-                                        <li><a href="#"><i className="fa-brands fa-facebook-f"></i></a></li>
-                                        <li><a href="#"><i className="fa-brands fa-twitter"></i></a></li>
-                                        <li><a href="#"><i className="fa-brands fa-linkedin-in"></i></a></li>
-                                        <li><a href="#"><i className="fa-brands fa-pinterest-p"></i></a></li>
+                                        {member.social?.facebook && (
+                                            <li><a href={member.social.facebook}><i className="bi bi-facebook" style={{ fontSize: '20px' }}></i></a></li>
+                                        )}
+                                        {member.social?.twitter && (
+                                            <li><a href={member.social.twitter}><i className="bi bi-twitter" style={{ fontSize: '20px' }}></i></a></li>
+                                        )}
+                                        {member.social?.linkedin && (
+                                            <li><a href={member.social.linkedin}><i className="bi bi-linkedin" style={{ fontSize: '20px' }}></i></a></li>
+                                        )}
                                     </ul>
                                 </div>
                             </div>
