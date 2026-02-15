@@ -499,6 +499,148 @@ body.loaded .loader-wrapper {
   }
 }
 
+/* ============================================
+   ABOUT SECTION RESPONSIVE STYLES
+   ============================================ */
+
+/* Fix about area overflow and responsive issues */
+.style-two.about-area {
+  overflow-x: hidden;
+}
+
+.style-two.about-area .container {
+  overflow-x: hidden;
+}
+
+.style-two .about-left {
+  position: relative;
+  overflow: visible;
+}
+
+.style-two .about-thumb {
+  max-width: 100%;
+  overflow: hidden;
+}
+
+.style-two .about-thumb img {
+  width: 100%;
+  max-width: 100%;
+  height: auto !important;
+}
+
+@media (max-width: 991px) {
+  .style-two.about-area {
+    padding: 3rem 0 3rem !important;
+    margin-top: 0 !important;
+  }
+  
+  .style-two .about-left {
+    margin-bottom: 3rem;
+    padding: 0 1rem;
+  }
+  
+  .style-two .about-thumb img {
+    width: 100%;
+    height: auto !important;
+    max-width: 500px;
+    display: block;
+    margin: 0 auto;
+  }
+  
+  .style-two .about-shape {
+    display: none !important;
+  }
+  
+  .style-two .about-conter-box {
+    display: none !important;
+  }
+  
+  .style-two .about-right {
+    padding: 0 1rem;
+  }
+  
+  .style-two .about-shape-two {
+    display: none !important;
+  }
+  
+  .style-two .single-about-icon-box {
+    margin-bottom: 1.5rem;
+  }
+  
+  .style-two.about-area .section-title h1 {
+    font-size: clamp(1.5rem, 4vw, 2rem) !important;
+    line-height: 1.3 !important;
+  }
+  
+  .style-two.about-area .section-title h4 {
+    font-size: clamp(1rem, 3vw, 1.25rem) !important;
+  }
+  
+  .style-two.about-area .section-title p {
+    text-align: left !important;
+  }
+}
+
+@media (max-width: 767px) {
+  .style-two .about-thumb img {
+    max-width: 400px;
+  }
+  
+  .style-two .about-conter-box {
+    padding: 12px 30px !important;
+  }
+  
+  .style-two .about-counter-title span,
+  .style-two .about-counter-title h4 {
+    font-size: 40px !important;
+  }
+  
+  .style-two .about-counter-title p {
+    font-size: 14px !important;
+  }
+  
+  .style-two .about-left {
+    padding: 0 0.5rem;
+  }
+  
+  .style-two .about-right {
+    padding: 0 0.5rem;
+  }
+  
+  .style-two.about-area .section-title h1 {
+    font-size: 1.5rem !important;
+  }
+}
+
+@media (max-width: 575px) {
+  .style-two .about-thumb img {
+    max-width: 100%;
+  }
+  
+  .style-two .about-conter-box {
+    padding: 10px 25px !important;
+  }
+  
+  .style-two .about-counter-title span,
+  .style-two .about-counter-title h4 {
+    font-size: 32px !important;
+    padding: 0 0 10px 0 !important;
+  }
+  
+  .style-two .about-counter-title p {
+    font-size: 13px !important;
+  }
+  
+  .style-two.about-area .section-title h1 {
+    font-size: 1.25rem !important;
+  }
+  
+  .style-two .about-icon-box-content h4 {
+    font-size: 15px !important;
+    line-height: 1.4 !important;
+  }
+}
+
 /* Contact Info Responsive Layout */
 .contact-info-wrapper {
   width: 100%;

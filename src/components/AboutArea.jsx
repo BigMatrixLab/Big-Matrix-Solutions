@@ -6,7 +6,7 @@ const AboutArea = () => {
         <div className="about-area style-two">
             <div className="container">
                 <div className="row align-items-center">
-                    <div className="col-lg-6">
+                    <div className="col-lg-6 col-md-12 col-sm-12">
                         <div className="about-left">
                             <div className="about-thumb">
                                 <img src="/assets/images/home-2/about-thumb.png" alt="" />
@@ -23,7 +23,7 @@ const AboutArea = () => {
                             </div>
                         </div>
                     </div>
-                    <div className="col-lg-6">
+                    <div className="col-lg-6 col-md-12 col-sm-12">
                         <div className="about-right">
                             <div className="section-title left style-two">
                                 <h4>Big-Matrix Research & Development Lab</h4>
@@ -32,7 +32,7 @@ const AboutArea = () => {
                                 <p style={{ textAlign: 'justify' }}>We develop cutting-edge software solutions and tools for medical research and clinical workflows. Our development wing specializes in creating AI-powered diagnostic systems, machine learning models, and data analytics platforms that accelerate medical discoveries and improve patient outcomes.</p>
                             </div>
                             <div className="row">
-                                <div className="col-lg-6 col-md-6">
+                                <div className="col-lg-6 col-md-6 col-sm-12">
                                     <div className="single-about-icon-box">
                                         <div className="about-icon">
                                             <img src="/assets/images/home-2/about-icon1.png" alt="" />
@@ -42,7 +42,7 @@ const AboutArea = () => {
                                         </div>
                                     </div>
                                 </div>
-                                <div className="col-lg-6 col-md-6">
+                                <div className="col-lg-6 col-md-6 col-sm-12">
                                     <div className="single-about-icon-box">
                                         <div className="about-icon">
                                             <img src="/assets/images/home-2/about-icon2.png" alt="" />
@@ -52,7 +52,7 @@ const AboutArea = () => {
                                         </div>
                                     </div>
                                 </div>
-                                <div className="col-lg-6 col-md-6">
+                                <div className="col-lg-6 col-md-6 col-sm-12">
                                     <div className="single-about-icon-box">
                                         <div className="about-icon">
                                             <img src="/assets/images/home-2/about-icon3.png" alt="" />
@@ -62,7 +62,7 @@ const AboutArea = () => {
                                         </div>
                                     </div>
                                 </div>
-                                <div className="col-lg-6 col-md-6">
+                                <div className="col-lg-6 col-md-6 col-sm-12">
                                     <div className="single-about-icon-box">
                                         <div className="about-icon">
                                             <img src="/assets/images/home-2/about-icon4.png" alt="" />
