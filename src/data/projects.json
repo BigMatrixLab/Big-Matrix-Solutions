@@ -6,32 +6,12 @@
         "image": "/assets/images/projects/Rad analysis.png",
         "slug": "nsu_ctrg_2021_2022_breast_cancer",
         "desc": "Precision segmentation and comprehensive report generation from mammograms using multimodal AI for enhanced breast cancer diagnosis.",
-        "longDesc": "This project, funded by North South University under project ID CTRG-21-SEPS-15, aims to advance breast cancer diagnosis through the development of cutting-edge techniques for precision segmentation and comprehensive report generation from mammographic images. Led by Dr. Mohammad Monir Uddin, the project leverages advanced image processing and machine learning methodologies to enhance the accuracy and efficiency of detecting and characterizing breast abnormalities in mammograms. The primary objective is to create a robust system capable of precise segmentation of regions of interest in mammographic images, enabling early and accurate identification of potential cancerous lesions. Additionally, the project focuses on generating detailed diagnostic reports that provide actionable insights for medical professionals, thereby improving clinical decision-making and patient outcomes. By integrating computational intelligence with medical imaging, this initiative seeks to address critical challenges in breast cancer diagnostics, contributing to reduced mortality rates and enhanced healthcare delivery.",
         "client": "North South University",
         "date": "2022",
         "location": "North South University, Dhaka",
         "duration": "1 year (Started from April 2022)",
-        "challengeSection": {
-            "heading": "Challenge and Solution",
-            "content": "The primary challenge in breast cancer diagnosis lies in accurately identifying and segmenting subtle abnormalities in mammographic images while minimizing false positives. Our solution leverages multimodal AI techniques combining advanced deep learning architectures with medical domain knowledge to achieve precise segmentation and generate comprehensive diagnostic reports that aid radiologists in making informed decisions."
-        },
-        "benefitsList": [
-            "Enhanced accuracy in detecting breast abnormalities using state-of-the-art AI models",
-            "Early identification of potential cancerous lesions through precision segmentation",
-            "Automated comprehensive report generation for medical professionals",
-            "Improved clinical decision-making with actionable diagnostic insights",
-            "Reduced diagnostic time while maintaining high accuracy standards"
-        ],
-        "additionalSections": [
-            {
-                "heading": "Technical Innovation",
-                "content": "The system integrates cutting-edge computer vision techniques with medical imaging expertise to deliver robust and reliable diagnostic assistance."
-            }
-        ],
-        "contactInfo": {
-            "phone": "+880 1234-567890",
-            "email": "research@bigmatrix.com"
-        }
+        "contentFile": "projects/breast-cancer-diagnosis.md",
+        "value": "Research Grant"
     },
     
     
@@ -42,22 +22,11 @@
         "image": "/assets/images/projects/BM-Academy.png",
         "slug": "bm-academy",
         "desc": "Comprehensive EdTech platform for medical research education, deep learning training, and research paper publication guidance.",
-        "longDesc": "BM-Academy is an innovative educational technology platform designed to empower medical professionals and researchers through quality education and cutting-edge learning experiences. The platform offers live and recorded courses focusing on research methodology in medical engineering with deep learning, clinical research, medical writing, data analysis, ethics, and neuroscience. Key features include dataset selection and preprocessing training, model development and optimization guidance, qualitative and quantitative analysis techniques, scientific research paper writing with LaTeX, high-quality figure preparation, and comprehensive journal selection and submission guidance. With flexible group enrollment options, lifetime course access, professional certification, and live support, BM-Academy transforms careers by providing expert-led courses trusted by leading institutions. The platform has successfully served thousands of students with a 90% completion rate, offering comprehensive support from data preprocessing to research publication.",
         "client": "Big-Matrix Solutions",
         "date": "2024-Present",
         "location": "Online Platform",
         "duration": "Ongoing",
-        "challengeSection": {
-            "heading": "Challenge and Solution",
-            "content": "Medical research education traditionally requires expensive institutional access and lacks practical, hands-on guidance from data preprocessing to publication. BM-Academy solves this by providing comprehensive online courses with lifetime access, combining theoretical knowledge with practical implementation guidance, and offering continuous support throughout the entire research journey."
-        },
-        "benefitsList": [
-            "Expert-led courses covering the complete research lifecycle",
-            "Hands-on training in deep learning and medical data analysis",
-            "LaTeX-based scientific writing and figure preparation skills",
-            "Comprehensive journal selection and submission guidance",
-            "90% course completion rate with professional certification"
-        ],
+        "contentFile": "projects/bm-academy.md",
         "contactInfo": {
             "phone": "+880 1234-567890",
             "email": "academy@bigmatrix.com"
@@ -70,22 +39,11 @@
         "image": "/assets/images/projects/PM-Dashboard.jpeg",
         "slug": "bm-project-management",
         "desc": "Comprehensive project management platform built to solve real-world collaboration challenges, featuring task tracking, team workload management, and project progress monitoring.",
-        "longDesc": "Big-Matrix Project Management Platform is a sophisticated solution developed internally to address the complex challenges of managing multiple concurrent projects across distributed teams. Built on the principle of solving problems as they arise with our technical expertise, this platform emerged from our own operational needs and has become an essential tool for orchestrating our diverse portfolio of healthcare AI, research, and software development initiatives. The platform features comprehensive project tracking with real-time status updates, granular task management with priority levels and due dates, team workload distribution and capacity planning, progress visualization through intuitive dashboards, milestone tracking and deadline management, and collaborative features for seamless team communication. With support for multiple project types ranging from AI research to software development, the system provides complete visibility into active projects, completed tasks, and team member assignments. The dashboard offers at-a-glance metrics including active project counts, total task statistics, completion rates, and team member distribution, enabling informed decision-making and efficient resource allocation across the organization.",
         "client": "Big-Matrix Solutions (Internal)",
         "date": "2023-Present",
         "location": "Internal Platform",
         "duration": "Ongoing",
-        "challengeSection": {
-            "heading": "Challenge and Solution",
-            "content": "Managing multiple concurrent projects across distributed teams requires real-time visibility, efficient task allocation, and seamless communication. Our custom-built platform provides a centralized hub for project tracking, offering intuitive dashboards, automated workload distribution, and collaborative tools that have significantly improved our operational efficiency and team coordination."
-        },
-        "benefitsList": [
-            "Real-time project tracking and status monitoring across all initiatives",
-            "Efficient team workload distribution and capacity planning",
-            "Comprehensive task management with priority levels and deadlines",
-            "Intuitive dashboards for quick decision-making",
-            "Enhanced team collaboration and reduced management overhead"
-        ],
+        "contentFile": "projects/project-management.md",
         "contactInfo": {
             "phone": "+880 1234-567890",
             "email": "projects@bigmatrix.com"

@@ -3,44 +3,15 @@
         "id": 1,
         "slug": "the-rise-of-agentic-ai-from-chatbots-to-autonomous-partners",
         "title": "The Rise of Agentic AI: From Chatbots to Autonomous Partners",
+        "author": "Mera",
         "admin": "Mera",
         "comments": "12",
         "image": "https://images.unsplash.com/photo-1677442136019-21780ecad995?w=800&q=80&auto=format&fit=crop",
         "category": "Agentic AI",
         "desc": "Moving beyond reactive prompts to proactive agents that plan, decide, and execute tasks independently.",
         "date": "Feb 14, 2026",
-        "content": "2025 marked the 'Year of the Agent,' shifting the paradigm from Large Language Models (LLMs) that answer questions to Agentic AI that achieves goals. These systems use advanced reasoning and iterative planning to handle multi-step workflows—like booking travel, managing supply chains, or performing deep research—without constant human oversight. By integrating tools and memory, these agents act as true digital coworkers.",
-        "quote": {
-            "text": "The future of AI is not about answering questions, but about achieving goals autonomously.",
-            "author": "AI Research Lead"
-        },
-        "sections": [
-            {
-                "heading": "Key Capabilities of Agentic AI",
-                "content": "Agentic AI systems demonstrate advanced planning, tool usage, and memory capabilities. They can break down complex tasks into manageable steps, utilize external tools and APIs, and maintain context across multiple interactions."
-            },
-            {
-                "heading": "Real-World Applications",
-                "content": "From enterprise automation to personal assistants, agentic AI is transforming how we approach problem-solving. These systems are already being deployed in customer service, data analysis, and software development workflows."
-            }
-        ],
-        "listItems": [
-            "Autonomous task planning and execution",
-            "Integration with multiple tools and services",
-            "Context-aware decision making",
-            "Continuous learning from interactions"
-        ],
-        "additionalImages": [
-            {
-                "url": "https://images.unsplash.com/photo-1522071820081-009f0129c71c?auto=format&fit=crop&q=80&w=600",
-                "alt": "AI collaboration"
-            },
-            {
-                "url": "https://images.unsplash.com/photo-1556761175-b413da4baf72?auto=format&fit=crop&q=80&w=600",
-                "alt": "AI technology"
-            }
-        ],
-        "tags": ["Agentic AI", "Machine Learning", "Automation"]
+        "contentFile": "blogs/agentic-ai.md",
+        "tags": ["Agentic AI", "Machine Learning", "Automation", "AI Agents"]
     },
     {
         "id": 2,
@@ -52,37 +23,7 @@
         "category": "Software Development",
         "desc": "How the Model Context Protocol (MCP) is revolutionizing how AI agents connect to data and local tools.",
         "date": "Feb 08, 2026",
-        "content": "The introduction of the Model Context Protocol (MCP) has solved one of the biggest hurdles in software development: fragmentation. MCP allows developers to build secure, standardized connections between AI models and their data sources. Whether it's a database, a local IDE, or a cloud service, MCP ensures that agents can access the context they need to provide high-fidelity, actionable code and system analysis.",
-        "quote": {
-            "text": "MCP is bridging the gap between AI capabilities and real-world data access, enabling truly intelligent applications.",
-            "author": "CTO, Tech Solutions"
-        },
-        "sections": [
-            {
-                "heading": "Understanding the Protocol",
-                "content": "MCP provides a standardized way for AI systems to communicate with various data sources and tools. This eliminates the need for custom integrations for each new service or database."
-            },
-            {
-                "heading": "Developer Benefits",
-                "content": "With MCP, developers can focus on building features rather than managing connections. The protocol handles authentication, data formatting, and error handling automatically."
-            }
-        ],
-        "listItems": [
-            "Standardized API for tool integration",
-            "Built-in security and authentication",
-            "Support for multiple data sources",
-            "Easy-to-implement SDKs"
-        ],
-        "additionalImages": [
-            {
-                "url": "https://images.unsplash.com/photo-1451187580459-43490279c0fa?auto=format&fit=crop&q=80&w=600",
-                "alt": "Technology integration"
-            },
-            {
-                "url": "https://images.unsplash.com/photo-1558494949-ef010cbdcc31?auto=format&fit=crop&q=80&w=600",
-                "alt": "Software development"
-            }
-        ],
+        "contentFile": "blogs/mcp-interoperability.md",
         "tags": ["MCP", "Software Development", "AI Integration"]
     },
     {
@@ -95,7 +36,7 @@
         "category": "AI Innovation",
         "desc": "Exploring how quantum processors are beginning to accelerate neural network training and complex simulations.",
         "date": "Jan 25, 2026",
-        "content": "Quantum Machine Learning (QML) is no longer science fiction. Recent breakthroughs in Quantum Key Distribution (QKD) and distributed quantum processors have enabled AI models to tackle optimization problems previously considered unsolvable. This fusion allows for exponential speedups in pharmaceutical research, material science, and high-frequency financial modeling, moving AI into a new era of computational power.",
+        "contentFile": "blogs/quantum-ml.md",
         "tags": ["Quantum Computing", "Machine Learning", "AI Innovation"]
     },
     {
@@ -108,7 +49,7 @@
         "category": "Cyber Security",
         "desc": "Autonomous agents are now monitoring and fixing server vulnerabilities in real-time using Agentic Ops.",
         "date": "Jan 12, 2026",
-        "content": "Agentic Ops represents the next evolution of AIOps. By feeding machine data—logs, metrics, and traces—directly into specialized AI agents, organizations can now achieve 'self-healing' infrastructure. These agents don't just alert humans to a breach; they autonomously isolate affected nodes, rotate security keys, and patch vulnerabilities within seconds, reducing incident response times by up to 90%.",
+        "contentFile": "blogs/agentic-operations.md",
         "tags": ["Cyber Security", "AIOps", "Infrastructure"]
     },
     {
@@ -121,7 +62,7 @@
         "category": "UI Design",
         "desc": "Interfaces that reconfigure themselves in real-time based on user behavior and intent.",
         "date": "Feb 05, 2026",
-        "content": "Static UI is becoming a thing of the past. Native Adaptive Interfaces use generative AI to restructure layouts, change color palettes for accessibility, and prioritize features based on the user's current task. By understanding intent through natural language and behavioral patterns, these interfaces create a seamless 'Bento Box' design that maximizes productivity and minimizes cognitive load.",
+        "contentFile": "blogs/adaptive-interfaces.md",
         "tags": ["UI Design", "UX", "Personalization"]
     },
     {
@@ -134,7 +75,7 @@
         "category": "Software",
         "desc": "Why the industry is moving away from massive models toward efficient, task-specific SLMs.",
         "date": "Jan 02, 2026",
-        "content": "While GPT-4 and Gemini 2.0 paved the way, 2026 is seeing a massive shift toward Small Language Models (SLMs) like Microsoft's Phi-3 or Cisco's Foundation Security Model. These models offer better performance per watt, higher security through local deployment, and significantly lower latency. For developers, this means the ability to run powerful AI reasoning directly on edge devices and smartphones.",
+        "contentFile": "blogs/small-language-models.md",
         "tags": ["Small Language Models", "AI Efficiency", "Edge Computing"]
     }
 ]
