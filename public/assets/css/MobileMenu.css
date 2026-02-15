@@ -18,6 +18,10 @@
     color: white; /* Hamburger icon color */
 }
 
+.transparent-mobile .mobile-menu-toggle {
+    color: white;
+}
+
 /* State: Scrolled or Other pages */
 .white-mobile {
     background: #ffffff;
@@ -25,7 +29,11 @@
     box-shadow: 0 2px 10px rgba(0,0,0,0.1);
 }
 
-/* State: Inner pages (non-home) before scrolling */
+.white-mobile .mobile-menu-toggle {
+    color: #333;
+}
+
+/* State: Inner pages (non-home) before scrolling - BLURRY NAVBAR */
 .inner-mobile {
     background: rgba(255, 255, 255, 0.1);
     backdrop-filter: blur(10px);
@@ -34,11 +42,22 @@
     box-shadow: 0 2px 10px rgba(0, 0, 0, 0.05);
 }
 
+.inner-mobile .mobile-menu-toggle {
+    color: white;
+}
+
 .mobile-menu-toggle {
     background: none;
     border: none;
-    color: inherit; /* Takes color from parent class */
     cursor: pointer;
+    padding: 5px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+
+.mobile-menu-toggle svg {
+    display: block;
 }
 
 /* Off-canvas Side Panel (White background) */

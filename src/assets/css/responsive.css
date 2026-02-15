@@ -322,7 +322,8 @@
 }
 
 .style-two .team-socila-icon-box {
-    left: 108px;
+    left: 50%;
+    transform: translateX(-50%);
     bottom: -21px;
 }
 
@@ -696,7 +697,8 @@
 }
 
 .style-two .team-socila-icon-box {
-    left: 91px;
+    left: 50%;
+    transform: translateX(-50%);
     bottom: -22px;
 }
 
@@ -1485,7 +1487,8 @@ h4.blog-details-title {
 }
 
 .style-two .team-socila-icon-box {
-    left: 148px;
+    left: 50%;
+    transform: translateX(-50%);
     bottom: -26px;
 }
 
@@ -2213,7 +2216,8 @@ p.blog-details-desc {
 }
 
 .style-two .team-socila-icon-box {
-    left: 227px;
+    left: 50%;
+    transform: translateX(-50%);
     bottom: -26px;
 }
 
@@ -3085,7 +3089,8 @@ p.blog-details-desc {
 }
 
 .style-two .team-socila-icon-box {
-    left: 212px;
+    left: 50%;
+    transform: translateX(-50%);
     bottom: -26px;
 }
 
@@ -4121,7 +4126,8 @@ p.blog-details-desc {
 }
 
 .style-two .team-socila-icon-box {
-    left: 133px;
+    left: 50%;
+    transform: translateX(-50%);
     bottom: -21px;
 }
 
