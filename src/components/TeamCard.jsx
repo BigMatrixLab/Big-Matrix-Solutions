@@ -1,34 +1,32 @@
 import React from 'react';
 import { Link } from 'react-router-dom';
+import '/src/assets/css/TeamCard.css';
 
-const TeamCard = ({ member, activeTeamId, onToggleSocial }) => {
+const TeamCard = ({ member }) => {
     return (
-        <div className="single-team-box">
-            <div className="team-thumb">
-                <img src={member.image} alt={member.name} />
-            </div>
-            <div className="team-content">
-                <h4><Link to={`/team/${member.slug}`}>{member.name}</Link></h4>
-                <p>{member.role}</p>
-                <div className="team-shape">
-                    <img src="/assets/images/team/team-shape.png" alt="" />
-                </div>
-            </div>
-            <div className="team-socila-icon-box">
-                <div className="team-share">
-                    <div className="team-share-icon">
-                        <span><i className="bi bi-share"></i></span>
+        <div className="aesthetic-card">
+            <div className="card-media">
+                <img src={member.image} alt={member.name} className="member-image" />
+                
+                {/* Icon-First Social Trigger */}
+                <div className="social-glass-tray">
+                    <div className="icon-list">
+                        {member.social?.linkedin && <Link to={member.social.linkedin} className="s-link"><i className="bi bi-linkedin"></i></Link>}
+                        {member.social?.github && <Link to={member.social.github} className="s-link"><i className="bi bi-github"></i></Link>}
+                        {member.social?.scholar && <Link to={member.social.scholar} className="s-link"><i className="bi bi-mortarboard"></i></Link>}
+                        {member.social?.website && <Link to={member.social.website} className="s-link"><i className="bi bi-globe"></i></Link>}
                     </div>
                 </div>
-                <div className="team-social-icon">
-                    <ul>
-                        {member.social?.facebook && <li><Link to={member.social.facebook}><i className="bi bi-facebook"></i></Link></li>}
-                        {member.social?.linkedin && <li><Link to={member.social.linkedin}><i className="bi bi-linkedin"></i></Link></li>}
-                        {member.social?.github && <li><Link to={member.social.github}><i className="bi bi-github"></i></Link></li>}
-                        {member.social?.scholar && <li><Link to={member.social.scholar}><i className="bi bi-mortarboard"></i></Link></li>}
-                        {member.social?.website && <li><Link to={member.social.website}><i className="bi bi-globe"></i></Link></li>}
-                    </ul>
+            </div>
+
+            <div className="card-info">
+                <div className="text-content">
+                    <Link to={`/team/${member.slug}`} className="member-name">
+                        {member.name}
+                    </Link>
+                    <p className="member-role">{member.role}</p>
                 </div>
+                <div className="card-accent-line"></div>
             </div>
         </div>
     );
