@@ -64,7 +64,7 @@ const AboutOne = () => {
 
            
             {/* Mission Vison Area */}
-            <div className="mission-area inner-style">
+            <div className="mission-area inner-style" style={{ paddingTop: '80px' }}>
                 <div className="container">
                     
 
@@ -113,8 +113,12 @@ const AboutOne = () => {
                 </div>
             </div>
 
-            <TeamArea />
-            <TestimonialArea />
+            <div style={{ paddingTop: '80px' }}>
+                <TeamArea />
+            </div>
+            <div style={{ paddingTop: '80px' }}>
+                <TestimonialArea />
+            </div>
 
         </>
     );
