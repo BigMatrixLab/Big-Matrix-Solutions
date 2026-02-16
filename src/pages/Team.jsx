@@ -34,7 +34,7 @@ const Team = () => {
                         </div>
                         
                     </div>
-                    <div className="row">
+                    <div className="row g-4">
                         {teamMembers.map((member) => (
                             <div className="col-lg-3 col-md-6" key={member.id}>
                                 <TeamCard 
