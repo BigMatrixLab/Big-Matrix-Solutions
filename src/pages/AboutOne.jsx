@@ -70,7 +70,7 @@ const AboutOne = () => {
 
                     {/* Mission */}
                     <ValueSection
-                        image="/assets/images/Mission.jpeg"
+                        icon="target"
                         title="Our Mission"
                         description="To engineer advanced AI and big data platforms that transform how the world operates."
                         items={[
@@ -84,22 +84,22 @@ const AboutOne = () => {
                     />
 
                     {/* Vision */}
-                    <ValueSection
-                        image="/assets/images/Vision.jpg"
-                        title="Our Vision"
-                        description="To architect the intelligent infrastructure of the future."
-                        items={[
-                            "Integrated Ecosystems replace fragmented software, creating seamless connectivity across healthcare, pharma, and industry.",
-                            "AI-Driven Decision Making is the global standard for clinical accuracy, industrial efficiency, and public health safety.",
-                            "Scalable Intelligence is accessible at every level—from individual clinics to national government infrastructures.",
-                            "Data-Driven Prediction eliminates systemic waste and prepares society for future health and industrial challenges."
-                        ]}
-                        reversed={false}
-                    />
+                       <ValueSection
+                            icon="eye"
+                            title="Our Vision"
+                            description="To architect the intelligent infrastructure of the future."
+                            items={[
+                                "Integrated Ecosystems replace fragmented software, creating seamless connectivity across healthcare, pharma, and industry.",
+                                "AI-Driven Decision Making is the global standard for clinical accuracy, industrial efficiency, and public health safety.",
+                                "Scalable Intelligence is accessible at every level—from individual clinics to national government infrastructures.",
+                                "Data-Driven Prediction eliminates systemic waste and prepares society for future health and industrial challenges."
+                            ]}
+                            reversed={false}
+                        />
+                   
 
-                    
                     <ValueSection
-                        image="/assets/images/Core_Values.jpg"
+                        icon="stars"
                         title="Core Values"
                         description="The principles that guide our work and define our commitment to excellence."
                         items={[
