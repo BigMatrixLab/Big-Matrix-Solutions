@@ -10,17 +10,17 @@ const TestimonialArea = () => {
 
     // Swiper options based on original owl carousel settings
     const swiperOptions = {
-        modules: [Autoplay, Navigation, Pagination],
+        modules: [Autoplay, Navigation],
         loop: true,
         autoplay: {
             delay: 10000,
             disableOnInteraction: false,
         },
-        pagination: {
-            clickable: true,
-            bulletClass: 'swiper-pagination-bullet owl-dot',
-            bulletActiveClass: 'swiper-pagination-bullet-active active',
-        },
+        // pagination: {
+        //     clickable: true,
+        //     bulletClass: 'swiper-pagination-bullet owl-dot',
+        //     bulletActiveClass: 'swiper-pagination-bullet-active active',
+        // },
         navigation: true, // You might need to style the swiper navigation buttons or create custom ones
         breakpoints: {
             0: { slidesPerView: 1 },
@@ -49,7 +49,15 @@ const TestimonialArea = () => {
                                 <div className="col-lg-12 text-center">
                                     <div className="single-testimonial-box">
                                         <div className="testi-desc">
-                                            <p>{testimonial.feedback}</p>
+                                            <p
+                                                style={
+                                                    window.innerWidth <= 767
+                                                        ? { paddingTop: 8, marginTop: 0 }
+                                                        : undefined
+                                                }
+                                            >
+                                                {testimonial.feedback}
+                                            </p>
                                         </div>
                                         <div className="testi-rating">
                                             <ul>
