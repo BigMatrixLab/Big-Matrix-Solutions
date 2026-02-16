@@ -1,576 +1,352 @@
 [
-    {
-        "id": 1,
-        "name": "Prof. Dr. M. Monir Uddin",
-        "role": "Co Founder & Director",
-        "image": "https://res.cloudinary.com/dcfny0d5c/image/upload/v1770876609/628129644_122121908115065415_2237224563181312677_n_d4uprj.jpg",
-        "slug": "monir-uddin",
-        "desc": "Professor at the Department of Mathematics & Physics, North South University, Dhaka, Bangladesh. Leading cutting-edge research in AI, healthcare, and mathematical modeling.",
-        "phone": "+880-2-55668200",
-        "email": "monir.uddin@northsouth.edu",
-        "location": "Dhaka, Bangladesh",
-        "social": {
-            "facebook": "#",
-            "twitter": "#",
-            "linkedin": "#",
-            "instagram": "#",
-            "pinterest": "#",
-            "github": "#",
-            "scholar": "#",
-            "website": "#"
-        },
-        "skills": [
-            {
-                "name": "AI in Healthcare",
-                "value": "98%"
-            },
-            {
-                "name": "Mathematical Modeling",
-                "value": "95%"
-            }
-        ],
-        "projects": [
-            {
-                "name": "Breast Cancer AI System",
-                "value": "95%"
-            },
-            {
-                "name": "Model Order Reduction",
-                "value": "92%"
-            }
-        ]
+  {
+    "id": 1,
+    "name": "Prof. Dr. M. Monir Uddin",
+    "role": "Co Founder & Director",
+    "image": "https://res.cloudinary.com/dcfny0d5c/image/upload/v1770876609/628129644_122121908115065415_2237224563181312677_n_d4uprj.jpg",
+    "slug": "monir-uddin",
+    "desc": "Professor at the Department of Mathematics & Physics, North South University, Dhaka, Bangladesh. Leading cutting-edge research in AI, healthcare, and mathematical modeling.",
+    "phone": "+880-2-55668200",
+    "email": "monir.uddin@northsouth.edu",
+    "location": "Dhaka, Bangladesh",
+    "social": {
+      "linkedin": "#",
+      "github": "#",
+      "scholar": "#",
+      "website": "#"
     },
-    {
-        "id": 2,
-        "name": "Dr. Mohammad Ashrafuzzaman Khan",
-        "role": "Co Founder",
-        "image": "https://res.cloudinary.com/dcfny0d5c/image/upload/v1762248207/big-matrix/photos/mohammadkhan.jpg",
-        "slug": "mohammad-ashrafuzzaman-khan",
-        "desc": "Expert in healthcare technology and AI-driven solutions. Contributing innovative approaches to medical research and computational systems.",
-        "phone": "+880-2-55668200",
-        "email": "bigmatrixlab@gmail.com",
-        "location": "Dhaka, Bangladesh",
-        "social": {
-            "facebook": "#",
-            "twitter": "#",
-            "linkedin": "#",
-            "instagram": "#",
-            "pinterest": "#",
-            "github": "#",
-            "scholar": "#",
-            "website": "#"
-        },
-        "skills": [
-            {
-                "name": "Healthcare Technology",
-                "value": "96%"
-            },
-            {
-                "name": "AI Solutions",
-                "value": "94%"
-            }
-        ],
-        "projects": [
-            {
-                "name": "Medical Systems",
-                "value": "92%"
-            },
-            {
-                "name": "AI Integration",
-                "value": "90%"
-            }
-        ]
+    "skills": [
+      { "name": "AI in Healthcare", "value": "98%" },
+      { "name": "Mathematical Modeling", "value": "95%" }
+    ],
+    "projects": [
+      { "name": "Breast Cancer AI System", "value": "95%" },
+      { "name": "Model Order Reduction", "value": "92%" }
+    ]
+  },
+  {
+    "id": 2,
+    "name": "Dr. Mohammad Ashrafuzzaman Khan",
+    "role": "Co Founder",
+    "image": "https://res.cloudinary.com/dcfny0d5c/image/upload/v1762248207/big-matrix/photos/mohammadkhan.jpg",
+    "slug": "mohammad-ashrafuzzaman-khan",
+    "desc": "Expert in healthcare technology and AI-driven solutions. Contributing innovative approaches to medical research and computational systems.",
+    "phone": "+880-2-55668200",
+    "email": "bigmatrixlab@gmail.com",
+    "location": "Dhaka, Bangladesh",
+    "social": {
+      "linkedin": "#",
+      "github": "#",
+      "scholar": "#",
+      "website": "#"
     },
-    {
-        "id": 3,
-        "name": "Prof. Dr. Md. Afzalur Rahman",
-        "role": "Co Founder",
-        "image": "https://res.cloudinary.com/dcfny0d5c/image/upload/v1762248147/big-matrix/photos/Afzalur.jpg",
-        "slug": "afzalur-rahman",
-        "desc": "Distinguished professor specializing in advanced computational methods and research methodologies for healthcare applications.",
-        "phone": "+880-2-55668200",
-        "email": "bigmatrixlab@gmail.com",
-        "location": "Dhaka, Bangladesh",
-        "social": {
-            "facebook": "#",
-            "twitter": "#",
-            "linkedin": "#",
-            "instagram": "#",
-            "pinterest": "#",
-            "github": "#",
-            "scholar": "#",
-            "website": "#"
-        },
-        "skills": [
-            {
-                "name": "Computational Methods",
-                "value": "97%"
-            },
-            {
-                "name": "Research Leadership",
-                "value": "95%"
-            }
-        ],
-        "projects": [
-            {
-                "name": "Advanced Analytics",
-                "value": "93%"
-            },
-            {
-                "name": "Research Projects",
-                "value": "91%"
-            }
-        ]
+    "skills": [
+      { "name": "Healthcare Technology", "value": "96%" },
+      { "name": "AI Solutions", "value": "94%" }
+    ],
+    "projects": [
+      { "name": "Medical Systems", "value": "92%" },
+      { "name": "AI Integration", "value": "90%" }
+    ]
+  },
+  {
+    "id": 3,
+    "name": "Prof. Dr. Md. Afzalur Rahman",
+    "role": "Co Founder",
+    "image": "https://res.cloudinary.com/dcfny0d5c/image/upload/v1762248147/big-matrix/photos/Afzalur.jpg",
+    "slug": "afzalur-rahman",
+    "desc": "Distinguished professor specializing in advanced computational methods and research methodologies for healthcare applications.",
+    "phone": "+880-2-55668200",
+    "email": "bigmatrixlab@gmail.com",
+    "location": "Dhaka, Bangladesh",
+    "social": {
+      "linkedin": "#",
+      "github": "#",
+      "scholar": "#",
+      "website": "#"
     },
-    {
-        "id": 4,
-        "name": "Dr. Md. Arifur Rahman",
-        "role": "Co Founder",
-        "image": "http://res.cloudinary.com/dcfny0d5c/image/upload/v1762248151/big-matrix/photos/Arifur_Rahman.png",
-        "slug": "arifur-rahman",
-        "desc": "Experienced researcher focusing on data-driven healthcare solutions and machine learning applications in medical diagnostics.",
-        "phone": "+880-2-55668200",
-        "email": "bigmatrixlab@gmail.com",
-        "location": "Dhaka, Bangladesh",
-        "social": {
-            "facebook": "#",
-            "twitter": "#",
-            "linkedin": "#",
-            "instagram": "#",
-            "pinterest": "#",
-            "github": "#",
-            "scholar": "#",
-            "website": "#"
-        },
-        "skills": [
-            {
-                "name": "Machine Learning",
-                "value": "95%"
-            },
-            {
-                "name": "Data Analytics",
-                "value": "93%"
-            }
-        ],
-        "projects": [
-            {
-                "name": "Diagnostic Systems",
-                "value": "91%"
-            },
-            {
-                "name": "ML Applications",
-                "value": "89%"
-            }
-        ]
+    "skills": [
+      { "name": "Computational Methods", "value": "97%" },
+      { "name": "Research Leadership", "value": "95%" }
+    ],
+    "projects": [
+      { "name": "Advanced Analytics", "value": "93%" },
+      { "name": "Research Projects", "value": "91%" }
+    ]
+  },
+  {
+    "id": 4,
+    "name": "Dr. Md. Arifur Rahman",
+    "role": "Co Founder",
+    "image": "http://res.cloudinary.com/dcfny0d5c/image/upload/v1762248151/big-matrix/photos/Arifur_Rahman.png",
+    "slug": "arifur-rahman",
+    "desc": "Experienced researcher focusing on data-driven healthcare solutions and machine learning applications in medical diagnostics.",
+    "phone": "+880-2-55668200",
+    "email": "bigmatrixlab@gmail.com",
+    "location": "Dhaka, Bangladesh",
+    "social": {
+      "linkedin": "#",
+      "github": "#",
+      "scholar": "#",
+      "website": "#"
     },
-    {
-        "id": 5,
-        "name": "Mahmud Hasan Mostofa Kamal",
-        "role": "Co Founder",
-        "image": "https://res.cloudinary.com/dcfny0d5c/image/upload/v1764169278/big-matrix/photos/WhatsApp_Image_2025-11-26_at_4.55.07_PM_oyco2i.jpg",
-        "slug": "mahmud-hasan-kamal",
-        "desc": "Innovative technologist specializing in software development and AI system architecture for healthcare applications.",
-        "phone": "+880-2-55668200",
-        "email": "bigmatrixlab@gmail.com",
-        "location": "Dhaka, Bangladesh",
-        "social": {
-            "facebook": "#",
-            "twitter": "#",
-            "linkedin": "#",
-            "instagram": "#",
-            "pinterest": "#",
-            "github": "#",
-            "scholar": "#",
-            "website": "#"
-        },
-        "skills": [
-            {
-                "name": "Software Development",
-                "value": "94%"
-            },
-            {
-                "name": "System Architecture",
-                "value": "92%"
-            }
-        ],
-        "projects": [
-            {
-                "name": "Healthcare Platforms",
-                "value": "90%"
-            },
-            {
-                "name": "AI Systems",
-                "value": "88%"
-            }
-        ]
+    "skills": [
+      { "name": "Machine Learning", "value": "95%" },
+      { "name": "Data Analytics", "value": "93%" }
+    ],
+    "projects": [
+      { "name": "Diagnostic Systems", "value": "91%" },
+      { "name": "ML Applications", "value": "89%" }
+    ]
+  },
+  {
+    "id": 5,
+    "name": "Mahmud Hasan Mostofa Kamal",
+    "role": "Co Founder",
+    "image": "https://res.cloudinary.com/dcfny0d5c/image/upload/v1764169278/big-matrix/photos/WhatsApp_Image_2025-11-26_at_4.55.07_PM_oyco2i.jpg",
+    "slug": "mahmud-hasan-kamal",
+    "desc": "Innovative technologist specializing in software development and AI system architecture for healthcare applications.",
+    "phone": "+880-2-55668200",
+    "email": "bigmatrixlab@gmail.com",
+    "location": "Dhaka, Bangladesh",
+    "social": {
+      "linkedin": "#",
+      "github": "#",
+      "scholar": "#",
+      "website": "#"
     },
-    {
-        "id": 6,
-        "name": "Prof. Dr. Shirin Tarafder",
-        "role": "Co Founder",
-        "image": "https://res.cloudinary.com/dcfny0d5c/image/upload/v1762248172/big-matrix/photos/Dr_Shirin.jpg",
-        "slug": "shirin-tarafder",
-        "desc": "Former Dean, Faculty of Basic Science and Paraclinical Science, Bangladesh Medical University (BMU). Expert in medical sciences and healthcare research.",
-        "phone": "+880-2-55668200",
-        "email": "starafder2007@yahoo.com",
-        "location": "Dhaka, Bangladesh",
-        "social": {
-            "facebook": "#",
-            "twitter": "#",
-            "linkedin": "#",
-            "instagram": "#",
-            "pinterest": "#",
-            "github": "#",
-            "scholar": "#",
-            "website": "#"
-        },
-        "skills": [
-            {
-                "name": "Medical Research",
-                "value": "95%"
-            },
-            {
-                "name": "Healthcare Strategy",
-                "value": "92%"
-            }
-        ],
-        "projects": [
-            {
-                "name": "Medical AI Systems",
-                "value": "90%"
-            },
-            {
-                "name": "Clinical Research",
-                "value": "85%"
-            }
-        ]
+    "skills": [
+      { "name": "Software Development", "value": "94%" },
+      { "name": "System Architecture", "value": "92%" }
+    ],
+    "projects": [
+      { "name": "Healthcare Platforms", "value": "90%" },
+      { "name": "AI Systems", "value": "88%" }
+    ]
+  },
+  {
+    "id": 6,
+    "name": "Prof. Dr. Shirin Tarafder",
+    "role": "Co Founder",
+    "image": "https://res.cloudinary.com/dcfny0d5c/image/upload/v1762248172/big-matrix/photos/Dr_Shirin.jpg",
+    "slug": "shirin-tarafder",
+    "desc": "Former Dean, Faculty of Basic Science and Paraclinical Science, Bangladesh Medical University (BMU). Expert in medical sciences and healthcare research.",
+    "phone": "+880-2-55668200",
+    "email": "starafder2007@yahoo.com",
+    "location": "Dhaka, Bangladesh",
+    "social": {
+      "linkedin": "#",
+      "github": "#",
+      "scholar": "#",
+      "website": "#"
     },
-    {
-        "id": 7,
-        "name": "Dr. Sheikh Anisul Haque",
-        "role": "Co Founder",
-        "image": "https://res.cloudinary.com/dcfny0d5c/image/upload/v1762248148/big-matrix/photos/ANIS_Photo.jpg",
-        "slug": "sheikh-anisul-haque",
-        "desc": "Specialist in medical informatics and healthcare data systems, bridging medical knowledge with technology solutions.",
-        "phone": "+880-2-55668200",
-        "email": "bigmatrixlab@gmail.com",
-        "location": "Dhaka, Bangladesh",
-        "social": {
-            "facebook": "#",
-            "twitter": "#",
-            "linkedin": "#",
-            "instagram": "#",
-            "pinterest": "#",
-            "github": "#",
-            "scholar": "#",
-            "website": "#"
-        },
-        "skills": [
-            {
-                "name": "Medical Informatics",
-                "value": "94%"
-            },
-            {
-                "name": "Health Data Systems",
-                "value": "91%"
-            }
-        ],
-        "projects": [
-            {
-                "name": "Healthcare Databases",
-                "value": "89%"
-            },
-            {
-                "name": "Clinical Analytics",
-                "value": "87%"
-            }
-        ]
+    "skills": [
+      { "name": "Medical Research", "value": "95%" },
+      { "name": "Healthcare Strategy", "value": "92%" }
+    ],
+    "projects": [
+      { "name": "Medical AI Systems", "value": "90%" },
+      { "name": "Clinical Research", "value": "85%" }
+    ]
+  },
+  {
+    "id": 7,
+    "name": "Dr. Sheikh Anisul Haque",
+    "role": "Co Founder",
+    "image": "https://res.cloudinary.com/dcfny0d5c/image/upload/v1762248148/big-matrix/photos/ANIS_Photo.jpg",
+    "slug": "sheikh-anisul-haque",
+    "desc": "Specialist in medical informatics and healthcare data systems, bridging medical knowledge with technology solutions.",
+    "phone": "+880-2-55668200",
+    "email": "bigmatrixlab@gmail.com",
+    "location": "Dhaka, Bangladesh",
+    "social": {
+      "linkedin": "#",
+      "github": "#",
+      "scholar": "#",
+      "website": "#"
     },
-    {
-        "id": 8,
-        "name": "Md. Tanzim Hossain",
-        "role": "Co Founder & COO",
-        "image": "https://res.cloudinary.com/dcfny0d5c/image/upload/v1762248257/big-matrix/photos/Tanzim.jpg",
-        "slug": "tanzim-hossain",
-        "desc": "Software engineer and AI specialist focusing on developing scalable healthcare solutions and deep learning models.",
-        "phone": "+880-2-55668200",
-        "email": "bigmatrixlab@gmail.com",
-        "location": "Dhaka, Bangladesh",
-        "social": {
-            "facebook": "#",
-            "twitter": "#",
-            "linkedin": "#",
-            "instagram": "#",
-            "pinterest": "#",
-            "github": "#",
-            "scholar": "#",
-            "website": "#"
-        },
-        "skills": [
-            {
-                "name": "Deep Learning",
-                "value": "93%"
-            },
-            {
-                "name": "Software Engineering",
-                "value": "91%"
-            }
-        ],
-        "projects": [
-            {
-                "name": "AI Models",
-                "value": "90%"
-            },
-            {
-                "name": "Healthcare Apps",
-                "value": "88%"
-            }
-        ]
+    "skills": [
+      { "name": "Medical Informatics", "value": "94%" },
+      { "name": "Health Data Systems", "value": "91%" }
+    ],
+    "projects": [
+      { "name": "Healthcare Databases", "value": "89%" },
+      { "name": "Clinical Analytics", "value": "87%" }
+    ]
+  },
+  {
+    "id": 8,
+    "name": "Md. Tanzim Hossain",
+    "role": "Co Founder & COO",
+    "image": "https://res.cloudinary.com/dcfny0d5c/image/upload/v1762248257/big-matrix/photos/Tanzim.jpg",
+    "slug": "tanzim-hossain",
+    "desc": "Software engineer and AI specialist focusing on developing scalable healthcare solutions and deep learning models.",
+    "phone": "+880-2-55668200",
+    "email": "bigmatrixlab@gmail.com",
+    "location": "Dhaka, Bangladesh",
+    "social": {
+      "linkedin": "#",
+      "github": "#",
+      "scholar": "#",
+      "website": "#"
     },
-    {
-        "id": 9,
-        "name": "Istiak Ahmed",
-        "role": "Co Founder & Research Lead",
-        "image": "https://res.cloudinary.com/dcfny0d5c/image/upload/v1762248182/big-matrix/photos/Istiak_Ahmed.jpg",
-        "slug": "istiak-ahmed",
-        "desc": "Technology innovator specializing in AI implementation and medical image processing for diagnostic applications.",
-        "phone": "+880-2-55668200",
-        "email": "bigmatrixlab@gmail.com",
-        "location": "Dhaka, Bangladesh",
-        "social": {
-            "facebook": "#",
-            "twitter": "#",
-            "linkedin": "#",
-            "instagram": "#",
-            "pinterest": "#",
-            "github": "#",
-            "scholar": "#",
-            "website": "#"
-        },
-        "skills": [
-            {
-                "name": "AI Implementation",
-                "value": "92%"
-            },
-            {
-                "name": "Image Processing",
-                "value": "90%"
-            }
-        ],
-        "projects": [
-            {
-                "name": "Diagnostic Tools",
-                "value": "89%"
-            },
-            {
-                "name": "Medical Imaging",
-                "value": "87%"
-            }
-        ]
+    "skills": [
+      { "name": "Deep Learning", "value": "93%" },
+      { "name": "Software Engineering", "value": "91%" }
+    ],
+    "projects": [
+      { "name": "AI Models", "value": "90%" },
+      { "name": "Healthcare Apps", "value": "88%" }
+    ]
+  },
+  {
+    "id": 9,
+    "name": "Istiak Ahmed",
+    "role": "Co Founder & Research Lead",
+    "image": "https://res.cloudinary.com/dcfny0d5c/image/upload/v1762248182/big-matrix/photos/Istiak_Ahmed.jpg",
+    "slug": "istiak-ahmed",
+    "desc": "Technology innovator specializing in AI implementation and medical image processing for diagnostic applications.",
+    "phone": "+880-2-55668200",
+    "email": "bigmatrixlab@gmail.com",
+    "location": "Dhaka, Bangladesh",
+    "social": {
+      "linkedin": "#",
+      "github": "#",
+      "scholar": "#",
+      "website": "#"
     },
-    {
-        "id": 10,
-        "name": "Kazi Shahriar Sanjid",
-        "role": "Co Founder & CTO",
-        "image": "https://res.cloudinary.com/dcfny0d5c/image/upload/v1762248242/big-matrix/photos/sanjid_RcFg8Tz.jpg",
-        "slug": "kazi-shahriar-sanjid",
-        "desc": "Data scientist with expertise in predictive analytics and AI-powered healthcare solutions for improved patient outcomes.",
-        "phone": "+880-2-55668200",
-        "email": "bigmatrixlab@gmail.com",
-        "location": "Dhaka, Bangladesh",
-        "social": {
-            "facebook": "#",
-            "twitter": "#",
-            "linkedin": "#",
-            "instagram": "#",
-            "pinterest": "#",
-            "github": "#",
-            "scholar": "#",
-            "website": "#"
-        },
-        "skills": [
-            {
-                "name": "Predictive Analytics",
-                "value": "93%"
-            },
-            {
-                "name": "Data Science",
-                "value": "91%"
-            }
-        ],
-        "projects": [
-            {
-                "name": "Patient Analytics",
-                "value": "90%"
-            },
-            {
-                "name": "Outcome Prediction",
-                "value": "88%"
-            }
-        ]
+    "skills": [
+      { "name": "AI Implementation", "value": "92%" },
+      { "name": "Image Processing", "value": "90%" }
+    ],
+    "projects": [
+      { "name": "Diagnostic Tools", "value": "89%" },
+      { "name": "Medical Imaging", "value": "87%" }
+    ]
+  },
+  {
+    "id": 10,
+    "name": "Kazi Shahriar Sanjid",
+    "role": "Co Founder & CTO",
+    "image": "https://res.cloudinary.com/dcfny0d5c/image/upload/v1762248242/big-matrix/photos/sanjid_RcFg8Tz.jpg",
+    "slug": "kazi-shahriar-sanjid",
+    "desc": "Data scientist with expertise in predictive analytics and AI-powered healthcare solutions for improved patient outcomes.",
+    "phone": "+880-2-55668200",
+    "email": "bigmatrixlab@gmail.com",
+    "location": "Dhaka, Bangladesh",
+    "social": {
+      "linkedin": "#",
+      "github": "#",
+      "scholar": "#",
+      "website": "#"
     },
-    {
-        "id": 11,
-        "name": "Md. Nishan Khan",
-        "role": "Co Founder & Lead Developer",
-        "image": "https://res.cloudinary.com/dcfny0d5c/image/upload/v1762248220/big-matrix/photos/NishanKhan.jpg",
-        "slug": "nishan-khan",
-        "desc": "Full-stack developer and AI engineer building robust healthcare platforms and intelligent medical systems.",
-        "phone": "+880-2-55668200",
-        "email": "bigmatrixlab@gmail.com",
-        "location": "Dhaka, Bangladesh",
-        "social": {
-            "facebook": "#",
-            "twitter": "#",
-            "linkedin": "#",
-            "instagram": "#",
-            "pinterest": "#",
-            "github": "#",
-            "scholar": "#",
-            "website": "#"
-        },
-        "skills": [
-            {
-                "name": "Full-Stack Development",
-                "value": "92%"
-            },
-            {
-                "name": "AI Engineering",
-                "value": "90%"
-            }
-        ],
-        "projects": [
-            {
-                "name": "Healthcare Platforms",
-                "value": "91%"
-            },
-            {
-                "name": "Medical Systems",
-                "value": "89%"
-            }
-        ]
+    "skills": [
+      { "name": "Predictive Analytics", "value": "93%" },
+      { "name": "Data Science", "value": "91%" }
+    ],
+    "projects": [
+      { "name": "Patient Analytics", "value": "90%" },
+      { "name": "Outcome Prediction", "value": "88%" }
+    ]
+  },
+  {
+    "id": 11,
+    "name": "Md. Nishan Khan",
+    "role": "Co Founder & Lead Developer",
+    "image": "https://res.cloudinary.com/dcfny0d5c/image/upload/v1762248220/big-matrix/photos/NishanKhan.jpg",
+    "slug": "nishan-khan",
+    "desc": "Full-stack developer and AI engineer building robust healthcare platforms and intelligent medical systems.",
+    "phone": "+880-2-55668200",
+    "email": "bigmatrixlab@gmail.com",
+    "location": "Dhaka, Bangladesh",
+    "social": {
+      "linkedin": "#",
+      "github": "#",
+      "scholar": "#",
+      "website": "#"
     },
-    {
-        "id": 12,
-        "name": "Galib Ahmed",
-        "role": "Co Founder & AI Specialist",
-        "image": "https://res.cloudinary.com/dcfny0d5c/image/upload/v1762248181/big-matrix/photos/Galib.jpg",
-        "slug": "galib-ahmed",
-        "desc": "Machine learning specialist focusing on natural language processing and computer vision for healthcare applications.",
-        "phone": "+880-2-55668200",
-        "email": "bigmatrixlab@gmail.com",
-        "location": "Dhaka, Bangladesh",
-        "social": {
-            "facebook": "#",
-            "twitter": "#",
-            "linkedin": "#",
-            "instagram": "#",
-            "pinterest": "#",
-            "github": "#",
-            "scholar": "#",
-            "website": "#"
-        },
-        "skills": [
-            {
-                "name": "Natural Language Processing",
-                "value": "91%"
-            },
-            {
-                "name": "Computer Vision",
-                "value": "89%"
-            }
-        ],
-        "projects": [
-            {
-                "name": "Medical NLP",
-                "value": "88%"
-            },
-            {
-                "name": "Vision Systems",
-                "value": "86%"
-            }
-        ]
+    "skills": [
+      { "name": "Full-Stack Development", "value": "92%" },
+      { "name": "AI Engineering", "value": "90%" }
+    ],
+    "projects": [
+      { "name": "Healthcare Platforms", "value": "91%" },
+      { "name": "Medical Systems", "value": "89%" }
+    ]
+  },
+  {
+    "id": 12,
+    "name": "Galib Ahmed",
+    "role": "Co Founder & AI Specialist",
+    "image": "https://res.cloudinary.com/dcfny0d5c/image/upload/v1762248181/big-matrix/photos/Galib.jpg",
+    "slug": "galib-ahmed",
+    "desc": "Machine learning specialist focusing on natural language processing and computer vision for healthcare applications.",
+    "phone": "+880-2-55668200",
+    "email": "bigmatrixlab@gmail.com",
+    "location": "Dhaka, Bangladesh",
+    "social": {
+      "linkedin": "#",
+      "github": "#",
+      "scholar": "#",
+      "website": "#"
     },
-    {
-        "id": 13,
-        "name": "Md. Misbah Khan",
-        "role": "Co Founder & Junior Developer",
-        "image": "https://res.cloudinary.com/dcfny0d5c/image/upload/v1762248204/big-matrix/photos/MisbahKhan.jpg",
-        "slug": "misbah-khan",
-        "desc": "Cloud architect and DevOps specialist ensuring scalable, secure deployment of AI-powered healthcare solutions.",
-        "phone": "+880-2-55668200",
-        "email": "bigmatrixlab@gmail.com",
-        "location": "Dhaka, Bangladesh",
-        "social": {
-            "facebook": "#",
-            "twitter": "#",
-            "linkedin": "#",
-            "instagram": "#",
-            "pinterest": "#",
-            "github": "#",
-            "scholar": "#",
-            "website": "#"
-        },
-        "skills": [
-            {
-                "name": "Cloud Architecture",
-                "value": "92%"
-            },
-            {
-                "name": "DevOps",
-                "value": "90%"
-            }
-        ],
-        "projects": [
-            {
-                "name": "Cloud Infrastructure",
-                "value": "91%"
-            },
-            {
-                "name": "CI/CD Pipelines",
-                "value": "89%"
-            }
-        ]
+    "skills": [
+      { "name": "Natural Language Processing", "value": "91%" },
+      { "name": "Computer Vision", "value": "89%" }
+    ],
+    "projects": [
+      { "name": "Medical NLP", "value": "88%" },
+      { "name": "Vision Systems", "value": "86%" }
+    ]
+  },
+  {
+    "id": 13,
+    "name": "Md. Misbah Khan",
+    "role": "Co Founder & Junior Developer",
+    "image": "https://res.cloudinary.com/dcfny0d5c/image/upload/v1762248204/big-matrix/photos/MisbahKhan.jpg",
+    "slug": "misbah-khan",
+    "desc": "Cloud architect and DevOps specialist ensuring scalable, secure deployment of AI-powered healthcare solutions.",
+    "phone": "+880-2-55668200",
+    "email": "bigmatrixlab@gmail.com",
+    "location": "Dhaka, Bangladesh",
+    "social": {
+      "linkedin": "https://www.linkedin.com/in/misbah-khan-mejba/",
+      "github": "https://github.com/MisbahKhan0009",
+      "scholar": "https://scholar.google.com/citations?user=NAoyue0AAAAJ",
+      "website": "http://misbah-khan.me/"
     },
-    {
-        "id": 14,
-        "name": "Md. Jobaer Rahman",
-        "role": "Co Founder & Research Associate",
-        "image": "https://res.cloudinary.com/dcfny0d5c/image/upload/v1762248184/big-matrix/photos/JobaerRahman.jpg",
-        "slug": "jobaer-rahman",
-        "desc": "Backend engineer and database specialist developing efficient data management systems for healthcare applications.",
-        "phone": "+880-2-55668200",
-        "email": "bigmatrixlab@gmail.com",
-        "location": "Dhaka, Bangladesh",
-        "social": {
-            "facebook": "#",
-            "twitter": "#",
-            "linkedin": "#",
-            "instagram": "#",
-            "pinterest": "#",
-            "github": "#",
-            "scholar": "#",
-            "website": "#"
-        },
-        "skills": [
-            {
-                "name": "Backend Development",
-                "value": "91%"
-            },
-            {
-                "name": "Database Management",
-                "value": "89%"
-            }
-        ],
-        "projects": [
-            {
-                "name": "Data Systems",
-                "value": "90%"
-            },
-            {
-                "name": "API Development",
-                "value": "88%"
-            }
-        ]
-    }
+    "skills": [
+      { "name": "Cloud Architecture", "value": "92%" },
+      { "name": "DevOps", "value": "90%" }
+    ],
+    "projects": [
+      { "name": "Cloud Infrastructure", "value": "91%" },
+      { "name": "CI/CD Pipelines", "value": "89%" }
+    ]
+  },
+  {
+    "id": 14,
+    "name": "Md. Jobaer Rahman",
+    "role": "Co Founder & Research Associate",
+    "image": "https://res.cloudinary.com/dcfny0d5c/image/upload/v1762248184/big-matrix/photos/JobaerRahman.jpg",
+    "slug": "jobaer-rahman",
+    "desc": "Backend engineer and database specialist developing efficient data management systems for healthcare applications.",
+    "phone": "+880-2-55668200",
+    "email": "bigmatrixlab@gmail.com",
+    "location": "Dhaka, Bangladesh",
+    "social": {
+      "linkedin": "#",
+      "github": "#",
+      "scholar": "#",
+      "website": "#"
+    },
+    "skills": [
+      { "name": "Backend Development", "value": "91%" },
+      { "name": "Database Management", "value": "89%" }
+    ],
+    "projects": [
+      { "name": "Data Systems", "value": "90%" },
+      { "name": "API Development", "value": "88%" }
+    ]
+  }
 ]
