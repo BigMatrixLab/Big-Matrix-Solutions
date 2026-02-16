@@ -21,10 +21,11 @@ const ValueSection = ({ icon, title, description, items, reversed = false }) => 
         marginBottom: '0',
     };
 
+
     // Use flexbox to keep both sides in a single row, swapping order with flex-row-reverse
     return (
         <div
-            className={`row align-items-center mb-5 py-4 d-flex ${reversed ? 'flex-row-reverse' : ''}`}
+            className={`row align-items-center mb-5 py-4 d-flex ${!reversed ? 'flex-row-reverse' : ''}`}
             style={cardBg}
         >
             {/* Visual Side */}
@@ -71,36 +72,44 @@ const ValueSection = ({ icon, title, description, items, reversed = false }) => 
             {/* Content Side */}
             <div className="col-lg-8 col-md-12 px-lg-5 d-flex align-items-center value-section-content-col">
                 <div className="ps-lg-4 w-100">
-                    <div style={{
-                        display: 'inline-flex',
-                        alignItems: 'center',
-                        gap: '8px',
-                        color: '#3b82f6',
-                        fontWeight: '700',
-                        textTransform: 'uppercase',
-                        letterSpacing: '1.5px',
-                        fontSize: '1.25rem',
-                       
-                    }}>
-                        <span style={{ width: '24px', height: '2px', background: '#3b82f6' }}></span>
+                    <div
+                        style={{
+                            display: 'inline-flex',
+                            alignItems: 'center',
+                            gap: '8px',
+                            color: '#3b82f6',
+                            fontWeight: '700',
+                            textTransform: 'uppercase',
+                            letterSpacing: '1.5px',
+                            fontSize: '1.25rem',
+                            textAlign: reversed ? 'right' : 'left',
+                            width: '100%',
+                            flexDirection: reversed ? 'row-reverse' : 'row'
+                        }}
+                    >
+                        <span className="value-section-title-line" style={{ width: '24px', height: '2px', background: '#3b82f6' }}></span>
                         {title}
                     </div>
 
-                    <h2 style={{ 
-                        fontSize: '2.25rem', 
-                        fontWeight: '800', 
-                        color: '#1e293b', 
-                        marginBottom: '1.5rem',
-                        lineHeight: '1.2'
-                    }}>
+                    <h2
+                        style={{
+                            fontSize: '2.25rem',
+                            fontWeight: '800',
+                            color: '#1e293b',
+                            marginBottom: '1.5rem',
+                            lineHeight: '1.2',
+                            textAlign: reversed ? 'right' : 'left',
+                            width: '100%'
+                        }}
+                    >
                         Empowering your <span style={{ color: '#3b82f6' }}>future.</span>
                     </h2>
 
                     {description && (
-                        <p style={{ 
-                            fontSize: '1.1rem', 
-                            lineHeight: '1.7', 
-                            color: '#64748b', 
+                        <p style={{
+                            fontSize: '1.1rem',
+                            lineHeight: '1.7',
+                            color: '#64748b',
                             marginBottom: '2rem'
                         }}>
                             {description}
@@ -109,8 +118,8 @@ const ValueSection = ({ icon, title, description, items, reversed = false }) => 
 
                     <div className="d-grid gap-3">
                         {items && items.map((item, index) => (
-                            <div 
-                                key={index} 
+                            <div
+                                key={index}
                                 style={{
                                     display: 'flex',
                                     alignItems: 'flex-start',
@@ -134,11 +143,11 @@ const ValueSection = ({ icon, title, description, items, reversed = false }) => 
                                 }}>
                                     <Check size={16} color="#2563eb" strokeWidth={3} />
                                 </div>
-                                <p style={{ 
-                                    margin: 0, 
-                                    color: '#334155', 
+                                <p style={{
+                                    margin: 0,
+                                    color: '#334155',
                                     fontWeight: '500',
-                                    fontSize: '0.95rem' 
+                                    fontSize: '0.95rem'
                                 }}>
                                     {item}
                                 </p>
@@ -149,6 +158,7 @@ const ValueSection = ({ icon, title, description, items, reversed = false }) => 
             </div>
         </div>
     );
+};
 
 // Responsive styles for mobile
 // Add these styles globally or in a CSS/SCSS file if not using CSS-in-JS
@@ -190,6 +200,5 @@ if (typeof window !== 'undefined' && !document.getElementById('value-section-res
     `;
     document.head.appendChild(style);
 }
-};
 
 export default ValueSection;
