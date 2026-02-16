@@ -23,10 +23,16 @@ const ValueSection = ({ icon, title, description, items, reversed = false }) => 
 
     // Use flexbox to keep both sides in a single row, swapping order with flex-row-reverse
     return (
-        <div className={`row align-items-center mb-5 py-4 d-flex ${reversed ? 'flex-row-reverse' : ''}`} style={cardBg}>
+        <div
+            className={`row align-items-center mb-5 py-4 d-flex ${reversed ? 'flex-row-reverse' : ''}`}
+            style={cardBg}
+        >
             {/* Visual Side */}
-            <div className="col-lg-4 col-md-12 d-flex justify-content-center p-4" style={{minWidth: 0}}>
-                <div 
+            <div
+                className="col-lg-4 col-md-12 d-flex justify-content-center p-4 value-section-icon-col"
+                style={{ minWidth: 0 }}
+            >
+                <div
                     style={{
                         position: 'relative',
                         width: '200px',
@@ -35,31 +41,35 @@ const ValueSection = ({ icon, title, description, items, reversed = false }) => 
                         alignItems: 'center',
                         justifyContent: 'center',
                         background: 'radial-gradient(circle, #eff6ff 0%, #ffffff 70%)',
-                        borderRadius: '50%'
+                        borderRadius: '50%',
+                        maxWidth: '100%',
                     }}
                 >
                     {/* Decorative Ring */}
-                    <div style={{
-                        position: 'absolute',
-                        inset: '-10px',
-                        border: '2px dashed #dbeafe',
-                        borderRadius: '50%',
-                        opacity: 0.6
-                    }} />
-                    
-                    <IconComponent 
-                        size={90} 
-                        strokeWidth={1.5} 
-                        style={{ 
+                    <div
+                        style={{
+                            position: 'absolute',
+                            inset: '-10px',
+                            border: '2px dashed #dbeafe',
+                            borderRadius: '50%',
+                            opacity: 0.6,
+                        }}
+                    />
+
+                    <IconComponent
+                        size={90}
+                        strokeWidth={1.5}
+                        style={{
                             color: '#3b82f6',
-                            filter: 'drop-shadow(0 10px 15px rgba(59, 130, 246, 0.2))'
-                        }} 
+                            filter: 'drop-shadow(0 10px 15px rgba(59, 130, 246, 0.2))',
+                            maxWidth: '100%',
+                        }}
                     />
                 </div>
             </div>
 
             {/* Content Side */}
-            <div className="col-lg-8 col-md-12 px-lg-5 d-flex align-items-center">
+            <div className="col-lg-8 col-md-12 px-lg-5 d-flex align-items-center value-section-content-col">
                 <div className="ps-lg-4 w-100">
                     <div style={{
                         display: 'inline-flex',
@@ -139,6 +149,47 @@ const ValueSection = ({ icon, title, description, items, reversed = false }) => 
             </div>
         </div>
     );
+
+// Responsive styles for mobile
+// Add these styles globally or in a CSS/SCSS file if not using CSS-in-JS
+// For demonstration, inject a <style> tag here (not best practice for production)
+if (typeof window !== 'undefined' && !document.getElementById('value-section-responsive')) {
+    const style = document.createElement('style');
+    style.id = 'value-section-responsive';
+    style.innerHTML = `
+    @media (max-width: 991.98px) {
+        .value-section-icon-col, .value-section-content-col {
+            flex: 0 0 100% !important;
+            max-width: 100% !important;
+            padding-left: 1rem !important;
+            padding-right: 1rem !important;
+        }
+        .value-section-icon-col {
+            justify-content: center !important;
+            padding-bottom: 0 !important;
+            padding-top: 2rem !important;
+        }
+        .value-section-content-col {
+            padding-top: 0 !important;
+            padding-bottom: 2rem !important;
+        }
+        .value-section-icon-col > div {
+            width: 140px !important;
+            height: 140px !important;
+        }
+    }
+    @media (max-width: 575.98px) {
+        .value-section-icon-col > div {
+            width: 100px !important;
+            height: 100px !important;
+        }
+        .value-section-content-col h2 {
+            font-size: 1.3rem !important;
+        }
+    }
+    `;
+    document.head.appendChild(style);
+}
 };
 
 export default ValueSection;
