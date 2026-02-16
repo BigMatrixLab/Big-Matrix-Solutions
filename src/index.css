@@ -812,3 +812,23 @@ body.loaded .loader-wrapper {
     text-align: center !important;
   }
 }
+
+/* Team area: center whole section on mobile */
+@media (max-width: 767px) {
+  .team-area-mobile-center .container {
+    text-align: center;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+  }
+  .team-area-mobile-center .row {
+    justify-content: center;
+  }
+  .team-area-mobile-center .section-title.left {
+    text-align: center;
+  }
+  .team-area-mobile-center .toptech-button {
+    display: flex;
+    justify-content: center;
+  }
+}
