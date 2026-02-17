@@ -1,3 +1,13 @@
+---
+id: "10"
+slug: "national-health-public-policy"
+title: "National-Scale Digital Health & Public Policy Intelligence"
+icon: "bi bi-flag"
+image: "https://images.unsplash.com/photo-1454165804606-c3d57bc86b40?w=800&q=80&auto=format&fit=crop"
+desc: "Enterprise solutions for Ministries of Health, Government Bodies, and International NGOs including disease surveillance, policy simulation, and nationwide health resource optimization."
+---
+
+
 # National-Scale Digital Health & Public Policy Intelligence
 
 ![National Health Policy](https://images.unsplash.com/photo-1454165804606-c3d57bc86b40?w=800&q=80&auto=format&fit=crop)

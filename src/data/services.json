@@ -1,6 +1,6 @@
 [
     {
-        "id": 1,
+        "id": "1",
         "slug": "intelligent-healthcare-pharma",
         "title": "Intelligent Healthcare & Pharmaceutical Systems",
         "icon": "bi bi-hospital",
@@ -9,7 +9,7 @@
         "contentFile": "services/healthcare-systems.md"
     },
     {
-        "id": 2,
+        "id": "2",
         "slug": "digital-hospital-infrastructure",
         "title": "Digital Hospital, Laboratory & Clinical Infrastructure",
         "icon": "bi bi-building",
@@ -18,7 +18,7 @@
         "contentFile": "services/digital-hospital.md"
     },
     {
-        "id": 3,
+        "id": "3",
         "slug": "pharmaceutical-intelligence",
         "title": "Pharmaceutical Intelligence & Drug Analytics",
         "icon": "bi bi-capsule",
@@ -27,7 +27,7 @@
         "contentFile": "services/pharmaceutical-intelligence.md"
     },
     {
-        "id": 4,
+        "id": "4",
         "slug": "big-data-analytics",
         "title": "Big Data & Advanced Analytics",
         "icon": "bi bi-diagram-3-fill",
@@ -36,7 +36,7 @@
         "contentFile": "services/big-data-analytics.md"
     },
     {
-        "id": 5,
+        "id": "5",
         "slug": "ai-machine-learning",
         "title": "AI & Machine Learning Engineering",
         "icon": "bi bi-cpu",
@@ -45,7 +45,7 @@
         "contentFile": "services/ai-machine-learning.md"
     },
     {
-        "id": 6,
+        "id": "6",
         "slug": "enterprise-saas-platform",
         "title": "Enterprise & SaaS Platform Development",
         "icon": "bi bi-cloud",
@@ -54,7 +54,7 @@
         "contentFile": "services/enterprise-saas.md"
     },
     {
-        "id": 7,
+        "id": "7",
         "slug": "industrial-automation",
         "title": "Industrial Automation & Smart Systems",
         "icon": "bi bi-gear",
@@ -63,7 +63,7 @@
         "contentFile": "services/industrial-automation.md"
     },
     {
-        "id": 8,
+        "id": "8",
         "slug": "cloud-devops-architecture",
         "title": "Cloud, DevOps & Scalability Architecture",
         "icon": "bi bi-hdd-rack",
@@ -72,7 +72,7 @@
         "contentFile": "services/cloud-devops.md"
     },
     {
-        "id": 9,
+        "id": "9",
         "slug": "cybersecurity-compliance",
         "title": "Cybersecurity & Compliance Engineering",
         "icon": "bi bi-shield-lock",
@@ -81,12 +81,21 @@
         "contentFile": "services/cybersecurity.md"
     },
     {
-        "id": 10,
+        "id": "10",
         "slug": "national-health-public-policy",
         "title": "National-Scale Digital Health & Public Policy Intelligence",
         "icon": "bi bi-flag",
         "image": "https://images.unsplash.com/photo-1454165804606-c3d57bc86b40?w=800&q=80&auto=format&fit=crop",
         "desc": "Enterprise solutions for Ministries of Health, Government Bodies, and International NGOs including disease surveillance, policy simulation, and nationwide health resource optimization.",
         "contentFile": "services/national-health-policy.md"
+    },
+    {
+        "id": "11",
+        "slug": "real-time-biosensor-integration",
+        "title": "Real-time Biosensor & Wearable Integration",
+        "icon": "bi bi-watch",
+        "image": "https://images.unsplash.com/photo-1510017803434-a899398421b3?auto=format&fit=crop&q=80&w=800",
+        "desc": "Seamless integration architectures for streaming data from medical-grade biosensors and consumer wearables into clinical decision support systems.",
+        "contentFile": "services/biosensor-integration.md"
     }
 ]

@@ -1,3 +1,13 @@
+---
+id: "9"
+slug: "cybersecurity-compliance"
+title: "Cybersecurity & Compliance Engineering"
+icon: "bi bi-shield-lock"
+image: "https://images.unsplash.com/photo-1550751827-4bd374c3f58b?w=800&q=80&auto=format&fit=crop"
+desc: "Healthcare-grade security, end-to-end encryption, access control systems, and compliance-ready infrastructure meeting HIPAA, GDPR, and industry standards."
+---
+
+
 # Cybersecurity & Compliance Engineering
 
 ![Cybersecurity](https://images.unsplash.com/photo-1550751827-4bd374c3f58b?w=800&q=80&auto=format&fit=crop)

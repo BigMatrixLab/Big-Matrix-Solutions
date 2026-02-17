@@ -1,4 +1,18 @@
+---
+id: 6
+title: "X-Ray Segmentation Editor"
+category: "Medical AI Tools"
+image: "/assets/images/projects/x-ray-segmentation-editor.png"
+slug: "x-ray-segmentation-editor"
+desc: "A specialized tool for medical professionals to annotate and segment X-ray images for training AI models."
+client: "Healthcare Partner"
+date: "2023"
+location: "Remote"
+duration: "4 months"
+---
+
 # X-Ray Segmentation Editor
+
 
 *Project Duration: 1 months | Completed: February 2026*
 

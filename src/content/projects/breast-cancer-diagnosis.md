@@ -1,4 +1,19 @@
-﻿# Multimodal AI for Breast Cancer Diagnosis
+﻿---
+id: 1
+title: "Multimodal AI for Breast Cancer Diagnosis"
+category: "AI in Healthcare"
+image: "/assets/images/projects/Rad analysis.png"
+slug: "nsu_ctrg_2021_2022_breast_cancer"
+desc: "Precision segmentation and comprehensive report generation from mammograms using multimodal AI for enhanced breast cancer diagnosis."
+client: "North South University"
+date: "2022"
+location: "North South University, Dhaka"
+duration: "1 year (Started from April 2022)"
+value: "Research Grant"
+---
+
+# Multimodal AI for Breast Cancer Diagnosis
+
 
 ##  Project Overview
 

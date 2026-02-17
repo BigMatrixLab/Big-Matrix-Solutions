@@ -1,4 +1,18 @@
-﻿# BM-Academy: Transforming Education Through Technology
+﻿---
+id: 4
+title: "BM-Academy"
+category: "EdTech Platform"
+image: "/assets/images/projects/BM-Academy.png"
+slug: "bm-academy"
+desc: "Comprehensive EdTech platform for medical research education, deep learning training, and research paper publication guidance."
+client: "Big-Matrix Solutions"
+date: "2024-Present"
+location: "Online Platform"
+duration: "Ongoing"
+---
+
+# BM-Academy: Transforming Education Through Technology
+
 
 *Project Duration: 6 months | Completed: September 2024*
 
@@ -12,9 +26,9 @@
 
 | Metric | Achievement |
 |--------|-------------|
-| **Users** | 50,000+ registered learners |
-| **Courses** | 500+ courses across 25+ subjects |
-| **Instructors** | 200+ certified educators |
+| **Users** | 5,000+ registered learners |
+| **Courses** | 50+ courses across 25+ subjects |
+| **Instructors** | 100+ certified educators |
 | **Completion Rate** | 78% (industry avg: 15%) |
 | **Student Satisfaction** | 4.7/5 stars |
 | **Mobile Usage** | 65% of access via mobile apps |

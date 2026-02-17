@@ -1,3 +1,13 @@
+---
+id: "6"
+slug: "enterprise-saas-platform"
+title: "Enterprise & SaaS Platform Development"
+icon: "bi bi-cloud"
+image: "https://images.unsplash.com/photo-1451187580459-43490279c0fa?w=800&q=80&auto=format&fit=crop"
+desc: "Scalable enterprise platforms, ERP systems, workflow automation, and AI-driven business systems designed for modern organizations."
+---
+
+
 # Enterprise & SaaS Platform Development
 
 ![Enterprise SaaS](https://images.unsplash.com/photo-1451187580459-43490279c0fa?w=800&q=80&auto=format&fit=crop)

@@ -1,3 +1,17 @@
+---
+id: "4"
+slug: "agentic-ops-the-future-of-self-healing-infrastructure"
+title: "Agentic Ops: The Future of Self-Healing Infrastructure"
+admin: "Mera"
+comments: "14"
+image: "https://images.unsplash.com/photo-1550751827-4bd374c3f58b?auto=format&fit=crop&q=80&w=800"
+category: "Cyber Security"
+desc: "Autonomous agents are now monitoring and fixing server vulnerabilities in real-time using Agentic Ops."
+date: "Jan 12, 2026"
+tags: ["Cyber Security", "AIOps", "Infrastructure"]
+---
+
+
 # 🚀 Agentic Operations: The Future of DevOps
 
 *3-minute read | Posted on December 5, 2024*

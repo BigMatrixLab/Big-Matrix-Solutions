@@ -1,3 +1,13 @@
+---
+id: "5"
+slug: "ai-machine-learning"
+title: "AI & Machine Learning Engineering"
+icon: "bi bi-cpu"
+image: "https://images.unsplash.com/photo-1677442136019-21780ecad995?w=800&q=80&auto=format&fit=crop"
+desc: "Custom AI solutions including deep learning models, Large Language Models (LLMs), RAG systems, and intelligent automation for complex business challenges."
+---
+
+
 # AI & Machine Learning Engineering
 
 ![AI & Machine Learning](https://images.unsplash.com/photo-1677442136019-21780ecad995?w=800&q=80&auto=format&fit=crop)

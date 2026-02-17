@@ -1,3 +1,13 @@
+---
+id: "7"
+slug: "industrial-automation"
+title: "Industrial Automation & Smart Systems"
+icon: "bi bi-gear"
+image: "https://images.unsplash.com/photo-1565043589221-1a6fd9ae45c7?w=800&q=80&auto=format&fit=crop"
+desc: "IoT-enabled systems, machine automation, predictive maintenance, and production optimization for modern manufacturing and industrial operations."
+---
+
+
 # Industrial Automation & Smart Systems
 
 ![Industrial Automation](https://images.unsplash.com/photo-1565043589221-1a6fd9ae45c7?w=800&q=80&auto=format&fit=crop)

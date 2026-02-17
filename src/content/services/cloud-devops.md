@@ -1,3 +1,13 @@
+---
+id: "8"
+slug: "cloud-devops-architecture"
+title: "Cloud, DevOps & Scalability Architecture"
+icon: "bi bi-hdd-rack"
+image: "https://images.unsplash.com/photo-1544197150-b99a580bb7a8?w=800&q=80&auto=format&fit=crop"
+desc: "High-availability cloud infrastructure, microservices architecture, containerization, and cloud-native deployment for enterprise-scale applications."
+---
+
+
 # Cloud, DevOps & Scalability Architecture
 
 ![Cloud DevOps](https://images.unsplash.com/photo-1544197150-b99a580bb7a8?w=800&q=80&auto=format&fit=crop)

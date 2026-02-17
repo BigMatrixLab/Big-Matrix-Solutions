@@ -1,4 +1,18 @@
-﻿# Enterprise Project Management Platform: AI-Powered Workflow Optimization
+﻿---
+id: 5
+title: "Big-Matrix Project Management Platform"
+category: "Project Management"
+image: "/assets/images/projects/PM-Dashboard.jpeg"
+slug: "bm-project-management"
+desc: "Comprehensive project management platform built to solve real-world collaboration challenges, featuring task tracking, team workload management, and project progress monitoring."
+client: "Big-Matrix Solutions (Internal)"
+date: "2023-Present"
+location: "Internal Platform"
+duration: "Ongoing"
+---
+
+# Enterprise Project Management Platform: AI-Powered Workflow Optimization
+
 
 *Project Duration: 8 months | Completed: October 2024*
 

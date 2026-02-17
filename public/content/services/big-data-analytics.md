@@ -1,3 +1,13 @@
+---
+id: "4"
+slug: "big-data-analytics"
+title: "Big Data & Advanced Analytics"
+icon: "bi bi-diagram-3-fill"
+image: "https://images.unsplash.com/photo-1551288049-bebda4e38f71?w=800&q=80&auto=format&fit=crop"
+desc: "Scalable data engineering, predictive modeling, and large-scale processing infrastructure for handling massive healthcare and enterprise datasets."
+---
+
+
 # Big Data & Advanced Analytics
 
 ![Big Data Analytics](https://images.unsplash.com/photo-1551288049-bebda4e38f71?w=800&q=80&auto=format&fit=crop)

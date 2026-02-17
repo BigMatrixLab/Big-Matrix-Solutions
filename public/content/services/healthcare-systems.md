@@ -1,7 +1,16 @@
+---
+id: "1"
+slug: "intelligent-healthcare-pharma"
+title: "Intelligent Healthcare & Pharmaceutical Systems"
+icon: "bi bi-hospital"
+image: "https://images.unsplash.com/photo-1576091160399-112ba8d25d1d?w=800&q=80&auto=format&fit=crop"
+desc: "Comprehensive AI-powered solutions for hospitals, diagnostics, medical imaging, and pharmaceutical intelligence that transform healthcare delivery and pharmaceutical operations."
+---
+
+
 # Intelligent Healthcare & Pharmaceutical Systems
 
 Transform healthcare delivery and pharmaceutical operations with AI-powered comprehensive solutions that revolutionize patient care and operational efficiency.
-
 
 ---
 

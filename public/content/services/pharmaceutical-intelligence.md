@@ -1,3 +1,13 @@
+---
+id: "3"
+slug: "pharmaceutical-intelligence"
+title: "Pharmaceutical Intelligence & Drug Analytics"
+icon: "bi bi-capsule"
+image: "https://images.unsplash.com/photo-1587854692152-cbe660dbde88?w=800&q=80&auto=format&fit=crop"
+desc: "Advanced analytics for drug demand forecasting, supply chain optimization, market intelligence, clinical data analysis, and production planning."
+---
+
+
 # Pharmaceutical Intelligence & Drug Analytics
 
 ## Strategic Intelligence for Modern Pharmaceutical Operations
@@ -49,7 +59,6 @@ End-to-end visibility and optimization:
 - Real-time visibility across supply chain
 
 ---
-
 ### 3. **Market Intelligence & Competitive Analysis**
 
 Stay ahead with comprehensive market insights:
