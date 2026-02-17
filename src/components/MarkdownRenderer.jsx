@@ -20,11 +20,15 @@ const MarkdownRenderer = ({ contentFile, className = '' }) => {
                 if (!response.ok) {
                     throw new Error(`Failed to load content: ${response.statusText}`);
                 }
-                const markdownText = await response.text();
+                const markdownRaw = await response.text();
+
+                // Strip YAML frontmatter if it exists
+                // We use trimStart() to handle potential BOM or leading whitespace
+                const markdownText = markdownRaw.trimStart().replace(/^---\r?\n[\s\S]*?\r?\n---\r?\n?/, '').trim();
 
                 // Configure marked options
                 marked.setOptions({
-                    highlight: function(code, lang) {
+                    highlight: function (code, lang) {
                         if (lang && hljs.getLanguage(lang)) {
                             try {
                                 return hljs.highlight(code, { language: lang }).value;
@@ -91,9 +95,9 @@ const MarkdownRenderer = ({ contentFile, className = '' }) => {
     if (error) {
         return (
             <div className={`markdown-content ${className}`}>
-                <div className="error-message" style={{ 
-                    padding: '2rem', 
-                    background: '#fff3cd', 
+                <div className="error-message" style={{
+                    padding: '2rem',
+                    background: '#fff3cd',
                     border: '1px solid #ffc107',
                     borderRadius: '8px',
                     color: '#856404'
@@ -106,7 +110,7 @@ const MarkdownRenderer = ({ contentFile, className = '' }) => {
     }
 
     return (
-        <div 
+        <div
             className={`markdown-content ${className}`}
             dangerouslySetInnerHTML={{ __html: content }}
         />
