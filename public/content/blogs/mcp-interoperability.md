@@ -2,10 +2,7 @@
 
 *2-minute read | Posted on December 13, 2024*
 
-![AI Interoperability](https://images.unsplash.com/photo-1519125323398-675f0ddb6308?auto=format&fit=crop&w=800&q=80)
-![Collaboration](https://images.unsplash.com/photo-1515378791036-0648a3ef77b2?auto=format&fit=crop&w=800&q=80)
-
-![MCP Diagram](https://images.unsplash.com/photo-1558494949-ef010cbdcc31?q=80&w=800&h=400&fit=crop)
+![AI Interoperability](/assets/images/inner-images/service-details.jpg)
 
 ## 🌐 Introduction
 

@@ -2,10 +2,6 @@
 
 *3-minute read | Posted on November 20, 2024*
 
-![SLM Abstract](https://images.unsplash.com/photo-1519125323398-675f0ddb6308?auto=format&fit=crop&w=800&q=80)
-![AI Comparison](https://images.unsplash.com/photo-1515378791036-0648a3ef77b2?auto=format&fit=crop&w=800&q=80)
-
-![AI Models Comparison](https://images.unsplash.com/photo-1677442136019-21780ecad995?q=80&w=800&h=400&fit=crop)
 
 ## ⚠️ The Bigger-is-Better Myth
 

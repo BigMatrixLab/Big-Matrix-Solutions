@@ -2,10 +2,6 @@
 
 *3-minute read | Posted on December 10, 2024*
 
-![Quantum Abstract](https://images.unsplash.com/photo-1465101046530-73398c7f1a3b?auto=format&fit=crop&w=800&q=80)
-![Quantum Collaboration](https://images.unsplash.com/photo-1506744038136-46273834b3fb?auto=format&fit=crop&w=800&q=80)
-
-![Quantum Computing](https://images.unsplash.com/photo-1635070041078-e363dbe005cb?q=80&w=800&h=400&fit=crop)
 
 ## 🔬 The Intersection of Two Revolutions
 

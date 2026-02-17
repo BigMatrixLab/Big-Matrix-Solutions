@@ -1,9 +1,7 @@
-﻿# Intelligent Healthcare & Pharmaceutical Systems
+# Intelligent Healthcare & Pharmaceutical Systems
 
 Transform healthcare delivery and pharmaceutical operations with AI-powered comprehensive solutions that revolutionize patient care and operational efficiency.
 
-![Healthcare Abstract](https://images.unsplash.com/photo-1519125323398-675f0ddb6308?auto=format&fit=crop&w=800&q=80)
-![Pharma Collaboration](https://images.unsplash.com/photo-1515378791036-0648a3ef77b2?auto=format&fit=crop&w=800&q=80)
 
 ---
 
@@ -12,8 +10,6 @@ Transform healthcare delivery and pharmaceutical operations with AI-powered comp
 We develop **end-to-end intelligent systems** that revolutionize healthcare and pharmaceutical operations. Our solutions integrate AI-driven diagnostics, advanced medical imaging analysis, hospital management systems, and pharmaceutical intelligence platforms.
 
 From automated disease detection to drug development analytics, we create comprehensive ecosystems that **improve patient outcomes**, **accelerate drug discovery**, and **optimize pharmaceutical supply chains**.
-
-![Healthcare AI Systems](https://images.unsplash.com/photo-1576091160399-112ba8d25d1d?w=1200&q=80)
 
 ---
 

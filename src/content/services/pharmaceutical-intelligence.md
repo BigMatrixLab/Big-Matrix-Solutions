@@ -1,4 +1,4 @@
-﻿# Pharmaceutical Intelligence & Drug Analytics
+# Pharmaceutical Intelligence & Drug Analytics
 
 ## Strategic Intelligence for Modern Pharmaceutical Operations
 
@@ -49,7 +49,6 @@ End-to-end visibility and optimization:
 - Real-time visibility across supply chain
 
 ---
-![Pharma Abstract](https://images.unsplash.com/photo-1519125323398-675f0ddb6308?auto=format&fit=crop&w=800&q=80)
 ### 3. **Market Intelligence & Competitive Analysis**
 
 Stay ahead with comprehensive market insights:
@@ -101,7 +100,6 @@ Optimize manufacturing operations:
 
 
 ---
-![Drug Analytics Collaboration](https://images.unsplash.com/photo-1515378791036-0648a3ef77b2?auto=format&fit=crop&w=800&q=80)
 
 ## Government & Enterprise Readiness
 

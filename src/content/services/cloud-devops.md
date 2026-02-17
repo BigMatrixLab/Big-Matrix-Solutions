@@ -1,9 +1,6 @@
-﻿# Cloud, DevOps & Scalability Architecture
+# Cloud, DevOps & Scalability Architecture
 
 ![Cloud DevOps](https://images.unsplash.com/photo-1544197150-b99a580bb7a8?w=800&q=80&auto=format&fit=crop)
-
-![Cloud Abstract](https://images.unsplash.com/photo-1519125323398-675f0ddb6308?auto=format&fit=crop&w=800&q=80)
-![DevOps Collaboration](https://images.unsplash.com/photo-1515378791036-0648a3ef77b2?auto=format&fit=crop&w=800&q=80)
 
 ## Build Resilient, Scalable Infrastructure
 

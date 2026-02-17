@@ -5,6 +5,18 @@ import careersData from '../data/careers.json';
 const Careers = () => {
     const jobs = careersData;
 
+    const isDeadlinePassed = (deadline) => {
+        if (!deadline) return false;
+        const deadlineDate = new Date(deadline);
+        deadlineDate.setHours(23, 59, 59, 999);
+        return new Date() > deadlineDate;
+    };
+
+    const formatDeadline = (deadline) => {
+        if (!deadline) return null;
+        return new Date(deadline).toLocaleDateString('en-GB', { day: 'numeric', month: 'short', year: 'numeric' });
+    };
+
     return (
         <>
             <Breadcrumb pageTitle="Careers" breadcrumbItem="Careers" />
@@ -21,28 +33,41 @@ const Careers = () => {
                     <div className="row">
                         <div className="col-lg-12">
                             <div className="job-list-wrapper">
-                                {jobs.map((job, index) => (
-                                    <div className="job-row-item" key={index}>
-                                        <div className="row align-items-start">
-                                            <div className="col-lg-3">
-                                                <h4 className="job-title">{job.title}</h4>
-                                                <div className="job-meta">
-                                                    <span className="job-badge">{job.type}</span>
-                                                    <span className="job-location">{job.location}</span>
+                                {jobs.map((job, index) => {
+                                    const expired = job.deadline && isDeadlinePassed(job.deadline);
+                                    return (
+                                        <div className="job-row-item" key={index}>
+                                            <div className="row align-items-start">
+                                                <div className="col-lg-3">
+                                                    <h4 className="job-title">{job.title}</h4>
+                                                    <div className="job-meta">
+                                                        <span className="job-badge">{job.type}</span>
+                                                        <span className="job-location">{job.location}</span>
+                                                    </div>
+                                                    
                                                 </div>
-                                                
-                                            </div>
-                                            <div className="col-lg-6">
-                                                <p className="job-description">{job.desc}</p>
-                                                {job.salary && <p className="job-info"><strong>Salary:</strong> {job.salary}</p>}
-                                                {job.workTime && <p className="job-info"><strong>Work Time:</strong> {job.workTime}</p>}
-                                            </div>
-                                            <div className="col-lg-3 text-lg-end">
-                                                <a href="/contact" className="apply-btn">Apply Now</a>
+                                                <div className="col-lg-6">
+                                                    <p className="job-description">{job.desc}</p>
+                                                    {job.salary && <p className="job-info"><strong>Salary:</strong> {job.salary}</p>}
+                                                    {job.workTime && <p className="job-info"><strong>Work Time:</strong> {job.workTime}</p>}
+                                                    {job.deadline && (
+                                                        <p className="job-deadline">
+                                                            <strong>Deadline:</strong> {formatDeadline(job.deadline)}
+                                                            {expired && <span className="deadline-passed"> (Closed)</span>}
+                                                        </p>
+                                                    )}
+                                                </div>
+                                                <div className="col-lg-3 text-lg-end">
+                                                    {expired ? (
+                                                        <span className="apply-btn apply-btn--disabled" aria-disabled="true">Apply Now</span>
+                                                    ) : (
+                                                        <a href="/contact" className="apply-btn">Apply Now</a>
+                                                    )}
+                                                </div>
                                             </div>
                                         </div>
-                                    </div>
-                                ))}
+                                    );
+                                })}
                             </div>
                         </div>
                     </div>

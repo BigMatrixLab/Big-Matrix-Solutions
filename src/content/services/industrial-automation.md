@@ -1,9 +1,6 @@
-﻿# Industrial Automation & Smart Systems
+# Industrial Automation & Smart Systems
 
 ![Industrial Automation](https://images.unsplash.com/photo-1565043589221-1a6fd9ae45c7?w=800&q=80&auto=format&fit=crop)
-
-![Automation Abstract](https://images.unsplash.com/photo-1519125323398-675f0ddb6308?auto=format&fit=crop&w=800&q=80)
-![Smart Systems Collaboration](https://images.unsplash.com/photo-1515378791036-0648a3ef77b2?auto=format&fit=crop&w=800&q=80)
 
 ## Transform Operations with IoT and Intelligence
 
