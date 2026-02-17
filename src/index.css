@@ -528,7 +528,7 @@ body.loaded .loader-wrapper {
 
 /* Remove top padding on mobile for blog area */
 @media (max-width: 767px) {
-  .blog-grid-area {
+  .blog-grid-area:not(.services-page-py-80):not(.blog-page-py-80) {
     padding-top: 0 !important;
   }
 }

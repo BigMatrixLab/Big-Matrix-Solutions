@@ -4,7 +4,7 @@ import servicesData from '../data/services.json';
 
 const ServiceArea = () => {
     return (
-        <div className="service-area style-two">
+        <div className="service-area style-two" style={{ paddingTop: "50px", paddingBottom: "50px" }}>
             <div className="container">
                 <div className="row">
                     <div className="col-lg-12 text-center">

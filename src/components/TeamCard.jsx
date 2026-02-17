@@ -21,9 +21,12 @@ const TeamCard = ({ member }) => {
 
             <div className="card-info">
                 <div className="text-content">
-                    <Link to={`/team/${member.slug}`} className="member-name">
+                    {/* <Link to={`/team/${member.slug}`} className="member-name">
                         {member.name}
-                    </Link>
+                    </Link> */}
+                    <span className="member-name">
+                        {member.name}
+                    </span>
                     <p className="member-role">{member.role}</p>
                 </div>
                 <div className="card-accent-line"></div>

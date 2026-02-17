@@ -132,8 +132,8 @@ const ProjectDetails = () => {
                 </div>
             </div>
 
-            {/* Similar Projects Area */}
-            <div className="project-area inner-style">
+            {/* Similar Projects Area
+            <div className="project-area inner-style project-details-similar-py-80">
                 <div className="container">
                     <div className="row">
                         <div className="col-lg-12 text-center">
@@ -163,7 +163,7 @@ const ProjectDetails = () => {
                         ))}
                     </div>
                 </div>
-            </div>
+            </div> */}
 
         </>
     );

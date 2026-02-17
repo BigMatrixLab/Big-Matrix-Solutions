@@ -5455,8 +5455,10 @@ span.widget-sidber-contact-gmail i {
     padding: 122px 0 121px;
 }
 
-.services-details-thumb img {
+.services-details-area .services-details-thumb img {
     width: 100%;
+    border-radius: 10px;
+    box-shadow: 0 12px 28px rgba(0, 0, 0, 0.12) !important;
 }
 
 .services-details-content {
@@ -5688,7 +5690,7 @@ p.services-details-desc {
    <!--Toptech Blog Details Area Css-->
 =========================================================---*/
 .blog-details-area {
-    padding: 119px 0 119px;
+    padding: 80px 0 80px;
 }
 
 .blog-details-thumb {
@@ -6127,7 +6129,7 @@ button.icons {
    <!--Toptech Blog Grid Area Css-->
 =========================================================---*/
 .blog-grid-area {
-    padding: 120px 0 100px;
+    padding: 80px 0 80px;
 }
 
 .blog-grid-area .single-blog-box {
@@ -6567,7 +6569,7 @@ button.icons {
    <!--Toptech Contact Area Css-->
 =========================================================---*/
 .contact-area.style-three.inner {
-    padding: 122px 0 122px;
+    padding: 80px 0 80px;
 }
 
 .style-three.inner .add-white-bg {
@@ -9158,4 +9160,105 @@ Awards One Css
 .loaded .loader {
     top: -100%;
     opacity: 0;
+}
+
+.about-one-pt-80 {
+    padding-top: 80px;
+}
+
+.about-one-py-80 {
+    padding-top: 80px;
+    padding-bottom: 80px;
+}
+
+.services-page-py-80 {
+    padding-top: 80px;
+    padding-bottom: 80px;
+}
+
+.team-page-py-80 {
+    padding-top: 80px;
+    padding-bottom: 80px;
+}
+
+.project-area.inner-style.project-page-py-80 {
+    padding-top: 80px;
+    padding-bottom: 80px;
+}
+
+.project-area.inner-style.project-details-similar-py-80 {
+    padding-top: 80px;
+    padding-bottom: 80px;
+}
+
+.blog-grid-area.blog-page-py-80 {
+    padding-top: 80px;
+    padding-bottom: 80px;
+}
+
+@media (max-width: 991px) {
+    .careers-area.inner-style,
+    .inner-style.careers-area {
+        padding: 50px 0;
+    }
+
+    .about-area-btn-mobile-center {
+        text-align: center;
+    }
+
+    .about-one-pt-80 {
+        padding-top: 50px;
+    }
+
+    .about-one-py-80 {
+        padding-top: 50px;
+        padding-bottom: 50px;
+    }
+
+    .services-page-py-80 {
+        padding-top: 50px;
+        padding-bottom: 50px;
+    }
+
+    .team-page-py-80 {
+        padding-top: 50px;
+        padding-bottom: 50px;
+    }
+
+    .team-page-title-mobile-center,
+    .team-page-title-mobile-center h1,
+    .team-page-title-mobile-center h2 {
+        text-align: center !important;
+    }
+
+    .project-area.inner-style.project-page-py-80 {
+        padding-top: 50px;
+        padding-bottom: 50px;
+    }
+
+    .project-area.inner-style.project-details-similar-py-80 {
+        padding-top: 50px;
+        padding-bottom: 50px;
+    }
+
+    .blog-grid-area.blog-page-py-80 {
+        padding-top: 50px;
+        padding-bottom: 50px;
+    }
+
+    .contact-area.style-three.inner {
+        padding: 50px 0 50px;
+    }
+
+    .contact-area.style-three.inner .massage-sent-button button {
+        width: 100%;
+    }
+
+    .services-details-area {
+        padding: 50px 0 50px;
+    }
+
+    .project-details-area {
+        padding: 50px 0 50px;
+    }
 }

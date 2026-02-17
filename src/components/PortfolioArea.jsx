@@ -20,7 +20,7 @@ const PortfolioArea = () => {
     }, [filter, items]);
 
     return (
-        <div className="project-area inner-style" style={{ paddingTop: "80px" }}>
+        <div className="project-area inner-style" style={{ paddingTop: "50px", paddingBottom: "50px" }}>
             <div className="container">
                 <div className="row">
                     <div className="col-lg-12 text-center">

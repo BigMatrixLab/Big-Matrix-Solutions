@@ -30,7 +30,7 @@ const CounterArea = () => {
     ];
 
     return (
-        <div className="partners-area style-two">
+        <div className="partners-area style-two" style={{ paddingTop: "50px", paddingBottom: "50px" }}>
             <div className="container">
                 <div className="row">
                     <div className="col-lg-12 text-center">

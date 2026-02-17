@@ -5,7 +5,7 @@ import BlogCard from './BlogCard';
 
 const BlogArea = () => {
     return (
-        <div className="blog-grid-area" style={{ background: '#F3F8FC', padding: '0px 0 105px' }}>
+        <div className="blog-grid-area" style={{ background: '#F3F8FC', padding: '0px 0 50px' }}>
             <div className="container">
                 <div className="row">
                     <div className="col-lg-12 text-center">

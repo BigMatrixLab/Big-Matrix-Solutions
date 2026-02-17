@@ -11,7 +11,7 @@ const AboutOne = () => {
             <Breadcrumb pageTitle="About Us" />
 
             {/* Feature Area Style Three */}
-            <div className="feature-area style-three" style={{paddingTop: '80px'}}>
+            <div className="feature-area style-three about-one-pt-80">
                 <div className="container">
                     <div className="row margin-top">
                         <div className="col-lg-3 col-md-6 col-sm-12">
@@ -64,7 +64,7 @@ const AboutOne = () => {
 
            
             {/* Mission Vison Area */}
-            <div className="mission-area inner-style" style={{ paddingTop: '80px' }}>
+            <div className="mission-area inner-style about-one-pt-80">
                 <div className="container">
                     
 
@@ -113,10 +113,10 @@ const AboutOne = () => {
                 </div>
             </div>
 
-            <div style={{ paddingTop: '80px' }}>
+            <div className="about-one-pt-80">
                 <TeamArea />
             </div>
-            <div style={{ paddingTop: '80px' }}>
+            <div className="about-one-py-80">
                 <TestimonialArea />
             </div>
 

@@ -11,7 +11,6 @@
     width: 98%;
 }
 
-
 /*===============Home Three Responsive Css============*/
 .style-three .portfolio-content {
     width: 88%;
@@ -46,9 +45,68 @@
 
 
 
+}
 
+@media (max-width: 991px) {
+    .careers-area.inner-style {
+        padding: 50px 0;
+    }
 
+    .about-area-btn-mobile-center {
+        text-align: center;
+    }
 
+    .about-one-pt-80 {
+        padding-top: 50px;
+    }
+
+    .about-one-py-80 {
+        padding-top: 50px;
+        padding-bottom: 50px;
+    }
+
+    .services-page-py-80 {
+        padding-top: 50px;
+        padding-bottom: 50px;
+    }
+
+    .team-page-py-80 {
+        padding-top: 50px;
+        padding-bottom: 50px;
+    }
+
+    .team-page-title-mobile-center,
+    .team-page-title-mobile-center h1,
+    .team-page-title-mobile-center h2 {
+        text-align: center !important;
+    }
+
+    .project-area.inner-style.project-page-py-80 {
+        padding-top: 50px;
+        padding-bottom: 50px;
+    }
+
+    .project-area.inner-style.project-details-similar-py-80 {
+        padding-top: 50px;
+        padding-bottom: 50px;
+    }
+
+    .blog-grid-area.blog-page-py-80 {
+        padding-top: 50px;
+        padding-bottom: 50px;
+    }
+
+    .contact-area.style-three.inner {
+        padding: 50px 0 50px;
+    }
+
+    .contact-area.style-three.inner .massage-sent-button button {
+        width: 100%;
+    }
+
+    .services-details-area {
+        padding: 50px 0 50px;
+    }
 }
 
 /* Normal desktop :1300px. */
@@ -514,21 +572,6 @@
 .service-area.style-foure .service-single-box {
     padding: 39px 0 30px 37px;
     margin: 0 0 30px;
-}
-
-.service-area.style-foure .service-icon {
-    z-index: 1;
-    float: inherit;
-    margin-left: 0;
-    margin-bottom: 24px;
-}
-
-.about-area.style-foure .counter-box {
-    right: 0%;
-}
-
-.about-area.style-foure .about-thumb img {
-    width: 100%;
 }
 
 .about-area.style-foure .counter-number h1 {
@@ -1743,6 +1786,10 @@ p.services-details-desc {
     margin-top: 38px;
 }
 /*project-details*/
+.project-details-area {
+    padding: 50px 0 50px;
+}
+
 .project-details-right {
     margin-bottom: 37px;
 }
@@ -2535,6 +2582,10 @@ p.services-details-desc {
 }
 
 /*project-details*/
+.project-details-area {
+    padding: 50px 0 50px;
+}
+
 .project-details-content h4 {
     font-size: 32px;
 }
@@ -3432,6 +3483,10 @@ p.services-details-desc {
 }
 
 /*project-details*/
+.project-details-area {
+    padding: 50px 0 50px;
+}
+
 .project-details-content h4 {
     font-size: 28px;
 }
@@ -3984,7 +4039,7 @@ p.blog-details-desc {
     font-size: 16px;
     line-height: 28px;
     width: 100%;
-    margin-top: 118px;
+    /* margin-top: 118px; */
 }
 
 .style-one.testimonial-area .owl-nav {
@@ -4613,6 +4668,10 @@ p.services-details-desc {
 }
 
 /*project-details*/
+.project-details-area {
+    padding: 50px 0 50px;
+}
+
 .project-details-content h4 {
     font-size: 18px;
 }
@@ -4747,7 +4806,7 @@ a.project-details-text {
 }
 
 .blog-grid-area .blog-content {
-    padding: 25px 9px 3px;
+    padding: 25px 0px 0px;
 }
 
 .blog-grid-area .blog-title a {

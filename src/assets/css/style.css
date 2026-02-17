@@ -1208,7 +1208,7 @@ Tags: consulting, finance, corporate, business, consultant, multipurpose, techno
     background-repeat: no-repeat;
     background-size: cover;
     background-position: center center;
-    padding: 119px 0 32px;
+    padding: 50px 0 32px;
 }
 
 .style-one.footer-area.home-three {
@@ -4891,7 +4891,7 @@ Tags: consulting, finance, corporate, business, consultant, multipurpose, techno
 =========================================================---*/
 
 .project-details-area {
-    padding: 123px 0 93px;
+    padding: 80px 0 80px;
 }
 
 .project-details-content {
@@ -4908,6 +4908,41 @@ Tags: consulting, finance, corporate, business, consultant, multipurpose, techno
     height: auto;
     border-radius: 10px;
     display: block;
+    box-shadow: 0 2px 10px rgba(0, 0, 0, 0.12);
+}
+
+.about-one-pt-80 {
+    padding-top: 80px;
+}
+
+.about-one-py-80 {
+    padding-top: 80px;
+    padding-bottom: 80px;
+}
+
+.services-page-py-80 {
+    padding-top: 80px;
+    padding-bottom: 80px;
+}
+
+.team-page-py-80 {
+    padding-top: 80px;
+    padding-bottom: 80px;
+}
+
+.project-area.inner-style.project-page-py-80 {
+    padding-top: 80px;
+    padding-bottom: 80px;
+}
+
+.project-area.inner-style.project-details-similar-py-80 {
+    padding-top: 80px;
+    padding-bottom: 80px;
+}
+
+.blog-grid-area.blog-page-py-80 {
+    padding-top: 80px;
+    padding-bottom: 80px;
 }
 
 .project-details-content h4 {
@@ -5227,11 +5262,13 @@ span.widget-sidber-contact-gmail i {
 =========================================================---*/
 
 .services-details-area {
-    padding: 122px 0 121px;
+    padding: 80px 0 80px;
 }
 
-.services-details-thumb img {
+.services-details-area .services-details-thumb img {
     width: 100%;
+    border-radius: 10px;
+    box-shadow: 0 12px 28px rgba(0, 0, 0, 0.12) !important;
 }
 
 .services-details-content {
@@ -5490,7 +5527,7 @@ p.services-details-desc {
    <!--Toptech Blog Details Area Css-->
 =========================================================---*/
 .blog-details-area {
-    padding: 119px 0 119px;
+    padding: 80px 0 80px;
 }
 
 .blog-details-thumb {
@@ -5929,7 +5966,7 @@ button.icons {
    <!--Toptech Blog Grid Area Css-->
 =========================================================---*/
 .blog-grid-area {
-    padding: 120px 0 100px;
+    padding: 80px 0 80px;
 }
 
 .blog-grid-area .section-title.center {
@@ -6227,7 +6264,7 @@ button.icons {
    <!--Toptech Contact Area Css-->
 =========================================================---*/
 .contact-area.style-three.inner {
-    padding: 122px 0 122px;
+    padding: 80px 0 80px;
 }
 
 .style-three.inner .add-white-bg {

@@ -22,14 +22,13 @@ const Team = () => {
             <Breadcrumb pageTitle="Our Team" breadcrumbItem="Team" />
 
             {/* Team Area Style Two */}
-            <div className="team-area style-two" style={{paddingTop: "50px"}}>
+            <div className="team-area style-two team-page-py-80">
                 <div className="container">
                     <div className="row">
                         <div className="col-lg-6">
-                            <div className="section-title left style-two">
+                            <div className="section-title left style-two team-page-title-mobile-center">
                                 <h2 style={{color: "#0C5ADB", paddingBottom:"10px"}}>Dedicated Team</h2>
                                 <h1>Meet Our Dedicated Member</h1>
-                                <h1>For Any Enquiry</h1>
                             </div>
                         </div>
                         

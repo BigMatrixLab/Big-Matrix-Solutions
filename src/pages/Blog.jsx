@@ -9,7 +9,7 @@ const Blog = () => {
             <Breadcrumb pageTitle="Blog Grid" breadcrumbItem="Blog" />
 
             {/* Blog Grid Area */}
-            <div className="blog-grid-area" style={{paddingTop: "50px"}}>
+            <div className="blog-grid-area blog-page-py-80">
                 <div className="container">
                     <div className="row">
                         <div className="col-lg-12 text-center">

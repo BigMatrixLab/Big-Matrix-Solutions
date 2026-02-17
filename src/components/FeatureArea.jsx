@@ -3,7 +3,7 @@ import { Link } from 'react-router-dom';
 
 const FeatureArea = () => {
     return (
-        <div className="feature-area style-two">
+        <div className="feature-area style-two" >
             <div className="container">
                 <div className="row add-marging">
                     <div className="col-lg-4 col-md-6">
