@@ -32,7 +32,7 @@ const PortfolioArea = () => {
                     </div>
                 </div>
                 <div className="row">
-                    {filteredItems.map((item, index) => (
+                    {filteredItems.slice(0, 3).map((item, index) => (
                         <div className="col-lg-4 col-md-6 d-flex" key={index}>
                             <ProjectCard item={item} />
                         </div>
