@@ -17,7 +17,7 @@ const TeamArea = () => {
     const teamMembers = teamData.slice(0, 4);
 
     return (
-        <div className="team-area style-two team-area-mobile-center">
+        <div className="team-area style-two team-area-mobile-center" style={{ paddingTop: "50px", paddingBottom: "50px"}}>
             <div className="container">
                 <div className="row">
                     <div className="col-lg-7">
