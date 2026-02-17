@@ -2,7 +2,7 @@ import React from 'react';
 import { useParams, Link } from 'react-router-dom';
 import Breadcrumb from '../components/Breadcrumb';
 import MarkdownRenderer from '../components/MarkdownRenderer';
-import blogsData from '../data/blogs.json';
+import { blogsData } from '../data/content';
 
 const BlogDetails = () => {
     const { slug } = useParams();
@@ -43,7 +43,7 @@ const BlogDetails = () => {
                                         <span><i className="bi bi-calendar-check"></i> {post.date}</span>
                                         {post.author && <span><i className="bi bi-person"></i> {post.author}</span>}
                                     </div>
-                                    
+
                                     {/* Render markdown content if contentFile exists, otherwise fallback to JSON structure */}
                                     {post.contentFile ? (
                                         <MarkdownRenderer contentFile={post.contentFile} />
@@ -130,7 +130,7 @@ const BlogDetails = () => {
                                         <li key={idx}>
                                             <Link to="/blog">
                                                 <svg xmlns="http://www.w3.org/2000/svg" width="14" height="14" viewBox="0 0 24 24" fill="currentColor" aria-hidden="true" style={{ verticalAlign: 'middle', marginRight: '4px' }}>
-                                                    <path d="M10 4H4c-1.1 0-1.99.9-1.99 2L2 18c0 1.1.9 2 2 2h16c1.1 0 2-.9 2-2V8c0-1.1-.9-2-2-2h-8l-2-2z"/>
+                                                    <path d="M10 4H4c-1.1 0-1.99.9-1.99 2L2 18c0 1.1.9 2 2 2h16c1.1 0 2-.9 2-2V8c0-1.1-.9-2-2-2h-8l-2-2z" />
                                                 </svg>
                                                 {cat}
                                                 <span>({blogsData.filter(b => b.category === cat).length})</span>
@@ -152,11 +152,11 @@ const BlogDetails = () => {
                                             <div className="popular-post-content">
                                                 <Link to={`/blog/${popularPost.slug}`}>{popularPost.title}</Link>
                                                 <span className="popular-post-date">
-                                                <svg xmlns="http://www.w3.org/2000/svg" width="14" height="14" viewBox="0 0 24 24" fill="currentColor" aria-hidden="true" style={{ verticalAlign: 'middle', marginRight: '4px' }}>
-                                                    <path d="M19 4h-1V2h-2v2H8V2H6v2H5c-1.11 0-1.99.9-1.99 2L3 20c0 1.1.89 2 2 2h14c1.1 0 2-.9 2-2V6c0-1.1-.9-2-2-2zm0 16H5V10h14v10zm0-12H5V6h14v2z"/>
-                                                </svg>
-                                                {popularPost.date}
-                                            </span>
+                                                    <svg xmlns="http://www.w3.org/2000/svg" width="14" height="14" viewBox="0 0 24 24" fill="currentColor" aria-hidden="true" style={{ verticalAlign: 'middle', marginRight: '4px' }}>
+                                                        <path d="M19 4h-1V2h-2v2H8V2H6v2H5c-1.11 0-1.99.9-1.99 2L3 20c0 1.1.89 2 2 2h14c1.1 0 2-.9 2-2V6c0-1.1-.9-2-2-2zm0 16H5V10h14v10zm0-12H5V6h14v2z" />
+                                                    </svg>
+                                                    {popularPost.date}
+                                                </span>
                                             </div>
                                         </div>
                                     ))}

@@ -1,5 +1,5 @@
 import React from 'react';
-import blogsData from '../data/blogs.json';
+import { blogsData } from '../data/content';
 import Breadcrumb from '../components/Breadcrumb';
 import BlogCard from '../components/BlogCard';
 
@@ -14,7 +14,7 @@ const Blog = () => {
                     <div className="row">
                         <div className="col-lg-12 text-center">
                             <div className="section-title center inner-style">
-                                 <h2 style={{color: "#0C5ADB", paddingBottom:"10px"}}>Latest Blog</h2>
+                                <h2 style={{ color: "#0C5ADB", paddingBottom: "10px" }}>Latest Blog</h2>
                                 <h1>Similar Blog Posts</h1>
                             </div>
                         </div>

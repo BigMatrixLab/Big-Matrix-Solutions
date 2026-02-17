@@ -3,7 +3,7 @@ import { useParams, Link } from 'react-router-dom';
 import html2pdf from 'html2pdf.js';
 import Breadcrumb from '../components/Breadcrumb';
 import MarkdownRenderer from '../components/MarkdownRenderer';
-import servicesData from '../data/services.json';
+import { servicesData } from '../data/content';
 
 const ServiceDetails = () => {
     const { slug } = useParams();
@@ -23,11 +23,11 @@ const ServiceDetails = () => {
             });
             Promise.all(promises).then(() => {
                 const opt = {
-                    margin:       0.5,
-                    filename:     `${service.title || 'service'}.pdf`,
-                    image:        { type: 'jpeg', quality: 0.98 },
-                    html2canvas:  { scale: 2, useCORS: true },
-                    jsPDF:        { unit: 'in', format: 'letter', orientation: 'portrait' }
+                    margin: 0.5,
+                    filename: `${service.title || 'service'}.pdf`,
+                    image: { type: 'jpeg', quality: 0.98 },
+                    html2canvas: { scale: 2, useCORS: true },
+                    jsPDF: { unit: 'in', format: 'letter', orientation: 'portrait' }
                 };
                 html2pdf().set(opt).from(content).save();
             });
@@ -76,76 +76,76 @@ const ServiceDetails = () => {
                                             </>
                                         )}
                                     </div>
-                                    
+
                                     {/* Keep static sections if no markdown */}
                                     {!service.contentFile && (
                                         <>
-                                    <div className="row">
-                                        <div className="col-lg-6 col-md-6">
-                                            <div className="service-details-icon-box">
-                                                <div className="service-details-icon-thumb">
-                                                    <img src="/assets/images/service-inner/services-details-icon-1.png" alt="" />
+                                            <div className="row">
+                                                <div className="col-lg-6 col-md-6">
+                                                    <div className="service-details-icon-box">
+                                                        <div className="service-details-icon-thumb">
+                                                            <img src="/assets/images/service-inner/services-details-icon-1.png" alt="" />
+                                                        </div>
+                                                        <div className="service-details-box-content">
+                                                            <h4>Custom Software</h4>
+                                                            <p>Ethical network environmental architect go forward opportu credibly implement</p>
+                                                        </div>
+                                                    </div>
                                                 </div>
-                                                <div className="service-details-box-content">
-                                                    <h4>Custom Software</h4>
-                                                    <p>Ethical network environmental architect go forward opportu credibly implement</p>
+                                                <div className="col-lg-6 col-md-6">
+                                                    <div className="service-details-icon-box">
+                                                        <div className="service-details-icon-thumb">
+                                                            <img src="/assets/images/service-inner/services-details-icon-2.png" alt="" />
+                                                        </div>
+                                                        <div className="service-details-box-content">
+                                                            <h4>Mobile Application</h4>
+                                                            <p>Ethical network environmental architect go forward opportu credibly implement</p>
+                                                        </div>
+                                                    </div>
                                                 </div>
                                             </div>
-                                        </div>
-                                        <div className="col-lg-6 col-md-6">
-                                            <div className="service-details-icon-box">
-                                                <div className="service-details-icon-thumb">
-                                                    <img src="/assets/images/service-inner/services-details-icon-2.png" alt="" />
+                                            <div className="services-details-text">
+                                                <div className="service-details-text-icon">
+                                                    <img src="/assets/images/service-inner/services-details-text-icon.png" alt="" />
                                                 </div>
-                                                <div className="service-details-box-content">
-                                                    <h4>Mobile Application</h4>
-                                                    <p>Ethical network environmental architect go forward opportu credibly implement</p>
+                                                <div className="service-details-text-content">
+                                                    <p>Competently architect intermandated deliverables client niches continually underwhelm</p>
                                                 </div>
                                             </div>
-                                        </div>
-                                    </div>
-                                    <div className="services-details-text">
-                                        <div className="service-details-text-icon">
-                                            <img src="/assets/images/service-inner/services-details-text-icon.png" alt="" />
-                                        </div>
-                                        <div className="service-details-text-content">
-                                            <p>Competently architect intermandated deliverables client niches continually underwhelm</p>
-                                        </div>
-                                    </div>
 
-                                    <h4 className="services-details-title">What the Benefits?</h4>
-                                    <p className="services-details-desc">Alternative innovation to ethical network environmental whiteboard pursue compelling results for premier methods empowerment. Dramatically architect go forward opportunities </p>
+                                            <h4 className="services-details-title">What the Benefits?</h4>
+                                            <p className="services-details-desc">Alternative innovation to ethical network environmental whiteboard pursue compelling results for premier methods empowerment. Dramatically architect go forward opportunities </p>
 
-                                    <div className="row">
-                                        <div className="col-lg-6 col-md-6">
-                                            <div className="single-benifits-box">
-                                                <div className="benifits-thumb">
-                                                    <img src="/assets/images/service-inner/services-details-benifis-thumb-1.jpg" alt="" />
+                                            <div className="row">
+                                                <div className="col-lg-6 col-md-6">
+                                                    <div className="single-benifits-box">
+                                                        <div className="benifits-thumb">
+                                                            <img src="/assets/images/service-inner/services-details-benifis-thumb-1.jpg" alt="" />
+                                                        </div>
+                                                        <div className="benifits-content">
+                                                            <h4>Analysis And Planning.</h4>
+                                                            <ul>
+                                                                <li><i className="bi bi-check2"></i>New Modern Equipments</li>
+                                                                <li><i className="bi bi-check2"></i>Expert’s Volunteers</li>
+                                                            </ul>
+                                                        </div>
+                                                    </div>
                                                 </div>
-                                                <div className="benifits-content">
-                                                    <h4>Analysis And Planning.</h4>
-                                                    <ul>
-                                                        <li><i className="bi bi-check2"></i>New Modern Equipments</li>
-                                                        <li><i className="bi bi-check2"></i>Expert’s Volunteers</li>
-                                                    </ul>
+                                                <div className="col-lg-6 col-md-6">
+                                                    <div className="single-benifits-box">
+                                                        <div className="benifits-thumb">
+                                                            <img src="/assets/images/service-inner/services-details-benifis-thumb-2.jpg" alt="" />
+                                                        </div>
+                                                        <div className="benifits-content">
+                                                            <h4>Design & Development.</h4>
+                                                            <ul>
+                                                                <li><i className="bi bi-check2"></i>New Modern Equipments</li>
+                                                                <li><i className="bi bi-check2"></i>Expert’s Volunteers</li>
+                                                            </ul>
+                                                        </div>
+                                                    </div>
                                                 </div>
                                             </div>
-                                        </div>
-                                        <div className="col-lg-6 col-md-6">
-                                            <div className="single-benifits-box">
-                                                <div className="benifits-thumb">
-                                                    <img src="/assets/images/service-inner/services-details-benifis-thumb-2.jpg" alt="" />
-                                                </div>
-                                                <div className="benifits-content">
-                                                    <h4>Design & Development.</h4>
-                                                    <ul>
-                                                        <li><i className="bi bi-check2"></i>New Modern Equipments</li>
-                                                        <li><i className="bi bi-check2"></i>Expert’s Volunteers</li>
-                                                    </ul>
-                                                </div>
-                                            </div>
-                                        </div>
-                                    </div>
                                         </>
                                     )}
                                 </div>
@@ -185,7 +185,7 @@ const ServiceDetails = () => {
                                                 onClick={handleDownloadPDF}
                                                 style={{ display: service.contentFile ? 'block' : 'none' }}
                                             >
-                                                <i className="bi bi-file-earmark-pdf" style={{color:"#fff"}}></i> Download PDF <i className="bi bi-download"  style={{color:"#fff", paddingLeft:"5px"}}></i>
+                                                <i className="bi bi-file-earmark-pdf" style={{ color: "#fff" }}></i> Download PDF <i className="bi bi-download" style={{ color: "#fff", paddingLeft: "5px" }}></i>
                                             </button>
                                         </div>
                                     </div>

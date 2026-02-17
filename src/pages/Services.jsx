@@ -1,5 +1,5 @@
 import React from 'react';
-import servicesData from '../data/services.json';
+import { servicesData } from '../data/content';
 import Breadcrumb from '../components/Breadcrumb';
 import ServiceCard from '../components/ServiceCard';
 
@@ -14,7 +14,7 @@ const Services = () => {
                     <div className="row">
                         <div className="col-lg-12 text-center">
                             <div className="section-title center inner-style">
-                                 <h2 style={{color: "#0C5ADB", paddingBottom:"10px"}}>What We Provides?</h2>
+                                <h2 style={{ color: "#0C5ADB", paddingBottom: "10px" }}>What We Provides?</h2>
                                 <h1>Provide Interactive IT Solution</h1>
                                 <h1>Business Services</h1>
                             </div>
@@ -30,7 +30,7 @@ const Services = () => {
                 </div>
             </div>
 
-            
+
         </>
     );
 };

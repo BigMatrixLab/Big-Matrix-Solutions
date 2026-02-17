@@ -22,9 +22,36 @@ const MarkdownRenderer = ({ contentFile, className = '' }) => {
                 }
                 const markdownRaw = await response.text();
 
-                // Strip YAML frontmatter if it exists
-                // We use trimStart() to handle potential BOM or leading whitespace
-                const markdownText = markdownRaw.trimStart().replace(/^---\r?\n[\s\S]*?\r?\n---\r?\n?/, '').trim();
+                if (!markdownRaw) {
+                    throw new Error('Fetched content is empty');
+                }
+
+                // Robust frontmatter stripping
+                let markdownText = markdownRaw.trimStart();
+                if (markdownText.startsWith('---')) {
+                    const firstNewline = markdownText.indexOf('\n');
+                    if (firstNewline !== -1) {
+                        const secondDashIndex = markdownText.indexOf('---', firstNewline);
+                        if (secondDashIndex !== -1) {
+                            // Find the end of that line
+                            const newlineAfterSecondDash = markdownText.indexOf('\n', secondDashIndex);
+                            if (newlineAfterSecondDash !== -1) {
+                                markdownText = markdownText.slice(newlineAfterSecondDash).trim();
+                            } else {
+                                markdownText = markdownText.slice(secondDashIndex + 3).trim();
+                            }
+                        }
+                    }
+                } else {
+                    markdownText = markdownText.trim();
+                }
+
+                // If content is empty after stripping, show something
+                if (!markdownText) {
+                    setContent('<p><i>No content found in this file.</i></p>');
+                    setLoading(false);
+                    return;
+                }
 
                 // Configure marked options
                 marked.setOptions({
@@ -45,7 +72,17 @@ const MarkdownRenderer = ({ contentFile, className = '' }) => {
                 });
 
                 // Parse markdown to HTML
-                const rawHtml = marked.parse(markdownText);
+                let rawHtml = '';
+                try {
+                    rawHtml = marked.parse(markdownText);
+                    // Handle sync vs async (v17 is usually sync but just in case)
+                    if (rawHtml instanceof Promise) {
+                        rawHtml = await rawHtml;
+                    }
+                } catch (parseErr) {
+                    console.error('Marked parse error:', parseErr);
+                    throw new Error('Failed to parse markdown content');
+                }
 
                 // Process HTML to fix image paths (encode spaces in URLs)
                 const processedHtml = rawHtml.replace(

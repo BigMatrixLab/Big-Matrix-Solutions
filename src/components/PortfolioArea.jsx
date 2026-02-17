@@ -1,6 +1,6 @@
 import React, { useState, useEffect } from 'react';
 
-import projectsData from '../data/projects.json';
+import { projectData as projectsData } from '../data/content';
 import ProjectCard from './ProjectCard';
 
 const PortfolioArea = () => {

@@ -1,6 +1,6 @@
 import React from 'react';
 import { Link } from 'react-router-dom';
-import blogsData from '../data/blogs.json';
+import { blogsData } from '../data/content';
 import BlogCard from './BlogCard';
 
 const BlogArea = () => {
@@ -10,7 +10,7 @@ const BlogArea = () => {
                 <div className="row">
                     <div className="col-lg-12 text-center">
                         <div className="section-title center style-two">
-                           <h2 style={{color: "#0C5ADB", paddingBottom:"10px"}}>Latest Blogs</h2>
+                            <h2 style={{ color: "#0C5ADB", paddingBottom: "10px" }}>Latest Blogs</h2>
                             <h1>Latest Insights From Our Blog</h1>
                         </div>
                     </div>

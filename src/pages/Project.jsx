@@ -1,7 +1,7 @@
 import React from 'react';
 import { Link } from 'react-router-dom';
 import Breadcrumb from '../components/Breadcrumb';
-import projectData from '../data/projects.json';
+import { projectData } from '../data/content';
 import ProjectCard from '../components/ProjectCard';
 
 const Project = () => {
@@ -17,7 +17,7 @@ const Project = () => {
                     <div className="row">
                         <div className="col-lg-12 text-center">
                             <div className="section-title center inner-style">
-                                 <h2 style={{color: "#0C5ADB", paddingBottom:"10px"}}>Latest Work</h2>
+                                <h2 style={{ color: "#0C5ADB", paddingBottom: "10px" }}>Latest Work</h2>
                                 <h1>Similar Completed Projects</h1>
                             </div>
                         </div>
@@ -32,7 +32,7 @@ const Project = () => {
                 </div>
             </div>
 
-           
+
 
         </>
     );

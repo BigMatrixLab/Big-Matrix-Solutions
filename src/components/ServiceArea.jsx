@@ -1,6 +1,6 @@
 import React from 'react';
 import { Link } from 'react-router-dom';
-import servicesData from '../data/services.json';
+import { servicesData } from '../data/content';
 
 const ServiceArea = () => {
     return (
@@ -9,7 +9,7 @@ const ServiceArea = () => {
                 <div className="row">
                     <div className="col-lg-12 text-center">
                         <div className="section-title center style-two">
-                            <h2 style={{color: "#0C5ADB", paddingBottom:"10px"}}>Our Solutions</h2>
+                            <h2 style={{ color: "#0C5ADB", paddingBottom: "10px" }}>Our Solutions</h2>
                             <h1>Cutting-Edge Technology for</h1>
                             <h1>Intelligent Infrastructure</h1>
                         </div>

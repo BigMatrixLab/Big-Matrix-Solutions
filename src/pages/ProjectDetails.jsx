@@ -2,7 +2,7 @@ import React from 'react';
 import { useParams, Link } from 'react-router-dom';
 import Breadcrumb from '../components/Breadcrumb';
 import MarkdownRenderer from '../components/MarkdownRenderer';
-import projectData from '../data/projects.json';
+import { projectData } from '../data/content';
 
 const ProjectDetails = () => {
     const { slug } = useParams();
