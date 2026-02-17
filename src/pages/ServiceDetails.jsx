@@ -195,7 +195,7 @@ const ServiceDetails = () => {
                                         </div>
                                         <p className="widget-sidber-contact-text">Call Us Anytime</p>
                                         <h3 className="widget-sidber-contact-number">+880 2 55668200 (6212)</h3>
-                                        <span className="widget-sidber-contact-gmail"><i className="bi bi-envelope-fill"></i> hi@big-matrix.com</span>
+                                        <span className="widget-sidber-contact-gmail"><i className="bi bi-envelope-fill"></i> contact@big-matrix.com</span>
                                         <div className="widget-sidber-contact-btn">
                                             <Link to="/contact">Contact Us <i className="bi bi-arrow-right"></i></Link>
                                         </div>
