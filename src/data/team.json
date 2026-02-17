@@ -10,10 +10,10 @@
     "email": "monir.uddin@northsouth.edu",
     "location": "Dhaka, Bangladesh",
     "social": {
-      "linkedin": "#",
-      "github": "#",
-      "scholar": "#",
-      "website": "#"
+      "linkedin": "https://www.linkedin.com/in/mohammad-monir-uddin-a739b2131/",
+      "github": "https://github.com/uddinmonir",
+      "scholar": "https://scholar.google.com/citations?hl=en&user=ZcKnA_AAAAAJ",
+      "website": "https://uddinmonir.github.io/"
     },
     "skills": [
       { "name": "AI in Healthcare", "value": "98%" },
@@ -32,13 +32,11 @@
     "slug": "mohammad-ashrafuzzaman-khan",
     "desc": "Expert in healthcare technology and AI-driven solutions. Contributing innovative approaches to medical research and computational systems.",
     "phone": "+880-2-55668200",
-    "email": "bigmatrixlab@gmail.com",
+    "email": "mohammad.khan02@northsouth.edu",
     "location": "Dhaka, Bangladesh",
     "social": {
-      "linkedin": "#",
-      "github": "#",
-      "scholar": "#",
-      "website": "#"
+      "scholar": "https://scholar.google.com/citations?user=0zWDQOwAAAAJ&hl=en",
+      "website": "https://ece.northsouth.edu/people/dr-mohammad-ashrafuzzaman-khan/"
     },
     "skills": [
       { "name": "Healthcare Technology", "value": "96%" },
@@ -60,10 +58,7 @@
     "email": "bigmatrixlab@gmail.com",
     "location": "Dhaka, Bangladesh",
     "social": {
-      "linkedin": "#",
-      "github": "#",
-      "scholar": "#",
-      "website": "#"
+      "website": "https://cardiologybd.com/team/prof-dr-md-afzalur-rahman/"
     },
     "skills": [
       { "name": "Computational Methods", "value": "97%" },
@@ -85,9 +80,6 @@
     "email": "bigmatrixlab@gmail.com",
     "location": "Dhaka, Bangladesh",
     "social": {
-      "linkedin": "#",
-      "github": "#",
-      "scholar": "#",
       "website": "#"
     },
     "skills": [
@@ -101,7 +93,7 @@
   },
   {
     "id": 5,
-    "name": "Mahmud Hasan Mostofa Kamal",
+    "name": "Dr. Mahmud Hasan Mostofa Kamal",
     "role": "Co Founder",
     "image": "https://res.cloudinary.com/dcfny0d5c/image/upload/v1764169278/big-matrix/photos/WhatsApp_Image_2025-11-26_at_4.55.07_PM_oyco2i.jpg",
     "slug": "mahmud-hasan-kamal",
@@ -110,10 +102,7 @@
     "email": "bigmatrixlab@gmail.com",
     "location": "Dhaka, Bangladesh",
     "social": {
-      "linkedin": "#",
-      "github": "#",
-      "scholar": "#",
-      "website": "#"
+      "website": "https://radiology.bmu.ac.bd/member/10341"
     },
     "skills": [
       { "name": "Software Development", "value": "94%" },
@@ -137,8 +126,8 @@
     "social": {
       "linkedin": "#",
       "github": "#",
-      "scholar": "#",
-      "website": "#"
+      "scholar": "https://scholar.google.com/citations?user=k-4jjOIAAAAJ&hl",
+      "website": "https://actascientific.com/as-editorial_popup-asmi.php?aseb_id=434"
     },
     "skills": [
       { "name": "Medical Research", "value": "95%" },
@@ -157,13 +146,11 @@
     "slug": "sheikh-anisul-haque",
     "desc": "Specialist in medical informatics and healthcare data systems, bridging medical knowledge with technology solutions.",
     "phone": "+880-2-55668200",
-    "email": "bigmatrixlab@gmail.com",
+    "email": "haqueanisul08@gmail.com",
     "location": "Dhaka, Bangladesh",
     "social": {
-      "linkedin": "#",
-      "github": "#",
-      "scholar": "#",
-      "website": "#"
+      "scholar": "https://scholar.google.com/citations?user=EWaA0fAAAAAJ&hl",
+      "website": "https://bdspecializedhospital.com/doctor/99"
     },
     "skills": [
       { "name": "Medical Informatics", "value": "94%" },
@@ -182,13 +169,12 @@
     "slug": "tanzim-hossain",
     "desc": "Software engineer and AI specialist focusing on developing scalable healthcare solutions and deep learning models.",
     "phone": "+880-2-55668200",
-    "email": "bigmatrixlab@gmail.com",
+    "email": "tanzim.7400@gmail.com",
     "location": "Dhaka, Bangladesh",
     "social": {
-      "linkedin": "#",
-      "github": "#",
-      "scholar": "#",
-      "website": "#"
+      "github": "https://github.com/tanzimhossain",
+      "scholar": "https://scholar.google.com/citations?user=rcrwEyUAAAAJ&hl",
+      "website": "https://tanzimhossain.github.io/"
     },
     "skills": [
       { "name": "Deep Learning", "value": "93%" },
@@ -197,31 +183,6 @@
     "projects": [
       { "name": "AI Models", "value": "90%" },
       { "name": "Healthcare Apps", "value": "88%" }
-    ]
-  },
-  {
-    "id": 9,
-    "name": "Istiak Ahmed",
-    "role": "Co Founder & Research Lead",
-    "image": "https://res.cloudinary.com/dcfny0d5c/image/upload/v1762248182/big-matrix/photos/Istiak_Ahmed.jpg",
-    "slug": "istiak-ahmed",
-    "desc": "Technology innovator specializing in AI implementation and medical image processing for diagnostic applications.",
-    "phone": "+880-2-55668200",
-    "email": "bigmatrixlab@gmail.com",
-    "location": "Dhaka, Bangladesh",
-    "social": {
-      "linkedin": "#",
-      "github": "#",
-      "scholar": "#",
-      "website": "#"
-    },
-    "skills": [
-      { "name": "AI Implementation", "value": "92%" },
-      { "name": "Image Processing", "value": "90%" }
-    ],
-    "projects": [
-      { "name": "Diagnostic Tools", "value": "89%" },
-      { "name": "Medical Imaging", "value": "87%" }
     ]
   },
   {
@@ -250,9 +211,33 @@
     ]
   },
   {
+    "id": 9,
+    "name": "Istiak Ahmed",
+    "role": "Research Lead",
+    "image": "https://res.cloudinary.com/dcfny0d5c/image/upload/v1762248182/big-matrix/photos/Istiak_Ahmed.jpg",
+    "slug": "istiak-ahmed",
+    "desc": "Technology innovator specializing in AI implementation and medical image processing for diagnostic applications.",
+    "phone": "+880-2-55668200",
+    "email": "istiak676@gmail.com",
+    "location": "Dhaka, Bangladesh",
+    "social": {
+      "linkedin": "https://www.linkedin.com/in/istiak-ahmed-420213143/",
+      "github": "https://github.com/istiak769",
+      "scholar": "https://scholar.google.com/citations?user=ehshwkUAAAAJ&hl=en"
+    },
+    "skills": [
+      { "name": "AI Implementation", "value": "92%" },
+      { "name": "Image Processing", "value": "90%" }
+    ],
+    "projects": [
+      { "name": "Diagnostic Tools", "value": "89%" },
+      { "name": "Medical Imaging", "value": "87%" }
+    ]
+  },
+  {
     "id": 11,
     "name": "Md. Nishan Khan",
-    "role": "Co Founder & Lead Developer",
+    "role": "Lead Developer",
     "image": "https://res.cloudinary.com/dcfny0d5c/image/upload/v1762248220/big-matrix/photos/NishanKhan.jpg",
     "slug": "nishan-khan",
     "desc": "Full-stack developer and AI engineer building robust healthcare platforms and intelligent medical systems.",
@@ -277,7 +262,7 @@
   {
     "id": 12,
     "name": "Galib Ahmed",
-    "role": "Co Founder & AI Specialist",
+    "role": "Research Associate",
     "image": "https://res.cloudinary.com/dcfny0d5c/image/upload/v1762248181/big-matrix/photos/Galib.jpg",
     "slug": "galib-ahmed",
     "desc": "Machine learning specialist focusing on natural language processing and computer vision for healthcare applications.",
@@ -302,7 +287,7 @@
   {
     "id": 13,
     "name": "Md. Misbah Khan",
-    "role": "Co Founder & Junior Developer",
+    "role": "Junior Developer",
     "image": "https://res.cloudinary.com/dcfny0d5c/image/upload/v1762248204/big-matrix/photos/MisbahKhan.jpg",
     "slug": "misbah-khan",
     "desc": "Cloud architect and DevOps specialist ensuring scalable, secure deployment of AI-powered healthcare solutions.",
@@ -327,7 +312,7 @@
   {
     "id": 14,
     "name": "Md. Jobaer Rahman",
-    "role": "Co Founder & Research Associate",
+    "role": "Research Associate",
     "image": "https://res.cloudinary.com/dcfny0d5c/image/upload/v1762248184/big-matrix/photos/JobaerRahman.jpg",
     "slug": "jobaer-rahman",
     "desc": "Backend engineer and database specialist developing efficient data management systems for healthcare applications.",
@@ -347,6 +332,52 @@
     "projects": [
       { "name": "Data Systems", "value": "90%" },
       { "name": "API Development", "value": "88%" }
+    ]
+  },
+  {
+    "id": 13,
+    "name": "Mofidul Hassan",
+    "role": "Junior Researcher",
+    "image": "https://res.cloudinary.com/dcfny0d5c/image/upload/v1762248204/big-matrix/photos/mofidul.jpg",
+    "slug": "mofidul",
+    "desc": "Cloud architect and DevOps specialist ensuring scalable, secure deployment of AI-powered healthcare solutions.",
+    "phone": "+880-2-55668200",
+    "email": "mofidul.hassan@northsouth.edu",
+    "location": "Dhaka, Bangladesh",
+    "social": {
+      "linkedin": "https://www.linkedin.com/in/md-mofidul-hassan/",
+      "github": "https://github.com/mofidu"
+    },
+    "skills": [
+      { "name": "Cloud Architecture", "value": "92%" },
+      { "name": "DevOps", "value": "90%" }
+    ],
+    "projects": [
+      { "name": "Cloud Infrastructure", "value": "91%" },
+      { "name": "CI/CD Pipelines", "value": "89%" }
+    ]
+  },
+  {
+    "id": 13,
+    "name": "Somik Miah",
+    "role": "Junior Researcher",
+    "image": "https://res.cloudinary.com/dcfny0d5c/image/upload/v1762248204/big-matrix/photos/somik.jpg",
+    "slug": "somik",
+    "desc": "Cloud architect and DevOps specialist ensuring scalable, secure deployment of AI-powered healthcare solutions.",
+    "phone": "+880-2-55668200",
+    "email": "somik.miah2002@gmail.com",
+    "location": "Dhaka, Bangladesh",
+    "social": {
+      "linkedin": "www.linkedin.com/in/somik-miah-cse/",
+      "github": "https://github.com/Somik117"
+    },
+    "skills": [
+      { "name": "Cloud Architecture", "value": "92%" },
+      { "name": "DevOps", "value": "90%" }
+    ],
+    "projects": [
+      { "name": "Cloud Infrastructure", "value": "91%" },
+      { "name": "CI/CD Pipelines", "value": "89%" }
     ]
   }
 ]
