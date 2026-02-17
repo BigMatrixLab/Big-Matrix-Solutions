@@ -1,9 +1,6 @@
-﻿# AI & Machine Learning Engineering
+# AI & Machine Learning Engineering
 
 ![AI & Machine Learning](https://images.unsplash.com/photo-1677442136019-21780ecad995?w=800&q=80&auto=format&fit=crop)
-
-![AI Abstract](https://images.unsplash.com/photo-1519125323398-675f0ddb6308?auto=format&fit=crop&w=800&q=80)
-![Machine Learning Collaboration](https://images.unsplash.com/photo-1515378791036-0648a3ef77b2?auto=format&fit=crop&w=800&q=80)
 
 ## Build Intelligent Systems That Learn and Adapt
 

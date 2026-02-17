@@ -2,10 +2,6 @@
 
 *3-minute read | Posted on December 5, 2024*
 
-![DevOps Abstract](https://images.unsplash.com/photo-1465101046530-73398c7f1a3b?auto=format&fit=crop&w=800&q=80)
-![Automation Concept](https://images.unsplash.com/photo-1506744038136-46273834b3fb?auto=format&fit=crop&w=800&q=80)
-
-![DevOps Automation](https://images.unsplash.com/photo-1667372393119-3d4c48d07fc9?q=80&w=800&h=400&fit=crop)
 
 ## 🔄 From Automation to Autonomy
 

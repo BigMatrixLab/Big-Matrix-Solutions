@@ -1,9 +1,6 @@
-﻿# Cybersecurity & Compliance Engineering
+# Cybersecurity & Compliance Engineering
 
 ![Cybersecurity](https://images.unsplash.com/photo-1550751827-4bd374c3f58b?w=800&q=80&auto=format&fit=crop)
-
-![Cybersecurity Abstract](https://images.unsplash.com/photo-1465101046530-73398c7f1a3b?auto=format&fit=crop&w=800&q=80)
-![Security Collaboration](https://images.unsplash.com/photo-1506744038136-46273834b3fb?auto=format&fit=crop&w=800&q=80)
 
 ## Protect Your Digital Assets with Enterprise-Grade Security
 

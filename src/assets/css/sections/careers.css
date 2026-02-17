@@ -115,6 +115,23 @@
     box-shadow: 0 10px 20px rgba(12, 90, 219, 0.15);
 }
 
+.apply-btn--disabled {
+    cursor: not-allowed;
+    opacity: 0.6;
+    pointer-events: none;
+}
+
+.job-deadline {
+    font-size: 14px;
+    color: #6c757d;
+    margin: 8px 0 0 0;
+}
+
+.job-deadline .deadline-passed {
+    color: #dc3545;
+    font-weight: 600;
+}
+
 /* Responsive Styles */
 @media (max-width: 991px) {
     .careers-area.inner-style {

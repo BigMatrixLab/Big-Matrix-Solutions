@@ -78,7 +78,7 @@ const Contact = () => {
                                     </div>
                                     <div className="contact-info-content">
                                         <p>Send E-Mail</p>
-                                        <h4>hi@big-matrix.com</h4>
+                                        <h4>contact@big-matrix.com</h4>
                                     </div>
                                 </div>
                                 <div className="contact-info-box">

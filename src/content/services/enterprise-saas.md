@@ -1,9 +1,6 @@
-﻿# Enterprise & SaaS Platform Development
+# Enterprise & SaaS Platform Development
 
 ![Enterprise SaaS](https://images.unsplash.com/photo-1451187580459-43490279c0fa?w=800&q=80&auto=format&fit=crop)
-
-![SaaS Abstract](https://images.unsplash.com/photo-1519125323398-675f0ddb6308?auto=format&fit=crop&w=800&q=80)
-![Platform Collaboration](https://images.unsplash.com/photo-1515378791036-0648a3ef77b2?auto=format&fit=crop&w=800&q=80)
 
 ## Build Scalable Platforms That Power Modern Businesses
 

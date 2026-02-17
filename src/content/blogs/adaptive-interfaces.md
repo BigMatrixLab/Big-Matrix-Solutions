@@ -2,10 +2,6 @@
 
 *3-minute read | Posted on November 28, 2024*
 
-![Adaptive UI Abstract](https://images.unsplash.com/photo-1519125323398-675f0ddb6308?auto=format&fit=crop&w=800&q=80)
-![User Experience](https://images.unsplash.com/photo-1515378791036-0648a3ef77b2?auto=format&fit=crop&w=800&q=80)
-
-![Adaptive UI](https://images.unsplash.com/photo-1551650975-87deedd944c3?q=80&w=800&h=400&fit=crop)
 
 ## ⚠️ The Problem with Static UIs
 

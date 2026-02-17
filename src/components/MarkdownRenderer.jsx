@@ -14,8 +14,9 @@ const MarkdownRenderer = ({ contentFile, className = '' }) => {
                 setLoading(true);
                 setError(null);
 
-                // Fetch markdown file
-                const response = await fetch(`/src/content/${contentFile}`);
+                // Fetch from public/content so markdown is available in production build
+                const base = (import.meta.env.BASE_URL || '/').replace(/\/?$/, '/');
+                const response = await fetch(`${base}content/${contentFile}`);
                 if (!response.ok) {
                     throw new Error(`Failed to load content: ${response.statusText}`);
                 }
@@ -47,7 +48,7 @@ const MarkdownRenderer = ({ contentFile, className = '' }) => {
                     /<img([^>]*?)src="([^"]*?)"([^>]*?)>/gi,
                     (match, before, src, after) => {
                         // Only encode local image paths
-                        if (src.startsWith('/assets/') || src.startsWith('/src/content/')) {
+                        if (src.startsWith('/assets/') || src.startsWith('/src/content/') || src.startsWith('/content/')) {
                             const encodedSrc = src.split('/').map(part => encodeURIComponent(decodeURIComponent(part))).join('/');
                             return `<img${before}src="${encodedSrc}"${after}>`;
                         }
