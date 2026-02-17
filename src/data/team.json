@@ -193,12 +193,12 @@
     "slug": "kazi-shahriar-sanjid",
     "desc": "Data scientist with expertise in predictive analytics and AI-powered healthcare solutions for improved patient outcomes.",
     "phone": "+880-2-55668200",
-    "email": "bigmatrixlab@gmail.com",
+    "email": "ratimshariar@gmail.com ",
     "location": "Dhaka, Bangladesh",
     "social": {
-      "linkedin": "#",
-      "github": "#",
-      "scholar": "#",
+      "linkedin": "https://www.linkedin.com/in/kazi-shahriar-sanjid-302a031a5/",
+      "github": "https://github.com/Ratim321",
+      "scholar": "https://scholar.google.com/citations?user=nP85SgUAAAAJ&hl",
       "website": "#"
     },
     "skills": [
@@ -242,13 +242,13 @@
     "slug": "nishan-khan",
     "desc": "Full-stack developer and AI engineer building robust healthcare platforms and intelligent medical systems.",
     "phone": "+880-2-55668200",
-    "email": "bigmatrixlab@gmail.com",
+    "email": "iamnishankhan@gmail.com",
     "location": "Dhaka, Bangladesh",
     "social": {
-      "linkedin": "#",
-      "github": "#",
-      "scholar": "#",
-      "website": "#"
+      "linkedin": "https://www.linkedin.com/in/iamnishankhan/",
+      "github": "https://github.com/IamNishanKhan",
+      "scholar": "https://scholar.google.com/citations?hl=en&user=EHAK7PoAAAAJ",
+      "website": "https://portfolio-iamnishankhan.vercel.app/"
     },
     "skills": [
       { "name": "Full-Stack Development", "value": "92%" },
@@ -267,13 +267,12 @@
     "slug": "galib-ahmed",
     "desc": "Machine learning specialist focusing on natural language processing and computer vision for healthcare applications.",
     "phone": "+880-2-55668200",
-    "email": "bigmatrixlab@gmail.com",
+    "email": "galibahmed.dib@gmail.com",
     "location": "Dhaka, Bangladesh",
     "social": {
-      "linkedin": "#",
-      "github": "#",
-      "scholar": "#",
-      "website": "#"
+      "linkedin": "https://www.linkedin.com/in/galib-ahmed-121260/",
+      "github": "https://github.com/Gahmed08",
+      "scholar": "https://scholar.google.com/citations?user=hO2y4twAAAAJ&hl=en"
     },
     "skills": [
       { "name": "Natural Language Processing", "value": "91%" },
@@ -317,13 +316,10 @@
     "slug": "jobaer-rahman",
     "desc": "Backend engineer and database specialist developing efficient data management systems for healthcare applications.",
     "phone": "+880-2-55668200",
-    "email": "bigmatrixlab@gmail.com",
+    "email": "jobaer.math.buet@gmail.com",
     "location": "Dhaka, Bangladesh",
     "social": {
-      "linkedin": "#",
-      "github": "#",
-      "scholar": "#",
-      "website": "#"
+      "linkedin": "https://www.linkedin.com/in/jobaer-rahman-m6"
     },
     "skills": [
       { "name": "Backend Development", "value": "91%" },

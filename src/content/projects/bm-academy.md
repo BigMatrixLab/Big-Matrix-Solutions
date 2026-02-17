@@ -12,9 +12,9 @@
 
 | Metric | Achievement |
 |--------|-------------|
-| **Users** | 50,000+ registered learners |
-| **Courses** | 500+ courses across 25+ subjects |
-| **Instructors** | 200+ certified educators |
+| **Users** | 5,000+ registered learners |
+| **Courses** | 50+ courses across 25+ subjects |
+| **Instructors** | 100+ certified educators |
 | **Completion Rate** | 78% (industry avg: 15%) |
 | **Student Satisfaction** | 4.7/5 stars |
 | **Mobile Usage** | 65% of access via mobile apps |
