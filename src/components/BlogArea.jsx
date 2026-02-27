@@ -5,12 +5,12 @@ import BlogCard from './BlogCard';
 
 const BlogArea = () => {
     return (
-        <div className="blog-grid-area" style={{ background: '#F3F8FC', padding: '0px 0 50px' }}>
+        <div className="blog-grid-area" style={{ background: '#F3F8FC', padding: '50px 0 50px' }}>
             <div className="container">
                 <div className="row">
                     <div className="col-lg-12 text-center">
                         <div className="section-title center style-two">
-                            <h2 style={{ color: "#0C5ADB", paddingBottom: "10px" }}>Latest Blogs</h2>
+                            <h2 style={{ color: "#0C5ADB", paddingBottom: "10px", paddingTop: "50px" }}>Latest Blogs</h2>
                             <h1>Latest Insights From Our Blog</h1>
                         </div>
                     </div>

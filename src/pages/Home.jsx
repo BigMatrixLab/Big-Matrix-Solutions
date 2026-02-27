@@ -17,9 +17,8 @@ const Home = () => {
             <FeatureArea />
             <AboutArea />
             <ServiceArea />
-            <TeamArea />
-            <CounterArea />
             <PortfolioArea />
+            <CounterArea />
             <BlogArea />
         </>
     );

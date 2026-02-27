@@ -91,7 +91,7 @@ const AboutArea = () => {
                 </div>
               </div>
               <div className="toptech-button style-one about-area-btn-mobile-center">
-                <Link to="https://big-matrix.com/">
+                <Link to="https://lab.big-matrix.com/">
                   Learn More<i className="bi bi-arrow-right-circle-fill"></i>
                 </Link>
               </div>

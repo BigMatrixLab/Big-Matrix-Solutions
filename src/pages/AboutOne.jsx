@@ -113,9 +113,6 @@ const AboutOne = () => {
                 </div>
             </div>
 
-            <div className="about-one-pt-80">
-                <TeamArea />
-            </div>
             <div className="about-one-py-80">
                 <TestimonialArea />
             </div>
