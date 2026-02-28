@@ -1,4 +1,4 @@
-import React, { useEffect } from 'react';
+﻿import React, { useEffect } from 'react';
 import { Routes, Route } from 'react-router-dom';
 import Layout from './components/Layout';
 import Home from './pages/Home';
@@ -17,7 +17,6 @@ import Mission from './pages/Mission';
 import Contact from './pages/Contact';
 import NotFound from './pages/NotFound';
 import ScrollToTopOnNavigation from './components/ScrollToTopOnNavigation';
-import './assets/css/preloader.css';
 
 function App() {
   useEffect(() => {
