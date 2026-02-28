@@ -20,7 +20,7 @@ import ScrollToTopOnNavigation from './components/ScrollToTopOnNavigation';
 
 function App() {
   useEffect(() => {
-    // Handle Loader - show for at least 1 second
+    // Handle Loader - show for at least one full sequence (3 seconds)
     const timer = setTimeout(() => {
       const preloader = document.getElementById('preloader');
       if (preloader) {
@@ -32,7 +32,7 @@ function App() {
           preloader.style.display = 'none';
         }, 600);
       }
-    }, 1000);
+    }, 3000);
 
     return () => clearTimeout(timer);
   }, []);
@@ -70,3 +70,5 @@ function App() {
 }
 
 export default App;
+
+
