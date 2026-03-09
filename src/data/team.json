@@ -2,7 +2,7 @@
   {
     "id": 1,
     "name": "Prof. Dr. M. Monir Uddin",
-    "role": "Co Founder & Director",
+    // "role": "Co Founder & Director",
     "image": "https://res.cloudinary.com/dcfny0d5c/image/upload/v1770876609/628129644_122121908115065415_2237224563181312677_n_d4uprj.jpg",
     "slug": "monir-uddin",
     "desc": "Professor at the Department of Mathematics & Physics, North South University, Dhaka, Bangladesh. Leading cutting-edge research in AI, healthcare, and mathematical modeling.",
@@ -27,7 +27,7 @@
   {
     "id": 2,
     "name": "Dr. Mohammad Ashrafuzzaman Khan",
-    "role": "Co Founder",
+    // "role": "Co Founder",
     "image": "https://res.cloudinary.com/dcfny0d5c/image/upload/v1762248207/big-matrix/photos/mohammadkhan.jpg",
     "slug": "mohammad-ashrafuzzaman-khan",
     "desc": "Expert in healthcare technology and AI-driven solutions. Contributing innovative approaches to medical research and computational systems.",
@@ -50,7 +50,7 @@
   {
     "id": 3,
     "name": "Prof. Dr. Md. Afzalur Rahman",
-    "role": "Co Founder",
+    // "role": "Co Founder",
     "image": "https://res.cloudinary.com/dcfny0d5c/image/upload/v1762248147/big-matrix/photos/Afzalur.jpg",
     "slug": "afzalur-rahman",
     "desc": "Distinguished professor specializing in advanced computational methods and research methodologies for healthcare applications.",
@@ -72,7 +72,7 @@
   {
     "id": 4,
     "name": "Dr. Md. Arifur Rahman",
-    "role": "Co Founder",
+    // "role": "Co Founder",
     "image": "http://res.cloudinary.com/dcfny0d5c/image/upload/v1762248151/big-matrix/photos/Arifur_Rahman.png",
     "slug": "arifur-rahman",
     "desc": "Experienced researcher focusing on data-driven healthcare solutions and machine learning applications in medical diagnostics.",
@@ -94,7 +94,7 @@
   {
     "id": 5,
     "name": "Dr. Mahmud Hasan Mostofa Kamal",
-    "role": "Co Founder",
+    // "role": "Co Founder",
     "image": "https://res.cloudinary.com/dcfny0d5c/image/upload/v1764169278/big-matrix/photos/WhatsApp_Image_2025-11-26_at_4.55.07_PM_oyco2i.jpg",
     "slug": "mahmud-hasan-kamal",
     "desc": "Innovative technologist specializing in software development and AI system architecture for healthcare applications.",
@@ -116,7 +116,7 @@
   {
     "id": 6,
     "name": "Prof. Dr. Shirin Tarafder",
-    "role": "Co Founder",
+    // "role": "Co Founder",
     "image": "https://res.cloudinary.com/dcfny0d5c/image/upload/v1762248172/big-matrix/photos/Dr_Shirin.jpg",
     "slug": "shirin-tarafder",
     "desc": "Former Dean, Faculty of Basic Science and Paraclinical Science, Bangladesh Medical University (BMU). Expert in medical sciences and healthcare research.",
@@ -141,7 +141,7 @@
   {
     "id": 7,
     "name": "Dr. Sheikh Anisul Haque",
-    "role": "Co Founder",
+    // "role": "Co Founder",
     "image": "https://res.cloudinary.com/dcfny0d5c/image/upload/v1762248148/big-matrix/photos/ANIS_Photo.jpg",
     "slug": "sheikh-anisul-haque",
     "desc": "Specialist in medical informatics and healthcare data systems, bridging medical knowledge with technology solutions.",
@@ -164,7 +164,7 @@
   {
     "id": 8,
     "name": "Md. Tanzim Hossain",
-    "role": "Co Founder & COO",
+    // "role": "COO",
     "image": "https://res.cloudinary.com/dcfny0d5c/image/upload/v1762248257/big-matrix/photos/Tanzim.jpg",
     "slug": "tanzim-hossain",
     "desc": "Software engineer and AI specialist focusing on developing scalable healthcare solutions and deep learning models.",
@@ -188,7 +188,7 @@
   {
     "id": 10,
     "name": "Kazi Shahriar Sanjid",
-    "role": "Co Founder & CTO",
+    //"role": "CTO",
     "image": "https://res.cloudinary.com/dcfny0d5c/image/upload/v1762248242/big-matrix/photos/sanjid_RcFg8Tz.jpg",
     "slug": "kazi-shahriar-sanjid",
     "desc": "Data scientist with expertise in predictive analytics and AI-powered healthcare solutions for improved patient outcomes.",
@@ -213,7 +213,7 @@
   {
     "id": 9,
     "name": "Istiak Ahmed",
-    "role": "Research Lead",
+    // "role": "Research Lead",
     "image": "https://res.cloudinary.com/dcfny0d5c/image/upload/v1762248182/big-matrix/photos/Istiak_Ahmed.jpg",
     "slug": "istiak-ahmed",
     "desc": "Technology innovator specializing in AI implementation and medical image processing for diagnostic applications.",
@@ -237,7 +237,7 @@
   {
     "id": 11,
     "name": "Md. Nishan Khan",
-    "role": "Lead Developer",
+    //  "role": "Lead Developer",
     "image": "https://res.cloudinary.com/dcfny0d5c/image/upload/v1762248220/big-matrix/photos/NishanKhan.jpg",
     "slug": "nishan-khan",
     "desc": "Full-stack developer and AI engineer building robust healthcare platforms and intelligent medical systems.",
@@ -262,7 +262,7 @@
   {
     "id": 12,
     "name": "Galib Ahmed",
-    "role": "Research Associate",
+    // "role": "Research Associate",
     "image": "https://res.cloudinary.com/dcfny0d5c/image/upload/v1762248181/big-matrix/photos/Galib.jpg",
     "slug": "galib-ahmed",
     "desc": "Machine learning specialist focusing on natural language processing and computer vision for healthcare applications.",
@@ -286,7 +286,7 @@
   {
     "id": 13,
     "name": "Md. Misbah Khan",
-    "role": "Junior Developer",
+    // "role": "Junior Developer",
     "image": "https://res.cloudinary.com/dcfny0d5c/image/upload/v1762248204/big-matrix/photos/MisbahKhan.jpg",
     "slug": "misbah-khan",
     "desc": "Cloud architect and DevOps specialist ensuring scalable, secure deployment of AI-powered healthcare solutions.",
@@ -311,7 +311,7 @@
   {
     "id": 14,
     "name": "Md. Jobaer Rahman",
-    "role": "Research Associate",
+    // "role": "Research Associate",
     "image": "https://res.cloudinary.com/dcfny0d5c/image/upload/v1762248184/big-matrix/photos/JobaerRahman.jpg",
     "slug": "jobaer-rahman",
     "desc": "Backend engineer and database specialist developing efficient data management systems for healthcare applications.",
@@ -333,7 +333,7 @@
   {
     "id": 13,
     "name": "Mofidul Hassan",
-    "role": "Junior Researcher",
+    // "role": "Junior Researcher",
     "image": "https://res.cloudinary.com/dcfny0d5c/image/upload/v1771303329/mofidul_mvb20d.jpg",
     "slug": "mofidul",
     "desc": "Cloud architect and DevOps specialist ensuring scalable, secure deployment of AI-powered healthcare solutions.",
@@ -356,7 +356,7 @@
   {
     "id": 13,
     "name": "Somik Miah",
-    "role": "Junior Researcher",
+    // "role": "Junior Researcher",
     "image": "https://res.cloudinary.com/dcfny0d5c/image/upload/v1771303273/SomikMiah_jjaicl.jpg",
     "slug": "somik",
     "desc": "Cloud architect and DevOps specialist ensuring scalable, secure deployment of AI-powered healthcare solutions.",
