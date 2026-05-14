@@ -6,9 +6,7 @@ image: "/assets/images/projects/PM-Dashboard.jpeg"
 slug: "bm-project-management"
 desc: "Internal project management platform developed by our R&D team to simplify task tracking, deadlines, and team coordination."
 client: "Big-Matrix Solutions (Internal R&D)"
-date: "2026–Present"
-location: "Internal Use"
-duration: "Ongoing"
+date: "February, 2026 -  April, 2026"
 ---
 
 # Project Management Platform
@@ -21,6 +19,7 @@ This is an internal project management platform built us to help manage ongoing 
 
 The goal is to keep task tracking, deadlines, and team coordination in one place so we don’t rely on scattered tools like spreadsheets, chat threads, and separate trackers.
 
+You can access the platform here: https://pm.big-matrix.com/
 
 ## Problem Statement
 
