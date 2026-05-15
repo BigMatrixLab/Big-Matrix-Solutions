@@ -109,10 +109,7 @@ const ProjectDetails = () => {
                                             <p>Location :</p>
                                             <h6>{project.location}</h6>
                                         </div>
-                                        <div className="project-details-info">
-                                            <p>Project Value :</p>
-                                            <h6>{project.value || "$6,500.00"}</h6>
-                                        </div>
+                                     
                                     </div>
                                     <div className="widget-sidber-contact-box">
                                         <div className="widget-sidber-contact">
