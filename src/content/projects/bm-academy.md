@@ -5,7 +5,10 @@ category: "EdTech Platform"
 image: "/assets/images/projects/BM-Academy.png"
 slug: "bm-academy"
 desc: "Learning platform focused on bridging medical knowledge with computer science and AI for research-oriented education."
-
+client: "Big-Matrix Solutions (Internal)"
+date: "October, 2025-December, 2025"
+location: "Online Platform"
+duration: "3 Months"
 ---
 
 # BM-Academy
