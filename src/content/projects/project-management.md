@@ -45,7 +45,7 @@ It provides:
 
 ## Technology Stack
 
-The system is built using a full-stack setup:
+The system is built using:
 
 - React for the frontend interface
 - Django for backend APIs and business logic
