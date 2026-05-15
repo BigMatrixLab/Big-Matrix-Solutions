@@ -7,6 +7,7 @@ slug: "bm-project-management"
 desc: "Internal project management platform developed by our R&D team to simplify task tracking, deadlines, and team coordination."
 client: "Big-Matrix Solutions (Internal R&D)"
 date: "February, 2026 -  April, 2026"
+location: "Online Platform"
 ---
 
 # Project Management Platform
