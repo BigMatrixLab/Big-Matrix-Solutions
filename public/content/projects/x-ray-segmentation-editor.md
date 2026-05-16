@@ -8,6 +8,7 @@ desc: "A specialized tool for medical professionals to annotate and segment X-ra
 client: "Healthcare Partner"
 date: "2026
 duration: "Ongoing"
+location: "https://segmentation-editor.pages.dev/"
 ---
 
 # X-Ray Segmentation Editor
