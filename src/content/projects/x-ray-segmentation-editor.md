@@ -6,14 +6,12 @@ image: "/assets/images/projects/x-ray-segmentation-editor.png"
 slug: "x-ray-segmentation-editor"
 desc: "A specialized tool for medical professionals to annotate and segment X-ray images for training AI models."
 client: "Healthcare Partner"
-date: "2023"
-location: "Remote"
-duration: "4 months"
+date: "2026
+duration: "Ongoing"
 ---
 
 # X-Ray Segmentation Editor
 
-*Project Duration: 1 month | Completed: February 2026*
 
 ![X-Ray Segmentation Editor Platform](/assets/images/projects/x-ray-segmentation-editor.png)
 
@@ -23,7 +21,6 @@ duration: "4 months"
 
 ## Key Goals
 - Quickly turn a single chest X-ray into labeled anatomy masks with an AI helper.
-- Perform rapid quality checks before a study, publication, or model training run.
 - Standardize how cases are stored and shared (images, masks, overlays, manifest) in one bundle.
 
 ## Technical Capabilities
@@ -38,5 +35,5 @@ duration: "4 months"
 - **Shareability:** Everything needed to reopen a case ships together, avoiding broken links or missing files.
 
 ---
-**Status**: Completed
-**Technology**: React, Canvas API, Python (Backend)
+**Status**: ongoing
+
