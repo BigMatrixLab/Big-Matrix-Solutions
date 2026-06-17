@@ -12,8 +12,8 @@ const NAV_SECTIONS = [
 ];
 
 const heroStats = [
-    { icon: 'bi bi-lightning-charge', num: '<60s', label: 'Average time to generate an initial segmentation pass' },
-    { icon: 'bi bi-layers', num: '8+', label: 'Anatomy regions supported with color-coded mask layers' },
+    { icon: 'bi bi-lightning-charge', num: '<20s', label: 'Average time to generate an initial segmentation pass' },
+    { icon: 'bi bi-layers', num: '12+', label: 'Anatomy regions supported with color-coded mask layers' },
     { icon: 'bi bi-arrow-repeat', num: 'Undo/Redo', label: 'Fast iterative refinement for clinical-grade corrections' },
     { icon: 'bi bi-box-seam', num: 'ZIP Export', label: 'Portable case package with image, masks, overlays, and manifest' },
 ];
