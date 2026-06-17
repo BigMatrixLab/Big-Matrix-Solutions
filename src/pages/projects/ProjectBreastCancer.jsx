@@ -274,8 +274,8 @@ const ProjectBreastCancer = () => {
             {/* ============================ TEAM ============================ */}
             <section className="bc-section" id="team" ref={registerSection('team')}>
                 <div className="bc-container">
-                    <div className="bc-section-head bc-center">
-                        <span className="bc-eyebrow" style={{ justifyContent: 'center' }}>Collaboration</span>
+                    <div className="bc-section-head">
+                        <span className="bc-eyebrow">Collaboration</span>
                         <h2>Team &amp; Collaboration</h2>
                         <p>A partnership between academic research leadership and industry engineering.</p>
                     </div>
