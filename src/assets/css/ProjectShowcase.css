@@ -318,7 +318,8 @@
     position: relative;
     z-index: 3;
     margin-top: -70px;
-    margin-bottom: 20px;
+    background: #F3F8FC;
+  
 }
 
 .bc-stats-grid {
@@ -328,7 +329,7 @@
 }
 
 .bc-stat-card {
-    background: #fff;
+    background: #F3F8FC;
     border-radius: var(--bc-radius);
     padding: 28px 26px;
     box-shadow: var(--bc-shadow);
