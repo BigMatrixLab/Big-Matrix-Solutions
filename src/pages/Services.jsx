@@ -4,6 +4,13 @@ import Breadcrumb from '../components/Breadcrumb';
 import ServiceCard from '../components/ServiceCard';
 
 const Services = () => {
+    // Reorder only the first 6 services to 5,6,4,3,2,1; keep the rest as-is.
+    const firstSix = servicesData.slice(0, 6);
+    const reorderedFirstSix = [4, 5, 3, 2, 1, 0]
+        .map((i) => firstSix[i])
+        .filter(Boolean);
+    const orderedServices = [...reorderedFirstSix, ...servicesData.slice(6)];
+
     return (
         <>
             <Breadcrumb pageTitle="Our Service" breadcrumbItem="Service" />
@@ -21,7 +28,7 @@ const Services = () => {
                         </div>
                     </div>
                     <div className="row">
-                        {servicesData.map((service) => (
+                        {orderedServices.map((service) => (
                             <div className="col-lg-4 col-md-6 mb-4 d-flex" key={service.id}>
                                 <ServiceCard service={service} />
                             </div>
