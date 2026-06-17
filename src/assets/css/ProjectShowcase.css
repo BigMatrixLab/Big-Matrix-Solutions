@@ -27,20 +27,32 @@
 .bc-showcase * {
     box-sizing: border-box;
 }
-.bc-chip-content {
-    display: flex;
-    flex-direction: column;
-}
-.bc-hero,
-.bc-hero p,
-.bc-hero .bc-hero-sub {
-    color: #fff;
-}
+
+/* Mirrors Bootstrap 5 .container so page content lines up with the navbar logo */
 .bc-container {
     width: 100%;
-    max-width: 1240px;
     margin: 0 auto;
-    padding: 50px 20px;
+    padding: 0 12px;
+}
+
+@media (min-width: 576px) {
+    .bc-container { max-width: 540px; }
+}
+
+@media (min-width: 768px) {
+    .bc-container { max-width: 720px; }
+}
+
+@media (min-width: 992px) {
+    .bc-container { max-width: 960px; }
+}
+
+@media (min-width: 1200px) {
+    .bc-container { max-width: 1140px; }
+}
+
+@media (min-width: 1400px) {
+    .bc-container { max-width: 1320px; }
 }
 
 .bc-showcase h1,
