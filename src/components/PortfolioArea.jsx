@@ -32,7 +32,7 @@ const PortfolioArea = () => {
                     </div>
                 </div>
                 <div className="row">
-                    {filteredItems.slice(0, 3).map((item, index) => (
+                    {filteredItems.filter(item => ['8', '7', '1'].includes(item.id)).map((item, index) => (
                         <div className="col-lg-4 col-md-6 d-flex" key={index}>
                             <ProjectCard item={item} />
                         </div>
