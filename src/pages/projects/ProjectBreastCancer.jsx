@@ -1,6 +1,5 @@
 import React, { useEffect, useRef, useState } from 'react';
 import { Link } from 'react-router-dom';
-import Breadcrumb from '../../components/Breadcrumb';
 import '../../assets/css/ProjectShowcase.css';
 
 const NAV_SECTIONS = [
@@ -97,12 +96,12 @@ const ProjectBreastCancer = () => {
     };
 
     return (
-        <div className="bc-showcase" style={{ paddingTop: '32px' }}>
+        <div className="bc-showcase">
             {/* <Breadcrumb pageTitle="Multimodal AI for Breast Cancer Diagnosis" breadcrumbItem="Project" /> */}
 
             {/* ============================ HERO ============================ */}
             <section className="bc-hero ">
-                <div className="bc-container pt-16">
+                <div className="bc-container">
                     <div className="bc-hero-grid">
                         <div className="bc-hero-text">
                             <span className="bc-hero-badge">
