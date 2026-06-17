@@ -113,34 +113,6 @@ const ProjectBreastCancer = () => {
                                 Development of a comprehensive multimodal AI system integrating mammography, ultrasound, pathology, clinical records, radiology reports, and genomic data for breast cancer screening, diagnosis, prognosis, report generation, treatment planning, and clinical decision support.
                             </p>
 
-                            <div className="bc-meta">
-                                <span className="bc-chip">
-                                    
-                                    <span className="bc-chip-content">
-                                       <div className='flex' >
-                                         <i className="bi bi-person-badge"></i>
-                                        <span className="bc-chip-label">Principal Investigator</span>
-                                       </div>
-                                        <span className="bc-chip-value">Dr. Mohammad Monir Uddin</span>
-                                    </span>
-                                </span>
-
-                                <span className="bc-chip">
-                                    <i className="bi bi-mortarboard"></i>
-                                    <span className="bc-chip-content">
-                                        <span className="bc-chip-label">Institution</span>
-                                        <span className="bc-chip-value">North South University</span>
-                                    </span>
-                                </span>
-
-                                <span className="bc-chip">
-                                    <i className="bi bi-cash-coin"></i>
-                                    <span className="bc-chip-content">
-                                        <span className="bc-chip-label">Grant ID</span>
-                                        <span className="bc-chip-value">CTRG-21-SEPS-15</span>
-                                    </span>
-                                </span>
-                            </div>
                         </div>
 
                         <figure className="bc-hero-figure">
