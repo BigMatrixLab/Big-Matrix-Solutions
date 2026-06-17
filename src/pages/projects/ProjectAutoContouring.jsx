@@ -13,7 +13,7 @@ const NAV_SECTIONS = [
 
 const heroStats = [
     { icon: 'bi bi-stopwatch', num: '50-70%', label: 'Reduction in manual contouring time per case' },
-    { icon: 'bi bi-diagram-3', num: '5+', label: 'Cancer sites supported in the current contouring suite' },
+    // { icon: 'bi bi-diagram-3', num: '5+', label: 'Cancer sites supported in the current contouring suite' },
     { icon: 'bi bi-bullseye', num: 'High', label: 'Contour consistency through standardized AI-assisted delineation' },
     { icon: 'bi bi-shield-check', num: 'QA-Ready', label: 'Automated quality checks before clinical plan finalization' },
 ];
@@ -270,8 +270,8 @@ const ProjectAutoContouring = () => {
 
             <section className="bc-section" id="team" ref={registerSection('team')}>
                 <div className="bc-container">
-                    <div className="bc-section-head bc-center">
-                        <span className="bc-eyebrow" style={{ justifyContent: 'center' }}>Collaboration</span>
+                    <div className="bc-section-head bc-left">
+                        <span className="bc-eyebrow" >Collaboration</span>
                         <h2>Cross-Disciplinary Delivery Team</h2>
                         <p>Clinical, planning, and engineering specialists aligned around safe and efficient radiotherapy workflows.</p>
                     </div>
