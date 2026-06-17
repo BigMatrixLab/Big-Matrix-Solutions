@@ -113,7 +113,7 @@ const ProjectAutoContouring = () => {
 
                         <figure className="bc-hero-figure">
                             <img
-                                src="/assets/images/projects/lung ct segmentation and report generation.png"
+                                src="/assets/images/projects/auto contouring software.png"
                                 alt="Auto Contouring Software"
                             />
                             <figcaption className="bc-figure-tag">
