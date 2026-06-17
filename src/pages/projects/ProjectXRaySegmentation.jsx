@@ -65,7 +65,7 @@ const futureDirections = [
 
 const collaborators = [
     { icon: 'bi bi-hospital', role: 'Clinical Review Team', name: 'Radiology Specialists', desc: 'Validate segmentation quality and ensure clinically meaningful region boundaries.' },
-    { icon: 'bi bi-database-gear', role: 'Data & Annotation Team', name: 'AI Data Operations', desc: 'Curate training-ready case bundles and manage dataset consistency across cohorts.' },
+    { icon: 'bi bi-hdd-stack', role: 'Data & Annotation Team', name: 'AI Data Operations', desc: 'Curate training-ready case bundles and manage dataset consistency across cohorts.' },
     { icon: 'bi bi-cpu', role: 'Engineering Team', name: 'Big-Matrix Solutions', image: '/assets/images/big_matrix_cube.png', desc: 'Builds the editor workflow, model integration, and export pipeline for production use.' },
 ];
 

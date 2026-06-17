@@ -243,7 +243,7 @@ const ProjectScriptor = () => {
                     </div>
 
                     <div className="bc-pub">
-                        <span className="bc-pub-icon"><i className="bi bi-rocket-takeoff"></i></span>
+                        <span className="bc-pub-icon bc-pub-icon-logo"><img src="/assets/images/scriptor_logo.png" alt="Scriptor logo" /></span>
                         <div>
                             <div className="bc-pub-label">Try It Live</div>
                             <h4>Scriptor Public Beta is available now</h4>
