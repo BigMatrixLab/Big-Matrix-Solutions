@@ -101,51 +101,46 @@ const ProjectBreastCancer = () => {
             {/* <Breadcrumb pageTitle="Multimodal AI for Breast Cancer Diagnosis" breadcrumbItem="Project" /> */}
 
             {/* ============================ HERO ============================ */}
-            <section className="bc-hero pt-12">
-                <div className="bc-container">
+            <section className="bc-hero ">
+                <div className="bc-container pt-16">
                     <div className="bc-hero-grid">
                         <div className="bc-hero-text">
                             <span className="bc-hero-badge">
                                 <i className="bi bi-heart-pulse-fill"></i> AI in Healthcare
                             </span>
                             <h1>Multimodal Breast Cancer Intelligence Platform</h1>
-                            <p className="bc-hero-sub">
+                            <p className="bc-hero-sub " >
                                 Development of a comprehensive multimodal AI system integrating mammography, ultrasound, pathology, clinical records, radiology reports, and genomic data for breast cancer screening, diagnosis, prognosis, report generation, treatment planning, and clinical decision support.
                             </p>
 
                             <div className="bc-meta">
                                 <span className="bc-chip">
-                                   
-                                    <span>
+                                    
+                                    <span className="bc-chip-content">
+                                       <div className='flex' >
                                          <i className="bi bi-person-badge"></i>
                                         <span className="bc-chip-label">Principal Investigator</span>
+                                       </div>
                                         <span className="bc-chip-value">Dr. Mohammad Monir Uddin</span>
                                     </span>
                                 </span>
+
                                 <span className="bc-chip">
                                     <i className="bi bi-mortarboard"></i>
-                                    <span>
+                                    <span className="bc-chip-content">
                                         <span className="bc-chip-label">Institution</span>
                                         <span className="bc-chip-value">North South University</span>
                                     </span>
                                 </span>
+
                                 <span className="bc-chip">
                                     <i className="bi bi-cash-coin"></i>
-                                    <span>
+                                    <span className="bc-chip-content">
                                         <span className="bc-chip-label">Grant ID</span>
                                         <span className="bc-chip-value">CTRG-21-SEPS-15</span>
                                     </span>
                                 </span>
                             </div>
-
-                            {/* <div className="bc-hero-actions">
-                                <a href="#overview" className="bc-btn bc-btn-primary">
-                                    Explore the Project <i className="bi bi-arrow-down"></i>
-                                </a>
-                                <Link to="/contact" className="bc-btn bc-btn-ghost">
-                                    Talk to the Team <i className="bi bi-arrow-right"></i>
-                                </Link>
-                            </div> */}
                         </div>
 
                         <figure className="bc-hero-figure">
