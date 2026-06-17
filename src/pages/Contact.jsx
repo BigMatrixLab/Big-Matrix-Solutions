@@ -69,7 +69,7 @@ const Contact = () => {
                                     </div>
                                     <div className="contact-info-content">
                                         <p>Call Us</p>
-                                        <h4>+880 2 55668200 (6212)</h4>
+                                        <h4>+8801339870730</h4>
                                     </div>
                                 </div>
                                 <div className="contact-info-box">
@@ -78,7 +78,7 @@ const Contact = () => {
                                     </div>
                                     <div className="contact-info-content">
                                         <p>Send E-Mail</p>
-                                        <h4>contact@big-matrix.com</h4>
+                                        <h4>ratimshariar@gmail.com</h4>
                                     </div>
                                 </div>
                                 <div className="contact-info-box">
