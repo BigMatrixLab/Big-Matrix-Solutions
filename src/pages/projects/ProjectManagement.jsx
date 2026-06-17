@@ -66,7 +66,7 @@ const futureDirections = [
 const team = [
     { icon: 'bi bi-code-square', role: 'Engineering Team', name: 'Platform Development', desc: 'Built core modules for task orchestration, status updates, and dashboard workflows.' },
     { icon: 'bi bi-briefcase', role: 'Product & Operations', name: 'Internal Delivery Leads', desc: 'Defined workflow requirements and operating models for cross-team execution consistency.' },
-    { icon: 'bi bi-gear-wide-connected', role: 'R&D Program Office', name: 'Big-Matrix Solutions', desc: 'Coordinates adoption, process standardization, and ongoing platform enhancement.' },
+    { icon: 'bi bi-gear-wide-connected', role: 'R&D Program Office', name: 'Big-Matrix Solutions', image: '/assets/images/big_matrix_cube.png', desc: 'Coordinates adoption, process standardization, and ongoing platform enhancement.' },
 ];
 
 const ProjectManagement = () => {
@@ -271,7 +271,11 @@ const ProjectManagement = () => {
                     <div className="bc-grid bc-grid-3">
                         {team.map((member) => (
                             <div className="bc-team-card" key={member.name}>
-                                <div className="bc-team-avatar"><i className={member.icon}></i></div>
+                                <div className={`bc-team-avatar${member.image ? ' bc-team-avatar-logo' : ''}`}>
+                                    {member.image
+                                        ? <img src={member.image} alt={member.name} />
+                                        : <i className={member.icon}></i>}
+                                </div>
                                 <div className="bc-team-role">{member.role}</div>
                                 <h4>{member.name}</h4>
                                 <p>{member.desc}</p>

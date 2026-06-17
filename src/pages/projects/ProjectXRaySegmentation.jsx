@@ -66,7 +66,7 @@ const futureDirections = [
 const collaborators = [
     { icon: 'bi bi-hospital', role: 'Clinical Review Team', name: 'Radiology Specialists', desc: 'Validate segmentation quality and ensure clinically meaningful region boundaries.' },
     { icon: 'bi bi-database-gear', role: 'Data & Annotation Team', name: 'AI Data Operations', desc: 'Curate training-ready case bundles and manage dataset consistency across cohorts.' },
-    { icon: 'bi bi-cpu', role: 'Engineering Team', name: 'Big-Matrix Solutions', desc: 'Builds the editor workflow, model integration, and export pipeline for production use.' },
+    { icon: 'bi bi-cpu', role: 'Engineering Team', name: 'Big-Matrix Solutions', image: '/assets/images/big_matrix_cube.png', desc: 'Builds the editor workflow, model integration, and export pipeline for production use.' },
 ];
 
 const ProjectXRaySegmentation = () => {
@@ -273,7 +273,11 @@ const ProjectXRaySegmentation = () => {
                     <div className="bc-grid bc-grid-3">
                         {collaborators.map((member) => (
                             <div className="bc-team-card" key={member.name}>
-                                <div className="bc-team-avatar"><i className={member.icon}></i></div>
+                                <div className={`bc-team-avatar${member.image ? ' bc-team-avatar-logo' : ''}`}>
+                                    {member.image
+                                        ? <img src={member.image} alt={member.name} />
+                                        : <i className={member.icon}></i>}
+                                </div>
                                 <div className="bc-team-role">{member.role}</div>
                                 <h4>{member.name}</h4>
                                 <p>{member.desc}</p>

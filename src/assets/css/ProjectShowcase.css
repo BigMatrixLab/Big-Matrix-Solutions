@@ -795,12 +795,22 @@
     height: 72px;
     border-radius: 50%;
     margin: 0 auto 18px;
-    background: linear-gradient(140deg, #072b63, #0c5adb);
-    color: #fff;
+    background: #fff;
+    border: 1px solid var(--bc-line);
+    box-shadow: var(--bc-shadow-sm);
+    color: var(--bc-primary);
     display: flex;
     align-items: center;
     justify-content: center;
     font-size: 30px;
+}
+
+/* Logo variant: show the brand cube on the same clean light surface */
+.bc-team-avatar.bc-team-avatar-logo img {
+    width: 100%;
+    height: 100%;
+    object-fit: contain;
+    padding: 14px;
 }
 
 .bc-team-role {

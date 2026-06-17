@@ -66,7 +66,7 @@ const futureDirections = [
 const collaborators = [
     { icon: 'bi bi-person-workspace', role: 'Clinical Lead Team', name: 'Radiation Oncologists', desc: 'Provide contour validation oversight and ensure clinically safe treatment-structure definition.' },
     { icon: 'bi bi-calculator', role: 'Planning Team', name: 'Dosimetrists & Medical Physicists', desc: 'Use contour and dose guidance outputs to optimize treatment plans with protocol compliance.' },
-    { icon: 'bi bi-code-slash', role: 'Engineering Team', name: 'Big-Matrix Solutions', desc: 'Develops model pipelines, QA automation, and system integration for radiotherapy workflows.' },
+    { icon: 'bi bi-code-slash', role: 'Engineering Team', name: 'Big-Matrix Solutions', image: '/assets/images/big_matrix_cube.png', desc: 'Develops model pipelines, QA automation, and system integration for radiotherapy workflows.' },
 ];
 
 const ProjectAutoContouring = () => {
@@ -279,7 +279,11 @@ const ProjectAutoContouring = () => {
                     <div className="bc-grid bc-grid-3">
                         {collaborators.map((member) => (
                             <div className="bc-team-card" key={member.name}>
-                                <div className="bc-team-avatar"><i className={member.icon}></i></div>
+                                <div className={`bc-team-avatar${member.image ? ' bc-team-avatar-logo' : ''}`}>
+                                    {member.image
+                                        ? <img src={member.image} alt={member.name} />
+                                        : <i className={member.icon}></i>}
+                                </div>
                                 <div className="bc-team-role">{member.role}</div>
                                 <h4>{member.name}</h4>
                                 <p>{member.desc}</p>
