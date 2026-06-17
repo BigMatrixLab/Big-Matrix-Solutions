@@ -59,7 +59,7 @@ const benefits = [
 
 const futureDirections = [
     '3D Tomosynthesis Integration for full volumetric analysis.',
-    'Multi-center validation across 5+ hospitals.',
+    'Multi-center validation across multiple hospitals.',
     'Federated learning for privacy-preserving multi-institutional training.',
     'Integration with molecular subtype prediction.',
 ];
