@@ -14,6 +14,7 @@ import ProjectManagement from './pages/projects/ProjectManagement';
 import ProjectXRaySegmentation from './pages/projects/ProjectXRaySegmentation';
 import ProjectScriptor from './pages/projects/ProjectScriptor';
 import ProjectAutoContouring from './pages/projects/ProjectAutoContouring';
+import ProjectLungCTReport from './pages/projects/ProjectLungCTReport';
 import Blog from './pages/Blog';
 import BlogDetails from './pages/BlogDetails';
 import Careers from './pages/Careers';
@@ -63,6 +64,7 @@ function App() {
           <Route path="/project/x-ray-segmentation-editor" element={<ProjectXRaySegmentation />} />
           <Route path="/project/scriptor" element={<ProjectScriptor />} />
           <Route path="/project/auto-contouring" element={<ProjectAutoContouring />} />
+          <Route path="/project/lung-ct-report-generation" element={<ProjectLungCTReport />} />
           <Route path="/project/:slug" element={<ProjectDetails />} />
           <Route path="/blog" element={<Blog />} />
           <Route path="/blog/:slug" element={<BlogDetails />} />
