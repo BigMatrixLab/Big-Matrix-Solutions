@@ -1,106 +1,288 @@
-import React from 'react';
-import { Link } from 'react-router-dom';
-import Breadcrumb from '../../components/Breadcrumb';
+import React, { useEffect, useRef, useState } from 'react';
+import '../../assets/css/ProjectShowcase.css';
+
+const NAV_SECTIONS = [
+    { id: 'overview', label: 'Overview' },
+    { id: 'challenge', label: 'Challenge' },
+    { id: 'solution', label: 'Capabilities' },
+    { id: 'workflow', label: 'Workflow' },
+    { id: 'impact', label: 'Impact' },
+    { id: 'future', label: 'Future' },
+    { id: 'team', label: 'Collaboration' },
+];
+
+const heroStats = [
+    { icon: 'bi bi-lightning-charge', num: '<60s', label: 'Average time to generate an initial segmentation pass' },
+    { icon: 'bi bi-layers', num: '8+', label: 'Anatomy regions supported with color-coded mask layers' },
+    { icon: 'bi bi-arrow-repeat', num: 'Undo/Redo', label: 'Fast iterative refinement for clinical-grade corrections' },
+    { icon: 'bi bi-box-seam', num: 'ZIP Export', label: 'Portable case package with image, masks, overlays, and manifest' },
+];
+
+const projectFacts = [
+    { icon: 'bi bi-building', label: 'Client', value: 'Healthcare Partner' },
+    { icon: 'bi bi-tag', label: 'Category', value: 'Medical AI Tools' },
+    { icon: 'bi bi-calendar3', label: 'Year', value: '2026' },
+    { icon: 'bi bi-hourglass-split', label: 'Status', value: 'Ongoing' },
+    { icon: 'bi bi-globe', label: 'Demo', value: 'segmentation-editor.pages.dev' },
+];
+
+const challenges = [
+    { icon: 'bi bi-exclamation-triangle', title: 'Manual Masking Bottlenecks', desc: 'Pixel-level annotation and cleanup are time-consuming, especially when teams handle large case volumes.' },
+    { icon: 'bi bi-shuffle', title: 'Inconsistent Labeling', desc: 'Different reviewers often produce different boundaries and naming patterns without a shared editing workflow.' },
+    { icon: 'bi bi-file-earmark-x', title: 'Fragmented Case Packaging', desc: 'Images, masks, overlays, and metadata are often spread across folders, making review and handoff error-prone.' },
+    { icon: 'bi bi-people', title: 'Cross-Team Collaboration Gaps', desc: 'Research and clinical teams need a common interface for review, correction, and export without coding overhead.' },
+];
+
+const capabilities = [
+    { icon: 'bi bi-upload', title: 'Upload and Auto-Segment', desc: 'Drop in a chest X-ray and generate color-coded anatomy masks in a single flow.' },
+    { icon: 'bi bi-pencil-square', title: 'Precision Manual Refinement', desc: 'Use brush and erase controls with undo and redo to correct difficult boundaries quickly.' },
+    { icon: 'bi bi-eye', title: 'Layered Visual Controls', desc: 'Show, hide, and reorder segments to inspect overlap quality and region separation clearly.' },
+    { icon: 'bi bi-download', title: 'Case Load and Export', desc: 'Open existing packages and export validated cases into reusable ZIP bundles for downstream use.' },
+];
+
+const workflow = [
+    { title: 'Case Upload', desc: 'A chest X-ray is uploaded and prepared for segmentation in the editor workspace.' },
+    { title: 'Automated Segmentation', desc: 'The AI engine generates initial mask layers and structured label assignments.' },
+    { title: 'Reviewer Refinement', desc: 'Clinical or research users apply targeted edits with interactive tools.' },
+    { title: 'Quality Review', desc: 'Masks are inspected through overlay controls and layer visibility checks.' },
+    { title: 'Package Export', desc: 'Finalized image, masks, overlays, and manifest are bundled into a shareable archive.' },
+];
+
+const benefits = [
+    'Reduces total annotation time by combining auto-segmentation with focused manual corrections.',
+    'Improves consistency through standardized segment naming, color coding, and packaging format.',
+    'Enables smooth collaboration between clinical reviewers, data teams, and AI engineers.',
+    'Produces portable case bundles that simplify validation, reprocessing, and dataset expansion.',
+    'Supports repeatable quality-control workflows for both research and deployment pipelines.',
+];
+
+const futureDirections = [
+    'Active-learning loop to prioritize difficult cases and improve model performance over time.',
+    'Expanded anatomy library for broader thoracic findings and pathology-focused segment classes.',
+    'Integrated reviewer audit trail for traceable edits and quality assurance documentation.',
+    'PACS-aligned interoperability to support easier clinical integration and handoff.',
+];
+
+const collaborators = [
+    { icon: 'bi bi-hospital', role: 'Clinical Review Team', name: 'Radiology Specialists', desc: 'Validate segmentation quality and ensure clinically meaningful region boundaries.' },
+    { icon: 'bi bi-database-gear', role: 'Data & Annotation Team', name: 'AI Data Operations', desc: 'Curate training-ready case bundles and manage dataset consistency across cohorts.' },
+    { icon: 'bi bi-cpu', role: 'Engineering Team', name: 'Big-Matrix Solutions', desc: 'Builds the editor workflow, model integration, and export pipeline for production use.' },
+];
 
 const ProjectXRaySegmentation = () => {
+    const [activeSection, setActiveSection] = useState('overview');
+    const sectionRefs = useRef({});
+
+    useEffect(() => {
+        const observer = new IntersectionObserver(
+            (entries) => {
+                entries.forEach((entry) => {
+                    if (entry.isIntersecting) {
+                        setActiveSection(entry.target.id);
+                    }
+                });
+            },
+            { rootMargin: '-45% 0px -50% 0px', threshold: 0 }
+        );
+
+        const nodes = Object.values(sectionRefs.current).filter(Boolean);
+        nodes.forEach((node) => observer.observe(node));
+        return () => observer.disconnect();
+    }, []);
+
+    const registerSection = (id) => (el) => {
+        sectionRefs.current[id] = el;
+    };
+
     return (
-        <>
-            <Breadcrumb pageTitle="X-Ray Segmentation Editor" breadcrumbItem="Project" />
-
-            <div className="project-details-area">
-                <div className="container">
-                    <div className="row">
-                        <div className="col-lg-12">
-                            <div className="project-details-thumb">
-                                <img src="/assets/images/projects/x-ray-segmentation-editor.png" alt="X-Ray Segmentation Editor" />
-                            </div>
-                        </div>
-                    </div>
-
-                    <div className="row">
-                        {/* Main Content */}
-                        <div className="col-lg-8">
-                            <div className="project-details-content">
-                                <h2>X-Ray Segmentation Editor</h2>
-
-                                <h3>Project Overview</h3>
-                                <p>
-                                    <strong>X-Ray Segmentation Editor</strong> is an interactive workspace for reviewing,
-                                    correcting, and packaging chest X-ray segmentations. It blends automatic anatomy
-                                    detection with lightweight manual touch-ups so clinical and research teams can create
-                                    reliable mask sets without diving into code.
-                                </p>
-
-                                <h3>Key Goals</h3>
-                                <ul className="project-details-list">
-                                    <li><i className="bi bi-check-circle-fill"></i> Quickly turn a single chest X-ray into labeled anatomy masks with an AI helper</li>
-                                    <li><i className="bi bi-check-circle-fill"></i> Standardize how cases are stored and shared (images, masks, overlays, manifest) in one bundle</li>
-                                </ul>
-
-                                <h3>Technical Capabilities</h3>
-                                <ul className="project-details-list">
-                                    <li><i className="bi bi-check-circle-fill"></i> <strong>Upload & auto-segment:</strong> Drop in a chest X-ray, get color-coded anatomy layers instantly</li>
-                                    <li><i className="bi bi-check-circle-fill"></i> <strong>Manual refinement:</strong> Brush/erase tools, segment selection, and undo/redo to fix problem areas</li>
-                                    <li><i className="bi bi-check-circle-fill"></i> <strong>View controls:</strong> Show/hide segments and reorder layers for clear overlays</li>
-                                    <li><i className="bi bi-check-circle-fill"></i> <strong>Case loading and export:</strong> Open a saved ZIP or export your current work as a shareable package</li>
-                                </ul>
-
-                                <h3>Impact</h3>
-                                <ul className="project-details-list">
-                                    <li><i className="bi bi-check-circle-fill"></i> <strong>Speed:</strong> Auto-segmentation gives a solid starting point; edits focus only on what needs fixing</li>
-                                    <li><i className="bi bi-check-circle-fill"></i> <strong>Consistency:</strong> Colors, segment names, and file structure stay uniform across sessions and exports</li>
-                                    <li><i className="bi bi-check-circle-fill"></i> <strong>Shareability:</strong> Everything needed to reopen a case ships together, avoiding broken links or missing files</li>
-                                </ul>
-                            </div>
+        <div className="bc-showcase" style={{ paddingTop: '32px' }}>
+            <section className="bc-hero">
+                <div className="bc-container">
+                    <div className="bc-hero-grid">
+                        <div className="bc-hero-text">
+                            <span className="bc-hero-badge">
+                                <i className="bi bi-clipboard2-pulse-fill"></i> Medical AI Tools
+                            </span>
+                            <h1>X-Ray Segmentation Editor</h1>
+                            <p className="bc-hero-sub">
+                                An interactive workspace for reviewing, correcting, and packaging chest X-ray segmentations.
+                                The platform combines automated anatomy detection with lightweight manual refinement so teams
+                                can produce reliable mask sets in a consistent and shareable format.
+                            </p>
                         </div>
 
-                        {/* Sidebar */}
-                        <div className="col-lg-4">
-                            <div className="project-details-right">
-                                <div className="project-details-info">
-                                    <p>Client :</p>
-                                    <h6>Healthcare Partner</h6>
-                                </div>
-                                <div className="project-details-info">
-                                    <p>Category :</p>
-                                    <h6>Medical AI Tools</h6>
-                                </div>
-                                <div className="project-details-info">
-                                    <p>Year :</p>
-                                    <h6>2026</h6>
-                                </div>
-                                <div className="project-details-info">
-                                    <p>Status :</p>
-                                    <h6>Ongoing</h6>
-                                </div>
-                                <div className="project-details-info">
-                                    <p>Project Demo :</p>
-                                    <h6>
-                                        <a href="https://segmentation-editor.pages.dev/" target="_blank" rel="noopener noreferrer" style={{ fontWeight: 'bold' }}>
-                                            segmentation-editor.pages.dev
-                                        </a>
-                                    </h6>
-                                </div>
-                            </div>
-
-                            <div className="widget-sidber-contact-box">
-                                <div className="widget-sidber-contact">
-                                    <img src="/assets/images/inner-images/sidber-cont-icon.png" alt="" />
-                                </div>
-                                <p className="widget-sidber-contact-text">Call Us Anytime</p>
-                                <h3 className="widget-sidber-contact-number">+880-2-55668200 (Ext: 6212)</h3>
-                                <span className="widget-sidber-contact-gmail">
-                                    <i className="bi bi-envelope-fill"></i> contact@big-matrix.com
+                        <figure className="bc-hero-figure">
+                            <img src="/assets/images/projects/x-ray-segmentation-editor.png" alt="X-Ray Segmentation Editor workspace" />
+                            <figcaption className="bc-figure-tag">
+                                <i className="bi bi-check2-circle"></i>
+                                <span>
+                                    <strong>Human-in-the-loop editing</strong>
+                                    <span>AI speed with expert correction control</span>
                                 </span>
-                                <div className="widget-sidber-contact-btn">
-                                    <Link to="/contact">Contact Us <i className="bi bi-arrow-right"></i></Link>
-                                </div>
+                            </figcaption>
+                        </figure>
+                    </div>
+                </div>
+            </section>
+
+            <div className="bc-stats">
+                <div className="bc-container">
+                    <div className="bc-stats-grid">
+                        {heroStats.map((stat) => (
+                            <div className="bc-stat-card" key={stat.num + stat.label}>
+                                <span className="bc-stat-icon"><i className={stat.icon}></i></span>
+                                <div className="bc-stat-num">{stat.num}</div>
+                                <div className="bc-stat-label">{stat.label}</div>
                             </div>
-                        </div>
+                        ))}
                     </div>
                 </div>
             </div>
-        </>
+
+
+            <section className="bc-section bc-alt" id="challenge" ref={registerSection('challenge')}>
+                <div className="bc-container">
+                    <div className="bc-section-head">
+                        <span className="bc-eyebrow">Why it matters</span>
+                        <h2>The Challenge</h2>
+                        <p>
+                            Building accurate segmentation datasets requires speed, consistency, and packaging discipline
+                            across large case volumes and multi-role teams.
+                        </p>
+                    </div>
+                    <div className="bc-grid bc-grid-4">
+                        {challenges.map((item) => (
+                            <div className="bc-card bc-problem" key={item.title}>
+                                <span className="bc-card-icon"><i className={item.icon}></i></span>
+                                <h4>{item.title}</h4>
+                                <p>{item.desc}</p>
+                            </div>
+                        ))}
+                    </div>
+                </div>
+            </section>
+
+            <section className="bc-section" id="solution" ref={registerSection('solution')}>
+                <div className="bc-container">
+                    <div className="bc-section-head">
+                        <span className="bc-eyebrow">The approach</span>
+                        <h2>Technical Capabilities</h2>
+                        <p>
+                            The editor combines AI-assisted segmentation, interactive correction tools, and structured
+                            export workflows into a single production-ready interface.
+                        </p>
+                    </div>
+                    <div className="bc-grid bc-grid-4">
+                        {capabilities.map((item) => (
+                            <div className="bc-card" key={item.title}>
+                                <span className="bc-card-icon"><i className={item.icon}></i></span>
+                                <h4>{item.title}</h4>
+                                <p>{item.desc}</p>
+                            </div>
+                        ))}
+                    </div>
+                </div>
+            </section>
+
+            <section className="bc-section bc-alt" id="workflow" ref={registerSection('workflow')}>
+                <div className="bc-container">
+                    <div className="bc-section-head">
+                        <span className="bc-eyebrow">How it works</span>
+                        <h2>Workflow Pipeline</h2>
+                        <p>From upload to reusable package, each stage is optimized for fast review and dependable output quality.</p>
+                    </div>
+                    <div className="bc-timeline">
+                        {workflow.map((step, index) => (
+                            <div className="bc-step" key={step.title}>
+                                <div className="bc-step-num">{index + 1}</div>
+                                <div className="bc-step-body">
+                                    <h4>{step.title}</h4>
+                                    <p>{step.desc}</p>
+                                </div>
+                            </div>
+                        ))}
+                    </div>
+                </div>
+            </section>
+
+            <section className="bc-section" id="impact" ref={registerSection('impact')}>
+                <div className="bc-container">
+                    <div className="bc-section-head">
+                        <span className="bc-eyebrow">Key outcomes</span>
+                        <h2>Project Impact</h2>
+                        <p>Designed to improve annotation throughput, output consistency, and collaboration readiness.</p>
+                    </div>
+                    <div className="bc-grid bc-grid-2">
+                        {benefits.map((benefit) => (
+                            <div className="bc-benefit" key={benefit}>
+                                <i className="bi bi-check-circle-fill"></i>
+                                <p>{benefit}</p>
+                            </div>
+                        ))}
+                    </div>
+                </div>
+            </section>
+
+            <section className="bc-section bc-alt" id="future" ref={registerSection('future')}>
+                <div className="bc-container">
+                    <div className="bc-section-head">
+                        <span className="bc-eyebrow">What&apos;s next</span>
+                        <h2>Future Development</h2>
+                        <p>The roadmap extends the platform toward smarter feedback loops and stronger clinical interoperability.</p>
+                    </div>
+
+                    <div className="bc-grid bc-grid-2" style={{ marginBottom: '40px' }}>
+                        {futureDirections.map((item) => (
+                            <div className="bc-future-card" key={item}>
+                                <i className="bi bi-arrow-right-circle-fill"></i>
+                                <p>{item}</p>
+                            </div>
+                        ))}
+                    </div>
+
+                    <div className="bc-pub">
+                        <span className="bc-pub-icon"><i className="bi bi-display"></i></span>
+                        <div>
+                            <div className="bc-pub-label">Live Demonstration</div>
+                            <h4>Explore the X-Ray Segmentation Editor in the Browser</h4>
+                            <p>
+                                Interactive demo environment for evaluating upload, segmentation, refinement,
+                                and case export workflows.
+                            </p>
+                            <a
+                                className="bc-pub-status"
+                                href="https://segmentation-editor.pages.dev/"
+                                target="_blank"
+                                rel="noopener noreferrer"
+                            >
+                                <i className="bi bi-box-arrow-up-right"></i> segmentation-editor.pages.dev
+                            </a>
+                        </div>
+                    </div>
+                </div>
+            </section>
+
+            <section className="bc-section" id="team" ref={registerSection('team')}>
+                <div className="bc-container">
+                    <div className="bc-section-head bc-center">
+                        <span className="bc-eyebrow" style={{ justifyContent: 'center' }}>Collaboration</span>
+                        <h2>Cross-Functional Team</h2>
+                        <p>Clinical insight, annotation operations, and product engineering working in one delivery loop.</p>
+                    </div>
+
+                    <div className="bc-grid bc-grid-3">
+                        {collaborators.map((member) => (
+                            <div className="bc-team-card" key={member.name}>
+                                <div className="bc-team-avatar"><i className={member.icon}></i></div>
+                                <div className="bc-team-role">{member.role}</div>
+                                <h4>{member.name}</h4>
+                                <p>{member.desc}</p>
+                            </div>
+                        ))}
+                    </div>
+                </div>
+            </section>
+        </div>
     );
 };
 

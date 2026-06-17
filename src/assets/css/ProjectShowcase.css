@@ -20,7 +20,7 @@
     --bc-shadow-sm: 0 8px 22px rgba(4, 20, 36, 0.06);
 
     color: var(--bc-body);
-    background: #fff;
+    background: #f3f8fc;
     overflow-x: hidden;
 }
 
@@ -317,12 +317,13 @@
 .bc-stats {
     position: relative;
     z-index: 3;
-    margin-top: -70px;
-    background: #F3F8FC;
-  
+    background: transparent;
 }
 
 .bc-stats-grid {
+    position: relative;
+    z-index: 4;
+    margin-top: -70px;
     display: grid;
     grid-template-columns: repeat(4, 1fr);
     gap: 22px;
@@ -519,6 +520,15 @@
     color: var(--bc-ink);
     font-size: 15px;
     text-align: right;
+}
+
+.bc-fact-row .bc-fact-value a {
+    color: var(--bc-primary);
+    text-decoration: none;
+}
+
+.bc-fact-row .bc-fact-value a:hover {
+    text-decoration: underline;
 }
 
 /* ============================= GRIDS / CARDS ============================= */
@@ -760,6 +770,8 @@
     font-size: 13px;
     font-family: "Rajdhani", sans-serif;
     font-weight: 600;
+    color: #fff;
+    text-decoration: none;
 }
 
 /* ============================= TEAM ============================= */
@@ -914,7 +926,7 @@
         grid-template-columns: 1fr;
     }
 
-    .bc-stats {
+    .bc-stats-grid {
         margin-top: -60px;
     }
 

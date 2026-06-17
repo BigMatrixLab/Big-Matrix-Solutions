@@ -14,9 +14,9 @@ const NAV_SECTIONS = [
 ];
 
 const heroStats = [
-    { icon: 'bi bi-bullseye', num: '90%+', label: 'Segmentation accuracy on regions of interest' },
+    { icon: 'bi bi-bullseye', num: '90%+', label: 'Segmentation accuracy on regions of interest & BI-RADS Classification' },
     { icon: 'bi bi-stopwatch', num: '~45s', label: 'Average automated analysis per case' },
-    { icon: 'bi bi-graph-down-arrow', num: '70–80%', label: 'False-positive rate targeted for reduction' },
+    { icon: 'bi bi-graph-down-arrow', num: '5–7%', label: 'False-positive rate targeted for reduction' },
     { icon: 'bi bi-calendar-check', num: '1 Year', label: 'Funded research programme (CTRG-21-SEPS-15)' },
 ];
 
