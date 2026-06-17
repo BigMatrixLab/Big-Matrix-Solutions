@@ -1,145 +1,353 @@
-import React from 'react';
-import { Link } from 'react-router-dom';
-import Breadcrumb from '../../components/Breadcrumb';
+import React, { useEffect, useRef, useState } from 'react';
+import '../../assets/css/ProjectShowcase.css';
+
+const NAV_SECTIONS = [
+    { id: 'overview', label: 'Overview' },
+    { id: 'challenge', label: 'Challenge' },
+    { id: 'solution', label: 'Capabilities' },
+    { id: 'workflow', label: 'Workflow' },
+    { id: 'impact', label: 'Impact' },
+    { id: 'future', label: 'Future' },
+    { id: 'team', label: 'Collaboration' },
+];
+
+const heroStats = [
+    { icon: 'bi bi-window-stack', num: 'All-in-One', label: 'LaTeX, Markdown, whiteboard, PDF, and knowledge graph in one workspace' },
+    { icon: 'bi bi-file-earmark-text', num: '6000+', label: 'Built-in LaTeX templates for journals, theses, CVs, and reports' },
+    { icon: 'bi bi-lightning-charge', num: 'Real-Time', label: 'Live compilation and rendering for writing and technical workflows' },
+    { icon: 'bi bi-globe2', num: 'Public Beta', label: 'Available now at scriptor.space and free to use' },
+];
+
+const projectFacts = [
+    { icon: 'bi bi-box', label: 'Product', value: 'Scriptor' },
+    { icon: 'bi bi-tag', label: 'Category', value: 'SaaS / Research Workspace' },
+    { icon: 'bi bi-hourglass-split', label: 'Status', value: 'Public Beta - Free to Use' },
+    { icon: 'bi bi-building', label: 'Developed By', value: 'Big-Matrix Solutions' },
+    { icon: 'bi bi-globe', label: 'Live URL', value: 'scriptor.space' },
+];
+
+const challenges = [
+    { icon: 'bi bi-diagram-3', title: 'Fragmented Toolchain', desc: 'Researchers and writers switch between multiple apps for drafting, sketching, reading, and organizing knowledge.' },
+    { icon: 'bi bi-arrow-repeat', title: 'Context Switching Overhead', desc: 'Frequent app hopping interrupts thought flow, slows iteration, and increases cognitive load.' },
+    { icon: 'bi bi-folder-x', title: 'Disconnected Knowledge Assets', desc: 'Notes, PDFs, whiteboards, and references remain siloed, making cross-linking and insight discovery difficult.' },
+    { icon: 'bi bi-people', title: 'Collaboration Complexity', desc: 'Sharing and permission management across separate tools creates friction for team-based research work.' },
+];
+
+const capabilities = [
+    { icon: 'bi bi-braces', title: 'Pro-Level LaTeX Editor', desc: 'Browser-native Overleaf-class editing with upload support, template library, and real-time compile feedback.' },
+    { icon: 'bi bi-markdown', title: 'Live Markdown Workspace', desc: 'GFM-compatible authoring with instant rendering, math blocks, syntax highlighting, and customizable themes.' },
+    { icon: 'bi bi-easel2', title: 'Infinite Whiteboarding', desc: 'Excalidraw-powered visual workspace with freeform canvas and paged mode for structured ideation.' },
+    { icon: 'bi bi-file-earmark-pdf', title: 'Smart PDF Annotation', desc: 'Annotate and review PDFs directly with overlay tooling without leaving the active research context.' },
+];
+
+const workflow = [
+    { title: 'Project Setup', desc: 'Users initialize a workspace with notes, manuscripts, references, and whiteboards.' },
+    { title: 'Parallel Authoring', desc: 'LaTeX and Markdown content are drafted with real-time rendering and preview feedback.' },
+    { title: 'Visual Thinking', desc: 'Concepts are mapped using an infinite canvas to connect ideas and structure arguments.' },
+    { title: 'Document Review', desc: 'PDF sources are annotated and cross-referenced inside the same working environment.' },
+    { title: 'Knowledge Linking', desc: 'Graph-based relationships between notes and documents expose deeper research connections.' },
+];
+
+const benefits = [
+    'Reduces tool fragmentation by unifying core writing and research workflows in one interface.',
+    'Improves productivity through keyboard-first navigation and reduced context switching.',
+    'Supports deeper insight discovery with linked notes, documents, and visual graph relationships.',
+    'Enables smoother collaboration with role-based sharing for editors and viewers.',
+    'Improves trust and governance through encrypted sharing and audit-oriented infrastructure.',
+];
+
+const futureDirections = [
+    'AI-assisted drafting and summarization workflows for faster manuscript development.',
+    'Expanded team collaboration primitives for review pipelines and editorial workflows.',
+    'Advanced graph analytics to surface emerging themes across large research datasets.',
+    'Template and publishing integrations for discipline-specific academic and technical outputs.',
+];
+
+const collaborators = [
+    { icon: 'bi bi-code-slash', role: 'Platform Engineering', name: 'Core Product Team', desc: 'Builds editor architecture, rendering pipelines, and workspace performance foundations.' },
+    { icon: 'bi bi-journal-richtext', role: 'Research UX', name: 'Workflow Design Team', desc: 'Shapes writing, annotation, and ideation experiences for student and professional users.' },
+    { icon: 'bi bi-shield-lock', role: 'Security & Reliability', name: 'Infrastructure Team', desc: 'Maintains encrypted sharing, auditability, and operational quality across collaborative workspaces.' },
+];
 
 const ProjectScriptor = () => {
+    const [activeSection, setActiveSection] = useState('overview');
+    const sectionRefs = useRef({});
+
+    useEffect(() => {
+        const observer = new IntersectionObserver(
+            (entries) => {
+                entries.forEach((entry) => {
+                    if (entry.isIntersecting) {
+                        setActiveSection(entry.target.id);
+                    }
+                });
+            },
+            { rootMargin: '-45% 0px -50% 0px', threshold: 0 }
+        );
+
+        const nodes = Object.values(sectionRefs.current).filter(Boolean);
+        nodes.forEach((node) => observer.observe(node));
+        return () => observer.disconnect();
+    }, []);
+
+    const registerSection = (id) => (el) => {
+        sectionRefs.current[id] = el;
+    };
+
     return (
-        <>
-            <Breadcrumb pageTitle="Scriptor" breadcrumbItem="Project" />
-
-            <div className="project-details-area">
-                <div className="container">
-                    <div className="row">
-                        <div className="col-lg-12">
-                            <div className="project-details-thumb">
-                                <img src="/assets/images/projects/Scriptor.png" alt="Scriptor Workspace" />
-                            </div>
-                        </div>
-                    </div>
-
-                    <div className="row">
-                        {/* Main Content */}
-                        <div className="col-lg-8">
-                            <div className="project-details-content">
-                                <h2>Scriptor — Your Ultimate Workspace for Note, Code, Research & Ideation</h2>
-
-                                <h3>Project Overview</h3>
-                                <p>
-                                    Scriptor is a professional all-in-one research and writing workspace currently in public beta
-                                    and free to use. It unifies LaTeX editing, Markdown rendering, infinite whiteboarding, PDF
-                                    annotation, and a knowledge graph into a single keyboard-navigable, distraction-free
-                                    environment — inspired by VS Code and built for researchers, students, engineers, and writers.
-                                </p>
-                                <p>
-                                    Developed and powered by Big-Matrix Solutions, Scriptor eliminates the need to juggle
-                                    Overleaf, Notion, Excalidraw, and a PDF reader by bringing them all under one roof.
-                                </p>
-
-                                <h3>Core Features</h3>
-
-                                <h4>Pro-Level LaTeX Editor</h4>
-                                <p>
-                                    A full Overleaf-class editor running natively in the browser. Users can upload existing
-                                    projects, compile in real-time, and choose from over 6,000 built-in templates covering
-                                    journal articles, theses, CVs, posters, reports, and more — including formats for IEEE,
-                                    ACM, and Nature.
-                                </p>
-
-                                <h4>Real-Time Markdown</h4>
-                                <p>
-                                    Write in Markdown and see a pixel-perfect live render update as you type. Supports GitHub
-                                    Flavored Markdown (GFM), math blocks, syntax highlighting, and custom CSS themes.
-                                </p>
-
-                                <h4>Best-in-Class Whiteboarding</h4>
-                                <p>
-                                    Powered by Excalidraw, Scriptor offers an infinite canvas for diagrams and sketches, plus
-                                    a paged mode for structured visual notes and presentations.
-                                </p>
-
-                                <h4>Smart PDF Annotation</h4>
-                                <p>
-                                    Open any PDF and annotate directly with an Excalidraw overlay — highlight, comment, and
-                                    compare without leaving the workspace.
-                                </p>
-
-                                <h4>Knowledge Graph</h4>
-                                <p>
-                                    Visually map connections between notes, documents, and projects. Discover insights that
-                                    are impossible to find in a flat file system.
-                                </p>
-
-                                <h3>Workspace Experience</h3>
-                                <ul className="project-details-list">
-                                    <li><i className="bi bi-check-circle-fill"></i> <strong>Split-View Editing</strong> — work on LaTeX, Markdown, and PDFs side-by-side with drag-and-drop panels</li>
-                                    <li><i className="bi bi-check-circle-fill"></i> <strong>Multi-Project Tabs</strong> — switch between research papers, codebases, and whiteboards instantly</li>
-                                    <li><i className="bi bi-check-circle-fill"></i> <strong>Tag-Based Organization</strong> — categorize every project with custom tags for instant filtering and search</li>
-                                    <li><i className="bi bi-check-circle-fill"></i> <strong>Centralized Dashboard</strong> — manage every file, project, and collaborator from one command center</li>
-                                </ul>
-
-                                <h3>Collaboration & Security</h3>
-                                <ul className="project-details-list">
-                                    <li><i className="bi bi-check-circle-fill"></i> Invite collaborators with Editor or Viewer privileges</li>
-                                    <li><i className="bi bi-check-circle-fill"></i> All shared projects encrypted in transit and at rest</li>
-                                    <li><i className="bi bi-check-circle-fill"></i> SOC 2-ready infrastructure with full audit logs</li>
-                                </ul>
-
-                                <h3>Target Users</h3>
-                                <p>
-                                    Scriptor is built for students, researchers, developers, engineers, and writers who want
-                                    to run their full workflow — from drafting and coding to diagramming and publishing —
-                                    without switching between multiple tools.
-                                </p>
-                            </div>
+        <div className="bc-showcase" style={{ paddingTop: '32px' }}>
+            <section className="bc-hero">
+                <div className="bc-container">
+                    <div className="bc-hero-grid">
+                        <div className="bc-hero-text">
+                            <span className="bc-hero-badge">
+                                <i className="bi bi-journal-code"></i> Research Productivity Platform
+                            </span>
+                            <h1>Scriptor: Unified Workspace for Note, Code, Research, and Ideation</h1>
+                            <p className="bc-hero-sub">
+                                Scriptor is a professional all-in-one workspace that unifies LaTeX editing, Markdown,
+                                whiteboarding, PDF annotation, and knowledge graph exploration in a single distraction-free environment.
+                            </p>
                         </div>
 
-                        {/* Sidebar */}
-                        <div className="col-lg-4">
-                            <div className="project-details-right">
-                                <div className="project-details-info">
-                                    <p>Product :</p>
-                                    <h6>Scriptor</h6>
-                                </div>
-                                <div className="project-details-info">
-                                    <p>Category :</p>
-                                    <h6>SaaS / Research Workspace</h6>
-                                </div>
-                                <div className="project-details-info">
-                                    <p>Status :</p>
-                                    <h6>Public Beta — Free to Use</h6>
-                                </div>
-                                <div className="project-details-info">
-                                    <p>Developed by :</p>
-                                    <h6>Big-Matrix Solutions</h6>
-                                </div>
-                                <div className="project-details-info">
-                                    <p>Live at :</p>
-                                    <h6>
-                                        <a href="https://scriptor.space/" target="_blank" rel="noopener noreferrer" style={{ fontWeight: 'bold' }}>
-                                            scriptor.space
-                                        </a>
-                                    </h6>
-                                </div>
-                            </div>
-
-                            <div className="widget-sidber-contact-box">
-                                <div className="widget-sidber-contact">
-                                    <img src="/assets/images/inner-images/sidber-cont-icon.png" alt="" />
-                                </div>
-                                <p className="widget-sidber-contact-text">Call Us Anytime</p>
-                                <h3 className="widget-sidber-contact-number">+880-2-55668200 (Ext: 6212)</h3>
-                                <span className="widget-sidber-contact-gmail">
-                                    <i className="bi bi-envelope-fill"></i> contact@big-matrix.com
+                        <figure className="bc-hero-figure">
+                            <img src="/assets/images/projects/Scriptor.png" alt="Scriptor Workspace" />
+                            <figcaption className="bc-figure-tag">
+                                <i className="bi bi-stars"></i>
+                                <span>
+                                    <strong>Deep-work environment</strong>
+                                    <span>Write, think, annotate, and connect knowledge</span>
                                 </span>
-                                <div className="widget-sidber-contact-btn">
-                                    <Link to="/contact">Contact Us <i className="bi bi-arrow-right"></i></Link>
-                                </div>
+                            </figcaption>
+                        </figure>
+                    </div>
+                </div>
+            </section>
+
+            <div className="bc-stats">
+                <div className="bc-container">
+                    <div className="bc-stats-grid">
+                        {heroStats.map((stat) => (
+                            <div className="bc-stat-card" key={stat.num + stat.label}>
+                                <span className="bc-stat-icon"><i className={stat.icon}></i></span>
+                                <div className="bc-stat-num">{stat.num}</div>
+                                <div className="bc-stat-label">{stat.label}</div>
                             </div>
-                        </div>
+                        ))}
                     </div>
                 </div>
             </div>
-        </>
+
+            <nav className="bc-subnav" aria-label="Project sections">
+                <div className="bc-container">
+                    <div className="bc-subnav-inner">
+                        {NAV_SECTIONS.map((item) => (
+                            <a
+                                key={item.id}
+                                href={`#${item.id}`}
+                                className={activeSection === item.id ? 'is-active' : ''}
+                                aria-current={activeSection === item.id ? 'true' : undefined}
+                            >
+                                {item.label}
+                            </a>
+                        ))}
+                    </div>
+                </div>
+            </nav>
+
+            <section className="bc-section" id="overview" ref={registerSection('overview')}>
+                <div className="bc-container">
+                    <div className="bc-section-head">
+                        <span className="bc-eyebrow">What it is</span>
+                        <h2>Project Overview</h2>
+                    </div>
+
+                    <div className="row">
+                        <div className="col-lg-8">
+                            <div className="project-details-content">
+                                <h2>Scriptor</h2>
+                                <p>
+                                    Scriptor is a public-beta, all-in-one research and writing workspace for students,
+                                    researchers, engineers, and technical writers who need one environment for drafting,
+                                    organizing, and publishing complex knowledge work.
+                                </p>
+                                <p>
+                                    The product combines core workflows usually split across Overleaf, Notion, Excalidraw,
+                                    and separate PDF tools into one keyboard-navigable platform powered by Big-Matrix Solutions.
+                                </p>
+                            </div>
+                        </div>
+
+                        <aside className="bc-callout">
+                            <h3><i className="bi bi-bullseye"></i> Product Objective</h3>
+                            <p>
+                                Provide a single, high-performance workspace that removes context switching and enables
+                                end-to-end technical thinking, writing, and research execution.
+                            </p>
+
+                            <div className="bc-facts">
+                                {projectFacts.map((fact) => (
+                                    <div className="bc-fact-row" key={fact.label}>
+                                        <span className="bc-fact-label">
+                                            <i className={fact.icon}></i> {fact.label}
+                                        </span>
+                                        <span className="bc-fact-value">
+                                            {fact.label === 'Live URL' ? (
+                                                <a href="https://scriptor.space/" target="_blank" rel="noopener noreferrer">
+                                                    {fact.value}
+                                                </a>
+                                            ) : fact.value}
+                                        </span>
+                                    </div>
+                                ))}
+                            </div>
+                        </aside>
+                    </div>
+                </div>
+            </section>
+
+            <section className="bc-section bc-alt" id="challenge" ref={registerSection('challenge')}>
+                <div className="bc-container">
+                    <div className="bc-section-head">
+                        <span className="bc-eyebrow">Why it matters</span>
+                        <h2>The Challenge</h2>
+                        <p>
+                            Modern technical work requires writing, ideation, annotation, and synthesis, yet these
+                            workflows are typically fragmented across disconnected tools.
+                        </p>
+                    </div>
+
+                    <div className="bc-grid bc-grid-4">
+                        {challenges.map((item) => (
+                            <div className="bc-card bc-problem" key={item.title}>
+                                <span className="bc-card-icon"><i className={item.icon}></i></span>
+                                <h4>{item.title}</h4>
+                                <p>{item.desc}</p>
+                            </div>
+                        ))}
+                    </div>
+                </div>
+            </section>
+
+            <section className="bc-section" id="solution" ref={registerSection('solution')}>
+                <div className="bc-container">
+                    <div className="bc-section-head">
+                        <span className="bc-eyebrow">The approach</span>
+                        <h2>Core Capabilities</h2>
+                        <p>
+                            Scriptor combines professional authoring, visual thinking, and knowledge management tools
+                            into one coherent workspace.
+                        </p>
+                    </div>
+
+                    <div className="bc-grid bc-grid-4">
+                        {capabilities.map((item) => (
+                            <div className="bc-card" key={item.title}>
+                                <span className="bc-card-icon"><i className={item.icon}></i></span>
+                                <h4>{item.title}</h4>
+                                <p>{item.desc}</p>
+                            </div>
+                        ))}
+                    </div>
+                </div>
+            </section>
+
+            <section className="bc-section bc-alt" id="workflow" ref={registerSection('workflow')}>
+                <div className="bc-container">
+                    <div className="bc-section-head">
+                        <span className="bc-eyebrow">How it works</span>
+                        <h2>Workspace Flow</h2>
+                        <p>From drafting to insight discovery, every stage is designed to keep users in one continuous creative context.</p>
+                    </div>
+
+                    <div className="bc-timeline">
+                        {workflow.map((step, index) => (
+                            <div className="bc-step" key={step.title}>
+                                <div className="bc-step-num">{index + 1}</div>
+                                <div className="bc-step-body">
+                                    <h4>{step.title}</h4>
+                                    <p>{step.desc}</p>
+                                </div>
+                            </div>
+                        ))}
+                    </div>
+                </div>
+            </section>
+
+            <section className="bc-section" id="impact" ref={registerSection('impact')}>
+                <div className="bc-container">
+                    <div className="bc-section-head">
+                        <span className="bc-eyebrow">Key outcomes</span>
+                        <h2>Workspace Experience and Impact</h2>
+                        <p>Designed to improve deep-focus productivity, collaboration, and long-form technical thinking.</p>
+                    </div>
+
+                    <div className="bc-grid bc-grid-2">
+                        {benefits.map((benefit) => (
+                            <div className="bc-benefit" key={benefit}>
+                                <i className="bi bi-check-circle-fill"></i>
+                                <p>{benefit}</p>
+                            </div>
+                        ))}
+                    </div>
+                </div>
+            </section>
+
+            <section className="bc-section bc-alt" id="future" ref={registerSection('future')}>
+                <div className="bc-container">
+                    <div className="bc-section-head">
+                        <span className="bc-eyebrow">What&apos;s next</span>
+                        <h2>Future Direction</h2>
+                        <p>The roadmap expands intelligent assistance, collaboration depth, and advanced research graph capabilities.</p>
+                    </div>
+
+                    <div className="bc-grid bc-grid-2" style={{ marginBottom: '40px' }}>
+                        {futureDirections.map((item) => (
+                            <div className="bc-future-card" key={item}>
+                                <i className="bi bi-arrow-right-circle-fill"></i>
+                                <p>{item}</p>
+                            </div>
+                        ))}
+                    </div>
+
+                    <div className="bc-pub">
+                        <span className="bc-pub-icon"><i className="bi bi-rocket-takeoff"></i></span>
+                        <div>
+                            <div className="bc-pub-label">Try It Live</div>
+                            <h4>Scriptor Public Beta is available now</h4>
+                            <p>
+                                Experience the integrated research and writing workspace built for technical teams,
+                                students, and knowledge professionals.
+                            </p>
+                            <a className="bc-pub-status" href="https://scriptor.space/" target="_blank" rel="noopener noreferrer">
+                                <i className="bi bi-box-arrow-up-right"></i> scriptor.space
+                            </a>
+                        </div>
+                    </div>
+                </div>
+            </section>
+
+            <section className="bc-section" id="team" ref={registerSection('team')}>
+                <div className="bc-container">
+                    <div className="bc-section-head bc-center">
+                        <span className="bc-eyebrow" style={{ justifyContent: 'center' }}>Collaboration</span>
+                        <h2>Product and Delivery Teams</h2>
+                        <p>Built through close collaboration between platform engineering, research UX, and secure infrastructure teams.</p>
+                    </div>
+
+                    <div className="bc-grid bc-grid-3">
+                        {collaborators.map((member) => (
+                            <div className="bc-team-card" key={member.name}>
+                                <div className="bc-team-avatar"><i className={member.icon}></i></div>
+                                <div className="bc-team-role">{member.role}</div>
+                                <h4>{member.name}</h4>
+                                <p>{member.desc}</p>
+                            </div>
+                        ))}
+                    </div>
+                </div>
+            </section>
+        </div>
     );
 };
 
