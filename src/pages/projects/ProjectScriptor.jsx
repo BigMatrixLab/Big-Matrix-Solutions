@@ -95,7 +95,7 @@ const ProjectScriptor = () => {
     };
 
     return (
-        <div className="bc-showcase" style={{ paddingTop: '32px' }}>
+        <div className="bc-showcase">
             <section className="bc-hero">
                 <div className="bc-container">
                     <div className="bc-hero-grid">
