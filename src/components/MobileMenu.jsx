@@ -73,7 +73,6 @@ const MobileMenu = () => {
                     <li><Link to="/" onClick={handleLinkClick}>Home</Link></li>
                     <li><Link to="/about" onClick={handleLinkClick}>About</Link></li>
                     <li><Link to="/service" onClick={handleLinkClick}>Service</Link></li>
-                    <li><Link to="/team" onClick={handleLinkClick}>Team</Link></li>
                     <li><Link to="/project" onClick={handleLinkClick}>Projects</Link></li>
                     <li><Link to="/careers" onClick={handleLinkClick}>Careers</Link></li>
                     <li><Link to="/blog" onClick={handleLinkClick}>Blog</Link></li>
