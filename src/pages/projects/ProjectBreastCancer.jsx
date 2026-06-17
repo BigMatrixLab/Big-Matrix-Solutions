@@ -108,11 +108,9 @@ const ProjectBreastCancer = () => {
                             <span className="bc-hero-badge">
                                 <i className="bi bi-heart-pulse-fill"></i> AI in Healthcare
                             </span>
-                            <h1>Multimodal AI for Breast Cancer Diagnosis</h1>
+                            <h1>Multimodal Breast Cancer Intelligence Platform</h1>
                             <p className="bc-hero-sub">
-                                A research initiative advancing precision segmentation and automated report
-                                generation from mammographic images, helping radiologists detect and
-                                characterize breast abnormalities earlier and more accurately.
+                                Development of a comprehensive multimodal AI system integrating mammography, ultrasound, pathology, clinical records, radiology reports, and genomic data for breast cancer screening, diagnosis, prognosis, report generation, treatment planning, and clinical decision support.
                             </p>
 
                             <div className="bc-meta">
