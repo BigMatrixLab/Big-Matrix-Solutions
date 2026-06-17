@@ -95,7 +95,7 @@ const ProjectXRaySegmentation = () => {
     };
 
     return (
-        <div className="bc-showcase" style={{ paddingTop: '32px' }}>
+        <div className="bc-showcase" >
             <section className="bc-hero">
                 <div className="bc-container">
                     <div className="bc-hero-grid">
@@ -264,8 +264,8 @@ const ProjectXRaySegmentation = () => {
 
             <section className="bc-section" id="team" ref={registerSection('team')}>
                 <div className="bc-container">
-                    <div className="bc-section-head bc-center">
-                        <span className="bc-eyebrow" style={{ justifyContent: 'center' }}>Collaboration</span>
+                    <div className="bc-section-head bc-left">
+                        <span className="bc-eyebrow" >Collaboration</span>
                         <h2>Cross-Functional Team</h2>
                         <p>Clinical insight, annotation operations, and product engineering working in one delivery loop.</p>
                     </div>

@@ -95,7 +95,7 @@ const ProjectManagement = () => {
     };
 
     return (
-        <div className="bc-showcase" style={{ paddingTop: '32px' }}>
+        <div className="bc-showcase" >
             <section className="bc-hero">
                 <div className="bc-container">
                     <div className="bc-hero-grid">
@@ -262,8 +262,8 @@ const ProjectManagement = () => {
 
             <section className="bc-section" id="team" ref={registerSection('team')}>
                 <div className="bc-container">
-                    <div className="bc-section-head bc-center">
-                        <span className="bc-eyebrow" style={{ justifyContent: 'center' }}>Collaboration</span>
+                    <div className="bc-section-head bc-left">
+                        <span className="bc-eyebrow" >Collaboration</span>
                         <h2>Team and Ownership</h2>
                         <p>Designed and iterated collaboratively across engineering, product operations, and R&D leadership.</p>
                     </div>
