@@ -28,6 +28,12 @@
     box-sizing: border-box;
 }
 
+.bc-hero,
+.bc-hero p,
+.bc-hero .bc-hero-sub {
+    color: #fff;
+}
+
 /* Mirrors Bootstrap 5 .container so page content lines up with the navbar logo */
 .bc-container {
     width: 100%;
