@@ -98,10 +98,10 @@ const ProjectBreastCancer = () => {
 
     return (
         <div className="bc-showcase">
-            <Breadcrumb pageTitle="Multimodal AI for Breast Cancer Diagnosis" breadcrumbItem="Project" />
+            {/* <Breadcrumb pageTitle="Multimodal AI for Breast Cancer Diagnosis" breadcrumbItem="Project" /> */}
 
             {/* ============================ HERO ============================ */}
-            <section className="bc-hero">
+            <section className="bc-hero pt-12">
                 <div className="bc-container">
                     <div className="bc-hero-grid">
                         <div className="bc-hero-text">
@@ -117,8 +117,9 @@ const ProjectBreastCancer = () => {
 
                             <div className="bc-meta">
                                 <span className="bc-chip">
-                                    <i className="bi bi-person-badge"></i>
+                                   
                                     <span>
+                                         <i className="bi bi-person-badge"></i>
                                         <span className="bc-chip-label">Principal Investigator</span>
                                         <span className="bc-chip-value">Dr. Mohammad Monir Uddin</span>
                                     </span>
@@ -139,14 +140,14 @@ const ProjectBreastCancer = () => {
                                 </span>
                             </div>
 
-                            <div className="bc-hero-actions">
+                            {/* <div className="bc-hero-actions">
                                 <a href="#overview" className="bc-btn bc-btn-primary">
                                     Explore the Project <i className="bi bi-arrow-down"></i>
                                 </a>
                                 <Link to="/contact" className="bc-btn bc-btn-ghost">
                                     Talk to the Team <i className="bi bi-arrow-right"></i>
                                 </Link>
-                            </div>
+                            </div> */}
                         </div>
 
                         <figure className="bc-hero-figure">
@@ -457,7 +458,7 @@ const ProjectBreastCancer = () => {
             </section>
 
             {/* ============================ CTA ============================ */}
-            <div className="bc-container">
+            {/* <div className="bc-container">
                 <section className="bc-cta">
                     <div>
                         <h2>Interested in this research or a clinical collaboration?</h2>
@@ -483,7 +484,7 @@ const ProjectBreastCancer = () => {
                         </span>
                     </div>
                 </section>
-            </div>
+            </div> */}
         </div>
     );
 };
