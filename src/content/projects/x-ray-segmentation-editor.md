@@ -6,7 +6,7 @@ image: "/assets/images/projects/x-ray-segmentation-editor.png"
 slug: "x-ray-segmentation-editor"
 desc: "A specialized tool for medical professionals to annotate and segment X-ray images for training AI models."
 client: "Healthcare Partner"
-date: "2026
+date: "2026"
 duration: "Ongoing"
 location: "https://segmentation-editor.pages.dev/"
 ---

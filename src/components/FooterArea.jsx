@@ -64,8 +64,8 @@ const FooterArea = () => {
                                 <h4>Contact Us</h4>
                             </div>
                             <div className="footer-contact-info">
-                                <p><i className="bi bi-envelope"></i> contact@big-matrix.com</p>
-                                <p><i className="bi bi-telephone"></i> +880 2 55668200 (6212)</p>
+                                <p><i className="bi bi-envelope"></i> ratimshariar@gmail.com</p>
+                                <p><i className="bi bi-telephone"></i>+8801339870730</p>
                                 <p style={{ display: 'flex', alignItems: 'center' }}><i className="bi bi-geo-alt"></i> <span style={{ display: 'inline-block' }}>Bashundhara, Dhaka-1229,<br />Bangladesh</span></p>
                             </div>
                         </div>

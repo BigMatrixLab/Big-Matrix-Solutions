@@ -1,0 +1,37 @@
+Big-Matrix Lab Research Projects
+1. Multimodal Breast Cancer Intelligence Platform
+Development of a comprehensive multimodal AI system integrating mammography, ultrasound, pathology, clinical records, radiology reports, and genomic data for breast cancer screening, diagnosis, prognosis, report generation, treatment planning, and clinical decision support.
+2. AI-Powered Lung Cancer Detection and Reporting System
+Development of multimodal AI models using chest CT scans, radiology reports, pathology findings, and clinical data for lung nodule detection, lung cancer classification, segmentation, staging, report generation, and treatment recommendation.
+3. Cervical Cancer Foundation Model
+Creation of large-scale multimodal foundation models using cervix radiotherapy CT, MRI, pathology, genomic, and clinical data for screening, diagnosis, contouring, treatment planning, and outcome prediction.
+4. Automated Radiotherapy Contouring and Treatment Planning
+Development of AI systems for automatic organ-at-risk and tumor contour segmentation, treatment planning assistance, dose prediction, and quality assurance for breast, cervix, lung, brain, and head-and-neck cancers.
+5. Pathology Foundation Models for Digital Histopathology
+Building vision and vision-language foundation models capable of analyzing whole-slide pathology images, identifying cancer subtypes, predicting biomarkers, grading tumors, and generating pathology reports.
+6. Medical Vision-Language Models (Medical VLMs)
+Development of domain-specific vision-language models capable of understanding medical images and generating clinically meaningful findings, impressions, recommendations, and diagnostic reports.
+7. Medical Report Generation and Clinical Documentation Automation
+Building AI systems that automatically generate radiology, pathology, and clinical reports from multimodal patient data while maintaining explainability and physician oversight.
+8. AI Clinical Assistant for Healthcare Professionals
+Development of physician-centered AI assistants that provide diagnostic suggestions, differential diagnoses, report drafting, treatment support, evidence retrieval, and workflow automation directly within hospital environments.
+9. Early Disease and Abnormality Detection Platform
+Research on AI systems capable of identifying subtle abnormalities at early stages across breast cancer, lung cancer, neurological disorders, cardiovascular diseases, and other chronic conditions.
+10. Hospital AI Deployment and Clinical Validation Program
+Deployment of AI solutions into real-world healthcare environments with clinician-specific user interfaces, workflow integration, prospective validation studies, safety monitoring, fairness analysis, and continuous performance evaluation.
+11. Precision Oncology through Multimodal Learning
+Integration of radiology, pathology, genomics, transcriptomics, clinical records, and longitudinal patient data to support personalized diagnosis, prognosis, treatment response prediction, and precision medicine.
+12. Cancer Foundation Models for Low-Resource Healthcare Systems
+Development of large-scale multimodal cancer foundation models trained on diverse datasets from South Asian populations to improve cancer care accessibility and diagnostic performance in resource-constrained environments.
+13. Single-Cell Multiomics Cancer Analytics
+Analysis of single-cell RNA sequencing, spatial transcriptomics, and multiomics data for cancer subtype discovery, biomarker identification, tumor microenvironment characterization, and therapeutic target discovery.
+14. Brain Intelligence and Neuro-AI Platform
+Development of multimodal AI systems utilizing brain CT, MRI, EEG, clinical records, and reports for neurological disease diagnosis, prognosis, and clinical decision support.
+15. Cardiovascular AI Platform
+Research on ECG, echocardiography, clinical records, and multimodal patient data for automated cardiac abnormality detection, risk prediction, and patient monitoring.
+16. Human Movement Intelligence and AI Security Systems
+Development of AI-based behavioral authentication systems that generate dynamic security credentials based on individual movement patterns and behavioral biometrics.
+17. National Multimodal Medical Data Repository
+Creation of large-scale, privacy-preserving multimodal healthcare datasets integrating imaging, pathology, genomics, physiological signals, reports, and electronic health records to support next-generation healthcare AI research.
+18. Big-Matrix Medical Foundation Model Initiative
+A long-term flagship project focused on developing Bangladesh's first large-scale multimodal medical foundation model capable of understanding radiology, pathology, genomics, clinical records, physiological signals, and natural language medical documentation within a unified architecture.

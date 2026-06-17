@@ -9,6 +9,9 @@ import Team from './pages/Team';
 import TeamDetails from './pages/TeamDetails';
 import Project from './pages/Project';
 import ProjectDetails from './pages/ProjectDetails';
+import ProjectBreastCancer from './pages/projects/ProjectBreastCancer';
+import ProjectManagement from './pages/projects/ProjectManagement';
+import ProjectXRaySegmentation from './pages/projects/ProjectXRaySegmentation';
 import Blog from './pages/Blog';
 import BlogDetails from './pages/BlogDetails';
 import Careers from './pages/Careers';
@@ -53,6 +56,9 @@ function App() {
           <Route path="/team" element={<Team />} />
           <Route path="/team/:slug" element={<TeamDetails />} />
           <Route path="/project" element={<Project />} />
+          <Route path="/project/nsu_ctrg_2021_2022_breast_cancer" element={<ProjectBreastCancer />} />
+          <Route path="/project/bm-project-management" element={<ProjectManagement />} />
+          <Route path="/project/x-ray-segmentation-editor" element={<ProjectXRaySegmentation />} />
           <Route path="/project/:slug" element={<ProjectDetails />} />
           <Route path="/blog" element={<Blog />} />
           <Route path="/blog/:slug" element={<BlogDetails />} />

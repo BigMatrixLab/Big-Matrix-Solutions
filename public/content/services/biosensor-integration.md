@@ -1,5 +1,5 @@
 ---
-id: 11
+id: "11"
 slug: "real-time-biosensor-integration"
 title: "Real-time Biosensor & Wearable Integration"
 icon: "bi bi-watch"
