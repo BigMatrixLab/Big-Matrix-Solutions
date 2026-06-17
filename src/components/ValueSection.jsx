@@ -36,33 +36,32 @@ const ValueSection = ({ icon, title, description, items, reversed = false }) => 
                 <div
                     style={{
                         position: 'relative',
-                        width: '200px',
-                        height: '200px',
+                        width: '180px',
+                        height: '180px',
                         display: 'flex',
                         alignItems: 'center',
                         justifyContent: 'center',
-                        background: 'radial-gradient(circle, #eff6ff 0%, #ffffff 70%)',
+                        background: 'linear-gradient(140deg, #072b63 0%, #0c5adb 100%)',
                         borderRadius: '50%',
                         maxWidth: '100%',
+                        boxShadow: '0 18px 40px rgba(12, 90, 219, 0.28)',
                     }}
                 >
                     {/* Decorative Ring */}
                     <div
                         style={{
                             position: 'absolute',
-                            inset: '-10px',
-                            border: '2px dashed #dbeafe',
+                            inset: '-12px',
+                            border: '2px solid rgba(12, 90, 219, 0.15)',
                             borderRadius: '50%',
-                            opacity: 0.6,
                         }}
                     />
 
                     <IconComponent
-                        size={90}
+                        size={84}
                         strokeWidth={1.5}
                         style={{
-                            color: '#3b82f6',
-                            filter: 'drop-shadow(0 10px 15px rgba(59, 130, 246, 0.2))',
+                            color: '#ffffff',
                             maxWidth: '100%',
                         }}
                     />
