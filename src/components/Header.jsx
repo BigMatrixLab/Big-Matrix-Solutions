@@ -57,7 +57,7 @@ const Header = () => {
                                 <li><Link to="/" className={location.pathname === '/' ? 'active' : ''}>Home</Link></li>
                                 <li><Link to="/about" className={location.pathname === '/about' ? 'active' : ''}>About</Link></li>
                                 <li><Link to="/service" className={location.pathname.startsWith('/service') ? 'active' : ''}>Service</Link></li>
-                                <li><Link to="/team" className={location.pathname.startsWith('/team') ? 'active' : ''}>Team</Link></li>
+                                {/* <li><Link to="/team" className={location.pathname.startsWith('/team') ? 'active' : ''}>Team</Link></li> */}
                                 <li><Link to="/project" className={location.pathname.startsWith('/project') ? 'active' : ''}>Projects</Link></li>
                                 <li><Link to="/careers" className={location.pathname === '/careers' ? 'active' : ''}>Careers</Link></li>
                                 <li><Link to="/blog" className={location.pathname.startsWith('/blog') ? 'active' : ''}>Blog</Link></li>

@@ -2,7 +2,22 @@ import React from 'react';
 import { Link } from 'react-router-dom';
 import { servicesData } from '../data/content';
 
+// Explicit display order for the homepage "Our Solutions" cards.
+// Reordered from the default 1-6 to 5,6,4,3,2,1 by slug.
+const homeServiceOrder = [
+    'ai-machine-learning',        // was 5
+    'big-data-analytics',         // was 6
+    'enterprise-saas-platform',   // was 4
+    'industrial-automation',      // was 3
+    'cloud-devops-architecture',  // was 2
+    'cybersecurity-compliance',   // was 1
+];
+
 const ServiceArea = () => {
+    const orderedServices = homeServiceOrder
+        .map((slug) => servicesData.find((service) => service.slug === slug))
+        .filter(Boolean);
+
     return (
         <div className="service-area style-two" style={{ paddingTop: "50px", paddingBottom: "50px" }}>
             <div className="container">
@@ -16,7 +31,7 @@ const ServiceArea = () => {
                     </div>
                 </div>
                 <div className="row">
-                    {servicesData.slice(0, 6).map((service, index) => (
+                    {orderedServices.map((service, index) => (
                         <div className="col-lg-4 col-md-6" key={service.id}>
                             <div className="single-services-box">
                                 <div className="service-icon-thumb">
