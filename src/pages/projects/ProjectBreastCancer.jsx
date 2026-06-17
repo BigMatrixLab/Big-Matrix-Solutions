@@ -75,7 +75,7 @@ const ProjectBreastCancer = () => {
                                 </ul>
 
                                 <h3>Clinical Workflow Integration</h3>
-                                <ol className="project-details-list">
+                                <ol className="project-det sails-list">
                                     <li><strong>Image Acquisition</strong> — Mammograms captured from standard FWHM-compliant equipment</li>
                                     <li><strong>Automated Analysis</strong> — Real-time processing and segmentation (avg. 45 seconds per case)</li>
                                     <li><strong>Radiologist Review</strong> — AI-assisted interpretation with highlighted regions and preliminary report</li>
