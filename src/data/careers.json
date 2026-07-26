@@ -1,22 +1,36 @@
 [
     {
         "id": 1,
-        "title": "Junior Software Engineer",
-        "location": "Dhaka Bangladesh",
-        "type": "Full Time",
-        "salary": "Negotiable",
-        "workTime": "10am to 5pm",
-        "deadline": "2025-12-31",
-        "desc": "We are looking for a passionate Junior Software Engineer to join our team in Dhaka. This is a great opportunity to grow your skills and work on exciting projects."
-    },
-    {
-        "id": 2,
-        "title": "Senior Software Engineer",
-        "location": "Dhaka Bangladesh",
-        "type": "Full Time",
-        "salary": "Negotiable",
-        "workTime": "10am to 5pm",
-        "deadline": "2025-01-15",
-        "desc": "We are looking for a passionate Senior Software Engineer to join our team in Dhaka. This is a great opportunity to lead projects and mentor junior developers."
+        "title": "Marketing & Brand Associate",
+        "location": "Bashundhara R/A, Dhaka (Hybrid)",
+        "type": "Part-Time",
+        "salary": "৳ 10,000 – 12,000 / month",
+        "workTime": "~20 hours/week",
+        "deadline": "2026-08-03",
+        "applyLink": "https://forms.gle/6vVtyeK6ggcDUmg18",
+        "desc": "We're looking for a Marketing & Brand Associate to own our content, social media presence and pitch materials. You'll manage Facebook, Instagram and LinkedIn pages, design brand creatives, build investor-ready pitch decks, and research potential investors and accelerators. Ideal for a final-year student or recent graduate who wants real startup experience with actual stakes.",
+        "responsibilities": [
+            "Manage the company's Facebook, Instagram and LinkedIn pages",
+            "Plan, create and publish engaging social media content",
+            "Design posters, banners, flyers and social media creatives maintaining a consistent brand identity",
+            "Build investor-ready presentations and pitch decks",
+            "Research and shortlist potential angel investors, VCs and accelerators",
+            "Help draft outreach/introduction messages to investors and partners",
+            "Work closely with the founding team to represent our products convincingly"
+        ],
+        "requirements": [
+            "Creativity with an eye for design and branding",
+            "Strong design skills (Canva, Figma, Adobe Suite or similar)",
+            "Comfortable building presentations in PowerPoint / Google Slides / Canva",
+            "Good written English with an instinct for persuasive content",
+            "Ability to manage multiple tasks and meet deadlines",
+            "Genuine interest in startups, marketing or branding",
+            "Reliable — able to commit ~20 hours/week"
+        ],
+        "niceToHave": [
+            "Experience running a social media page (personal, university club, or otherwise)",
+            "Basic video editing (Reels/Shorts)",
+            "Any prior exposure to pitch decks, fundraising, investor outreach or startup culture"
+        ]
     }
 ]

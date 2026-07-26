@@ -18,6 +18,7 @@ import ProjectLungCTReport from './pages/projects/ProjectLungCTReport';
 import Blog from './pages/Blog';
 import BlogDetails from './pages/BlogDetails';
 import Careers from './pages/Careers';
+import CareerDetails from './pages/CareerDetails';
 import Faqs from './pages/Faqs';
 import Mission from './pages/Mission';
 import Contact from './pages/Contact';
@@ -69,6 +70,7 @@ function App() {
           <Route path="/blog" element={<Blog />} />
           <Route path="/blog/:slug" element={<BlogDetails />} />
           <Route path="/careers" element={<Careers />} />
+          <Route path="/careers/:id" element={<CareerDetails />} />
           <Route path="/faqs" element={<Faqs />} />
           <Route path="/mission" element={<Mission />} />
           <Route path="/contact" element={<Contact />} />

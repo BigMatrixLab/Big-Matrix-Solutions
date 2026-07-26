@@ -1,4 +1,5 @@
 import React from 'react';
+import { Link } from 'react-router-dom';
 import Breadcrumb from '../components/Breadcrumb';
 import careersData from '../data/careers.json';
 
@@ -27,7 +28,6 @@ const Careers = () => {
                         <div className="col-lg-6">
                             <h2 className="header-title">Inspire and Get Inspired by <span>Professional Experts</span></h2>
                         </div>
-                        
                     </div>
 
                     <div className="row">
@@ -44,7 +44,6 @@ const Careers = () => {
                                                         <span className="job-badge">{job.type}</span>
                                                         <span className="job-location">{job.location}</span>
                                                     </div>
-                                                    
                                                 </div>
                                                 <div className="col-lg-6">
                                                     <p className="job-description">{job.desc}</p>
@@ -59,9 +58,13 @@ const Careers = () => {
                                                 </div>
                                                 <div className="col-lg-3 text-lg-end">
                                                     {expired ? (
-                                                        <span className="apply-btn apply-btn--disabled" aria-disabled="true">Apply Now</span>
+                                                        <span className="view-details-btn view-details-btn--disabled" aria-disabled="true">
+                                                            View Details
+                                                        </span>
                                                     ) : (
-                                                        <a href="/contact" className="apply-btn">Apply Now</a>
+                                                        <Link to={`/careers/${job.id}`} className="view-details-btn">
+                                                            View Details
+                                                        </Link>
                                                     )}
                                                 </div>
                                             </div>
