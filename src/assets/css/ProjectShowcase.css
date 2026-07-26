@@ -995,3 +995,99 @@
         max-width: 100%;
     }
 }
+
+/* ============================= STICKY NAV ============================= */
+.bc-sticky-nav {
+    position: sticky;
+    top: 0;
+    z-index: 20;
+    background: rgba(255, 255, 255, 0.94);
+    backdrop-filter: blur(10px);
+    border-bottom: 1px solid var(--bc-line);
+    box-shadow: 0 2px 12px rgba(4, 20, 36, 0.06);
+}
+
+.bc-nav-list {
+    list-style: none;
+    margin: 0;
+    padding: 0;
+    display: flex;
+    gap: 4px;
+    overflow-x: auto;
+    scrollbar-width: none;
+}
+
+.bc-nav-list::-webkit-scrollbar {
+    display: none;
+}
+
+.bc-nav-list li a {
+    display: inline-block;
+    padding: 16px 18px;
+    font-family: "Rajdhani", sans-serif;
+    font-weight: 600;
+    font-size: 15px;
+    color: var(--bc-ink-2);
+    border-bottom: 3px solid transparent;
+    transition: all 0.25s ease;
+    white-space: nowrap;
+    text-decoration: none;
+}
+
+.bc-nav-list li a:hover {
+    color: var(--bc-primary);
+}
+
+.bc-nav-list li a.active {
+    color: var(--bc-primary);
+    border-bottom-color: var(--bc-primary);
+}
+
+/* ============================= PREMIUM CARDS ============================= */
+.bc-premium-card {
+    display: flex;
+    flex-direction: column;
+    padding: 32px 28px;
+}
+
+.bc-premium-name {
+    font-size: 1.4rem;
+    margin-bottom: 8px;
+}
+
+.bc-premium-price {
+    font-family: "Rajdhani", sans-serif;
+    font-size: 1.9rem;
+    font-weight: 700;
+    color: var(--bc-primary);
+    margin-bottom: 22px;
+    padding-bottom: 18px;
+    border-bottom: 1px solid var(--bc-line);
+}
+
+.bc-premium-list {
+    list-style: none;
+    margin: 0;
+    padding: 0;
+    display: flex;
+    flex-direction: column;
+    gap: 12px;
+    flex: 1;
+}
+
+.bc-premium-list li {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    font-size: 14px;
+    color: var(--bc-body);
+    gap: 8px;
+}
+
+.bc-premium-list li strong {
+    color: var(--bc-ink);
+    font-family: "Rajdhani", sans-serif;
+    font-weight: 700;
+    font-size: 15px;
+    white-space: nowrap;
+}
