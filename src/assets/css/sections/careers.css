@@ -298,6 +298,16 @@
     margin-right: 4px;
 }
 
+.career-details-meta .job-company {
+    font-size: 14px;
+    color: #8a94a6;
+    font-weight: 500;
+}
+
+.career-details-meta .job-company i {
+    margin-right: 4px;
+}
+
 .career-details-intro {
     font-size: 16px;
     color: #4a5568;
@@ -317,6 +327,83 @@
     margin: 0 0 14px 0;
     padding-bottom: 10px;
     border-bottom: 2px solid #e8f0fe;
+}
+
+.career-section-note {
+    font-size: 14px;
+    font-weight: 400;
+    color: #8a94a6;
+    font-family: inherit;
+}
+
+.career-body-text {
+    font-size: 15px;
+    color: #4a5568;
+    line-height: 1.75;
+    margin-bottom: 14px;
+    text-align: justify;
+}
+
+.career-ideal {
+    font-style: italic;
+    color: #5a6678;
+    border-left: 3px solid #0c5adb;
+    padding-left: 14px;
+    margin-top: 4px;
+}
+
+/* Compensation grid */
+.career-comp-grid {
+    display: flex;
+    flex-direction: column;
+    gap: 12px;
+}
+
+.career-comp-item {
+    display: flex;
+    gap: 12px;
+    align-items: baseline;
+}
+
+.comp-label {
+    font-size: 13px;
+    font-weight: 700;
+    color: #1d2124;
+    min-width: 100px;
+    text-transform: uppercase;
+    letter-spacing: 0.4px;
+}
+
+.comp-value {
+    font-size: 15px;
+    color: #4a5568;
+}
+
+/* Inline link */
+.career-inline-link {
+    color: #0c5adb;
+    font-weight: 600;
+    word-break: break-all;
+    text-decoration: underline;
+}
+
+.career-inline-link:hover {
+    color: #0847b0;
+}
+
+/* Deadline note at bottom of How to Apply */
+.career-deadline-note {
+    margin-top: 16px;
+    font-size: 14px;
+    color: #4a5568;
+    background: #f0f5ff;
+    border-left: 3px solid #0c5adb;
+    padding: 10px 14px;
+    border-radius: 0 6px 6px 0;
+}
+
+.overview-value--expired {
+    color: #dc3545;
 }
 
 .career-list {

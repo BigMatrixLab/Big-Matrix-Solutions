@@ -31,10 +31,12 @@ const CareerDetails = () => {
             <div className="career-details-area inner-style">
                 <div className="container">
                     <div className="row">
-                        {/* Main Content */}
+
+                        {/* ── Main Content ── */}
                         <div className="col-lg-8">
                             <div className="career-details-content">
 
+                                {/* Header */}
                                 <div className="career-details-header">
                                     <h2 className="career-details-title">{job.title}</h2>
                                     <div className="career-details-meta">
@@ -42,11 +44,32 @@ const CareerDetails = () => {
                                         <span className="job-location">
                                             <i className="bi bi-geo-alt"></i> {job.location}
                                         </span>
+                                        {job.company && (
+                                            <span className="job-company">
+                                                <i className="bi bi-building"></i> {job.company}
+                                            </span>
+                                        )}
                                     </div>
                                 </div>
 
-                                <p className="career-details-intro">{job.desc}</p>
+                                {/* About Us */}
+                                {job.aboutUs && (
+                                    <div className="career-section">
+                                        <h4 className="career-section-title">About Us</h4>
+                                        <p className="career-body-text">{job.aboutUs}</p>
+                                    </div>
+                                )}
 
+                                {/* The Role */}
+                                {(job.roleIntro || job.roleIdeal) && (
+                                    <div className="career-section">
+                                        <h4 className="career-section-title">The Role</h4>
+                                        {job.roleIntro && <p className="career-body-text">{job.roleIntro}</p>}
+                                        {job.roleIdeal && <p className="career-body-text career-ideal">{job.roleIdeal}</p>}
+                                    </div>
+                                )}
+
+                                {/* What You'll Do */}
                                 {job.responsibilities && job.responsibilities.length > 0 && (
                                     <div className="career-section">
                                         <h4 className="career-section-title">What You'll Do</h4>
@@ -58,6 +81,7 @@ const CareerDetails = () => {
                                     </div>
                                 )}
 
+                                {/* What We're Looking For */}
                                 {job.requirements && job.requirements.length > 0 && (
                                     <div className="career-section">
                                         <h4 className="career-section-title">What We're Looking For</h4>
@@ -69,9 +93,10 @@ const CareerDetails = () => {
                                     </div>
                                 )}
 
+                                {/* Nice to Have */}
                                 {job.niceToHave && job.niceToHave.length > 0 && (
                                     <div className="career-section">
-                                        <h4 className="career-section-title">Nice to Have</h4>
+                                        <h4 className="career-section-title">Nice to Have <span className="career-section-note">(not required)</span></h4>
                                         <ul className="career-list">
                                             {job.niceToHave.map((item, i) => (
                                                 <li key={i}>{item}</li>
@@ -79,15 +104,77 @@ const CareerDetails = () => {
                                         </ul>
                                     </div>
                                 )}
+
+                                {/* Compensation & Logistics */}
+                                {(job.salary || job.workTime || job.arrangement) && (
+                                    <div className="career-section">
+                                        <h4 className="career-section-title">Compensation &amp; Logistics</h4>
+                                        <div className="career-comp-grid">
+                                            {job.salary && (
+                                                <div className="career-comp-item">
+                                                    <span className="comp-label">Pay</span>
+                                                    <span className="comp-value">{job.salary}</span>
+                                                </div>
+                                            )}
+                                            {job.workTime && (
+                                                <div className="career-comp-item">
+                                                    <span className="comp-label">Hours</span>
+                                                    <span className="comp-value">{job.workTime}</span>
+                                                </div>
+                                            )}
+                                            {job.arrangement && (
+                                                <div className="career-comp-item">
+                                                    <span className="comp-label">Arrangement</span>
+                                                    <span className="comp-value">{job.arrangement}</span>
+                                                </div>
+                                            )}
+                                        </div>
+                                    </div>
+                                )}
+
+                                {/* Why Join Us Now */}
+                                {job.whyJoin && (
+                                    <div className="career-section">
+                                        <h4 className="career-section-title">Why Join Us Now</h4>
+                                        {job.whyJoin.split('\n\n').map((para, i) => (
+                                            <p key={i} className="career-body-text">{para}</p>
+                                        ))}
+                                    </div>
+                                )}
+
+                                {/* How to Apply */}
+                                {job.howToApply && (
+                                    <div className="career-section">
+                                        <h4 className="career-section-title">How to Apply</h4>
+                                        <p className="career-body-text">
+                                            {job.howToApply.intro}{' '}
+                                            <a href={job.howToApply.formLink} target="_blank" rel="noopener noreferrer" className="career-inline-link">
+                                                {job.howToApply.formLink}
+                                            </a>
+                                        </p>
+                                        <p className="career-body-text">We'll ask you to share:</p>
+                                        <ul className="career-list">
+                                            {job.howToApply.items.map((item, i) => (
+                                                <li key={i}>{item}</li>
+                                            ))}
+                                        </ul>
+                                        {job.deadline && (
+                                            <p className="career-deadline-note">
+                                                <strong>Deadline to apply:</strong> {formatDeadline(job.deadline)}
+                                                {expired && <span className="deadline-passed"> — Applications closed</span>}
+                                            </p>
+                                        )}
+                                    </div>
+                                )}
+
                             </div>
                         </div>
 
-                        {/* Sidebar */}
+                        {/* ── Sidebar ── */}
                         <div className="col-lg-4">
                             <div className="career-sidebar">
                                 <div className="career-sidebar-card">
                                     <h5 className="sidebar-card-title">Job Overview</h5>
-
                                     <ul className="sidebar-overview-list">
                                         {job.type && (
                                             <li>
@@ -111,7 +198,7 @@ const CareerDetails = () => {
                                             <li>
                                                 <i className="bi bi-cash-coin"></i>
                                                 <div>
-                                                    <span className="overview-label">Salary</span>
+                                                    <span className="overview-label">Pay</span>
                                                     <span className="overview-value">{job.salary}</span>
                                                 </div>
                                             </li>
@@ -125,12 +212,21 @@ const CareerDetails = () => {
                                                 </div>
                                             </li>
                                         )}
+                                        {job.arrangement && (
+                                            <li>
+                                                <i className="bi bi-laptop"></i>
+                                                <div>
+                                                    <span className="overview-label">Arrangement</span>
+                                                    <span className="overview-value">{job.arrangement}</span>
+                                                </div>
+                                            </li>
+                                        )}
                                         {job.deadline && (
                                             <li>
                                                 <i className="bi bi-calendar-event"></i>
                                                 <div>
                                                     <span className="overview-label">Deadline</span>
-                                                    <span className={`overview-value${expired ? ' text-danger' : ''}`}>
+                                                    <span className={`overview-value${expired ? ' overview-value--expired' : ''}`}>
                                                         {formatDeadline(job.deadline)}
                                                         {expired && ' (Closed)'}
                                                     </span>
@@ -141,13 +237,13 @@ const CareerDetails = () => {
 
                                     <div className="sidebar-apply">
                                         {expired ? (
-                                            <span className="apply-btn apply-btn--disabled w-100 text-center" aria-disabled="true">
+                                            <span className="apply-btn apply-btn--disabled" aria-disabled="true">
                                                 Applications Closed
                                             </span>
                                         ) : (
                                             <a
                                                 href={job.applyLink || '/contact'}
-                                                className="apply-btn w-100 text-center"
+                                                className="apply-btn"
                                                 target={job.applyLink ? '_blank' : undefined}
                                                 rel={job.applyLink ? 'noopener noreferrer' : undefined}
                                             >
@@ -162,6 +258,7 @@ const CareerDetails = () => {
                                 </Link>
                             </div>
                         </div>
+
                     </div>
                 </div>
             </div>
