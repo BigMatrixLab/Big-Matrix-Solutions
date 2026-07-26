@@ -26,7 +26,8 @@ const Careers = () => {
                 <div className="container">
                     <div className="row career-header align-items-center">
                         <div className="col-lg-6">
-                            <h2 className="header-title">Inspire and Get Inspired by <span>Professional Experts</span></h2>
+                            <h2 className="header-title">Open <span>Positions</span></h2>
+                            <p className="header-desc">We're hiring — explore the roles below and find where you fit in.</p>
                         </div>
                     </div>
 
@@ -62,7 +63,7 @@ const Careers = () => {
                                                             View Details
                                                         </span>
                                                     ) : (
-                                                        <Link to={`/careers/${job.id}`} className="view-details-btn">
+                                                        <Link to={`/careers/${job.slug}`} className="view-details-btn">
                                                             View Details
                                                         </Link>
                                                     )}

@@ -5,8 +5,8 @@ import careersData from '../data/careers.json';
 import NotFound from './NotFound';
 
 const CareerDetails = () => {
-    const { id } = useParams();
-    const job = careersData.find((j) => String(j.id) === id);
+    const { slug } = useParams();
+    const job = careersData.find((j) => j.slug === slug);
 
     if (!job) return <NotFound />;
 
