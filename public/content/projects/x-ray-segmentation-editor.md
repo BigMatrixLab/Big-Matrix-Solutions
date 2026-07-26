@@ -1,5 +1,5 @@
 ---
-id: 6
+id: "7"
 title: "X-Ray Segmentation Editor"
 category: "Medical AI Tools"
 image: "/assets/images/projects/x-ray-segmentation-editor.png"

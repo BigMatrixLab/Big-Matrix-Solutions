@@ -1,17 +1,6 @@
 import React, { useEffect, useRef, useState } from 'react';
 import '../../assets/css/ProjectShowcase.css';
 
-const NAV_SECTIONS = [
-    { id: 'overview',      label: 'Overview' },
-    { id: 'patients',      label: 'Patients' },
-    { id: 'appointments',  label: 'Appointments' },
-    { id: 'prescriptions', label: 'Prescriptions' },
-    { id: 'clinical',      label: 'Clinical' },
-    { id: 'operations',    label: 'Operations' },
-    { id: 'portal',        label: 'Patient Portal' },
-    { id: 'security',      label: 'Security' },
-];
-
 const heroStats = [
     { icon: 'bi bi-hospital',        num: 'All-in-One',  label: 'Appointments, prescriptions, billing, lab, messaging, and AI in one platform' },
     { icon: 'bi bi-capsule',         num: '15,168',      label: 'Brand-name drugs in the searchable prescription catalog' },
@@ -96,49 +85,12 @@ const pricingTiers = [
 ];
 
 const ProjectRxCloud = () => {
-    const [activeSection, setActiveSection] = useState('overview');
     const sectionRefs = useRef({});
-
-    useEffect(() => {
-        const observer = new IntersectionObserver(
-            (entries) => {
-                entries.forEach((entry) => {
-                    if (entry.isIntersecting) setActiveSection(entry.target.id);
-                });
-            },
-            { rootMargin: '-45% 0px -50% 0px', threshold: 0 }
-        );
-        const nodes = Object.values(sectionRefs.current).filter(Boolean);
-        nodes.forEach((node) => observer.observe(node));
-        return () => observer.disconnect();
-    }, []);
 
     const reg = (id) => (el) => { sectionRefs.current[id] = el; };
 
     return (
         <div className="bc-showcase">
-
-            {/* ── Sticky Nav ── */}
-            <nav className="bc-sticky-nav">
-                <div className="bc-container">
-                    <ul className="bc-nav-list">
-                        {NAV_SECTIONS.map((s) => (
-                            <li key={s.id}>
-                                <a
-                                    href={`#${s.id}`}
-                                    className={activeSection === s.id ? 'active' : ''}
-                                    onClick={(e) => {
-                                        e.preventDefault();
-                                        document.getElementById(s.id)?.scrollIntoView({ behavior: 'smooth' });
-                                    }}
-                                >
-                                    {s.label}
-                                </a>
-                            </li>
-                        ))}
-                    </ul>
-                </div>
-            </nav>
 
             {/* ── Hero ── */}
             <section className="bc-hero" id="overview" ref={reg('overview')}>
@@ -383,20 +335,7 @@ const ProjectRxCloud = () => {
                         ))}
                     </div>
 
-                    <div className="bc-section-head">
-                        <span className="bc-eyebrow">Subscription</span>
-                        <h2>Pricing Plans</h2>
-                        <p>14-day free trial on all plans. No credit card required. Payment via bKash, Nagad, Rocket, card, and bank transfer. Annual billing saves 20%.</p>
-                    </div>
-                    <div className="bc-grid bc-grid-4">
-                        {pricingTiers.map((tier) => (
-                            <div className="bc-card bc-premium-card" key={tier.name}>
-                                <h4 className="bc-premium-name">{tier.name}</h4>
-                                <div className="bc-premium-price">{tier.limit}</div>
-                                <p style={{ fontSize: '0.93rem', marginTop: '8px' }}>{tier.best}</p>
-                            </div>
-                        ))}
-                    </div>
+                   
 
                 </div>
             </section>

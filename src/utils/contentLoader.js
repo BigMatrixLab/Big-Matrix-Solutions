@@ -59,15 +59,5 @@ export function loadContent(modules, type) {
         }
     }).filter(Boolean);
 
-    return items.sort((a, b) => {
-        if (a.date && b.date) {
-            const dateA = new Date(a.date);
-            const dateB = new Date(b.date);
-            if (!isNaN(dateA) && !isNaN(dateB)) {
-                return dateB - dateA;
-            }
-        }
-        // Fallback sort by ID string
-        return String(b.id).localeCompare(String(a.id));
-    });
+    return items.sort((a, b) => Number(a.id) - Number(b.id));
 }

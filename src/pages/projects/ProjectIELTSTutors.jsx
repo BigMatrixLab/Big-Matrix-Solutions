@@ -1,17 +1,6 @@
 import React, { useEffect, useRef, useState } from 'react';
 import '../../assets/css/ProjectShowcase.css';
 
-const NAV_SECTIONS = [
-    { id: 'overview', label: 'Overview' },
-    { id: 'writing', label: 'Writing' },
-    { id: 'speaking', label: 'Speaking' },
-    { id: 'reading', label: 'Reading' },
-    { id: 'listening', label: 'Listening' },
-    { id: 'analysis', label: 'Analysis' },
-    { id: 'features', label: 'Features' },
-    { id: 'platform', label: 'Platform' },
-];
-
 const heroStats = [
     { icon: 'bi bi-4-circle', num: '4 Skills', label: 'Writing, Speaking, Reading, and Listening — full exam coverage' },
     { icon: 'bi bi-robot', num: 'AI Grading', label: 'Band scores across all four official IELTS criteria, instantly' },
@@ -67,49 +56,16 @@ const premiumTiers = [
 ];
 
 const ProjectIELTSTutors = () => {
-    const [activeSection, setActiveSection] = useState('overview');
     const sectionRefs = useRef({});
 
     useEffect(() => {
-        const observer = new IntersectionObserver(
-            (entries) => {
-                entries.forEach((entry) => {
-                    if (entry.isIntersecting) setActiveSection(entry.target.id);
-                });
-            },
-            { rootMargin: '-45% 0px -50% 0px', threshold: 0 }
-        );
-        const nodes = Object.values(sectionRefs.current).filter(Boolean);
-        nodes.forEach((node) => observer.observe(node));
-        return () => observer.disconnect();
+        // intentionally empty — kept for future use
     }, []);
 
     const registerSection = (id) => (el) => { sectionRefs.current[id] = el; };
 
     return (
         <div className="bc-showcase">
-
-            {/* ── Sticky Nav ── */}
-            <nav className="bc-sticky-nav">
-                <div className="bc-container">
-                    <ul className="bc-nav-list">
-                        {NAV_SECTIONS.map((s) => (
-                            <li key={s.id}>
-                                <a
-                                    href={`#${s.id}`}
-                                    className={activeSection === s.id ? 'active' : ''}
-                                    onClick={(e) => {
-                                        e.preventDefault();
-                                        document.getElementById(s.id)?.scrollIntoView({ behavior: 'smooth' });
-                                    }}
-                                >
-                                    {s.label}
-                                </a>
-                            </li>
-                        ))}
-                    </ul>
-                </div>
-            </nav>
 
             {/* ── Hero ── */}
             <section className="bc-hero" id="overview" ref={registerSection('overview')}>

@@ -1,5 +1,5 @@
 ---
-id: "9"
+id: "4"
 slug: "lung-ct-report-generation"
 title: "Lung CT Segmentation & Report Generation"
 category: "Medical AI / Radiology"
