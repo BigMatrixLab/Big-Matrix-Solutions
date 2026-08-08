@@ -1391,73 +1391,204 @@ a.bm-card__title:hover,
    14. Quote / testimonial
    -------------------------------------------------------------------------- */
 
-.bm-quote {
-  max-width: 860px;
-  margin-inline: auto;
-  padding: clamp(28px, 2rem + 1vw, 48px);
-  text-align: center;
-  background: var(--bm-bg);
-  border: 1px solid var(--bm-line);
-  border-radius: var(--bm-r);
+/* A partner index drives one quote stage: names are pickable, so the arrows
+   stop being the only way through, and the band fills its width. */
+.bm-voices__layout {
+  display: grid;
+  grid-template-columns: minmax(230px, 300px) minmax(0, 1fr);
+  align-items: start;
+  gap: clamp(32px, 4vw, 64px);
 }
 
-.bm-quote__mark {
-  display: block;
-  margin-bottom: var(--bm-3);
-  font-family: var(--bm-font-display) !important;
-  font-size: 3rem;
-  line-height: 0.6;
-  color: var(--bm-orange);
-}
-
-.bm-quote__text {
-  margin: 0 0 var(--bm-5);
-  font-family: var(--bm-font-display) !important;
-  font-size: clamp(1.0625rem, 0.98rem + 0.6vw, 1.375rem);
-  font-weight: 400;
-  line-height: 1.5;
-  letter-spacing: -0.015em;
-  color: var(--bm-text);
-  text-align: center;
-}
-
-.bm-quote__stars {
-  display: flex;
-  justify-content: center;
-  gap: 4px;
+.bm-voices__index-label {
   margin: 0 0 var(--bm-4);
+  font-family: var(--bm-font-mono) !important;
+  font-size: var(--bm-fs-label);
+  line-height: 1;
+  letter-spacing: var(--bm-track-label);
+  text-transform: uppercase;
+  color: var(--bm-text-3);
+}
+
+.bm-voices__index ul {
+  margin: 0;
   padding: 0;
   list-style: none;
-  font-size: 13px;
+  border-top: 1px solid var(--bm-line);
+}
+
+.bm-voices__index li { border-bottom: 1px solid var(--bm-line); }
+
+.bm-voices__index button {
+  display: flex;
+  align-items: baseline;
+  gap: var(--bm-3);
+  width: 100%;
+  padding: var(--bm-4) var(--bm-4) var(--bm-4) var(--bm-3);
+  text-align: left;
+  background: none;
+  border: 0;
+  border-left: 2px solid transparent;
+  cursor: pointer;
+  transition: border-color var(--bm-dur) var(--bm-ease-inout),
+              background var(--bm-dur) var(--bm-ease-inout);
+}
+
+.bm-voices__index button em {
+  flex: 0 0 auto;
+  font-family: var(--bm-font-mono) !important;
+  font-size: 10px;
+  font-style: normal;
+  letter-spacing: var(--bm-track-label);
+  color: var(--bm-text-3);
+}
+
+.bm-voices__index button strong {
+  display: block;
+  font-family: var(--bm-font-display) !important;
+  font-size: var(--bm-fs-sm);
+  font-weight: 600;
+  line-height: 1.3;
+  letter-spacing: var(--bm-track-heading);
+  color: var(--bm-text-3);
+  transition: color var(--bm-dur) var(--bm-ease-inout);
+}
+
+.bm-voices__index button small {
+  display: block;
+  margin-top: 3px;
+  font-size: var(--bm-fs-xs);
+  line-height: 1.4;
+  color: var(--bm-text-3);
+}
+
+.bm-voices__index button:hover strong { color: var(--bm-text); }
+.bm-voices__index button:hover { background: rgba(255, 255, 255, 0.6); }
+
+.bm-voices__index button.is-active {
+  border-left-color: var(--bm-orange);
+  background: var(--bm-bg);
+}
+
+.bm-voices__index button.is-active em { color: var(--bm-orange-ink); }
+.bm-voices__index button.is-active strong { color: var(--bm-text); }
+
+/* Stage */
+.bm-voices__stage {
+  padding: clamp(28px, 2.4vw, 44px);
+  background: var(--bm-bg);
+  border: 1px solid var(--bm-line);
+  border-radius: var(--bm-r-lg);
+}
+
+.bm-voice {
+  display: flex;
+  flex-direction: column;
+  height: 100%;
+  margin: 0;
+  text-align: left;
+}
+
+.bm-voice__mark {
+  display: block;
+  margin-bottom: var(--bm-2);
+  font-family: var(--bm-font-display) !important;
+  font-size: 3.25rem;
+  font-weight: 600;
+  line-height: 0.55;
   color: var(--bm-orange);
 }
 
-.bm-quote__name {
-  margin: 0 0 2px;
+.bm-voice__text {
+  margin: 0 0 var(--bm-6);
   font-family: var(--bm-font-display) !important;
-  font-size: 1rem;
+  font-size: clamp(1.1875rem, 1rem + 0.7vw, 1.5rem);
+  font-weight: 400;
+  line-height: 1.45;
+  letter-spacing: var(--bm-track-heading);
+  color: var(--bm-text);
+  text-align: left;
+}
+
+.bm-voice__foot {
+  display: flex;
+  align-items: center;
+  gap: var(--bm-4);
+  margin-top: auto;
+  padding-top: var(--bm-5);
+  border-top: 1px solid var(--bm-line);
+}
+
+.bm-voice__monogram {
+  flex: 0 0 auto;
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+  width: 46px;
+  height: 46px;
+  font-family: var(--bm-font-mono) !important;
+  font-size: 14px;
+  letter-spacing: 0.04em;
+  color: var(--bm-orange-ink);
+  background: var(--bm-orange-tint);
+  border-radius: var(--bm-r-sm);
+}
+
+.bm-voice__who { margin-right: auto; }
+
+.bm-voice__who strong {
+  display: block;
+  font-family: var(--bm-font-display) !important;
+  font-size: var(--bm-fs-body);
   font-weight: 600;
   letter-spacing: var(--bm-track-heading);
   color: var(--bm-text);
 }
 
-.bm-quote__role {
-  margin: 0;
+.bm-voice__who small {
+  display: block;
+  margin-top: 3px;
   font-family: var(--bm-font-mono) !important;
   font-size: 11px;
+  line-height: 1.4;
   letter-spacing: 0.09em;
   text-transform: uppercase;
   color: var(--bm-text-3);
 }
 
-.bm-quote-nav {
+.bm-voice__stars {
   display: flex;
-  justify-content: center;
-  gap: var(--bm-2);
-  margin-top: var(--bm-5);
+  gap: 3px;
+  margin: 0;
+  padding: 0;
+  list-style: none;
+  font-size: 12px;
+  color: var(--bm-orange);
 }
 
-.bm-quote-nav button {
+.bm-voices__controls {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  gap: var(--bm-4);
+  margin-top: var(--bm-5);
+  padding-top: var(--bm-5);
+  border-top: 1px solid var(--bm-line-soft);
+}
+
+.bm-voices__counter {
+  margin: 0;
+  font-family: var(--bm-font-mono) !important;
+  font-size: 11px;
+  letter-spacing: var(--bm-track-label);
+  color: var(--bm-text-3);
+}
+
+.bm-voices__counter span { color: var(--bm-text); }
+
+.bm-voices__nav { display: flex; gap: var(--bm-2); }
+
+.bm-voices__nav button {
   display: inline-flex;
   align-items: center;
   justify-content: center;
@@ -1472,7 +1603,25 @@ a.bm-card__title:hover,
               color var(--bm-dur) var(--bm-ease-inout);
 }
 
-.bm-quote-nav button:hover { border-color: var(--bm-orange); color: var(--bm-orange-ink); }
+.bm-voices__nav button:hover { border-color: var(--bm-orange); color: var(--bm-orange-ink); }
+
+@media (max-width: 991px) {
+  .bm-voices__layout { grid-template-columns: minmax(0, 1fr); }
+  .bm-voices__index ul {
+    display: grid;
+    grid-template-columns: repeat(2, minmax(0, 1fr));
+    border-bottom: 1px solid var(--bm-line);
+  }
+  .bm-voices__index li:nth-child(n + 3) { border-bottom: 0; }
+}
+
+@media (max-width: 575px) {
+  .bm-voices__index ul { grid-template-columns: minmax(0, 1fr); }
+  .bm-voices__index li:nth-child(n + 3) { border-bottom: 1px solid var(--bm-line); }
+  .bm-voices__index li:last-child { border-bottom: 0; }
+  .bm-voice__foot { flex-wrap: wrap; }
+  .bm-voice__stars { flex-basis: 100%; }
+}
 
 /* ==========================================================================
    15. Bento — asymmetric cells sharing hairlines instead of separate cards

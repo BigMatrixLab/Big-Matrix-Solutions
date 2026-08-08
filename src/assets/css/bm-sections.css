@@ -1015,8 +1015,7 @@
   .section-title.center { text-align: left; }
   .section-title.center p { text-align: left !important; margin-left: 0; }
 
-  .career-header .header-title,
-  .breadcumb-content h4 { max-width: none; }
+  .career-header .header-title { max-width: none; }
 
   .job-row-item .col-lg-3.text-lg-end { margin-top: var(--bm-4); }
 
@@ -1076,11 +1075,6 @@
 .feature-box-shape,
 .section-shape {
   display: none !important;
-}
-
-/* Rajdhani was hard-coded on these headings. */
-.breadcumb-content h4 {
-  font-family: var(--bm-font-display) !important;
 }
 
 /* --------------------------------------------------------------------------

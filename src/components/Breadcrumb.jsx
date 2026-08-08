@@ -1,31 +1,32 @@
-import React from 'react';
 import { Link } from 'react-router-dom';
 
 /**
- * Page header. Renders a breadcrumb trail above the page title on a
- * light, grid-washed band that sits directly under the fixed navigation.
+ * Page header. An editorial band under the fixed navigation: mono breadcrumb
+ * trail, display title on the left and the page description set beside it so
+ * the full width is used. Pages without a description get a single column.
  */
 const Breadcrumb = ({ pageTitle, breadcrumbItem, description }) => {
     return (
-        <section className="breadcumb-area">
-            <div className="container">
-                <div className="row">
-                    <div className="col-lg-9">
-                        <div className="breadcumb-content">
-                            <nav aria-label="Breadcrumb">
-                                <ul>
-                                    <li><Link to="/">Home</Link></li>
-                                    <li aria-hidden="true">/</li>
-                                    <li aria-current="page">{breadcrumbItem || pageTitle}</li>
-                                </ul>
-                            </nav>
-                            <h4>{pageTitle}</h4>
-                            {description && <p className="bm-lead" style={{ marginTop: 'var(--bm-4)' }}>{description}</p>}
-                        </div>
-                    </div>
+        <header className={`bm-pagehead${description ? '' : ' bm-pagehead--bare'}`}>
+            <span className="bm-pagehead__matrix" aria-hidden="true"></span>
+
+            <div className="bm-container">
+                <nav className="bm-pagehead__crumbs" aria-label="Breadcrumb">
+                    <ol>
+                        <li>
+                            <Link to="/">Home</Link>
+                        </li>
+                        <li aria-hidden="true">/</li>
+                        <li aria-current="page">{breadcrumbItem || pageTitle}</li>
+                    </ol>
+                </nav>
+
+                <div className="bm-pagehead__body">
+                    <h1 className="bm-pagehead__title">{pageTitle}</h1>
+                    {description && <p className="bm-pagehead__lead">{description}</p>}
                 </div>
             </div>
-        </section>
+        </header>
     );
 };
 

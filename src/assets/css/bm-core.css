@@ -420,17 +420,18 @@ textarea:focus {
    9. Page header (replaces the legacy breadcrumb banner)
    -------------------------------------------------------------------------- */
 
-.breadcumb-area {
+.bm-pagehead {
   position: relative;
-  padding: calc(var(--bm-header-h) + clamp(40px, 3rem + 2vw, 72px)) 0 clamp(36px, 2rem + 2vw, 60px) !important;
-  margin: 0 !important;
-  background: var(--bm-wash-warm) !important;
-  background-image: none !important;
+  padding-top: calc(var(--bm-header-h) + clamp(48px, 3rem + 2.6vw, 88px));
+  padding-bottom: clamp(48px, 2.6rem + 2.6vw, 84px);
+  margin: 0;
+  background: var(--bm-wash-warm);
   border-bottom: 1px solid var(--bm-line);
   overflow: hidden;
 }
 
-.breadcumb-area::before {
+/* Engineering grid, fading out toward the page. */
+.bm-pagehead::before {
   content: '';
   position: absolute;
   inset: 0;
@@ -441,7 +442,8 @@ textarea:focus {
   pointer-events: none;
 }
 
-.breadcumb-area::after {
+/* Warm bloom anchored to the title corner. */
+.bm-pagehead::after {
   content: '';
   position: absolute;
   inset: 0;
@@ -449,53 +451,114 @@ textarea:focus {
   pointer-events: none;
 }
 
-.breadcumb-area .container { position: relative; z-index: 2; }
+/* Brand dot matrix drifting in from the right — fills the space beside a
+   short title instead of leaving it blank. */
+.bm-pagehead__matrix {
+  position: absolute;
+  top: 0;
+  right: 0;
+  bottom: 0;
+  width: min(48%, 620px);
+  background-image: radial-gradient(rgba(255, 94, 31, 0.55) 1.4px, transparent 1.5px);
+  background-size: 18px 18px;
+  -webkit-mask-image: radial-gradient(125% 105% at 100% 42%, #000 0%, transparent 70%);
+  mask-image: radial-gradient(125% 105% at 100% 42%, #000 0%, transparent 70%);
+  opacity: 0.55;
+  pointer-events: none;
+}
 
-.breadcumb-content { text-align: left !important; }
+.bm-pagehead > .bm-container { position: relative; z-index: 2; }
 
-.breadcumb-content ul {
+.bm-pagehead__crumbs ol {
   display: flex;
   flex-wrap: wrap;
   align-items: center;
-  gap: 8px;
-  margin: 0 0 var(--bm-4) !important;
-  padding: 0 !important;
+  gap: 10px;
+  margin: 0 0 clamp(20px, 1rem + 1vw, 32px);
+  padding: 0;
   list-style: none;
   font-family: var(--bm-font-mono) !important;
-  font-size: var(--bm-fs-xs);
-  letter-spacing: 0.04em;
+  font-size: var(--bm-fs-label);
+  line-height: 1;
+  letter-spacing: 0.08em;
+  text-transform: uppercase;
   color: var(--bm-text-3);
 }
 
-.breadcumb-content ul li {
-  display: inline-flex !important;
+.bm-pagehead__crumbs li {
+  display: inline-flex;
   align-items: center;
-  color: var(--bm-text-3) !important;
-  background: none !important;
-  padding: 0 !important;
-  margin: 0 !important;
+  gap: 10px;
+  margin: 0;
+  padding: 0;
+  background: none;
 }
 
-.breadcumb-content ul li a {
-  color: var(--bm-text-3) !important;
+/* Same accent square the section heads use, tying the band to the page. */
+.bm-pagehead__crumbs li:first-child::before {
+  content: '';
+  flex: 0 0 auto;
+  width: 6px;
+  height: 6px;
+  background: var(--bm-orange);
+}
+
+.bm-pagehead__crumbs a {
+  color: var(--bm-text-3);
   border-bottom: 1px solid transparent;
+  transition: color var(--bm-dur) var(--bm-ease-inout),
+              border-color var(--bm-dur) var(--bm-ease-inout);
 }
 
-.breadcumb-content ul li a:hover {
-  color: var(--bm-orange-ink) !important;
+.bm-pagehead__crumbs a:hover {
+  color: var(--bm-orange-ink);
   border-bottom-color: var(--bm-orange);
 }
 
-.breadcumb-content ul li:last-child { color: var(--bm-text) !important; }
+.bm-pagehead__crumbs li[aria-current] { color: var(--bm-text); }
 
-.breadcumb-content h4 {
-  font-size: clamp(1.9rem, 1.3rem + 2.1vw, 3rem) !important;
-  font-weight: 600 !important;
-  line-height: 1.04 !important;
-  letter-spacing: var(--bm-track-display) !important;
-  color: var(--bm-text) !important;
-  margin: 0 !important;
-  max-width: 26ch;
+.bm-pagehead__body {
+  display: grid;
+  grid-template-columns: minmax(0, 1.3fr) minmax(0, 1fr);
+  align-items: end;
+  gap: clamp(24px, 3vw, 56px);
+}
+
+.bm-pagehead--bare .bm-pagehead__body { grid-template-columns: minmax(0, 1fr); }
+
+.bm-pagehead__title {
+  max-width: 22ch;
+  margin: 0;
+  font-family: var(--bm-font-display) !important;
+  font-size: clamp(2.15rem, 1.35rem + 2.8vw, 3.4rem);
+  font-weight: 600;
+  line-height: 1.03;
+  letter-spacing: var(--bm-track-display);
+  color: var(--bm-text);
+  text-wrap: balance;
+}
+
+.bm-pagehead--bare .bm-pagehead__title { max-width: 26ch; }
+
+.bm-pagehead__lead {
+  max-width: 48ch;
+  margin: 0;
+  padding-left: clamp(20px, 2vw, 32px);
+  font-size: var(--bm-fs-lead);
+  line-height: 1.62;
+  color: var(--bm-text-2);
+  text-align: left;
+  border-left: 1px solid var(--bm-line-strong);
+}
+
+@media (max-width: 991px) {
+  .bm-pagehead__body { grid-template-columns: minmax(0, 1fr); }
+  .bm-pagehead__title { max-width: 26ch; }
+  .bm-pagehead__lead {
+    padding-left: 0;
+    border-left: 0;
+  }
+  .bm-pagehead__matrix { width: 62%; opacity: 0.4; }
 }
 
 /* --------------------------------------------------------------------------
