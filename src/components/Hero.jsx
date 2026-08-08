@@ -31,7 +31,7 @@ const Hero = () => {
                 />
             </div>
 
-            <span className="bm-hero__aura" aria-hidden="true"></span>
+            {/* Dot matrix and trust rail only — no aura or gradient wash. */}
 
             <div className="bm-hero__main">
                 <div className="bm-container">
