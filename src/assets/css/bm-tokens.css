@@ -51,11 +51,12 @@
   /* ---------- Gradients & washes ---------- */
   --bm-wash-orange: radial-gradient(60% 70% at 12% 0%, rgba(255, 94, 31, 0.14) 0%, rgba(255, 94, 31, 0) 70%);
   --bm-wash-warm: linear-gradient(180deg, #fffaf7 0%, #ffffff 62%);
-  --bm-grid: linear-gradient(var(--bm-line-soft) 1px, transparent 1px),
-             linear-gradient(90deg, var(--bm-line-soft) 1px, transparent 1px);
-  --bm-grid-ink: linear-gradient(rgba(255, 255, 255, 0.055) 1px, transparent 1px),
-                 linear-gradient(90deg, rgba(255, 255, 255, 0.055) 1px, transparent 1px);
-  --bm-grid-size: 64px 64px;
+  /* Dot matrix rather than ruled squares. Dots cover far less area than
+     lines, so they carry a stronger colour at a tighter pitch and still read
+     as texture. */
+  --bm-grid: radial-gradient(var(--bm-line-strong) 1px, transparent 1.5px);
+  --bm-grid-ink: radial-gradient(rgba(255, 255, 255, 0.16) 1px, transparent 1.5px);
+  --bm-grid-size: 22px 22px;
 
   /* ---------- Typography ---------- */
   --bm-font-display: 'Inter Tight', 'Inter', system-ui, -apple-system, 'Segoe UI', sans-serif;

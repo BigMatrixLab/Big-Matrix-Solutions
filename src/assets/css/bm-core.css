@@ -517,47 +517,20 @@ textarea:focus {
 
 .bm-pagehead__crumbs li[aria-current] { color: var(--bm-text); }
 
-.bm-pagehead__body {
-  display: grid;
-  grid-template-columns: minmax(0, 1.3fr) minmax(0, 1fr);
-  align-items: end;
-  gap: clamp(24px, 3vw, 56px);
-}
-
-.bm-pagehead--bare .bm-pagehead__body { grid-template-columns: minmax(0, 1fr); }
-
+/* Title runs the full container width — the only element in the band. */
 .bm-pagehead__title {
-  max-width: 22ch;
+  max-width: none;
   margin: 0;
   font-family: var(--bm-font-display) !important;
-  font-size: clamp(2.15rem, 1.35rem + 2.8vw, 3.4rem);
+  font-size: clamp(2.2rem, 1.3rem + 3.4vw, 4rem);
   font-weight: 600;
-  line-height: 1.03;
+  line-height: 1.02;
   letter-spacing: var(--bm-track-display);
   color: var(--bm-text);
   text-wrap: balance;
 }
 
-.bm-pagehead--bare .bm-pagehead__title { max-width: 26ch; }
-
-.bm-pagehead__lead {
-  max-width: 48ch;
-  margin: 0;
-  padding-left: clamp(20px, 2vw, 32px);
-  font-size: var(--bm-fs-lead);
-  line-height: 1.62;
-  color: var(--bm-text-2);
-  text-align: left;
-  border-left: 1px solid var(--bm-line-strong);
-}
-
 @media (max-width: 991px) {
-  .bm-pagehead__body { grid-template-columns: minmax(0, 1fr); }
-  .bm-pagehead__title { max-width: 26ch; }
-  .bm-pagehead__lead {
-    padding-left: 0;
-    border-left: 0;
-  }
   .bm-pagehead__matrix { width: 62%; opacity: 0.4; }
 }
 

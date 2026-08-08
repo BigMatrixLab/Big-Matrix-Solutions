@@ -34,7 +34,6 @@ const AboutOne = () => {
             <Breadcrumb
                 pageTitle="A lab that ships production software"
                 breadcrumbItem="About"
-                description="Big-Matrix Solutions is the development wing of Big-Matrix Lab. We turn applied research into systems that run in hospitals, factories and government infrastructure."
             />
 
             <section className="bm-section">

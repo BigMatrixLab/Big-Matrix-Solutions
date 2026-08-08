@@ -546,17 +546,15 @@ a.bm-card__title:hover,
   isolation: isolate;
 }
 
-/* Layer 1 — engineering grid, faded toward the edges. */
+/* Layer 1 — dot matrix, faded toward the edges. */
 .bm-hero::before {
   content: '';
   position: absolute;
   inset: 0;
   z-index: -2;
-  background-image:
-    linear-gradient(var(--bm-line) 1px, transparent 1px),
-    linear-gradient(90deg, var(--bm-line) 1px, transparent 1px);
-  background-size: 76px 76px;
-  opacity: 0.5;
+  background-image: var(--bm-grid);
+  background-size: var(--bm-grid-size);
+  opacity: 0.75;
   -webkit-mask-image: radial-gradient(115% 88% at 50% 26%, #000 20%, transparent 74%);
   mask-image: radial-gradient(115% 88% at 50% 26%, #000 20%, transparent 74%);
   pointer-events: none;
@@ -1895,6 +1893,58 @@ a.bm-card__title:hover,
   .bm-row__go { display: none; }
 }
 
+/* Catalogue — groups the row list by domain. The label column tracks the
+   reader down long groups so the current domain is always visible. */
+.bm-catalogue {
+  display: grid;
+  grid-template-columns: minmax(200px, 262px) minmax(0, 1fr);
+  align-items: start;
+  gap: clamp(24px, 3vw, 56px);
+}
+
+.bm-catalogue + .bm-catalogue { margin-top: clamp(40px, 4vw, 72px); }
+
+.bm-catalogue__label {
+  position: sticky;
+  top: calc(var(--bm-header-h) + var(--bm-5));
+  padding-top: var(--bm-4);
+  border-top: 2px solid var(--bm-text);
+}
+
+.bm-catalogue__label h3 {
+  margin: 0 0 var(--bm-3);
+  font-family: var(--bm-font-display) !important;
+  font-size: var(--bm-fs-h4);
+  font-weight: 600;
+  line-height: 1.25;
+  letter-spacing: var(--bm-track-heading);
+  color: var(--bm-text);
+}
+
+.bm-catalogue__label p {
+  margin: 0 0 var(--bm-4);
+  font-size: var(--bm-fs-xs);
+  line-height: 1.6;
+  color: var(--bm-text-3);
+  text-align: left;
+}
+
+.bm-catalogue__count {
+  display: inline-block;
+  font-family: var(--bm-font-mono) !important;
+  font-size: 10px;
+  line-height: 1;
+  letter-spacing: var(--bm-track-label);
+  text-transform: uppercase;
+  color: var(--bm-orange-ink);
+}
+
+@media (max-width: 991px) {
+  .bm-catalogue { grid-template-columns: minmax(0, 1fr); gap: var(--bm-5); }
+  .bm-catalogue__label { position: static; }
+  .bm-catalogue__label p { max-width: 62ch; }
+}
+
 /* ==========================================================================
    17. Showcase — framed product shots, one lead item plus a supporting row
    The project images are dense UI screenshots, so each sits inset on a tinted
@@ -2344,32 +2394,3 @@ a.bm-card__title:hover,
   .bm-close__actions .bm-button { flex: 1 1 auto; }
 }
 
-/* Inline proof strip that sits under the slab. */
-.bm-close__strip {
-  display: grid;
-  grid-template-columns: repeat(4, minmax(0, 1fr));
-  gap: 1px;
-  margin: var(--bm-5) 0 0;
-  padding: 0;
-  list-style: none;
-  background: var(--bm-line-ink);
-  border: 1px solid var(--bm-line-ink);
-  border-radius: var(--bm-r-lg);
-  overflow: hidden;
-}
-
-.bm-close__strip li {
-  display: flex;
-  align-items: center;
-  gap: 10px;
-  padding: var(--bm-4);
-  background: var(--bm-ink-bg-2);
-  font-size: var(--bm-fs-xs);
-  line-height: 1.45;
-  color: var(--bm-text-inv-2);
-}
-
-.bm-close__strip i { flex: 0 0 auto; color: var(--bm-orange); font-size: 14px; }
-
-@media (max-width: 991px) { .bm-close__strip { grid-template-columns: repeat(2, minmax(0, 1fr)); } }
-@media (max-width: 479px) { .bm-close__strip { grid-template-columns: minmax(0, 1fr); } }

@@ -1,13 +1,12 @@
 import { Link } from 'react-router-dom';
 
 /**
- * Page header. An editorial band under the fixed navigation: mono breadcrumb
- * trail, display title on the left and the page description set beside it so
- * the full width is used. Pages without a description get a single column.
+ * Page header. A band under the fixed navigation carrying the mono breadcrumb
+ * trail and the page title, set full width at display scale.
  */
-const Breadcrumb = ({ pageTitle, breadcrumbItem, description }) => {
+const Breadcrumb = ({ pageTitle, breadcrumbItem }) => {
     return (
-        <header className={`bm-pagehead${description ? '' : ' bm-pagehead--bare'}`}>
+        <header className="bm-pagehead">
             <span className="bm-pagehead__matrix" aria-hidden="true"></span>
 
             <div className="bm-container">
@@ -21,10 +20,7 @@ const Breadcrumb = ({ pageTitle, breadcrumbItem, description }) => {
                     </ol>
                 </nav>
 
-                <div className="bm-pagehead__body">
-                    <h1 className="bm-pagehead__title">{pageTitle}</h1>
-                    {description && <p className="bm-pagehead__lead">{description}</p>}
-                </div>
+                <h1 className="bm-pagehead__title">{pageTitle}</h1>
             </div>
         </header>
     );

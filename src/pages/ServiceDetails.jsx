@@ -1,212 +1,123 @@
-import React from 'react';
+import { useEffect, useRef } from 'react';
 import { useParams, Link } from 'react-router-dom';
-import html2pdf from 'html2pdf.js';
 import Breadcrumb from '../components/Breadcrumb';
 import MarkdownRenderer from '../components/MarkdownRenderer';
+import CtaBand from '../components/CtaBand';
 import { servicesData } from '../data/content';
+import { enrichSolutionHtml } from '../utils/docEnrich';
+
+const PHONE_LABEL = '+880 2 55668200 (6212)';
+const PHONE_HREF = 'tel:+880255668200';
+const EMAIL = 'contact@big-matrix.com';
+
+const pad = (value) => String(value).padStart(2, '0');
 
 const ServiceDetails = () => {
     const { slug } = useParams();
-    const service = servicesData.find(s => s.slug === slug);
+    const service = servicesData.find((s) => s.slug === slug);
 
-    // PDF download handler
-    const handleDownloadPDF = () => {
-        const content = document.querySelector('.services-details-content');
-        if (content) {
-            // Wait for all images to load
-            const images = content.querySelectorAll('img');
-            const promises = Array.from(images).map(img => {
-                if (img.complete && img.naturalHeight !== 0) return Promise.resolve();
-                return new Promise(resolve => {
-                    img.onload = img.onerror = resolve;
-                });
-            });
-            Promise.all(promises).then(() => {
-                const opt = {
-                    margin: 0.5,
-                    filename: `${service.title || 'service'}.pdf`,
-                    image: { type: 'jpeg', quality: 0.98 },
-                    html2canvas: { scale: 2, useCORS: true },
-                    jsPDF: { unit: 'in', format: 'letter', orientation: 'portrait' }
-                };
-                html2pdf().set(opt).from(content).save();
-            });
-        }
-    };
+    const listRef = useRef(null);
+    const currentRef = useRef(null);
+
+    // The index scrolls inside the rail, so bring the active entry into view
+    // without moving the page itself.
+    useEffect(() => {
+        const list = listRef.current;
+        const item = currentRef.current;
+        if (!list || !item) return;
+
+        const below = item.offsetTop + item.offsetHeight > list.clientHeight;
+        if (below) list.scrollTop = item.offsetTop - 12;
+    }, [slug]);
 
     if (!service) {
         return (
             <>
-                <Breadcrumb pageTitle="Service Not Found" breadcrumbItem="Service" />
-                <div className="services-details-area">
-                    <div className="container text-center">
-                        <h2>Service not found</h2>
-                        <Link to="/service" className="btn btn-primary mt-4">Back to Services</Link>
+                <Breadcrumb pageTitle="Solution not found" breadcrumbItem="Solutions" />
+                <section className="bm-section">
+                    <div className="bm-container">
+                        <p className="bm-doc__missing">
+                            That solution does not exist, or the link has changed.
+                        </p>
+                        <Link to="/service" className="bm-button">
+                            All solutions
+                            <i className="bi bi-arrow-right" aria-hidden="true"></i>
+                        </Link>
                     </div>
-                </div>
+                </section>
             </>
         );
     }
 
     return (
         <>
-            <Breadcrumb pageTitle={service.title} breadcrumbItem="Service" />
+            <Breadcrumb pageTitle={service.title} breadcrumbItem="Solutions" />
 
-            {/* Services Details Area */}
-            <div className="services-details-area">
-                <div className="container">
-                    <div className="row">
-                        <div className="col-lg-8">
-                            <div className="row">
-                                <div className="col-lg-12">
-                                    <div className="services-details-thumb">
-                                        <img src={service.image} alt={service.title} />
-                                    </div>
-                                    {/* Download PDF Button */}
-                                    {/* Download PDF Button removed, now handled in sidebar */}
-                                    <div className="services-details-content">
-                                        {/* Render markdown content if contentFile exists, otherwise fallback to JSON structure */}
-                                        {service.contentFile ? (
-                                            <MarkdownRenderer contentFile={service.contentFile} />
-                                        ) : (
-                                            <>
-                                                <h4 className="services-details-title">{service.title}</h4>
-                                                <p className="services-details-desc">{service.desc}</p>
-                                                <p className="services-details-desc">{service.longDescription}</p>
-                                            </>
-                                        )}
-                                    </div>
+            <section className="bm-section bm-doc">
+                <div className="bm-container">
+                    <div className="bm-doc__layout">
+                        <article className="bm-doc__main">
+                            {service.image && (
+                                <figure className="bm-doc__hero">
+                                    <img src={service.image} alt={service.title} />
+                                </figure>
+                            )}
 
-                                    {/* Keep static sections if no markdown */}
-                                    {!service.contentFile && (
-                                        <>
-                                            <div className="row">
-                                                <div className="col-lg-6 col-md-6">
-                                                    <div className="service-details-icon-box">
-                                                        <div className="service-details-icon-thumb">
-                                                            <img src="/assets/images/service-inner/services-details-icon-1.png" alt="" />
-                                                        </div>
-                                                        <div className="service-details-box-content">
-                                                            <h4>Custom Software</h4>
-                                                            <p>Ethical network environmental architect go forward opportu credibly implement</p>
-                                                        </div>
-                                                    </div>
-                                                </div>
-                                                <div className="col-lg-6 col-md-6">
-                                                    <div className="service-details-icon-box">
-                                                        <div className="service-details-icon-thumb">
-                                                            <img src="/assets/images/service-inner/services-details-icon-2.png" alt="" />
-                                                        </div>
-                                                        <div className="service-details-box-content">
-                                                            <h4>Mobile Application</h4>
-                                                            <p>Ethical network environmental architect go forward opportu credibly implement</p>
-                                                        </div>
-                                                    </div>
-                                                </div>
-                                            </div>
-                                            <div className="services-details-text">
-                                                <div className="service-details-text-icon">
-                                                    <img src="/assets/images/service-inner/services-details-text-icon.png" alt="" />
-                                                </div>
-                                                <div className="service-details-text-content">
-                                                    <p>Competently architect intermandated deliverables client niches continually underwhelm</p>
-                                                </div>
-                                            </div>
-
-                                            <h4 className="services-details-title">What the Benefits?</h4>
-                                            <p className="services-details-desc">Alternative innovation to ethical network environmental whiteboard pursue compelling results for premier methods empowerment. Dramatically architect go forward opportunities </p>
-
-                                            <div className="row">
-                                                <div className="col-lg-6 col-md-6">
-                                                    <div className="single-benifits-box">
-                                                        <div className="benifits-thumb">
-                                                            <img src="/assets/images/service-inner/services-details-benifis-thumb-1.jpg" alt="" />
-                                                        </div>
-                                                        <div className="benifits-content">
-                                                            <h4>Analysis And Planning.</h4>
-                                                            <ul>
-                                                                <li><i className="bi bi-check2"></i>New Modern Equipments</li>
-                                                                <li><i className="bi bi-check2"></i>Expert’s Volunteers</li>
-                                                            </ul>
-                                                        </div>
-                                                    </div>
-                                                </div>
-                                                <div className="col-lg-6 col-md-6">
-                                                    <div className="single-benifits-box">
-                                                        <div className="benifits-thumb">
-                                                            <img src="/assets/images/service-inner/services-details-benifis-thumb-2.jpg" alt="" />
-                                                        </div>
-                                                        <div className="benifits-content">
-                                                            <h4>Design & Development.</h4>
-                                                            <ul>
-                                                                <li><i className="bi bi-check2"></i>New Modern Equipments</li>
-                                                                <li><i className="bi bi-check2"></i>Expert’s Volunteers</li>
-                                                            </ul>
-                                                        </div>
-                                                    </div>
-                                                </div>
-                                            </div>
-                                        </>
-                                    )}
-                                </div>
+                            <div className="bm-doc__body">
+                                <MarkdownRenderer
+                                    contentFile={service.contentFile}
+                                    transform={enrichSolutionHtml}
+                                />
                             </div>
-                        </div>
-                        <div className="col-lg-4">
-                            <div className="row">
-                                <div className="col-lg-12">
-                                    <div className="widget-sidber">
-                                        <div className="widget-sidber-content">
-                                            <h4>Categories</h4>
-                                        </div>
-                                        <div className="widget-category">
-                                            <ul>
-                                                {servicesData.map(s => (
-                                                    <li key={s.id}>
-                                                        <Link to={`/service/${s.slug}`}>
-                                                            <img src="/assets/images/service-inner/category-icon.png" alt="" />
-                                                            {s.title}
-                                                            <i className="bi bi-arrow-right"></i>
-                                                        </Link>
-                                                    </li>
-                                                ))}
-                                            </ul>
-                                        </div>
-                                    </div>
-                                    <div className="widget-sidber">
-                                        <div className="widget-sidber-content">
-                                            <h4>Downloads</h4>
-                                        </div>
-                                        <div className="widget-sidber-download-button">
-                                            {/* <a href="#"><i className="bi bi-file-earmark-pdf"></i>Service Report<span><i className="bi bi-download"></i></span></a> */}
-                                            <button
-                                                className="btn btn-primary w-100 active"
-                                                id="download-pdf-btn"
-                                                type="button"
-                                                onClick={handleDownloadPDF}
-                                                style={{ display: service.contentFile ? 'block' : 'none' }}
-                                            >
-                                                <i className="bi bi-file-earmark-pdf" style={{ color: "#fff" }}></i> Download PDF <i className="bi bi-download" style={{ color: "#fff", paddingLeft: "5px" }}></i>
-                                            </button>
-                                        </div>
-                                    </div>
-                                    <div className="widget-sidber-contact-box">
-                                        <div className="widget-sidber-contact">
-                                            <img src="/assets/images/inner-images/sidber-cont-icon.png" alt="" />
-                                        </div>
-                                        <p className="widget-sidber-contact-text">Call Us Anytime</p>
-                                        <h3 className="widget-sidber-contact-number">+880 2 55668200 (6212)</h3>
-                                        <span className="widget-sidber-contact-gmail"><i className="bi bi-envelope-fill"></i> contact@big-matrix.com</span>
-                                        <div className="widget-sidber-contact-btn">
-                                            <Link to="/contact">Contact Us <i className="bi bi-arrow-right"></i></Link>
-                                        </div>
-                                    </div>
-                                </div>
+                        </article>
+
+                        <aside className="bm-doc__aside">
+                            <nav className="bm-doc__index" aria-label="All solutions">
+                                <p className="bm-doc__index-label">All solutions</p>
+                                <ul ref={listRef}>
+                                    {servicesData.map((item) => {
+                                        const current = item.slug === service.slug;
+                                        return (
+                                            <li key={item.slug} ref={current ? currentRef : undefined}>
+                                                <Link
+                                                    to={`/service/${item.slug}`}
+                                                    className={current ? 'is-current' : undefined}
+                                                    aria-current={current ? 'page' : undefined}
+                                                >
+                                                    <em>{pad(item.id)}</em>
+                                                    <span>{item.title}</span>
+                                                </Link>
+                                            </li>
+                                        );
+                                    })}
+                                </ul>
+                            </nav>
+
+                            <div className="bm-doc__contact">
+                                <p className="bm-doc__contact-label">Talk to an engineer</p>
+                                <p className="bm-doc__contact-copy">
+                                    Scoping something in this area? Tell us the constraints and we
+                                    will map it to an architecture.
+                                </p>
+                                <a className="bm-doc__contact-line" href={PHONE_HREF}>
+                                    <i className="bi bi-telephone-fill" aria-hidden="true"></i>
+                                    <span>{PHONE_LABEL}</span>
+                                </a>
+                                <a className="bm-doc__contact-line" href={`mailto:${EMAIL}`}>
+                                    <i className="bi bi-envelope-fill" aria-hidden="true"></i>
+                                    <span>{EMAIL}</span>
+                                </a>
+                                <Link to="/contact" className="bm-doc__contact-cta">
+                                    Start a conversation
+                                    <i className="bi bi-arrow-right" aria-hidden="true"></i>
+                                </Link>
                             </div>
-                        </div>
+                        </aside>
                     </div>
                 </div>
-            </div>
+            </section>
 
+            <CtaBand />
         </>
     );
 };

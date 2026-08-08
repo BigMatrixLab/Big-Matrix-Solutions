@@ -42,7 +42,6 @@ const Contact = () => {
             <Breadcrumb
                 pageTitle="Talk to the engineering team"
                 breadcrumbItem="Contact"
-                description="Tell us what you are building. We usually reply within one business day."
             />
 
             <div className="contact-area style-three inner">

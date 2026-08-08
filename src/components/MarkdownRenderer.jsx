@@ -3,7 +3,11 @@ import { marked } from 'marked';
 import hljs from 'highlight.js';
 import DOMPurify from 'dompurify';
 
-const MarkdownRenderer = ({ contentFile, className = '' }) => {
+/**
+ * `transform` runs on the sanitised HTML before it is inserted, letting a page
+ * restructure the rendered markdown into its own components.
+ */
+const MarkdownRenderer = ({ contentFile, className = '', transform }) => {
     const [content, setContent] = useState('');
     const [loading, setLoading] = useState(true);
     const [error, setError] = useState(null);
@@ -104,7 +108,7 @@ const MarkdownRenderer = ({ contentFile, className = '' }) => {
                     ADD_ATTR: ['allow', 'allowfullscreen', 'frameborder', 'scrolling'],
                 });
 
-                setContent(cleanHtml);
+                setContent(transform ? transform(cleanHtml) : cleanHtml);
             } catch (err) {
                 console.error('Error loading markdown:', err);
                 setError(err.message);
@@ -116,7 +120,7 @@ const MarkdownRenderer = ({ contentFile, className = '' }) => {
         if (contentFile) {
             fetchAndParseMarkdown();
         }
-    }, [contentFile]);
+    }, [contentFile, transform]);
 
     if (loading) {
         return (

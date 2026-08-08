@@ -13,7 +13,6 @@ const Project = () => {
             <Breadcrumb
                 pageTitle="Systems we have shipped"
                 breadcrumbItem="Work"
-                description="Diagnostic tooling, hospital platforms and research software running in real clinical and industrial settings."
             />
 
             {/* Project Area */}

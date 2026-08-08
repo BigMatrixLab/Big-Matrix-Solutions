@@ -15,7 +15,6 @@
 .faq-area,
 .contact-area,
 .contact-info-area,
-.services-details-area,
 .blog-details-area,
 .project-details-area,
 .careers-area {
@@ -40,7 +39,6 @@
 .feature-area,
 .blog-grid-area,
 .careers-area,
-.services-details-area,
 .blog-details-area,
 .project-details-area,
 .contact-info-area {
@@ -291,7 +289,7 @@
   position: absolute;
   inset: 0;
   background-image: var(--bm-grid);
-  background-size: 32px 32px;
+  background-size: var(--bm-grid-size);
   opacity: 0.7;
 }
 
@@ -630,14 +628,737 @@
 .google-map iframe { display: block; filter: grayscale(28%) contrast(1.02); }
 
 /* --------------------------------------------------------------------------
+   16a. Solution detail page — prose column beside a sticky rail
+   -------------------------------------------------------------------------- */
+
+.bm-doc__layout {
+  display: grid;
+  grid-template-columns: minmax(0, 1fr) minmax(260px, 320px);
+  align-items: start;
+  gap: clamp(32px, 4vw, 72px);
+}
+
+.bm-doc__main { min-width: 0; }
+
+.bm-doc__hero {
+  margin: 0 0 clamp(28px, 3vw, 44px);
+  overflow: hidden;
+  aspect-ratio: 16 / 9;
+  background: var(--bm-surface-2);
+  border: 1px solid var(--bm-line);
+  border-radius: var(--bm-r-lg);
+}
+
+.bm-doc__hero img {
+  display: block;
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+}
+
+/* Sticky rail. The index is the only part that scrolls, so the contact card
+   below it stays visible no matter how short the viewport is. */
+.bm-doc__aside {
+  position: sticky;
+  top: calc(var(--bm-header-h) + var(--bm-5));
+  display: flex;
+  flex-direction: column;
+  gap: var(--bm-5);
+  max-height: calc(100vh - var(--bm-header-h) - var(--bm-6));
+  max-height: calc(100dvh - var(--bm-header-h) - var(--bm-6));
+}
+
+.bm-doc__index {
+  display: flex;
+  flex-direction: column;
+  min-height: 0;
+}
+
+.bm-doc__contact { flex: 0 0 auto; }
+
+.bm-doc__index-label,
+.bm-doc__contact-label {
+  margin: 0 0 var(--bm-3);
+  font-family: var(--bm-font-mono) !important;
+  font-size: var(--bm-fs-label);
+  line-height: 1;
+  letter-spacing: var(--bm-track-label);
+  text-transform: uppercase;
+  color: var(--bm-text-3);
+}
+
+.bm-doc__index ul {
+  position: relative;
+  min-height: 96px;
+  margin: 0;
+  padding: 0;
+  overflow-y: auto;
+  overscroll-behavior: contain;
+  scrollbar-width: thin;
+  scrollbar-color: var(--bm-line-strong) transparent;
+  list-style: none;
+  border-top: 1px solid var(--bm-line);
+}
+
+.bm-doc__index li { border-bottom: 1px solid var(--bm-line); }
+
+.bm-doc__index a {
+  display: flex;
+  align-items: baseline;
+  gap: var(--bm-3);
+  padding: 11px var(--bm-3) 11px var(--bm-2);
+  font-size: var(--bm-fs-sm);
+  line-height: 1.4;
+  color: var(--bm-text-2);
+  border-left: 2px solid transparent;
+  transition: color var(--bm-dur) var(--bm-ease-inout),
+              background var(--bm-dur) var(--bm-ease-inout),
+              border-color var(--bm-dur) var(--bm-ease-inout);
+}
+
+.bm-doc__index a em {
+  flex: 0 0 auto;
+  font-family: var(--bm-font-mono) !important;
+  font-size: 10px;
+  font-style: normal;
+  letter-spacing: var(--bm-track-label);
+  color: var(--bm-text-3);
+}
+
+.bm-doc__index a:hover {
+  color: var(--bm-orange-ink);
+  background: var(--bm-orange-tint);
+}
+
+.bm-doc__index a.is-current {
+  font-weight: 600;
+  color: var(--bm-text);
+  background: var(--bm-surface);
+  border-left-color: var(--bm-orange);
+}
+
+.bm-doc__index a.is-current em { color: var(--bm-orange-ink); }
+
+/* Contact card — the one dark element on the page, so it reads as the action.
+   Left plain: the texture competed with the copy at this size. */
+.bm-doc__contact {
+  position: relative;
+  padding: var(--bm-5);
+  overflow: hidden;
+  background: var(--bm-ink-bg);
+  border-radius: var(--bm-r-lg);
+}
+
+.bm-doc__contact .bm-doc__contact-label { color: var(--bm-orange); }
+
+.bm-doc__contact-copy {
+  margin: 0 0 var(--bm-5);
+  font-size: var(--bm-fs-sm);
+  line-height: 1.6;
+  color: var(--bm-text-inv-2);
+  text-align: left;
+}
+
+.bm-doc__contact-line {
+  display: flex;
+  align-items: center;
+  gap: 10px;
+  padding: 10px 0;
+  font-size: var(--bm-fs-sm);
+  color: #fff;
+  border-top: 1px solid var(--bm-line-ink);
+  transition: color var(--bm-dur) var(--bm-ease-inout);
+}
+
+.bm-doc__contact-line i { font-size: 12px; color: var(--bm-orange); }
+.bm-doc__contact-line:hover { color: var(--bm-orange); }
+
+.bm-doc__contact-cta {
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+  gap: 8px;
+  width: 100%;
+  min-height: 44px;
+  margin-top: var(--bm-4);
+  padding: 11px 18px;
+  font-size: var(--bm-fs-sm);
+  font-weight: 600;
+  color: #fff;
+  background: var(--bm-orange-fill);
+  border-radius: var(--bm-r-sm);
+  transition: background var(--bm-dur) var(--bm-ease-inout);
+}
+
+.bm-doc__contact-cta:hover { color: #fff; background: var(--bm-orange-hover); }
+.bm-doc__contact-cta i { transition: transform var(--bm-dur) var(--bm-ease); }
+.bm-doc__contact-cta:hover i { transform: translateX(3px); }
+
+.bm-doc__missing {
+  margin: 0 0 var(--bm-5);
+  font-size: var(--bm-fs-lead);
+  color: var(--bm-text-2);
+}
+
+@media (max-width: 991px) {
+  .bm-doc__layout { grid-template-columns: minmax(0, 1fr); }
+  .bm-doc__aside {
+    position: static;
+    max-height: none;
+  }
+  .bm-doc__index ul { max-height: none; overflow: visible; }
+}
+
+/* --------------------------------------------------------------------------
+   16b. Solution prose — the markdown is authored content, so it is typeset
+   like a specification document rather than rendered defaults: chaptered
+   headings, hairline-ruled spec lists, real data tables.
+   -------------------------------------------------------------------------- */
+
+.bm-doc__body {
+  /* Every block fills the column so all right edges line up: chapter rules,
+     list hairlines, tables and cards. A `ch` measure cannot be used here — it
+     resolves against each element's own font-size, so smaller blocks such as
+     tables and notes would end short of the rules above them. */
+  --doc-measure: 100%;
+  --doc-anchor: calc(var(--bm-header-h) + var(--bm-5));
+}
+
+.bm-doc__body .markdown-content {
+  font-size: 1.0625rem;
+  line-height: 1.75;
+  color: var(--bm-text-2);
+}
+
+/* The files open with their own H1 and repeat the hero image beneath it. */
+.bm-doc__body .markdown-content > h1:first-child { display: none; }
+
+.bm-doc__body .markdown-content > p:first-child:has(> img:only-child),
+.bm-doc__body .markdown-content > h1:first-child + p:has(> img:only-child) {
+  display: none;
+}
+
+/* Chapter head: full-width rule with an accent tick riding on it. */
+.bm-doc__body .markdown-content h2 {
+  position: relative;
+  max-width: var(--doc-measure);
+  margin: clamp(48px, 5vw, 76px) 0 var(--bm-4) !important;
+  padding: var(--bm-5) 0 0 !important;
+  font-family: var(--bm-font-display) !important;
+  font-size: var(--bm-fs-h2) !important;
+  font-weight: 600 !important;
+  line-height: 1.14;
+  letter-spacing: var(--bm-track-heading);
+  border-top: 1px solid var(--bm-line);
+  border-bottom: 0;
+  scroll-margin-top: var(--doc-anchor);
+}
+
+.bm-doc__body .markdown-content h2::before {
+  content: '';
+  position: absolute;
+  top: -1px;
+  left: 0;
+  width: 36px;
+  height: 2px;
+  background: var(--bm-orange);
+}
+
+.bm-doc__body .markdown-content > h2:first-of-type { margin-top: 0 !important; }
+
+/* The sentence under a chapter head reads as its standfirst. */
+.bm-doc__body .markdown-content h2 + p {
+  max-width: var(--doc-measure);
+  font-size: var(--bm-fs-lead);
+  line-height: 1.62;
+  color: var(--bm-text);
+}
+
+.bm-doc__body .markdown-content h3 {
+  position: relative;
+  max-width: var(--doc-measure);
+  margin: var(--bm-6) 0 var(--bm-3) !important;
+  padding-left: 20px !important;
+  font-family: var(--bm-font-display) !important;
+  font-size: 1.1875rem !important;
+  font-weight: 600 !important;
+  line-height: 1.32;
+  letter-spacing: var(--bm-track-heading);
+  scroll-margin-top: var(--doc-anchor);
+}
+
+.bm-doc__body .markdown-content h3::before {
+  content: '';
+  position: absolute;
+  top: 0.6em;
+  left: 0;
+  width: 7px;
+  height: 7px;
+  background: var(--bm-orange);
+}
+
+.bm-doc__body .markdown-content h3 strong { font-weight: 600; }
+
+.bm-doc__body .markdown-content h4 {
+  max-width: var(--doc-measure);
+  margin: var(--bm-5) 0 var(--bm-3) !important;
+  font-family: var(--bm-font-display) !important;
+  font-size: 1.0625rem !important;
+  font-weight: 600 !important;
+  scroll-margin-top: var(--doc-anchor);
+}
+
+.bm-doc__body .markdown-content p {
+  max-width: var(--doc-measure);
+  margin: 0 0 var(--bm-4);
+}
+
+.bm-doc__body .markdown-content strong {
+  font-weight: 600;
+  color: var(--bm-text);
+}
+
+/* Spec list: hairline rows with an accent dash, not bullets. Scoped to plain
+   lists — the enriched blocks carry a class and style themselves, and these
+   rules would otherwise outrank them on the last item. */
+.bm-doc__body .markdown-content ul:not([class]) {
+  max-width: var(--doc-measure);
+  margin: 0 0 var(--bm-5);
+  padding-left: 0;
+  list-style: none;
+}
+
+.bm-doc__body .markdown-content ul:not([class]) > li {
+  position: relative;
+  margin: 0;
+  padding: 8px 0 8px 24px;
+  border-bottom: 1px solid var(--bm-line-soft);
+}
+
+.bm-doc__body .markdown-content ul:not([class]) > li:last-child { border-bottom: 0; }
+
+.bm-doc__body .markdown-content ul:not([class]) > li::before {
+  content: '';
+  position: absolute;
+  top: 1.05em;
+  left: 2px;
+  width: 9px;
+  height: 1px;
+  background: var(--bm-orange);
+}
+
+.bm-doc__body .markdown-content ul:not([class]) ul {
+  margin: var(--bm-2) 0 0;
+  border-top: 1px solid var(--bm-line-soft);
+}
+
+.bm-doc__body .markdown-content ol {
+  max-width: var(--doc-measure);
+  margin: 0 0 var(--bm-5);
+  padding-left: 24px;
+}
+
+.bm-doc__body .markdown-content ol > li { padding: 6px 0; }
+
+.bm-doc__body .markdown-content ol > li::marker {
+  font-family: var(--bm-font-mono);
+  font-size: 0.85em;
+  color: var(--bm-orange-ink);
+}
+
+.bm-doc__body .markdown-content blockquote {
+  max-width: var(--doc-measure);
+  margin: var(--bm-6) 0;
+  padding: 0 0 0 var(--bm-5);
+  font-family: var(--bm-font-display) !important;
+  font-size: var(--bm-fs-lead);
+  line-height: 1.55;
+  color: var(--bm-text);
+  background: none;
+  border-left: 2px solid var(--bm-orange);
+  border-radius: 0;
+}
+
+/* Data table, not a markdown grid. */
+.bm-doc__body .markdown-content table {
+  width: 100%;
+  max-width: var(--doc-measure);
+  margin: var(--bm-5) 0 var(--bm-6);
+  overflow: hidden;
+  font-size: var(--bm-fs-sm);
+  border-collapse: separate;
+  border-spacing: 0;
+  border: 1px solid var(--bm-line);
+  border-radius: var(--bm-r);
+}
+
+.bm-doc__body .markdown-content th {
+  padding: 12px 16px;
+  font-family: var(--bm-font-mono) !important;
+  font-size: 10px;
+  font-weight: 500;
+  letter-spacing: var(--bm-track-label);
+  text-transform: uppercase;
+  color: var(--bm-text-3);
+  background: var(--bm-surface-2);
+  border: 0;
+  border-bottom: 1px solid var(--bm-line);
+}
+
+.bm-doc__body .markdown-content td {
+  padding: 13px 16px;
+  color: var(--bm-text-2);
+  border: 0;
+  border-bottom: 1px solid var(--bm-line-soft);
+  transition: background var(--bm-dur) var(--bm-ease-inout);
+}
+
+.bm-doc__body .markdown-content td:first-child {
+  font-weight: 500;
+  color: var(--bm-text);
+}
+
+.bm-doc__body .markdown-content tbody tr:last-child td { border-bottom: 0; }
+.bm-doc__body .markdown-content tbody tr:hover td { background: var(--bm-orange-tint); }
+
+.bm-doc__body .markdown-content img {
+  display: block;
+  width: 100%;
+  margin: var(--bm-5) 0;
+  border: 1px solid var(--bm-line);
+  border-radius: var(--bm-r);
+}
+
+/* Numbered sub-heading: the "1." from the source becomes a real index. */
+.bm-doc__body .markdown-content h3.is-numbered,
+.bm-doc__body .markdown-content h4.is-numbered {
+  display: flex;
+  align-items: baseline;
+  gap: var(--bm-3);
+  padding-left: 0 !important;
+}
+
+.bm-doc__body .markdown-content h3.is-numbered::before,
+.bm-doc__body .markdown-content h4.is-numbered::before { display: none; }
+
+.bm-doc__body .markdown-content .bm-md-num {
+  flex: 0 0 auto;
+  font-family: var(--bm-font-mono) !important;
+  font-size: 0.7em;
+  font-weight: 500;
+  letter-spacing: var(--bm-track-label);
+  color: var(--bm-orange-ink);
+}
+
+/* Definition grid — replaces labelled bullet lists. Two columns of blocks,
+   each with an accent tick, so feature detail no longer reads as one column. */
+.bm-doc__body .markdown-content .bm-md-defs {
+  display: grid;
+  grid-template-columns: repeat(2, minmax(0, 1fr));
+  gap: 0;
+  max-width: none;
+  margin: var(--bm-5) 0 var(--bm-6);
+  padding: 0;
+  background: var(--bm-bg);
+  border: 1px solid var(--bm-line);
+  border-radius: var(--bm-r);
+  overflow: hidden;
+}
+
+/* Hairlines belong to the cells, not to a gap over a tinted background, so an
+   unfilled cell leaves no grey block behind. */
+.bm-doc__body .markdown-content .bm-md-defs > div {
+  padding: var(--bm-4) var(--bm-5);
+  background: var(--bm-bg);
+  border-top: 1px solid var(--bm-line);
+  border-left: 1px solid var(--bm-line);
+  transition: background var(--bm-dur) var(--bm-ease-inout);
+}
+
+.bm-doc__body .markdown-content .bm-md-defs > div:nth-child(-n + 2) { border-top: 0; }
+.bm-doc__body .markdown-content .bm-md-defs > div:nth-child(2n + 1) { border-left: 0; }
+
+/* Odd number of entries: the last one takes the full row. */
+.bm-doc__body .markdown-content .bm-md-defs > div:last-child:nth-child(2n + 1) {
+  grid-column: 1 / -1;
+}
+
+.bm-doc__body .markdown-content .bm-md-defs > div:hover { background: var(--bm-surface); }
+
+.bm-doc__body .markdown-content .bm-md-defs dt {
+  position: relative;
+  margin: 0 0 6px;
+  padding-left: 16px;
+  font-family: var(--bm-font-display) !important;
+  font-size: var(--bm-fs-sm);
+  font-weight: 600;
+  line-height: 1.35;
+  letter-spacing: var(--bm-track-heading);
+  color: var(--bm-text);
+}
+
+.bm-doc__body .markdown-content .bm-md-defs dt::before {
+  content: '';
+  position: absolute;
+  top: 0.5em;
+  left: 0;
+  width: 6px;
+  height: 6px;
+  background: var(--bm-orange);
+}
+
+.bm-doc__body .markdown-content .bm-md-defs dd {
+  margin: 0 0 0 16px;
+  font-size: var(--bm-fs-xs);
+  line-height: 1.6;
+  color: var(--bm-text-3);
+}
+
+/* Spec rows — replaces "**Label**: value" paragraph blocks. Reads as a
+   datasheet: mono key on the left, value on the right. */
+.bm-doc__body .markdown-content .bm-md-specs {
+  max-width: var(--doc-measure);
+  margin: var(--bm-5) 0 var(--bm-6);
+  padding: 0;
+  border-top: 1px solid var(--bm-line);
+}
+
+.bm-doc__body .markdown-content .bm-md-specs > div {
+  display: grid;
+  grid-template-columns: minmax(120px, 168px) minmax(0, 1fr);
+  gap: var(--bm-4);
+  padding: var(--bm-3) 0;
+  border-bottom: 1px solid var(--bm-line-soft);
+}
+
+.bm-doc__body .markdown-content .bm-md-specs dt {
+  margin: 0;
+  padding-top: 2px;
+  font-family: var(--bm-font-mono) !important;
+  font-size: 10px;
+  line-height: 1.5;
+  letter-spacing: var(--bm-track-label);
+  text-transform: uppercase;
+  color: var(--bm-orange-ink);
+}
+
+.bm-doc__body .markdown-content .bm-md-specs dd {
+  margin: 0;
+  font-size: var(--bm-fs-sm);
+  line-height: 1.6;
+  color: var(--bm-text-2);
+}
+
+/* Check chips — replaces the emoji tick lines. */
+.bm-doc__body .markdown-content .bm-md-checks {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(260px, 1fr));
+  gap: var(--bm-3);
+  max-width: none;
+  margin: var(--bm-5) 0 var(--bm-6);
+  padding: 0;
+  list-style: none;
+}
+
+.bm-doc__body .markdown-content .bm-md-checks > li {
+  display: flex;
+  align-items: flex-start;
+  gap: var(--bm-3);
+  margin: 0;
+  padding: var(--bm-4);
+  font-size: var(--bm-fs-sm);
+  line-height: 1.55;
+  color: var(--bm-text-2);
+  background: var(--bm-surface);
+  border: 1px solid var(--bm-line);
+  border-radius: var(--bm-r-sm);
+}
+
+.bm-doc__body .markdown-content .bm-md-checks > li > i {
+  flex: 0 0 auto;
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+  width: 20px;
+  height: 20px;
+  margin-top: 1px;
+  font-size: 12px;
+  color: #fff;
+  background: var(--bm-orange-fill);
+  border-radius: var(--bm-r-xs);
+}
+
+/* Metric tiles — replaces two-column figure tables. */
+.bm-doc__body .markdown-content .bm-md-metrics {
+  display: grid;
+  grid-template-columns: repeat(3, minmax(0, 1fr));
+  gap: 0;
+  max-width: none;
+  margin: var(--bm-5) 0 var(--bm-6);
+  background: var(--bm-bg);
+  border: 1px solid var(--bm-line);
+  border-radius: var(--bm-r);
+  overflow: hidden;
+}
+
+.bm-doc__body .markdown-content .bm-md-metric {
+  padding: var(--bm-5) var(--bm-4);
+  background: var(--bm-bg);
+  border-top: 1px solid var(--bm-line);
+  border-left: 1px solid var(--bm-line);
+}
+
+.bm-doc__body .markdown-content .bm-md-metric:nth-child(-n + 3) { border-top: 0; }
+.bm-doc__body .markdown-content .bm-md-metric:nth-child(3n + 1) { border-left: 0; }
+
+/* A short final row stretches to close the frame. */
+.bm-doc__body .markdown-content .bm-md-metric:last-child:nth-child(3n + 1) {
+  grid-column: span 3;
+}
+
+.bm-doc__body .markdown-content .bm-md-metric:last-child:nth-child(3n + 2) {
+  grid-column: span 2;
+}
+
+.bm-doc__body .markdown-content .bm-md-metric strong {
+  display: block;
+  font-family: var(--bm-font-display) !important;
+  font-size: clamp(1.75rem, 1.4rem + 1vw, 2.25rem);
+  font-weight: 600;
+  line-height: 1;
+  letter-spacing: -0.035em;
+  color: var(--bm-text);
+}
+
+.bm-doc__body .markdown-content .bm-md-metric em {
+  display: block;
+  margin-top: 6px;
+  font-size: var(--bm-fs-xs);
+  font-style: normal;
+  color: var(--bm-orange-ink);
+}
+
+.bm-doc__body .markdown-content .bm-md-metric span {
+  display: block;
+  margin-top: var(--bm-3);
+  padding-top: var(--bm-3);
+  font-family: var(--bm-font-mono) !important;
+  font-size: 10px;
+  line-height: 1.4;
+  letter-spacing: 0.08em;
+  text-transform: uppercase;
+  color: var(--bm-text-3);
+  border-top: 1px solid var(--bm-line);
+}
+
+/* Caption above a list — a bold-only line in the source. */
+.bm-doc__body .markdown-content p.bm-md-kicker {
+  margin: var(--bm-5) 0 var(--bm-2);
+  font-family: var(--bm-font-mono) !important;
+  font-size: 11px;
+  letter-spacing: var(--bm-track-label);
+  text-transform: uppercase;
+  color: var(--bm-text-3);
+}
+
+.bm-doc__body .markdown-content p.bm-md-kicker strong {
+  font-weight: 500;
+  color: inherit;
+}
+
+/* Labelled aside — "**Technologies**: ..." and friends. */
+.bm-doc__body .markdown-content p.bm-md-note {
+  max-width: var(--doc-measure);
+  margin: var(--bm-4) 0 var(--bm-5);
+  padding: var(--bm-3) var(--bm-4);
+  font-size: var(--bm-fs-sm);
+  line-height: 1.6;
+  color: var(--bm-text-2);
+  background: var(--bm-surface);
+  border-left: 2px solid var(--bm-orange-tint-2);
+  border-radius: 0 var(--bm-r-sm) var(--bm-r-sm) 0;
+}
+
+.bm-doc__body .markdown-content p.bm-md-note strong {
+  display: block;
+  margin-bottom: 3px;
+  font-family: var(--bm-font-mono) !important;
+  font-size: 10px;
+  font-weight: 500;
+  letter-spacing: var(--bm-track-label);
+  text-transform: uppercase;
+  color: var(--bm-orange-ink);
+}
+
+/* Chapter rules already separate the sections. */
+.bm-doc__body .markdown-content hr { display: none; }
+
+.bm-doc__body .markdown-content > *:last-child { margin-bottom: 0 !important; }
+
+@media (max-width: 767px) {
+  .bm-doc__body .markdown-content .bm-md-defs { grid-template-columns: minmax(0, 1fr); }
+
+  .bm-doc__body .markdown-content .bm-md-defs > div {
+    border-top: 1px solid var(--bm-line);
+    border-left: 0;
+  }
+
+  .bm-doc__body .markdown-content .bm-md-defs > div:first-child { border-top: 0; }
+
+  .bm-doc__body .markdown-content .bm-md-specs > div {
+    grid-template-columns: minmax(0, 1fr);
+    gap: 4px;
+  }
+
+  /* Two columns: recompute the edges and drop the three-column spans, which
+     would otherwise add a phantom track. */
+  .bm-doc__body .markdown-content .bm-md-metrics {
+    grid-template-columns: repeat(2, minmax(0, 1fr));
+  }
+
+  .bm-doc__body .markdown-content .bm-md-metric {
+    border-top: 1px solid var(--bm-line);
+    border-left: 1px solid var(--bm-line);
+  }
+
+  .bm-doc__body .markdown-content .bm-md-metric:nth-child(-n + 2) { border-top: 0; }
+  .bm-doc__body .markdown-content .bm-md-metric:nth-child(2n + 1) { border-left: 0; }
+  .bm-doc__body .markdown-content .bm-md-metric:last-child { grid-column: auto; }
+
+  .bm-doc__body .markdown-content .bm-md-metric:last-child:nth-child(2n + 1) {
+    grid-column: span 2;
+  }
+}
+
+@media (max-width: 575px) {
+  .bm-doc__body .markdown-content { font-size: var(--bm-fs-body); }
+
+  /* Wide comparison tables scroll rather than blow out the column. */
+  .bm-doc__body .markdown-content table {
+    display: block;
+    overflow-x: auto;
+    white-space: nowrap;
+  }
+
+  .bm-doc__body .markdown-content .bm-md-metrics { grid-template-columns: minmax(0, 1fr); }
+
+  .bm-doc__body .markdown-content .bm-md-metric { border-left: 0; }
+  .bm-doc__body .markdown-content .bm-md-metric:first-child { border-top: 0; }
+  .bm-doc__body .markdown-content .bm-md-metric:nth-child(2) { border-top: 1px solid var(--bm-line); }
+
+  .bm-doc__body .markdown-content .bm-md-metric:last-child,
+  .bm-doc__body .markdown-content .bm-md-metric:last-child:nth-child(2n + 1) {
+    grid-column: auto;
+  }
+}
+
+/* --------------------------------------------------------------------------
    16. Detail pages (service / blog / project)
    -------------------------------------------------------------------------- */
 
-.services-details-area,
 .blog-details-area,
 .project-details-area { background: var(--bm-bg) !important; }
 
-.services-details-thumb,
 .blog-details-thumb {
   overflow: hidden;
   margin-bottom: var(--bm-6) !important;
@@ -646,12 +1367,10 @@
   background: var(--bm-surface-2);
 }
 
-.services-details-thumb img,
 .blog-details-thumb img { display: block; width: 100%; height: auto; }
 
 .blog-details-box { padding: 0 !important; background: none !important; border: 0 !important; box-shadow: none !important; }
 
-.services-details-title,
 .blog-details-title {
   font-size: var(--bm-fs-h2) !important;
   font-weight: 600 !important;
@@ -660,7 +1379,6 @@
   margin: var(--bm-6) 0 var(--bm-4) !important;
 }
 
-.services-details-desc,
 .blog-details-desc {
   font-size: var(--bm-fs-body) !important;
   line-height: 1.72 !important;
@@ -703,13 +1421,11 @@
 }
 
 /* Sidebar widgets */
-.widget-box,
-.widget-sidber {
+.widget-box {
   margin-bottom: var(--bm-4) !important;
 }
 
-.widget-title,
-.widget-sidber-content h4 {
+.widget-title {
   font-family: var(--bm-font-mono) !important;
   font-size: var(--bm-fs-label) !important;
   font-weight: 500 !important;
@@ -722,30 +1438,24 @@
 }
 
 .widget-title::before,
-.widget-title::after,
-.widget-sidber-content h4::before,
-.widget-sidber-content h4::after { display: none !important; }
+.widget-title::after { display: none !important; }
 
-.widget-categories,
-.widget-category ul {
+.widget-categories {
   margin: 0;
   padding: 0;
   list-style: none;
 }
 
-.widget-categories li,
-.widget-category ul li {
+.widget-categories li {
   margin: 0 !important;
   padding: 0 !important;
   background: none !important;
   border-bottom: 1px solid var(--bm-line-soft);
 }
 
-.widget-categories li:last-child,
-.widget-category ul li:last-child { border-bottom: 0; }
+.widget-categories li:last-child { border-bottom: 0; }
 
-.widget-categories li a,
-.widget-category ul li a {
+.widget-categories li a {
   display: flex;
   align-items: center;
   gap: 8px;
@@ -756,16 +1466,12 @@
   border: 0 !important;
 }
 
-.widget-categories li a:hover,
-.widget-category ul li a:hover {
+.widget-categories li a:hover {
   color: var(--bm-orange-ink) !important;
   padding-left: 4px !important;
 }
 
-.widget-category ul li a img { width: 16px; height: 16px; opacity: 0.5; }
-
-.widget-categories li a span,
-.widget-category ul li a i {
+.widget-categories li a span {
   margin-left: auto;
   font-size: 11px;
   color: var(--bm-text-3) !important;
@@ -830,24 +1536,6 @@
   color: var(--bm-text-3);
 }
 
-.widget-sidber-download-button button,
-.widget-sidber-download-button .btn {
-  display: inline-flex !important;
-  align-items: center;
-  justify-content: center;
-  gap: 8px;
-  width: 100%;
-  min-height: 46px;
-  font-size: var(--bm-fs-sm) !important;
-  font-weight: 600 !important;
-  color: #fff !important;
-  background: var(--bm-text) !important;
-  border: 0 !important;
-  border-radius: var(--bm-r-sm) !important;
-}
-
-.widget-sidber-download-button button:hover { background: var(--bm-orange-fill) !important; }
-
 .widget-sidber-contact-box {
   padding: var(--bm-6) var(--bm-5) !important;
   text-align: center;
@@ -896,7 +1584,6 @@
    -------------------------------------------------------------------------- */
 
 .markdown-content,
-.services-details-content,
 .blog-details-content {
   font-size: var(--bm-fs-body);
   line-height: 1.72;

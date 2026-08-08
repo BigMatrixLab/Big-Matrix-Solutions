@@ -1,43 +1,121 @@
-import React from 'react';
+import { Link } from 'react-router-dom';
 import { servicesData } from '../data/content';
 import Breadcrumb from '../components/Breadcrumb';
-import ServiceCard from '../components/ServiceCard';
+import SectionHead from '../components/SectionHead';
 import CtaBand from '../components/CtaBand';
 
+/**
+ * Solutions are grouped by domain so the page reads as a catalogue: pick the
+ * problem area first, the practice area second. Slugs are listed explicitly to
+ * keep the reading order stable regardless of file or id order.
+ */
+const GROUPS = [
+    {
+        label: 'Healthcare & life sciences',
+        note: 'Clinical, diagnostic and pharmaceutical systems — from a single lab to national infrastructure.',
+        slugs: [
+            'intelligent-healthcare-pharma',
+            'digital-hospital-infrastructure',
+            'pharmaceutical-intelligence',
+            'national-health-public-policy',
+            'real-time-biosensor-integration',
+        ],
+    },
+    {
+        label: 'AI, data & platforms',
+        note: 'The intelligence layer: models, analytics pipelines and the products built on top of them.',
+        slugs: ['ai-machine-learning', 'big-data-analytics', 'enterprise-saas-platform'],
+    },
+    {
+        label: 'Infrastructure & operations',
+        note: 'What keeps the rest running: automation on the floor, scale in the cloud, compliance throughout.',
+        slugs: ['industrial-automation', 'cloud-devops-architecture', 'cybersecurity-compliance'],
+    },
+];
+
+const pad = (value) => String(value).padStart(2, '0');
+
+const buildGroups = (services) => {
+    const bySlug = new Map(services.map((service) => [service.slug, service]));
+    const grouped = GROUPS.map((group) => ({
+        ...group,
+        items: group.slugs.map((slug) => bySlug.get(slug)).filter(Boolean),
+    })).filter((group) => group.items.length > 0);
+
+    // Anything added to /content/services later still surfaces here.
+    const claimed = new Set(GROUPS.flatMap((group) => group.slugs));
+    const rest = services.filter((service) => !claimed.has(service.slug));
+
+    return rest.length > 0
+        ? [
+              ...grouped,
+              {
+                  label: 'Additional practice areas',
+                  note: 'Newer capabilities that sit alongside the core domains.',
+                  items: rest,
+              },
+          ]
+        : grouped;
+};
+
 const Services = () => {
-    // Reorder only the first 6 services to 5,6,4,3,2,1; keep the rest as-is.
-    const firstSix = servicesData.slice(0, 6);
-    const reorderedFirstSix = [4, 5, 3, 2, 1, 0]
-        .map((i) => firstSix[i])
-        .filter(Boolean);
-    const orderedServices = [...reorderedFirstSix, ...servicesData.slice(6)];
+    const groups = buildGroups(servicesData);
 
     return (
         <>
             <Breadcrumb
                 pageTitle="Solutions built for regulated, high-load environments"
                 breadcrumbItem="Solutions"
-                description="From AI diagnostics to industrial automation — each practice area ships with security, observability and compliance already handled."
             />
 
-            {/* Service Grid Area */}
-            <div className="blog-grid-area services-page-py-80">
-                <div className="container">
-                    <div className="row">
-                        <div className="col-lg-8">
-                            <div className="section-title left inner-style">
-                                <h2>What we provide</h2>
-                                <h1>Interactive IT and platform engineering services</h1>
+            <section className="bm-section">
+                <div className="bm-container">
+                    <SectionHead
+                        eyebrow="What we provide"
+                        title={`${servicesData.length} practice areas, one engineering standard`}
+                        lead="Start with the domain you are working in. Each entry opens the full scope: architecture, integrations and what delivery involves."
+                    />
+
+                    {groups.map((group) => (
+                        <section className="bm-catalogue" key={group.label}>
+                            <div className="bm-catalogue__label">
+                                <h3>{group.label}</h3>
+                                <p>{group.note}</p>
+                                <span className="bm-catalogue__count">
+                                    {pad(group.items.length)} solutions
+                                </span>
                             </div>
-                        </div>
-                    </div>
-                    <div className="bm-grid">
-                        {orderedServices.map((service, index) => (
-                            <ServiceCard service={service} index={index} key={service.id} />
-                        ))}
-                    </div>
+
+                            <div className="bm-rows">
+                                {group.items.map((service) => (
+                                    <div className="bm-row" key={service.slug}>
+                                        <span className="bm-row__index">{pad(service.id)}</span>
+                                        <span className="bm-row__icon">
+                                            <i
+                                                className={service.icon || 'bi bi-braces'}
+                                                aria-hidden="true"
+                                            ></i>
+                                        </span>
+                                        <div className="bm-row__body">
+                                            <h4 className="bm-row__title">{service.title}</h4>
+                                            <p className="bm-row__text">{service.desc}</p>
+                                        </div>
+                                        <span className="bm-row__go" aria-hidden="true">
+                                            <i className="bi bi-arrow-right"></i>
+                                        </span>
+                                        <Link
+                                            to={`/service/${service.slug}`}
+                                            className="bm-row__link"
+                                        >
+                                            <span>{service.title}</span>
+                                        </Link>
+                                    </div>
+                                ))}
+                            </div>
+                        </section>
+                    ))}
                 </div>
-            </div>
+            </section>
 
             <CtaBand
                 eyebrow="Get started"

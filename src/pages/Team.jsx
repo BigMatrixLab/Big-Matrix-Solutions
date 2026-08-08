@@ -11,7 +11,6 @@ const Team = () => {
             <Breadcrumb
                 pageTitle="The people behind the systems"
                 breadcrumbItem="Team"
-                description="Engineers, researchers and clinicians working across diagnostics, platform infrastructure and applied machine learning."
             />
 
             <section className="bm-section">

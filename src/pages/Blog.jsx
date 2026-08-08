@@ -9,7 +9,6 @@ const Blog = () => {
             <Breadcrumb
                 pageTitle="Insights from the engineering floor"
                 breadcrumbItem="Insights"
-                description="Research notes, architecture decisions and field observations from the people building the systems."
             />
 
             {/* Blog Grid Area */}

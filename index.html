@@ -46,10 +46,10 @@
       width: 100%;
       height: 100vh;
       background-color: #ffffff;
-      background-image:
-        linear-gradient(#f0f0ec 1px, transparent 1px),
-        linear-gradient(90deg, #f0f0ec 1px, transparent 1px);
-      background-size: 64px 64px;
+      /* Matches --bm-grid / --bm-grid-size. Inlined because this paints before
+         the stylesheets load. */
+      background-image: radial-gradient(#d6d6ce 1px, transparent 1.5px);
+      background-size: 22px 22px;
       display: flex;
       justify-content: center;
       align-items: center;
