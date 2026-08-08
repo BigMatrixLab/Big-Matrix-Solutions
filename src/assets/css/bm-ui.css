@@ -2428,7 +2428,12 @@ a.bm-card__title:hover,
 
 /* Sits directly on top of the footer with no bottom padding, so the closing
    panel and the footer read as a single dark block. */
-.bm-close { padding-block: clamp(40px, 2rem + 3vw, 72px) 0; }
+.bm-close {
+  padding-block: clamp(40px, 2rem + 3vw, 72px) 0;
+  /* Override the bm-section base padding-block shorthand — it sets both top
+     and bottom, so specifying padding-bottom explicitly is necessary. */
+  padding-bottom: 0 !important;
+}
 
 /* Grid fades out toward the footer so the two blocks join without a seam. */
 .bm-close::before {
@@ -2940,7 +2945,7 @@ a.bm-card__title:hover,
   text-align: left;
 }
 
-@media (max-width: 860px) {
+@media (max-width: 991px) {
   .bm-post-lead { grid-template-columns: minmax(0, 1fr); }
 
   .bm-post-lead__shot {
@@ -3136,15 +3141,11 @@ a.bm-card__title:hover,
   border-bottom: 1px solid var(--bm-line);
 }
 
-/* Portrait sits inset on a dot-matrix mat, the same treatment the product
-   shots get on the work pages. */
+/* Portrait fills the card edge to edge — no mat, no dot texture, no inset. */
 .bm-person__portrait {
   position: relative;
   margin: 0;
-  padding: var(--bm-3);
-  background-color: var(--bm-surface-2);
-  background-image: var(--bm-grid);
-  background-size: var(--bm-grid-size);
+  overflow: hidden;
   border: 1px solid var(--bm-line);
   border-radius: var(--bm-r-lg);
 }
@@ -3156,8 +3157,6 @@ a.bm-card__title:hover,
   object-fit: cover;
   object-position: top center;
   background: var(--bm-surface-3);
-  border: 1px solid var(--bm-line-strong);
-  border-radius: var(--bm-r-sm);
   filter: grayscale(14%);
 }
 
