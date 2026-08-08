@@ -110,7 +110,7 @@ const AboutOne = () => {
                 </div>
             </section>
 
-            <TestimonialArea />
+            <TestimonialArea transparent />
 
             <CtaBand
                 eyebrow="Work with us"

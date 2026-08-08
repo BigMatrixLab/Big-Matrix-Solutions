@@ -35,14 +35,16 @@
   display: none !important;
 }
 
-/* Alternating band surfaces keep long pages readable. */
+/* Band surfaces on the remaining template wrappers, matched to .bm-section:
+   transparent so the dot canvas runs through, or a sheer tint where the page
+   alternates bands. */
 .feature-area,
 .blog-grid-area,
 .careers-area,
 .blog-details-area,
 .project-details-area,
 .contact-info-area {
-  background-color: var(--bm-bg) !important;
+  background-color: transparent !important;
 }
 
 .project-area,
@@ -383,7 +385,7 @@
    13. Careers
    -------------------------------------------------------------------------- */
 
-.careers-area { background: var(--bm-bg) !important; }
+.careers-area { background: transparent !important; }
 
 /* --------------------------------------------------------------------------
    14. FAQ
@@ -517,7 +519,7 @@
 .massage-sent-button button:hover { background: var(--bm-orange-hover) !important; }
 
 /* Standalone contact info cards */
-.contact-info-area.style-two { background: var(--bm-bg) !important; }
+.contact-info-area.style-two { background: transparent !important; }
 
 .contact-info-area .contact-info-box {
   display: flex;
@@ -914,7 +916,7 @@
    -------------------------------------------------------------------------- */
 
 .blog-details-area,
-.project-details-area { background: var(--bm-bg) !important; }
+.project-details-area { background: transparent !important; }
 
 .blog-details-thumb {
   overflow: hidden;
@@ -1884,7 +1886,8 @@
   --bc-shadow: var(--bm-shadow);
   --bc-shadow-sm: var(--bm-shadow-sm);
 
-  background: var(--bm-bg) !important;
+  /* Transparent so the dot canvas runs behind the showcase pages too. */
+  background: transparent !important;
   color: var(--bm-text-2);
 }
 
@@ -1906,8 +1909,8 @@
 /* Showcase hero: ink canvas with a warm wash instead of the blue gradient. */
 .bc-showcase .bc-hero {
   background:
-    radial-gradient(1040px 560px at 82% -14%, rgba(255, 94, 31, 0.42), transparent 64%),
-    radial-gradient(680px 340px at 8% 112%, rgba(255, 94, 31, 0.18), transparent 70%),
+    radial-gradient(1040px 560px at 82% -14%, rgba(236, 54, 46, 0.42), transparent 64%),
+    radial-gradient(680px 340px at 8% 112%, rgba(236, 54, 46, 0.18), transparent 70%),
     var(--bm-ink-bg) !important;
   border-bottom: 1px solid var(--bm-line-ink);
 }

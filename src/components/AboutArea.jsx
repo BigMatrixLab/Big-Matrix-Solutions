@@ -33,7 +33,7 @@ const STATS = [
 
 const AboutArea = () => {
   return (
-    <section className="bm-section bm-lab">
+    <section className="bm-section bm-section--parallax bm-lab">
       <div className="bm-container">
         <SectionHead
           eyebrow="Our dedicated lab"

@@ -19,7 +19,7 @@ const ServiceArea = () => {
         .filter(Boolean);
 
     return (
-        <section className="bm-section bm-section--warm">
+        <section className="bm-section bm-section--opaque">
             <div className="bm-container">
                 <SectionHead
                     eyebrow="Our solutions"

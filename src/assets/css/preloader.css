@@ -10,9 +10,11 @@ body:not(.loaded) {
 }
 .bm-loader {
       --duration: 3s;
-      --primary: #1c1b16;
-      --primary-light: #302e25;
-      --primary-rgba: rgba(3, 3, 3, 0);
+      /* Cube blue, with a lighter face for the ground plane and a transparent
+         stop for the shine sweep. */
+      --primary: #0b4374;
+      --primary-light: #105a9b;
+      --primary-rgba: rgba(29, 117, 185, 0);
       width: 200px;
       height: 320px;
       position: relative;
@@ -268,8 +270,9 @@ body:not(.loaded) {
       animation-name: box-scale7;
     }
 
+    /* The one accent cube carries the brand red. */
     .bm-loader .box.box2 div {
-      background-color: #EE352E;
+      background-color: #ec362e;
     }
 
     @-webkit-keyframes box-move0 {

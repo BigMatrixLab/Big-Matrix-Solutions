@@ -1,6 +1,6 @@
-import React from 'react';
 import { Link } from 'react-router-dom';
 import { PARTNERS } from '../data/partners';
+import DotField from './DotField';
 
 const FACTS = [
     { value: '10+', label: 'Systems in production' },
@@ -11,6 +11,26 @@ const FACTS = [
 const Hero = () => {
     return (
         <section className="bm-hero">
+            {/* Interactive dot matrix, replacing the static CSS grid. Masked in
+                CSS so it fades toward the edges, and pointer-transparent — the
+                field tracks the cursor from the window. */}
+            <div className="bm-hero__dots" aria-hidden="true">
+                <DotField
+                    dotRadius={1.5}
+                    dotSpacing={14}
+                    bulgeStrength={67}
+                    glowRadius={160}
+                    sparkle={false}
+                    waveAmplitude={0}
+                    cursorRadius={500}
+                    cursorForce={0.1}
+                    bulgeOnly
+                    gradientFrom="#7e7e7e"
+                    gradientTo="#686868"
+                    glowColor="transparent"
+                />
+            </div>
+
             <span className="bm-hero__aura" aria-hidden="true"></span>
 
             <div className="bm-hero__main">

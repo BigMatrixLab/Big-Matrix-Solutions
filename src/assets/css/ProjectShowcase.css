@@ -105,8 +105,8 @@
 .bc-hero {
     position: relative;
     background:
-        radial-gradient(1040px 560px at 82% -14%, rgba(255, 94, 31, 0.42), transparent 64%),
-        radial-gradient(680px 340px at 8% 112%, rgba(255, 94, 31, 0.18), transparent 70%),
+        radial-gradient(1040px 560px at 82% -14%, rgba(236, 54, 46, 0.42), transparent 64%),
+        radial-gradient(680px 340px at 8% 112%, rgba(236, 54, 46, 0.18), transparent 70%),
         var(--bm-ink-bg);
     color: #fff;
     padding: 130px 0 120px;
@@ -431,7 +431,7 @@
 
 .bc-callout {
     background:
-        radial-gradient(520px 260px at 88% 0%, rgba(255, 94, 31, 0.3), transparent 64%),
+        radial-gradient(520px 260px at 88% 0%, rgba(236, 54, 46, 0.3), transparent 64%),
         var(--bm-ink-bg);
     color: #fff;
     border-radius: var(--bc-radius);
@@ -795,7 +795,7 @@
 
 .bc-pub {
     background:
-        radial-gradient(600px 300px at 90% 0%, rgba(255, 94, 31, 0.34), transparent 62%),
+        radial-gradient(600px 300px at 90% 0%, rgba(236, 54, 46, 0.34), transparent 62%),
         var(--bm-ink-bg);
     color: #fff;
     border-radius: var(--bc-radius);
@@ -928,7 +928,7 @@
 /* ============================= CTA ============================= */
 .bc-cta {
     background:
-        radial-gradient(700px 350px at 15% 120%, rgba(255, 94, 31, 0.28), transparent 62%),
+        radial-gradient(700px 350px at 15% 120%, rgba(236, 54, 46, 0.28), transparent 62%),
         var(--bm-ink-bg);
     color: #fff;
     border-radius: var(--bc-radius);

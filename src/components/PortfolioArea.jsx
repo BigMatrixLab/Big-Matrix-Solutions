@@ -39,7 +39,7 @@ const PortfolioArea = () => {
     if (!lead) return null;
 
     return (
-        <section className="bm-section">
+        <section className="bm-section bm-section--parallax">
             <div className="bm-container">
                 <SectionHead
                     eyebrow="Selected work"

@@ -30,33 +30,58 @@
   --bm-text-inv: #ffffff;
   --bm-text-inv-2: rgba(255, 255, 255, 0.68);
 
-  /* ---------- Accent (orange) ---------- */
-  --bm-orange: #ff5e1f;        /* brand accent — decoration, rules, icons */
-  --bm-orange-fill: #d64200;   /* accessible fill: 4.5:1 with white text */
-  --bm-orange-hover: #b83700;
-  --bm-orange-deep: #c93e00;   /* large filled surfaces: 5:1 with white body copy */
-  --bm-orange-ink: #8f2b00;    /* accent text on light backgrounds */
-  --bm-orange-tint: #fff3ed;
-  --bm-orange-tint-2: #ffe6da;
+  /* ---------- Accent (brand red) ----------
+     One hue, stepped by lightness. The base tone is the brand mark; it clears
+     3:1 for large text and non-text UI but not 4.5:1, so anything carrying
+     white text uses the -fill step or darker. Ratios are against white. */
+  --bm-accent: #ec362e;        /* brand accent — decoration, rules, icons */
+  --bm-accent-fill: #d92d22;   /* accessible fill: 4.8:1 with white text */
+  --bm-accent-hover: #b81f16;  /* 6.5:1 */
+  --bm-accent-deep: #c62519;   /* large filled surfaces: 5.7:1 with white body copy */
+  --bm-accent-ink: #a81f16;    /* accent text on light backgrounds: 7.3:1 */
+  --bm-accent-tint: #fef2f0;
+  --bm-accent-tint-2: #fcdedb;
+
+  /* Aliases. The accent was orange when the system was built and the name is
+     referenced throughout the component layers; both spellings resolve to the
+     palette above so either can be used. */
+  --bm-orange: var(--bm-accent);
+  --bm-orange-fill: var(--bm-accent-fill);
+  --bm-orange-hover: var(--bm-accent-hover);
+  --bm-orange-deep: var(--bm-accent-deep);
+  --bm-orange-ink: var(--bm-accent-ink);
+  --bm-orange-tint: var(--bm-accent-tint);
+  --bm-orange-tint-2: var(--bm-accent-tint-2);
 
   /* ---------- Secondary brand (retained) ---------- */
-  --bm-blue: #0c5adb;
-  --bm-blue-tint: #eef4ff;
-  --bm-red: #ed352d;
+  --bm-blue: #1d75b9;
+  --bm-blue-tint: #eef6fc;
+  --bm-red: var(--bm-accent);
 
   /* ---------- Signal ---------- */
   --bm-ok: #067647;
   --bm-warn: #b45309;
 
   /* ---------- Gradients & washes ---------- */
-  --bm-wash-orange: radial-gradient(60% 70% at 12% 0%, rgba(255, 94, 31, 0.14) 0%, rgba(255, 94, 31, 0) 70%);
-  --bm-wash-warm: linear-gradient(180deg, #fffaf7 0%, #ffffff 62%);
+  --bm-wash-orange: radial-gradient(60% 70% at 12% 0%, rgba(236, 54, 46, 0.14) 0%, rgba(236, 54, 46, 0) 70%);
+  --bm-wash-warm: linear-gradient(180deg, #fff9f8 0%, #ffffff 62%);
   /* Dot matrix rather than ruled squares. Dots cover far less area than
      lines, so they carry a stronger colour at a tighter pitch and still read
      as texture. */
   --bm-grid: radial-gradient(var(--bm-line-strong) 1px, transparent 1.5px);
   --bm-grid-ink: radial-gradient(rgba(255, 255, 255, 0.16) 1px, transparent 1.5px);
   --bm-grid-size: 22px 22px;
+  /* Ruled square grid, on the same pitch as the dots so the two read as one
+     system. Used where a section wants a drafting plane rather than a field. */
+  --bm-rules:
+    linear-gradient(var(--bm-line) 1px, transparent 1px),
+    linear-gradient(90deg, var(--bm-line) 1px, transparent 1px);
+  --bm-rules-ink:
+    linear-gradient(rgba(255, 255, 255, 0.075) 1px, transparent 1px),
+    linear-gradient(90deg, rgba(255, 255, 255, 0.075) 1px, transparent 1px);
+  /* Three times the dot pitch: coarse enough to read as a drafting plane, still
+     a whole multiple of 22px so it lines up with the dot field. */
+  --bm-rules-size: 66px 66px;
 
   /* ---------- Typography ---------- */
   --bm-font-display: 'Inter Tight', 'Inter', system-ui, -apple-system, 'Segoe UI', sans-serif;
@@ -109,7 +134,7 @@
   --bm-shadow-xs: 0 1px 2px rgba(28, 27, 22, 0.04);
   --bm-shadow-sm: 0 1px 2px rgba(28, 27, 22, 0.05), 0 2px 12px rgba(28, 27, 22, 0.03);
   --bm-shadow: 0 2px 12px rgba(28, 27, 22, 0.05), 0 12px 40px -12px rgba(28, 27, 22, 0.1);
-  --bm-shadow-lift: 0 2px 8px rgba(28, 27, 22, 0.05), 0 18px 48px -16px rgba(255, 80, 10, 0.18);
+  --bm-shadow-lift: 0 2px 8px rgba(28, 27, 22, 0.05), 0 18px 48px -16px rgba(236, 54, 46, 0.18);
   --bm-shadow-ink: 0 8px 32px -8px rgba(28, 27, 22, 0.4);
 
   /* ---------- Motion ---------- */

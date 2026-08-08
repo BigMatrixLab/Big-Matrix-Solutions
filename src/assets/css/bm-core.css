@@ -19,9 +19,29 @@ html {
   -webkit-text-size-adjust: 100%;
 }
 
-html,
-body {
+/* Page canvas. The dot matrix is the site background rather than a texture
+   applied per band, so it runs unbroken behind every page. It lives on the root
+   element for two reasons: the root's background propagates to the viewport, so
+   short pages are covered too, and `fixed` anchors the pattern to the viewport
+   instead of the document — the dots hold still while content scrolls past,
+   which is the parallax. */
+html {
   background-color: var(--bm-bg) !important;
+  background-image: var(--bm-grid);
+  background-size: var(--bm-grid-size);
+  background-attachment: fixed;
+  background-position: 0 0;
+}
+
+/* Transparent, so the canvas above shows through. */
+body {
+  background-color: transparent !important;
+}
+
+/* iOS Safari handles fixed attachment poorly and it costs scroll performance on
+   phones, so the pattern rides with the document there instead. */
+@media (max-width: 991px) {
+  html { background-attachment: scroll; }
 }
 
 body {
@@ -410,7 +430,7 @@ input:focus,
 select:focus,
 textarea:focus {
   border-color: var(--bm-orange) !important;
-  box-shadow: 0 0 0 3px rgba(255, 94, 31, 0.16) !important;
+  box-shadow: 0 0 0 3px rgba(236, 54, 46, 0.16) !important;
   outline: none;
 }
 
@@ -429,8 +449,8 @@ textarea:focus {
   margin: 0;
   color: #fff;
   background:
-    radial-gradient(1040px 560px at 82% -14%, rgba(255, 94, 31, 0.42), transparent 64%),
-    radial-gradient(680px 340px at 8% 112%, rgba(255, 94, 31, 0.18), transparent 70%),
+    radial-gradient(1040px 560px at 82% -14%, rgba(236, 54, 46, 0.42), transparent 64%),
+    radial-gradient(680px 340px at 8% 112%, rgba(236, 54, 46, 0.18), transparent 70%),
     var(--bm-ink-bg);
   border-bottom: 1px solid var(--bm-line-ink);
   overflow: hidden;

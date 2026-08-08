@@ -24,12 +24,12 @@ const initialsOf = (name) =>
         .join('')
         .toUpperCase();
 
-const TestimonialArea = () => {
+const TestimonialArea = ({ transparent = false }) => {
     const swiperRef = useRef(null);
     const [active, setActive] = useState(0);
 
     return (
-        <section className="bm-section bm-section--surface bm-grid-wash bm-voices">
+        <section className={`bm-section bm-voices${transparent ? '' : ' bm-section--surface'}`}>
             <div className="bm-container">
                 <SectionHead
                     eyebrow="Testimonials"

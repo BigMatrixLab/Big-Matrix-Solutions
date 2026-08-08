@@ -29,7 +29,7 @@ const CELLS = [
 
 const FeatureArea = () => {
     return (
-        <section className="bm-section bm-section--ink bm-grid-wash">
+        <section className="bm-section bm-section--ink bm-grid-wash bm-grid-wash--squares">
             <div className="bm-container">
                 <SectionHead
                     eyebrow="What we build"
