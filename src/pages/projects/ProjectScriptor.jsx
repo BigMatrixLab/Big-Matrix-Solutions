@@ -1,5 +1,6 @@
 import '../../assets/css/ProjectShowcase.css';
 import ShowcaseFacts from '../../components/showcase/ShowcaseFacts';
+import CtaBand from '../../components/CtaBand';
 
 const heroStats = [
     { icon: 'bi bi-window-stack', num: 'All-in-One', label: 'LaTeX, Markdown, whiteboard, PDF, and knowledge graph in one workspace' },
@@ -62,6 +63,7 @@ const collaborators = [
 const ProjectScriptor = () => {
 
     return (
+        <>
         <div className="bc-showcase">
             <section className="bc-hero">
                 <div className="bc-container">
@@ -248,6 +250,9 @@ const ProjectScriptor = () => {
                 </div>
             </section>
         </div>
+
+        <CtaBand />
+        </>
     );
 };
 

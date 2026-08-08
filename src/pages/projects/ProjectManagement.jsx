@@ -1,5 +1,6 @@
 import '../../assets/css/ProjectShowcase.css';
 import ShowcaseFacts from '../../components/showcase/ShowcaseFacts';
+import CtaBand from '../../components/CtaBand';
 
 const heroStats = [
     { icon: 'bi bi-kanban', num: '1 Hub', label: 'Centralized workspace for projects, tasks, and updates' },
@@ -62,6 +63,7 @@ const team = [
 const ProjectManagement = () => {
 
     return (
+        <>
         <div className="bc-showcase">
             <section className="bc-hero">
                 <div className="bc-container">
@@ -253,6 +255,9 @@ const ProjectManagement = () => {
                 </div>
             </section>
         </div>
+
+        <CtaBand />
+        </>
     );
 };
 

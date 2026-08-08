@@ -1,181 +1,121 @@
-import React from 'react';
 import { useParams, Link } from 'react-router-dom';
 import Breadcrumb from '../components/Breadcrumb';
 import MarkdownRenderer from '../components/MarkdownRenderer';
+import CtaBand from '../components/CtaBand';
 import { blogsData } from '../data/content';
+import { stripMarkdownEmoji } from '../utils/docEnrich';
 
 const BlogDetails = () => {
     const { slug } = useParams();
-    const post = blogsData.find(b => b.slug === slug);
+    const post = blogsData.find((item) => item.slug === slug);
 
     if (!post) {
         return (
             <>
-                <Breadcrumb pageTitle="Blog Post Not Found" breadcrumbItem="Blog" />
-                <div className="blog-details-area">
-                    <div className="container text-center">
-                        <h2>Blog post not found</h2>
-                        <Link to="/blog" className="btn btn-primary mt-4">Back to Blog</Link>
+                <Breadcrumb pageTitle="Post not found" breadcrumbItem="Insights" />
+                <section className="bm-section">
+                    <div className="bm-container">
+                        <p className="bm-doc__missing">
+                            That post does not exist, or the link has changed.
+                        </p>
+                        <Link to="/blog" className="bm-button">
+                            All insights
+                            <i className="bi bi-arrow-right" aria-hidden="true"></i>
+                        </Link>
                     </div>
-                </div>
+                </section>
             </>
         );
     }
 
-    const popularPosts = blogsData.slice(0, 3);
-    const categories = [...new Set(blogsData.map(b => b.category))];
+    const others = blogsData.filter((item) => item.slug !== post.slug).slice(0, 4);
+
+    const facts = [
+        { icon: 'bi bi-calendar-event', label: 'Published', value: post.date },
+        { icon: 'bi bi-person', label: 'Author', value: post.author || post.admin },
+        { icon: 'bi bi-tag', label: 'Category', value: post.category },
+    ].filter((fact) => fact.value);
 
     return (
         <>
-            <Breadcrumb pageTitle={post.title} breadcrumbItem="Blog" />
+            <Breadcrumb pageTitle={post.title} breadcrumbItem="Insights" />
 
-            <div className="blog-details-area">
-                <div className="container">
-                    <div className="row">
-                        {/* Main Content */}
-                        <div className="col-lg-8">
-                            <div className="blog-details-box">
-                                <div className="blog-details-thumb">
+            <section className="bm-section bm-doc">
+                <div className="bm-container">
+                    <div className="bm-doc__layout">
+                        <article className="bm-doc__main">
+                            {post.image && (
+                                <figure className="bm-doc__hero">
                                     <img src={post.image} alt={post.title} />
-                                </div>
-                                <div className="blog-details-content">
-                                    <div className="blog-meta">
-                                        <span><i className="bi bi-calendar-check"></i> {post.date}</span>
-                                        {post.author && <span><i className="bi bi-person"></i> {post.author}</span>}
-                                    </div>
+                                </figure>
+                            )}
 
-                                    {/* Render markdown content if contentFile exists, otherwise fallback to JSON structure */}
-                                    {post.contentFile ? (
-                                        <MarkdownRenderer contentFile={post.contentFile} />
-                                    ) : (
-                                        <>
-                                            <h2 className="blog-details-title">{post.title}</h2>
-                                            <p className="blog-details-desc">{post.desc}</p>
-                                            <p className="blog-details-desc">{post.content}</p>
-
-                                            {/* Quote Section - Optional */}
-                                            {post.quote && (
-                                                <div className="blog-quote">
-                                                    <i className="bi bi-quote"></i>
-                                                    <p>{post.quote.text}</p>
-                                                    <span>— {post.quote.author}</span>
-                                                </div>
-                                            )}
-
-                                            {/* Dynamic Sections */}
-                                            {post.sections && post.sections.map((section, index) => (
-                                                <div key={index}>
-                                                    <h3>{section.heading}</h3>
-                                                    <p className="blog-details-desc">{section.content}</p>
-                                                </div>
-                                            ))}
-
-                                            {/* List Items - Optional */}
-                                            {post.listItems && post.listItems.length > 0 && (
-                                                <ul className="blog-list">
-                                                    {post.listItems.map((item, index) => (
-                                                        <li key={index}>
-                                                            <i className="bi bi-check-circle-fill"></i> {item}
-                                                        </li>
-                                                    ))}
-                                                </ul>
-                                            )}
-
-                                            {/* Additional Images - Optional */}
-                                            {post.additionalImages && post.additionalImages.length > 0 && (
-                                                <div className="row my-4">
-                                                    {post.additionalImages.map((img, index) => (
-                                                        <div key={index} className={`col-md-${12 / post.additionalImages.length}`}>
-                                                            <div className="blog-details-image">
-                                                                <img src={img.url} alt={img.alt} />
-                                                            </div>
-                                                        </div>
-                                                    ))}
-                                                </div>
-                                            )}
-                                        </>
-                                    )}
-
-                                    {/* Footer with Tags */}
-                                    {post.tags && post.tags.length > 0 && (
-                                        <div className="blog-details-footer">
-                                            <div className="blog-tags">
-                                                {post.tags.map((tag, index) => (
-                                                    <span key={index}>{tag}</span>
-                                                ))}
-                                            </div>
-                                        </div>
-                                    )}
-                                </div>
-                            </div>
-                        </div>
-
-                        {/* Sidebar */}
-                        <div className="col-lg-4">
-                            {/* Search Widget */}
-                            <div className="widget-box">
-                                <div className="widget-search">
-                                    <form>
-                                        <input type="text" placeholder="Search Here" />
-                                        <button type="submit"><i className="bi bi-search"></i></button>
-                                    </form>
-                                </div>
+                            <div className="bm-doc__body">
+                                <MarkdownRenderer
+                                    contentFile={post.contentFile}
+                                    transform={stripMarkdownEmoji}
+                                />
                             </div>
 
-                            {/* Categories Widget */}
-                            <div className="widget-box">
-                                <h4 className="widget-title">Categories</h4>
-                                <ul className="widget-categories">
-                                    {categories.map((cat, idx) => (
-                                        <li key={idx}>
-                                            <Link to="/blog">
-                                                <svg xmlns="http://www.w3.org/2000/svg" width="14" height="14" viewBox="0 0 24 24" fill="currentColor" aria-hidden="true" style={{ verticalAlign: 'middle', marginRight: '4px' }}>
-                                                    <path d="M10 4H4c-1.1 0-1.99.9-1.99 2L2 18c0 1.1.9 2 2 2h16c1.1 0 2-.9 2-2V8c0-1.1-.9-2-2-2h-8l-2-2z" />
-                                                </svg>
-                                                {cat}
-                                                <span>({blogsData.filter(b => b.category === cat).length})</span>
-                                            </Link>
-                                        </li>
-                                    ))}
-                                </ul>
-                            </div>
+                            {post.tags?.length > 0 && (
+                                <footer className="bm-doc__tags">
+                                    <span className="bm-doc__tags-label">Tagged</span>
+                                    <ul>
+                                        {post.tags.map((tag) => (
+                                            <li key={tag}>{tag}</li>
+                                        ))}
+                                    </ul>
+                                </footer>
+                            )}
+                        </article>
 
-                            {/* Popular Posts Widget */}
-                            <div className="widget-box">
-                                <h4 className="widget-title">Popular Post</h4>
-                                <div className="widget-popular-posts">
-                                    {popularPosts.map((popularPost) => (
-                                        <div className="popular-post-item" key={popularPost.id}>
-                                            <div className="popular-post-thumb">
-                                                <img src={popularPost.image} alt={popularPost.title} />
-                                            </div>
-                                            <div className="popular-post-content">
-                                                <Link to={`/blog/${popularPost.slug}`}>{popularPost.title}</Link>
-                                                <span className="popular-post-date">
-                                                    <svg xmlns="http://www.w3.org/2000/svg" width="14" height="14" viewBox="0 0 24 24" fill="currentColor" aria-hidden="true" style={{ verticalAlign: 'middle', marginRight: '4px' }}>
-                                                        <path d="M19 4h-1V2h-2v2H8V2H6v2H5c-1.11 0-1.99.9-1.99 2L3 20c0 1.1.89 2 2 2h14c1.1 0 2-.9 2-2V6c0-1.1-.9-2-2-2zm0 16H5V10h14v10zm0-12H5V6h14v2z" />
-                                                    </svg>
-                                                    {popularPost.date}
-                                                </span>
-                                            </div>
+                        <aside className="bm-doc__aside bm-doc__aside--plain">
+                            <div>
+                                <p className="bm-doc__index-label">About this post</p>
+                                <dl className="bm-doc__facts">
+                                    {facts.map((fact) => (
+                                        <div key={fact.label}>
+                                            <dt>
+                                                <i className={fact.icon} aria-hidden="true"></i>
+                                                {fact.label}
+                                            </dt>
+                                            <dd>{fact.value}</dd>
                                         </div>
                                     ))}
-                                </div>
+                                </dl>
                             </div>
 
-                            {/* Tags Widget */}
-                            <div className="widget-box">
-                                <h4 className="widget-title">Popular Tags</h4>
-                                <div className="widget-tags">
-                                    {[...new Set(blogsData.flatMap(b => b.tags || []))].map((tag, idx) => (
-                                        <Link to="/blog" key={idx} className="tag-item">{tag}</Link>
-                                    ))}
-                                </div>
-                            </div>
-                        </div>
+                            {others.length > 0 && (
+                                <nav className="bm-doc__more" aria-label="More insights">
+                                    <p className="bm-doc__index-label">More insights</p>
+                                    <ul>
+                                        {others.map((item) => (
+                                            <li key={item.slug}>
+                                                <Link to={`/blog/${item.slug}`}>
+                                                    <span className="bm-doc__more-thumb">
+                                                        <img src={item.image} alt="" loading="lazy" />
+                                                    </span>
+                                                    <span>
+                                                        <strong>{item.title}</strong>
+                                                        {item.date && <small>{item.date}</small>}
+                                                    </span>
+                                                </Link>
+                                            </li>
+                                        ))}
+                                    </ul>
+                                </nav>
+                            )}
+
+                            <Link to="/blog" className="bm-doc__back">
+                                <i className="bi bi-arrow-left" aria-hidden="true"></i>
+                                All insights
+                            </Link>
+                        </aside>
                     </div>
                 </div>
-            </div>
+            </section>
+
+            <CtaBand />
         </>
     );
 };

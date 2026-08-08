@@ -265,6 +265,44 @@ const convertHeading = (doc, heading) => {
     heading.classList.add('is-numbered');
 };
 
+/** Every emoji form: pictographs, skin-tone modifiers, ZWJ and variation
+ *  selectors. Kept as alternation rather than one character class, since ZWJ
+ *  and variation selectors inside a class are ambiguous. */
+const ANY_EMOJI = /\p{Extended_Pictographic}|[\u{1F3FB}-\u{1F3FF}]|\u200D|\uFE0F/gu;
+
+/**
+ * Strips decorative emoji out of rendered markdown. Article bodies use them as
+ * makeshift icons, which clashes with the icon set used everywhere else.
+ */
+export function stripMarkdownEmoji(html) {
+    if (!html || typeof window === 'undefined' || typeof DOMParser === 'undefined') {
+        return html;
+    }
+
+    try {
+        const parsed = new DOMParser().parseFromString(`<div id="bm-doc-root">${html}</div>`, 'text/html');
+        const root = parsed.getElementById('bm-doc-root');
+        if (!root) return html;
+
+        const walker = parsed.createTreeWalker(root, 4 /* NodeFilter.SHOW_TEXT */);
+        const nodes = [];
+        while (walker.nextNode()) nodes.push(walker.currentNode);
+
+        nodes.forEach((node) => {
+            if (!ANY_EMOJI.test(node.textContent)) return;
+            node.textContent = node.textContent
+                .replace(ANY_EMOJI, '')
+                .replace(/[ \t]{2,}/g, ' ')
+                .replace(/^[ \t]+/, (match, offset) => (offset === 0 ? '' : match));
+        });
+
+        return root.innerHTML;
+    } catch (error) {
+        console.error('Could not strip emoji from content:', error);
+        return html;
+    }
+}
+
 export function enrichSolutionHtml(html) {
     if (!html || typeof window === 'undefined' || typeof DOMParser === 'undefined') {
         return html;

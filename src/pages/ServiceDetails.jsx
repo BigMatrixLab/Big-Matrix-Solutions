@@ -73,7 +73,7 @@ const ServiceDetails = () => {
 
                         <aside className="bm-doc__aside">
                             <nav className="bm-doc__index" aria-label="All solutions">
-                                <p className="bm-doc__index-label">All solutions</p>
+                                <p className="bm-doc__index-label">Solutions index</p>
                                 <ul ref={listRef}>
                                     {servicesData.map((item) => {
                                         const current = item.slug === service.slug;
@@ -112,6 +112,11 @@ const ServiceDetails = () => {
                                     <i className="bi bi-arrow-right" aria-hidden="true"></i>
                                 </Link>
                             </div>
+
+                            <Link to="/service" className="bm-doc__back">
+                                <i className="bi bi-arrow-left" aria-hidden="true"></i>
+                                All solutions
+                            </Link>
                         </aside>
                     </div>
                 </div>

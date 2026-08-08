@@ -1,5 +1,6 @@
 import '../../assets/css/ProjectShowcase.css';
 import ShowcaseFacts from '../../components/showcase/ShowcaseFacts';
+import CtaBand from '../../components/CtaBand';
 
 const heroStats = [
     { icon: 'bi bi-hospital',        num: 'All-in-One',  label: 'Appointments, prescriptions, billing, lab, messaging, and AI in one platform' },
@@ -94,6 +95,7 @@ const projectFacts = [
 
 const ProjectRxCloud = () => {
     return (
+        <>
         <div className="bc-showcase">
 
             {/* ── Hero ── */}
@@ -346,6 +348,9 @@ const ProjectRxCloud = () => {
             </section>
 
         </div>
+
+        <CtaBand />
+        </>
     );
 };
 

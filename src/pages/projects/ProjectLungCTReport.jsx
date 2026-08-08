@@ -1,5 +1,6 @@
 import '../../assets/css/ProjectShowcase.css';
 import ShowcaseFacts from '../../components/showcase/ShowcaseFacts';
+import CtaBand from '../../components/CtaBand';
 
 const heroStats = [
     { icon: 'bi bi-stopwatch', num: '50-70%', label: 'Reduction in manual CT reading and reporting time per case' },
@@ -61,6 +62,7 @@ const projectFacts = [
 const ProjectLungCTReport = () => {
 
     return (
+        <>
         <div className="bc-showcase">
             <section className="bc-hero">
                 <div className="bc-container">
@@ -259,6 +261,9 @@ const ProjectLungCTReport = () => {
                 </div>
             </section>
         </div>
+
+        <CtaBand />
+        </>
     );
 };
 

@@ -1,5 +1,6 @@
 import '../../assets/css/ProjectShowcase.css';
 import ShowcaseFacts from '../../components/showcase/ShowcaseFacts';
+import CtaBand from '../../components/CtaBand';
 
 const heroStats = [
     { icon: 'bi bi-4-circle', num: '4 Skills', label: 'Writing, Speaking, Reading, and Listening — full exam coverage' },
@@ -96,6 +97,7 @@ const SpecGrid = ({ items }) => (
 
 const ProjectIELTSTutors = () => {
     return (
+        <>
         <div className="bc-showcase">
 
             {/* ── Hero ── */}
@@ -251,6 +253,9 @@ const ProjectIELTSTutors = () => {
             </section>
 
         </div>
+
+        <CtaBand />
+        </>
     );
 };
 

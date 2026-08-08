@@ -1,5 +1,6 @@
 import '../../assets/css/ProjectShowcase.css';
 import ShowcaseFacts from '../../components/showcase/ShowcaseFacts';
+import CtaBand from '../../components/CtaBand';
 
 const heroStats = [
     { icon: 'bi bi-stopwatch', num: '50-70%', label: 'Reduction in manual contouring time per case' },
@@ -62,6 +63,7 @@ const collaborators = [
 const ProjectAutoContouring = () => {
 
     return (
+        <>
         <div className="bc-showcase">
             <section className="bc-hero">
                 <div className="bc-container">
@@ -261,6 +263,9 @@ const ProjectAutoContouring = () => {
                 </div>
             </section>
         </div>
+
+        <CtaBand />
+        </>
     );
 };
 

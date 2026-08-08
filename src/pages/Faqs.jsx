@@ -1,5 +1,6 @@
-import React from 'react';
 import Breadcrumb from '../components/Breadcrumb';
+import SectionHead from '../components/SectionHead';
+import CtaBand from '../components/CtaBand';
 
 const Faqs = () => {
     return (
@@ -8,14 +9,7 @@ const Faqs = () => {
 
             <div className="faq-area">
                 <div className="container">
-                    <div className="row">
-                        <div className="col-lg-8">
-                            <div className="section-title left">
-                                <h2>Support</h2>
-                                <h1>Common questions and answers</h1>
-                            </div>
-                        </div>
-                    </div>
+                    <SectionHead eyebrow="Support" title="Common questions and answers" />
                     <div className="row">
                         <div className="col-lg-6">
                             <div className="faq-content">
@@ -45,6 +39,7 @@ const Faqs = () => {
                 </div>
             </div>
 
+        <CtaBand />
         </>
     );
 };

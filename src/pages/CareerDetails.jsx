@@ -1,267 +1,239 @@
-import React from 'react';
 import { Link, useParams } from 'react-router-dom';
 import Breadcrumb from '../components/Breadcrumb';
+import CtaBand from '../components/CtaBand';
 import careersData from '../data/careers.json';
 import NotFound from './NotFound';
 
+const isDeadlinePassed = (deadline) => {
+    if (!deadline) return false;
+    const date = new Date(deadline);
+    date.setHours(23, 59, 59, 999);
+    return new Date() > date;
+};
+
+const formatDeadline = (deadline) =>
+    deadline
+        ? new Date(deadline).toLocaleDateString('en-GB', {
+              day: 'numeric',
+              month: 'long',
+              year: 'numeric',
+          })
+        : null;
+
+/** "Ideal for: a final-year student…" -> { label, body } */
+const splitLabelled = (text) => {
+    if (!text) return null;
+    const at = text.indexOf(':');
+    if (at === -1) return { label: null, body: text };
+    return { label: text.slice(0, at).trim(), body: text.slice(at + 1).trim() };
+};
+
 const CareerDetails = () => {
     const { slug } = useParams();
-    const job = careersData.find((j) => j.slug === slug);
+    const job = careersData.find((item) => item.slug === slug);
 
     if (!job) return <NotFound />;
 
-    const isDeadlinePassed = (deadline) => {
-        if (!deadline) return false;
-        const deadlineDate = new Date(deadline);
-        deadlineDate.setHours(23, 59, 59, 999);
-        return new Date() > deadlineDate;
-    };
+    const expired = isDeadlinePassed(job.deadline);
+    const ideal = splitLabelled(job.roleIdeal);
 
-    const formatDeadline = (deadline) => {
-        if (!deadline) return null;
-        return new Date(deadline).toLocaleDateString('en-GB', { day: 'numeric', month: 'long', year: 'numeric' });
-    };
-
-    const expired = job.deadline && isDeadlinePassed(job.deadline);
+    const facts = [
+        { icon: 'bi bi-briefcase', label: 'Job type', value: job.type },
+        { icon: 'bi bi-geo-alt', label: 'Location', value: job.location },
+        { icon: 'bi bi-cash-stack', label: 'Pay', value: job.salary },
+        { icon: 'bi bi-clock', label: 'Hours', value: job.workTime },
+        { icon: 'bi bi-laptop', label: 'Arrangement', value: job.arrangement },
+        {
+            icon: 'bi bi-calendar-event',
+            label: 'Deadline',
+            value: job.deadline
+                ? `${formatDeadline(job.deadline)}${expired ? ' (closed)' : ''}`
+                : null,
+            expired,
+        },
+    ].filter((fact) => fact.value);
 
     return (
         <>
             <Breadcrumb pageTitle={job.title} breadcrumbItem="Careers" />
 
-            <div className="career-details-area inner-style">
-                <div className="container">
-                    <div className="row">
-
-                        {/* ── Main Content ── */}
-                        <div className="col-lg-8">
-                            <div className="career-details-content">
-
-                                {/* Header */}
-                                <div className="career-details-header">
-                                    <h2 className="career-details-title">{job.title}</h2>
-                                    <div className="career-details-meta">
-                                        <span className="job-badge">{job.type}</span>
-                                        <span className="job-location">
-                                            <i className="bi bi-geo-alt"></i> {job.location}
-                                        </span>
-                                        {job.company && (
-                                            <span className="job-company">
-                                                <i className="bi bi-building"></i> {job.company}
-                                            </span>
-                                        )}
-                                    </div>
-                                </div>
-
-                                {/* About Us */}
+            <section className="bm-section bm-doc">
+                <div className="bm-container">
+                    <div className="bm-doc__layout">
+                        <article className="bm-doc__main">
+                            <div className="bm-doc__body">
                                 {job.aboutUs && (
-                                    <div className="career-section">
-                                        <h4 className="career-section-title">About Us</h4>
-                                        <p className="career-body-text">{job.aboutUs}</p>
-                                    </div>
+                                    <>
+                                        <h2>About us</h2>
+                                        <p>{job.aboutUs}</p>
+                                    </>
                                 )}
 
-                                {/* The Role */}
-                                {(job.roleIntro || job.roleIdeal) && (
-                                    <div className="career-section">
-                                        <h4 className="career-section-title">The Role</h4>
-                                        {job.roleIntro && <p className="career-body-text">{job.roleIntro}</p>}
-                                        {job.roleIdeal && <p className="career-body-text career-ideal">{job.roleIdeal}</p>}
-                                    </div>
+                                {(job.roleIntro || ideal) && (
+                                    <>
+                                        <h2>The role</h2>
+                                        {job.roleIntro && <p>{job.roleIntro}</p>}
+                                        {ideal && (
+                                            <p className="bm-md-note">
+                                                {ideal.label && <strong>{ideal.label}</strong>}
+                                                {ideal.body}
+                                            </p>
+                                        )}
+                                    </>
                                 )}
 
-                                {/* What You'll Do */}
-                                {job.responsibilities && job.responsibilities.length > 0 && (
-                                    <div className="career-section">
-                                        <h4 className="career-section-title">What You'll Do</h4>
-                                        <ul className="career-list">
-                                            {job.responsibilities.map((item, i) => (
-                                                <li key={i}>{item}</li>
+                                {job.responsibilities?.length > 0 && (
+                                    <>
+                                        <h2>What you will do</h2>
+                                        <ul>
+                                            {job.responsibilities.map((item) => (
+                                                <li key={item}>{item}</li>
                                             ))}
                                         </ul>
-                                    </div>
+                                    </>
                                 )}
 
-                                {/* What We're Looking For */}
-                                {job.requirements && job.requirements.length > 0 && (
-                                    <div className="career-section">
-                                        <h4 className="career-section-title">What We're Looking For</h4>
-                                        <ul className="career-list">
-                                            {job.requirements.map((item, i) => (
-                                                <li key={i}>{item}</li>
+                                {job.requirements?.length > 0 && (
+                                    <>
+                                        <h2>What we are looking for</h2>
+                                        <ul>
+                                            {job.requirements.map((item) => (
+                                                <li key={item}>{item}</li>
                                             ))}
                                         </ul>
-                                    </div>
+                                    </>
                                 )}
 
-                                {/* Nice to Have */}
-                                {job.niceToHave && job.niceToHave.length > 0 && (
-                                    <div className="career-section">
-                                        <h4 className="career-section-title">Nice to Have <span className="career-section-note">(not required)</span></h4>
-                                        <ul className="career-list">
-                                            {job.niceToHave.map((item, i) => (
-                                                <li key={i}>{item}</li>
+                                {job.niceToHave?.length > 0 && (
+                                    <>
+                                        <h2>Nice to have</h2>
+                                        <p className="bm-md-kicker">Not required</p>
+                                        <ul>
+                                            {job.niceToHave.map((item) => (
+                                                <li key={item}>{item}</li>
                                             ))}
                                         </ul>
-                                    </div>
+                                    </>
                                 )}
 
-                                {/* Compensation & Logistics */}
                                 {(job.salary || job.workTime || job.arrangement) && (
-                                    <div className="career-section">
-                                        <h4 className="career-section-title">Compensation &amp; Logistics</h4>
-                                        <div className="career-comp-grid">
+                                    <>
+                                        <h2>Compensation and logistics</h2>
+                                        <dl className="bm-md-specs">
                                             {job.salary && (
-                                                <div className="career-comp-item">
-                                                    <span className="comp-label">Pay</span>
-                                                    <span className="comp-value">{job.salary}</span>
+                                                <div>
+                                                    <dt>Pay</dt>
+                                                    <dd>{job.salary}</dd>
                                                 </div>
                                             )}
                                             {job.workTime && (
-                                                <div className="career-comp-item">
-                                                    <span className="comp-label">Hours</span>
-                                                    <span className="comp-value">{job.workTime}</span>
+                                                <div>
+                                                    <dt>Hours</dt>
+                                                    <dd>{job.workTime}</dd>
                                                 </div>
                                             )}
                                             {job.arrangement && (
-                                                <div className="career-comp-item">
-                                                    <span className="comp-label">Arrangement</span>
-                                                    <span className="comp-value">{job.arrangement}</span>
+                                                <div>
+                                                    <dt>Arrangement</dt>
+                                                    <dd>{job.arrangement}</dd>
                                                 </div>
                                             )}
-                                        </div>
-                                    </div>
+                                        </dl>
+                                    </>
                                 )}
 
-                                {/* Why Join Us Now */}
                                 {job.whyJoin && (
-                                    <div className="career-section">
-                                        <h4 className="career-section-title">Why Join Us Now</h4>
-                                        {job.whyJoin.split('\n\n').map((para, i) => (
-                                            <p key={i} className="career-body-text">{para}</p>
+                                    <>
+                                        <h2>Why join us now</h2>
+                                        {job.whyJoin.split('\n\n').map((para) => (
+                                            <p key={para.slice(0, 40)}>{para}</p>
                                         ))}
-                                    </div>
+                                    </>
                                 )}
 
-                                {/* How to Apply */}
                                 {job.howToApply && (
-                                    <div className="career-section">
-                                        <h4 className="career-section-title">How to Apply</h4>
-                                        <p className="career-body-text">
+                                    <>
+                                        <h2>How to apply</h2>
+                                        <p>
                                             {job.howToApply.intro}{' '}
-                                            <a href={job.howToApply.formLink} target="_blank" rel="noopener noreferrer" className="career-inline-link">
+                                            <a
+                                                href={job.howToApply.formLink}
+                                                target="_blank"
+                                                rel="noopener noreferrer"
+                                            >
                                                 {job.howToApply.formLink}
                                             </a>
                                         </p>
-                                        <p className="career-body-text">We'll ask you to share:</p>
-                                        <ul className="career-list">
-                                            {job.howToApply.items.map((item, i) => (
-                                                <li key={i}>{item}</li>
-                                            ))}
-                                        </ul>
-                                        {job.deadline && (
-                                            <p className="career-deadline-note">
-                                                <strong>Deadline to apply:</strong> {formatDeadline(job.deadline)}
-                                                {expired && <span className="deadline-passed"> — Applications closed</span>}
-                                            </p>
+                                        {job.howToApply.items?.length > 0 && (
+                                            <>
+                                                <p className="bm-md-kicker">We will ask you to share</p>
+                                                <ul>
+                                                    {job.howToApply.items.map((item) => (
+                                                        <li key={item}>{item}</li>
+                                                    ))}
+                                                </ul>
+                                            </>
                                         )}
-                                    </div>
+                                    </>
                                 )}
-
                             </div>
-                        </div>
+                        </article>
 
-                        {/* ── Sidebar ── */}
-                        <div className="col-lg-4">
-                            <div className="career-sidebar">
-                                <div className="career-sidebar-card">
-                                    <h5 className="sidebar-card-title">Job Overview</h5>
-                                    <ul className="sidebar-overview-list">
-                                        {job.type && (
-                                            <li>
-                                                <i className="bi bi-briefcase"></i>
-                                                <div>
-                                                    <span className="overview-label">Job Type</span>
-                                                    <span className="overview-value">{job.type}</span>
-                                                </div>
-                                            </li>
-                                        )}
-                                        {job.location && (
-                                            <li>
-                                                <i className="bi bi-geo-alt"></i>
-                                                <div>
-                                                    <span className="overview-label">Location</span>
-                                                    <span className="overview-value">{job.location}</span>
-                                                </div>
-                                            </li>
-                                        )}
-                                        {job.salary && (
-                                            <li>
-                                                <i className="bi bi-cash-coin"></i>
-                                                <div>
-                                                    <span className="overview-label">Pay</span>
-                                                    <span className="overview-value">{job.salary}</span>
-                                                </div>
-                                            </li>
-                                        )}
-                                        {job.workTime && (
-                                            <li>
-                                                <i className="bi bi-clock"></i>
-                                                <div>
-                                                    <span className="overview-label">Hours</span>
-                                                    <span className="overview-value">{job.workTime}</span>
-                                                </div>
-                                            </li>
-                                        )}
-                                        {job.arrangement && (
-                                            <li>
-                                                <i className="bi bi-laptop"></i>
-                                                <div>
-                                                    <span className="overview-label">Arrangement</span>
-                                                    <span className="overview-value">{job.arrangement}</span>
-                                                </div>
-                                            </li>
-                                        )}
-                                        {job.deadline && (
-                                            <li>
-                                                <i className="bi bi-calendar-event"></i>
-                                                <div>
-                                                    <span className="overview-label">Deadline</span>
-                                                    <span className={`overview-value${expired ? ' overview-value--expired' : ''}`}>
-                                                        {formatDeadline(job.deadline)}
-                                                        {expired && ' (Closed)'}
-                                                    </span>
-                                                </div>
-                                            </li>
-                                        )}
-                                    </ul>
-
-                                    <div className="sidebar-apply">
-                                        {expired ? (
-                                            <span className="apply-btn apply-btn--disabled" aria-disabled="true">
-                                                Applications Closed
-                                            </span>
-                                        ) : (
-                                            <a
-                                                href={job.applyLink || '/contact'}
-                                                className="apply-btn"
-                                                target={job.applyLink ? '_blank' : undefined}
-                                                rel={job.applyLink ? 'noopener noreferrer' : undefined}
-                                            >
-                                                Apply Now
-                                            </a>
-                                        )}
-                                    </div>
-                                </div>
-
-                                <Link to="/careers" className="back-to-careers">
-                                    <i className="bi bi-arrow-left"></i> Back to Careers
-                                </Link>
+                        <aside className="bm-doc__aside bm-doc__aside--plain">
+                            <div>
+                                <p className="bm-doc__index-label">Role at a glance</p>
+                                <dl className="bm-doc__facts">
+                                    {facts.map((fact) => (
+                                        <div key={fact.label}>
+                                            <dt>
+                                                <i className={fact.icon} aria-hidden="true"></i>
+                                                {fact.label}
+                                            </dt>
+                                            <dd className={fact.expired ? 'is-expired' : undefined}>
+                                                {fact.value}
+                                            </dd>
+                                        </div>
+                                    ))}
+                                </dl>
                             </div>
-                        </div>
 
+                            <div className="bm-doc__contact">
+                                <p className="bm-doc__contact-label">
+                                    {expired ? 'Applications closed' : 'Ready to apply?'}
+                                </p>
+                                <p className="bm-doc__contact-copy">
+                                    {expired
+                                        ? 'This role is no longer accepting applications. Other openings are listed on the careers page.'
+                                        : 'Send a short intro, your CV and a couple of work samples. We read every application ourselves.'}
+                                </p>
+
+                                {expired ? (
+                                    <span className="bm-doc__contact-cta is-disabled" aria-disabled="true">
+                                        Applications closed
+                                    </span>
+                                ) : (
+                                    <a
+                                        className="bm-doc__contact-cta"
+                                        href={job.applyLink || '/contact'}
+                                        target={job.applyLink ? '_blank' : undefined}
+                                        rel={job.applyLink ? 'noopener noreferrer' : undefined}
+                                    >
+                                        Apply for this role
+                                        <i className="bi bi-arrow-right" aria-hidden="true"></i>
+                                    </a>
+                                )}
+                            </div>
+
+                            <Link to="/careers" className="bm-doc__back">
+                                <i className="bi bi-arrow-left" aria-hidden="true"></i>
+                                All open roles
+                            </Link>
+                        </aside>
                     </div>
                 </div>
-            </div>
+            </section>
+
+            <CtaBand />
         </>
     );
 };

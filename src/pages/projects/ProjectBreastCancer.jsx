@@ -1,6 +1,7 @@
 import { Link } from 'react-router-dom';
 import '../../assets/css/ProjectShowcase.css';
 import ShowcaseFacts from '../../components/showcase/ShowcaseFacts';
+import CtaBand from '../../components/CtaBand';
 
 const heroStats = [
     { icon: 'bi bi-bullseye', num: '90%+', label: 'Segmentation accuracy on regions of interest & BI-RADS Classification' },
@@ -63,6 +64,7 @@ const team = [
 const ProjectBreastCancer = () => {
 
     return (
+        <>
         <div className="bc-showcase">
             {/* <Breadcrumb pageTitle="Multimodal AI for Breast Cancer Diagnosis" breadcrumbItem="Project" /> */}
 
@@ -294,6 +296,9 @@ const ProjectBreastCancer = () => {
                 </section>
             </div> */}
         </div>
+
+        <CtaBand />
+        </>
     );
 };
 

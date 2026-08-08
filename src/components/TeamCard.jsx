@@ -1,4 +1,4 @@
-import React from 'react';
+import { Link } from 'react-router-dom';
 
 const SOCIALS = [
     { key: 'linkedin', icon: 'bi-linkedin', label: 'LinkedIn' },
@@ -31,9 +31,23 @@ const TeamCard = ({ member }) => {
                 )}
             </div>
             <div className="bm-card__body">
-                <h3 className="bm-card__title">{member.name}</h3>
-                <p className="bm-card__meta">{member.role}</p>
+                <h3 className="bm-card__title">
+                    {member.slug ? (
+                        <Link to={`/team/${member.slug}`}>{member.name}</Link>
+                    ) : (
+                        member.name
+                    )}
+                </h3>
+                {member.desc && <p className="bm-card__text">{member.desc}</p>}
                 <span className="bm-card__rule" aria-hidden="true"></span>
+                {member.slug && (
+                    <div className="bm-card__foot">
+                        <Link to={`/team/${member.slug}`} className="bm-link">
+                            View profile
+                            <i className="bi bi-arrow-right" aria-hidden="true"></i>
+                        </Link>
+                    </div>
+                )}
             </div>
         </article>
     );

@@ -3,6 +3,7 @@ import { useParams, Link } from 'react-router-dom';
 import { Facebook, Twitter, Linkedin } from 'lucide-react';
 import Breadcrumb from '../components/Breadcrumb';
 import teamData from '../data/team.json';
+import CtaBand from '../components/CtaBand';
 
 const TeamDetails = () => {
     const { slug } = useParams();
@@ -38,10 +39,7 @@ const TeamDetails = () => {
                         <div className="col-lg-7" style={{ paddingLeft: 20 }}>
                             <div className="team-details-right">
                                 <div className="team-details-content">
-                                    <div className="team-member-title">
-                                        <h4>{member.name}</h4>
-                                        <p>{member.role}</p>
-                                    </div>
+                                    {/* The name is already the page title in the header above. */}
                                     <p className="desc">{member.desc}</p>
                                 </div>
                                 <div className="d-flex flex-wrap gap-3 contact-info-wrapper">
@@ -89,6 +87,7 @@ const TeamDetails = () => {
                 </div>
             </div>
 
+        <CtaBand />
         </>
     );
 };

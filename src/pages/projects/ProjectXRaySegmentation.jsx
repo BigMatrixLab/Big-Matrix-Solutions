@@ -1,5 +1,6 @@
 import '../../assets/css/ProjectShowcase.css';
 import ShowcaseFacts from '../../components/showcase/ShowcaseFacts';
+import CtaBand from '../../components/CtaBand';
 
 const heroStats = [
     { icon: 'bi bi-lightning-charge', num: '<20s', label: 'Average time to generate an initial segmentation pass' },
@@ -62,6 +63,7 @@ const collaborators = [
 const ProjectXRaySegmentation = () => {
 
     return (
+        <>
         <div className="bc-showcase">
             <section className="bc-hero">
                 <div className="bc-container">
@@ -255,6 +257,9 @@ const ProjectXRaySegmentation = () => {
                 </div>
             </section>
         </div>
+
+        <CtaBand />
+        </>
     );
 };
 
