@@ -7,8 +7,6 @@ import { Link } from 'react-router-dom';
 const Breadcrumb = ({ pageTitle, breadcrumbItem }) => {
     return (
         <header className="bm-pagehead">
-            <span className="bm-pagehead__matrix" aria-hidden="true"></span>
-
             <div className="bm-container">
                 <nav className="bm-pagehead__crumbs" aria-label="Breadcrumb">
                     <ol>

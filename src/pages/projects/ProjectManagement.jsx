@@ -1,15 +1,5 @@
-import React, { useEffect, useRef, useState } from 'react';
 import '../../assets/css/ProjectShowcase.css';
-
-const NAV_SECTIONS = [
-    { id: 'overview', label: 'Overview' },
-    { id: 'challenge', label: 'Challenge' },
-    { id: 'solution', label: 'Solution' },
-    { id: 'workflow', label: 'Workflow' },
-    { id: 'impact', label: 'Impact' },
-    { id: 'future', label: 'Future' },
-    { id: 'team', label: 'Team' },
-];
+import ShowcaseFacts from '../../components/showcase/ShowcaseFacts';
 
 const heroStats = [
     { icon: 'bi bi-kanban', num: '1 Hub', label: 'Centralized workspace for projects, tasks, and updates' },
@@ -69,33 +59,10 @@ const team = [
     { icon: 'bi bi-gear-wide-connected', role: 'R&D Program Office', name: 'Big-Matrix Solutions', image: '/assets/images/big_matrix_cube.png', desc: 'Coordinates adoption, process standardization, and ongoing platform enhancement.' },
 ];
 
-const ProjectManagement = () => {
-    const [activeSection, setActiveSection] = useState('overview');
-    const sectionRefs = useRef({});
-
-    useEffect(() => {
-        const observer = new IntersectionObserver(
-            (entries) => {
-                entries.forEach((entry) => {
-                    if (entry.isIntersecting) {
-                        setActiveSection(entry.target.id);
-                    }
-                });
-            },
-            { rootMargin: '-45% 0px -50% 0px', threshold: 0 }
-        );
-
-        const nodes = Object.values(sectionRefs.current).filter(Boolean);
-        nodes.forEach((node) => observer.observe(node));
-        return () => observer.disconnect();
-    }, []);
-
-    const registerSection = (id) => (el) => {
-        sectionRefs.current[id] = el;
-    };
+const ProjectManagement = () => {
 
     return (
-        <div className="bc-showcase" >
+        <div className="bc-showcase">
             <section className="bc-hero">
                 <div className="bc-container">
                     <div className="bc-hero-grid">
@@ -124,7 +91,7 @@ const ProjectManagement = () => {
                 </div>
             </section>
 
-            <div className="bc-stats">
+            <div className="bc-stats" id="overview">
                 <div className="bc-container">
                     <div className="bc-stats-grid">
                         {heroStats.map((stat) => (
@@ -135,11 +102,12 @@ const ProjectManagement = () => {
                             </div>
                         ))}
                     </div>
+                    <ShowcaseFacts items={projectFacts} />
                 </div>
             </div>
 
             
-            <section className="bc-section bc-alt" id="challenge" ref={registerSection('challenge')}>
+            <section className="bc-section bc-alt" id="challenge">
                 <div className="bc-container">
                     <div className="bc-section-head">
                         <span className="bc-eyebrow">Why it matters</span>
@@ -162,7 +130,7 @@ const ProjectManagement = () => {
                 </div>
             </section>
 
-            <section className="bc-section" id="solution" ref={registerSection('solution')}>
+            <section className="bc-section" id="solution">
                 <div className="bc-container">
                     <div className="bc-section-head">
                         <span className="bc-eyebrow">The approach</span>
@@ -185,7 +153,7 @@ const ProjectManagement = () => {
                 </div>
             </section>
 
-            <section className="bc-section bc-alt" id="workflow" ref={registerSection('workflow')}>
+            <section className="bc-section bc-alt" id="workflow">
                 <div className="bc-container">
                     <div className="bc-section-head">
                         <span className="bc-eyebrow">How it works</span>
@@ -207,7 +175,7 @@ const ProjectManagement = () => {
                 </div>
             </section>
 
-            <section className="bc-section" id="impact" ref={registerSection('impact')}>
+            <section className="bc-section" id="impact">
                 <div className="bc-container">
                     <div className="bc-section-head">
                         <span className="bc-eyebrow">Key outcomes</span>
@@ -226,7 +194,7 @@ const ProjectManagement = () => {
                 </div>
             </section>
 
-            <section className="bc-section bc-alt" id="future" ref={registerSection('future')}>
+            <section className="bc-section bc-alt" id="future">
                 <div className="bc-container">
                     <div className="bc-section-head">
                         <span className="bc-eyebrow">What&apos;s next</span>
@@ -260,10 +228,10 @@ const ProjectManagement = () => {
                 </div>
             </section>
 
-            <section className="bc-section" id="team" ref={registerSection('team')}>
+            <section className="bc-section" id="team">
                 <div className="bc-container">
                     <div className="bc-section-head bc-left">
-                        <span className="bc-eyebrow" >Collaboration</span>
+                        <span className="bc-eyebrow">Collaboration</span>
                         <h2>Team and Ownership</h2>
                         <p>Designed and iterated collaboratively across engineering, product operations, and R&D leadership.</p>
                     </div>

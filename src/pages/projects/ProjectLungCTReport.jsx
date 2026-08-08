@@ -1,5 +1,5 @@
-import React, { useEffect, useRef, useState } from 'react';
 import '../../assets/css/ProjectShowcase.css';
+import ShowcaseFacts from '../../components/showcase/ShowcaseFacts';
 
 const heroStats = [
     { icon: 'bi bi-stopwatch', num: '50-70%', label: 'Reduction in manual CT reading and reporting time per case' },
@@ -51,30 +51,14 @@ const collaborators = [
     { icon: 'bi bi-code-slash', role: 'Engineering Team', name: 'Big-Matrix Solutions', image: '/assets/images/big_matrix_cube.png', desc: 'Develops model pipelines, NLP reporting automation, and secure PACS system integration for radiology workflows.' },
 ];
 
-const ProjectLungCTReport = () => {
-    const [activeSection, setActiveSection] = useState('challenge');
-    const sectionRefs = useRef({});
+const projectFacts = [
+    { icon: 'bi bi-box', label: 'Product', value: 'Lung CT Segmentation & Report Generation' },
+    { icon: 'bi bi-tag', label: 'Category', value: 'Medical AI / Radiology' },
+    { icon: 'bi bi-building', label: 'Developed By', value: 'Big-Matrix Solutions' },
+    { icon: 'bi bi-calendar3', label: 'Year', value: '2026' },
+];
 
-    useEffect(() => {
-        const observer = new IntersectionObserver(
-            (entries) => {
-                entries.forEach((entry) => {
-                    if (entry.isIntersecting) {
-                        setActiveSection(entry.target.id);
-                    }
-                });
-            },
-            { rootMargin: '-45% 0px -50% 0px', threshold: 0 }
-        );
-
-        const nodes = Object.values(sectionRefs.current).filter(Boolean);
-        nodes.forEach((node) => observer.observe(node));
-        return () => observer.disconnect();
-    }, []);
-
-    const registerSection = (id) => (el) => {
-        sectionRefs.current[id] = el;
-    };
+const ProjectLungCTReport = () => {
 
     return (
         <div className="bc-showcase">
@@ -110,7 +94,7 @@ const ProjectLungCTReport = () => {
                 </div>
             </section>
 
-            <div className="bc-stats">
+            <div className="bc-stats" id="overview">
                 <div className="bc-container">
                     <div className="bc-stats-grid">
                         {heroStats.map((stat) => (
@@ -121,10 +105,11 @@ const ProjectLungCTReport = () => {
                             </div>
                         ))}
                     </div>
+                    <ShowcaseFacts items={projectFacts} />
                 </div>
             </div>
 
-            <section className="bc-section bc-alt" id="challenge" ref={registerSection('challenge')}>
+            <section className="bc-section bc-alt" id="challenge">
                 <div className="bc-container">
                     <div className="bc-section-head">
                         <span className="bc-eyebrow">Why it matters</span>
@@ -147,7 +132,7 @@ const ProjectLungCTReport = () => {
                 </div>
             </section>
 
-            <section className="bc-section" id="solution" ref={registerSection('solution')}>
+            <section className="bc-section" id="solution">
                 <div className="bc-container">
                     <div className="bc-section-head">
                         <span className="bc-eyebrow">The approach</span>
@@ -170,7 +155,7 @@ const ProjectLungCTReport = () => {
                 </div>
             </section>
 
-            <section className="bc-section bc-alt" id="workflow" ref={registerSection('workflow')}>
+            <section className="bc-section bc-alt" id="workflow">
                 <div className="bc-container">
                     <div className="bc-section-head">
                         <span className="bc-eyebrow">How it works</span>
@@ -195,7 +180,7 @@ const ProjectLungCTReport = () => {
                 </div>
             </section>
 
-            <section className="bc-section" id="impact" ref={registerSection('impact')}>
+            <section className="bc-section" id="impact">
                 <div className="bc-container">
                     <div className="bc-section-head">
                         <span className="bc-eyebrow">Key outcomes</span>
@@ -214,7 +199,7 @@ const ProjectLungCTReport = () => {
                 </div>
             </section>
 
-            <section className="bc-section bc-alt" id="future" ref={registerSection('future')}>
+            <section className="bc-section bc-alt" id="future">
                 <div className="bc-container">
                     <div className="bc-section-head">
                         <span className="bc-eyebrow">What&apos;s next</span>
@@ -249,7 +234,7 @@ const ProjectLungCTReport = () => {
                 </div>
             </section>
 
-            <section className="bc-section" id="team" ref={registerSection('team')}>
+            <section className="bc-section" id="team">
                 <div className="bc-container">
                     <div className="bc-section-head bc-left">
                         <span className="bc-eyebrow">Collaboration</span>

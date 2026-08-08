@@ -1,5 +1,5 @@
-import React, { useEffect, useRef, useState } from 'react';
 import '../../assets/css/ProjectShowcase.css';
+import ShowcaseFacts from '../../components/showcase/ShowcaseFacts';
 
 const heroStats = [
     { icon: 'bi bi-hospital',        num: 'All-in-One',  label: 'Appointments, prescriptions, billing, lab, messaging, and AI in one platform' },
@@ -84,16 +84,20 @@ const pricingTiers = [
     { name: 'Enterprise',   best: 'Hospitals & health networks — white-labelling, dedicated infra',   limit: 'Custom pricing' },
 ];
 
+const projectFacts = [
+    { icon: 'bi bi-box', label: 'Product', value: 'RxCloud' },
+    { icon: 'bi bi-tag', label: 'Category', value: 'Healthcare / SaaS Platform' },
+    { icon: 'bi bi-geo-alt', label: 'Market', value: 'Bangladesh' },
+    { icon: 'bi bi-building', label: 'Developed By', value: 'Big-Matrix Solutions' },
+    { icon: 'bi bi-calendar3', label: 'Year', value: '2026' },
+];
+
 const ProjectRxCloud = () => {
-    const sectionRefs = useRef({});
-
-    const reg = (id) => (el) => { sectionRefs.current[id] = el; };
-
     return (
         <div className="bc-showcase">
 
             {/* ── Hero ── */}
-            <section className="bc-hero" id="overview" ref={reg('overview')}>
+            <section className="bc-hero" id="overview">
                 <div className="bc-container">
                     <div className="bc-hero-grid">
                         <div className="bc-hero-text">
@@ -156,6 +160,7 @@ const ProjectRxCloud = () => {
                             </div>
                         ))}
                     </div>
+                    <ShowcaseFacts items={projectFacts} />
                 </div>
             </div>
 
@@ -180,7 +185,7 @@ const ProjectRxCloud = () => {
             </section>
 
             {/* ── Patient Management ── */}
-            <section className="bc-section" id="patients" ref={reg('patients')}>
+            <section className="bc-section" id="patients">
                 <div className="bc-container">
                     <div className="bc-section-head">
                         <span className="bc-eyebrow">Feature Module</span>
@@ -200,7 +205,7 @@ const ProjectRxCloud = () => {
             </section>
 
             {/* ── Appointments ── */}
-            <section className="bc-section bc-alt" id="appointments" ref={reg('appointments')}>
+            <section className="bc-section bc-alt" id="appointments">
                 <div className="bc-container">
                     <div className="bc-section-head">
                         <span className="bc-eyebrow">Feature Module</span>
@@ -220,7 +225,7 @@ const ProjectRxCloud = () => {
             </section>
 
             {/* ── Prescriptions ── */}
-            <section className="bc-section" id="prescriptions" ref={reg('prescriptions')}>
+            <section className="bc-section" id="prescriptions">
                 <div className="bc-container">
                     <div className="bc-section-head">
                         <span className="bc-eyebrow">Feature Module</span>
@@ -240,7 +245,7 @@ const ProjectRxCloud = () => {
             </section>
 
             {/* ── Clinical Tools ── */}
-            <section className="bc-section bc-alt" id="clinical" ref={reg('clinical')}>
+            <section className="bc-section bc-alt" id="clinical">
                 <div className="bc-container">
                     <div className="bc-section-head">
                         <span className="bc-eyebrow">Feature Module</span>
@@ -260,7 +265,7 @@ const ProjectRxCloud = () => {
             </section>
 
             {/* ── Operations ── */}
-            <section className="bc-section" id="operations" ref={reg('operations')}>
+            <section className="bc-section" id="operations">
                 <div className="bc-container">
                     <div className="bc-section-head">
                         <span className="bc-eyebrow">Feature Module</span>
@@ -298,7 +303,7 @@ const ProjectRxCloud = () => {
             </section>
 
             {/* ── Patient Portal ── */}
-            <section className="bc-section bc-alt" id="portal" ref={reg('portal')}>
+            <section className="bc-section bc-alt" id="portal">
                 <div className="bc-container">
                     <div className="bc-section-head">
                         <span className="bc-eyebrow">Patient Experience</span>
@@ -318,7 +323,7 @@ const ProjectRxCloud = () => {
             </section>
 
             {/* ── Security & Pricing ── */}
-            <section className="bc-section" id="security" ref={reg('security')}>
+            <section className="bc-section" id="security">
                 <div className="bc-container">
 
                     <div className="bc-section-head">

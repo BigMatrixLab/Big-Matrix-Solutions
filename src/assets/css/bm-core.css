@@ -420,50 +420,31 @@ textarea:focus {
    9. Page header (replaces the legacy breadcrumb banner)
    -------------------------------------------------------------------------- */
 
+/* Matches the project showcase hero (.bc-hero): ink canvas, warm glows and a
+   dot matrix fading down from the top. */
 .bm-pagehead {
   position: relative;
-  padding-top: calc(var(--bm-header-h) + clamp(48px, 3rem + 2.6vw, 88px));
-  padding-bottom: clamp(48px, 2.6rem + 2.6vw, 84px);
+  padding-top: calc(var(--bm-header-h) + clamp(56px, 3rem + 3vw, 96px));
+  padding-bottom: clamp(56px, 3rem + 3vw, 96px);
   margin: 0;
-  background: var(--bm-wash-warm);
-  border-bottom: 1px solid var(--bm-line);
+  color: #fff;
+  background:
+    radial-gradient(1040px 560px at 82% -14%, rgba(255, 94, 31, 0.42), transparent 64%),
+    radial-gradient(680px 340px at 8% 112%, rgba(255, 94, 31, 0.18), transparent 70%),
+    var(--bm-ink-bg);
+  border-bottom: 1px solid var(--bm-line-ink);
   overflow: hidden;
 }
 
-/* Engineering grid, fading out toward the page. */
 .bm-pagehead::before {
   content: '';
   position: absolute;
   inset: 0;
-  background-image: var(--bm-grid);
+  background-image: var(--bm-grid-ink);
   background-size: var(--bm-grid-size);
-  -webkit-mask-image: linear-gradient(180deg, #000 0%, transparent 92%);
-  mask-image: linear-gradient(180deg, #000 0%, transparent 92%);
-  pointer-events: none;
-}
-
-/* Warm bloom anchored to the title corner. */
-.bm-pagehead::after {
-  content: '';
-  position: absolute;
-  inset: 0;
-  background: var(--bm-wash-orange);
-  pointer-events: none;
-}
-
-/* Brand dot matrix drifting in from the right — fills the space beside a
-   short title instead of leaving it blank. */
-.bm-pagehead__matrix {
-  position: absolute;
-  top: 0;
-  right: 0;
-  bottom: 0;
-  width: min(48%, 620px);
-  background-image: radial-gradient(rgba(255, 94, 31, 0.55) 1.4px, transparent 1.5px);
-  background-size: 18px 18px;
-  -webkit-mask-image: radial-gradient(125% 105% at 100% 42%, #000 0%, transparent 70%);
-  mask-image: radial-gradient(125% 105% at 100% 42%, #000 0%, transparent 70%);
-  opacity: 0.55;
+  opacity: 1.35;
+  -webkit-mask-image: linear-gradient(180deg, #000 0%, rgba(0, 0, 0, 0.6) 42%, transparent 86%);
+  mask-image: linear-gradient(180deg, #000 0%, rgba(0, 0, 0, 0.6) 42%, transparent 86%);
   pointer-events: none;
 }
 
@@ -482,7 +463,7 @@ textarea:focus {
   line-height: 1;
   letter-spacing: 0.08em;
   text-transform: uppercase;
-  color: var(--bm-text-3);
+  color: var(--bm-text-inv-2);
 }
 
 .bm-pagehead__crumbs li {
@@ -504,18 +485,18 @@ textarea:focus {
 }
 
 .bm-pagehead__crumbs a {
-  color: var(--bm-text-3);
+  color: var(--bm-text-inv-2);
   border-bottom: 1px solid transparent;
   transition: color var(--bm-dur) var(--bm-ease-inout),
               border-color var(--bm-dur) var(--bm-ease-inout);
 }
 
 .bm-pagehead__crumbs a:hover {
-  color: var(--bm-orange-ink);
+  color: var(--bm-orange);
   border-bottom-color: var(--bm-orange);
 }
 
-.bm-pagehead__crumbs li[aria-current] { color: var(--bm-text); }
+.bm-pagehead__crumbs li[aria-current] { color: #fff; }
 
 /* Title runs the full container width — the only element in the band. */
 .bm-pagehead__title {
@@ -524,14 +505,10 @@ textarea:focus {
   font-family: var(--bm-font-display) !important;
   font-size: clamp(2.2rem, 1.3rem + 3.4vw, 4rem);
   font-weight: 600;
-  line-height: 1.02;
+  line-height: 1.04;
   letter-spacing: var(--bm-track-display);
-  color: var(--bm-text);
+  color: #fff;
   text-wrap: balance;
-}
-
-@media (max-width: 991px) {
-  .bm-pagehead__matrix { width: 62%; opacity: 0.4; }
 }
 
 /* --------------------------------------------------------------------------

@@ -1807,7 +1807,8 @@
 /* Showcase hero: ink canvas with a warm wash instead of the blue gradient. */
 .bc-showcase .bc-hero {
   background:
-    radial-gradient(900px 520px at 84% -10%, rgba(255, 94, 31, 0.24), transparent 62%),
+    radial-gradient(1040px 560px at 82% -14%, rgba(255, 94, 31, 0.42), transparent 64%),
+    radial-gradient(680px 340px at 8% 112%, rgba(255, 94, 31, 0.18), transparent 70%),
     var(--bm-ink-bg) !important;
   border-bottom: 1px solid var(--bm-line-ink);
 }

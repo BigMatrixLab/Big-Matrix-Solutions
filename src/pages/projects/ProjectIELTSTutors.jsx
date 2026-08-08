@@ -1,5 +1,5 @@
-import React, { useEffect, useRef, useState } from 'react';
 import '../../assets/css/ProjectShowcase.css';
+import ShowcaseFacts from '../../components/showcase/ShowcaseFacts';
 
 const heroStats = [
     { icon: 'bi bi-4-circle', num: '4 Skills', label: 'Writing, Speaking, Reading, and Listening — full exam coverage' },
@@ -49,26 +49,57 @@ const gamificationFeatures = [
     { icon: 'bi bi-calendar2-week', title: 'Study Scheduler', desc: 'Weekly schedule with task creation (skill, time, duration, repeat pattern), conflict detection, edit/delete by occurrence or series, and 5-minute push notification reminders.' },
 ];
 
-const premiumTiers = [
-    { name: 'Lite', price: '$7.99/mo', writing: '15 / month', speaking: '5 / month', mentor: '20 / month', priority: '—', vault: '✓' },
-    { name: 'Serious Prep', price: '$19.99/mo', writing: '60 / month', speaking: '20 / month', mentor: 'Unlimited', priority: '✓', vault: '✓' },
-    { name: 'Intensive', price: '$29.99/mo', writing: 'Unlimited', speaking: 'Unlimited', mentor: 'Unlimited', priority: '✓', vault: '✓' },
+const platforms = [
+    { icon: 'bi bi-android2', title: 'Android', desc: 'Built with React Native / Expo. Full feature parity with Web including offline mode and push reminders.' },
+    { icon: 'bi bi-display', title: 'Web', desc: 'Optimised for desktop. Adds resizable split panes for side-by-side reading, writing, and chart layouts.' },
 ];
 
+const projectFacts = [
+    { icon: 'bi bi-box', label: 'Product', value: 'IELTS Tutors' },
+    { icon: 'bi bi-tag', label: 'Category', value: 'Education / AI Platform' },
+    { icon: 'bi bi-building', label: 'Developed By', value: 'Big-Matrix Solutions' },
+    { icon: 'bi bi-calendar3', label: 'Year', value: '2026' },
+];
+
+/** The same numbered row list the homepage uses for its solutions index. */
+const Ledger = ({ items }) => (
+    <div className="bm-rows">
+        {items.map((item, index) => (
+            <div className="bm-row" key={item.title}>
+                <span className="bm-row__index">{String(index + 1).padStart(2, '0')}</span>
+                <span className="bm-row__icon">
+                    <i className={item.icon} aria-hidden="true"></i>
+                </span>
+                <div className="bm-row__body">
+                    <h3 className="bm-row__title">{item.title}</h3>
+                    <p className="bm-row__text">{item.desc}</p>
+                </div>
+            </div>
+        ))}
+    </div>
+);
+
+/** One framed datasheet instead of a row of separate cards. */
+const SpecGrid = ({ items }) => (
+    <div className="bc-specgrid">
+        {items.map((item) => (
+            <div key={item.title}>
+                <span className="bc-spec-label">
+                    <i className={item.icon} aria-hidden="true"></i>
+                    {item.title}
+                </span>
+                <p>{item.desc}</p>
+            </div>
+        ))}
+    </div>
+);
+
 const ProjectIELTSTutors = () => {
-    const sectionRefs = useRef({});
-
-    useEffect(() => {
-        // intentionally empty — kept for future use
-    }, []);
-
-    const registerSection = (id) => (el) => { sectionRefs.current[id] = el; };
-
     return (
         <div className="bc-showcase">
 
             {/* ── Hero ── */}
-            <section className="bc-hero" id="overview" ref={registerSection('overview')}>
+            <section className="bc-hero" id="overview">
                 <div className="bc-container">
                     <div className="bc-hero-grid">
                         <div className="bc-hero-text">
@@ -108,110 +139,71 @@ const ProjectIELTSTutors = () => {
                             </div>
                         ))}
                     </div>
+                    <ShowcaseFacts items={projectFacts} />
                 </div>
             </div>
 
             {/* ── Writing ── */}
-            <section className="bc-section bc-alt" id="writing" ref={registerSection('writing')}>
+            <section className="bc-section bc-alt" id="writing">
                 <div className="bc-container">
                     <div className="bc-section-head">
-                        <span className="bc-eyebrow">Skill Module</span>
+                        <span className="bc-eyebrow">Skill Module 01</span>
                         <h2>Writing</h2>
                         <p>The most comprehensive module on the platform — tools for every stage of preparation from free-form practice to full mock exams and AI coaching.</p>
                     </div>
-                    <div className="bc-grid bc-grid-4">
-                        {writingModules.map((item) => (
-                            <div className="bc-card" key={item.title}>
-                                <span className="bc-card-icon"><i className={item.icon}></i></span>
-                                <h4>{item.title}</h4>
-                                <p>{item.desc}</p>
-                            </div>
-                        ))}
-                    </div>
+                    <Ledger items={writingModules} />
                 </div>
             </section>
 
             {/* ── Speaking ── */}
-            <section className="bc-section" id="speaking" ref={registerSection('speaking')}>
+            <section className="bc-section" id="speaking">
                 <div className="bc-container">
                     <div className="bc-section-head">
-                        <span className="bc-eyebrow">Skill Module</span>
+                        <span className="bc-eyebrow">Skill Module 02</span>
                         <h2>Speaking</h2>
                         <p>A fully AI-conducted speaking exam with realistic examiner personas, silence detection, and per-criterion band scoring — plus a casual conversational practice mode.</p>
                     </div>
-                    <div className="bc-grid bc-grid-3">
-                        {speakingModules.map((item) => (
-                            <div className="bc-card" key={item.title}>
-                                <span className="bc-card-icon"><i className={item.icon}></i></span>
-                                <h4>{item.title}</h4>
-                                <p>{item.desc}</p>
-                            </div>
-                        ))}
-                    </div>
+                    <Ledger items={speakingModules} />
                 </div>
             </section>
 
             {/* ── Reading ── */}
-            <section className="bc-section bc-alt" id="reading" ref={registerSection('reading')}>
+            <section className="bc-section bc-alt" id="reading">
                 <div className="bc-container">
                     <div className="bc-section-head">
-                        <span className="bc-eyebrow">Skill Module</span>
+                        <span className="bc-eyebrow">Skill Module 03</span>
                         <h2>Reading</h2>
                         <p>Academic and General Training test libraries with a full-featured exam interface, every official question type, and a resizable split pane on desktop.</p>
                     </div>
-                    <div className="bc-grid bc-grid-2">
-                        {readingFeatures.map((item) => (
-                            <div className="bc-card" key={item.title}>
-                                <span className="bc-card-icon"><i className={item.icon}></i></span>
-                                <h4>{item.title}</h4>
-                                <p>{item.desc}</p>
-                            </div>
-                        ))}
-                    </div>
+                    <Ledger items={readingFeatures} />
                 </div>
             </section>
 
             {/* ── Listening ── */}
-            <section className="bc-section" id="listening" ref={registerSection('listening')}>
+            <section className="bc-section" id="listening">
                 <div className="bc-container">
                     <div className="bc-section-head">
-                        <span className="bc-eyebrow">Skill Module</span>
+                        <span className="bc-eyebrow">Skill Module 04</span>
                         <h2>Listening</h2>
                         <p>Mock mode mirrors the real exam exactly — no rewinding. Practice mode gives full audio controls. Both modes auto-save your position so you can always pick up where you left off.</p>
                     </div>
-                    <div className="bc-grid bc-grid-2">
-                        {listeningFeatures.map((item) => (
-                            <div className="bc-card" key={item.title}>
-                                <span className="bc-card-icon"><i className={item.icon}></i></span>
-                                <h4>{item.title}</h4>
-                                <p>{item.desc}</p>
-                            </div>
-                        ))}
-                    </div>
+                    <Ledger items={listeningFeatures} />
                 </div>
             </section>
 
             {/* ── Analysis ── */}
-            <section className="bc-section bc-alt" id="analysis" ref={registerSection('analysis')}>
+            <section className="bc-section bc-alt" id="analysis">
                 <div className="bc-container">
                     <div className="bc-section-head">
-                        <span className="bc-eyebrow">Progress & Insights</span>
+                        <span className="bc-eyebrow">Progress &amp; Insights</span>
                         <h2>Analysis &amp; Progress Tracking</h2>
                         <p>A full picture of where you stand — radar charts, band trend lines, AI-generated recommendations, weakest topics, and most frequent errors all in one place.</p>
                     </div>
-                    <div className="bc-grid bc-grid-4">
-                        {analysisFeatures.map((item) => (
-                            <div className="bc-card" key={item.title}>
-                                <span className="bc-card-icon"><i className={item.icon}></i></span>
-                                <h4>{item.title}</h4>
-                                <p>{item.desc}</p>
-                            </div>
-                        ))}
-                    </div>
+                    <SpecGrid items={analysisFeatures} />
 
                     {/* Mistake Vault callout */}
                     <div className="bc-pub" style={{ marginTop: '48px' }}>
-                        <span className="bc-pub-icon"><i className="bi bi-journal-x" style={{ fontSize: '2rem', color: 'var(--bc-primary)' }}></i></span>
+                        <span className="bc-pub-icon"><i className="bi bi-journal-x" style={{ fontSize: '2rem', color: 'var(--bc-accent)' }}></i></span>
                         <div>
                             <div className="bc-pub-label">Automatic Error Intelligence</div>
                             <h4>Mistake Vault</h4>
@@ -227,10 +219,10 @@ const ProjectIELTSTutors = () => {
             </section>
 
             {/* ── Gamification & Features ── */}
-            <section className="bc-section" id="features" ref={registerSection('features')}>
+            <section className="bc-section" id="features">
                 <div className="bc-container">
                     <div className="bc-section-head">
-                        <span className="bc-eyebrow">Engagement & Planning</span>
+                        <span className="bc-eyebrow">Engagement &amp; Planning</span>
                         <h2>Gamification &amp; Study Scheduler</h2>
                         <p>Streaks, milestones, a target band tracker, and a conflict-aware weekly planner keep preparation consistent and motivated.</p>
                     </div>
@@ -243,68 +235,18 @@ const ProjectIELTSTutors = () => {
                             </div>
                         ))}
                     </div>
-
-                    {/* Premium Plans */}
-                    {/* <div className="bc-section-head" style={{ marginTop: '60px' }}>
-                        <span className="bc-eyebrow">Subscription</span>
-                        <h2>Premium Plans</h2>
-                        <p>Three tiers for different preparation intensities. Annual billing available with a 20% discount. Cancel anytime.</p>
-                    </div> */}
-                    {/* <div className="bc-grid bc-grid-3">
-                        {premiumTiers.map((tier) => (
-                            <div className="bc-card bc-premium-card" key={tier.name}>
-                                <h4 className="bc-premium-name">{tier.name}</h4>
-                                <div className="bc-premium-price">{tier.price}</div>
-                                <ul className="bc-premium-list">
-                                    <li><span>Writing evaluations</span><strong>{tier.writing}</strong></li>
-                                    <li><span>Speaking mocks</span><strong>{tier.speaking}</strong></li>
-                                    <li><span>AI mentor chats</span><strong>{tier.mentor}</strong></li>
-                                    <li><span>Priority AI scoring</span><strong>{tier.priority}</strong></li>
-                                    <li><span>Mistake Vault</span><strong>{tier.vault}</strong></li>
-                                </ul>
-                            </div>
-                        ))}
-                    </div> */}
                 </div>
             </section>
 
             {/* ── Platform ── */}
-            <section className="bc-section bc-alt" id="platform" ref={registerSection('platform')}>
+            <section className="bc-section bc-alt" id="platform">
                 <div className="bc-container">
                     <div className="bc-section-head">
                         <span className="bc-eyebrow">Availability</span>
                         <h2>Platform</h2>
-                        <p>Available on Android, and web — with close feature parity across all three.</p>
+                        <p>Available on Android and web — with close feature parity across both.</p>
                     </div>
-                    <div className="bc-grid bc-grid-2">
-                       
-                        <div className="bc-card">
-                            <span className="bc-card-icon"><i className="bi bi-android2"></i></span>
-                            <h4>Android</h4>
-                            <p>Built with React Native / Expo. Full feature parity with Web including offline mode and push reminders.</p>
-                        </div>
-                        <div className="bc-card">
-                            <span className="bc-card-icon"><i className="bi bi-display"></i></span>
-                            <h4>Web</h4>
-                            <p>Optimised for desktop. Adds resizable split panes for side-by-side reading, writing, and chart layouts.</p>
-                        </div>
-                    </div>
-
-                    {/* <div className="bc-grid bc-grid-2" style={{ marginTop: '40px' }}>
-                        {[
-                            'Auto-saved drafts — a phone call or accidental close never loses your work',
-                            'Silence detection in speaking — submits after 6 s just like a real examiner',
-                            'Resume-anywhere listening — answers and audio position saved automatically',
-                            'Text annotation and highlighting in Reading (web)',
-                            'Light, Dark, or System theme with Academic / General Training exam mode toggle',
-                            'Pause account preserves all data; delete account removes everything permanently',
-                        ].map((benefit) => (
-                            <div className="bc-benefit" key={benefit}>
-                                <i className="bi bi-check-circle-fill"></i>
-                                <p>{benefit}</p>
-                            </div>
-                        ))}
-                    </div> */}
+                    <SpecGrid items={platforms} />
                 </div>
             </section>
 

@@ -1,15 +1,5 @@
-import React, { useEffect, useRef, useState } from 'react';
 import '../../assets/css/ProjectShowcase.css';
-
-const NAV_SECTIONS = [
-    { id: 'overview', label: 'Overview' },
-    { id: 'challenge', label: 'Challenge' },
-    { id: 'solution', label: 'Capabilities' },
-    { id: 'workflow', label: 'Workflow' },
-    { id: 'impact', label: 'Impact' },
-    { id: 'future', label: 'Future' },
-    { id: 'team', label: 'Collaboration' },
-];
+import ShowcaseFacts from '../../components/showcase/ShowcaseFacts';
 
 const heroStats = [
     { icon: 'bi bi-lightning-charge', num: '<20s', label: 'Average time to generate an initial segmentation pass' },
@@ -69,33 +59,10 @@ const collaborators = [
     { icon: 'bi bi-cpu', role: 'Engineering Team', name: 'Big-Matrix Solutions', image: '/assets/images/big_matrix_cube.png', desc: 'Builds the editor workflow, model integration, and export pipeline for production use.' },
 ];
 
-const ProjectXRaySegmentation = () => {
-    const [activeSection, setActiveSection] = useState('overview');
-    const sectionRefs = useRef({});
-
-    useEffect(() => {
-        const observer = new IntersectionObserver(
-            (entries) => {
-                entries.forEach((entry) => {
-                    if (entry.isIntersecting) {
-                        setActiveSection(entry.target.id);
-                    }
-                });
-            },
-            { rootMargin: '-45% 0px -50% 0px', threshold: 0 }
-        );
-
-        const nodes = Object.values(sectionRefs.current).filter(Boolean);
-        nodes.forEach((node) => observer.observe(node));
-        return () => observer.disconnect();
-    }, []);
-
-    const registerSection = (id) => (el) => {
-        sectionRefs.current[id] = el;
-    };
+const ProjectXRaySegmentation = () => {
 
     return (
-        <div className="bc-showcase" >
+        <div className="bc-showcase">
             <section className="bc-hero">
                 <div className="bc-container">
                     <div className="bc-hero-grid">
@@ -125,7 +92,7 @@ const ProjectXRaySegmentation = () => {
                 </div>
             </section>
 
-            <div className="bc-stats">
+            <div className="bc-stats" id="overview">
                 <div className="bc-container">
                     <div className="bc-stats-grid">
                         {heroStats.map((stat) => (
@@ -136,11 +103,12 @@ const ProjectXRaySegmentation = () => {
                             </div>
                         ))}
                     </div>
+                    <ShowcaseFacts items={projectFacts} />
                 </div>
             </div>
 
 
-            <section className="bc-section bc-alt" id="challenge" ref={registerSection('challenge')}>
+            <section className="bc-section bc-alt" id="challenge">
                 <div className="bc-container">
                     <div className="bc-section-head">
                         <span className="bc-eyebrow">Why it matters</span>
@@ -162,7 +130,7 @@ const ProjectXRaySegmentation = () => {
                 </div>
             </section>
 
-            <section className="bc-section" id="solution" ref={registerSection('solution')}>
+            <section className="bc-section" id="solution">
                 <div className="bc-container">
                     <div className="bc-section-head">
                         <span className="bc-eyebrow">The approach</span>
@@ -184,7 +152,7 @@ const ProjectXRaySegmentation = () => {
                 </div>
             </section>
 
-            <section className="bc-section bc-alt" id="workflow" ref={registerSection('workflow')}>
+            <section className="bc-section bc-alt" id="workflow">
                 <div className="bc-container">
                     <div className="bc-section-head">
                         <span className="bc-eyebrow">How it works</span>
@@ -205,7 +173,7 @@ const ProjectXRaySegmentation = () => {
                 </div>
             </section>
 
-            <section className="bc-section" id="impact" ref={registerSection('impact')}>
+            <section className="bc-section" id="impact">
                 <div className="bc-container">
                     <div className="bc-section-head">
                         <span className="bc-eyebrow">Key outcomes</span>
@@ -223,7 +191,7 @@ const ProjectXRaySegmentation = () => {
                 </div>
             </section>
 
-            <section className="bc-section bc-alt" id="future" ref={registerSection('future')}>
+            <section className="bc-section bc-alt" id="future">
                 <div className="bc-container">
                     <div className="bc-section-head">
                         <span className="bc-eyebrow">What&apos;s next</span>
@@ -262,10 +230,10 @@ const ProjectXRaySegmentation = () => {
                 </div>
             </section>
 
-            <section className="bc-section" id="team" ref={registerSection('team')}>
+            <section className="bc-section" id="team">
                 <div className="bc-container">
                     <div className="bc-section-head bc-left">
-                        <span className="bc-eyebrow" >Collaboration</span>
+                        <span className="bc-eyebrow">Collaboration</span>
                         <h2>Cross-Functional Team</h2>
                         <p>Clinical insight, annotation operations, and product engineering working in one delivery loop.</p>
                     </div>
