@@ -20,8 +20,8 @@ const DIRECT_LINES = [
     {
         icon: 'bi bi-envelope-fill',
         label: 'Email',
-        value: 'ratimshariar@gmail.com',
-        href: 'mailto:ratimshariar@gmail.com',
+        value: 'bigmatrixsolutions@gmail.com',
+        href: 'mailto:bigmatrixsolutions@gmail.com',
     },
     {
         icon: 'bi bi-geo-alt-fill',

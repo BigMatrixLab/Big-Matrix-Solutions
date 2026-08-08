@@ -8,7 +8,7 @@ import { enrichSolutionHtml } from '../utils/docEnrich';
 
 const PHONE_LABEL = '+880 2 55668200 (6212)';
 const PHONE_HREF = 'tel:+880255668200';
-const EMAIL = 'contact@big-matrix.com';
+const EMAIL = 'bigmatrixsolutions@gmail.com';
 
 const pad = (value) => String(value).padStart(2, '0');
 

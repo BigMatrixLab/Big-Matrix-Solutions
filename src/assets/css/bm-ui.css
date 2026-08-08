@@ -910,6 +910,8 @@ a.bm-card__title:hover,
   gap: clamp(32px, 4vw, 72px);
 }
 
+/* Solid plate, no texture: the illustration carries its own detail and the dot
+   field behind it competed with the artwork. */
 .bm-lab__visual {
   position: relative;
   display: grid;
@@ -917,9 +919,7 @@ a.bm-card__title:hover,
   margin: 0;
   padding: clamp(20px, 2.4vw, 36px);
   aspect-ratio: 5 / 4;
-  background-color: var(--bm-surface);
-  background-image: var(--bm-grid);
-  background-size: var(--bm-grid-size);
+  background-color: var(--bm-surface-2);
   border-radius: var(--bm-r-lg);
   overflow: hidden;
 }
@@ -945,16 +945,17 @@ a.bm-card__title:hover,
   line-height: 1;
   letter-spacing: var(--bm-track-label);
   text-transform: uppercase;
-  color: var(--bm-text-3);
-  background: var(--bm-bg);
+  color: #fff;
+  background: var(--bm-accent-fill);
   border-bottom-right-radius: var(--bm-r-sm);
 }
 
+/* White marker, since the tag now sits on the accent fill. */
 .bm-lab__tag::before {
   content: '';
   width: 5px;
   height: 5px;
-  background: var(--bm-orange);
+  background: #fff;
   border-radius: 50%;
 }
 
@@ -1244,8 +1245,13 @@ a.bm-card__title:hover,
   .bm-footer__top { grid-template-columns: repeat(2, minmax(0, 1fr)); }
 }
 
+/* Phones: keep the two link columns paired on one row — they are short lists,
+   and stacking them one per row pushed the contact block far down. The brand
+   and contact blocks carry longer copy, so they take the full width. */
 @media (max-width: 575px) {
-  .bm-footer__top { grid-template-columns: minmax(0, 1fr); }
+  .bm-footer__top { grid-template-columns: repeat(2, minmax(0, 1fr)); }
+  .bm-footer__top > :first-child,
+  .bm-footer__top > :last-child { grid-column: 1 / -1; }
 }
 
 /* --------------------------------------------------------------------------

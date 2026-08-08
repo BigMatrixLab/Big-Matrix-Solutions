@@ -147,7 +147,7 @@ const ProjectDetails = () => {
                     </h3>
                     <span className="widget-sidber-contact-gmail">
                       <i className="bi bi-envelope-fill"></i>{" "}
-                      contact@big-matrix.com
+                      bigmatrixsolutions@gmail.com
                     </span>
                     <div className="widget-sidber-contact-btn">
                       <Link to="/contact">

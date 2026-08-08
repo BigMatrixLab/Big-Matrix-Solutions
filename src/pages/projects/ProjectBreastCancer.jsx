@@ -61,7 +61,8 @@ const team = [
     { icon: 'bi bi-building', role: 'Industry Partner', name: 'Big-Matrix Solutions', image: '/assets/images/big_matrix_cube.png', desc: 'Provides engineering, deployment, and clinical-integration expertise.' },
 ];
 
-const ProjectBreastCancer = () => {
+const ProjectBreastCancer = () => {
+
 
     return (
         <>
@@ -285,8 +286,8 @@ const ProjectBreastCancer = () => {
                     <div className="bc-cta-contact">
                         <a href="tel:+88025566820">
                             <i className="bi bi-telephone-fill"></i> +880-2-55668200 (Ext: 6212)
-                        </a>
-                        <a href="mailto:contact@big-matrix.com">
+                        </a>bigmatrixsolutions@gmail.com
+                        <a href="mailto:contact@big-matrix.com">bigmatrixsolutions@gmail.com
                             <i className="bi bi-envelope-fill"></i> contact@big-matrix.com
                         </a>
                         <span>
