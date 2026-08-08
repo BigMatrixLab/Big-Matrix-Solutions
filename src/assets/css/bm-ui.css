@@ -2860,9 +2860,13 @@ a.bm-card__title:hover,
    21. Insights — featured post above the grid
    ========================================================================== */
 
+/* Mobile-first: one column is the default. The side-by-side composition is
+   enabled only at true desktop width below, so tablets cannot inherit it even
+   if a max-width media query is missed or the browser reports a wider layout
+   viewport while emulating a device. */
 .bm-post-lead {
   display: grid;
-  grid-template-columns: minmax(0, 1.15fr) minmax(0, 1fr);
+  grid-template-columns: minmax(0, 1fr);
   align-items: stretch;
   margin-bottom: clamp(32px, 3vw, 48px);
   background: var(--bm-bg);
@@ -2878,15 +2882,25 @@ a.bm-card__title:hover,
   box-shadow: var(--bm-shadow);
 }
 
+/* `width: 100%` is the important part. Without an explicit width, the aspect
+   ratio resolves against the stretched row height and drives the width instead
+   — which pushed the image past its own track and over the copy column,
+   clipping the first glyph of every line. Pinning the width means the ratio can
+   only ever affect height, and `stretch` overrides that when side by side. */
 .bm-post-lead__shot {
+  position: relative;
   display: block;
+  width: 100%;
+  min-width: 0;
+  aspect-ratio: 16 / 9;
   overflow: hidden;
-  aspect-ratio: 16 / 10;
   background: var(--bm-surface-2);
-  border-right: 1px solid var(--bm-line);
+  border-bottom: 1px solid var(--bm-line);
 }
 
 .bm-post-lead__shot img {
+  position: absolute;
+  inset: 0;
   display: block;
   width: 100%;
   height: 100%;
@@ -2901,6 +2915,7 @@ a.bm-card__title:hover,
   flex-direction: column;
   align-items: flex-start;
   justify-content: center;
+  min-width: 0;
   padding: clamp(24px, 2.8vw, 44px);
 }
 
@@ -2947,12 +2962,17 @@ a.bm-card__title:hover,
   text-align: left;
 }
 
-@media (max-width: 991px) {
-  .bm-post-lead { grid-template-columns: minmax(0, 1fr); }
+/* Only full desktop layouts place the image and copy side by side. */
+@media (min-width: 1200px) {
+  .bm-post-lead {
+    grid-template-columns: minmax(0, 1.15fr) minmax(0, 1fr);
+  }
 
   .bm-post-lead__shot {
-    border-right: 0;
-    border-bottom: 1px solid var(--bm-line);
+    aspect-ratio: auto;
+    min-height: 360px;
+    border-right: 1px solid var(--bm-line);
+    border-bottom: 0;
   }
 }
 
@@ -3335,3 +3355,126 @@ a.bm-card__title:hover,
 .bm-doc__body .bm-meters { margin: var(--bm-5) 0 var(--bm-6); }
 .bm-doc__body .bm-ledger { margin: var(--bm-5) 0 0; }
 .bm-doc__body .bm-ledger > li { padding: var(--bm-4) 0; }
+
+/* ========================================================================== 
+   24. Select popover — shadcn-style custom combobox
+   ========================================================================== */
+
+.bm-select {
+  position: relative;
+  min-width: 0;
+}
+
+.bm-select.is-open { z-index: 60; }
+
+.bm-select__trigger {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  gap: var(--bm-3);
+  width: 100%;
+  min-height: 46px;
+  padding: 11px 13px 11px 14px;
+  font-family: var(--bm-font-body) !important;
+  font-size: var(--bm-fs-sm);
+  font-weight: 400;
+  line-height: 1.5;
+  text-align: left;
+  color: var(--bm-text);
+  background: var(--bm-bg);
+  border: 1px solid var(--bm-line-strong);
+  border-radius: var(--bm-r-sm);
+  box-shadow: none;
+  cursor: pointer;
+  transition: border-color var(--bm-dur) var(--bm-ease-inout),
+              box-shadow var(--bm-dur) var(--bm-ease-inout);
+}
+
+.bm-select__trigger:hover { border-color: #b9b9b0; }
+
+.bm-select__trigger:focus,
+.bm-select.is-open .bm-select__trigger {
+  outline: none;
+  border-color: var(--bm-accent);
+  box-shadow: 0 0 0 3px rgba(236, 54, 46, 0.16);
+}
+
+.bm-select.is-invalid .bm-select__trigger { border-color: var(--bm-accent); }
+
+.bm-select__trigger .is-placeholder { color: var(--bm-text-3); }
+
+.bm-select__trigger > i {
+  flex: 0 0 auto;
+  font-size: 13px;
+  line-height: 1;
+  color: var(--bm-text-3);
+  transition: transform var(--bm-dur) var(--bm-ease);
+}
+
+.bm-select.is-open .bm-select__trigger > i { transform: rotate(180deg); }
+
+.bm-select__content {
+  position: absolute;
+  top: calc(100% + 7px);
+  right: 0;
+  left: 0;
+  z-index: 70;
+  display: grid;
+  gap: 2px;
+  max-height: 280px;
+  padding: 6px;
+  overflow-y: auto;
+  background: var(--bm-bg);
+  border: 1px solid var(--bm-line-strong);
+  border-radius: var(--bm-r);
+  box-shadow: 0 14px 36px -12px rgba(28, 27, 22, 0.32), var(--bm-shadow-sm);
+  transform-origin: top center;
+  animation: bmSelectIn 160ms var(--bm-ease) both;
+}
+
+@keyframes bmSelectIn {
+  from { opacity: 0; transform: translateY(-4px) scale(0.985); }
+  to { opacity: 1; transform: translateY(0) scale(1); }
+}
+
+.bm-select__option {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  gap: var(--bm-3);
+  width: 100%;
+  min-height: 38px;
+  padding: 9px 10px;
+  font-family: var(--bm-font-body) !important;
+  font-size: var(--bm-fs-sm);
+  font-weight: 400;
+  line-height: 1.35;
+  text-align: left;
+  color: var(--bm-text);
+  background: transparent;
+  border: 0;
+  border-radius: var(--bm-r-sm);
+  cursor: pointer;
+}
+
+.bm-select__option.is-active { background: var(--bm-surface-2); }
+
+.bm-select__option[aria-selected='true'] {
+  font-weight: 500;
+  color: var(--bm-accent-ink);
+  background: var(--bm-accent-tint);
+}
+
+.bm-select__option > i {
+  flex: 0 0 auto;
+  font-size: 15px;
+  color: var(--bm-accent);
+}
+
+.bm-field__error {
+  display: block;
+  margin-top: 7px;
+  font-size: var(--bm-fs-xs);
+  line-height: 1.4;
+  color: var(--bm-accent-ink);
+}
