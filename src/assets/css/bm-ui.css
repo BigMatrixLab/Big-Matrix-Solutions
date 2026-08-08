@@ -34,14 +34,10 @@
 .bm-section--opaque { background: var(--bm-bg); }
 .bm-section--flush { border-top: 0; }
 
-/* Parallax band — dot canvas on the root stays fixed so content scrolls over
-   it. No extra gradient layers. */
+/* Parallax band — the fixed dot canvas behind the page does the work, so the
+   section only has to stay out of its way. */
 .bm-section--parallax {
   background: transparent;
-}
-
-@media (max-width: 991px) {
-  .bm-section--parallax { background-attachment: scroll; }
 }
 
 .bm-section--ink {
