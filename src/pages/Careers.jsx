@@ -20,7 +20,11 @@ const Careers = () => {
 
     return (
         <>
-            <Breadcrumb pageTitle="Careers" breadcrumbItem="Careers" />
+            <Breadcrumb
+                pageTitle="Build systems that matter"
+                breadcrumbItem="Careers"
+                description="We are a small team shipping software into hospitals, labs and factory floors. If that appeals, read on."
+            />
 
             <div className="careers-area inner-style">
                 <div className="container">

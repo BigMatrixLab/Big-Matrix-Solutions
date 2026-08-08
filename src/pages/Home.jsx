@@ -2,24 +2,21 @@ import Hero from '../components/Hero';
 import FeatureArea from '../components/FeatureArea';
 import AboutArea from '../components/AboutArea';
 import ServiceArea from '../components/ServiceArea';
-import TeamArea from '../components/TeamArea';
 import PortfolioArea from '../components/PortfolioArea';
-import CounterArea from '../components/CounterArea';
-import TestimonialArea from '../components/TestimonialArea';
-import ContactInfoArea from '../components/ContactInfoArea';
-import PricingArea from '../components/PricingArea';
 import BlogArea from '../components/BlogArea';
+import CtaBand from '../components/CtaBand';
 
 const Home = () => {
     return (
         <>
+            {/* Hero carries the trusted-by rail and fills the first viewport. */}
             <Hero />
             <FeatureArea />
             <AboutArea />
             <ServiceArea />
             <PortfolioArea />
-            <CounterArea />
             <BlogArea />
+            <CtaBand />
         </>
     );
 };

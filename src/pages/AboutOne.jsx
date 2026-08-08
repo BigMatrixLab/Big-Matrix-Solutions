@@ -1,72 +1,70 @@
 import React from 'react';
 import Breadcrumb from '../components/Breadcrumb';
-import TeamArea from '../components/TeamArea';
+import SectionHead from '../components/SectionHead';
 import TestimonialArea from '../components/TestimonialArea';
-import AboutArea from '../components/AboutArea';
 import ValueSection from '../components/ValueSection';
+import CtaBand from '../components/CtaBand';
+
+const PRACTICE_AREAS = [
+    {
+        icon: 'bi-hospital',
+        title: 'Healthcare Ecosystems',
+        desc: 'Intelligent digital solutions including EMR, HMS and diagnostics for modern healthcare delivery.',
+    },
+    {
+        icon: 'bi-cpu',
+        title: 'Advanced AI Research',
+        desc: 'Computational models, deep learning and predictive analytics for complex problem solving.',
+    },
+    {
+        icon: 'bi-gear-wide-connected',
+        title: 'Industrial Transformation',
+        desc: 'Enterprise automation, smart manufacturing systems and data-driven operational optimisation.',
+    },
+    {
+        icon: 'bi-shield-lock',
+        title: 'Secure Infrastructure',
+        desc: 'Scalable, compliant cloud architecture meeting the highest standards of data security.',
+    },
+];
 
 const AboutOne = () => {
     return (
         <>
-            <Breadcrumb pageTitle="About Us" />
+            <Breadcrumb
+                pageTitle="A lab that ships production software"
+                breadcrumbItem="About"
+                description="Big-Matrix Solutions is the development wing of Big-Matrix Lab. We turn applied research into systems that run in hospitals, factories and government infrastructure."
+            />
 
-            {/* Feature Area Style Three */}
-            <div className="feature-area style-three about-one-pt-80">
-                <div className="container">
-                    <div className="row margin-top">
-                        <div className="col-lg-3 col-md-6 col-sm-12">
-                            <div className="single-feature-box h-100">
-                                <div className="feature-icon">
-                                    <img src="/assets/images/home-3/feature-icon-1.png" alt="" />
+            <section className="bm-section">
+                <div className="bm-container">
+                    <SectionHead
+                        eyebrow="Practice areas"
+                        title="Four disciplines, one engineering standard"
+                    />
+                    <div className="bm-grid bm-grid--4">
+                        {PRACTICE_AREAS.map((area) => (
+                            <article className="bm-card" key={area.title}>
+                                <div className="bm-card__body">
+                                    <span className="bm-card__icon">
+                                        <i className={`bi ${area.icon}`} aria-hidden="true"></i>
+                                    </span>
+                                    <h3 className="bm-card__title">{area.title}</h3>
+                                    <p className="bm-card__text">{area.desc}</p>
                                 </div>
-                                <div className="feature-content">
-                                    <h4>Healthcare Ecosystems</h4>
-                                    <p>Intelligent digital solutions including EMR, HMS, and diagnostics for modern healthcare delivery.</p>
-                                </div>
-                            </div>
-                        </div>
-                        <div className="col-lg-3 col-md-6 col-sm-12">
-                            <div className="single-feature-box h-100">
-                                <div className="feature-icon">
-                                    <img src="/assets/images/home-3/feature-icon-2.png" alt="" />
-                                </div>
-                                <div className="feature-content">
-                                    <h4>Advanced AI Research</h4>
-                                    <p>Cutting-edge computational models, deep learning, and predictive analytics for complex problem solving.</p>
-                                </div>
-                            </div>
-                        </div>
-                        <div className="col-lg-3 col-md-6 col-sm-12">
-                            <div className="single-feature-box h-100">
-                                <div className="feature-icon">
-                                    <img src="/assets/images/home-3/feature-icon-3.png" alt="" />
-                                </div>
-                                <div className="feature-content">
-                                    <h4>Industrial Transformation</h4>
-                                    <p>Enterprise automation, smart manufacturing systems, and data-driven operational optimization.</p>
-                                </div>
-                            </div>
-                        </div>
-                        <div className="col-lg-3 col-md-6 col-sm-12">
-                            <div className="single-feature-box h-100">
-                                <div className="feature-icon">
-                                    <img src="/assets/images/home-3/feature-icon-4.png" alt="" />
-                                </div>
-                                <div className="feature-content">
-                                    <h4>Secure Infrastructure</h4>
-                                    <p>Scalable, compliant cloud architecture ensuring highest standards of data security and reliability.</p>
-                                </div>
-                            </div>
-                        </div>
+                            </article>
+                        ))}
                     </div>
                 </div>
-            </div>
+            </section>
 
-           
-            {/* Mission Vison Area */}
-            <div className="mission-area inner-style about-one-pt-80">
-                <div className="container">
-                    
+            <section className="bm-section bm-section--warm">
+                <div className="bm-container">
+                    <SectionHead
+                        eyebrow="What drives us"
+                        title="Mission, vision and the values underneath"
+                    />
 
                     {/* Mission */}
                     <ValueSection
@@ -111,12 +109,16 @@ const AboutOne = () => {
                         reversed={true}
                     />
                 </div>
-            </div>
+            </section>
 
-            <div className="about-one-py-80">
-                <TestimonialArea />
-            </div>
+            <TestimonialArea />
 
+            <CtaBand
+                eyebrow="Work with us"
+                title="Bring us a hard problem."
+                description="Diagnostics, interoperability, automation, scale — the messier the constraints, the more useful we are."
+                secondary={{ label: 'Open roles', to: '/careers' }}
+            />
         </>
     );
 };

@@ -1,108 +1,73 @@
-import React from "react";
-import { Link } from "react-router-dom";
+import React from 'react';
+import { Link } from 'react-router-dom';
+import SectionHead from './SectionHead';
+
+const CAPABILITIES = [
+  { icon: 'bi-patch-check', title: 'Trusted research solutions' },
+  { icon: 'bi-people', title: 'Dedicated engineering team' },
+  { icon: 'bi-headset', title: '24/7 technical support' },
+  { icon: 'bi-graph-up-arrow', title: 'Measured delivery outcomes' },
+];
+
+const STATS = [
+  { value: '10', suffix: '+', label: 'Projects delivered' },
+  { value: '6', suffix: '', label: 'Practice areas' },
+  { value: '5', suffix: '', label: 'Partner institutions' },
+];
 
 const AboutArea = () => {
   return (
-    <div className="about-area style-two" style={{ paddingTop: "300px", paddingBottom: "50px" }}>
-      <div className="container">
-        <div className="row">
-          <div className="col-lg-12 text-center">
-            <div className="section-title center style-two">
-              <h2 style={{ color: "#0C5ADB", paddingBottom: "10px" }}>
-                Our Dedicated Lab
-              </h2>
-              <h1>Transforming Healthcare with</h1>
-              <h1>AI-Powered Solutions</h1>
+    <section className="bm-section bm-about">
+      <div className="bm-container">
+        <SectionHead
+          eyebrow="Our dedicated lab"
+          title="Transforming healthcare with AI-powered systems"
+        />
+        <div className="bm-about__grid">
+          <div>
+            <div className="bm-about__visual">
+              <img
+                src="/assets/images/home-2/about-thumb.png"
+                alt="Big-Matrix research and development lab"
+                loading="lazy"
+              />
             </div>
+            <dl className="bm-about__stats">
+              {STATS.map((stat) => (
+                <div className="bm-about__stat" key={stat.label}>
+                  <dt>
+                    {stat.value}
+                    {stat.suffix && <span>{stat.suffix}</span>}
+                  </dt>
+                  <dd>{stat.label}</dd>
+                </div>
+              ))}
+            </dl>
           </div>
-        </div>
-        <div className="row align-items-center">
-          <div className="col-lg-6 col-md-12 col-sm-12">
-            <div className="about-left">
-              <div className="about-thumb">
-                <img src="/assets/images/home-2/about-thumb.png" alt="" />
-              </div>
-              <div className="about-shape">
-                <img src="/assets/images/home-2/about-shape.png" alt="" />
-              </div>
-              <div className="about-conter-box">
-                <div className="about-counter-title">
-                  <h4>10</h4>
-                  <span>+</span>
-                  <p>
-                    Completed <br /> Projects{" "}
-                  </p>
-                </div>
-              </div>
-            </div>
-          </div>
-          <div className="col-lg-6 col-md-12 col-sm-12">
-            <div className="about-right">
-              <div className="section-title left style-two">
-                <h4>Big-Matrix Research & Development Lab</h4>
-                <p style={{ textAlign: "justify" }}>
-                  We develop cutting-edge software solutions and tools for
-                  medical research and clinical workflows. Our development wing
-                  specializes in creating AI-powered diagnostic systems, machine
-                  learning models, and data analytics platforms that accelerate
-                  medical discoveries and improve patient outcomes.
-                </p>
-              </div>
-              <div className="row">
-                <div className="col-lg-6 col-md-6 col-sm-12">
-                  <div className="single-about-icon-box">
-                    <div className="about-icon">
-                      <img src="/assets/images/home-2/about-icon1.png" alt="" />
-                    </div>
-                    <div className="about-icon-box-content">
-                      <h4>Trusted Research Solutions</h4>
-                    </div>
-                  </div>
-                </div>
-                <div className="col-lg-6 col-md-6 col-sm-12">
-                  <div className="single-about-icon-box">
-                    <div className="about-icon">
-                      <img src="/assets/images/home-2/about-icon2.png" alt="" />
-                    </div>
-                    <div className="about-icon-box-content">
-                      <h4>Expert & Dedicated Team Members</h4>
-                    </div>
-                  </div>
-                </div>
-                <div className="col-lg-6 col-md-6 col-sm-12">
-                  <div className="single-about-icon-box">
-                    <div className="about-icon">
-                      <img src="/assets/images/home-2/about-icon3.png" alt="" />
-                    </div>
-                    <div className="about-icon-box-content">
-                      <h4>24/7 Free Tehcnical Supports</h4>
-                    </div>
-                  </div>
-                </div>
-                <div className="col-lg-6 col-md-6 col-sm-12">
-                  <div className="single-about-icon-box">
-                    <div className="about-icon">
-                      <img src="/assets/images/home-2/about-icon4.png" alt="" />
-                    </div>
-                    <div className="about-icon-box-content">
-                      <h4>100% Customers Satisfaction</h4>
-                    </div>
-                  </div>
-                </div>
-              </div>
-              <div className="toptech-button style-one about-area-btn-mobile-center">
-                <Link to="https://lab.big-matrix.com/">
-                  Learn More<i className="bi bi-arrow-right-circle-fill"></i>
-                </Link>
-              </div>
-              <div className="about-shape-two">
-                <img src="/assets/images/home-2/about-shape2.png" alt="" />
-              </div>
-            </div>
+
+          <div>
+            <h3 className="bm-about__title">Big-Matrix Research &amp; Development Lab</h3>
+            <p className="bm-about__body">
+              We develop software and tooling for medical research and clinical workflows:
+              AI-powered diagnostic systems, machine learning models, and data analytics
+              platforms that shorten the path from discovery to patient outcome.
+            </p>
+            <ul className="bm-checks">
+              {CAPABILITIES.map((item) => (
+                <li key={item.title}>
+                  <i className={`bi ${item.icon}`} aria-hidden="true"></i>
+                  <span>{item.title}</span>
+                </li>
+              ))}
+            </ul>
+            <Link to="https://lab.big-matrix.com/" className="bm-button">
+              Visit the lab
+              <i className="bi bi-arrow-right" aria-hidden="true"></i>
+            </Link>
           </div>
         </div>
       </div>
-    </div>
+    </section>
   );
 };
 

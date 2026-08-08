@@ -122,7 +122,7 @@ const MarkdownRenderer = ({ contentFile, className = '' }) => {
         return (
             <div className={`markdown-content ${className}`}>
                 <div className="loading-spinner" style={{ textAlign: 'center', padding: '3rem 0' }}>
-                    <i className="bi bi-hourglass-split" style={{ fontSize: '2rem', color: '#ED352D' }}></i>
+                    <i className="bi bi-hourglass-split" style={{ fontSize: '2rem', color: 'var(--bm-orange)' }}></i>
                     <p>Loading content...</p>
                 </div>
             </div>

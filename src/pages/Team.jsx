@@ -1,51 +1,37 @@
-import React, { useState } from 'react';
-import { Link } from 'react-router-dom';
+import React from 'react';
 import Breadcrumb from '../components/Breadcrumb';
-import teamData from '../data/team.json';
+import SectionHead from '../components/SectionHead';
 import TeamCard from '../components/TeamCard';
+import CtaBand from '../components/CtaBand';
+import teamData from '../data/team.json';
 
 const Team = () => {
-    const [activeTeamId, setActiveTeamId] = useState(null);
-
-    const toggleSocial = (id) => {
-        if (activeTeamId === id) {
-            setActiveTeamId(null);
-        } else {
-            setActiveTeamId(id);
-        }
-    };
-
-    const teamMembers = teamData;
-
     return (
         <>
-            <Breadcrumb pageTitle="Our Team" breadcrumbItem="Team" />
+            <Breadcrumb
+                pageTitle="The people behind the systems"
+                breadcrumbItem="Team"
+                description="Engineers, researchers and clinicians working across diagnostics, platform infrastructure and applied machine learning."
+            />
 
-            {/* Team Area Style Two */}
-            <div className="team-area style-two team-page-py-80">
-                <div className="container">
-                    <div className="row">
-                        <div className="col-lg-6">
-                            <div className="section-title left style-two team-page-title-mobile-center">
-                                <h2 style={{color: "#0C5ADB", paddingBottom:"10px"}}>Dedicated Team</h2>
-                                <h1>Meet Our Dedicated Member</h1>
-                            </div>
-                        </div>
-                        
-                    </div>
-                    <div className="row g-4">
-                        {teamMembers.map((member) => (
-                            <div className="col-lg-3 col-md-6" key={member.id}>
-                                <TeamCard 
-                                    member={member} 
-                                    activeTeamId={activeTeamId} 
-                                    onToggleSocial={toggleSocial} 
-                                />
-                            </div>
+            <section className="bm-section">
+                <div className="bm-container">
+                    <SectionHead eyebrow="Dedicated team" title="Meet the team" />
+                    <div className="bm-grid bm-grid--4">
+                        {teamData.map((member) => (
+                            <TeamCard member={member} key={member.id} />
                         ))}
                     </div>
                 </div>
-            </div>
+            </section>
+
+            <CtaBand
+                eyebrow="Join us"
+                title="We are hiring."
+                description="If you want to ship software into hospitals, labs and factory floors, take a look at the open roles."
+                primary={{ label: 'Open roles', to: '/careers' }}
+                secondary={{ label: 'Get in touch', to: '/contact' }}
+            />
         </>
     );
 };

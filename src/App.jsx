@@ -59,8 +59,8 @@ function App() {
           <Route path="/about" element={<AboutOne />} />
           <Route path="/service" element={<Services />} />
           <Route path="/service/:slug" element={<ServiceDetails />} />
-          {/* <Route path="/team" element={<Team />} />
-          <Route path="/team/:slug" element={<TeamDetails />} /> */}
+          <Route path="/team" element={<Team />} />
+          <Route path="/team/:slug" element={<TeamDetails />} />
           <Route path="/project" element={<Project />} />
           <Route path="/project/nsu_ctrg_2021_2022_breast_cancer" element={<ProjectBreastCancer />} />
           <Route path="/project/bm-project-management" element={<ProjectManagement />} />

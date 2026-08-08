@@ -39,7 +39,11 @@ const Contact = () => {
 
     return (
         <>
-            <Breadcrumb pageTitle="Contact Us" />
+            <Breadcrumb
+                pageTitle="Talk to the engineering team"
+                breadcrumbItem="Contact"
+                description="Tell us what you are building. We usually reply within one business day."
+            />
 
             <div className="contact-area style-three inner">
                 <div className="container">
@@ -47,7 +51,7 @@ const Contact = () => {
                         <div className="col-lg-8 col-md-12">
                             <div className="single-contact-box">
                                 <div className="contact-contetn">
-                                    <h4>Write to Us Anytime</h4>
+                                    <h4>Send us a brief</h4>
                                 </div>
 
                                 <form onSubmit={handleSubmit}>
@@ -134,7 +138,7 @@ const Contact = () => {
                         <div className="col-lg-4 col-md-12">
                             <div className="single-contact-info-box">
                                 <div className="info-content">
-                                    <h4>Don’t Forget to Contact Us</h4>
+                                    <h4>Direct lines</h4>
                                 </div>
 
                                 <div className="contact-info-box">

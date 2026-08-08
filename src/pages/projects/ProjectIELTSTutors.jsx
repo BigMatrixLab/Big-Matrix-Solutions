@@ -37,7 +37,7 @@ const listeningFeatures = [
 
 const analysisFeatures = [
     { icon: 'bi bi-speedometer2', title: 'Dashboard', desc: 'Daily study streak with flame icon, weekly activity bar chart (minutes per day), and a rotating promo carousel showing streak, target band, and upgrade prompts.' },
-    { icon: 'bi bi-radar', title: 'Radar Chart', desc: 'Visual overview of relative strengths across all four skills in one glance.' },
+    { icon: 'bi bi-pie-chart', title: 'Radar Chart', desc: 'Visual overview of relative strengths across all four skills in one glance.' },
     { icon: 'bi bi-graph-up', title: 'Band Trend Chart', desc: 'Line chart tracking your band score trend over your last 10 attempts per skill.' },
     { icon: 'bi bi-lightbulb', title: 'AI Recommendations', desc: 'Personalised suggestions for where to focus next, weakest topics with band scores, and most frequent errors with occurrence counts.' },
 ];
@@ -211,7 +211,7 @@ const ProjectIELTSTutors = () => {
 
                     {/* Mistake Vault callout */}
                     <div className="bc-pub" style={{ marginTop: '48px' }}>
-                        <span className="bc-pub-icon"><i className="bi bi-journal-x" style={{ fontSize: '2rem', color: '#0c5adb' }}></i></span>
+                        <span className="bc-pub-icon"><i className="bi bi-journal-x" style={{ fontSize: '2rem', color: 'var(--bc-primary)' }}></i></span>
                         <div>
                             <div className="bc-pub-label">Automatic Error Intelligence</div>
                             <h4>Mistake Vault</h4>

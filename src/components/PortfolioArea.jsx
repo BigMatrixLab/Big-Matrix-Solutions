@@ -1,45 +1,64 @@
-import React, { useState, useEffect } from 'react';
+import React from 'react';
+import { Link } from 'react-router-dom';
+import SectionHead from './SectionHead';
+import { projectData } from '../data/content';
 
-import { projectData as projectsData } from '../data/content';
-import ProjectCard from './ProjectCard';
+// Curated selection: the first id is the lead item, the rest sit below it.
+const FEATURED_IDS = ['3', '4', '2'];
 
-const PortfolioArea = () => {
-    const [filter, setFilter] = useState('*');
-    const [items] = useState(projectsData);
-    const [filteredItems, setFilteredItems] = useState(projectsData);
-
-    // Get unique categories from projects
-    const categories = [...new Set(projectsData.map(item => item.category))];
-
-    useEffect(() => {
-        if (filter === '*') {
-            setFilteredItems(items);
-        } else {
-            setFilteredItems(items.filter(item => item.category === filter));
-        }
-    }, [filter, items]);
-
-    return (
-        <div className="project-area inner-style" style={{ paddingTop: "50px", paddingBottom: "50px" }}>
-            <div className="container">
-                <div className="row">
-                    <div className="col-lg-12 text-center">
-                        <div className="section-title center inner-style">
-                            <h2 style={{ color: "#0C5ADB", paddingBottom: "10px" }}>Our Projects</h2>
-                            <h1>Innovative Solutions in Action</h1>
-                            <h1>Transforming Healthcare & Technology</h1>
-                        </div>
-                    </div>
-                </div>
-                <div className="row">
-                    {filteredItems.filter(item => ['3', '4', '2'].includes(item.id)).map((item, index) => (
-                        <div className="col-lg-4 col-md-6 d-flex" key={index}>
-                            <ProjectCard item={item} />
-                        </div>
-                    ))}
-                </div>
+const ShowItem = ({ item, lead = false }) => (
+    <article className={`bm-show${lead ? ' bm-show--lead' : ''}`}>
+        <div className="bm-show__mat">
+            <div className="bm-show__shot">
+                <img src={item.image} alt={item.title} loading="lazy" />
             </div>
         </div>
+        <div className="bm-show__body">
+            <span className="bm-show__tag">{item.category}</span>
+            <h3 className="bm-show__title">{item.title}</h3>
+            {lead && item.desc && <p className="bm-show__text">{item.desc}</p>}
+            <div className="bm-show__foot">
+                <span className="bm-link">
+                    View case study
+                    <i className="bi bi-arrow-right" aria-hidden="true"></i>
+                </span>
+            </div>
+        </div>
+        <Link to={`/project/${item.slug}`} className="bm-show__link">
+            <span>{item.title}</span>
+        </Link>
+    </article>
+);
+
+const PortfolioArea = () => {
+    const featured = FEATURED_IDS
+        .map((id) => projectData.find((project) => project.id === id))
+        .filter(Boolean);
+
+    const [lead, ...rest] = featured;
+    if (!lead) return null;
+
+    return (
+        <section className="bm-section">
+            <div className="bm-container">
+                <SectionHead
+                    eyebrow="Selected work"
+                    title="Innovative solutions in production"
+                    action={{ label: 'All projects', to: '/project' }}
+                />
+
+                <div className="bm-showcase">
+                    <ShowItem item={lead} lead />
+                    {rest.length > 0 && (
+                        <div className="bm-show__row">
+                            {rest.map((item) => (
+                                <ShowItem item={item} key={item.id} />
+                            ))}
+                        </div>
+                    )}
+                </div>
+            </div>
+        </section>
     );
 };
 

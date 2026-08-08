@@ -1,0 +1,141 @@
+/* ==========================================================================
+   Big-Matrix Solutions — Design Tokens
+   Light, high-contrast, engineering-grade system inspired by the
+   Cloudflare design language: hairline borders, near-square radii,
+   restrained elevation, tight geometric display type.
+   ========================================================================== */
+
+@import url('https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700&family=Inter+Tight:wght@400;500;600;700&family=JetBrains+Mono:wght@400;500&display=swap');
+
+:root {
+  /* ---------- Canvas ---------- */
+  --bm-bg: #ffffff;
+  --bm-bg-warm: #fdfdfc;
+  --bm-surface: #fafaf8;
+  --bm-surface-2: #f4f4f1;
+  --bm-surface-3: #ebebe6;
+  --bm-ink-bg: #16150f;
+  --bm-ink-bg-2: #201f17;
+
+  /* ---------- Hairlines ---------- */
+  --bm-line: #e7e7e1;
+  --bm-line-soft: #f0f0ec;
+  --bm-line-strong: #d6d6ce;
+  --bm-line-ink: rgba(255, 255, 255, 0.12);
+
+  /* ---------- Ink / text ---------- */
+  --bm-text: #1c1b16;
+  --bm-text-2: #4f4e46;   /* 8.4:1 on white  */
+  --bm-text-3: #6d6c62;   /* 5.3:1 on white  */
+  --bm-text-inv: #ffffff;
+  --bm-text-inv-2: rgba(255, 255, 255, 0.68);
+
+  /* ---------- Accent (orange) ---------- */
+  --bm-orange: #ff5e1f;        /* brand accent — decoration, rules, icons */
+  --bm-orange-fill: #d64200;   /* accessible fill: 4.5:1 with white text */
+  --bm-orange-hover: #b83700;
+  --bm-orange-deep: #c93e00;   /* large filled surfaces: 5:1 with white body copy */
+  --bm-orange-ink: #8f2b00;    /* accent text on light backgrounds */
+  --bm-orange-tint: #fff3ed;
+  --bm-orange-tint-2: #ffe6da;
+
+  /* ---------- Secondary brand (retained) ---------- */
+  --bm-blue: #0c5adb;
+  --bm-blue-tint: #eef4ff;
+  --bm-red: #ed352d;
+
+  /* ---------- Signal ---------- */
+  --bm-ok: #067647;
+  --bm-warn: #b45309;
+
+  /* ---------- Gradients & washes ---------- */
+  --bm-wash-orange: radial-gradient(60% 70% at 12% 0%, rgba(255, 94, 31, 0.14) 0%, rgba(255, 94, 31, 0) 70%);
+  --bm-wash-warm: linear-gradient(180deg, #fffaf7 0%, #ffffff 62%);
+  --bm-grid: linear-gradient(var(--bm-line-soft) 1px, transparent 1px),
+             linear-gradient(90deg, var(--bm-line-soft) 1px, transparent 1px);
+  --bm-grid-ink: linear-gradient(rgba(255, 255, 255, 0.055) 1px, transparent 1px),
+                 linear-gradient(90deg, rgba(255, 255, 255, 0.055) 1px, transparent 1px);
+  --bm-grid-size: 64px 64px;
+
+  /* ---------- Typography ---------- */
+  --bm-font-display: 'Inter Tight', 'Inter', system-ui, -apple-system, 'Segoe UI', sans-serif;
+  --bm-font-body: 'Inter', system-ui, -apple-system, 'Segoe UI', Roboto, sans-serif;
+  --bm-font-mono: 'JetBrains Mono', ui-monospace, SFMono-Regular, Menlo, monospace;
+
+  --bm-fs-display: clamp(2.35rem, 1.25rem + 3.9vw, 4.25rem);
+  --bm-fs-h1: clamp(1.95rem, 1.3rem + 2.2vw, 3rem);
+  --bm-fs-h2: clamp(1.6rem, 1.25rem + 1.3vw, 2.25rem);
+  --bm-fs-h3: clamp(1.3rem, 1.12rem + 0.7vw, 1.6rem);
+  --bm-fs-h4: clamp(1.08rem, 1.02rem + 0.3vw, 1.25rem);
+  --bm-fs-lead: clamp(1.0625rem, 1rem + 0.3vw, 1.1875rem);
+  --bm-fs-body: 1rem;
+  --bm-fs-sm: 0.9375rem;
+  --bm-fs-xs: 0.8125rem;
+  --bm-fs-label: 0.75rem;
+
+  --bm-lh-display: 1.02;
+  --bm-lh-tight: 1.1;
+  --bm-lh-snug: 1.28;
+  --bm-lh-body: 1.65;
+
+  --bm-track-display: -0.032em;
+  --bm-track-heading: -0.022em;
+  --bm-track-body: -0.006em;
+  --bm-track-label: 0.13em;
+
+  /* ---------- Space ---------- */
+  --bm-1: 4px;
+  --bm-2: 8px;
+  --bm-3: 12px;
+  --bm-4: 16px;
+  --bm-5: 24px;
+  --bm-6: 32px;
+  --bm-7: 48px;
+  --bm-8: 64px;
+  --bm-9: 96px;
+  --bm-section: clamp(56px, 3rem + 4.5vw, 112px);
+  --bm-gutter: clamp(20px, 1rem + 1.5vw, 40px);
+  --bm-max: 1240px;
+
+  /* ---------- Radius (near-square, engineered) ---------- */
+  --bm-r-xs: 2px;
+  --bm-r-sm: 4px;
+  --bm-r: 6px;
+  --bm-r-lg: 10px;
+  --bm-r-pill: 999px;
+
+  /* ---------- Elevation (restrained) ---------- */
+  --bm-shadow-xs: 0 1px 2px rgba(28, 27, 22, 0.04);
+  --bm-shadow-sm: 0 1px 2px rgba(28, 27, 22, 0.05), 0 2px 12px rgba(28, 27, 22, 0.03);
+  --bm-shadow: 0 2px 12px rgba(28, 27, 22, 0.05), 0 12px 40px -12px rgba(28, 27, 22, 0.1);
+  --bm-shadow-lift: 0 2px 8px rgba(28, 27, 22, 0.05), 0 18px 48px -16px rgba(255, 80, 10, 0.18);
+  --bm-shadow-ink: 0 8px 32px -8px rgba(28, 27, 22, 0.4);
+
+  /* ---------- Motion ---------- */
+  --bm-ease: cubic-bezier(0.19, 1, 0.22, 1);
+  --bm-ease-inout: cubic-bezier(0.4, 0, 0.2, 1);
+  --bm-dur-fast: 120ms;
+  --bm-dur: 240ms;
+  --bm-dur-slow: 560ms;
+
+  /* ---------- Layout ---------- */
+  --bm-header-h: 72px;
+  --bm-focus: 0 0 0 2px #ffffff, 0 0 0 4px var(--bm-orange);
+}
+
+@media (prefers-reduced-motion: reduce) {
+  :root {
+    --bm-dur-fast: 1ms;
+    --bm-dur: 1ms;
+    --bm-dur-slow: 1ms;
+  }
+
+  *,
+  *::before,
+  *::after {
+    animation-duration: 1ms !important;
+    animation-iteration-count: 1 !important;
+    transition-duration: 1ms !important;
+    scroll-behavior: auto !important;
+  }
+}

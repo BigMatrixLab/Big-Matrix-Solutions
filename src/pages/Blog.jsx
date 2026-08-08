@@ -6,24 +6,26 @@ import BlogCard from '../components/BlogCard';
 const Blog = () => {
     return (
         <>
-            <Breadcrumb pageTitle="Blog Grid" breadcrumbItem="Blog" />
+            <Breadcrumb
+                pageTitle="Insights from the engineering floor"
+                breadcrumbItem="Insights"
+                description="Research notes, architecture decisions and field observations from the people building the systems."
+            />
 
             {/* Blog Grid Area */}
             <div className="blog-grid-area blog-page-py-80">
                 <div className="container">
                     <div className="row">
-                        <div className="col-lg-12 text-center">
-                            <div className="section-title center inner-style">
-                                <h2 style={{ color: "#0C5ADB", paddingBottom: "10px" }}>Latest Blog</h2>
-                                <h1>Similar Blog Posts</h1>
+                        <div className="col-lg-8">
+                            <div className="section-title left inner-style">
+                                <h2>Latest posts</h2>
+                                <h1>Writing and research</h1>
                             </div>
                         </div>
                     </div>
-                    <div className="row">
+                    <div className="bm-grid">
                         {blogsData.map((post) => (
-                            <div className="col-lg-4 col-md-6 mb-4 d-flex" key={post.id}>
-                                <BlogCard post={post} />
-                            </div>
+                            <BlogCard post={post} key={post.id} />
                         ))}
                     </div>
                 </div>

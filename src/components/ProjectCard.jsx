@@ -2,19 +2,25 @@ import React from 'react';
 import { Link } from 'react-router-dom';
 
 const ProjectCard = ({ item }) => (
-    <div className="single-project-box w-100">
-        <div className="project-thumb">
-            <img src={item.image} alt={item.title} />
+    <article className="bm-card">
+        <div className="bm-card__media">
+            <img src={item.image} alt={item.title} loading="lazy" />
         </div>
-        <div className="project-content">
-            <h4>{item.category}</h4>
-            <Link to={`/project/${item.slug}`}>{item.title}</Link>
-            <Link className="project-button" to={`/project/${item.slug}`}>View Details<i className="bi bi-arrow-right-short"></i></Link>
-            <div className="project-shape">
-                <img src="/assets/images/inner-images/project-shape.png" alt="" />
+        <div className="bm-card__body">
+            <div className="bm-card__meta">
+                <span>{item.category}</span>
+            </div>
+            <h3 className="bm-card__title">
+                <Link to={`/project/${item.slug}`}>{item.title}</Link>
+            </h3>
+            <div className="bm-card__foot">
+                <Link to={`/project/${item.slug}`} className="bm-link">
+                    View details
+                    <i className="bi bi-arrow-right" aria-hidden="true"></i>
+                </Link>
             </div>
         </div>
-    </div>
+    </article>
 );
 
 export default ProjectCard;

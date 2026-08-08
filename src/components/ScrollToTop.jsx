@@ -1,53 +1,45 @@
 import React, { useEffect, useState } from 'react';
 
+const RADIUS = 49;
+const CIRCUMFERENCE = 2 * Math.PI * RADIUS;
+
 const ScrollToTop = () => {
     const [isVisible, setIsVisible] = useState(false);
     const [progress, setProgress] = useState(0);
 
     useEffect(() => {
-        const toggleVisibility = () => {
-            if (window.scrollY > 300) {
-                setIsVisible(true);
-            } else {
-                setIsVisible(false);
-            }
+        const onScroll = () => {
+            const scrolled = window.scrollY;
+            const scrollable = document.documentElement.scrollHeight - window.innerHeight;
 
-            // Calculate progress
-            const scrollTop = window.scrollY;
-            const docHeight = document.documentElement.scrollHeight - window.innerHeight;
-            const scrollPercent = (scrollTop / docHeight) * 100;
-            setProgress(scrollPercent);
+            setIsVisible(scrolled > 320);
+            setProgress(scrollable > 0 ? Math.min(scrolled / scrollable, 1) : 0);
         };
 
-        window.addEventListener('scroll', toggleVisibility);
-
-        return () => window.removeEventListener('scroll', toggleVisibility);
+        window.addEventListener('scroll', onScroll, { passive: true });
+        onScroll();
+        return () => window.removeEventListener('scroll', onScroll);
     }, []);
 
-    const scrollToTop = () => {
-        window.scrollTo({
-            top: 0,
-            behavior: 'smooth'
-        });
-    };
-
-    // Calculate SVG stroke dashoffset
-    const radius = 49;
-    const circumference = 2 * Math.PI * radius;
-    const offset = circumference - (progress / 100) * circumference;
-
     return (
-        <div className={`prgoress_indicator ${isVisible ? 'active-progress' : ''}`} onClick={scrollToTop}>
-            <svg className="progress-circle svg-content" width="100%" height="100%" viewBox="-1 -1 102 102">
-                <path d="M50,1 a49,49 0 0,1 0,98 a49,49 0 0,1 0,-98"
+        <button
+            type="button"
+            className={`bm-totop${isVisible ? ' is-visible' : ''}`}
+            onClick={() => window.scrollTo({ top: 0, behavior: 'smooth' })}
+            aria-label="Back to top"
+            tabIndex={isVisible ? 0 : -1}
+        >
+            <svg viewBox="-1 -1 102 102" aria-hidden="true">
+                <path
+                    d="M50,1 a49,49 0 0,1 0,98 a49,49 0 0,1 0,-98"
                     style={{
-                        transition: 'stroke-dashoffset 10ms linear 0s',
-                        strokeDasharray: `${circumference}, ${circumference}`,
-                        strokeDashoffset: offset
-                    }}>
-                </path>
+                        strokeDasharray: CIRCUMFERENCE,
+                        strokeDashoffset: CIRCUMFERENCE - progress * CIRCUMFERENCE,
+                    }}
+                />
             </svg>
-        </div>
+            <i className="bi bi-arrow-up" aria-hidden="true"></i>
+        </button>
     );
 };
 

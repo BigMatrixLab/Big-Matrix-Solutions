@@ -1,85 +1,97 @@
 import React, { useEffect, useState } from 'react';
-import { Link, useLocation } from 'react-router-dom';
-import '../../public/assets/css/MobileMenu.css'; // Assuming you have a CSS file for styling
+import { Link } from 'react-router-dom';
+import { NAV_ITEMS } from '../data/navigation';
+
 const MobileMenu = () => {
     const [isOpen, setIsOpen] = useState(false);
-    const [isScrolled, setIsScrolled] = useState(false);
-    const location = useLocation();
-    
-    const isHomePage = location.pathname === '/';
+    const [isStuck, setIsStuck] = useState(false);
 
-    // Scroll Logic matching your Header file
     useEffect(() => {
-        const handleScroll = () => {
-            const scrolled = window.scrollY > 100;
-            setIsScrolled(scrolled);
-        };
-        window.addEventListener('scroll', handleScroll);
+        const handleScroll = () => setIsStuck(window.scrollY > 8);
+
+        window.addEventListener('scroll', handleScroll, { passive: true });
         handleScroll();
         return () => window.removeEventListener('scroll', handleScroll);
     }, []);
 
-    const toggleMenu = () => setIsOpen(!isOpen);
-    const handleLinkClick = () => setIsOpen(false);
+    // Lock the page behind the drawer and close it on Escape.
+    useEffect(() => {
+        if (!isOpen) return undefined;
 
-    // Dynamic classes for the top bar
-    const getNavbarClasses = () => {
-        let classes = 'mobile-header-bar d-lg-none';
-        if (isHomePage) {
-            // Home page: transparent when not scrolled, white when scrolled
-            if (!isScrolled) {
-                classes += ' transparent-mobile';
-            } else {
-                classes += ' white-mobile';
-            }
-        } else {
-            // Inner pages: blurred when not scrolled, solid white when scrolled
-            if (!isScrolled) {
-                classes += ' inner-mobile';
-            } else {
-                classes += ' white-mobile';
-            }
-        }
-        return classes;
-    };
+        const onKeyDown = (event) => {
+            if (event.key === 'Escape') setIsOpen(false);
+        };
+
+        document.body.style.overflow = 'hidden';
+        document.addEventListener('keydown', onKeyDown);
+
+        return () => {
+            document.body.style.overflow = '';
+            document.removeEventListener('keydown', onKeyDown);
+        };
+    }, [isOpen]);
 
     return (
-        <div className="mobile-menu-wrapper">
-            {/* Top Bar that changes on scroll */}
-            <div className={getNavbarClasses()}>
-                <div className="mobile-logo">
-                    <Link to="/">
-                        <img src="/assets/images/big_matrix_cube.png" alt="logo" style={{ maxHeight: '40px' }} />
+        <>
+            <header className={`bm-nav d-lg-none${isStuck ? ' bm-nav--stuck' : ''}`}>
+                <div className="bm-container">
+                    <div className="bm-nav__inner">
+                        <Link to="/" className="bm-nav__logo" aria-label="Big-Matrix Solutions — home">
+                            <img src="/assets/images/big_matrix_cube.png" alt="Big-Matrix Solutions" />
+                        </Link>
+                        <button
+                            type="button"
+                            className="bm-nav__toggle"
+                            onClick={() => setIsOpen(true)}
+                            aria-expanded={isOpen}
+                            aria-label="Open menu"
+                        >
+                            <i className="bi bi-list" style={{ fontSize: 24 }} aria-hidden="true"></i>
+                        </button>
+                    </div>
+                </div>
+            </header>
+
+            {isOpen && (
+                <button
+                    type="button"
+                    className="bm-drawer-scrim"
+                    aria-label="Close menu"
+                    onClick={() => setIsOpen(false)}
+                />
+            )}
+
+            <nav
+                className={`bm-drawer d-lg-none${isOpen ? ' is-open' : ''}`}
+                aria-label="Mobile"
+                aria-hidden={!isOpen}
+            >
+                <div className="bm-drawer__head">
+                    <span className="bm-footer__title" style={{ margin: 0 }}>Menu</span>
+                    <button
+                        type="button"
+                        className="bm-nav__toggle"
+                        onClick={() => setIsOpen(false)}
+                        aria-label="Close menu"
+                    >
+                        <i className="bi bi-x-lg" aria-hidden="true"></i>
+                    </button>
+                </div>
+                <ul className="bm-drawer__links">
+                    {NAV_ITEMS.map((item) => (
+                        <li key={item.to}>
+                            <Link to={item.to} onClick={() => setIsOpen(false)}>{item.label}</Link>
+                        </li>
+                    ))}
+                </ul>
+                <div className="bm-drawer__foot">
+                    <Link to="/contact" className="bm-button" onClick={() => setIsOpen(false)}>
+                        Talk to us
+                        <i className="bi bi-arrow-right" aria-hidden="true"></i>
                     </Link>
                 </div>
-                <button className="mobile-menu-toggle" onClick={toggleMenu}>
-                    <svg width="30" height="30" viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth="2">
-                        <line x1="3" y1="12" x2="21" y2="12"></line>
-                        <line x1="3" y1="6" x2="21" y2="6"></line>
-                        <line x1="3" y1="18" x2="21" y2="18"></line>
-                    </svg>
-                </button>
-            </div>
-
-            {/* Backdrop Overlay */}
-            {isOpen && <div className="menu-overlay" onClick={handleLinkClick}></div>}
-
-            {/* Sliding Menu Panel (Always White) */}
-            <nav className={`side-nav ${isOpen ? 'open' : ''}`}>
-                <div className="side-nav-header">
-                    <button className="close-btn" onClick={toggleMenu}>&times;</button>
-                </div>
-                <ul className="nav-links">
-                    <li><Link to="/" onClick={handleLinkClick}>Home</Link></li>
-                    <li><Link to="/about" onClick={handleLinkClick}>About</Link></li>
-                    <li><Link to="/service" onClick={handleLinkClick}>Service</Link></li>
-                    <li><Link to="/project" onClick={handleLinkClick}>Projects</Link></li>
-                    <li><Link to="/careers" onClick={handleLinkClick}>Careers</Link></li>
-                    <li><Link to="/blog" onClick={handleLinkClick}>Blog</Link></li>
-                    <li><Link to="/contact" onClick={handleLinkClick}>Contact</Link></li>
-                </ul>
             </nav>
-        </div>
+        </>
     );
 };
 

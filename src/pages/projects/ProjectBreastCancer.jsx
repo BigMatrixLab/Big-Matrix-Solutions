@@ -67,7 +67,7 @@ const futureDirections = [
 const team = [
     { icon: 'bi bi-person-badge', role: 'Principal Investigator', name: 'Dr. Mohammad Monir Uddin', desc: 'Leads the research, methodology, and clinical validation of the multimodal AI system.' },
     { icon: 'bi bi-mortarboard', role: 'Research Institution', name: 'North South University', desc: 'Hosts and funds the research programme under grant CTRG-21-SEPS-15.' },
-    { icon: 'bi bi-buildings', role: 'Industry Partner', name: 'Big-Matrix Solutions', image: '/assets/images/big_matrix_cube.png', desc: 'Provides engineering, deployment, and clinical-integration expertise.' },
+    { icon: 'bi bi-building', role: 'Industry Partner', name: 'Big-Matrix Solutions', image: '/assets/images/big_matrix_cube.png', desc: 'Provides engineering, deployment, and clinical-integration expertise.' },
 ];
 
 const ProjectBreastCancer = () => {

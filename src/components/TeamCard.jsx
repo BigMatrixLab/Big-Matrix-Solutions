@@ -1,37 +1,41 @@
 import React from 'react';
-import { Link } from 'react-router-dom';
-import '/src/assets/css/TeamCard.css';
+
+const SOCIALS = [
+    { key: 'linkedin', icon: 'bi-linkedin', label: 'LinkedIn' },
+    { key: 'github', icon: 'bi-github', label: 'GitHub' },
+    { key: 'scholar', icon: 'bi-mortarboard', label: 'Google Scholar' },
+    { key: 'website', icon: 'bi-globe', label: 'Website' },
+];
 
 const TeamCard = ({ member }) => {
-    return (
-        <div className="aesthetic-card">
-            <div className="card-media">
-                <img src={member.image} alt={member.name} className="member-image" />
-                
-                {/* Icon-First Social Trigger */}
-                <div className="social-glass-tray">
-                    <div className="icon-list">
-                        {member.social?.linkedin && <Link to={member.social.linkedin} className="s-link"><i className="bi bi-linkedin"></i></Link>}
-                        {member.social?.github && <Link to={member.social.github} className="s-link"><i className="bi bi-github"></i></Link>}
-                        {member.social?.scholar && <Link to={member.social.scholar} className="s-link"><i className="bi bi-mortarboard"></i></Link>}
-                        {member.social?.website && <Link to={member.social.website} className="s-link"><i className="bi bi-globe"></i></Link>}
-                    </div>
-                </div>
-            </div>
+    const links = SOCIALS.filter((social) => member.social?.[social.key]);
 
-            <div className="card-info">
-                <div className="text-content">
-                    {/* <Link to={`/team/${member.slug}`} className="member-name">
-                        {member.name}
-                    </Link> */}
-                    <span className="member-name">
-                        {member.name}
-                    </span>
-                    <p className="member-role">{member.role}</p>
-                </div>
-                <div className="card-accent-line"></div>
+    return (
+        <article className="bm-card bm-card--person">
+            <div className="bm-card__media bm-card__media--square">
+                <img src={member.image} alt={member.name} loading="lazy" />
+                {links.length > 0 && (
+                    <div className="bm-card__tray">
+                        {links.map((social) => (
+                            <a
+                                href={member.social[social.key]}
+                                key={social.key}
+                                target="_blank"
+                                rel="noopener noreferrer"
+                                aria-label={`${member.name} on ${social.label}`}
+                            >
+                                <i className={`bi ${social.icon}`} aria-hidden="true"></i>
+                            </a>
+                        ))}
+                    </div>
+                )}
             </div>
-        </div>
+            <div className="bm-card__body">
+                <h3 className="bm-card__title">{member.name}</h3>
+                <p className="bm-card__meta">{member.role}</p>
+                <span className="bm-card__rule" aria-hidden="true"></span>
+            </div>
+        </article>
     );
 };
 

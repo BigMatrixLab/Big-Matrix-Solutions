@@ -1,200 +1,36 @@
-@import url('https://fonts.googleapis.com/css2?family=Rajdhani:wght@300;400;500;600;700&display=swap');
+/* ==========================================================================
+   Global bootstrap layer.
+   Design tokens and component styling live in:
+     assets/css/bm-tokens.css, bm-core.css, bm-sections.css
+   ========================================================================== */
 
-/* Global Styles */
-*,
-*::placeholder {
-  font-family: 'Rajdhani', sans-serif !important;
-}
-
+html,
 body {
   margin: 0;
   padding: 0;
-  font-family: 'Rajdhani', sans-serif;
+  background-color: #ffffff;
   overflow-x: clip;
-  background-color: #F3F7FD;
 }
 
-/* Old Loader Styles - No longer used (now using preloader.css) */
-/* .loader-wrapper {
-  position: fixed;
-  top: 0;
-  left: 0;
-  width: 100%;
-  height: 100%;
-  background-color: #0a0f1e;
-  z-index: 999999;
-  display: flex;
-  justify-content: center;
-  align-items: center;
-  transition: all 0.5s ease-out;
-}
-
-.loader-image {
-  width: 120px;
-  height: auto;
-  animation: pulse 1.5s ease-in-out infinite;
-}
-
-@keyframes pulse {
-  0%, 100% {
-    transform: scale(1);
-    opacity: 1;
-  }
-  50% {
-    transform: scale(1.05);
-    opacity: 0.9;
-  }
-}
-
-body.loaded .loader-wrapper {
-  opacity: 0;
-  visibility: hidden;
-  pointer-events: none;
-} */
-
-/* Fix for potential white screen / layout issues */
 #root {
   width: 100%;
-  height: 100%;
+  min-height: 100%;
 }
 
-/* Mobile Menu Styles */
-.mobile-menu-area {
-  background: rgba(255, 255, 255, 0.1) !important;
-  backdrop-filter: blur(10px);
-  -webkit-backdrop-filter: blur(10px);
-  box-shadow: 0 2px 10px rgba(0, 0, 0, 0.1);
-  padding: 15px 0;
-}
-
-.mobile-menu-area.sticky {
-  position: fixed;
-  top: 0;
-  left: 0;
-  right: 0;
-  z-index: 999;
-  background: rgba(255, 255, 255, 0.95) !important;
-}
-
-.mobile-menu .mean-bar {
-  display: flex;
-  justify-content: space-between;
-  align-items: center;
-  padding: 0 20px;
-  position: relative;
-}
-
-.mobile-menu .mean-logo {
-  z-index: 1000;
-}
-
-.mobile-menu-toggle {
-  background: none;
-  border: none;
-  cursor: pointer;
-  padding: 10px;
-  display: flex;
-  align-items: center;
-  justify-content: center;
-  color: #1d2124;
-  transition: all 0.3s ease;
-  border-radius: 4px;
-  z-index: 1000;
-}
-
-.mobile-menu-toggle:hover {
-  background: rgba(0, 0, 0, 0.05);
-  transform: scale(1.1);
-}
-
-.mobile-menu-toggle svg {
-  width: 24px;
-  height: 24px;
-}
-
-.mobile-menu .mean-nav {
-  position: fixed;
-  top: 80px;
-  right: -100%;
-  width: 280px;
-  height: calc(100vh - 80px);
-  background: rgba(255, 255, 255, 0.98);
-  backdrop-filter: blur(20px);
-  -webkit-backdrop-filter: blur(20px);
-  box-shadow: -2px 0 20px rgba(0, 0, 0, 0.1);
-  transition: right 0.4s ease;
-  overflow-y: auto;
-  z-index: 998;
-  padding: 20px 0;
-}
-
-.mobile-menu .mean-nav.show {
-  right: 0;
-}
-
-.mobile-menu .mean-nav ul {
-  list-style: none;
-  padding: 0;
-  margin: 0;
-}
-
-.mobile-menu .mean-nav ul li {
-  border-bottom: 1px solid rgba(0, 0, 0, 0.05);
-}
-
-.mobile-menu .mean-nav ul li a {
-  display: block;
-  padding: 15px 25px;
-  color: #1d2124;
-  text-decoration: none;
-  font-weight: 500;
-  font-size: 16px;
-  transition: all 0.3s ease;
-}
-
-.mobile-menu .mean-nav ul li a:hover {
-  background: rgba(0, 0, 0, 0.05);
-  padding-left: 30px;
-  color: #0066cc;
-}
-
-/* Partners Carousel Styles */
-.partners-area {
-  padding: 80px 0;
-  background: url('/assets/images/partner-bg.jpg') no-repeat center center;
-  background-size: 100% 100%;
-  overflow: hidden;
-  position: relative;
-}
-
-.partners-area::before {
-  content: '';
-  position: absolute;
-  top: 0;
-  left: 0;
-  width: 100%;
-  height: 100%;
-  background: rgba(0, 0, 0, 0.5); /* Optional overlay for better text contrast */
-  z-index: 1;
-}
-
-.partners-area .container {
-  position: relative;
-  z-index: 2;
-}
+/* --------------------------------------------------------------------------
+   Partner logo marquee (structure only — skin lives in bm-sections.css)
+   -------------------------------------------------------------------------- */
 
 .partners-carousel-wrapper {
-  overflow: hidden;
-  width: 100%;
   position: relative;
+  width: 100%;
+  overflow: hidden;
 }
 
 .partners-carousel {
   display: flex;
-  gap: 60px;
-  animation: scrollPartners 30s linear infinite;
   width: fit-content;
-  padding-top: 10px;
+  animation: scrollPartners 34s linear infinite;
 }
 
 .partners-carousel:hover {
@@ -203,130 +39,59 @@ body.loaded .loader-wrapper {
 
 .partner-item {
   flex-shrink: 0;
-  width: 200px;
-  height: 120px;
   display: flex;
   align-items: center;
   justify-content: center;
-  padding: 20px;
-  background: #fff;
-  border-radius: 10px;
-  box-shadow: 0 2px 10px rgba(0, 0, 0, 0.08);
-  transition: all 0.3s ease;
-}
-
-.partner-item:hover {
-  transform: translateY(-5px);
-  box-shadow: 0 5px 20px rgba(0, 0, 0, 0.15);
 }
 
 .partner-item img {
   max-width: 100%;
   max-height: 100%;
   object-fit: contain;
-  filter: grayscale(100%);
-  transition: filter 0.3s ease;
-}
-
-.partner-item:hover img {
-  filter: grayscale(0%);
 }
 
 @keyframes scrollPartners {
-  0% {
-    transform: translateX(0);
-  }
-  100% {
-    transform: translateX(-50%);
-  }
+  from { transform: translateX(0); }
+  to { transform: translateX(-50%); }
 }
 
-/* Responsive adjustments */
-@media (max-width: 768px) {
-  .partners-area {
-    padding: 60px 0;
-  }
-  
-  .partner-item {
-    width: 150px;
-    height: 100px;
-  }
-  
-  .partners-carousel {
-    gap: 40px;
-  }
+@media (prefers-reduced-motion: reduce) {
+  .partners-carousel { animation: none; }
 }
 
-/* ============================================
-   FOOTER SOCIAL ICONS STYLES
-   ============================================ */
+/* --------------------------------------------------------------------------
+   Footer / team social icon rows (structure only)
+   -------------------------------------------------------------------------- */
 
-.footer-botton-social-icon ul {
+.footer-botton-social-icon ul,
+.team-details-social-icon ul {
   display: flex;
-  justify-content: center;
-  gap: 0;
   flex-wrap: wrap;
+  gap: 8px;
   padding: 0;
   margin: 0;
   list-style: none;
 }
 
 @media (min-width: 768px) {
-  .footer-botton-social-icon ul {
-    justify-content: flex-end;
-  }
+  .footer-botton-social-icon ul { justify-content: flex-end; }
 }
 
-.footer-botton-social-icon ul li {
-  display: inline-block;
-}
+.footer-botton-social-icon ul li,
+.team-details-social-icon ul li { display: inline-block; }
 
-.footer-botton-social-icon ul li a {
-  background: #354662;
-  width: 38px;
-  height: 38px;
-  border-radius: 50%;
-  color: #fff;
-  margin-left: 7px;
-  transition: 0.5s;
+.footer-botton-social-icon ul li a,
+.team-details-social-icon ul li a {
   display: inline-flex;
   align-items: center;
   justify-content: center;
+  width: 38px;
+  height: 38px;
   text-decoration: none;
 }
 
 .footer-botton-social-icon ul li a i,
-.footer-botton-social-icon ul li a svg {
-  display: flex;
-  align-items: center;
-  justify-content: center;
-}
-
-.footer-botton-social-icon ul li a:hover {
-  background: #004CD7;
-  color: #fff;
-  transform: translateY(-3px);
-}
-
-/* Team Details Social Icons - Same styling as footer */
-.team-details-social-icon ul li {
-  display: inline-block;
-}
-
-.team-details-social-icon ul li a {
-  background: #354662;
-  width: 38px;
-  height: 38px;
-  border-radius: 50%;
-  color: #fff;
-  margin-left: 7px;
-  transition: 0.5s;
-  display: inline-flex;
-  align-items: center;
-  justify-content: center;
-  text-decoration: none;
-}
-
+.footer-botton-social-icon ul li a svg,
 .team-details-social-icon ul li a i,
 .team-details-social-icon ul li a svg {
   display: flex;
@@ -334,501 +99,17 @@ body.loaded .loader-wrapper {
   justify-content: center;
 }
 
-.team-details-social-icon ul li a:hover {
-  background: #004CD7;
-  color: #fff;
-  transform: translateY(-3px);
-}
+/* --------------------------------------------------------------------------
+   Contact info flex behaviour
+   -------------------------------------------------------------------------- */
 
-/* ============================================
-   HERO SECTION RESPONSIVE STYLES
-   ============================================ */
-
-/* Hero section responsive layout */
-.hero-area {
-  min-height: 100vh;
-  padding: clamp(3rem, 5vw, 5rem) 0;
-}
-
-.hero-animation-wrapper {
-  margin-top: 0;
-}
-
-/* Feature area spacing fix for desktop */
-@media (min-width: 992px) {
-  .style-two.feature-area .row.add-marging {
-    margin-top: -90px;
-  }
-}
-
-@media (max-width: 991px) {
-  .hero-area {
-    min-height: 100vh;
-    padding: 4rem 0 6rem;
-  }
-  
-  /* Remove negative margin on feature area for mobile */
-  .style-two.feature-area .row.add-marging {
-    margin-top: 0 !important;
-  }
-  
-  .hero-animation-wrapper {
-    order: -1;
-    margin-bottom: 1.5rem;
-    margin-top: 0;
-  }
-  
-  .hero-content {
-    text-align: center;
-  }
-  
-  .hero-content h1 {
-    font-size: clamp(1.75rem, 5vw, 2.5rem) !important;
-    line-height: 1.2 !important;
-  }
-  
-  .hero-content h4 {
-    font-size: clamp(1rem, 3vw, 1.25rem) !important;
-    margin-bottom: 0.5rem !important;
-  }
-  
-  .hero-content p {
-    font-size: clamp(0.9rem, 2.5vw, 1rem) !important;
-    margin: 0.75rem auto 1.5rem !important;
-    max-width: 100% !important;
-  }
-  
-  .hero-button {
-    display: flex !important;
-    justify-content: center !important;
-    flex-wrap: wrap;
-    gap: 0.75rem;
-    margin-top: 1.5rem !important;
-  }
-  
-  .hero-button a {
-    font-size: clamp(0.8rem, 2vw, 0.9rem) !important;
-    padding: 0.7rem 1.2rem !important;
-    flex: 0 1 auto;
-    white-space: nowrap;
-  }
-}
+.contact-info-wrapper { width: 100%; }
 
 @media (max-width: 767px) {
-  .hero-area {
-    min-height: 100vh;
-    padding: 3rem 0 5rem;
-  }
-  
-  .hero-animation-wrapper {
-    padding: 0 1rem;
-    margin-bottom: 1.25rem;
-  }
-  
-  .hero-content {
-    padding: 0 0.5rem;
-  }
-  
-  .hero-button {
-    padding: 0 0.5rem;
-  }
-}
-
-@media (max-width: 575px) {
-  .hero-area {
-    min-height: 100vh;
-    padding: 2.5rem 0 4.5rem;
-  }
-  
-  .hero-animation-wrapper {
-    margin-bottom: 1rem;
-  }
-  
-  .hero-button {
-    display: flex !important;
-    flex-direction: row !important;
-    gap: 0.5rem;
-    padding: 0 0.75rem;
-  }
-  
-  .hero-button a {
-    flex: 1;
-    font-size: 0.75rem !important;
-    padding: 0.65rem 0.8rem !important;
-    text-align: center;
-    justify-content: center;
-  }
-}
-
-/* iPhone SE and very small screens */
-@media (max-width: 375px) {
-  .hero-area {
-    min-height: 110vh;
-    padding: 2rem 0 4rem;
-  }
-  
-  .hero-animation-wrapper {
-    margin-bottom: 0.75rem;
-  }
-  
-  .hero-content h1 {
-    font-size: 1.5rem !important;
-    line-height: 1.3 !important;
-    margin-bottom: 0.75rem !important;
-  }
-  
-  .hero-content h4 {
-    font-size: 0.95rem !important;
-    margin-bottom: 0.4rem !important;
-  }
-  
-  .hero-content p {
-    font-size: 0.85rem !important;
-    line-height: 1.4 !important;
-    margin: 0.5rem auto 1rem !important;
-  }
-  
-  .hero-button {
-    margin-top: 1rem !important;
-    gap: 0.4rem;
-  }
-  
-  .hero-button a {
-    font-size: 0.7rem !important;
-    padding: 0.6rem 0.6rem !important;
-  }
-}
-
-/* ============================================
-   PORTFOLIO CARD SPACING FIX
-   ============================================ */
-
-/* Prevent portfolio cards from overlapping each other on mobile/tablet */
-@media (max-width: 991px) {
-  .portfolio-area .grid-item {
-    padding-bottom: 85px !important;
-  }
-}
-
-@media (max-width: 767px) {
-  .portfolio-area .grid-item {
-    padding-bottom: 75px !important;
-  }
-}
-
-@media (max-width: 575px) {
-  .portfolio-area .grid-item {
-    padding-bottom: 70px !important;
-  }
-}
-
-/* ============================================
-   BLOG AREA RESPONSIVE STYLES
-   ============================================ */
-
-/* Remove top padding on mobile for blog area */
-@media (max-width: 767px) {
-  .blog-grid-area:not(.services-page-py-80):not(.blog-page-py-80) {
-    padding-top: 0 !important;
-  }
-}
-
-/* ============================================
-   MISSION/VISION/VALUES RESPONSIVE STYLES
-   ============================================ */
-
-/* Hide images and make text full-width on tablet and mobile */
-@media (max-width: 991px) {
-  .value-section-image {
-    display: none !important;
-  }
-  
-  .value-section-content {
-    max-width: 100% !important;
-    flex: 0 0 100% !important;
-  }
-  
-  .mission-box {
-    width: 100% !important;
-    padding: 2rem 1.5rem !important;
-  }
-  
-  .single-icon-box {
-    display: flex !important;
-    flex-direction: row !important;
-    align-items: flex-start !important;
-    gap: 1rem !important;
-    margin-bottom: 1rem !important;
-  }
-  
-  .single-icon-thumb {
-    flex-shrink: 0 !important;
-    margin-bottom: 0 !important;
-  }
-  
-  .sigle-icon-desc {
-    flex: 1 !important;
-    text-align: left !important;
-  }
-  
-  .sigle-icon-desc p {
-    margin: 0 !important;
-    text-align: left !important;
-  }
-  
-  .mission-content h4 {
-    font-size: 1.5rem !important;
-    margin-bottom: 1rem !important;
-  }
-  
-  .mission-description {
-    font-size: 0.95rem !important;
-    margin-bottom: 1.5rem !important;
-  }
-}
-
-/* ============================================
-   FEATURE CARDS MOBILE & TABLET SPACING
-   ============================================ */
-
-/* Add more gap between feature cards on tablet and mobile */
-@media (max-width: 991px) {
-  .feature-area.style-three .row > [class*="col-"] {
-    margin-bottom: 2rem !important;
-  }
-  
-  .feature-area.style-three .single-feature-box {
-    margin-bottom: 0;
-  }
-}
-
-@media (max-width: 767px) {
-  .feature-area.style-three .row > [class*="col-"] {
-    margin-bottom: 2rem !important;
-  }
-}
-
-@media (max-width: 575px) {
-  .feature-area.style-three .row > [class*="col-"] {
-    margin-bottom: 2.5rem !important;
-  }
-}
-
-/* ============================================
-   ABOUT SECTION RESPONSIVE STYLES
-   ============================================ */
-
-/* Fix about area overflow and responsive issues */
-.style-two.about-area {
-  overflow-x: hidden;
-}
-
-.style-two.about-area .container {
-  overflow-x: hidden;
-}
-
-.style-two .about-left {
-  position: relative;
-  overflow: visible;
-}
-
-.style-two .about-thumb {
-  max-width: 100%;
-  overflow: hidden;
-}
-
-.style-two .about-thumb img {
-  width: 100%;
-  max-width: 100%;
-  height: auto !important;
-}
-
-@media (max-width: 991px) {
-  .style-two.about-area {
-    padding: 3rem 0 3rem !important;
-    margin-top: 0 !important;
-  }
-  
-  .style-two .about-left {
-    margin-bottom: 3rem;
-    padding: 0 1rem;
-  }
-  
-  .style-two .about-thumb img {
-    width: 100%;
-    height: auto !important;
-    max-width: 500px;
-    display: block;
-    margin: 0 auto;
-  }
-  
-  .style-two .about-shape {
-    display: none !important;
-  }
-  
-  .style-two .about-conter-box {
-    display: none !important;
-  }
-  
-  .style-two .about-right {
-    padding: 0 1rem;
-  }
-  
-  .style-two .about-shape-two {
-    display: none !important;
-  }
-  
-  .style-two .single-about-icon-box {
-    margin-bottom: 1.5rem;
-  }
-  
-  .style-two.about-area .section-title h1 {
-    font-size: clamp(1.5rem, 4vw, 2rem) !important;
-    line-height: 1.3 !important;
-  }
-  
-  .style-two.about-area .section-title h4 {
-    font-size: clamp(1rem, 3vw, 1.25rem) !important;
-  }
-  
-  .style-two.about-area .section-title p {
-    text-align: left !important;
-  }
-}
-
-@media (max-width: 767px) {
-  .style-two .about-thumb img {
-    max-width: 400px;
-  }
-  
-  .style-two .about-conter-box {
-    padding: 12px 30px !important;
-  }
-  
-  .style-two .about-counter-title span,
-  .style-two .about-counter-title h4 {
-    font-size: 40px !important;
-  }
-  
-  .style-two .about-counter-title p {
-    font-size: 14px !important;
-  }
-  
-  .style-two .about-left {
-    padding: 0 0.5rem;
-  }
-  
-  .style-two .about-right {
-    padding: 0 0.5rem;
-  }
-  
-  .style-two.about-area .section-title h1 {
-    font-size: 1.5rem !important;
-  }
-}
-
-@media (max-width: 575px) {
-  .style-two .about-thumb img {
-    max-width: 100%;
-  }
-  
-  .style-two .about-conter-box {
-    padding: 10px 25px !important;
-  }
-  
-  .style-two .about-counter-title span,
-  .style-two .about-counter-title h4 {
-    font-size: 32px !important;
-    padding: 0 0 10px 0 !important;
-  }
-  
-  .style-two .about-counter-title p {
-    font-size: 13px !important;
-  }
-  
-  .style-two.about-area .section-title h1 {
-    font-size: 1.25rem !important;
-  }
-  
-  .style-two .about-icon-box-content h4 {
-    font-size: 15px !important;
-    line-height: 1.4 !important;
-  }
-}
-
-/* Contact Info Responsive Layout */
-.contact-info-wrapper {
-  width: 100%;
-}
-
-@media (max-width: 767px) {
-  .contact-info-item {
-    flex: 1 1 100%;
-    width: 100%;
-  }
-  
-  .contact-info-box {
-    width: 100%;
-  }
+  .contact-info-item,
+  .contact-info-box { width: 100%; flex: 1 1 100%; }
 }
 
 @media (min-width: 768px) {
-  .contact-info-item {
-    flex: 1;
-    min-width: 0;
-  }
-}
-
-/* ============================================
-   FOOTER RESPONSIVE STYLES
-   ============================================ */
-
-/* Add more gap above sections in footer on mobile */
-@media (max-width: 767px) {
-  .footer-area .footer-widget-content {
-    margin-top: 3rem;
-    padding-left: 2rem;
-  }
-  
-  .footer-area .row > [class*="col-"]:first-child .footer-widget-content {
-    margin-top: 0;
-  }
-  
-  /* Center footer logo and description on mobile */
-  .footer-area .footer-logo {
-    justify-content: center;
-    text-align: center;
-  }
-  
-  .footer-area .footer-logo .d-flex {
-    justify-content: center !important;
-  }
-  
-  .footer-area .footer-widget-desc {
-    text-align: center !important;
-  }
-  
-  .footer-area .footer-widget-desc p {
-    text-align: center !important;
-  }
-}
-
-/* Team area: center whole section on mobile */
-@media (max-width: 767px) {
-  .team-area-mobile-center .container {
-    text-align: center;
-    display: flex;
-    flex-direction: column;
-    align-items: center;
-  }
-  .team-area-mobile-center .row {
-    justify-content: center;
-  }
-  .team-area-mobile-center .section-title.left {
-    text-align: center;
-  }
-  .team-area-mobile-center .toptech-button {
-    display: flex;
-    justify-content: center;
-  }
+  .contact-info-item { flex: 1; min-width: 0; }
 }

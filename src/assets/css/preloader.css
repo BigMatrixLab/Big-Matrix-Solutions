@@ -2,7 +2,7 @@
 html, body {
   margin: 0;
   padding: 0;
-  background-color: #0d1117;
+  background-color: #ffffff;
 }
 
 body:not(.loaded) {
@@ -10,8 +10,8 @@ body:not(.loaded) {
 }
 .bm-loader {
       --duration: 3s;
-      --primary: #0D4678;
-      --primary-light: #0D4678;
+      --primary: #1c1b16;
+      --primary-light: #302e25;
       --primary-rgba: rgba(3, 3, 3, 0);
       width: 200px;
       height: 320px;
@@ -797,7 +797,7 @@ body:not(.loaded) {
     }
 
 .bm-loader {
-  --scene-bg: #0d1117;
+  --scene-bg: #ffffff;
 }
 
 body.loaded #preloader {
@@ -810,3 +810,8 @@ to {
   }
 }
 
+
+/* Fade-out timing for the loading screen. */
+#preloader {
+  transition: opacity 500ms cubic-bezier(0.19, 1, 0.22, 1), visibility 500ms;
+}

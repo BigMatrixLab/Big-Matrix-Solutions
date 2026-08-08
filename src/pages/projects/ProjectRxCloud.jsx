@@ -16,11 +16,11 @@ const audienceCards = [
 ];
 
 const patientFeatures = [
-    { icon: 'bi bi-person-vcard',    title: 'Rich Patient Profiles',     desc: 'Full demographics: name, DOB, gender, blood group, phone, email, NID/passport, address, emergency contacts, and known allergies with severity levels.' },
+    { icon: 'bi bi-person-badge',    title: 'Rich Patient Profiles',     desc: 'Full demographics: name, DOB, gender, blood group, phone, email, NID/passport, address, emergency contacts, and known allergies with severity levels.' },
     { icon: 'bi bi-upc-scan',        title: 'Global MRN',                desc: 'Every patient gets a unique Medical Record Number that persists across clinics and doctors — one identity, everywhere.' },
     { icon: 'bi bi-tags',            title: 'Tags & Filtering',          desc: 'Tag patients (VIP, Chronic, Uninsured, etc.) for instant filtering. Pin important patients to the top of your list.' },
     { icon: 'bi bi-search',          title: 'Powerful Search',           desc: 'Find any patient by name, phone, MRN, email, or NID in seconds.' },
-    { icon: 'bi bi-timeline',        title: 'Patient Timeline',          desc: 'Complete history in one view — visits, prescriptions, lab reports, documents, and messages, ordered by date.' },
+    { icon: 'bi bi-clock-history',   title: 'Patient Timeline',          desc: 'Complete history in one view — visits, prescriptions, lab reports, documents, and messages, ordered by date.' },
     { icon: 'bi bi-exclamation-triangle', title: 'Allergies & Deceased', desc: 'Track allergies (mild / moderate / severe / anaphylaxis). Mark patients as deceased with cause and date.' },
 ];
 

@@ -1,51 +1,35 @@
 import React, { useState } from 'react';
-import { Link } from 'react-router-dom';
+import SectionHead from './SectionHead';
 import teamData from '../data/team.json';
 import TeamCard from './TeamCard';
 
 const TeamArea = () => {
     const [activeTeamId, setActiveTeamId] = useState(null);
 
-    const toggleSocial = (id) => {
-        if (activeTeamId === id) {
-            setActiveTeamId(null);
-        } else {
-            setActiveTeamId(id);
-        }
-    };
+    const toggleSocial = (id) => setActiveTeamId((current) => (current === id ? null : id));
 
     const teamMembers = teamData.slice(0, 4);
 
     return (
-        <div className="team-area style-two team-area-mobile-center" style={{ paddingTop: "50px", paddingBottom: "50px"}}>
-            <div className="container">
-                <div className="row">
-                    <div className="col-lg-7">
-                        <div className="section-title left style-two">
-                            <h2 style={{ color: "#0C5ADB", paddingBottom: "10px" }}>Dedicated Team</h2>
-                            <h1>Meet Our Dedicated Member</h1>
-                            <h1>For Any Enquery</h1>
-                        </div>
-                    </div>
-                    <div className="col-lg-5">
-                        <div className="toptech-button style-one">
-                            <Link to="/team">All Member<i className="bi bi-arrow-right-circle-fill"></i></Link>
-                        </div>
-                    </div>
-                </div>
-                <div className="row g-4">
+        <section className="bm-section bm-section--warm">
+            <div className="bm-container">
+                <SectionHead
+                    eyebrow="The team"
+                    title="Engineers, researchers and clinicians"
+                    action={{ label: 'All members', to: '/team' }}
+                />
+                <div className="bm-grid bm-grid--4">
                     {teamMembers.map((member) => (
-                        <div className="col-lg-3 col-md-6" key={member.id}>
-                            <TeamCard 
-                                member={member} 
-                                activeTeamId={activeTeamId} 
-                                onToggleSocial={toggleSocial} 
-                            />
-                        </div>
+                        <TeamCard
+                            member={member}
+                            activeTeamId={activeTeamId}
+                            onToggleSocial={toggleSocial}
+                            key={member.id}
+                        />
                     ))}
                 </div>
             </div>
-        </div>
+        </section>
     );
 };
 

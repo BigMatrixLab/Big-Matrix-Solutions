@@ -4,15 +4,15 @@ import Breadcrumb from '../components/Breadcrumb';
 const Faqs = () => {
     return (
         <>
-            <Breadcrumb pageTitle="Faqs" breadcrumbItem="Faqs" />
+            <Breadcrumb pageTitle="Frequently asked questions" breadcrumbItem="FAQs" />
 
             <div className="faq-area">
                 <div className="container">
                     <div className="row">
-                        <div className="col-lg-12">
-                            <div className="section-title center">
-                                <h4>Frequently Asked Questions</h4>
-                                <h1>Common Question & Answers</h1>
+                        <div className="col-lg-8">
+                            <div className="section-title left">
+                                <h2>Support</h2>
+                                <h1>Common questions and answers</h1>
                             </div>
                         </div>
                     </div>
