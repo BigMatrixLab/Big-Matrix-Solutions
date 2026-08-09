@@ -1,6 +1,7 @@
 import React, { useEffect, useState } from 'react';
 import { Link } from 'react-router-dom';
 import { NAV_ITEMS } from '../data/navigation';
+import ThemeToggle from './ThemeToggle';
 
 const MobileMenu = () => {
     const [isOpen, setIsOpen] = useState(false);
@@ -39,15 +40,20 @@ const MobileMenu = () => {
                         <Link to="/" className="bm-nav__logo" aria-label="Big-Matrix Solutions — home">
                             <img src="/assets/images/big_matrix_cube.png" alt="Big-Matrix Solutions" />
                         </Link>
-                        <button
-                            type="button"
-                            className="bm-nav__toggle"
-                            onClick={() => setIsOpen(true)}
-                            aria-expanded={isOpen}
-                            aria-label="Open menu"
-                        >
-                            <i className="bi bi-list" style={{ fontSize: 24 }} aria-hidden="true"></i>
-                        </button>
+                        {/* Toggle sits outside the drawer so the theme can be
+                            changed without opening the menu. */}
+                        <div className="bm-nav__actions">
+                            <ThemeToggle size="lg" />
+                            <button
+                                type="button"
+                                className="bm-nav__toggle"
+                                onClick={() => setIsOpen(true)}
+                                aria-expanded={isOpen}
+                                aria-label="Open menu"
+                            >
+                                <i className="bi bi-list" style={{ fontSize: 24 }} aria-hidden="true"></i>
+                            </button>
+                        </div>
                     </div>
                 </div>
             </header>

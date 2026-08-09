@@ -1,8 +1,10 @@
-﻿/* Preloader styles for index.html loader markup */
+﻿/* Preloader styles for index.html loader markup.
+   This file is <link>ed from index.html, so it can load before the token
+   layer; the fallbacks match the light-theme values in bm-tokens.css. */
 html, body {
   margin: 0;
   padding: 0;
-  background-color: #ffffff;
+  background-color: var(--bm-bg, #ffffff);
 }
 
 body:not(.loaded) {
@@ -799,8 +801,11 @@ body:not(.loaded) {
       }
     }
 
+/* The ground plane is masked against the page colour, so it has to match the
+   canvas exactly or the cube leaves a visible rectangle behind it.
+   The dark-theme value is set in bm-theme.css section 3. */
 .bm-loader {
-  --scene-bg: #ffffff;
+  --scene-bg: var(--bm-bg, #ffffff);
 }
 
 body.loaded #preloader {

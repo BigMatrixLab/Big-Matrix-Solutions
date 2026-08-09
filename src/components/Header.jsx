@@ -1,6 +1,7 @@
 import React, { useEffect, useState } from 'react';
 import { Link, useLocation } from 'react-router-dom';
 import { NAV_ITEMS } from '../data/navigation';
+import ThemeToggle from './ThemeToggle';
 
 const Header = () => {
     const [isStuck, setIsStuck] = useState(false);
@@ -42,6 +43,7 @@ const Header = () => {
                     </nav>
 
                     <div className="bm-nav__actions">
+                        <ThemeToggle />
                         <Link to="/contact" className="bm-nav__cta">
                             Talk to us
                             <i className="bi bi-arrow-right" aria-hidden="true"></i>

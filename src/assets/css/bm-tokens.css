@@ -1,13 +1,30 @@
 /* ==========================================================================
    Big-Matrix Solutions — Design Tokens
-   Light, high-contrast, engineering-grade system inspired by the
-   Cloudflare design language: hairline borders, near-square radii,
-   restrained elevation, tight geometric display type.
+   High-contrast, engineering-grade system inspired by the Cloudflare design
+   language: hairline borders, near-square radii, restrained elevation, tight
+   geometric display type.
+
+   Two themes live here. The `:root` block below is the light theme and the
+   default; `:root[data-theme='dark']` further down remaps the same names.
+   Everything downstream reads tokens rather than literals, so a theme switch
+   is a variable swap and nothing else.
+
+   Naming rules that matter when adding tokens:
+   - *-inv / *-ink tokens describe the *dark plane* (footer, CTA slabs, page
+     heads). Those bands stay dark in both themes, so their tokens are NOT
+     remapped by the dark block.
+   - --bm-solid / --bm-solid-fg are the high-contrast solid button pair. They
+     must always be overridden together: in light mode that's white on near
+     black, in dark mode near black on near white.
    ========================================================================== */
 
 @import url('https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700&family=Inter+Tight:wght@400;500;600;700&family=JetBrains+Mono:wght@400;500&display=swap');
 
 :root {
+  /* Lets the UA theme native scrollbars, form controls and spell-check
+     underlines. Without it, dark surfaces get light scrollbars. */
+  color-scheme: light;
+
   /* ---------- Canvas ----------
      Neutral grey ramp. Every step is achromatic so the dark plane
      (--bm-ink-bg) and the light surfaces share one temperature; colour is
@@ -20,6 +37,10 @@
   --bm-surface-3: #eaeaea;
   --bm-ink-bg: #181818;
   --bm-ink-bg-2: #222222;
+  /* Cards and panels that sit above the canvas. Identical to --bm-bg in light
+     mode; in dark mode it lifts slightly so a card reads off the page. */
+  --bm-elevated: #ffffff;
+  --bm-elevated-2: #fafafa;
 
   /* ---------- Hairlines ---------- */
   --bm-line: #e6e6e6;
@@ -31,8 +52,17 @@
   --bm-text: #1c1c1c;
   --bm-text-2: #4e4e4e;   /* 8.3:1 on white  */
   --bm-text-3: #6c6c6c;   /* 5.2:1 on white  */
+  /* On the dark plane. Deliberately not remapped by the dark theme — those
+     bands stay dark in both themes. */
   --bm-text-inv: #ffffff;
   --bm-text-inv-2: rgba(255, 255, 255, 0.68);
+
+  /* ---------- Solid button pair ----------
+     The neutral high-contrast action: near-black plate with a white label.
+     The dark theme inverts both halves together. */
+  --bm-solid: #1c1c1c;
+  --bm-solid-fg: #ffffff;
+  --bm-solid-hover: #000000;
 
   /* ---------- Accent (brand red) ----------
      One hue, stepped by lightness. The base tone is the brand mark; it clears
@@ -43,6 +73,12 @@
   --bm-accent-hover: #b81f16;  /* 6.5:1 */
   --bm-accent-deep: #c62519;   /* large filled surfaces: 5.7:1 with white body copy */
   --bm-accent-ink: #a81f16;    /* accent text on light backgrounds: 7.3:1 */
+  /* Accent text on the dark plane (footer, CTA slabs, page heads, showcase
+     hero). The base tone only reaches 4.34:1 against --bm-ink-bg, so labels on
+     those bands use this lifted step instead: 6.3:1 on the light theme's ink
+     and 7.1:1 on the dark theme's. Identical in both themes, because the bands
+     themselves are dark in both. */
+  --bm-accent-on-ink: #ff5a4f;
   --bm-accent-tint: #fef2f0;
   --bm-accent-tint-2: #fcdedb;
 
@@ -54,6 +90,7 @@
   --bm-orange-hover: var(--bm-accent-hover);
   --bm-orange-deep: var(--bm-accent-deep);
   --bm-orange-ink: var(--bm-accent-ink);
+  --bm-orange-on-ink: var(--bm-accent-on-ink);
   --bm-orange-tint: var(--bm-accent-tint);
   --bm-orange-tint-2: var(--bm-accent-tint-2);
 
@@ -72,7 +109,11 @@
   /* Dot matrix rather than ruled squares. Dots cover far less area than
      lines, so they carry a stronger colour at a tighter pitch and still read
      as texture. */
-  --bm-grid: radial-gradient(var(--bm-line-strong) 1px, transparent 1.5px);
+  /* The dot has its own token rather than reading --bm-line-strong directly:
+     that token also draws form-control and card borders, which need to stay
+     crisp even when the background texture is dialled back. */
+  --bm-grid-dot: var(--bm-line-strong);
+  --bm-grid: radial-gradient(var(--bm-grid-dot) 1px, transparent 1.5px);
   --bm-grid-ink: radial-gradient(rgba(255, 255, 255, 0.16) 1px, transparent 1.5px);
   --bm-grid-size: 22px 22px;
   /* Ruled square grid, on the same pitch as the dots so the two read as one
@@ -148,9 +189,132 @@
   --bm-dur: 240ms;
   --bm-dur-slow: 560ms;
 
+  /* ---------- Chrome (nav, drawers, overlays) ---------- */
+  --bm-nav-bg: rgba(255, 255, 255, 0.82);
+  --bm-nav-bg-stuck: rgba(255, 255, 255, 0.95);
+  --bm-nav-shadow: 0 6px 24px -18px rgba(24, 24, 24, 0.5);
+  --bm-drawer-shadow: -24px 0 60px -30px rgba(24, 24, 24, 0.4);
+  --bm-scrim: rgba(24, 24, 24, 0.44);
+
+  /* ---------- Code / mono surfaces ---------- */
+  --bm-code-bg: #f5f5f5;
+  --bm-code-fg: var(--bm-accent-ink);
+  --bm-pre-bg: #282c34;
+  --bm-pre-fg: #abb2bf;
+
   /* ---------- Layout ---------- */
   --bm-header-h: 72px;
-  --bm-focus: 0 0 0 2px #ffffff, 0 0 0 4px var(--bm-orange);
+  /* Inner ring is the page colour so the halo reads on any surface. */
+  --bm-focus: 0 0 0 2px var(--bm-bg), 0 0 0 4px var(--bm-orange);
+}
+
+/* ==========================================================================
+   Dark theme
+   Set by `data-theme="dark"` on <html>. The attribute is written by an inline
+   script in index.html before first paint, then owned by ThemeProvider.
+
+   Design notes:
+   - The canvas is a near-neutral charcoal rather than pure black, so the
+     hairline system still has somewhere to go and large surfaces do not
+     smear on OLED.
+   - Ink planes (--bm-ink-bg) go *deeper* than the canvas here. In light mode
+     they contrast by being dark; in dark mode they contrast by being darker
+     still, which keeps footer/CTA bands legible as separate bands.
+   - The accent is lifted, not recoloured. #ec362e only clears 4.7:1 on this
+     canvas, so text-weight accents move to the brighter -ink step.
+   ========================================================================== */
+
+:root[data-theme='dark'] {
+  color-scheme: dark;
+
+  /* ---------- Canvas ---------- */
+  --bm-bg: #0f1011;
+  --bm-bg-warm: #131415;
+  --bm-surface: #17181a;
+  --bm-surface-2: #1e2022;
+  --bm-surface-3: #282a2d;
+  --bm-elevated: #17181a;
+  --bm-elevated-2: #1e2022;
+  /* Ink planes go *lighter* than the canvas here, not darker.
+     In the light theme these bands read as slabs because they are dark against
+     white. Taking them below an already-dark canvas gives about 1.05:1, which
+     is not a perceptible edge — the footer and CTA panels would dissolve into
+     the page. Raising them instead keeps the same "this is a distinct band"
+     rhythm, and the white type they carry still clears 15:1. */
+  --bm-ink-bg: #1c1f22;
+  --bm-ink-bg-2: #24282c;
+
+  /* ---------- Hairlines ---------- */
+  --bm-line: #2b2d31;
+  --bm-line-soft: #232528;
+  --bm-line-strong: #3c3f44;
+  /* Slightly stronger than the light theme's, so slab edges stay defined
+     against the raised ink planes above. */
+  --bm-line-ink: rgba(255, 255, 255, 0.14);
+
+  /* ---------- Ink / text ----------
+     Ratios against --bm-bg (#0f1011). */
+  --bm-text: #f1f2f3;      /* 17.4:1 */
+  --bm-text-2: #b9bbbf;    /* 9.7:1  */
+  --bm-text-3: #8f9297;    /* 5.6:1  */
+
+  /* ---------- Solid button pair (inverted) ---------- */
+  --bm-solid: #f1f2f3;
+  --bm-solid-fg: #101113;
+  --bm-solid-hover: #ffffff;
+
+  /* ---------- Accent ----------
+     -fill and -deep keep their light-mode values: they are the steps that
+     carry white labels and already clear 4.5:1 against white. */
+  --bm-accent: #ff5a4f;        /* 6.1:1 — decoration, rules, icons */
+  --bm-accent-fill: #d92d22;   /* 4.8:1 with white text */
+  --bm-accent-hover: #f04a3f;
+  --bm-accent-deep: #c62519;
+  --bm-accent-ink: #ff8078;    /* 8.4:1 — accent text on the dark canvas */
+  --bm-accent-tint: #2a1614;
+  --bm-accent-tint-2: #3e1d19;
+
+  /* ---------- Secondary brand ---------- */
+  --bm-blue: #57a9e2;
+  --bm-blue-tint: #0f2231;
+
+  /* ---------- Signal ---------- */
+  --bm-ok: #43c185;
+  --bm-warn: #e3a552;
+
+  /* ---------- Gradients & washes ---------- */
+  --bm-wash-orange: radial-gradient(60% 70% at 12% 0%, rgba(255, 90, 79, 0.16) 0%, rgba(255, 90, 79, 0) 70%);
+  --bm-wash-warm: linear-gradient(180deg, #1a1214 0%, #0f1011 62%);
+  /* Page dot matrix. This is the single knob for the background texture's
+     strength on the dark canvas — raise it toward #3c3f44 for a more present
+     field, lower it toward #1a1c1f to almost mute it.
+     Reference points, measured against --bm-bg:
+       #3c3f44  1.81:1  inherited from --bm-line-strong; read as noise
+       #292c30  1.38:1  roughly light-mode parity (light sits at 1.48:1)
+       #202327  1.21:1  current — a faint plane rather than a pattern
+     --bm-grid resolves through this token, and --bm-rules through --bm-line,
+     so both follow the theme with no redefinition. */
+  --bm-grid-dot: #202327;
+
+  /* ---------- Elevation ----------
+     Shadows do almost no work on a dark canvas, so they get deeper and the
+     hairline carries the separation instead. */
+  --bm-shadow-xs: 0 1px 2px rgba(0, 0, 0, 0.5);
+  --bm-shadow-sm: 0 1px 2px rgba(0, 0, 0, 0.5), 0 2px 12px rgba(0, 0, 0, 0.35);
+  --bm-shadow: 0 2px 12px rgba(0, 0, 0, 0.45), 0 12px 40px -12px rgba(0, 0, 0, 0.7);
+  --bm-shadow-lift: 0 2px 8px rgba(0, 0, 0, 0.5), 0 18px 48px -16px rgba(255, 90, 79, 0.22);
+  --bm-shadow-ink: 0 8px 32px -8px rgba(0, 0, 0, 0.8);
+
+  /* ---------- Chrome ---------- */
+  --bm-nav-bg: rgba(15, 16, 17, 0.78);
+  --bm-nav-bg-stuck: rgba(15, 16, 17, 0.94);
+  --bm-nav-shadow: 0 6px 24px -18px rgba(0, 0, 0, 0.9);
+  --bm-drawer-shadow: -24px 0 60px -30px rgba(0, 0, 0, 0.85);
+  --bm-scrim: rgba(0, 0, 0, 0.66);
+
+  /* ---------- Code / mono surfaces ---------- */
+  --bm-code-bg: #1e2022;
+  --bm-pre-bg: #16181a;
 }
 
 @media (prefers-reduced-motion: reduce) {

@@ -302,8 +302,8 @@ textarea:focus-visible,
   line-height: 1.2 !important;
   border-radius: var(--bm-r-sm) !important;
   border: 1px solid transparent;
-  background: var(--bm-text) !important;
-  color: #fff !important;
+  background: var(--bm-solid) !important;
+  color: var(--bm-solid-fg) !important;
   text-transform: none !important;
   transition: background var(--bm-dur) var(--bm-ease-inout),
               color var(--bm-dur) var(--bm-ease-inout),
@@ -514,8 +514,8 @@ textarea:focus {
 }
 
 .bm-pagehead__crumbs a:hover {
-  color: var(--bm-orange);
-  border-bottom-color: var(--bm-orange);
+  color: var(--bm-orange-on-ink);
+  border-bottom-color: var(--bm-orange-on-ink);
 }
 
 .bm-pagehead__crumbs li[aria-current] { color: #fff; }
@@ -545,14 +545,14 @@ textarea:focus {
   padding: 10px 16px;
   font-size: var(--bm-fs-sm);
   font-weight: 600;
-  color: #fff;
-  background: var(--bm-text);
+  color: var(--bm-solid-fg);
+  background: var(--bm-solid);
   border-radius: var(--bm-r-sm);
   transform: translateY(-200%);
   transition: transform var(--bm-dur) var(--bm-ease);
 }
 
-.bm-skip-link:focus { transform: translateY(0); color: #fff; }
+.bm-skip-link:focus { transform: translateY(0); color: var(--bm-solid-fg); }
 
 .visually-hidden {
   position: absolute !important;

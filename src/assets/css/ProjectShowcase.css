@@ -6,15 +6,25 @@
    ========================================================= */
 
 .bc-showcase {
+    /* --bc-primary is a FILL: it carries white labels, so it stays at the
+       4.5:1-on-white step in both themes.
+       --bc-primary-text is the same hue as TEXT on the page canvas; it has to
+       move with the theme or accent labels drop under 4:1 on the dark canvas.
+       --bc-accent is only ever used on this page's dark bands (hero, callout,
+       publication, CTA), so it uses the on-ink step. */
     --bc-primary: var(--bm-orange-fill);
+    --bc-primary-text: var(--bm-orange-ink);
     --bc-primary-dark: var(--bm-orange-hover);
     --bc-primary-soft: var(--bm-orange-tint);
     --bc-ink: var(--bm-text);
-    --bc-ink-2: #302e25;
+    --bc-ink-2: var(--bm-text);
     --bc-body: var(--bm-text-2);
     --bc-light: var(--bm-surface);
     --bc-line: var(--bm-line);
-    --bc-accent: var(--bm-orange);
+    --bc-accent: var(--bm-orange-on-ink);
+    /* Card/panel fill. Reads as white in light mode and as a lifted charcoal
+       in dark mode, so every framed block on these pages follows the theme. */
+    --bc-panel: var(--bm-elevated);
     --bc-radius: var(--bm-r);
     --bc-shadow: var(--bm-shadow);
     --bc-shadow-sm: var(--bm-shadow-sm);
@@ -89,7 +99,7 @@
     text-transform: uppercase;
     letter-spacing: 1.5px;
     font-size: 14px;
-    color: var(--bc-primary);
+    color: var(--bc-primary-text);
     margin-bottom: 14px;
 }
 
@@ -287,7 +297,8 @@
     position: absolute;
     bottom: -18px;
     left: -18px;
-    background: #fff;
+    background: var(--bc-panel);
+    border: 1px solid var(--bc-line);
     color: var(--bc-ink);
     border-radius: 12px;
     padding: 14px 18px;
@@ -300,7 +311,7 @@
 
 .bc-figure-tag i {
     font-size: 26px;
-    color: var(--bc-primary);
+    color: var(--bc-primary-text);
 }
 
 .bc-figure-tag strong {
@@ -337,7 +348,7 @@
 .bc-stat-card {
     position: relative;
     overflow: hidden;
-    background: #fff;
+    background: var(--bc-panel);
     border: 1px solid var(--bc-line);
     border-top: 0;
     border-radius: var(--bc-radius);
@@ -364,7 +375,7 @@
     height: 46px;
     border-radius: 12px;
     background: var(--bc-primary-soft);
-    color: var(--bc-primary);
+    color: var(--bc-primary-text);
     display: inline-flex;
     align-items: center;
     justify-content: center;
@@ -468,7 +479,7 @@
    vertically centred, exactly like the section eyebrows. */
 
 .bc-facts {
-    background: #fff;
+    background: var(--bc-panel);
     border: 1px solid var(--bc-line);
     border-radius: var(--bc-radius);
     padding: 8px 26px;
@@ -508,7 +519,7 @@
 }
 
 .bc-fact-row .bc-fact-label i {
-    color: var(--bc-primary);
+    color: var(--bc-primary-text);
     font-size: 17px;
 }
 
@@ -521,7 +532,7 @@
 }
 
 .bc-fact-row .bc-fact-value a {
-    color: var(--bc-primary);
+    color: var(--bc-primary-text);
     text-decoration: none;
 }
 
@@ -548,7 +559,7 @@
 }
 
 .bc-card {
-    background: #fff;
+    background: var(--bc-panel);
     border: 1px solid var(--bc-line);
     border-radius: var(--bc-radius);
     padding: 30px 26px;
@@ -567,7 +578,7 @@
     height: 56px;
     border-radius: 14px;
     background: var(--bc-primary-soft);
-    color: var(--bc-primary);
+    color: var(--bc-primary-text);
     display: inline-flex;
     align-items: center;
     justify-content: center;
@@ -622,7 +633,7 @@
 .bc-specgrid {
     display: grid;
     grid-template-columns: repeat(2, minmax(0, 1fr));
-    background: #fff;
+    background: var(--bc-panel);
     border: 1px solid var(--bc-line);
     border-radius: var(--bc-radius);
     overflow: hidden;
@@ -652,7 +663,7 @@
 
 .bc-spec-label i {
     font-size: 1.05rem;
-    color: var(--bc-primary);
+    color: var(--bc-primary-text);
 }
 
 .bc-specgrid p {
@@ -672,7 +683,7 @@
     display: flex;
     align-items: flex-start;
     gap: 16px;
-    background: #fff;
+    background: var(--bc-panel);
     border: 1px solid var(--bc-line);
     border-radius: 14px;
     padding: 22px 24px;
@@ -685,7 +696,7 @@
 }
 
 .bc-benefit i {
-    color: var(--bc-primary);
+    color: var(--bc-primary-text);
     font-size: 22px;
     margin-top: 2px;
     flex-shrink: 0;
@@ -726,9 +737,9 @@
     width: 64px;
     height: 64px;
     border-radius: 50%;
-    background: #fff;
+    background: var(--bc-panel);
     border: 2px solid var(--bc-primary);
-    color: var(--bc-primary);
+    color: var(--bc-primary-text);
     font-family: "Rajdhani", sans-serif;
     font-weight: 700;
     font-size: 1.5rem;
@@ -739,7 +750,7 @@
 }
 
 .bc-step-body {
-    background: #fff;
+    background: var(--bc-panel);
     border: 1px solid var(--bc-line);
     border-radius: 14px;
     padding: 20px 24px;
@@ -763,7 +774,7 @@
     display: flex;
     align-items: flex-start;
     gap: 14px;
-    background: #fff;
+    background: var(--bc-panel);
     border: 1px solid var(--bc-line);
     border-radius: 12px;
     padding: 20px 22px 20px 26px;
@@ -785,7 +796,7 @@
 }
 
 .bc-future-card i {
-    color: var(--bc-primary);
+    color: var(--bc-primary-text);
     font-size: 22px;
     margin-top: 2px;
 }
@@ -872,7 +883,7 @@
 
 /* ============================= TEAM ============================= */
 .bc-team-card {
-    background: #fff;
+    background: var(--bc-panel);
     border: 1px solid var(--bc-line);
     border-radius: var(--bc-radius);
     padding: 32px 28px;
@@ -891,10 +902,10 @@
     height: 72px;
     border-radius: 50%;
     margin: 0 auto 18px;
-    background: #fff;
+    background: var(--bc-panel);
     border: 1px solid var(--bc-line);
     box-shadow: var(--bc-shadow-sm);
-    color: var(--bc-primary);
+    color: var(--bc-primary-text);
     display: flex;
     align-items: center;
     justify-content: center;
@@ -913,7 +924,7 @@
     text-transform: uppercase;
     letter-spacing: 1px;
     font-size: 12px;
-    color: var(--bc-primary);
+    color: var(--bc-primary-text);
     font-family: "Rajdhani", sans-serif;
     font-weight: 700;
     margin-bottom: 6px;
@@ -1100,7 +1111,7 @@
     font-family: "Rajdhani", sans-serif;
     font-size: 1.9rem;
     font-weight: 700;
-    color: var(--bc-primary);
+    color: var(--bc-primary-text);
     margin-bottom: 22px;
     padding-bottom: 18px;
     border-bottom: 1px solid var(--bc-line);

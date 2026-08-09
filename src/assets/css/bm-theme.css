@@ -1,0 +1,205 @@
+/* ==========================================================================
+   Big-Matrix Solutions — Theme reconciliation
+
+   Loaded last. bm-tokens.css does the real work: almost everything on the site
+   reads tokens, so the dark theme is a variable swap. This file exists for the
+   remainder — colours baked into the purchased template, Bootstrap's own
+   stylesheet, and a handful of third-party surfaces that tokens cannot reach.
+
+   Rules of thumb for anything added here:
+   - Prefer fixing the source rule to read a token. Only fall back to a
+     [data-theme='dark'] override when the source is vendor CSS we do not own.
+   - Scope to :root[data-theme='dark'] so the light theme is never touched.
+   ========================================================================== */
+
+/* --------------------------------------------------------------------------
+   1. Theme transition
+
+   Colour-only transition on the large surfaces, so flipping the toggle reads
+   as a dissolve rather than a hard cut. Deliberately narrow: transitioning
+   every property on every element makes the switch feel laggy and fights the
+   component-level transitions already defined in bm-ui.css.
+
+   `.bm-theming` is added by nothing at present — the transition is always on,
+   but it is excluded during the initial paint by scoping to `body.loaded`,
+   which App.jsx sets once the preloader clears.
+   -------------------------------------------------------------------------- */
+
+body.loaded,
+body.loaded main,
+body.loaded section,
+body.loaded footer,
+body.loaded .bm-card,
+body.loaded .bm-nav,
+body.loaded .bc-card,
+body.loaded .bc-stat-card,
+body.loaded .bc-step-body,
+body.loaded .bc-facts,
+body.loaded .bc-benefit,
+body.loaded .bc-future-card,
+body.loaded .bc-team-card,
+body.loaded .bc-specgrid {
+  transition: background-color var(--bm-dur) var(--bm-ease-inout),
+              border-color var(--bm-dur) var(--bm-ease-inout),
+              color var(--bm-dur) var(--bm-ease-inout);
+}
+
+/* --------------------------------------------------------------------------
+   2. Root canvas
+
+   bm-core.css already paints html/body and the dot field from tokens. These
+   two rules only exist to beat the `background-color: #ffffff` that
+   index.html and src/index.css set on html/body for the preloader.
+   -------------------------------------------------------------------------- */
+
+:root[data-theme='dark'],
+:root[data-theme='dark'] body {
+  background-color: var(--bm-bg);
+}
+
+/* --------------------------------------------------------------------------
+   3. Preloader
+
+   Paints before React mounts, from CSS inlined in index.html. The inline copy
+   handles first paint; this block covers the case where the visitor toggles
+   the theme while the loader is still on screen.
+   -------------------------------------------------------------------------- */
+
+:root[data-theme='dark'] #preloader {
+  background-color: var(--bm-bg);
+  background-image: var(--bm-grid);
+}
+
+/* --scene-bg already tracks --bm-bg. Only the cube faces need lifting: the
+   light-mode navy reads as a silhouette against #0f1011. */
+:root[data-theme='dark'] .bm-loader {
+  --primary: #1d6fb8;
+  --primary-light: #2c8ad4;
+}
+
+/* --------------------------------------------------------------------------
+   4. Purchased template base (public/assets/css/theme-default.css)
+
+   That file is linked from index.html ahead of the design system and hardcodes
+   body/heading/link colours plus the selection and placeholder palettes. The
+   design system already overrides the text colours; these cover the rest.
+   -------------------------------------------------------------------------- */
+
+::selection {
+  background: var(--bm-orange-tint-2);
+  color: var(--bm-text);
+  text-shadow: none;
+}
+
+::placeholder {
+  color: var(--bm-text-3);
+  opacity: 1;
+}
+
+/* The template sets `label { color: #fff }`, which is invisible on a light
+   card and wrong on a dark one. Labels belong to body copy. */
+label {
+  color: var(--bm-text-2);
+}
+
+/* Unstyled anchors fell back to the template's navy. */
+a {
+  color: inherit;
+}
+
+/* --------------------------------------------------------------------------
+   5. Bootstrap
+
+   The local copy is 5.3, which ships its own `[data-bs-theme=dark]` variable
+   block. ThemeProvider sets that attribute alongside `data-theme`, so utility
+   classes and components follow along. Bootstrap's dark body colours are a
+   different grey from ours, so they are pointed back at our tokens to keep one
+   palette on the page.
+   -------------------------------------------------------------------------- */
+
+:root[data-theme='dark'] {
+  --bs-body-bg: var(--bm-bg);
+  --bs-body-color: var(--bm-text-2);
+  --bs-emphasis-color: var(--bm-text);
+  --bs-border-color: var(--bm-line);
+  --bs-secondary-bg: var(--bm-surface-2);
+  --bs-tertiary-bg: var(--bm-surface);
+  --bs-link-color: var(--bm-accent-ink);
+  --bs-link-hover-color: var(--bm-accent);
+}
+
+/* --------------------------------------------------------------------------
+   6. Legacy template surfaces still rendered
+
+   Only a few of the purchased template's classes survive in JSX, on the
+   Mission and FAQ pages. The card shell in bm-sections.css section 2 already
+   paints .single-feature-box / .single-faq-box from `var(--bm-bg) !important`,
+   so those follow the theme without help here.
+
+   .mission-box is the exception: the template gives it a pale tint, and the
+   re-skin puts it on the canvas colour. On a dark canvas that leaves the panel
+   indistinguishable from the page, so it is lifted to the card surface.
+   -------------------------------------------------------------------------- */
+
+:root[data-theme='dark'] .mission-box,
+:root[data-theme='dark'] .mission-box.two,
+:root[data-theme='dark'] .widget-sidber-contact-box {
+  background-color: var(--bm-elevated) !important;
+  background-image: none !important;
+}
+
+/* The Mission feature icons are navy line-art on transparency, which drops to
+   1.3:1 against the dark tint chip behind them. invert + hue-rotate flips the
+   lightness while holding the hue, so they land at 3.4-5.2:1 without new
+   assets — better than the 2.7-4.0:1 they manage in light mode. */
+:root[data-theme='dark'] .single-icon-thumb img,
+:root[data-theme='dark'] .feature-icon img {
+  filter: invert(1) hue-rotate(180deg);
+}
+
+/* --------------------------------------------------------------------------
+   7. Partner logos
+
+   Third-party marks, served cross-origin, mixing dark wordmarks with coloured
+   emblems. Inverting them would corrupt the brand colours, so they sit on a
+   light plate instead and keep their own palette in both themes.
+   -------------------------------------------------------------------------- */
+
+:root[data-theme='dark'] .bm-logos__item img {
+  padding: 6px 10px;
+  background: rgba(255, 255, 255, 0.9);
+  border-radius: var(--bm-r-xs);
+}
+
+/* --------------------------------------------------------------------------
+   8. 404 page (src/styles/NotFound.css)
+
+   Sits outside <Layout>, so it has no navbar and no toggle. It is a full-bleed
+   coloured panel with white type in both themes; the dark variant only deepens
+   the gradient so it does not glow next to the rest of the site.
+   -------------------------------------------------------------------------- */
+
+:root[data-theme='dark'] .not-found-container {
+  background: linear-gradient(135deg, #241f4d 0%, #2e1c46 100%);
+}
+
+/* The home button is a deliberate white plate on the coloured panel — the same
+   treatment in both themes. Only the label hue follows the darker gradient. */
+:root[data-theme='dark'] .not-found-btn-home {
+  color: #241f4d;
+}
+
+/* --------------------------------------------------------------------------
+   9. Owl Carousel / venobox
+
+   Vendor CSS with white nav dots and a white lightbox chrome. The dots need to
+   flip; the lightbox already sits on its own dim backdrop and is left alone.
+   -------------------------------------------------------------------------- */
+
+:root[data-theme='dark'] .owl-dot span {
+  background: var(--bm-line-strong) !important;
+}
+
+:root[data-theme='dark'] .owl-dot.active span {
+  background: var(--bm-orange) !important;
+}

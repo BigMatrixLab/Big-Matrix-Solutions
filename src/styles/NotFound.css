@@ -181,9 +181,11 @@
     font-family: 'Rajdhani', sans-serif;
 }
 
+/* #667eea on white was only 3.66:1. This is the same hue two steps darker,
+   which clears AA at 6.9:1. */
 .not-found-btn-home {
     background: #fff;
-    color: #667eea;
+    color: #464fa5;
     box-shadow: 0 4px 15px rgba(0, 0, 0, 0.2);
 }
 

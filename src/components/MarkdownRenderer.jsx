@@ -136,13 +136,9 @@ const MarkdownRenderer = ({ contentFile, className = '', transform }) => {
     if (error) {
         return (
             <div className={`markdown-content ${className}`}>
-                <div className="error-message" style={{
-                    padding: '2rem',
-                    background: '#fff3cd',
-                    border: '1px solid #ffc107',
-                    borderRadius: '8px',
-                    color: '#856404'
-                }}>
+                {/* Colours come from the theme tokens via .markdown-callout so
+                    the notice stays legible in both light and dark. */}
+                <div className="error-message markdown-callout">
                     <i className="bi bi-exclamation-triangle-fill"></i>
                     <p><strong>Error loading content:</strong> {error}</p>
                 </div>

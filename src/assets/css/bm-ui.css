@@ -131,7 +131,7 @@
 
 .bm-section--ink .bm-head__title { color: #fff; }
 .bm-section--ink .bm-head__lead { color: var(--bm-text-inv-2); }
-.bm-section--ink .bm-head__eyebrow { color: var(--bm-orange); }
+.bm-section--ink .bm-head__eyebrow { color: var(--bm-orange-on-ink); }
 
 @media (max-width: 767px) {
   .bm-head {
@@ -183,8 +183,8 @@
   letter-spacing: -0.01em;
   text-align: center;
   white-space: nowrap;
-  color: #fff;
-  background: var(--bm-text);
+  color: var(--bm-solid-fg);
+  background: var(--bm-solid);
   border: 1px solid transparent;
   border-radius: var(--bm-r-sm);
   cursor: pointer;
@@ -195,11 +195,13 @@
 }
 
 .bm-button i { font-size: 1em; line-height: 1; transition: transform var(--bm-dur) var(--bm-ease); }
-.bm-button:hover { background: #000; color: #fff; transform: translateY(-1px); }
+.bm-button:hover { background: var(--bm-solid-hover); color: var(--bm-solid-fg); transform: translateY(-1px); }
 .bm-button:hover i { transform: translateX(3px); }
 
-.bm-button--accent { background: var(--bm-orange-fill); }
-.bm-button--accent:hover { background: var(--bm-orange-hover); }
+/* The accent variant always carries a white label: --bm-orange-fill is the
+   step chosen for 4.5:1 against white, in both themes. */
+.bm-button--accent { color: #fff; background: var(--bm-orange-fill); }
+.bm-button--accent:hover { color: #fff; background: var(--bm-orange-hover); }
 
 .bm-button--ghost {
   color: var(--bm-text);
@@ -396,7 +398,7 @@ a.bm-card__title:hover,
   position: fixed;
   inset: 0 0 auto;
   z-index: 900;
-  background: rgba(255, 255, 255, 0.82);
+  background: var(--bm-nav-bg);
   -webkit-backdrop-filter: saturate(180%) blur(14px);
   backdrop-filter: saturate(180%) blur(14px);
   border-bottom: 1px solid var(--bm-line);
@@ -405,8 +407,8 @@ a.bm-card__title:hover,
 }
 
 .bm-nav--stuck {
-  background: rgba(255, 255, 255, 0.95);
-  box-shadow: 0 6px 24px -18px rgba(24, 24, 24, 0.5);
+  background: var(--bm-nav-bg-stuck);
+  box-shadow: var(--bm-nav-shadow);
 }
 
 .bm-nav__inner {
@@ -465,14 +467,83 @@ a.bm-card__title:hover,
   padding: 0 16px;
   font-size: var(--bm-fs-sm);
   font-weight: 600;
-  color: #fff;
-  background: var(--bm-text);
+  color: var(--bm-solid-fg);
+  background: var(--bm-solid);
   border-radius: var(--bm-r-sm);
   white-space: nowrap;
   transition: background var(--bm-dur) var(--bm-ease-inout);
 }
 
 .bm-nav__cta:hover { background: var(--bm-orange-fill); color: #fff; }
+
+/* --------------------------------------------------------------------------
+   Theme toggle
+   Shares the .bm-nav__toggle icon-button geometry. Both glyphs are stacked in
+   the same box and cross-faded, so the button never changes width between
+   themes and nothing beside it shifts.
+   -------------------------------------------------------------------------- */
+
+.bm-theme-toggle {
+  position: relative;
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+  flex: 0 0 auto;
+  width: 38px;
+  height: 38px;
+  padding: 0;
+  color: var(--bm-text-2);
+  background: none;
+  border: 1px solid var(--bm-line);
+  border-radius: var(--bm-r-sm);
+  cursor: pointer;
+  transition: color var(--bm-dur) var(--bm-ease-inout),
+              background var(--bm-dur) var(--bm-ease-inout),
+              border-color var(--bm-dur) var(--bm-ease-inout);
+}
+
+.bm-theme-toggle:hover {
+  color: var(--bm-text);
+  background: var(--bm-surface-2);
+  border-color: var(--bm-line-strong);
+}
+
+.bm-theme-toggle:focus-visible {
+  outline: none;
+  box-shadow: var(--bm-focus);
+}
+
+/* Stacked glyphs. The wrapper is sized to the icon so absolute positioning of
+   both children keeps them concentric. */
+.bm-theme-toggle__icons {
+  position: relative;
+  display: block;
+  width: 18px;
+  height: 18px;
+}
+
+.bm-theme-toggle__icons i {
+  position: absolute;
+  inset: 0;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  font-size: 17px;
+  line-height: 1;
+  transition: opacity var(--bm-dur) var(--bm-ease-inout),
+              transform var(--bm-dur) var(--bm-ease);
+}
+
+/* Light theme shows the moon — the icon advertises the *destination*, which is
+   the convention users expect from a theme switch. */
+.bm-theme-toggle__moon { opacity: 1; transform: rotate(0) scale(1); }
+.bm-theme-toggle__sun { opacity: 0; transform: rotate(-90deg) scale(0.5); }
+
+:root[data-theme='dark'] .bm-theme-toggle__moon { opacity: 0; transform: rotate(90deg) scale(0.5); }
+:root[data-theme='dark'] .bm-theme-toggle__sun { opacity: 1; transform: rotate(0) scale(1); }
+
+/* Mobile header variant matches the 44px hamburger beside it. */
+.bm-theme-toggle--lg { width: 44px; height: 44px; }
 
 .bm-nav__toggle {
   display: inline-flex;
@@ -498,7 +569,7 @@ a.bm-card__title:hover,
   position: fixed;
   inset: 0;
   z-index: 960;
-  background: rgba(22, 21, 15, 0.42);
+  background: var(--bm-scrim);
   -webkit-backdrop-filter: blur(2px);
   backdrop-filter: blur(2px);
   border: 0;
@@ -512,7 +583,7 @@ a.bm-card__title:hover,
   width: min(320px, 86vw);
   background: var(--bm-bg);
   border-left: 1px solid var(--bm-line);
-  box-shadow: -24px 0 60px -30px rgba(24, 24, 24, 0.4);
+  box-shadow: var(--bm-drawer-shadow);
   transform: translateX(100%);
   /* visibility keeps the closed drawer out of the tab order */
   visibility: hidden;
@@ -1162,7 +1233,7 @@ a.bm-card__title:hover,
   color: #fff;
 }
 
-.bm-footer__wordmark span { color: var(--bm-orange); }
+.bm-footer__wordmark span { color: var(--bm-orange-on-ink); }
 
 .bm-footer__blurb {
   max-width: 40ch;
@@ -1206,7 +1277,7 @@ a.bm-card__title:hover,
   color: var(--bm-text-inv-2);
 }
 
-.bm-footer__contact i { flex: 0 0 auto; margin-top: 3px; color: var(--bm-orange); }
+.bm-footer__contact i { flex: 0 0 auto; margin-top: 3px; color: var(--bm-orange-on-ink); }
 .bm-footer__contact a { color: var(--bm-text-inv-2); overflow-wrap: anywhere; }
 .bm-footer__contact a:hover { color: #fff; }
 
@@ -1505,7 +1576,7 @@ a.bm-card__title:hover,
 }
 
 .bm-voices__index button:hover strong { color: var(--bm-text); }
-.bm-voices__index button:hover { background: rgba(255, 255, 255, 0.6); }
+.bm-voices__index button:hover { background: var(--bm-elevated); }
 
 .bm-voices__index button.is-active {
   border-left-color: var(--bm-orange);
@@ -1750,9 +1821,11 @@ a.bm-card__title:hover,
 }
 
 .bm-manifest dl { display: grid; grid-template-columns: auto 1fr; gap: 0 var(--bm-4); margin: 0; }
-.bm-manifest dt { color: rgba(255, 255, 255, 0.42); white-space: nowrap; }
+/* 0.42 alpha only reached 4.09:1 against the panel; 0.52 clears AA and still
+   sits clearly below the 0.86 value column. */
+.bm-manifest dt { color: rgba(255, 255, 255, 0.52); white-space: nowrap; }
 .bm-manifest dd { margin: 0; color: rgba(255, 255, 255, 0.86); }
-.bm-manifest dd b { color: var(--bm-orange); font-weight: 400; }
+.bm-manifest dd b { color: var(--bm-orange-on-ink); font-weight: 400; }
 
 /* Filled accent cell that closes the grid. */
 .bm-bento__cell--accent {
@@ -1867,7 +1940,7 @@ a.bm-card__title:hover,
 
 .bm-row:hover .bm-row__icon {
   color: var(--bm-orange-ink);
-  background: #fff;
+  background: var(--bm-elevated);
   border-color: var(--bm-orange-tint-2);
 }
 
@@ -2485,6 +2558,7 @@ a.bm-card__title:hover,
   pointer-events: none;
 }
 
+/* 0.82 alpha only reached 4.25:1 on the accent slab; 0.92 clears AA. */
 .bm-close__eyebrow {
   display: inline-flex;
   align-items: center;
@@ -2494,7 +2568,7 @@ a.bm-card__title:hover,
   font-size: var(--bm-fs-label);
   letter-spacing: var(--bm-track-label);
   text-transform: uppercase;
-  color: rgba(255, 255, 255, 0.82);
+  color: rgba(255, 255, 255, 0.92);
 }
 
 .bm-close__eyebrow::before { content: ''; width: 6px; height: 6px; background: #fff; }
@@ -2644,12 +2718,12 @@ a.bm-card__title:hover,
 }
 
 .bm-jobs__chips button.is-active {
-  color: #fff;
-  background: var(--bm-text);
-  border-color: var(--bm-text);
+  color: var(--bm-solid-fg);
+  background: var(--bm-solid);
+  border-color: var(--bm-solid);
 }
 
-.bm-jobs__chips button.is-active em { color: rgba(255, 255, 255, 0.6); }
+.bm-jobs__chips button.is-active em { color: var(--bm-solid-fg); opacity: 0.6; }
 
 .bm-jobs__toggle {
   display: inline-flex;
@@ -2810,10 +2884,11 @@ a.bm-card__title:hover,
   padding: 11px 18px;
   font-size: var(--bm-fs-sm);
   font-weight: 600;
-  color: #fff;
-  background: var(--bm-text);
+  color: var(--bm-solid-fg);
+  background: var(--bm-solid);
   border-radius: var(--bm-r-sm);
-  transition: background var(--bm-dur) var(--bm-ease-inout);
+  transition: background var(--bm-dur) var(--bm-ease-inout),
+              color var(--bm-dur) var(--bm-ease-inout);
 }
 
 .bm-job__cta:hover { color: #fff; background: var(--bm-orange-fill); }
@@ -3069,7 +3144,7 @@ a.bm-card__title:hover,
   line-height: 1;
   letter-spacing: var(--bm-track-label);
   text-transform: uppercase;
-  color: var(--bm-orange);
+  color: var(--bm-orange-on-ink);
 }
 
 .bm-contact__lines {
@@ -3099,7 +3174,7 @@ a.bm-card__title:hover,
   width: 34px;
   height: 34px;
   font-size: 14px;
-  color: var(--bm-orange);
+  color: var(--bm-orange-on-ink);
   background: rgba(255, 255, 255, 0.07);
   border-radius: var(--bm-r-sm);
 }
@@ -3123,7 +3198,7 @@ a.bm-card__title:hover,
   overflow-wrap: anywhere;
 }
 
-.bm-contact__text a:hover { color: var(--bm-orange); }
+.bm-contact__text a:hover { color: var(--bm-orange-on-ink); }
 
 /* ---- Map ---- */
 .bm-map__frame {
@@ -3394,7 +3469,7 @@ a.bm-card__title:hover,
               box-shadow var(--bm-dur) var(--bm-ease-inout);
 }
 
-.bm-select__trigger:hover { border-color: #b8b8b8; }
+.bm-select__trigger:hover { border-color: var(--bm-text-3); }
 
 .bm-select__trigger:focus,
 .bm-select.is-open .bm-select__trigger {
@@ -3431,7 +3506,7 @@ a.bm-card__title:hover,
   background: var(--bm-bg);
   border: 1px solid var(--bm-line-strong);
   border-radius: var(--bm-r);
-  box-shadow: 0 14px 36px -12px rgba(24, 24, 24, 0.32), var(--bm-shadow-sm);
+  box-shadow: var(--bm-shadow), var(--bm-shadow-sm);
   transform-origin: top center;
   animation: bmSelectIn 160ms var(--bm-ease) both;
 }

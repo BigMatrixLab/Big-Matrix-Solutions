@@ -9,7 +9,35 @@
     content="Big-Matrix Lab Development Wing - Revolutionizing healthcare through AI, machine learning, and advanced data analytics solutions." />
   <title>Big-Matrix Solutions - Healthcare AI & Research Development</title>
 
+  <!-- Kept in sync with the active theme by ThemeProvider. -->
   <meta name="theme-color" content="#ffffff" />
+
+  <!--
+    Theme bootstrap. Runs before any stylesheet is applied so the very first
+    paint is already in the right theme — without it, a dark-mode visitor gets
+    a white flash while the bundle loads.
+
+    Must stay in agreement with src/context/ThemeContext.jsx: same storage key,
+    same attribute names, same allowed values. ThemeProvider reads whatever
+    this script wrote, so the first React render does not contradict the page.
+  -->
+  <script>
+    (function () {
+      try {
+        var stored = localStorage.getItem('bm-theme');
+        var theme = stored === 'light' || stored === 'dark'
+          ? stored
+          : (window.matchMedia && window.matchMedia('(prefers-color-scheme: dark)').matches ? 'dark' : 'light');
+
+        document.documentElement.setAttribute('data-theme', theme);
+        document.documentElement.setAttribute('data-bs-theme', theme);
+      } catch (e) {
+        // Storage blocked or matchMedia missing: the stylesheets default to light.
+        document.documentElement.setAttribute('data-theme', 'light');
+        document.documentElement.setAttribute('data-bs-theme', 'light');
+      }
+    })();
+  </script>
 
   <link rel="preconnect" href="https://fonts.googleapis.com" />
   <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
@@ -29,10 +57,25 @@
 
   <!-- Preloader Critical CSS -->
   <style>
+    /* Theme-aware first paint. These literals duplicate --bm-bg and
+       --bm-line-strong from bm-tokens.css on purpose: this rule has to apply
+       before any stylesheet has loaded, so it cannot reference the tokens.
+       Keep the two in sync when the canvas colours change. */
+    html {
+      --preload-bg: #ffffff;
+      --preload-dot: #d4d4d4;
+    }
+
+    html[data-theme='dark'] {
+      --preload-bg: #0f1011;
+      --preload-dot: #202327;
+      color-scheme: dark;
+    }
+
     html, body {
       margin: 0;
       padding: 0;
-      background-color: #ffffff;
+      background-color: var(--preload-bg);
     }
 
     body:not(.loaded) {
@@ -45,10 +88,10 @@
       left: 0;
       width: 100%;
       height: 100vh;
-      background-color: #ffffff;
+      background-color: var(--preload-bg);
       /* Matches --bm-grid / --bm-grid-size. Inlined because this paints before
          the stylesheets load. */
-      background-image: radial-gradient(#d6d6ce 1px, transparent 1.5px);
+      background-image: radial-gradient(var(--preload-dot) 1px, transparent 1.5px);
       background-size: 22px 22px;
       display: flex;
       justify-content: center;

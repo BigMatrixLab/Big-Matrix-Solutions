@@ -1,6 +1,7 @@
 import { Link } from 'react-router-dom';
 import { PARTNERS } from '../data/partners';
 import DotField from './DotField';
+import { useTheme } from '../context/themeStore';
 
 const FACTS = [
     { value: '10+', label: 'Systems in production' },
@@ -9,6 +10,14 @@ const FACTS = [
 ];
 
 const Hero = () => {
+    const { isDark } = useTheme();
+
+    /* The dot field is painted to a canvas, so it cannot read CSS tokens.
+       These are the --bm-line-strong neighbourhood for each theme: mid grey on
+       white, and a lifted charcoal on the dark canvas. */
+    const dotFrom = isDark ? '#4a4d52' : '#7e7e7e';
+    const dotTo = isDark ? '#3c3f44' : '#686868';
+
     return (
         <section className="bm-hero">
             {/* Interactive dot matrix, replacing the static CSS grid. Masked in
@@ -25,8 +34,8 @@ const Hero = () => {
                     cursorRadius={500}
                     cursorForce={0.1}
                     bulgeOnly
-                    gradientFrom="#7e7e7e"
-                    gradientTo="#686868"
+                    gradientFrom={dotFrom}
+                    gradientTo={dotTo}
                     glowColor="transparent"
                 />
             </div>

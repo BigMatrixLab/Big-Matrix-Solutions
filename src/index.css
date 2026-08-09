@@ -8,7 +8,9 @@ html,
 body {
   margin: 0;
   padding: 0;
-  background-color: #ffffff;
+  /* Fallback covers the window between this file parsing and bm-tokens.css
+     defining --bm-bg. bm-core.css sets the authoritative value. */
+  background-color: var(--bm-bg, #ffffff);
   overflow-x: clip;
 }
 

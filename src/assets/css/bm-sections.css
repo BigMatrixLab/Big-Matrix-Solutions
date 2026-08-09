@@ -634,7 +634,7 @@
   color: var(--bm-text-3);
 }
 
-.bm-doc__facts dt i { font-size: 12px; color: var(--bm-orange); }
+.bm-doc__facts dt i { font-size: 12px; color: var(--bm-orange-ink); }
 
 .bm-doc__facts dd {
   margin: 0;
@@ -750,7 +750,7 @@
   border-radius: var(--bm-r-lg);
 }
 
-.bm-doc__contact .bm-doc__contact-label { color: var(--bm-orange); }
+.bm-doc__contact .bm-doc__contact-label { color: var(--bm-orange-on-ink); }
 
 .bm-doc__contact-copy {
   margin: 0 0 var(--bm-5);
@@ -771,8 +771,8 @@
   transition: color var(--bm-dur) var(--bm-ease-inout);
 }
 
-.bm-doc__contact-line i { font-size: 12px; color: var(--bm-orange); }
-.bm-doc__contact-line:hover { color: var(--bm-orange); }
+.bm-doc__contact-line i { font-size: 12px; color: var(--bm-orange-on-ink); }
+.bm-doc__contact-line:hover { color: var(--bm-orange-on-ink); }
 
 .bm-doc__contact-cta {
   display: inline-flex;
@@ -1044,13 +1044,13 @@
   flex: 0 0 auto;
   width: 46px;
   min-height: 46px;
-  color: #fff;
-  background: var(--bm-text);
+  color: var(--bm-solid-fg);
+  background: var(--bm-solid);
   border: 0;
   border-radius: var(--bm-r-sm);
 }
 
-.widget-search button:hover { background: var(--bm-orange-fill); }
+.widget-search button:hover { color: #fff; background: var(--bm-orange-fill); }
 
 .widget-popular-posts { display: grid; gap: var(--bm-4); }
 
@@ -1874,14 +1874,20 @@
 
 .bc-showcase {
   --bc-primary: var(--bm-orange-fill);
+  /* Text-weight accent. Tracks the theme; --bc-primary does not, because it is
+     a fill that carries white labels. See ProjectShowcase.css for the rationale. */
+  --bc-primary-text: var(--bm-orange-ink);
   --bc-primary-dark: var(--bm-orange-hover);
   --bc-primary-soft: var(--bm-orange-tint);
   --bc-ink: var(--bm-text);
-  --bc-ink-2: #302e25;
+  --bc-ink-2: var(--bm-text);
   --bc-body: var(--bm-text-2);
   --bc-light: var(--bm-surface);
   --bc-line: var(--bm-line);
-  --bc-accent: var(--bm-orange);
+  /* Used only on this page's dark bands. */
+  --bc-accent: var(--bm-orange-on-ink);
+  /* Card/panel fill for the showcase pages. Was a literal #fff throughout. */
+  --bc-panel: var(--bm-elevated);
   --bc-radius: var(--bm-r);
   --bc-shadow: var(--bm-shadow);
   --bc-shadow-sm: var(--bm-shadow-sm);
@@ -1926,7 +1932,7 @@
   border-radius: var(--bm-r-pill);
 }
 
-.bc-showcase .bc-hero-badge i { color: var(--bm-orange) !important; }
+.bc-showcase .bc-hero-badge i { color: var(--bm-orange-on-ink) !important; }
 
 /* --------------------------------------------------------------------------
    21. Mission page (legacy template markup)
@@ -2017,9 +2023,9 @@
   padding: 11px 20px !important;
   font-size: var(--bm-fs-sm) !important;
   font-weight: 600 !important;
-  color: #fff !important;
-  background: var(--bm-text) !important;
+  color: var(--bm-solid-fg) !important;
+  background: var(--bm-solid) !important;
   border-radius: var(--bm-r-sm) !important;
 }
 
-.mission-button a:hover { background: var(--bm-orange-fill) !important; }
+.mission-button a:hover { color: #fff !important; background: var(--bm-orange-fill) !important; }

@@ -1,9 +1,14 @@
 /* ============================================
    MARKDOWN CONTENT STYLES
+
+   Fully token-driven so blog and career bodies follow the active theme. The
+   syntax-highlighting palette at the bottom is Atom One Dark, which needs a
+   dark plate underneath in both themes — hence --bm-pre-bg rather than a
+   surface token.
    ============================================ */
 
 .markdown-content {
-  color: #333;
+  color: var(--bm-text-2);
   line-height: 1.8;
   font-size: 16px;
 }
@@ -14,7 +19,7 @@
   font-weight: 700;
   margin-top: 2rem;
   margin-bottom: 1.5rem;
-  color: #1a1a1a;
+  color: var(--bm-text);
   line-height: 1.3;
 }
 
@@ -23,9 +28,9 @@
   font-weight: 600;
   margin-top: 2.5rem;
   margin-bottom: 1.25rem;
-  color: #1a1a1a;
+  color: var(--bm-text);
   line-height: 1.3;
-  border-bottom: 2px solid #e0e0e0;
+  border-bottom: 2px solid var(--bm-line);
   padding-bottom: 0.5rem;
 }
 
@@ -34,7 +39,7 @@
   font-weight: 600;
   margin-top: 2rem;
   margin-bottom: 1rem;
-  color: #2a2a2a;
+  color: var(--bm-text);
 }
 
 .markdown-content h4 {
@@ -42,7 +47,7 @@
   font-weight: 600;
   margin-top: 1.5rem;
   margin-bottom: 0.75rem;
-  color: #2a2a2a;
+  color: var(--bm-text);
 }
 
 .markdown-content h5,
@@ -51,7 +56,7 @@
   font-weight: 600;
   margin-top: 1.5rem;
   margin-bottom: 0.75rem;
-  color: #2a2a2a;
+  color: var(--bm-text);
 }
 
 /* Paragraphs */
@@ -104,10 +109,10 @@
 .markdown-content blockquote {
   margin: 2rem 0;
   padding: 1.5rem 2rem;
-  background: #f8f9fa;
+  background: var(--bm-surface-2);
   border-left: 4px solid var(--bm-accent);
   font-style: italic;
-  color: #555;
+  color: var(--bm-text-2);
 }
 
 .markdown-content blockquote p {
@@ -120,22 +125,23 @@
 
 /* Code */
 .markdown-content code {
-  background: #f5f5f5;
+  background: var(--bm-code-bg);
   padding: 0.2rem 0.4rem;
   border-radius: 4px;
-  font-family: 'Courier New', Courier, monospace;
+  font-family: var(--bm-font-mono);
   font-size: 0.9em;
   color: var(--bm-accent-ink);
 }
 
 .markdown-content pre {
-  background: #282c34;
-  color: #abb2bf;
+  background: var(--bm-pre-bg);
+  color: var(--bm-pre-fg);
   padding: 1.5rem;
   border-radius: 8px;
   overflow-x: auto;
   margin: 2rem 0;
-  box-shadow: 0 2px 6px rgba(0, 0, 0, 0.1);
+  border: 1px solid var(--bm-line);
+  box-shadow: var(--bm-shadow-sm);
 }
 
 .markdown-content pre code {
@@ -152,31 +158,33 @@
   width: 100%;
   margin: 2rem 0;
   border-collapse: collapse;
-  background: #fff;
-  box-shadow: 0 2px 6px rgba(0, 0, 0, 0.05);
+  background: var(--bm-elevated);
+  border: 1px solid var(--bm-line);
+  box-shadow: var(--bm-shadow-sm);
   border-radius: 8px;
   overflow: hidden;
 }
 
 .markdown-content table thead {
-  background: #354662;
-  color: #fff;
+  background: var(--bm-surface-2);
+  color: var(--bm-text);
 }
 
 .markdown-content table th {
   padding: 1rem;
   text-align: left;
   font-weight: 600;
-  border-bottom: 2px solid #e0e0e0;
+  color: var(--bm-text);
+  border-bottom: 2px solid var(--bm-line);
 }
 
 .markdown-content table td {
   padding: 1rem;
-  border-bottom: 1px solid #e0e0e0;
+  border-bottom: 1px solid var(--bm-line);
 }
 
 .markdown-content table tbody tr:hover {
-  background: #f8f9fa;
+  background: var(--bm-surface-2);
 }
 
 .markdown-content table tbody tr:last-child td {
@@ -189,7 +197,7 @@
   height: auto;
   border-radius: 8px;
   margin: 2rem 0;
-  box-shadow: 0 4px 12px rgba(0, 0, 0, 0.1);
+  box-shadow: var(--bm-shadow);
   display: block;
 }
 
@@ -197,13 +205,13 @@
 .markdown-content hr {
   margin: 3rem 0;
   border: none;
-  border-top: 2px solid #e0e0e0;
+  border-top: 2px solid var(--bm-line);
 }
 
 /* Strong/Bold */
 .markdown-content strong {
   font-weight: 700;
-  color: #1a1a1a;
+  color: var(--bm-text);
 }
 
 /* Emphasis/Italic */
@@ -214,6 +222,20 @@
 /* Task Lists */
 .markdown-content input[type="checkbox"] {
   margin-right: 0.5rem;
+}
+
+/* Callouts emitted by MarkdownRenderer */
+.markdown-content .markdown-callout {
+  display: flex;
+  align-items: flex-start;
+  gap: 10px;
+  margin: 1.5rem 0;
+  padding: 14px 18px;
+  color: var(--bm-warn);
+  background: var(--bm-surface-2);
+  border: 1px solid var(--bm-line);
+  border-left: 4px solid var(--bm-warn);
+  border-radius: var(--bm-r-sm);
 }
 
 /* Responsive Tables */
@@ -253,6 +275,8 @@
 
 /* ============================================
    SYNTAX HIGHLIGHTING THEME (Atom One Dark)
+   Kept literal: this palette is tuned to the dark code plate and is the same
+   in both themes.
    ============================================ */
 
 .markdown-content .hljs {
@@ -265,7 +289,7 @@
 
 .markdown-content .hljs-comment,
 .markdown-content .hljs-quote {
-  color: #5c6370;
+  color: #7f8798;
   font-style: italic;
 }
 
