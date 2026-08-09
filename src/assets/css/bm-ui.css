@@ -406,7 +406,7 @@ a.bm-card__title:hover,
 
 .bm-nav--stuck {
   background: rgba(255, 255, 255, 0.95);
-  box-shadow: 0 6px 24px -18px rgba(28, 27, 22, 0.5);
+  box-shadow: 0 6px 24px -18px rgba(24, 24, 24, 0.5);
 }
 
 .bm-nav__inner {
@@ -512,7 +512,7 @@ a.bm-card__title:hover,
   width: min(320px, 86vw);
   background: var(--bm-bg);
   border-left: 1px solid var(--bm-line);
-  box-shadow: -24px 0 60px -30px rgba(28, 27, 22, 0.4);
+  box-shadow: -24px 0 60px -30px rgba(24, 24, 24, 0.4);
   transform: translateX(100%);
   /* visibility keeps the closed drawer out of the tab order */
   visibility: hidden;
@@ -1691,7 +1691,7 @@ a.bm-card__title:hover,
   transition: background var(--bm-dur) var(--bm-ease-inout);
 }
 
-.bm-bento__cell:hover { background: #262419; }
+.bm-bento__cell:hover { background: #282828; }
 
 .bm-bento__cell--wide { grid-column: span 2; }
 
@@ -2187,7 +2187,7 @@ a.bm-card__title:hover,
   background: var(--bm-ink-bg);
   border: 1px solid var(--bm-line-strong);
   border-radius: var(--bm-r-sm);
-  box-shadow: 0 12px 28px -14px rgba(28, 27, 22, 0.45);
+  box-shadow: 0 12px 28px -14px rgba(24, 24, 24, 0.45);
 }
 
 .bm-show__shot img {
@@ -3394,7 +3394,7 @@ a.bm-card__title:hover,
               box-shadow var(--bm-dur) var(--bm-ease-inout);
 }
 
-.bm-select__trigger:hover { border-color: #b9b9b0; }
+.bm-select__trigger:hover { border-color: #b8b8b8; }
 
 .bm-select__trigger:focus,
 .bm-select.is-open .bm-select__trigger {
@@ -3431,7 +3431,7 @@ a.bm-card__title:hover,
   background: var(--bm-bg);
   border: 1px solid var(--bm-line-strong);
   border-radius: var(--bm-r);
-  box-shadow: 0 14px 36px -12px rgba(28, 27, 22, 0.32), var(--bm-shadow-sm);
+  box-shadow: 0 14px 36px -12px rgba(24, 24, 24, 0.32), var(--bm-shadow-sm);
   transform-origin: top center;
   animation: bmSelectIn 160ms var(--bm-ease) both;
 }

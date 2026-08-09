@@ -8,25 +8,29 @@
 @import url('https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700&family=Inter+Tight:wght@400;500;600;700&family=JetBrains+Mono:wght@400;500&display=swap');
 
 :root {
-  /* ---------- Canvas ---------- */
+  /* ---------- Canvas ----------
+     Neutral grey ramp. Every step is achromatic so the dark plane
+     (--bm-ink-bg) and the light surfaces share one temperature; colour is
+     carried by the accent alone. Lightness steps match the previous warm
+     ramp, so spacing and contrast relationships are unchanged. */
   --bm-bg: #ffffff;
-  --bm-bg-warm: #fdfdfc;
-  --bm-surface: #fafaf8;
-  --bm-surface-2: #f4f4f1;
-  --bm-surface-3: #ebebe6;
-  --bm-ink-bg: #16150f;
-  --bm-ink-bg-2: #201f17;
+  --bm-bg-warm: #fdfdfd;
+  --bm-surface: #fafafa;
+  --bm-surface-2: #f4f4f4;
+  --bm-surface-3: #eaeaea;
+  --bm-ink-bg: #181818;
+  --bm-ink-bg-2: #222222;
 
   /* ---------- Hairlines ---------- */
-  --bm-line: #e7e7e1;
-  --bm-line-soft: #f0f0ec;
-  --bm-line-strong: #d6d6ce;
+  --bm-line: #e6e6e6;
+  --bm-line-soft: #efefef;
+  --bm-line-strong: #d4d4d4;
   --bm-line-ink: rgba(255, 255, 255, 0.12);
 
   /* ---------- Ink / text ---------- */
-  --bm-text: #1c1b16;
-  --bm-text-2: #4f4e46;   /* 8.4:1 on white  */
-  --bm-text-3: #6d6c62;   /* 5.3:1 on white  */
+  --bm-text: #1c1c1c;
+  --bm-text-2: #4e4e4e;   /* 8.3:1 on white  */
+  --bm-text-3: #6c6c6c;   /* 5.2:1 on white  */
   --bm-text-inv: #ffffff;
   --bm-text-inv-2: rgba(255, 255, 255, 0.68);
 
