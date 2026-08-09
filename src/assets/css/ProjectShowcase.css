@@ -316,9 +316,12 @@
 }
 
 /* ============================= STATS ============================= */
+/* The band had no bottom padding, so the at-a-glance card butted straight into
+   the next section. Matches the .bc-section rhythm below it. */
 .bc-stats {
     position: relative;
     z-index: 3;
+    padding-bottom: 78px;
     background: transparent;
 }
 
@@ -1020,6 +1023,10 @@
 @media (max-width: 700px) {
     .bc-section {
         padding: 56px 0;
+    }
+
+    .bc-stats {
+        padding-bottom: 56px;
     }
 
     .bc-stats-grid,
