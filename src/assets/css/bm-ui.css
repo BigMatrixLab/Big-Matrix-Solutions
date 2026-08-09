@@ -1130,6 +1130,10 @@ a.bm-card__title:hover,
   padding-top: clamp(40px, 2rem + 2vw, 64px);
   background: var(--bm-ink-bg);
   overflow: hidden;
+  /* Overlap the band above by a pixel. Section heights land on fractional
+     device pixels at DPR 2/3, and the hairline gap that leaves exposes the
+     white page canvas as a bright line between the CTA panel and the footer. */
+  margin-top: -1px;
 }
 
 
