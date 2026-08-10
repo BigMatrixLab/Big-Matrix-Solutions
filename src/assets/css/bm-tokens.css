@@ -166,7 +166,7 @@
   --bm-9: 96px;
   --bm-section: clamp(56px, 3rem + 4.5vw, 112px);
   --bm-gutter: clamp(20px, 1rem + 1.5vw, 40px);
-  --bm-max: 1240px;
+  --bm-max: 1600px;
 
   /* ---------- Radius (near-square, engineered) ---------- */
   --bm-r-xs: 2px;
