@@ -309,28 +309,6 @@
     ]
   },
   {
-    "id": 14,
-    "name": "Md. Jobaer Rahman",
-   
-    "image": "https://res.cloudinary.com/dcfny0d5c/image/upload/v1762248184/big-matrix/photos/JobaerRahman.jpg",
-    "slug": "jobaer-rahman",
-    "desc": "Backend engineer and database specialist developing efficient data management systems for healthcare applications.",
-    "phone": "+880-2-55668200",
-    "email": "jobaer.math.buet@gmail.com",
-    "location": "Dhaka, Bangladesh",
-    "social": {
-      "linkedin": "https://www.linkedin.com/in/jobaer-rahman-m6"
-    },
-    "skills": [
-      { "name": "Backend Development", "value": "91%" },
-      { "name": "Database Management", "value": "89%" }
-    ],
-    "projects": [
-      { "name": "Data Systems", "value": "90%" },
-      { "name": "API Development", "value": "88%" }
-    ]
-  },
-  {
     "id": 13,
     "name": "Mofidul Hassan",
     
