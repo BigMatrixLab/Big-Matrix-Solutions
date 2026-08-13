@@ -33,10 +33,10 @@ const FooterArea = () => {
                 <div className="bm-footer__top">
                     <div>
                         <Link to="/" className="bm-footer__brand">
-                            <img src="/assets/images/big_matrix_cube.png" alt="" aria-hidden="true" />
-                            <span className="bm-footer__wordmark">
+                            <img src="/assets/images/bm_new_logo.png" alt="" aria-hidden="true" />
+                            {/* <span className="bm-footer__wordmark">
                                 <span>Big-Matrix</span><br />Solutions
-                            </span>
+                            </span> */}
                         </Link>
                         <p className="bm-footer__blurb">
                             Advanced software ecosystems for medical diagnostics, hospital systems,
