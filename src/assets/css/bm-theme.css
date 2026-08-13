@@ -172,22 +172,12 @@ a {
 }
 
 /* --------------------------------------------------------------------------
-   8. 404 page (src/styles/NotFound.css)
+   8. Error pages (403 / 404 / 500)
 
-   Sits outside <Layout>, so it has no navbar and no toggle. It is a full-bleed
-   coloured panel with white type in both themes; the dark variant only deepens
-   the gradient so it does not glow next to the rest of the site.
+   Nothing to reconcile: the shell in bm-error.css is built on tokens and sits
+   inside <Layout>, so it follows the theme on its own. The one exception is the
+   accent gradient on the status code, which is themed in that file.
    -------------------------------------------------------------------------- */
-
-:root[data-theme='dark'] .not-found-container {
-  background: linear-gradient(135deg, #241f4d 0%, #2e1c46 100%);
-}
-
-/* The home button is a deliberate white plate on the coloured panel — the same
-   treatment in both themes. Only the label hue follows the darker gradient. */
-:root[data-theme='dark'] .not-found-btn-home {
-  color: #241f4d;
-}
 
 /* --------------------------------------------------------------------------
    9. Owl Carousel / venobox

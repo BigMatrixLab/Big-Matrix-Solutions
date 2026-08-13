@@ -4,7 +4,8 @@ import { Link } from 'react-router-dom';
 const COMPANY_LINKS = [
     { to: '/about', label: 'About' },
     { to: '/project', label: 'Projects' },
-    { to: '/team', label: 'Team' },
+    // Team is parked — /team now returns the 404 page. Restore when it is back.
+    // { to: '/team', label: 'Team' },
     { to: '/blog', label: 'Insights' },
     { to: '/careers', label: 'Careers' },
     { to: '/contact', label: 'Contact' },

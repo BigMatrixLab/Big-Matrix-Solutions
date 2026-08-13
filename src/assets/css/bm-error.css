@@ -1,0 +1,176 @@
+/* ==========================================================================
+   Error pages — 403 / 404 / 500
+   One shell, three payloads. The background is the hero's interactive dot
+   field (canvas), so the page reads as part of the same system rather than a
+   dead end. Everything else is tokens: accent for the status code, the normal
+   text ramp for the copy.
+   ========================================================================== */
+
+.bm-error {
+  position: relative;
+  display: flex;
+  align-items: center;
+  min-height: 100vh;
+  min-height: 100svh;
+  padding-top: var(--bm-header-h);
+  background: var(--bm-bg);
+  border-bottom: 1px solid var(--bm-line);
+  overflow: hidden;
+  isolation: isolate;
+}
+
+/* Same layer contract as .bm-hero__dots: behind the content, unmasked, and
+   pointer-transparent — the field reads the cursor off the window. */
+.bm-error__dots {
+  position: absolute;
+  inset: 0;
+  z-index: -2;
+  pointer-events: none;
+}
+
+.bm-error > .bm-container { width: 100%; }
+
+.bm-error__inner {
+  max-width: 56rem;
+  margin-inline: auto;
+  padding-block: clamp(48px, 8vh, 96px);
+  text-align: center;
+}
+
+/* ---------- Status code ----------
+   Display-scale figure in the brand accent. Optical size is capped by vw so it
+   never overruns a narrow viewport. */
+
+.bm-error__code {
+  display: block;
+  margin: 0;
+  font-family: var(--bm-font-display) !important;
+  font-size: clamp(5.5rem, 3rem + 15vw, 13rem);
+  font-weight: 700;
+  line-height: 0.86;
+  letter-spacing: -0.055em;
+  color: var(--bm-orange);
+  background: linear-gradient(98deg, #f4564e 0%, #ec362e 38%, #c62519 100%);
+  -webkit-background-clip: text;
+  background-clip: text;
+  -webkit-text-fill-color: transparent;
+}
+
+:root[data-theme='dark'] .bm-error__code {
+  background: linear-gradient(98deg, #ff8078 0%, #ff5a4f 38%, #e0453a 100%);
+  -webkit-background-clip: text;
+  background-clip: text;
+}
+
+/* Hairline rule between the figure and the sentence, on the accent. */
+.bm-error__rule {
+  width: 64px;
+  height: 3px;
+  margin: clamp(20px, 3vh, 32px) auto clamp(18px, 2.6vh, 26px);
+  background: var(--bm-orange);
+  border: 0;
+  border-radius: var(--bm-r-pill);
+  opacity: 0.9;
+}
+
+/* ---------- Copy ---------- */
+
+.bm-error__title {
+  margin: 0 0 var(--bm-4);
+  font-family: var(--bm-font-display) !important;
+  font-size: clamp(1.6rem, 1.2rem + 1.8vw, 2.5rem);
+  font-weight: 600;
+  line-height: var(--bm-lh-tight);
+  letter-spacing: var(--bm-track-heading);
+  color: var(--bm-text);
+  text-wrap: balance;
+}
+
+.bm-error__lead {
+  max-width: 56ch;
+  margin: 0 auto;
+  font-size: var(--bm-fs-lead);
+  line-height: 1.6;
+  color: var(--bm-text-2);
+}
+
+/* ---------- Actions ---------- */
+
+.bm-error__actions {
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: center;
+  gap: var(--bm-3);
+  margin-top: clamp(26px, 3.6vh, 40px);
+}
+
+.bm-error__actions .bm-button--accent {
+  box-shadow: 0 10px 28px -12px rgba(217, 45, 34, 0.55);
+}
+
+.bm-error__actions .bm-button--accent:hover {
+  box-shadow: 0 14px 32px -12px rgba(217, 45, 34, 0.65);
+}
+
+/* ---------- Quick links ---------- */
+
+.bm-error__links {
+  margin-top: clamp(32px, 5vh, 56px);
+  padding-top: var(--bm-5);
+  border-top: 1px solid var(--bm-line);
+}
+
+.bm-error__links-label {
+  margin: 0 0 var(--bm-3);
+  font-family: var(--bm-font-mono) !important;
+  font-size: var(--bm-fs-xs);
+  letter-spacing: var(--bm-track-label);
+  text-transform: uppercase;
+  color: var(--bm-text-3);
+}
+
+.bm-error__links-row {
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: center;
+  gap: var(--bm-2) var(--bm-5);
+  margin: 0;
+  padding: 0;
+  list-style: none;
+}
+
+.bm-error__links-row a {
+  font-size: var(--bm-fs-sm);
+  font-weight: 500;
+  color: var(--bm-text-2);
+  text-decoration: none;
+  border-bottom: 1px solid transparent;
+}
+
+.bm-error__links-row a:hover {
+  color: var(--bm-orange-ink);
+  border-bottom-color: currentColor;
+}
+
+/* ---------- Support note (403 / 500) ---------- */
+
+.bm-error__note {
+  margin: clamp(24px, 3.4vh, 36px) auto 0;
+  max-width: 52ch;
+  font-family: var(--bm-font-mono) !important;
+  font-size: var(--bm-fs-xs);
+  line-height: 1.7;
+  color: var(--bm-text-3);
+}
+
+.bm-error__note code {
+  padding: 2px 6px;
+  font-size: inherit;
+  color: var(--bm-code-fg);
+  background: var(--bm-code-bg);
+  border-radius: var(--bm-r-xs);
+}
+
+@media (max-width: 575px) {
+  .bm-error__actions .bm-button { width: 100%; justify-content: center; }
+}
