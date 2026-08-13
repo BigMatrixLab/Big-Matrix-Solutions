@@ -3,14 +3,13 @@ import { Link } from 'react-router-dom';
 import SectionHead from './SectionHead';
 import { servicesData } from '../data/content';
 
-// Explicit display order for the homepage solutions index.
+// Explicit display order for the homepage solutions index (cap at five).
 const HOME_SERVICE_ORDER = [
     'ai-machine-learning',
     'big-data-analytics',
     'enterprise-saas-platform',
     'industrial-automation',
     'cloud-devops-architecture',
-    'cybersecurity-compliance',
 ];
 
 const ServiceArea = () => {
@@ -24,7 +23,7 @@ const ServiceArea = () => {
                 <SectionHead
                     eyebrow="Our solutions"
                     title="Cutting-edge technology for intelligent infrastructure"
-                    lead="Six practice areas, one engineering standard. Each ships with the security, observability and compliance work already done."
+                    lead="Five practice areas, one engineering standard. Each ships with the security, observability and compliance work already done."
                     action={{ label: 'All solutions', to: '/service' }}
                 />
 

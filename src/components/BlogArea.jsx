@@ -2,9 +2,10 @@ import React from 'react';
 import { Link } from 'react-router-dom';
 import SectionHead from './SectionHead';
 import { blogsData } from '../data/content';
+import { sortBlogsByDate } from '../utils/blogSort';
 
 const BlogArea = () => {
-    const [lead, ...rest] = blogsData.slice(0, 5);
+    const [lead, ...rest] = sortBlogsByDate(blogsData).slice(0, 5);
     if (!lead) return null;
 
     return (

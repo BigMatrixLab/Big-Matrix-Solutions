@@ -3,16 +3,10 @@ import { blogsData } from '../data/content';
 import Breadcrumb from '../components/Breadcrumb';
 import SectionHead from '../components/SectionHead';
 import CtaBand from '../components/CtaBand';
-
-/** "Feb 14, 2026" -> comparable timestamp; unparseable dates sort last. */
-const timeOf = (post) => {
-    const value = Date.parse(post.date);
-    return Number.isNaN(value) ? 0 : value;
-};
+import { sortBlogsByDate } from '../utils/blogSort';
 
 const Blog = () => {
-    const posts = [...blogsData].sort((a, b) => timeOf(b) - timeOf(a));
-    const [lead, ...rest] = posts;
+    const [lead, ...rest] = sortBlogsByDate(blogsData);
 
     return (
         <>
