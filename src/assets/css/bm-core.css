@@ -38,6 +38,11 @@ html::before {
   background-image: var(--bm-grid);
   background-size: var(--bm-grid-size);
   background-position: 0 0;
+  /* Dialled back to 50%: the layer only shows through the genuinely
+     transparent bands (.bm-section and .bm-section--parallax), so this softens
+     the parallax field there without touching the hero, which paints an opaque
+     background over this layer and runs its own canvas dot field. */
+  opacity: var(--bm-grid-opacity);
   pointer-events: none;
 }
 

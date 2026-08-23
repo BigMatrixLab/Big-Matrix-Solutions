@@ -114,6 +114,8 @@
      crisp even when the background texture is dialled back. */
   --bm-grid-dot: var(--bm-line-strong);
   --bm-grid: radial-gradient(var(--bm-grid-dot) 1px, transparent 1.5px);
+  /* Strength of the fixed page-level dot field behind transparent bands. */
+  --bm-grid-opacity: 0.5;
   --bm-grid-ink: radial-gradient(rgba(255, 255, 255, 0.16) 1px, transparent 1.5px);
   --bm-grid-size: 22px 22px;
   /* Ruled square grid, on the same pitch as the dots so the two read as one
