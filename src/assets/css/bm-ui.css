@@ -46,28 +46,48 @@
   overflow: hidden;
 }
 
-/* Faint engineering grid, used on tinted and ink bands. */
+/* Faint engineering grid, used on tinted and ink bands.
+
+   The layer is masked rather than drawn edge to edge: an un-masked pattern
+   terminates on a hard line at the section boundary, which reads as a panel
+   sitting on top of the band instead of texture belonging to it. The radial
+   mask keeps the texture densest behind the content and lets it dissolve
+   before it reaches any edge. */
 .bm-grid-wash::before {
   content: '';
   position: absolute;
   inset: 0;
   background-image: var(--bm-grid);
   background-size: var(--bm-grid-size);
+  opacity: 0.7;
+  -webkit-mask-image: radial-gradient(120% 88% at 50% 42%, #000 26%, rgba(0, 0, 0, 0.4) 66%, transparent 100%);
+  mask-image: radial-gradient(120% 88% at 50% 42%, #000 26%, rgba(0, 0, 0, 0.4) 66%, transparent 100%);
   pointer-events: none;
 }
 
 .bm-section--ink.bm-grid-wash::before { background-image: var(--bm-grid-ink); }
 
 /* Square variant. Declared after the ink rule above and with matching
-   specificity, so it wins on the sections that opt in. */
+   specificity, so it wins on the sections that opt in.
+
+   Muted harder than the dot field: continuous rules cover far more area than
+   dots at the same colour, so they read about twice as strong. The sub-pixel
+   blur takes the mechanical edge off the 1px lines without turning them into a
+   smear — it is doing the job of a lighter line colour that the shared
+   --bm-line token cannot give us, since that token also draws card and form
+   borders which must stay crisp. */
 .bm-grid-wash--squares::before {
   background-image: var(--bm-rules);
   background-size: var(--bm-rules-size);
+  opacity: 0.42;
+  filter: blur(0.4px);
 }
 
 .bm-section--ink.bm-grid-wash--squares::before {
   background-image: var(--bm-rules-ink);
   background-size: var(--bm-rules-size);
+  opacity: 0.5;
+  filter: blur(0.4px);
 }
 
 .bm-section > .bm-container { position: relative; z-index: 1; }
