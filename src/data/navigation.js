@@ -5,7 +5,7 @@ export const NAV_ITEMS = [
     { to: '/', label: 'Home', match: (path) => path === '/' },
     { to: '/about', label: 'About', match: (path) => path === '/about' },
     { to: '/service', label: 'Solutions', match: (path) => path.startsWith('/service') },
-    { to: '/project', label: 'Work', match: (path) => path.startsWith('/project') },
+    { to: '/project', label: 'Products', match: (path) => path.startsWith('/project') },
     // Team is parked for now: the entry is hidden and /team returns the 404 page.
     // Restore this line and the routes in App.jsx to bring it back.
     // { to: '/team', label: 'Team', match: (path) => path.startsWith('/team') },

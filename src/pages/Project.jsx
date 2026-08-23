@@ -86,12 +86,12 @@ const Project = () => {
 
     return (
         <>
-            <Breadcrumb pageTitle="Systems we have shipped" breadcrumbItem="Work" />
+            <Breadcrumb pageTitle="Systems we have shipped" breadcrumbItem="Products" />
 
             <section className="bm-section">
                 <div className="bm-container">
                     <SectionHead
-                        eyebrow="Selected work"
+                        eyebrow="Selected products"
                         title={`${projects.length} systems running in clinics, labs and factories`}
                         lead="Diagnostic tooling, hospital platforms and research software — each one built to survive real operating conditions, not a demo."
                     />

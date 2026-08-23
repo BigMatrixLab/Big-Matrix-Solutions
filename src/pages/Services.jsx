@@ -121,7 +121,7 @@ const Services = () => {
                 eyebrow="Get started"
                 title="Not sure which solution fits?"
                 description="Send us the problem, not the spec. We will map it to the right architecture and tell you what it takes to build."
-                secondary={{ label: 'See our work', to: '/project' }}
+                secondary={{ label: 'See our products', to: '/project' }}
             />
         </>
     );

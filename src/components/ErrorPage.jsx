@@ -15,7 +15,7 @@ import '../assets/css/bm-error.css';
 const DEFAULT_LINKS = [
     { to: '/', label: 'Home' },
     { to: '/service', label: 'Solutions' },
-    { to: '/project', label: 'Work' },
+    { to: '/project', label: 'Products' },
     { to: '/blog', label: 'Insights' },
     { to: '/contact', label: 'Contact' },
 ];

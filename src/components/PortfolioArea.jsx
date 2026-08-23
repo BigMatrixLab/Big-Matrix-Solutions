@@ -42,9 +42,9 @@ const PortfolioArea = () => {
         <section className="bm-section bm-section--parallax">
             <div className="bm-container">
                 <SectionHead
-                    eyebrow="Selected work"
+                    eyebrow="Selected products"
                     title="Innovative solutions in production"
-                    action={{ label: 'All projects', to: '/project' }}
+                    action={{ label: 'All products', to: '/project' }}
                 />
 
                 <div className="bm-showcase">

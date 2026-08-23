@@ -11,12 +11,12 @@ const ProjectDetails = () => {
   if (!project) {
     return (
       <>
-        <Breadcrumb pageTitle="Project Not Found" breadcrumbItem="Project" />
+        <Breadcrumb pageTitle="Product Not Found" breadcrumbItem="Products" />
         <div className="project-details-area">
           <div className="container text-center">
-            <h2>Project not found</h2>
+            <h2>Product not found</h2>
             <Link to="/project" className="btn btn-primary mt-4">
-              Back to Projects
+              Back to Products
             </Link>
           </div>
         </div>
@@ -26,7 +26,7 @@ const ProjectDetails = () => {
 
   return (
     <>
-      <Breadcrumb pageTitle={project.title} breadcrumbItem="Project" />
+      <Breadcrumb pageTitle={project.title} breadcrumbItem="Products" />
 
       {/* Project Details Area */}
       <div className="project-details-area">
