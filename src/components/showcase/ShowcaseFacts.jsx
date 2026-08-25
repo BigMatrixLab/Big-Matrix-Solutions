@@ -1,4 +1,11 @@
-const isUrl = (value) => /^(https?:\/\/|www\.)/i.test(value) || /^[\w-]+\.(com|space|dev|org|net|io|ai)/i.test(value);
+/* Any dotted, space-free hostname counts. The previous version matched against a
+   hard-coded TLD list, which silently left multi-level hosts such as
+   `segmentation-editor.pages.dev` unlinked. Values with spaces ("Feb 2026 - Apr
+   2026") or a numeric last segment ("v1.2") still fall through as plain text. */
+const DOMAIN = /^[a-z0-9-]+(\.[a-z0-9-]+)*\.[a-z]{2,}\/?$/i;
+
+const isUrl = (value) =>
+    typeof value === 'string' && (/^(https?:\/\/|www\.)/i.test(value) || DOMAIN.test(value.trim()));
 
 const hrefFor = (value) => (/^https?:\/\//i.test(value) ? value : `https://${value}`);
 
@@ -21,8 +28,16 @@ const ShowcaseFacts = ({ items = [], label = 'At a glance' }) => {
                         </dt>
                         <dd className="bc-fact-value">
                             {isUrl(item.value) ? (
-                                <a href={hrefFor(item.value)} target="_blank" rel="noopener noreferrer">
+                                <a
+                                    className="bm-button bm-button--live"
+                                    href={hrefFor(item.value)}
+                                    target="_blank"
+                                    rel="noopener noreferrer"
+                                    aria-label={`Open ${item.value} in a new tab`}
+                                >
+                                    <span className="bm-live-dot" aria-hidden="true"></span>
                                     {item.value}
+                                    <i className="bi bi-box-arrow-up-right" aria-hidden="true"></i>
                                 </a>
                             ) : (
                                 item.value

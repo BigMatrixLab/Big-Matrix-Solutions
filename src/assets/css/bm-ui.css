@@ -2122,6 +2122,14 @@ a.bm-card__title:hover,
   border-right: 1px solid var(--bm-line);
 }
 
+/* Even rows move the shot to the right, so the tracks have to swap with it.
+   Without this the screenshot keeps the 1fr column and the copy takes the
+   1.25fr one, which made the image area — and, because the shot is aspect
+   locked, the whole card — a different size on every other card. */
+.bm-work__item:nth-child(even) {
+  grid-template-columns: minmax(0, 1fr) minmax(0, 1.25fr);
+}
+
 .bm-work__item:nth-child(even) > .bm-show__mat {
   order: 2;
   border-right: 0;
@@ -2161,8 +2169,14 @@ a.bm-card__title:hover,
   border-left: 1px solid var(--bm-line-strong);
 }
 
+/* Titles run to one or two lines and descriptions to two or three across the
+   catalogue, which left every card a slightly different height and knocked the
+   fact rails out of alignment down the page. Both blocks reserve their longest
+   case in em, so the copy column measures the same on every card. Nothing is
+   clipped — longer strings still grow past the floor. */
 .bm-work__title {
   margin: 0 0 var(--bm-3);
+  min-height: 2.32em; /* 2 lines x 1.16 line-height */
   font-family: var(--bm-font-display) !important;
   font-size: var(--bm-fs-h3);
   font-weight: 600;
@@ -2177,6 +2191,7 @@ a.bm-card__title:hover,
 
 .bm-work__text {
   margin: 0 0 var(--bm-5);
+  min-height: 4.8em; /* 3 lines x 1.6 line-height */
   font-size: var(--bm-fs-lead);
   line-height: 1.6;
   color: var(--bm-text-2);
@@ -2225,10 +2240,182 @@ a.bm-card__title:hover,
 .bm-work__facts dd a:hover { border-bottom-color: var(--bm-orange); }
 .bm-work__facts dd a i { font-size: 11px; }
 
+/* Action row. The live-site link is an action, not a fact, so it sits with the
+   case-study button instead of inside the metadata rail where it was competing
+   with plain values at the same weight. */
+.bm-work__actions {
+  display: flex;
+  flex-wrap: wrap;
+  align-items: center;
+  gap: var(--bm-3);
+  width: 100%;
+}
+
 .bm-work__cta { flex: 0 0 auto; }
 
+/* ---------------------------------------------------------------------------
+   Live-site signals
+   Three related pieces, all driven by the same status dot:
+     .bm-live-tag       status marker pinned to a product screenshot
+     .bm-button--live   the outbound action, in card action rows and in the
+                        fact panels on the product detail pages
+     .bm-live-dot       the pulsing dot both of them share
+   -------------------------------------------------------------------------*/
+
+/* Status marker on the screenshot. Deliberately not a link: the shot already
+   sits next to the action row, and two targets in one region split the click.
+   Its job is scan-level recognition that the product is actually running. */
+.bm-live-tag {
+  position: absolute;
+  top: 10px;
+  right: 10px;
+  z-index: 2;
+  display: inline-flex;
+  align-items: center;
+  gap: 6px;
+  padding: 5px 10px 5px 9px;
+  font-family: var(--bm-font-mono) !important;
+  font-size: 10px;
+  font-weight: 600;
+  line-height: 1;
+  letter-spacing: var(--bm-track-label);
+  text-transform: uppercase;
+  /* Accent fill rather than neutral glass, matching the cue pills on the detail
+     page screenshots. --bm-orange-fill, not --bm-orange: this label is 10px, so
+     it needs the step that clears 4.5:1 against white in both themes. The light
+     ring and drop shadow keep it separated from busy screenshots. */
+  color: #fff;
+  background: var(--bm-orange-fill);
+  border: 1px solid rgba(255, 255, 255, 0.28);
+  border-radius: var(--bm-r-pill);
+  box-shadow: 0 6px 16px -6px rgba(24, 24, 24, 0.55);
+}
+
+/* Accent-outlined rather than accent-filled: it has to out-read the ghost
+   case-study button next to it without becoming the loudest thing on a page of
+   ten cards. Fills on hover, where a single card has focus anyway. */
+.bm-button--live {
+  color: var(--bm-orange-ink);
+  background: var(--bm-orange-tint);
+  border-color: var(--bm-orange-tint-2);
+  font-family: var(--bm-font-mono) !important;
+  font-size: 12px;
+  letter-spacing: 0.01em;
+}
+
+.bm-button--live:hover,
+.bm-button--live:focus-visible {
+  color: #fff;
+  background: var(--bm-orange-fill);
+  border-color: var(--bm-orange-fill);
+}
+
+.bm-button--live i { font-size: 13px; }
+
+/* The base button slides its icon right on hover; this one points up-right. */
+.bm-button--live:hover i { transform: translate(2px, -2px); }
+
+.bm-button--live:focus-visible {
+  outline: none;
+  box-shadow: var(--bm-focus);
+}
+
+/* Shared status dot: solid core plus an expanding halo, both on currentColor so
+   it inverts with whatever it sits inside. */
+.bm-live-dot {
+  position: relative;
+  flex: 0 0 auto;
+  width: 7px;
+  height: 7px;
+  border-radius: 50%;
+  background: currentColor;
+}
+
+.bm-live-dot::after {
+  content: "";
+  position: absolute;
+  inset: 0;
+  border-radius: 50%;
+  background: currentColor;
+  animation: bm-live-pulse 2s var(--bm-ease-inout) infinite;
+}
+
+@keyframes bm-live-pulse {
+  0% { transform: scale(1); opacity: 0.5; }
+  70%, 100% { transform: scale(2.8); opacity: 0; }
+}
+
+@media (prefers-reduced-motion: reduce) {
+  .bm-live-dot::after { animation: none; }
+}
+
+/* Click-through lead image on the legacy product detail template. Mirrors the
+   cue pill used by the showcase hero figure so both templates behave the same:
+   the screenshot opens the running product in a new tab. */
+.bm-thumb-live {
+  position: relative;
+  display: block;
+  border-radius: var(--bm-r);
+  overflow: hidden;
+}
+
+.bm-thumb-live img {
+  display: block;
+  width: 100%;
+  height: auto;
+}
+
+.bm-thumb-live__cue {
+  position: absolute;
+  top: 16px;
+  right: 16px;
+  display: inline-flex;
+  align-items: center;
+  gap: 8px;
+  padding: 9px 15px;
+  font-family: var(--bm-font-display) !important;
+  font-size: 14px;
+  font-weight: 700;
+  line-height: 1;
+  letter-spacing: 0.02em;
+  white-space: nowrap;
+  color: #fff;
+  background: var(--bm-orange-fill);
+  border-radius: var(--bm-r-pill);
+  box-shadow: 0 12px 26px -12px rgba(0, 0, 0, 0.6);
+  transition: background-color var(--bm-dur-fast) var(--bm-ease-inout),
+              transform var(--bm-dur) var(--bm-ease);
+}
+
+.bm-thumb-live__cue i { font-size: 13px; }
+
+/* -deep rather than -hover: the hover step lightens in the dark theme and drops
+   the white label under 4.5:1, while -deep holds 5.7:1 in both. */
+.bm-thumb-live:hover .bm-thumb-live__cue,
+.bm-thumb-live:focus-visible .bm-thumb-live__cue {
+  background: var(--bm-orange-deep);
+  transform: scale(1.05);
+}
+
+.bm-thumb-live:focus-visible {
+  outline: none;
+  box-shadow: var(--bm-focus);
+}
+
+@media (max-width: 480px) {
+  .bm-thumb-live__cue {
+    top: 10px;
+    right: 10px;
+    padding: 7px 12px;
+    font-size: 12.5px;
+  }
+}
+
 @media (max-width: 991px) {
-  .bm-work__item { grid-template-columns: minmax(0, 1fr); }
+  /* The even-row selector above is more specific, so it has to be named here
+     too or those cards keep two columns once the layout stacks. */
+  .bm-work__item,
+  .bm-work__item:nth-child(even) { grid-template-columns: minmax(0, 1fr); }
 
   .bm-work__item > .bm-show__mat,
   .bm-work__item:nth-child(even) > .bm-show__mat {
@@ -2240,8 +2427,16 @@ a.bm-card__title:hover,
 }
 
 @media (max-width: 575px) {
-  .bm-work__cta { width: 100%; }
   .bm-work__facts { gap: var(--bm-4); }
+
+  /* Two side-by-side buttons wrap into a ragged stack at this width, so stack
+     them deliberately and let each span the card. */
+  .bm-work__actions {
+    flex-direction: column;
+    align-items: stretch;
+  }
+
+  .bm-work__actions .bm-button { width: 100%; }
 }
 
 .bm-show {
@@ -2281,6 +2476,7 @@ a.bm-card__title:hover,
 .bm-show--lead .bm-show__mat { border-bottom: 0; border-right: 1px solid var(--bm-line); }
 
 .bm-show__shot {
+  position: relative; /* anchors the .bm-live-tag status marker */
   width: 100%;
   aspect-ratio: 16 / 10;
   overflow: hidden;

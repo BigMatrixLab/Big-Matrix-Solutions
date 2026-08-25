@@ -31,6 +31,12 @@ const WorkRow = ({ item, index }) => {
             <div className="bm-show__mat">
                 <div className="bm-show__shot">
                     <img src={item.image} alt={item.title} loading="lazy" />
+                    {live && (
+                        <span className="bm-live-tag">
+                            <span className="bm-live-dot" aria-hidden="true"></span>
+                            Live
+                        </span>
+                    )}
                 </div>
             </div>
 
@@ -59,23 +65,28 @@ const WorkRow = ({ item, index }) => {
                             <dd>{year}</dd>
                         </div>
                     )}
-                    {live && (
-                        <div>
-                            <dt>Live</dt>
-                            <dd>
-                                <a href={live.href} target="_blank" rel="noopener noreferrer">
-                                    {live.label}
-                                    <i className="bi bi-arrow-up-right" aria-hidden="true"></i>
-                                </a>
-                            </dd>
-                        </div>
-                    )}
                 </dl>
 
-                <Link to={to} className="bm-button bm-button--ghost bm-work__cta">
-                    View case study
-                    <i className="bi bi-arrow-right" aria-hidden="true"></i>
-                </Link>
+                <div className="bm-work__actions">
+                    <Link to={to} className="bm-button bm-button--ghost bm-work__cta">
+                        View case study
+                        <i className="bi bi-arrow-right" aria-hidden="true"></i>
+                    </Link>
+
+                    {live && (
+                        <a
+                            className="bm-button bm-button--live"
+                            href={live.href}
+                            target="_blank"
+                            rel="noopener noreferrer"
+                            aria-label={`Open the live ${item.title} site at ${live.label} in a new tab`}
+                        >
+                            <span className="bm-live-dot" aria-hidden="true"></span>
+                            {live.label}
+                            <i className="bi bi-box-arrow-up-right" aria-hidden="true"></i>
+                        </a>
+                    )}
+                </div>
             </div>
         </article>
     );

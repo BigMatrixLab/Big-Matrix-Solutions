@@ -4,9 +4,24 @@ import Breadcrumb from "../components/Breadcrumb";
 import MarkdownRenderer from "../components/MarkdownRenderer";
 import { projectData } from "../data/content";
 
+/** `location` doubles as a live URL and as a physical place, so only link it
+ *  when it is actually a URL. */
+const liveSiteOf = (location) => {
+  if (!location || !/^https?:\/\//i.test(location)) return null;
+  try {
+    return {
+      href: location,
+      label: new URL(location).hostname.replace(/^www\./, ""),
+    };
+  } catch {
+    return null;
+  }
+};
+
 const ProjectDetails = () => {
   const { slug } = useParams();
   const project = projectData.find((p) => p.slug === slug);
+  const live = liveSiteOf(project?.location);
 
   if (!project) {
     return (
@@ -34,7 +49,26 @@ const ProjectDetails = () => {
           <div className="row">
             <div className="col-lg-12">
               <div className="project-details-thumb">
-                <img src={project.image} alt={project.title} />
+                {live ? (
+                  <a
+                    className="bm-thumb-live"
+                    href={live.href}
+                    target="_blank"
+                    rel="noopener noreferrer"
+                    aria-label={`Open the live ${project.title} site at ${live.label} in a new tab`}
+                  >
+                    <img src={project.image} alt={project.title} />
+                    <span className="bm-thumb-live__cue">
+                      <i
+                        className="bi bi-box-arrow-up-right"
+                        aria-hidden="true"
+                      ></i>
+                      Open live site
+                    </span>
+                  </a>
+                ) : (
+                  <img src={project.image} alt={project.title} />
+                )}
               </div>
             </div>
           </div>
@@ -118,19 +152,30 @@ const ProjectDetails = () => {
                       <p>Starting Date :</p>
                       <h6>{project.date}</h6>
                     </div>
-                    <div className="project-details-info">
-                      <p>Project Demo :</p>
-                      <h6>
-                        <a
-                          href={project.location}
-                          target="_blank"
-                          rel="noopener noreferrer"
-                          style={{ fontWeight: "bold" }}
-                        >
-                          {project.location}
-                        </a>
-                      </h6>
-                    </div>
+                    {live && (
+                      <div className="project-details-info">
+                        <p>Project Demo :</p>
+                        <h6>
+                          <a
+                            className="bm-button bm-button--live"
+                            href={live.href}
+                            target="_blank"
+                            rel="noopener noreferrer"
+                            aria-label={`Open ${live.label} in a new tab`}
+                          >
+                            <span
+                              className="bm-live-dot"
+                              aria-hidden="true"
+                            ></span>
+                            {live.label}
+                            <i
+                              className="bi bi-box-arrow-up-right"
+                              aria-hidden="true"
+                            ></i>
+                          </a>
+                        </h6>
+                      </div>
+                    )}
                   </div>
                   <div className="widget-sidber-contact-box">
                     <div className="widget-sidber-contact">

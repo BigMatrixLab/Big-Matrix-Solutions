@@ -60,7 +60,8 @@ const collaborators = [
     { icon: 'bi bi-cpu', role: 'Engineering Team', name: 'Big-Matrix Solutions', image: '/assets/images/big_matrix_cube.png', desc: 'Builds the editor workflow, model integration, and export pipeline for production use.' },
 ];
 
-const ProjectXRaySegmentation = () => {
+const ProjectXRaySegmentation = () => {
+
 
     return (
         <>
@@ -79,9 +80,20 @@ const ProjectXRaySegmentation = () => {
                                 can produce reliable mask sets in a consistent and shareable format.
                             </p>
                         </div>
-
                         <figure className="bc-hero-figure">
-                            <img src="/assets/images/projects/x-ray-segmentation-editor.png" alt="X-Ray Segmentation Editor workspace" />
+                            <a
+                                className="bc-hero-figure__link"
+                                href="https://segmentation-editor.pages.dev/"
+                                target="_blank"
+                                rel="noopener noreferrer"
+                                aria-label="Open the live X-Ray Segmentation Editor at segmentation-editor.pages.dev in a new tab"
+                            >
+                                <img src="/assets/images/projects/x-ray-segmentation-editor.png" alt="X-Ray Segmentation Editor workspace" />
+                                <span className="bc-hero-figure__cue">
+                                    <i className="bi bi-box-arrow-up-right" aria-hidden="true"></i>
+                                    Open live demo
+                                </span>
+                            </a>
                             <figcaption className="bc-figure-tag">
                                 <i className="bi bi-check2-circle"></i>
                                 <span>

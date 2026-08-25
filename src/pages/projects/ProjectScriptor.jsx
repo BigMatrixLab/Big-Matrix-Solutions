@@ -60,7 +60,8 @@ const collaborators = [
     { icon: 'bi bi-shield-lock', role: 'Security & Reliability', name: 'Infrastructure Team', desc: 'Maintains encrypted sharing, auditability, and operational quality across collaborative workspaces.' },
 ];
 
-const ProjectScriptor = () => {
+const ProjectScriptor = () => {
+
 
     return (
         <>
@@ -78,9 +79,20 @@ const ProjectScriptor = () => {
                                 whiteboarding, PDF annotation, and knowledge graph exploration in a single distraction-free environment.
                             </p>
                         </div>
-
                         <figure className="bc-hero-figure">
-                            <img src="/assets/images/projects/Scriptor.png" alt="Scriptor Workspace" />
+                            <a
+                                className="bc-hero-figure__link"
+                                href="https://scriptor.space/"
+                                target="_blank"
+                                rel="noopener noreferrer"
+                                aria-label="Open the live Scriptor workspace at scriptor.space in a new tab"
+                            >
+                                <img src="/assets/images/projects/Scriptor.png" alt="Scriptor Workspace" />
+                                <span className="bc-hero-figure__cue">
+                                    <i className="bi bi-box-arrow-up-right" aria-hidden="true"></i>
+                                    Open live site
+                                </span>
+                            </a>
                             <figcaption className="bc-figure-tag">
                                 <i className="bi bi-stars"></i>
                                 <span>

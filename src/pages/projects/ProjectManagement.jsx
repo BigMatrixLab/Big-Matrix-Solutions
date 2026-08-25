@@ -60,7 +60,8 @@ const team = [
     { icon: 'bi bi-gear-wide-connected', role: 'R&D Program Office', name: 'Big-Matrix Solutions', image: '/assets/images/big_matrix_cube.png', desc: 'Coordinates adoption, process standardization, and ongoing platform enhancement.' },
 ];
 
-const ProjectManagement = () => {
+const ProjectManagement = () => {
+
 
     return (
         <>
@@ -78,9 +79,20 @@ const ProjectManagement = () => {
                                 deadline management, and execution visibility across multiple ongoing initiatives.
                             </p>
                         </div>
-
                         <figure className="bc-hero-figure">
-                            <img src="/assets/images/projects/PM-Dashboard.jpeg" alt="Big-Matrix Project Management Platform" />
+                            <a
+                                className="bc-hero-figure__link"
+                                href="https://pm.big-matrix.com/"
+                                target="_blank"
+                                rel="noopener noreferrer"
+                                aria-label="Open the live Big-Matrix project management platform at pm.big-matrix.com in a new tab"
+                            >
+                                <img src="/assets/images/projects/PM-Dashboard.jpeg" alt="Big-Matrix Project Management Platform" />
+                                <span className="bc-hero-figure__cue">
+                                    <i className="bi bi-box-arrow-up-right" aria-hidden="true"></i>
+                                    Open live site
+                                </span>
+                            </a>
                             <figcaption className="bc-figure-tag">
                                 <i className="bi bi-shield-check"></i>
                                 <span>

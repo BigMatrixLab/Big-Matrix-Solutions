@@ -293,6 +293,76 @@
     border: 1px solid rgba(255, 255, 255, 0.12);
 }
 
+/* The product screenshot is the most clicked-at element on the page, so on
+   products that are actually live it links straight to the running site. The
+   cue pill is always visible rather than hover-only: hover affordances do not
+   exist on touch, and the point here is discoverability. */
+.bc-hero-figure__link {
+    position: relative;
+    display: block;
+    border-radius: var(--bc-radius);
+    text-decoration: none;
+    transition: transform var(--bm-dur-slow, 560ms) var(--bm-ease, ease);
+}
+
+.bc-hero-figure__link img {
+    display: block;
+}
+
+.bc-hero-figure__link:hover,
+.bc-hero-figure__link:focus-visible {
+    transform: translateY(-4px);
+}
+
+.bc-hero-figure__link:focus-visible {
+    outline: 3px solid var(--bc-accent, #ff8078);
+    outline-offset: 5px;
+}
+
+.bc-hero-figure__cue {
+    position: absolute;
+    top: 14px;
+    right: 14px;
+    z-index: 2;
+    display: inline-flex;
+    align-items: center;
+    gap: 8px;
+    padding: 9px 15px;
+    font-family: "Rajdhani", sans-serif;
+    font-size: 14px;
+    font-weight: 700;
+    line-height: 1;
+    letter-spacing: 0.02em;
+    white-space: nowrap;
+    color: #fff;
+    background: var(--bc-primary);
+    border-radius: 50px;
+    box-shadow: 0 12px 26px -12px rgba(0, 0, 0, 0.7);
+    transition: transform var(--bm-dur, 240ms) var(--bm-ease, ease),
+                background-color var(--bm-dur-fast, 120ms) var(--bm-ease-inout, ease);
+}
+
+.bc-hero-figure__cue i {
+    font-size: 13px;
+}
+
+/* --bm-orange-deep instead of --bc-primary-dark: the hover step lightens in the
+   dark theme and pushes the white label under 4.5:1; -deep holds 5.7:1 in both. */
+.bc-hero-figure__link:hover .bc-hero-figure__cue,
+.bc-hero-figure__link:focus-visible .bc-hero-figure__cue {
+    background: var(--bm-orange-deep);
+    transform: scale(1.05);
+}
+
+@media (max-width: 480px) {
+    .bc-hero-figure__cue {
+        top: 10px;
+        right: 10px;
+        padding: 7px 12px;
+        font-size: 12.5px;
+    }
+}
+
 .bc-hero-figure .bc-figure-tag {
     position: absolute;
     bottom: -18px;
@@ -531,14 +601,28 @@
     text-align: right;
 }
 
-.bc-fact-row .bc-fact-value a {
+.bc-fact-row .bc-fact-value a:not(.bm-button) {
     color: var(--bc-primary-text);
     text-decoration: none;
 }
 
-.bc-fact-row .bc-fact-value a:hover {
+.bc-fact-row .bc-fact-value a:not(.bm-button):hover {
     text-decoration: underline;
 }
+
+/* The live/demo URL row is the only fact that leaves the page, so it carries the
+   same .bm-button--live action as the product cards (bm-ui.css) rather than a
+   value in text. The button's own 44px target is taller than a text row, so the
+   row drops its padding to keep the panel's rhythm. */
+.bc-fact-row:has(.bm-button--live) {
+    padding: 8px 0;
+}
+
+.bc-fact-row:has(.bm-button--live) .bc-fact-label {
+    color: var(--bc-ink);
+    font-weight: 600;
+}
+
 
 /* ============================= GRIDS / CARDS ============================= */
 .bc-grid {
