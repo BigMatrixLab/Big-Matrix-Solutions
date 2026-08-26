@@ -679,6 +679,17 @@
     font-size: 0.97rem;
 }
 
+/* An example prompt sitting above the behaviour copy inside a card. Needs two
+   classes to outrank `.bc-showcase p`, which zeroes every paragraph margin. */
+.bc-showcase .bc-prompt {
+    margin-bottom: 14px;
+    padding-left: 14px;
+    border-left: 3px solid var(--bc-primary);
+    font-size: 0.95rem;
+    font-style: italic;
+    color: var(--bc-ink-2);
+}
+
 /* ---- Module lists reuse the homepage row index (.bm-rows) ----
    Same markup and styling as the homepage; these rules only neutralise the
    .bc-showcase heading and paragraph defaults, which would otherwise win on
@@ -963,6 +974,35 @@
     font-weight: 600;
     color: #fff;
     text-decoration: none;
+}
+
+/* The anchor variant is an action, so it gets the accent fill. Scoped to `a`
+   because the medical project pages put this same class on a <span> for
+   "Under Review" and "AI + DICOM + Clinical QA" — those are labels, not links,
+   and must stay neutral glass. Needs the element selector on top of .bc-pub to
+   outrank the rule above.
+   --bc-primary (the -fill step) because a 13px white label needs 4.8:1; the
+   light ring and drop shadow are the same treatment as the live-site cue pills
+   in bm-ui.css. */
+.bc-pub a.bc-pub-status {
+    background: var(--bc-primary);
+    border-color: rgba(255, 255, 255, 0.28);
+    box-shadow: 0 10px 22px -12px rgba(0, 0, 0, 0.7);
+    transition: background-color var(--bm-dur-fast, 120ms) var(--bm-ease-inout, ease),
+                transform var(--bm-dur, 240ms) var(--bm-ease, ease);
+}
+
+/* -deep, not -hover: the hover step lightens in the dark theme and pushes the
+   white label under 4.5:1, while -deep holds 5.7:1 in both. */
+.bc-pub a.bc-pub-status:hover {
+    background: var(--bm-orange-deep);
+    color: #fff;
+    transform: translateY(-2px);
+}
+
+.bc-pub a.bc-pub-status:focus-visible {
+    outline: 3px solid var(--bc-accent);
+    outline-offset: 4px;
 }
 
 /* ============================= TEAM ============================= */
