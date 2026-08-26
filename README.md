@@ -19,3 +19,12 @@ npm run dev
 - Comprehensive service showcase
 - Project portfolio and case studies
 - Dynamic blog and team profiles
+
+
+
+## Case Study Prompt
+- File path
+- update the x Product details page using this case study and the corresponding projects data file, write and update the same way as the scriptor details page
+
+## Case Study Creation  Prompt
+- I want to showcase this project to my parent website (big-matrix.com) as a product case study. Write an md file on this project so that I can use it to create and show a complete and detailed case study in my parent website.
