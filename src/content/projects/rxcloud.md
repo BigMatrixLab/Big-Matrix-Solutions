@@ -2,10 +2,10 @@
 id: "5"
 slug: "rxcloud"
 title: "RxCloud"
-category: "Healthcare / SaaS Platform"
+category: "Clinic and practice management SaaS"
 image: "/assets/images/projects/RXCloud.png"
-desc: "One cloud record for Bangladeshi clinics: appointments, prescriptions, lab reports, billing and messaging, instead of six systems."
+desc: "One platform covering booking, consultation, prescription, records and billing — with staff approval and a public site per doctor."
 client: "Big-Matrix Solutions"
 date: "2026"
-location: "https://www.rxcloud.care/"
+location: "https://rxcloud.care/"
 ---
