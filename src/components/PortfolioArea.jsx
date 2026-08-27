@@ -4,7 +4,7 @@ import SectionHead from './SectionHead';
 import { projectData } from '../data/content';
 
 // Curated selection: the first id is the lead item, the rest sit below it.
-const FEATURED_IDS = ['3', '4', '2'];
+const FEATURED_IDS = ['3', '1', '5'];
 
 const ShowItem = ({ item, lead = false }) => (
     <article className={`bm-show${lead ? ' bm-show--lead' : ''}`}>
