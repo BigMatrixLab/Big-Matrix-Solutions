@@ -153,16 +153,16 @@ const architecture = [
     },
 ];
 
-const numbers = [
-    { icon: 'bi bi-code-slash', num: '196K', label: 'Lines of application code across 938 files' },
-    { icon: 'bi bi-hdd-network', num: '107', label: 'API endpoints across 15 backend modules' },
-    { icon: 'bi bi-tools', num: '79', label: 'AI editing tools across 3 format agents' },
-    { icon: 'bi bi-git', num: '434', label: 'Commits over roughly 5 months to production' },
-    { icon: 'bi bi-diagram-2', num: '34', label: 'Data models behind projects, files and billing' },
-    { icon: 'bi bi-box-seam', num: '10', label: 'Production containers, 4 backend services' },
-    { icon: 'bi bi-clipboard-check', num: '58', label: 'Backend test files, roughly 16,100 lines' },
-    { icon: 'bi bi-broadcast-pin', num: '6', label: 'Real-time channels for presence and live documents' },
-];
+// const numbers = [
+//     { icon: 'bi bi-code-slash', num: '196K', label: 'Lines of application code across 938 files' },
+//     { icon: 'bi bi-hdd-network', num: '107', label: 'API endpoints across 15 backend modules' },
+//     { icon: 'bi bi-tools', num: '79', label: 'AI editing tools across 3 format agents' },
+//     { icon: 'bi bi-git', num: '434', label: 'Commits over roughly 5 months to production' },
+//     { icon: 'bi bi-diagram-2', num: '34', label: 'Data models behind projects, files and billing' },
+//     { icon: 'bi bi-box-seam', num: '10', label: 'Production containers, 4 backend services' },
+//     { icon: 'bi bi-clipboard-check', num: '58', label: 'Backend test files, roughly 16,100 lines' },
+//     { icon: 'bi bi-broadcast-pin', num: '6', label: 'Real-time channels for presence and live documents' },
+// ];
 
 const plans = [
     {
@@ -532,7 +532,7 @@ const ProjectScriptor = () => {
             </section>
 
             {/* ── Numbers ── */}
-            <section className="bc-section bc-alt" id="numbers">
+            {/* <section className="bc-section bc-alt" id="numbers">
                 <div className="bc-container">
                     <div className="bc-section-head">
                         <span className="bc-eyebrow">By the numbers</span>
@@ -566,7 +566,7 @@ const ProjectScriptor = () => {
                         </div>
                     </div>
                 </div>
-            </section>
+            </section> */}
 
             {/* ── Plans ── */}
             <section className="bc-section" id="plans">

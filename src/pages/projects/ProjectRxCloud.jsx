@@ -159,16 +159,16 @@ const architecture = [
     },
 ];
 
-const numbers = [
-    { icon: 'bi bi-code-slash', num: '115K', label: 'Lines of source across ~685 files' },
-    { icon: 'bi bi-hdd-network', num: '150', label: 'API endpoints across 24 route modules' },
-    { icon: 'bi bi-diagram-2', num: '18', label: 'Backend domain apps' },
-    { icon: 'bi bi-table', num: '68', label: 'Database models' },
-    { icon: 'bi bi-signpost-split', num: '71', label: 'Frontend file-based routes' },
-    { icon: 'bi bi-grid', num: '145', label: 'Radix-based UI components' },
-    { icon: 'bi bi-file-earmark-medical', num: '16.3K', label: 'Lines in the prescription subsystem alone' },
-    { icon: 'bi bi-layout-text-window', num: '8 / 6', label: 'Prescription templates and designs' },
-];
+// const numbers = [
+//     { icon: 'bi bi-code-slash', num: '115K', label: 'Lines of source across ~685 files' },
+//     { icon: 'bi bi-hdd-network', num: '150', label: 'API endpoints across 24 route modules' },
+//     { icon: 'bi bi-diagram-2', num: '18', label: 'Backend domain apps' },
+//     { icon: 'bi bi-table', num: '68', label: 'Database models' },
+//     { icon: 'bi bi-signpost-split', num: '71', label: 'Frontend file-based routes' },
+//     { icon: 'bi bi-grid', num: '145', label: 'Radix-based UI components' },
+//     { icon: 'bi bi-file-earmark-medical', num: '16.3K', label: 'Lines in the prescription subsystem alone' },
+//     { icon: 'bi bi-layout-text-window', num: '8 / 6', label: 'Prescription templates and designs' },
+// ];
 
 const stack = [
     { icon: 'bi bi-filetype-jsx', title: 'Frontend', desc: 'React 19, TanStack Start with SSR, TanStack Query and Tailwind 4.' },
@@ -534,7 +534,7 @@ const ProjectRxCloud = () => {
             </section>
 
             {/* ── Numbers ── */}
-            <section className="bc-section" id="numbers">
+            {/* <section className="bc-section" id="numbers">
                 <div className="bc-container">
                     <div className="bc-section-head">
                         <span className="bc-eyebrow">By the numbers</span>
@@ -556,7 +556,7 @@ const ProjectRxCloud = () => {
                         ))}
                     </div>
                 </div>
-            </section>
+            </section> */}
 
             {/* ── Technology ── */}
             <section className="bc-section bc-alt" id="stack">

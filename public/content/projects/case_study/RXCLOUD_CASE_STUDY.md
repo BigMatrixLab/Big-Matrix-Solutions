@@ -462,29 +462,7 @@ instruction vocabulary. Print uses a Bengali-capable embedded font so PDF shapin
 font server. Public doctor sites toggle fully. The product landing page localises through a keyed
 copy deck with automatic Bangla numeral conversion for anything unkeyed.
 
----
 
-## 12. Build scale
-
-| | |
-|---|---|
-| Total source | ~685 files, ~115,000 lines |
-| Backend Python (excl. migrations) | 350 files, ~35,300 lines |
-| Frontend TypeScript/TSX/CSS | 334 files, ~79,600 lines |
-| Domain apps | 18 |
-| Database models | 68 |
-| Migrations | 100 |
-| API endpoints | ~150 across 24 route modules |
-| Frontend routes | 71 |
-| UI components | 145 |
-| Largest subsystem | Prescriptions — 97 files, ~16,300 lines, 28 migrations |
-| Prescription templates / designs | 8 / 6 |
-
-The prescription subsystem being the largest single piece of the codebase is the story in one number:
-the thing doctors judge the product on is the paper they hand the patient, so that is where the work
-went.
-
----
 
 ## 13. FAQ, condensed from the landing page
 

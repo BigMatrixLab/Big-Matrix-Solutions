@@ -193,38 +193,6 @@ Three principles:
 
 The stack composes by profile, so it scales from a 5-container development stack to the full 10-container production deployment, deployed behind a zero-trust edge tunnel with no inbound ports open.
 
----
-
-## 9. By the numbers
-
-| Code | |
-|---|---|
-| Total application code | ~196,000 lines / 938 files |
-| Backend API | 42,700 lines |
-| Document & collaboration services | 17,700 lines |
-| Web frontend | 101,900 lines |
-| Mobile app | 34,100 lines |
-
-| System | |
-|---|---|
-| Backend modules | 15 |
-| Data models | 34 |
-| API endpoints | 107 |
-| Backend services | 4 |
-| Production containers | 10 |
-| AI editing tools | 79 across 3 agents |
-| Real-time channels | 6 |
-| Commits / build time | 434 / ~5 months to production |
-
-| Testing | |
-|---|---|
-| Backend test files | 58 (~16,100 lines) |
-| Frontend test files | 12 |
-| Approach | Property-based testing on the version-history invariants and core state machines, alongside example-based tests |
-
-**Engineering process:** larger subsystems were built from formal written specs before implementation. The version-history spec is 294 lines of numbered requirements plus a 638-line design document — and those requirement numbers are cited *in the source code*, so the reason a given line exists is discoverable from the code itself.
-
-**Business metrics** — `[[FILL IN: registered users, MAU, paid conversion, documents created, LaTeX compiles run, AI turns served, MRR, retention]]`
 
 ---
 
