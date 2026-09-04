@@ -4,9 +4,13 @@ import Breadcrumb from '../components/Breadcrumb';
 import SectionHead from '../components/SectionHead';
 import CtaBand from '../components/CtaBand';
 import { sortBlogsByDate } from '../utils/blogSort';
+import { visibleBlogs, isScheduled, daysUntilPublish, usePreviewMode } from '../utils/publishSchedule';
 
 const Blog = () => {
-    const [lead, ...rest] = sortBlogsByDate(blogsData);
+    const preview = usePreviewMode();
+    const posts = sortBlogsByDate(visibleBlogs(blogsData, { includeScheduled: preview }));
+    const [lead, ...rest] = posts;
+    const queued = preview ? posts.filter(isScheduled).length : 0;
 
     return (
         <>
@@ -20,6 +24,14 @@ const Blog = () => {
                         lead="Field observations from the people building the systems — what worked, what broke, and what we would do differently."
                     />
 
+                    {preview && (
+                        <p className="bm-preview-note">
+                            <i className="bi bi-eye" aria-hidden="true"></i>
+                            Preview mode — showing {queued} scheduled {queued === 1 ? 'post' : 'posts'} that
+                            visitors cannot see yet. <Link to="/blog?preview=0">Exit preview</Link>
+                        </p>
+                    )}
+
                     {lead && (
                         <article className="bm-post-lead">
                             <Link to={`/blog/${lead.slug}`} className="bm-post-lead__shot">
@@ -28,7 +40,13 @@ const Blog = () => {
 
                             <div className="bm-post-lead__body">
                                 <p className="bm-post__meta">
-                                    <span className="bm-post__badge">Latest</span>
+                                    {isScheduled(lead) ? (
+                                        <span className="bm-post__badge bm-post__badge--queued">
+                                            Scheduled &middot; in {daysUntilPublish(lead)}d
+                                        </span>
+                                    ) : (
+                                        <span className="bm-post__badge">Latest</span>
+                                    )}
                                     {lead.category && <span>{lead.category}</span>}
                                     {lead.date && <time>{lead.date}</time>}
                                 </p>
@@ -56,6 +74,11 @@ const Blog = () => {
                                     </div>
                                     <div className="bm-card__body">
                                         <div className="bm-card__meta">
+                                            {isScheduled(post) && (
+                                                <span className="bm-post__badge bm-post__badge--queued">
+                                                    in {daysUntilPublish(post)}d
+                                                </span>
+                                            )}
                                             {post.category && <span>{post.category}</span>}
                                             {post.date && <span>{post.date}</span>}
                                         </div>

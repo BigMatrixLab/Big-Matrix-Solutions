@@ -3242,6 +3242,38 @@ a.bm-card__title:hover,
   border-radius: var(--bm-r-pill);
 }
 
+/* Scheduled posts, shown only in preview mode. Outlined rather than filled so
+   it never competes with the orange "Latest" flag, and so it picks up the
+   theme's own ink and hairline instead of needing a second colour pair. */
+.bm-post__badge--queued {
+  color: var(--bm-text-2);
+  background: transparent;
+  border: 1px solid var(--bm-line-strong);
+}
+
+.bm-preview-note {
+  display: flex;
+  flex-wrap: wrap;
+  align-items: center;
+  gap: var(--bm-2);
+  margin: 0 0 var(--bm-6);
+  padding: var(--bm-3) var(--bm-4);
+  border: 1px dashed var(--bm-line-strong);
+  border-radius: var(--bm-r-sm);
+  background: var(--bm-elevated-2);
+  font-family: var(--bm-font-mono) !important;
+  font-size: 12px;
+  line-height: 1.5;
+  color: var(--bm-text-2);
+}
+
+.bm-preview-note i { color: var(--bm-text-3); }
+
+.bm-preview-note a {
+  color: var(--bm-orange-ink);
+  text-decoration: underline;
+}
+
 .bm-post-lead__title {
   margin: 0 0 var(--bm-3);
   font-family: var(--bm-font-display) !important;

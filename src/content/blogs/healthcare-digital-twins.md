@@ -2,13 +2,11 @@
 id: 7
 slug: "healthcare-digital-twins-evolution"
 title: "The Evolution of Digital Twins in Healthcare"
-author: "Antigravity"
-admin: "Admin"
 comments: "0"
 image: "https://images.unsplash.com/photo-1581091226825-a6a2a5aee158?auto=format&fit=crop&q=80&w=800"
 category: "Healthcare Tech"
 desc: "Exploring how virtual replicas of patients and organs are transforming surgical planning and personalized medicine."
-date: "Feb 17, 2026"
+date: "Sep 04, 2026"
 tags: ["Digital Twins", "Healthcare", "Simulation", "AI in Medicine"]
 ---
 

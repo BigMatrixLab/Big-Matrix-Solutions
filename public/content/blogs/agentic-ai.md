@@ -2,13 +2,11 @@
 id: "1"
 slug: "the-rise-of-agentic-ai-from-chatbots-to-autonomous-partners"
 title: "The Rise of Agentic AI: From Chatbots to Autonomous Partners"
-author: "Mera"
-admin: "Mera"
 comments: "12"
 image: "https://images.unsplash.com/photo-1677442136019-21780ecad995?w=800&q=80&auto=format&fit=crop"
 category: "Agentic AI"
 desc: "Moving beyond reactive prompts to proactive agents that plan, decide, and execute tasks independently."
-date: "Feb 14, 2026"
+date: "May 15, 2026"
 tags: ["Agentic AI", "Machine Learning", "Automation", "AI Agents"]
 ---
 

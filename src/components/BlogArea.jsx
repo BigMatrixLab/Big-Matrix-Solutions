@@ -3,9 +3,12 @@ import { Link } from 'react-router-dom';
 import SectionHead from './SectionHead';
 import { blogsData } from '../data/content';
 import { sortBlogsByDate } from '../utils/blogSort';
+import { visibleBlogs } from '../utils/publishSchedule';
 
 const BlogArea = () => {
-    const [lead, ...rest] = sortBlogsByDate(blogsData).slice(0, 5);
+    // The home page always shows the live set — scheduled posts are reviewed
+    // on /blog?preview=1, never surfaced to visitors here.
+    const [lead, ...rest] = sortBlogsByDate(visibleBlogs(blogsData)).slice(0, 5);
     if (!lead) return null;
 
     return (

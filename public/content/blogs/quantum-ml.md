@@ -2,12 +2,11 @@
 id: "3"
 slug: "quantum-enhanced-machine-learning-breaking-the-compute-barrier"
 title: "Quantum-Enhanced Machine Learning: Breaking the Compute Barrier"
-admin: "Mera"
 comments: "05"
 image: "https://images.unsplash.com/photo-1697577418970-95d99b5a55cf?q=80&w=696&auto=format&fit=crop&q=80&w=800"
 category: "AI Innovation"
 desc: "Exploring how quantum processors are beginning to accelerate neural network training and complex simulations."
-date: "Jan 25, 2026"
+date: "Apr 24, 2026"
 tags: ["Quantum Computing", "Machine Learning", "AI Innovation"]
 ---
 

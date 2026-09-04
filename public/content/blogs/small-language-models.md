@@ -2,12 +2,11 @@
 id: "6"
 slug: "the-rise-of-specialized-small-language-models-slms"
 title: "The Rise of Specialized Small Language Models (SLMs)"
-admin: "Mera"
 comments: "11"
 image: "https://images.unsplash.com/photo-1518770660439-4636190af475?auto=format&fit=crop&q=80&w=800"
 category: "Software"
 desc: "Why the industry is moving away from massive models toward efficient, task-specific SLMs."
-date: "Jan 02, 2026"
+date: "Apr 10, 2026"
 tags: ["Small Language Models", "AI Efficiency", "Edge Computing"]
 ---
 
