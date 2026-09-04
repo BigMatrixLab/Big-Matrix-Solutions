@@ -6,7 +6,7 @@ comments: "0"
 image: "https://images.unsplash.com/photo-1550439062-609e1531270e?auto=format&fit=crop&q=80&w=800"
 category: "Software Development"
 desc: "The biggest shift of 2026 was not smarter models. It was agents that accept a task, work while you sleep, and hand you a pull request."
-date: "Jul 17, 2026"
+date: "Oct 23, 2026"
 tags: ["Agentic AI", "Software Development", "Developer Tools", "Automation"]
 ---
 

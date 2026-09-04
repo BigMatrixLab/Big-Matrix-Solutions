@@ -6,7 +6,7 @@ comments: "08"
 image: "https://images.unsplash.com/photo-1667372393119-3d4c48d07fc9?auto=format&fit=crop&q=80&w=800"
 category: "Software Development"
 desc: "How the Model Context Protocol (MCP) is revolutionizing how AI agents connect to data and local tools."
-date: "May 08, 2026"
+date: "Aug 21, 2026"
 tags: ["MCP", "Software Development", "AI Integration"]
 ---
 

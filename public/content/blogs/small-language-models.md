@@ -6,7 +6,7 @@ comments: "11"
 image: "https://images.unsplash.com/photo-1518770660439-4636190af475?auto=format&fit=crop&q=80&w=800"
 category: "Software"
 desc: "Why the industry is moving away from massive models toward efficient, task-specific SLMs."
-date: "Apr 10, 2026"
+date: "Jul 24, 2026"
 tags: ["Small Language Models", "AI Efficiency", "Edge Computing"]
 ---
 

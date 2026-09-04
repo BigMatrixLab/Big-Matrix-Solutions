@@ -6,7 +6,7 @@ comments: "0"
 image: "https://images.unsplash.com/photo-1639762681485-074b7f938ba0?auto=format&fit=crop&q=80&w=800"
 category: "Tutorial"
 desc: "Routers, top-k selection, load balancing loss, and the memory-for-compute trade that made trillion-parameter models economically serveable."
-date: "Jun 05, 2026"
+date: "Jan 22, 2027"
 tags: ["Mixture of Experts", "LLM", "Tutorial", "Model Architecture"]
 ---
 

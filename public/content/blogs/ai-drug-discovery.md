@@ -6,7 +6,7 @@ comments: "0"
 image: "https://images.unsplash.com/photo-1614935151651-0bea6508db6b?auto=format&fit=crop&q=80&w=800"
 category: "Medical AI"
 desc: "A 98.4 mL lung function improvement, 173 programs in clinical development, and still zero FDA approvals. What the first real data actually says."
-date: "Aug 07, 2026"
+date: "Nov 13, 2026"
 tags: ["Drug Discovery", "Medical AI", "Clinical Trials", "Protein Design"]
 ---
 

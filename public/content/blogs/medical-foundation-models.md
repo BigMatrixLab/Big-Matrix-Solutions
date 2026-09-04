@@ -6,7 +6,7 @@ comments: "0"
 image: "https://images.unsplash.com/photo-1631563019676-dade0dbdb8fc?auto=format&fit=crop&q=80&w=800"
 category: "Medical AI"
 desc: "One clearance covering 14 conditions from a single CT scan, 1,524 cleared algorithms, and the validation gap regulators have not closed yet."
-date: "Aug 14, 2026"
+date: "Sep 18, 2026"
 tags: ["Medical AI", "Radiology", "FDA", "Foundation Models"]
 ---
 

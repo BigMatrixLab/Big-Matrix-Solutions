@@ -6,7 +6,7 @@ comments: "0"
 image: "https://images.unsplash.com/photo-1635070041078-e363dbe005cb?auto=format&fit=crop&q=80&w=800"
 category: "AI Benchmarks"
 desc: "Models are acing graduate physics and failing puzzles a child can solve. ARC-AGI-3, METR's time horizons, and what evaluation looks like after saturation."
-date: "Aug 28, 2026"
+date: "Oct 09, 2026"
 tags: ["Benchmarks", "ARC-AGI", "Evaluation", "AI Research"]
 ---
 

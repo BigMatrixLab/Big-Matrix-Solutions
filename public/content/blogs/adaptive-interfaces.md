@@ -6,7 +6,7 @@ comments: "09"
 image: "https://images.unsplash.com/photo-1581291518633-83b4ebd1d83e?auto=format&fit=crop&q=80&w=800"
 category: "UI Design"
 desc: "Interfaces that reconfigure themselves in real-time based on user behavior and intent."
-date: "May 01, 2026"
+date: "Aug 14, 2026"
 tags: ["UI Design", "UX", "Personalization"]
 ---
 

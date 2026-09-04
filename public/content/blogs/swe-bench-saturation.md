@@ -6,7 +6,7 @@ comments: "0"
 image: "https://images.unsplash.com/photo-1487058792275-0ad4aaf24ca7?auto=format&fit=crop&q=80&w=800"
 category: "Agentic AI"
 desc: "Scores above 95% on the benchmark that defined the field, and OpenAI publicly declaring it dead. The gap between passing a test and doing the job."
-date: "Jul 24, 2026"
+date: "Sep 25, 2026"
 tags: ["Agentic AI", "SWE-bench", "Software Engineering", "Evaluation"]
 ---
 

@@ -6,7 +6,7 @@ comments: "0"
 image: "https://images.unsplash.com/photo-1502691876148-a84978e59af8?auto=format&fit=crop&q=80&w=800"
 category: "Tutorial"
 desc: "Eleven years old, still the default for medical segmentation, and quietly running inside every diffusion model. A walkthrough of why the skip connections matter."
-date: "Jun 26, 2026"
+date: "Oct 30, 2026"
 tags: ["U-Net", "Computer Vision", "Tutorial", "Medical Imaging"]
 ---
 

@@ -36,18 +36,28 @@ export const startOfToday = () => {
 
 const isDraft = (post) => post?.draft === true || post?.draft === 'true';
 
+/**
+ * Guards the `asOf` argument. These predicates read naturally enough that they
+ * invite `posts.filter(isScheduled)` — which silently passes the array index as
+ * the cutoff and makes every post look scheduled. Any cutoff earlier than the
+ * year 2000 cannot be a real one, so treat it as absent.
+ */
+const CUTOFF_FLOOR = Date.UTC(2000, 0, 1);
+const cutoff = (asOf) =>
+    typeof asOf === 'number' && asOf >= CUTOFF_FLOOR ? asOf : startOfToday();
+
 /** Has this post's publish date arrived? */
-export const isPublished = (post, asOf = startOfToday()) => {
+export const isPublished = (post, asOf) => {
     if (isDraft(post)) return false;
     const at = publishTimeOf(post);
-    return Number.isNaN(at) ? true : at <= asOf;
+    return Number.isNaN(at) ? true : at <= cutoff(asOf);
 };
 
 /** Dated in the future — queued, but not a draft. */
-export const isScheduled = (post, asOf = startOfToday()) => {
+export const isScheduled = (post, asOf) => {
     if (isDraft(post)) return false;
     const at = publishTimeOf(post);
-    return !Number.isNaN(at) && at > asOf;
+    return !Number.isNaN(at) && at > cutoff(asOf);
 };
 
 /**
@@ -55,17 +65,18 @@ export const isScheduled = (post, asOf = startOfToday()) => {
  * drafts stay hidden either way.
  */
 export const visibleBlogs = (posts, { includeScheduled = false, asOf } = {}) => {
-    const cutoff = asOf ?? startOfToday();
+    const at = cutoff(asOf);
     return posts.filter((post) =>
-        includeScheduled ? !isDraft(post) : isPublished(post, cutoff)
+        includeScheduled ? !isDraft(post) : isPublished(post, at)
     );
 };
 
 /** Days until publication; 0 once live. Used for the preview badge. */
-export const daysUntilPublish = (post, asOf = startOfToday()) => {
+export const daysUntilPublish = (post, asOf) => {
+    const from = cutoff(asOf);
     const at = publishTimeOf(post);
-    if (Number.isNaN(at) || at <= asOf) return 0;
-    return Math.ceil((at - asOf) / 86400000);
+    if (Number.isNaN(at) || at <= from) return 0;
+    return Math.ceil((at - from) / 86400000);
 };
 
 const readStoredPreview = () => {

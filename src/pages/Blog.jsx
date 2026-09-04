@@ -10,7 +10,8 @@ const Blog = () => {
     const preview = usePreviewMode();
     const posts = sortBlogsByDate(visibleBlogs(blogsData, { includeScheduled: preview }));
     const [lead, ...rest] = posts;
-    const queued = preview ? posts.filter(isScheduled).length : 0;
+    // Wrapped, not passed bare: filter would supply the index as `asOf`.
+    const queued = preview ? posts.filter((post) => isScheduled(post)).length : 0;
 
     return (
         <>

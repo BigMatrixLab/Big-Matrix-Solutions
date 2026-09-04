@@ -6,7 +6,7 @@ comments: "0"
 image: "https://images.unsplash.com/photo-1541961017774-22349e4a1262?auto=format&fit=crop&q=80&w=800"
 category: "Tutorial"
 desc: "Forward noising, reverse denoising, why the model predicts noise instead of images, and how classifier-free guidance actually steers generation."
-date: "Jun 12, 2026"
+date: "Dec 25, 2026"
 tags: ["Diffusion Models", "Generative AI", "Tutorial", "Deep Learning"]
 ---
 

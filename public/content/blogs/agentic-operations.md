@@ -6,7 +6,7 @@ comments: "14"
 image: "https://images.unsplash.com/photo-1550751827-4bd374c3f58b?auto=format&fit=crop&q=80&w=800"
 category: "Cyber Security"
 desc: "Autonomous agents are now monitoring and fixing server vulnerabilities in real-time using Agentic Ops."
-date: "Apr 17, 2026"
+date: "Jul 31, 2026"
 tags: ["Cyber Security", "AIOps", "Infrastructure"]
 ---
 

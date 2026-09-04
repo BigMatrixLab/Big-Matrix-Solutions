@@ -6,7 +6,7 @@ comments: "0"
 image: "https://images.unsplash.com/photo-1485846234645-a62644f84728?auto=format&fit=crop&q=80&w=800"
 category: "Tutorial"
 desc: "Joint Embedding Predictive Architectures predict in representation space instead of input space. What that buys, and how they avoid collapse."
-date: "Jun 19, 2026"
+date: "Nov 27, 2026"
 tags: ["JEPA", "Self-Supervised Learning", "World Models", "Tutorial"]
 ---
 

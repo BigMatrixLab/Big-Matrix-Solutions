@@ -6,7 +6,7 @@ comments: "0"
 image: "https://images.unsplash.com/photo-1543002588-bfa74002ed7e?auto=format&fit=crop&q=80&w=800"
 category: "Tutorial"
 desc: "Chunking, embeddings, vector search, reranking and the failure modes nobody mentions. Plus an honest look at whether long context has made RAG optional."
-date: "May 29, 2026"
+date: "Feb 19, 2027"
 tags: ["RAG", "Embeddings", "Vector Search", "Tutorial"]
 ---
 

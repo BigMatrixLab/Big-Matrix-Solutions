@@ -6,7 +6,7 @@ comments: "0"
 image: "https://images.unsplash.com/photo-1655720828018-edd2daec9349?auto=format&fit=crop&q=80&w=800"
 category: "Tutorial"
 desc: "Attention, positional encoding, residual streams and the feed-forward layer, explained by following one token through the whole stack."
-date: "Jul 03, 2026"
+date: "Oct 02, 2026"
 tags: ["Transformers", "Deep Learning", "Tutorial", "Attention"]
 ---
 

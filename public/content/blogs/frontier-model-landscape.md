@@ -6,7 +6,7 @@ comments: "0"
 image: "https://images.unsplash.com/photo-1573164713988-8665fc963095?auto=format&fit=crop&q=80&w=800"
 category: "LLM Research"
 desc: "Five labs, four model families, and a leaderboard that reshuffles every six weeks. What the 2026 release cadence actually changed."
-date: "Sep 04, 2026"
+date: "Sep 11, 2026"
 tags: ["LLM", "Frontier Models", "AI Research", "Benchmarks"]
 ---
 

@@ -6,7 +6,7 @@ comments: "12"
 image: "https://images.unsplash.com/photo-1677442136019-21780ecad995?w=800&q=80&auto=format&fit=crop"
 category: "Agentic AI"
 desc: "Moving beyond reactive prompts to proactive agents that plan, decide, and execute tasks independently."
-date: "May 15, 2026"
+date: "Aug 28, 2026"
 tags: ["Agentic AI", "Machine Learning", "Automation", "AI Agents"]
 ---
 
