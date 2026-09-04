@@ -1,0 +1,143 @@
+/**
+ * Builds public/sitemap.xml and public/robots.txt.
+ *
+ * Runs at build time, before `vite build`, so both files land in dist as
+ * ordinary public assets.
+ *
+ * One thing to know about the blog: the publication gate in
+ * src/utils/publishSchedule.js runs in the browser, comparing each post's
+ * `date` against the visitor's clock. This script has to make the same call at
+ * build time, so a scheduled post is written into the sitemap only once its
+ * date has arrived *as of the build*. A post that goes live on its own next
+ * Friday will not be in the sitemap until the site is rebuilt after that date.
+ *
+ * Rebuilding on a schedule (a weekly CI job is enough, matching the editorial
+ * cadence) keeps the two in step. Without a rebuild the post is still live and
+ * still reachable by link — it is just not advertised in the sitemap yet.
+ */
+
+import { readdirSync, readFileSync, writeFileSync, existsSync } from 'fs';
+import { join, dirname } from 'path';
+import { fileURLToPath } from 'url';
+
+const __dirname = dirname(fileURLToPath(import.meta.url));
+const root = join(__dirname, '..');
+const SITE = 'https://big-matrix.com';
+
+/** Minimal frontmatter reader: flat `key: value` pairs, quotes stripped. */
+const frontmatter = (raw) => {
+    // Some content files carry a UTF-8 BOM; without stripping it the opening
+    // `---` does not match and the whole file is silently skipped.
+    const block = raw.replace(/^\uFEFF/, '').match(/^---\r?\n([\s\S]*?)\r?\n---/);
+    if (!block) return {};
+    const out = {};
+    for (const line of block[1].split(/\r?\n/)) {
+        const pair = line.match(/^([A-Za-z_][\w-]*):\s*(.*)$/);
+        if (pair) out[pair[1]] = pair[2].trim().replace(/^["']|["']$/g, '');
+    }
+    return out;
+};
+
+const readContent = (dir) => {
+    const full = join(root, 'src', 'content', dir);
+    if (!existsSync(full)) return [];
+    return readdirSync(full)
+        .filter((name) => name.endsWith('.md'))
+        .map((name) => frontmatter(readFileSync(join(full, name), 'utf-8')))
+        .filter((meta) => meta.slug);
+};
+
+/** Same rule as publishSchedule.isPublished: drafts out, future dates out,
+ *  unparseable dates fail open. */
+const startOfToday = () => {
+    const now = new Date();
+    return new Date(now.getFullYear(), now.getMonth(), now.getDate()).getTime();
+};
+
+const isLive = (post, asOf) => {
+    if (post.draft === 'true' || post.draft === true) return false;
+    const at = Date.parse(post.date);
+    return Number.isNaN(at) ? true : at <= asOf;
+};
+
+/** ISO date, or null when the source date is not parseable. */
+const isoDay = (value) => {
+    const at = Date.parse(value);
+    return Number.isNaN(at) ? null : new Date(at).toISOString().slice(0, 10);
+};
+
+export function generateSitemap() {
+    const asOf = startOfToday();
+    const urls = [];
+    const add = (path, lastmod) => urls.push({ path, lastmod: lastmod || null });
+
+    // Static routes. /403, /500 and the 404 handler are noindex and stay out.
+    //
+    // /mission and /faqs are also withheld. Both are unfinished pages left over
+    // from the purchased template: placeholder copy ("Alternative innovation to
+    // ethical network environmental whiteboard…"), questions that do not apply
+    // to this business, and in /mission's case seven images that are not in the
+    // repository. Nothing links to either one. Submitting them would ask Google
+    // to index boilerplate, which weighs against the whole domain. Add them back
+    // here once they carry real content, and drop `noindex` from their pages.
+    ['/', '/about', '/service', '/project', '/blog', '/careers', '/contact']
+        .forEach((path) => add(path));
+
+    readContent('services').forEach((s) => add(`/service/${s.slug}`));
+    readContent('projects').forEach((p) => add(`/project/${p.slug}`));
+
+    const posts = readContent('blogs');
+    const live = posts.filter((post) => isLive(post, asOf));
+    live.forEach((post) => add(`/blog/${post.slug}`, isoDay(post.date)));
+
+    // Careers: an expired listing is set to noindex by the page, so it is
+    // excluded here too.
+    const careersFile = join(root, 'src', 'data', 'careers.json');
+    let openRoles = 0;
+    if (existsSync(careersFile)) {
+        const jobs = JSON.parse(readFileSync(careersFile, 'utf-8'));
+        jobs.forEach((job) => {
+            const deadline = Date.parse(job.deadline);
+            const expired = !Number.isNaN(deadline) && deadline < asOf;
+            if (job.slug && !expired) {
+                add(`/careers/${job.slug}`);
+                openRoles += 1;
+            }
+        });
+    }
+
+    const body = urls
+        .map(({ path, lastmod }) => {
+            const loc = `${SITE}${path}`;
+            const stamp = lastmod ? `\n        <lastmod>${lastmod}</lastmod>` : '';
+            return `    <url>\n        <loc>${loc}</loc>${stamp}\n    </url>`;
+        })
+        .join('\n');
+
+    const xml = `<?xml version="1.0" encoding="UTF-8"?>
+<!-- Generated by scripts/generate-sitemap.js. Do not edit by hand. -->
+<urlset xmlns="http://www.sitemaps.org/schemas/sitemap/0.9">
+${body}
+</urlset>
+`;
+
+    const robots = `# Generated by scripts/generate-sitemap.js. Do not edit by hand.
+User-agent: *
+Allow: /
+
+# Preview mode reveals scheduled posts before their publish date.
+Disallow: /*?preview=
+
+Sitemap: ${SITE}/sitemap.xml
+`;
+
+    writeFileSync(join(root, 'public', 'sitemap.xml'), xml, 'utf-8');
+    writeFileSync(join(root, 'public', 'robots.txt'), robots, 'utf-8');
+
+    const queued = posts.length - live.length;
+    console.log(
+        `Sitemap: ${urls.length} URLs (${live.length} posts live, ${queued} scheduled and withheld, ${openRoles} open roles)`
+    );
+}
+
+generateSitemap();

@@ -5,6 +5,8 @@ import CtaBand from '../components/CtaBand';
 import { blogsData } from '../data/content';
 import { stripMarkdownEmoji } from '../utils/docEnrich';
 import { sortBlogsByDate } from '../utils/blogSort';
+import Seo from '../components/Seo';
+import { graph, blogPosting, breadcrumbs } from '../utils/structuredData';
 import {
     visibleBlogs,
     isScheduled,
@@ -24,6 +26,7 @@ const BlogDetails = () => {
     if (!post) {
         return (
             <>
+                <Seo title="Post not found" path={`/blog/${slug}`} noindex />
                 <Breadcrumb pageTitle="Post not found" breadcrumbItem="Insights" />
                 <section className="bm-section">
                     <div className="bm-container">
@@ -60,6 +63,19 @@ const BlogDetails = () => {
     return (
         <>
             <Breadcrumb pageTitle={post.title} breadcrumbItem="Insights" />
+            <Seo
+                title={post.title}
+                description={post.desc}
+                path={`/blog/${post.slug}`}
+                schema={graph(
+                    blogPosting(post),
+                    breadcrumbs([
+                        { name: 'Home', path: '/' },
+                        { name: 'Insights', path: '/blog' },
+                        { name: post.title, path: `/blog/${post.slug}` },
+                    ])
+                )}
+            />
 
             <section className="bm-section bm-doc">
                 <div className="bm-container">

@@ -1,0 +1,29 @@
+{
+  "version": 1,
+  "skills": {
+    "humanize": {
+      "source": "aashaexo/soundshuman",
+      "sourceType": "github",
+      "skillPath": "SKILL.md",
+      "computedHash": "cf01f0e20229c1fc31910649c9c735b43e70f4dab2f18f6808ca135e8c8f1550"
+    },
+    "humanize-writing": {
+      "source": "jpeggdev/humanize-writing",
+      "sourceType": "github",
+      "skillPath": "SKILL.md",
+      "computedHash": "ee0583446cb367ae750cd17d32a7d63b1f335d7bd8570c18d6a39e484f551325"
+    },
+    "humanizer": {
+      "source": "aboudjem/humanizer-skill",
+      "sourceType": "github",
+      "skillPath": "skills/humanizer/SKILL.md",
+      "computedHash": "2597ab5a78b9413db36c569d0b0364ea1ff78be3dd565f033773c067ff8b72de"
+    },
+    "seo-audit": {
+      "source": "coreyhaines31/marketingskills",
+      "sourceType": "github",
+      "skillPath": "skills/seo-audit/SKILL.md",
+      "computedHash": "71435fbaf3622f1a6b16e20fda15f19aa8e285c9914fdeb92ac0a7612d6317bb"
+    }
+  }
+}

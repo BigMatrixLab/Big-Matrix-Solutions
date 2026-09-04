@@ -30,26 +30,26 @@ The first is that any benchmark table you read is a snapshot of a moving object.
 
 The bigger structural shift is that labs stopped shipping *a* model and started shipping graded families.
 
-The logic is straightforward once you see the cost curve. A reasoning-heavy model that thinks for ninety seconds before answering is extraordinary at a hard problem and absurd for classifying a support ticket. So the labs split the difference: a small fast tier, a balanced mid tier, and a heavyweight tier you route to deliberately. Anthropic's Claude 5 line, OpenAI's numbered 5.x tracks, Google's Pro and Flash split, Mistral's Medium and Large tiers — four labs, one architectural decision, arrived at independently.
+The logic is straightforward once you see the cost curve. A reasoning-heavy model that thinks for ninety seconds before answering is extraordinary at a hard problem and absurd for classifying a support ticket. So the labs split the difference: a small fast tier, a balanced mid tier, and a heavyweight tier you route to deliberately. Anthropic's Claude 5 line, OpenAI's numbered 5.x tracks, Google's Pro and Flash split, Mistral's Medium and Large tiers. Four labs, one architectural decision, arrived at independently.
 
 For anyone building on top, this is the most important change of the year, and it is not a capability change at all. It is a routing change. Your job shifted from *picking a model* to *building a policy that picks a model per request*.
 
 Teams doing this well have converged on a rough shape:
 
-- **Cheap tier first** — classification, extraction, formatting, anything with a schema. This is 70 to 90 percent of production traffic in most applications, and small models genuinely handle it now.
-- **Mid tier as default** — general reasoning, drafting, tool calls with a handful of steps. Good enough that users do not notice, cheap enough that finance does not either.
-- **Heavy tier on escalation** — triggered by an explicit signal: low confidence, a failed verification pass, two cheap runs disagreeing, or a user asking for a second look.
-- **A different vendor as fallback** — not for quality, for availability. Outages happen, and a hard dependency on one API is now treated as a design flaw rather than a simplification.
+- **Cheap tier first**: classification, extraction, formatting, anything with a schema. This is 70 to 90 percent of production traffic in most applications, and small models genuinely handle it now.
+- **Mid tier as default**: general reasoning, drafting, tool calls with a handful of steps. Good enough that users do not notice, cheap enough that finance does not either.
+- **Heavy tier on escalation**: triggered by an explicit signal: low confidence, a failed verification pass, two cheap runs disagreeing, or a user asking for a second look.
+- **A different vendor as fallback**: not for quality, for availability. Outages happen, and a hard dependency on one API is now treated as a design flaw rather than a simplification.
 
 ## Where the actual gains landed
 
-Strip out the leaderboard noise and ask what a model can do in 2026 that it could not do eighteen months ago. The honest answer is not "reason better." It is "stay coherent longer."
+Strip out the leaderboard noise and ask what a model can do in 2026 that it could not do eighteen months ago. The answer is not "reason better." It is "stay coherent longer."
 
-METR's framing is the clearest way to see this. Instead of scoring accuracy on a fixed test, they ask how *long* a task can be — measured in the time a skilled human would need — before the model's success rate drops to 50 percent. That number has climbed exponentially since 2019, and it tracks what people actually notice when they upgrade better than any accuracy score does.
+METR's framing is the clearest way to see this. Instead of scoring accuracy on a fixed test, they ask how *long* a task can be, measured in the time a skilled human would need, before the model's success rate drops to 50 percent. That number has climbed exponentially since 2019, and it tracks what people actually notice when they upgrade better than any accuracy score does.
 
 It also comes with caveats that get dropped constantly in the retellings. METR states plainly that measurements above sixteen hours are unreliable with their current task suite, and that the horizon describes task *difficulty*, not how long the model spends working. The suite is weighted toward software engineering, machine learning, and cybersecurity. It is a real signal about a real capability. It is not a general intelligence score, and the people who built it are the first to say so.
 
-The other durable gain is hard science and math reasoning. Graduate-level benchmarks that were novel and brutal in 2024 now sit in the nineties for top models. Competition math is effectively solved at the olympiad level. That progress is genuine — and it also means those benchmarks have stopped being useful for telling frontier models apart, which is a whole separate problem.
+The other durable gain is hard science and math reasoning. Graduate-level benchmarks that were novel and brutal in 2024 now sit in the nineties for top models. Competition math is effectively solved at the olympiad level. That progress is genuine, and it also means those benchmarks have stopped being useful for telling frontier models apart, which is a whole separate problem.
 
 ## The benchmark problem, briefly
 
@@ -67,7 +67,7 @@ The launch numbers are worth sitting with:
 | Frontier AI systems | 0.51% |
 | Best purpose-built agent, 30-day preview | 12.58% |
 
-That gap is not a rounding error. It is a category difference. Models that score in the nineties on graduate physics score half a percent on a task a child can figure out by poking at it. The winner of the developer preview — a convolutional action-learning agent from StochasticGoose at Tufa Labs — cleared 18 levels for 12.58 percent, beating every general-purpose frontier model by more than an order of magnitude while being a tiny fraction of the size.
+That gap is not a rounding error. It is a category difference. Models that score in the nineties on graduate physics score half a percent on a task a child can figure out by poking at it. The winner of the developer preview, a convolutional action-learning agent from StochasticGoose at Tufa Labs, cleared 18 levels for 12.58 percent, beating every general-purpose frontier model by more than an order of magnitude while being a tiny fraction of the size.
 
 Whatever "frontier" means, it clearly does not mean the same thing on every axis.
 
@@ -85,11 +85,11 @@ Every hard-coded model name in your codebase is a small bet that today's ranking
 
 ### 3. Assume the price of a token keeps falling
 
-Sparse architectures, better serving stacks, and aggressive competition have pushed cost per unit of capability down steeply and repeatedly. Design as if that continues. Features that look uneconomical at today's prices — a verification pass on every output, three parallel attempts with a vote, a full reread of the document instead of a clever retrieval trick — often become obviously correct within a year. Build the accurate version and let the cost curve catch up.
+Sparse architectures, better serving stacks, and aggressive competition have pushed cost per unit of capability down steeply and repeatedly. Design as if that continues. Features that look uneconomical at today's prices (a verification pass on every output, three parallel attempts with a vote, a full reread of the document instead of a clever retrieval trick) often become obviously correct within a year. Build the accurate version and let the cost curve catch up.
 
 ### 4. Long context is not the same as long attention
 
-Advertised windows now reach into the millions of tokens. Making effective use of them is a different and much harder question, and the honest framing from people who measure this is that raw capacity stopped being the bottleneck a while ago. A model that accepts ten million tokens and a model that reliably finds one fact buried in the middle of them are two separate engineering achievements. Test the second one on your own documents before you architect around it.
+Advertised windows now reach into the millions of tokens. Making effective use of them is a different and much harder question, and people who measure this will tell you that raw capacity stopped being the bottleneck a while ago. A model that accepts ten million tokens and a model that reliably finds one fact buried in the middle of them are two separate engineering achievements. Test the second one on your own documents before you architect around it.
 
 ## The part nobody has solved
 
@@ -97,7 +97,7 @@ For all the movement, the field's central weakness is unchanged: these systems a
 
 A model will complete a nine-hour refactor, and a model will confidently break your build, and the observable difference between those two runs is frequently nothing at all until you inspect the output. That is why verification, sandboxing, and human review keep appearing in every serious deployment. Not because the models are weak, but because their failures are not self-announcing.
 
-ARC-AGI-3's 0.51 percent is a version of the same point. Adaptation to genuine novelty — walking into an unfamiliar environment and working out the rules — remains something humans do casually and frontier systems barely do at all. Scale has bought enormous competence inside distribution. It has bought much less at the edge.
+ARC-AGI-3's 0.51 percent is a version of the same point. Adaptation to genuine novelty, walking into an unfamiliar environment and working out the rules, remains something humans do casually and frontier systems barely do at all. Scale has bought enormous competence inside distribution. It has bought much less at the edge.
 
 ## Where this leaves us
 
@@ -106,5 +106,3 @@ The competitive picture in late 2026 is not a race with a leader. It is four or 
 That is a harder world to write a headline about and a much better world to build in. The interesting engineering question stopped being "which model is smartest" some time ago. It is now: what do you compose, how do you check the output, and how fast can you swap a piece when something better ships next month?
 
 Because something better will ship next month. That part has been reliable all year.
-
-**Sources**: [METR — Task-Completion Time Horizons](https://metr.org/time-horizons/), [ARC Prize — Announcing ARC-AGI-3](https://arcprize.org/blog/arc-agi-3-launch), [ARC Prize 2025 Results and Analysis](https://arcprize.org/blog/arc-prize-2025-results-analysis), [Stanford HAI — AI Index 2026, Technical Performance](https://hai.stanford.edu/assets/files/ai_index_report_2026_chapter_2_technical.pdf)

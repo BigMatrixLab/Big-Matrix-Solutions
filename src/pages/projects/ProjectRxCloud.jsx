@@ -1,6 +1,7 @@
 import '../../assets/css/ProjectShowcase.css';
 import ShowcaseFacts from '../../components/showcase/ShowcaseFacts';
 import CtaBand from '../../components/CtaBand';
+import Seo from '../../components/Seo';
 
 const heroStats = [
     { icon: 'bi bi-arrow-repeat', num: 'Full Loop', label: 'Public booking, appointment, consultation, prescription, records, billing and follow-up in one platform' },
@@ -225,6 +226,11 @@ const SpecGrid = ({ items }) => (
 const ProjectRxCloud = () => {
     return (
         <>
+            <Seo
+                title="RxCloud practice management"
+                description="Patients, appointments, prescriptions and billing in one platform, with direct patient booking. Practice management doctors actually trust."
+                path="/project/rxcloud"
+            />
         <div className="bc-showcase">
 
             {/* ── Hero ── */}

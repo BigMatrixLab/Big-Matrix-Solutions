@@ -14,7 +14,7 @@ tags: ["GPT-5.6", "OpenAI", "Model Selection", "Benchmarks"]
 
 OpenAI's GPT-5.6 family reached general availability on **July 9, 2026** as three tracks: **Sol** the flagship, **Terra** the balanced mid-tier, and **Luna** the fast cheap one. The naming is sun, earth, moon, which is charming and tells you nothing about which to use.
 
-With GPT-6 Astra now shipping, the 5.6 line becomes the workhorse rather than the headline — which makes this the right moment to be concrete about tier selection, because the pricing structure makes getting it wrong expensive in both directions.
+With GPT-6 Astra now shipping, the 5.6 line becomes the workhorse rather than the headline, which makes this the right moment to be concrete about tier selection, because the pricing structure makes getting it wrong expensive in both directions.
 
 ## The price spread is the whole reason this matters
 
@@ -49,11 +49,11 @@ Then look at the fourth row.
 
 ## The long-context cliff
 
-MRCR measures multi-round coreference resolution over long context — can the model track entities and references across a large body of text. Sol posts 91.5 percent, Terra 89.6 percent, and Luna **41.3 percent**.
+MRCR measures multi-round coreference resolution over long context: can the model track entities and references across a large body of text. Sol posts 91.5 percent, Terra 89.6 percent, and Luna **41.3 percent**.
 
 That is not a gradient. It is a cliff, and it is the single most important practical fact about this model family.
 
-Luna is a genuinely capable model that is 25x cheaper than Sol and roughly as good on short-context reasoning tasks. Feed it a long document and ask it to track something across the whole thing, and it falls apart. Not gracefully — by fifty points.
+Luna is a genuinely capable model that is 25x cheaper than Sol and roughly as good on short-context reasoning tasks. Feed it a long document and ask it to track something across the whole thing, and it falls apart. Not gracefully either. By fifty points.
 
 The failure mode this creates in production is nasty because it is silent. Luna will not tell you it lost the thread. It will produce a confident, fluent answer that has quietly confused two entities mentioned forty thousand tokens apart. If your evaluation set is short prompts, you will never see it. If your traffic includes long documents, you will ship it.
 
@@ -71,16 +71,16 @@ For most work, Terra is the right answer. It matches Sol within two to three poi
 
 Sol earns its 2.5x premium over Terra on a narrow set:
 
-- **Long-horizon coding** — work that has to persist across files, tests, and follow-up fixes. Sol's advantage compounds over a long run in a way the benchmark deltas understate.
-- **Complex terminal operations** — the Terminal-Bench gap is small but the failures at the margin are the expensive ones.
-- **Computer use** — Sol posts 62.6 percent on OSWorld 2.0, and the other tiers are not really in this conversation.
-- **Deep web research** — BrowseComp at 92.2 percent is a genuine outlier.
+- **Long-horizon coding**: work that has to persist across files, tests, and follow-up fixes. Sol's advantage compounds over a long run in a way the benchmark deltas understate.
+- **Complex terminal operations**: the Terminal-Bench gap is small but the failures at the margin are the expensive ones.
+- **Computer use**: Sol posts 62.6 percent on OSWorld 2.0, and the other tiers are not really in this conversation.
+- **Deep web research**: BrowseComp at 92.2 percent is a genuine outlier.
 
 The pattern: Sol is for **persistence and tool use over many steps**, not for being smarter per step.
 
 ### Use Luna for volume, with one hard constraint
 
-High-volume classification, summarisation, extraction, formatting, routing — anything where the unit of work is small and the quality bar is "acceptable." At $0.20 per million input tokens, Luna makes economically absurd features viable.
+High-volume classification, summarisation, extraction, formatting, routing: anything where the unit of work is small and the quality bar is "acceptable." At $0.20 per million input tokens, Luna makes economically absurd features viable.
 
 The constraint is the MRCR cliff. Short inputs only. If a request might carry a long document, route it up.
 
@@ -110,8 +110,6 @@ Two things generalise past OpenAI's lineup.
 
 **Aggregate scores hide the decisions that matter.** Luna and Terra are within a point on a headline reasoning benchmark and fifty points apart on long-context tracking. If you had chosen between them on the composite number you would have chosen almost at random with respect to the property that would actually break your application. Every tiered family has cliffs like this somewhere; find yours before production does.
 
-**The price of the flagship is not a quality signal.** A 25x spread across a family whose benchmark range is single digits means price is tracking something other than general capability — inference cost, positioning, and the narrow set of tasks where the top tier genuinely separates. Paying flagship rates for work the mid tier handles is the most common waste in production LLM spend, and it is invisible on your quality metrics because the output is fine.
+**The price of the flagship is not a quality signal.** A 25x spread across a family whose benchmark range is single digits means price is tracking something other than general capability: inference cost, positioning, and the narrow set of tasks where the top tier genuinely separates. Paying flagship rates for work the mid tier handles is the most common waste in production LLM spend, and it is invisible on your quality metrics because the output is fine.
 
 The GPT-5.6 line is, in that sense, a well-designed family that requires you to do some work. Three models, one of which is right for nearly everything, one of which is right for a specific short list, and one of which is a bargain with a trapdoor.
-
-**Sources**: [OpenAI — Previewing GPT-5.6 Sol](https://openai.com/index/previewing-gpt-5-6-sol/), [Vellum — GPT-5.6 Sol vs Terra vs Luna: Which Tier Should You Actually Use?](https://www.vellum.ai/blog/gpt-5-6-benchmarks-explained), [DataCamp — GPT-5.6 Sol, Terra, and Luna: OpenAI's Next-Gen Model Family](https://www.datacamp.com/blog/gpt-5-6-sol-luna-terra), [CodeRabbit — OpenAI GPT-5.6 Sol and Terra: Benchmark](https://www.coderabbit.ai/blog/gpt-5-6-sol-and-terra-benchmark), [MindStudio — What Is GPT-5.6? Sol, Terra, and Luna Model Tiers Explained](https://www.mindstudio.ai/blog/what-is-gpt-5-6-sol-terra-luna-explained), [SitePoint — GPT-5.6 Luna vs Terra vs Sol: Developer Model Guide](https://www.sitepoint.com/gpt-5-6-luna-terra-sol-developer-guide/)

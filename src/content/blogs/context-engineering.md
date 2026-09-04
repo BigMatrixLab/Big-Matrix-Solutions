@@ -12,7 +12,7 @@ tags: ["Context Engineering", "Agentic AI", "LLM", "Architecture"]
 
 # Prompt Engineering Is Dead. Context Engineering Is the Job Now.
 
-Prompt engineering was a real skill for about two years. Knowing that step-by-step reasoning helped, that examples beat descriptions, that role framing shifted tone, that output format needed specifying — this genuinely separated people who got good results from people who did not.
+Prompt engineering was a real skill for about two years. Knowing that step-by-step reasoning helped, that examples beat descriptions, that role framing shifted tone, that output format needed specifying. All of it genuinely separated people who got good results from people who did not.
 
 Then models got good enough that most of it stopped mattering. Modern models reason step by step without being asked, follow plain instructions, and infer format from context. The clever incantations are largely obsolete, and good riddance.
 
@@ -41,7 +41,7 @@ Three mechanisms, all well documented:
 
 **Latency and cost.** Prefill grows with prompt length. At extreme lengths, time-to-first-token dominates the entire request, and an unnecessary million tokens costs the same as a necessary one.
 
-So the naive strategy — keep everything, the window is huge — fails. Not dramatically, which is the problem. It fails as gradual quality decay that is easy to attribute to the model.
+So the naive strategy, keep everything because the window is huge, fails. Not dramatically, which is the problem. It fails as gradual quality decay that is easy to attribute to the model.
 
 ## The techniques
 
@@ -51,7 +51,7 @@ What actually works, in rough order of impact.
 
 The single highest-return change, and it costs nothing.
 
-Every token in your prompt produces key and value tensors. If prompts share a long common prefix — system instructions, tool schemas, a document under discussion — recomputing that prefix on every request is pure waste. Prefix caching turns a repeated 20,000-token preamble from a per-request cost into a one-time cost.
+Every token in your prompt produces key and value tensors. If prompts share a long common prefix (system instructions, tool schemas, a document under discussion) then recomputing that prefix on every request is pure waste. Prefix caching turns a repeated 20,000-token preamble from a per-request cost into a one-time cost.
 
 This requires only that the stable material precede the variable material. Put the system prompt and tool definitions first, the conversation last, and nothing dynamic in between. For agent loops and chat applications this is frequently the largest single saving available, and it needs no model change.
 
@@ -72,15 +72,15 @@ The failed-approaches category is the one people drop and should not. An agent t
 
 Delegate a question to a subagent that investigates in *its own* context and returns a summary.
 
-The value here is not that the subagent is smarter. It is that the search debris stays in the subagent's window. The supervisor gets a two-paragraph conclusion instead of the forty files that produced it. This is the strongest structural argument for multi-agent architecture, and it survives the observation that models have converged in capability — because it was never about capability.
+The value here is not that the subagent is smarter. It is that the search debris stays in the subagent's window. The supervisor gets a two-paragraph conclusion instead of the forty files that produced it. This is the strongest structural argument for multi-agent architecture, and it survives the observation that models have converged in capability, because it was never about capability.
 
 ### 4. Retrieve generously, not surgically
 
 Long context changed the economics of retrieval, and the pipeline most teams built in 2024 is now overbuilt.
 
-When only three chunks fit, retrieval precision was load-bearing — hence the elaborate reranking and query-rewriting machinery. Now you can retrieve fifty chunks and let the model sort out relevance. Retrieval needs decent recall; the model handles precision.
+When only three chunks fit, retrieval precision was load-bearing, hence the elaborate reranking and query-rewriting machinery. Now you can retrieve fifty chunks and let the model sort out relevance. Retrieval needs decent recall; the model handles precision.
 
-That is a real reduction in engineering complexity bought with cheaper tokens. It does have a limit — fifty chunks of loosely relevant text is the distraction problem — so "generously" is not "unboundedly."
+That is a real reduction in engineering complexity bought with cheaper tokens. It does have a limit, because fifty chunks of loosely relevant text is the distraction problem, so "generously" is not "unboundedly."
 
 ### 5. Externalise durable state
 
@@ -92,7 +92,7 @@ Teams have found this beats more sophisticated memory schemes, mostly because wh
 
 ### 6. Order for recency and salience
 
-Given position sensitivity, put the most important material where the model reads it best — the beginning and the end.
+Given position sensitivity, put the most important material where the model reads it best: the beginning and the end.
 
 Practically: task and constraints at the start, current state and immediate instruction at the end, accumulated history in the middle where its lower weight matters least. This is a free improvement that costs one decision about assembly order.
 
@@ -102,7 +102,7 @@ Concrete, because the techniques are easier to see applied than listed.
 
 An agent is asked to migrate a deprecated API call across a large codebase. Naive execution:
 
-1. Search for usages — 60 files match.
+1. Search for usages. 60 files match.
 2. Read each file in full to understand the call site.
 3. Edit each one.
 4. Run the test suite.
@@ -112,13 +112,13 @@ By step three the context holds 60 complete files, most of which were needed for
 
 The context-engineered version:
 
-1. Search for usages, keep only the file paths and matching lines — not the files.
+1. Search for usages, keeping only the file paths and matching lines, not the files.
 2. Group the matches by call pattern. Most of the 60 will fall into three or four shapes.
 3. For each shape, read one representative file fully, work out the transformation, and record it as a rule.
 4. Apply the rules, reading each file only long enough to edit it, discarding as you go.
 5. Run tests with a clean context holding the task, the rules, and the failures.
 
-Same work. The context at step five contains the task, four transformation rules, a list of edited files, and the failures — a few thousand tokens of exactly the relevant material.
+Same work. The context at step five contains the task, four transformation rules, a list of edited files, and the failures. A few thousand tokens of exactly the relevant material.
 
 The general shape of the improvement is worth extracting: **read narrowly, summarise into rules, discard the source, act from the rules.** That pattern applies well beyond migrations, and it is the difference between an agent that degrades over a long task and one that does not.
 
@@ -132,13 +132,13 @@ Four, and they are recognisable once named.
 
 **Duplicate content.** The same file read three times because three steps needed it, occupying three copies of the window. Symptom: token consumption that grows much faster than task progress.
 
-**Poisoned state.** A wrong conclusion written to durable memory becomes a permanent wrong belief. The agent misdiagnoses a failure, records the misdiagnosis, and thereafter avoids a correct approach. Symptom: an absence rather than an error, which is why it is the hardest to catch — and the strongest argument for keeping memory human-readable and diffable.
+**Poisoned state.** A wrong conclusion written to durable memory becomes a permanent wrong belief. The agent misdiagnoses a failure, records the misdiagnosis, and thereafter avoids a correct approach. Symptom: an absence rather than an error, which is why it is the hardest to catch, and the strongest argument for keeping memory human-readable and diffable.
 
 ## The skill that actually transferred
 
 Here is what is worth noticing about the shift from prompts to context.
 
-Prompt engineering was largely about compensating for model weakness. Chain-of-thought prompting existed because models did not reason step by step unaided. Few-shot examples existed because instruction-following was unreliable. As models improved, the workarounds became unnecessary — which is why almost none of that knowledge aged well.
+Prompt engineering was largely about compensating for model weakness. Chain-of-thought prompting existed because models did not reason step by step unaided. Few-shot examples existed because instruction-following was unreliable. As models improved, the workarounds became unnecessary, which is why almost none of that knowledge aged well.
 
 Context engineering is not a workaround. It is a resource allocation problem, and it does not go away with better models. A window is finite, attention over it is imperfect, and something must decide what occupies it. A bigger window changes the numbers and not the problem.
 
@@ -146,7 +146,7 @@ Which means the useful framing is closer to systems engineering than to promptin
 
 > You have a fixed-size working memory, imperfect access across it, a cost per unit, and more candidate content than space. Decide what is resident, what is externalised, what is summarised, and what is discarded.
 
-Anyone who has designed a cache will find that familiar. The considerations are the same — working set, eviction policy, cost of a miss, cost of recomputation. Recognising that is more useful than any list of techniques, because it tells you how to reason about a case the list does not cover.
+Anyone who has designed a cache will find that familiar. The considerations are the same: working set, eviction policy, cost of a miss, cost of recomputation. Recognising that is more useful than any list of techniques, because it tells you how to reason about a case the list does not cover.
 
 ## Practically
 
@@ -162,6 +162,6 @@ If you are building agentic systems, in order:
 
 **Measure context composition.** Instrument what fraction of the window is task, state, history, and debris. Most teams have never looked, and the number is usually worse than expected.
 
-**Stop tuning prompt wording.** If a change in phrasing meaningfully alters your results, the instruction was ambiguous. Fix the ambiguity rather than finding the phrasing the model happens to like — that fix survives a model upgrade and the phrasing will not.
+**Stop tuning prompt wording.** If a change in phrasing meaningfully alters your results, the instruction was ambiguous. Fix the ambiguity rather than finding the phrasing the model happens to like. That fix survives a model upgrade; the phrasing will not.
 
-The last one is the clearest signal of the shift. Two years ago, finding the wording a model responded to was the work. Now, needing to find it means something upstream is underspecified — and specifying it properly is the job that replaced prompting.
+The last one is the clearest signal of the shift. Two years ago, finding the wording a model responded to was the work. Now, needing to find it means something upstream is underspecified, and specifying it properly is the job that replaced prompting.

@@ -4,6 +4,7 @@ import SectionHead from '../components/SectionHead';
 import TestimonialArea from '../components/TestimonialArea';
 import ValueSection from '../components/ValueSection';
 import CtaBand from '../components/CtaBand';
+import Seo from '../components/Seo';
 
 const PRACTICE_AREAS = [
     {
@@ -31,6 +32,11 @@ const PRACTICE_AREAS = [
 const AboutOne = () => {
     return (
         <>
+            <Seo
+                title="About the lab"
+                description="A research and development lab that ships production software. Who we are, how we work, and the practice areas we build in."
+                path="/about"
+            />
             <Breadcrumb
                 pageTitle="A lab that ships production software"
                 breadcrumbItem="About"

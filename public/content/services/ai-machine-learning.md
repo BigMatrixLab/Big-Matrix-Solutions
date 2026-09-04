@@ -14,7 +14,7 @@ desc: "Custom AI solutions including deep learning models, Large Language Models
 
 ## Build Intelligent Systems That Learn and Adapt
 
-Artificial Intelligence isn't the future—it's the present. From deep learning models that diagnose diseases to Large Language Models that transform customer service, we build production-grade AI solutions that deliver measurable business value.
+Artificial Intelligence isn't the future. It's the present. From deep learning models that diagnose diseases to Large Language Models that transform customer service, we build production-grade AI solutions that deliver measurable business value.
 
 
 ### 1. **Custom Neural Networks & Deep Learning**
@@ -90,7 +90,7 @@ Time series, demand forecasting, risk prediction:
 
 ## MLOps & Production Deployment
 
-We don't just build models—we deploy them at scale:
+We don't just build models. We deploy them at scale:
 
 
 
@@ -116,7 +116,7 @@ We don't just build models—we deploy them at scale:
 
 ---
 
-## Why Choose Us?
+## Why teams pick us for this
 
 ✅ **10+ years ML experience** across multiple industries  
 ✅ **Production-grade** models (not just research prototypes)  

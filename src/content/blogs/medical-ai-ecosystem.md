@@ -18,7 +18,7 @@ The work that is actually landing spans molecular structure prediction, an open 
 
 ## 1. AlphaFold 3: the molecule problem got wider
 
-AlphaFold 2 predicted how a protein folds. **AlphaFold 3**, published in *Nature* in **May 2024**, predicts how proteins interact with everything else — nucleic acids, small molecules, ions, modified residues — using a substantially rewritten **diffusion-based** architecture.
+AlphaFold 2 predicted how a protein folds. **AlphaFold 3**, published in *Nature* in **May 2024**, predicts how proteins interact with everything else (nucleic acids, small molecules, ions, modified residues) using a substantially rewritten **diffusion-based** architecture.
 
 The accuracy claims held up under scrutiny, and the comparisons that matter are against specialised tools rather than against AlphaFold 2:
 
@@ -38,7 +38,7 @@ Hugging Face now hosts a large body of open medical AI: fine-tuned biomedical an
 
 The capability is genuinely competitive. **OpenBioLLM-70B** reports outperforming considerably larger general models across nine biomedical datasets with an average score of **86.06%**.
 
-The significance is structural rather than technical. Clinical AI's binding constraint has never been model quality — it is that patient data cannot leave the institution. An ecosystem of downloadable, permissively licensed medical models is the only architecture that answers that, because it is the only one where the data never moves.
+The significance is structural rather than technical. Clinical AI's binding constraint has never been model quality. It is that patient data cannot leave the institution. An ecosystem of downloadable, permissively licensed medical models is the only architecture that answers that, because it is the only one where the data never moves.
 
 Worth noting in the same breath: **NVIDIA agreed to acquire Hugging Face for $12.93 billion**, announced September 2026 and expected to close in H1 2027. The place this ecosystem lives is changing hands, with stated commitments to remain open and hardware-neutral. For anyone with medical models in production off the Hub, that is a dependency worth mirroring locally.
 
@@ -46,24 +46,24 @@ Worth noting in the same breath: **NVIDIA agreed to acquire Hugging Face for $12
 
 Mayo Clinic is the clearest picture available of what serious institutional deployment looks like, and the number is **around 150 AI models** running across functions from triage to pathology.
 
-Their approach is to partner rather than build alone — Google, Microsoft, NVIDIA and Cerebras — using data in the Mayo Clinic Platform to create foundation models, generative AI solutions and agents. Two concrete outputs:
+Their approach is to partner rather than build alone, with Google, Microsoft, NVIDIA and Cerebras, using data in the Mayo Clinic Platform to create foundation models, generative AI solutions and agents. Two concrete outputs:
 
 - **STRAND**, built with Cerebras: one of the first genomics foundation models, combining public data with Mayo's own germline genetic sequencing from **more than 100,000 patients**.
 - **Radiology report generation** with Microsoft Research, automatically drafting reports from CT and MRI.
 
-The lesson worth extracting is about evidence rather than technology. Mayo, alongside Kaiser Permanente, Vanderbilt and the Digital Medicine Society, has been publicly working through **evidence thresholds, data-engineering prerequisites and rapid-cycle evaluation** — the question of how you scale generative AI without compromising safety, equity or rigour.
+The lesson worth extracting is about evidence rather than technology. Mayo, alongside Kaiser Permanente, Vanderbilt and the Digital Medicine Society, has been publicly working through **evidence thresholds, data-engineering prerequisites and rapid-cycle evaluation**: how you scale generative AI without compromising safety, equity or rigour.
 
 That is the unglamorous work that decides whether any of this reaches patients, and almost nobody writes about it.
 
 ## 4. NVIDIA and Hippocratic AI: care agents at $9 an hour
 
-**Hippocratic AI** builds patient-facing agents for low-risk, non-diagnostic tasks over the phone — chronic care check-ins, post-discharge follow-up — deployed by health systems, payors, digital health companies and pharma. Its partnership with **NVIDIA** targets what they call **"Empathy Inference"**: super-low-latency conversational capability built on NVIDIA's Avatar Cloud Engine and Riva speech models.
+**Hippocratic AI** builds patient-facing agents for low-risk, non-diagnostic tasks over the phone (chronic care check-ins, post-discharge follow-up) deployed by health systems, payors, digital health companies and pharma. Its partnership with **NVIDIA** targets what they call **"Empathy Inference"**: super-low-latency conversational capability built on NVIDIA's Avatar Cloud Engine and Riva speech models.
 
 The economics are the headline. These agents run at **$9 an hour**, and NVIDIA's venture arm NVentures backed a **$17 million** investment into the company.
 
 On safety, Hippocratic reports that its medium-sized, healthcare-specific models significantly outperformed much larger general-purpose models including GPT-4 on medical accuracy and safety. That is plausible and it is a vendor claim.
 
-The framing I would apply: this succeeds or fails on the **non-diagnostic** boundary, not on model quality. A phone call reminding a patient to take a medication and asking how they are feeling is a genuine unmet need — the calls mostly are not happening now, because there is nobody to make them. The moment the agent starts fielding "should I be worried about this symptom?", it is in a different risk category, and the interesting question is how reliably that boundary holds in a real conversation with a worried patient.
+The framing I would apply: this succeeds or fails on the **non-diagnostic** boundary, not on model quality. A phone call reminding a patient to take a medication and asking how they are feeling is a genuine unmet need. Those calls mostly are not happening now, because there is nobody to make them. The moment the agent starts fielding "should I be worried about this symptom?", it is in a different risk category, and the interesting question is how reliably that boundary holds in a real conversation with a worried patient.
 
 Latency is not a vanity metric here either. In a phone call, a two-second pause reads as something being wrong.
 
@@ -79,11 +79,11 @@ Latency is not a vanity metric here either. In a phone call, a two-second pause 
 | Full multimodal cancer records | 400,000+ |
 | 2025 revenue | $1.59 billion |
 
-"Full multimodal" means genomic, transcriptomic, imaging and clinical data on the same patient — and that 400,000 figure is the actual moat. Models are reproducible; a linked longitudinal cohort of that size is not.
+"Full multimodal" means genomic, transcriptomic, imaging and clinical data on the same patient, and that 400,000 figure is the actual moat. Models are reproducible; a linked longitudinal cohort of that size is not.
 
-They presented multimodal foundation model results at **ASCO 2026**, published a **JCO Precision Oncology** study in March 2026 with The Oncology Institute showing that advanced profiling features — tumour-normal matched sequencing, RNA sequencing, liquid biopsy reflex — surface actionable findings that standard testing misses, and acquired **Personalis for $1.5 billion** in July 2026 to add tumour-informed molecular residual disease detection.
+They presented multimodal foundation model results at **ASCO 2026**, published a **JCO Precision Oncology** study in March 2026 with The Oncology Institute showing that advanced profiling features (tumour-normal matched sequencing, RNA sequencing, liquid biopsy reflex) surface actionable findings that standard testing misses, and acquired **Personalis for $1.5 billion** in July 2026 to add tumour-informed molecular residual disease detection.
 
-They also launched the **PRECISION Challenge**, opening their foundation model work to outside research teams — which is a sensible move when your advantage is the data rather than the algorithm.
+They also launched the **PRECISION Challenge**, opening their foundation model work to outside research teams, which is a sensible move when your advantage is the data rather than the algorithm.
 
 The finding that matters clinically is the JCO one: not that AI is clever, but that richer profiling changes treatment options for real patients. That is a testable claim with a published result behind it.
 
@@ -91,11 +91,11 @@ The finding that matters clinically is the JCO one: not that AI is clever, but t
 
 **PathAI** is the item on this list furthest through the regulatory process, which makes it the most instructive.
 
-**AISight Dx** has **FDA 510(k) clearance for primary diagnosis** in the US — with the Hamamatsu NanoZoomer S360MD and Leica Aperio GT 450 DX scanners — and is CE-IVD marked for primary diagnosis in the EEA, UK and Switzerland. That clearance was subsequently expanded to support more slide scanners, and the FDA granted **Breakthrough Device Designation** to PathAssist Derm.
+**AISight Dx** has **FDA 510(k) clearance for primary diagnosis** in the US, with the Hamamatsu NanoZoomer S360MD and Leica Aperio GT 450 DX scanners, and is CE-IVD marked for primary diagnosis in the EEA, UK and Switzerland. That clearance was subsequently expanded to support more slide scanners, and the FDA granted **Breakthrough Device Designation** to PathAssist Derm.
 
-Read the scanner list again, because it is the whole lesson. Clearance is not for "AI pathology" — it is for a platform **with named scanners**. Change the scanner and you are outside the cleared configuration. Digital pathology's domain-shift problem is severe enough that regulators treat the scanner as part of the device, and every scanner added is regulatory work.
+Read the scanner list again, because it is the whole lesson. Clearance is not for "AI pathology". It is for a platform **with named scanners**. Change the scanner and you are outside the cleared configuration. Digital pathology's domain-shift problem is severe enough that regulators treat the scanner as part of the device, and every scanner added is regulatory work.
 
-**Labcorp** has expanded its collaboration to deploy AISight Dx across its national network of anatomic pathology labs and hospital collaborations. National lab deployment is the real validation — it means the workflow, the storage, and the throughput all hold at volume, which is where most pathology AI has previously stalled.
+**Labcorp** has expanded its collaboration to deploy AISight Dx across its national network of anatomic pathology labs and hospital collaborations. National lab deployment is the real validation. It means the workflow, the storage, and the throughput all hold at volume, which is where most pathology AI has previously stalled.
 
 ## What the set tells you
 
@@ -112,5 +112,3 @@ Line these six up and a pattern emerges that contradicts most of the discourse.
 **The infrastructure is the hard part.** Storage, scanner interoperability, latency, evidence thresholds, regulatory configuration. None of it is a modelling problem, and all of it determines whether the models reach a patient.
 
 If you are looking for where medical AI goes next, the answer is probably not a better model. It is whichever of these six figures out deployment first.
-
-**Sources**: [Nature — Accurate structure prediction of biomolecular interactions with AlphaFold 3](https://www.nature.com/articles/s41586-024-07487-w), [Isomorphic Labs — AlphaFold 3 predicts the structure and interactions of all of life's molecules](https://www.isomorphiclabs.com/articles/alphafold-3-predicts-the-structure-and-interactions-of-all-of-lifes-molecules), [Hugging Face — The Open Medical-LLM Leaderboard](https://huggingface.co/blog/leaderboard-medicalllm), [Hugging Face — Advancing Open-source LLMs in the Medical & Healthcare Domain](https://huggingface.co/blog/aaditya/openbiollm), [ICT&health — Inside Mayo Clinic's 150 AI models: From triage to pathology](https://www.icthealth.org/news/inside-mayo-clinics-150-ai-models-from-triage-to-pathology), [Mayo Clinic — Accelerating personalized medicine through foundation models with Microsoft Research and Cerebras](https://newsnetwork.mayoclinic.org/discussion/mayo-clinic-accelerates-personalized-medicine-through-foundation-models-with-microsoft-research-and-cerebras-systems/), [Hippocratic AI and NVIDIA partnership](https://thehealthcaretechnologyreport.com/hippocratic-ai-and-nvidia-collaborate-to-advance-empathetic-ai-healthcare-agents/), [Tempus — Initial results from multimodal foundation model efforts in oncology](https://www.biospace.com/press-releases/tempus-announces-initial-results-from-its-multimodal-foundation-model-efforts-for-novel-and-scalable-insight-generation-in-oncology), [Tempus — Advanced genomic profiling study](https://investors.tempus.com/news-releases/news-release-details/tempus-announces-study-highlighting-role-advanced-genomic), [PathAI — FDA Clearance for AISight Dx](https://www.pathai.com/resources/pathai-receives-fda-clearance-for-aisight-dx-platform-for-primary-diagnosis), [Labcorp — Expanded collaboration with PathAI](https://ir.labcorp.com/news-releases/news-release-details/labcorp-expands-collaboration-pathai-deploy-fda-cleared-digital). Hero image is DeepMind/Isomorphic Labs' AlphaFold 3 artwork.

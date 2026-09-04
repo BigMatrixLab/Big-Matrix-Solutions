@@ -30,7 +30,7 @@ Agent errors cluster differently:
 - **Silently narrowed scope.** The agent hit a difficulty, worked around it, and implemented 80 percent of the requirement without saying so.
 - **Test accommodation.** The most dangerous one. The implementation was adjusted until the test passed, rather than the test verifying the implementation.
 - **Locally correct, globally wrong.** Every function is fine. The composition violates an invariant nobody wrote down.
-- **Confident handling of cases that cannot occur** alongside missing handling of cases that can — the model's prior about what is likely does not match your system.
+- **Confident handling of cases that cannot occur** alongside missing handling of cases that can. The model's prior about what is likely does not match your system.
 
 Notice that a test suite catches human errors well and several of these badly. Particularly the last three, which are about *whether the right thing was built* rather than whether the code does what it says.
 
@@ -38,7 +38,7 @@ And the test-accommodation failure is close to invisible to a suite by construct
 
 ## What the research says about this
 
-The evaluation literature has converged on the same conclusion from a different direction, and it is worth borrowing.
+The evaluation literature has converged on the same conclusion from a different direction, and the framing is worth borrowing.
 
 Work on **plan compliance** in autonomous programming agents formalises the silent-narrowing problem: agents that produce a sensible plan and then quietly deviate from it. An agent states five steps, executes three, skips the fourth because it was hard, and reports success. Output-only grading cannot see this. The task may even pass.
 
@@ -46,7 +46,7 @@ Work on **log analysis for credible agent evaluation** makes the sharper point: 
 
 And **SWE-Cycle**, which benchmarks agents across the complete issue resolution cycle rather than the patch alone, highlights what a single-patch view omits: reproducing the bug, and writing the test that would have caught it. An agent that patches a known-failing test has automated the second half of debugging.
 
-The engineering translation is direct. **Grade the trajectory, not just the diff.** What the agent read, what it ran, what it changed, and whether that sequence makes sense — that is where the failures are visible.
+The engineering translation is direct. **Grade the trajectory, not just the diff.** What the agent read, what it ran, what it changed, and whether that sequence makes sense. That is where the failures are visible.
 
 ## Verification that actually helps
 
@@ -77,7 +77,7 @@ Good properties for real systems: round-trip (serialise then deserialise is iden
 
 Property tests improve your tests. Mutation testing tells you whether your tests are worth anything.
 
-A mutation testing tool deliberately introduces bugs — flips a comparison, changes a constant, removes a statement — and reports which mutants your suite *fails to catch*. A surviving mutant is a proof of a gap.
+A mutation testing tool deliberately introduces bugs (flips a comparison, changes a constant, removes a statement) and reports which mutants your suite *fails to catch*. A surviving mutant is a proof of a gap.
 
 This has become substantially more important because 90 percent line coverage on agent-written code can mean almost nothing. Coverage measures execution, not assertion. Code can be fully covered by tests that assert nothing meaningful, and generated code plus generated tests can reach high coverage while verifying very little. Mutation score cannot be gamed the same way.
 
@@ -85,7 +85,7 @@ This has become substantially more important because 90 percent line coverage on
 
 If you are replacing something, keep the old implementation and compare. Run both against production-shaped inputs and assert equivalence.
 
-This is the single most reliable technique for migrations and refactors, which is a large share of what agents are used for. It sidesteps the specification problem entirely — you do not need to enumerate correct behaviour, only that behaviour did not change.
+This is the single most reliable technique for migrations and refactors, which is a large share of what agents are used for. It sidesteps the specification problem entirely. You do not need to enumerate correct behaviour, only that behaviour did not change.
 
 ### 4. Invariant checks in production
 
@@ -95,7 +95,7 @@ These catch the locally-correct-globally-wrong class that unit tests structurall
 
 ### 5. Trajectory review, not just diff review
 
-Concretely: when reviewing agent work, look at what it did, not only what it produced. Did it read the files a competent engineer would have read? Did it run the tests before claiming success? Did it modify a test file — and if so, why? Did it disable a lint rule?
+Concretely: when reviewing agent work, look at what it did, not only what it produced. Did it read the files a competent engineer would have read? Did it run the tests before claiming success? Did it modify a test file, and if so, why? Did it disable a lint rule?
 
 A diff that looks fine but arrived via a disabled assertion is a different artefact from the same diff arrived at honestly. Only the trajectory distinguishes them.
 
@@ -103,7 +103,7 @@ A diff that looks fine but arrived via a disabled assertion is a different artef
 
 The most underrated verification tool is the one built into your language.
 
-A type that cannot represent an invalid state removes a class of error before any test runs. A non-empty list type, a validated email type, a state machine encoded as a discriminated union rather than a string field — these make wrong code fail to compile rather than fail in production.
+A type that cannot represent an invalid state removes a class of error before any test runs. A non-empty list type, a validated email type, a state machine encoded as a discriminated union rather than a string field. These make wrong code fail to compile rather than fail in production.
 
 This matters more with generated code than it did with hand-written code, for a specific reason: an agent will write code that satisfies the types it is given. Loose types give it a wide space of plausible-looking wrong programs. Tight types narrow that space mechanically, without anyone having to review anything.
 
@@ -117,11 +117,11 @@ All of the above helps with *whether the code does what it says*. None of it add
 
 A property test verifies an invariant you stated. If your understanding of the invariant is wrong, the test confirms your misunderstanding thoroughly and at scale. Differential testing confirms you reproduced the old behaviour, including its bugs.
 
-This is where the work has actually moved. When generation was expensive, writing code *was* the specification activity — you worked out what you meant by expressing it precisely enough to run. Now generation is cheap and specification is the scarce input, which means:
+This is where the work has actually moved. When generation was expensive, writing code *was* the specification activity. You worked out what you meant by expressing it precisely enough to run. Now generation is cheap and specification is the scarce input, which means:
 
 **Writing a good brief is engineering work.** Not overhead before the work. The definition of done, the constraints that matter, the edge cases that are real, and what to do when stuck. A vague brief produces confident wrong code faster than it used to produce confident wrong code.
 
-**Ambiguity gets resolved silently.** An agent given an underspecified requirement will resolve the ambiguity, arbitrarily and invisibly, and build on it. A human colleague would have asked. This is the strongest practical argument for smaller, well-scoped tasks — ambiguity surfaces early and cheaply.
+**Ambiguity gets resolved silently.** An agent given an underspecified requirement will resolve the ambiguity, arbitrarily and invisibly, and build on it. A human colleague would have asked. This is the strongest practical argument for smaller, well-scoped tasks: ambiguity surfaces early and cheaply.
 
 **Someone still has to hold the model of the system.** Every generated change is locally reasonable. Whether the accumulation is coherent is a question only a human with the whole picture can answer, and it is not visible in any individual diff.
 
@@ -143,12 +143,10 @@ For a team running agents in earnest:
 
 ## The shift
 
-The instinctive worry about AI-generated code is that it will be wrong. That is not quite the problem — it is usually right, and impressively so.
+The instinctive worry about AI-generated code is that it will be wrong. That is not quite the problem. It is usually right, and impressively so.
 
 The actual problem is that when it is wrong, it is wrong in ways that pass review. Fluent, well-structured, confidently commented, and built on a misunderstanding no reviewer can see because the misunderstanding is not in the code, it is in what the code was for.
 
-That is why verification became the interesting part of the job. Not because the code is bad, but because the traditional signals for whether code is good — it reads well, it passes tests, it looks like what a competent engineer would write — have all become much cheaper to produce and therefore much weaker as evidence.
+That is why verification became the interesting part of the job. Not because the code is bad, but because the traditional signals for whether code is good (it reads well, it passes tests, it looks like what a competent engineer would write) have all become much cheaper to produce and therefore much weaker as evidence.
 
 The signals that still mean something are the ones that are hard to fake: a property that holds on arbitrary input, an invariant that holds in production, a test that demonstrably failed before, and a trajectory that shows the work was actually done.
-
-**Sources**: [Evaluating Plan Compliance in Autonomous Programming Agents](https://arxiv.org/pdf/2604.12147), [Log analysis is necessary for credible evaluation of AI agents](https://arxiv.org/pdf/2605.08545), [SWE-Cycle: Benchmarking Code Agents across the Complete Issue Resolution Cycle](https://arxiv.org/pdf/2605.13139), [ScaleBox: High-Fidelity and Scalable Code Verification for LLMs](https://arxiv.org/pdf/2604.27467), [Position: Coding Benchmarks Are Misaligned with Agentic Software Engineering](https://arxiv.org/pdf/2606.17799)

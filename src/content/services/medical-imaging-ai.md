@@ -4,7 +4,7 @@ slug: "medical-imaging-ai-radiology"
 title: "Medical Imaging AI & Radiology Automation"
 icon: "bi bi-lungs"
 image: "/assets/images/projects/lung ct segmentation and report generation.png"
-desc: "Segmentation, detection and automated reporting across X-ray, CT, MRI and pathology — built to survive different scanners, protocols and sites."
+desc: "Segmentation, detection and automated reporting across X-ray, CT, MRI and pathology, built to survive different scanners, protocols and sites."
 ---
 
 
@@ -16,7 +16,7 @@ desc: "Segmentation, detection and automated reporting across X-ray, CT, MRI and
 
 Most imaging AI works beautifully on the dataset it was built with and degrades the moment it meets another hospital's scanner. We build for the second case, because that is the only one that matters in deployment.
 
-Four shipped imaging systems back this practice — lung CT segmentation with report generation, an X-ray segmentation editor, multimodal breast cancer diagnosis, and radiotherapy auto-contouring.
+Four shipped imaging systems back this practice: lung CT segmentation with report generation, an X-ray segmentation editor, multimodal breast cancer diagnosis, and radiotherapy auto-contouring.
 
 
 ### 1. **Segmentation & Anatomical Delineation**
@@ -24,10 +24,10 @@ Four shipped imaging systems back this practice — lung CT segmentation with re
 Voxel-level structure and lesion delineation across modalities:
 
 **Modalities**:
-- CT — organs at risk, lesions, volumetric measurement
-- MRI — multi-sequence, tumour boundaries
-- X-ray — lung fields, cardiothoracic ratio, device placement
-- Whole-slide pathology — gigapixel tiling and region classification
+- CT: organs at risk, lesions, volumetric measurement
+- MRI: multi-sequence, tumour boundaries
+- X-ray: lung fields, cardiothoracic ratio, device placement
+- Whole-slide pathology: gigapixel tiling and region classification
 
 ---
 
@@ -67,19 +67,19 @@ The work that decides whether any of the above survives contact with your depart
 
 ---
 
-## Technology Stack
+## What we build with
 
 **Models**: U-Net and nnU-Net variants, vision transformers, medical foundation model backbones
 **Imaging**: DICOM, NIfTI, PACS integration, whole-slide formats
-**Deployment**: On-premise or private cloud — imaging data does not have to leave your network
+**Deployment**: On-premise or private cloud, because imaging data does not have to leave your network
 
-## Where It Fits
+## Who this is for
 
 - Radiology departments under rising study volume
 - Radiotherapy and oncology planning workflows
 - Screening programmes needing consistent second reads
 - Research groups building retrospective imaging cohorts
 
-## Why Choose Us?
+## Why us
 
 We have shipped this, not just modelled it. Our imaging tools run against real DICOM series with real protocol variation, and we treat cross-site validation and human-in-the-loop review as part of the build rather than a later phase.

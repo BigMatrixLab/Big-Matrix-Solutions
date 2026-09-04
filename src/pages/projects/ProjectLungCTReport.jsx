@@ -1,6 +1,7 @@
 import '../../assets/css/ProjectShowcase.css';
 import ShowcaseFacts from '../../components/showcase/ShowcaseFacts';
 import CtaBand from '../../components/CtaBand';
+import Seo from '../../components/Seo';
 
 const heroStats = [
     { icon: 'bi bi-stopwatch', num: '50–70%', label: 'Projected reduction in manual CT reading and reporting time per case' },
@@ -132,6 +133,11 @@ const SpecGrid = ({ items }) => (
 const ProjectLungCTReport = () => {
     return (
         <>
+            <Seo
+                title="Lung CT report generation"
+                description="AI-assisted lung nodule detection, volumetric segmentation and automated report generation, handing the radiologist a structured draft to verify."
+                path="/project/lung-ct-report-generation"
+            />
         <div className="bc-showcase">
 
             {/* ── Hero ── */}

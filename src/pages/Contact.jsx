@@ -1,6 +1,7 @@
 import { useEffect, useRef, useState } from 'react';
 import Breadcrumb from '../components/Breadcrumb';
 import SectionHead from '../components/SectionHead';
+import Seo from '../components/Seo';
 
 const SUBJECTS = [
     { value: 'research', label: 'Research collaboration' },
@@ -200,6 +201,11 @@ const Contact = () => {
 
     return (
         <>
+            <Seo
+                title="Contact"
+                description="Talk to the engineering team. Tell us the constraints and we will map them to an architecture."
+                path="/contact"
+            />
             <Breadcrumb pageTitle="Talk to the engineering team" breadcrumbItem="Contact" />
 
             <section className="bm-section">

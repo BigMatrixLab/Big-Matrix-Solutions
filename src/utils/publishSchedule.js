@@ -16,7 +16,7 @@
  * disappears from the site.
  */
 
-import { useEffect, useMemo, useState } from 'react';
+import { useEffect, useMemo } from 'react';
 import { useLocation } from 'react-router-dom';
 
 const PREVIEW_KEY = 'bm:blog-preview';
@@ -107,14 +107,17 @@ const writeStoredPreview = (on) => {
 export const usePreviewMode = () => {
     const { search } = useLocation();
     const param = useMemo(() => new URLSearchParams(search).get('preview'), [search]);
-    const [enabled, setEnabled] = useState(readStoredPreview);
+    const fromParam = param === null ? null : param !== '0' && param !== 'false';
 
+    // sessionStorage is the external system, so writing to it is all the
+    // effect does. The returned value is derived, not held in state: holding
+    // it would mean the first render showed the stored value and the effect
+    // then corrected it, which flashed the wrong post list for a frame.
     useEffect(() => {
-        if (param === null) return;
-        const on = param !== '0' && param !== 'false';
-        writeStoredPreview(on);
-        setEnabled(on);
-    }, [param]);
+        if (fromParam !== null) writeStoredPreview(fromParam);
+    }, [fromParam]);
 
-    return enabled;
+    // The query param wins while it is present; otherwise fall back to what
+    // the tab remembered, so preview survives navigating to a bare URL.
+    return fromParam ?? readStoredPreview();
 };

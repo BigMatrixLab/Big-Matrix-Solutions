@@ -3,7 +3,7 @@ id: "17"
 slug: "how-transformers-work-a-practical-walkthrough"
 title: "How Transformers Actually Work: A Walkthrough Without the Hand-Waving"
 comments: "0"
-image: "https://images.unsplash.com/photo-1655720828018-edd2daec9349?auto=format&fit=crop&q=80&w=800"
+image: "/assets/images/blog/transformer-architecture.webp"
 category: "Tutorial"
 desc: "Attention, positional encoding, residual streams and the feed-forward layer, explained by following one token through the whole stack."
 date: "Oct 02, 2026"
@@ -34,7 +34,7 @@ The cost is that you no longer get order for free. A recurrent network knows abo
 
 Text arrives as a string. The first job is turning it into numbers.
 
-A tokenizer splits text into subword units — chunks that fall between characters and whole words. Common words are single tokens; rare ones split into pieces. `"unhappiness"` might become `["un", "happiness"]` or `["unh", "appiness"]`, depending on the vocabulary.
+A tokenizer splits text into subword units: chunks that fall between characters and whole words. Common words are single tokens; rare ones split into pieces. `"unhappiness"` might become `["un", "happiness"]` or `["unh", "appiness"]`, depending on the vocabulary.
 
 Each token maps to an integer id, and each id indexes a row in an embedding matrix:
 
@@ -54,7 +54,7 @@ Our three vectors carry no order information. Shuffle them and the model cannot 
 
 Two families of solutions.
 
-**Absolute positional encoding** adds a position-dependent vector to each embedding. The original paper used fixed sinusoids of different frequencies — position 0 gets one pattern, position 1 another, and the pattern varies smoothly enough that the model can learn to read relative offsets from it. Later models learned the position vectors instead of fixing them.
+**Absolute positional encoding** adds a position-dependent vector to each embedding. The original paper used fixed sinusoids of different frequencies. Position 0 gets one pattern, position 1 another, and the pattern varies smoothly enough that the model can learn to read relative offsets from it. Later models learned the position vectors instead of fixing them.
 
 **Rotary positional embeddings (RoPE)** are what nearly every current model uses, and they work differently. Rather than adding to the embedding, RoPE *rotates* the query and key vectors by an angle proportional to position, inside the attention computation.
 
@@ -62,15 +62,15 @@ The elegance is that the dot product between a query at position *m* and a key a
 
 ## Step three: attention, from first principles
 
-Here is the core idea, and it is worth building up rather than stating.
+Here is the core idea, and it is better built up than stated.
 
-Each token needs to gather information from other tokens. But not uniformly — in "the animal did not cross the street because *it* was too tired," the token `it` needs `animal` specifically, and mostly needs to ignore `street`.
+Each token needs to gather information from other tokens. But not uniformly. In "the animal did not cross the street because *it* was too tired," the token `it` needs `animal` specifically, and mostly needs to ignore `street`.
 
 So each token needs to (a) express what it is looking for, (b) let other tokens express what they offer, and (c) match the two. That is exactly three projections:
 
-- **Query (Q)** — what this token is looking for.
-- **Key (K)** — what this token can be matched against.
-- **Value (V)** — what this token will contribute if matched.
+- **Query (Q)**: what this token is looking for.
+- **Key (K)**: what this token can be matched against.
+- **Value (V)**: what this token will contribute if matched.
 
 The database analogy is genuinely helpful: a query is matched against keys, and you retrieve values. The difference is that instead of one exact match, you get a weighted blend of *all* values, weighted by how well each key matched.
 
@@ -86,7 +86,7 @@ output  = weights @ V             # (seq, d_v)
 
 Four lines. Walk through them:
 
-`Q @ K.T` computes every query against every key. Entry `[i][j]` is how much token *i* cares about token *j*. This matrix is the whole game — it is a learned, content-dependent map of which tokens should talk to which.
+`Q @ K.T` computes every query against every key. Entry `[i][j]` is how much token *i* cares about token *j*. This matrix is the whole game: a learned, content-dependent map of which tokens should talk to which.
 
 `/ sqrt(d_k)` is not cosmetic. For large `d_k`, dot products grow with dimension, and large values push softmax toward one-hot, which kills the gradient. Dividing by the square root of the dimension keeps the variance stable.
 
@@ -96,7 +96,7 @@ Four lines. Walk through them:
 
 ### Why causal masking matters
 
-For a model predicting the next token, letting position 3 attend to position 7 would be cheating — it would see the answer during training.
+For a model predicting the next token, letting position 3 attend to position 7 would be cheating. It would see the answer during training.
 
 The fix is a mask that sets scores for future positions to negative infinity before the softmax, which drives their weights to zero:
 
@@ -109,7 +109,7 @@ This is the entire difference between an encoder (bidirectional, sees everything
 
 ### Why multiple heads
 
-One attention operation learns one notion of relevance. Language needs several at once — syntactic agreement, coreference, topical similarity, positional locality.
+One attention operation learns one notion of relevance. Language needs several at once: syntactic agreement, coreference, topical similarity, positional locality.
 
 Multi-head attention runs several attention operations in parallel with separate projections, each in a lower-dimensional subspace, then concatenates the results:
 
@@ -119,7 +119,7 @@ Multi-head attention runs several attention operations in parallel with separate
 # concatenate back to 768 and pass through W_o
 ```
 
-The parameter count stays roughly the same as one big head, but you get twelve specialised relevance functions instead of one averaged one. Interpretability work has repeatedly found heads that specialise in strikingly legible ways — one tracking subject-verb agreement, another copying rare tokens from earlier in the context.
+The parameter count stays roughly the same as one big head, but you get twelve specialised relevance functions instead of one averaged one. Interpretability work has repeatedly found heads that specialise in strikingly legible ways: one tracking subject-verb agreement, another copying rare tokens from earlier in the context.
 
 ## Step four: the feed-forward layer
 
@@ -131,11 +131,11 @@ h = activation(h)  # GELU or SwiGLU in modern models
 y = h @ W_2        # (4 * d_model) -> (d_model), 3072 -> 768
 ```
 
-This looks like filler. It is not — it is where most of the parameters live, and it does a different job from attention.
+This looks like filler. It is not. This is where most of the parameters live, and it does a different job from attention.
 
 The clean way to think about it: **attention moves information between positions; the feed-forward layer processes information within a position.**
 
-Attention is a mixing operation. Without the MLP, stacking attention layers would just mix and re-mix the same vectors, and the whole stack would collapse to something close to linear. The MLP provides the nonlinear per-token computation — the actual thinking about what a token means, now that it has gathered its context.
+Attention is a mixing operation. Without the MLP, stacking attention layers would just mix and re-mix the same vectors, and the whole stack would collapse to something close to linear. The MLP provides the nonlinear per-token computation: the actual thinking about what a token means, now that it has gathered its context.
 
 There is also good evidence that these layers act as key-value memories, storing factual associations. Interpretability research has traced specific facts to specific feed-forward neurons and edited them. When you hear that a model "knows" something, the MLP layers are the most likely place it is stored.
 
@@ -204,10 +204,10 @@ Attention computes a score for every pair of tokens. That is O(n²) in sequence 
 
 At 1,000 tokens, a million scores per head per layer. At 100,000 tokens, ten billion. This quadratic term is the single reason long context is hard, and nearly every efficiency innovation of the last few years is an attack on it:
 
-- **FlashAttention** — never materialises the full score matrix, computing it in tiles that fit in fast on-chip memory. Same mathematics, dramatically less memory traffic.
-- **Grouped-query attention** — multiple query heads share one set of key and value heads, shrinking the KV cache that dominates memory during generation.
-- **Sliding-window attention** — each token attends only to a nearby window, made global by stacking layers so information propagates across windows over depth.
-- **Sparse and linear attention** — approximations that trade exactness for sub-quadratic scaling. Widely researched, less widely deployed at the frontier.
+- **FlashAttention**: never materialises the full score matrix, computing it in tiles that fit in fast on-chip memory. Same mathematics, dramatically less memory traffic.
+- **Grouped-query attention**: multiple query heads share one set of key and value heads, shrinking the KV cache that dominates memory during generation.
+- **Sliding-window attention**: each token attends only to a nearby window, made global by stacking layers so information propagates across windows over depth.
+- **Sparse and linear attention**: approximations that trade exactness for sub-quadratic scaling. Widely researched, less widely deployed at the frontier.
 
 Notably, none of these change the core idea. The 2017 mechanism is intact; eight years of engineering has gone into computing it faster.
 
@@ -223,4 +223,6 @@ If you keep four things:
 
 **Position is bolted on, and how you bolt it on matters.** RoPE's relative-position geometry is a large part of why modern context windows are as long as they are.
 
-Everything else — the exact activation, the norm placement, the head count, the width multiplier — is tuning. The four ideas above are the architecture.
+Everything else (the exact activation, the norm placement, the head count, the width multiplier) is tuning. The four ideas above are the architecture.
+
+Hero diagram: [Transformer, full architecture](https://commons.wikimedia.org/wiki/File:Transformer%2C_full_architecture.png) by Daniel Voigt Godoy, [CC BY 4.0](https://creativecommons.org/licenses/by/4.0/), via Wikimedia Commons. Scaled and padded to fit; not otherwise altered.

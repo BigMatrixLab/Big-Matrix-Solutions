@@ -13,7 +13,7 @@ desc: "Complete digital infrastructure including EMR, EHR, HMS, LIMS, RIS, and P
 
 ## Transform Healthcare Delivery with Integrated Digital Systems
 
-Modern healthcare facilities require seamless digital infrastructure that connects every department, streamlines workflows, and puts patient data at clinicians' fingertips. Our comprehensive suite of healthcare information systems creates a unified digital ecosystem for hospitals, diagnostic centers, laboratories, and clinics.
+A hospital runs on a dozen systems that were bought separately and never introduced to each other. Records live in one, imaging in another, billing somewhere else, and clinicians pay for the gaps in time they do not have. We build the connective layer for hospitals, diagnostic centres, laboratories and clinics.
 
 ---
 
@@ -104,7 +104,7 @@ Streamlined imaging workflows:
 - Technologist worklists
 
 **PACS Integration**:
-- Seamless connection with Picture Archiving and Communication System
+- Direct connection to your Picture Archiving and Communication System
 - DICOM image viewing and manipulation
 - 3D reconstruction capabilities
 
@@ -114,7 +114,7 @@ Streamlined imaging workflows:
 **Benefits**:
 - 35% reduction in report turnaround time
 - AI-assisted detection of abnormalities
-- Seamless EMR integration for clinicians
+- EMR integration clinicians do not have to think about
 - Mobile access for on-call radiologists
 
 ---
@@ -141,7 +141,7 @@ Complete medication lifecycle management:
 
 ## Integration & Interoperability
 
-All systems communicate seamlessly:
+All systems talk to each other:
 
 
 
@@ -241,8 +241,8 @@ All systems communicate seamlessly:
 ## Why Choose Big-Matrix Solutions?
 
 ✅ **Healthcare Domain Expertise**: 10+ years implementing systems for hospitals and labs  
-✅ **Customization**: No two facilities are alike—we tailor to your workflows  
+✅ **Customization**: No two facilities are alike, so we tailor to your workflows  
 ✅ **Local Support**: Bangladesh-based team with 24/7 support  
 ✅ **Scalability**: Start with one module, expand to complete digital hospital  
-✅ **Interoperability**: HL7 FHIR standard-compliant for seamless integrations  
+✅ **Interoperability**: HL7 FHIR standard-compliant, so integrations are routine  
 ✅ **Training**: Comprehensive on-site and remote training programs

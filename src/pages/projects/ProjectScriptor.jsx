@@ -1,6 +1,7 @@
 import '../../assets/css/ProjectShowcase.css';
 import ShowcaseFacts from '../../components/showcase/ShowcaseFacts';
 import CtaBand from '../../components/CtaBand';
+import Seo from '../../components/Seo';
 
 const heroStats = [
     { icon: 'bi bi-window-stack', num: '7 Formats', label: 'LaTeX, Word, PowerPoint, Markdown, PDF, whiteboard and knowledge graph in one project' },
@@ -246,6 +247,11 @@ const SpecGrid = ({ items }) => (
 const ProjectScriptor = () => {
     return (
         <>
+            <Seo
+                title="Scriptor document workspace"
+                description="LaTeX, Word, PowerPoint, Markdown, whiteboards and PDF annotation in a single project, with one permission model and one version history."
+                path="/project/scriptor"
+            />
         <div className="bc-showcase">
 
             {/* ── Hero ── */}

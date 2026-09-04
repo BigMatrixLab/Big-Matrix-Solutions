@@ -4,7 +4,7 @@ slug: "computer-vision-inspection"
 title: "Computer Vision & Visual Inspection Systems"
 icon: "bi bi-eye"
 image: "https://images.unsplash.com/photo-1567789884554-0b844b597180?w=800&q=80&auto=format&fit=crop"
-desc: "Defect detection, measurement and visual QA on the production line — edge-deployed, tolerant of real lighting, and tuned to the cost of each error type."
+desc: "Defect detection, measurement and visual QA on the production line: edge-deployed, tolerant of real lighting, and tuned to the cost of each error type."
 ---
 
 
@@ -14,15 +14,15 @@ desc: "Defect detection, measurement and visual QA on the production line — ed
 
 ## Catching the Defect Before It Ships
 
-Manual visual inspection is slow, inconsistent between shifts, and worst exactly when volume is highest. Automated inspection is consistent — provided it was built for your lighting, your line speed and your definition of a defect.
+Manual visual inspection is slow, inconsistent between shifts, and worst exactly when volume is highest. Automated inspection is consistent, provided it was built for your lighting, your line speed and your definition of a defect.
 
 That last part is where most deployments fail.
 
 
 ### 1. **Defect Detection & Classification**
 
-- Surface defects — scratches, dents, contamination, discolouration
-- Assembly verification — presence, orientation, seating
+- Surface defects: scratches, dents, contamination, discolouration
+- Assembly verification: presence, orientation, seating
 - Print and label inspection, including OCR verification
 - Weld, seam and joint quality
 - Anomaly detection where defect examples are too rare to label
@@ -74,14 +74,14 @@ A false reject wastes a good part. A false accept ships a bad one. These almost 
 
 ---
 
-## Technology Stack
+## Hardware and models
 
 **Models**: CNN detectors and segmenters, vision transformers, anomaly detection for low-defect regimes
 **Hardware**: Industrial cameras, edge accelerators, GPU inference servers
 **Integration**: PLC, SCADA, MES, OPC-UA
 **Tooling**: Annotation pipelines, versioned datasets, drift monitoring
 
-## Where It Fits
+## Industries we work in
 
 - Manufacturing quality control and end-of-line inspection
 - Pharmaceutical packaging and fill verification
@@ -89,6 +89,6 @@ A false reject wastes a good part. A false accept ships a bad one. These almost 
 - Food and beverage processing
 - Warehouse and logistics verification
 
-## Why Choose Us?
+## Where our background helps
 
-Our imaging background is medical, which means we are unusually careful about the things that break vision systems in the field — domain shift, class imbalance, and the difference between a good average score and a model that catches the case you cannot afford to miss.
+Our imaging background is medical, which means we are unusually careful about the things that break vision systems in the field: domain shift, class imbalance, and the difference between a good average score and a model that catches the case you cannot afford to miss.

@@ -6,6 +6,8 @@ import CtaBand from '../components/CtaBand';
 import { servicesData } from '../data/content';
 import { enrichSolutionHtml } from '../utils/docEnrich';
 import { orderedServices, padIndex } from '../utils/serviceOrder';
+import Seo from '../components/Seo';
+import { graph, service as serviceSchema, breadcrumbs } from '../utils/structuredData';
 
 const PHONE_LABEL = '+880 2 55668200 (6212)';
 const PHONE_HREF = 'tel:+880255668200';
@@ -35,6 +37,7 @@ const ServiceDetails = () => {
     if (!service) {
         return (
             <>
+                <Seo title="Solution not found" path={`/service/${slug}`} noindex />
                 <Breadcrumb pageTitle="Solution not found" breadcrumbItem="Solutions" />
                 <section className="bm-section">
                     <div className="bm-container">
@@ -54,6 +57,19 @@ const ServiceDetails = () => {
     return (
         <>
             <Breadcrumb pageTitle={service.title} breadcrumbItem="Solutions" />
+            <Seo
+                title={service.title}
+                description={service.desc}
+                path={`/service/${service.slug}`}
+                schema={graph(
+                    serviceSchema(service),
+                    breadcrumbs([
+                        { name: 'Home', path: '/' },
+                        { name: 'Solutions', path: '/service' },
+                        { name: service.title, path: `/service/${service.slug}` },
+                    ])
+                )}
+            />
 
             <section className="bm-section bm-doc">
                 <div className="bm-container">

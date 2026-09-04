@@ -12,7 +12,7 @@ tags: ["Medical AI", "Radiology", "FDA", "Foundation Models"]
 
 # Medical Foundation Models Just Cleared the FDA. That Changes the Regulatory Playbook.
 
-For a decade, clinical AI had a shape imposed on it by regulation. You picked one narrow finding — a large-vessel occlusion, a pulmonary embolism, an intracranial haemorrhage — trained a model to detect it, ran a pivotal study, and filed. If you wanted to detect a second thing, you did the whole process again.
+For a decade, clinical AI had a shape imposed on it by regulation. You picked one narrow finding (a large-vessel occlusion, a pulmonary embolism, an intracranial haemorrhage), trained a model to detect it, ran a pivotal study, and filed. If you wanted to detect a second thing, you did the whole process again.
 
 The result was predictable. As of March 30, 2026, there are **1,524 FDA-cleared AI algorithms**, and 1,163 of them are for radiology. Radiology alone accounts for 76.31 percent of every AI device the FDA has ever cleared. In the first three months of 2026, another 68 radiology algorithms went through.
 
@@ -24,7 +24,7 @@ In January, that changed. And the interesting part is not the accuracy figure. I
 
 Aidoc received FDA clearance for what is described as the first foundation-model-powered clinical AI device: a single body CT triage solution covering **14 distinct conditions** from one scan.
 
-The condition list spans genuinely different pathology — aortic dissection, appendicitis, bowel obstruction, splenic injury, and ten others. These are not variations on a theme. They are different organs, different presentations, different urgency profiles. Historically each would have been its own submission.
+The condition list spans genuinely different pathology: aortic dissection, appendicitis, bowel obstruction, splenic injury, and ten others. These are not variations on a theme. They are different organs, different presentations, different urgency profiles. Historically each would have been its own submission.
 
 The pivotal study reported:
 
@@ -34,31 +34,31 @@ The pivotal study reported:
 | Mean specificity | 98% |
 | Conditions covered | 14 |
 
-Both numbers are strong, and they are means across fourteen conditions rather than a single cherry-picked finding. The enabling technology is Aidoc's CARE foundation model — a model pretrained broadly on imaging rather than fitted to one task.
+Both numbers are strong, and they are means across fourteen conditions rather than a single cherry-picked finding. The enabling technology is Aidoc's CARE foundation model, pretrained broadly on imaging rather than fitted to one task.
 
 Then in June, the FDA granted Breakthrough Device Designation to *First Read*, which extends the same CARE model into a different job entirely: analysing chest radiographs and generating preliminary radiology report text.
 
-That is the pattern worth noticing. One pretrained backbone, then two very different regulated products built on it — multi-condition triage and report drafting. That is the foundation-model playbook, and it has now made it through a medical device pathway.
+That is the pattern worth noticing. One pretrained backbone, then two very different regulated products built on it: multi-condition triage and report drafting. That is the foundation-model playbook, and it has now made it through a medical device pathway.
 
 ## Why this is a regulatory story, not just a technical one
 
-The technical claim — that a broadly pretrained imaging model transfers to many tasks better than task-specific models trained from scratch — has been the consensus in research for years. Nobody needed convincing.
+The technical claim, that a broadly pretrained imaging model transfers to many tasks better than task-specific models trained from scratch, has been the consensus in research for years. Nobody needed convincing.
 
 The obstacle was regulatory, and it was structural. Device clearance is built around an **intended use**: a specific claim, validated against a specific study, for a specific population. A foundation model's defining property is that it is *not* specific. Asking a regulator to clear "a model that is good at medical images" is asking them to clear something with no bounded claim, which they cannot do and should not do.
 
-The multi-condition clearance is a workable compromise. The intended use is still bounded — body CT triage, fourteen named conditions, defined population — but it covers a much wider surface than the single-finding submissions that came before it, and the underlying model is reusable across further submissions.
+The multi-condition clearance is a workable compromise. The intended use is still bounded (body CT triage, fourteen named conditions, defined population) but it covers a much wider surface than the single-finding submissions that came before it, and the underlying model is reusable across further submissions.
 
 For companies, the economics of that are substantial:
 
-- **Amortised pretraining** — the expensive part is building the backbone. Each additional cleared indication becomes a fine-tuning and validation exercise rather than a from-scratch programme.
-- **Fewer integrations** — hospitals buy one pipeline instead of ten, which removes the deployment friction that has quietly killed a lot of otherwise good clinical AI.
-- **Coherent worklists** — a single model triaging fourteen conditions can rank a worklist. Ten separate models each firing independent alerts cannot, and radiologists have been vocal about alert fatigue for years.
+- **Amortised pretraining**: the expensive part is building the backbone. Each additional cleared indication becomes a fine-tuning and validation exercise rather than a from-scratch programme.
+- **Fewer integrations**: hospitals buy one pipeline instead of ten, which removes the deployment friction that has quietly killed a lot of otherwise good clinical AI.
+- **Coherent worklists**: a single model triaging fourteen conditions can rank a worklist. Ten separate models each firing independent alerts cannot, and radiologists have been vocal about alert fatigue for years.
 
 ## What makes a medical imaging foundation model different
 
-It is worth being precise about what "foundation model" means in this context, because the term gets used loosely and the medical version differs from the language-model version in ways that matter.
+Be precise about what "foundation model" means here, because the term gets used loosely and the medical version differs from the language-model version in ways that matter.
 
-A language foundation model is pretrained on text with a self-supervised objective — predict the next token — and the data is effectively unlimited. A medical imaging foundation model faces a harder setup on both counts.
+A language foundation model is pretrained on text with a self-supervised objective, predict the next token, and the data is effectively unlimited. A medical imaging foundation model faces a harder setup on both counts.
 
 **The pretraining objective has to be built.** There is no "next token" in a CT volume. The self-supervised objectives that work here are masked reconstruction, contrastive learning across views or timepoints, and increasingly latent prediction of the kind used in joint embedding architectures. Each makes different assumptions about what structure in the image is worth learning.
 
@@ -66,7 +66,7 @@ A language foundation model is pretrained on text with a self-supervised objecti
 
 **Labels are expensive and inconsistent.** Annotating a CT volume for fourteen conditions requires radiologist time at radiologist rates. Inter-reader agreement on subtle findings is imperfect, which puts a ceiling on how good a supervised model can look under evaluation regardless of how good it actually is.
 
-What the foundation-model approach buys against all this is efficiency of adaptation. Once a backbone has learned general anatomical and textural structure from a large unlabelled corpus, adding a new condition requires far fewer labelled examples than training from scratch. For rare conditions — where a few hundred confirmed cases may be all that exists globally — that difference decides whether a model is possible at all.
+What the foundation-model approach buys against all this is efficiency of adaptation. Once a backbone has learned general anatomical and textural structure from a large unlabelled corpus, adding a new condition requires far fewer labelled examples than training from scratch. For rare conditions, where a few hundred confirmed cases may be all that exists globally, that difference decides whether a model is possible at all.
 
 ## The uncomfortable finding underneath
 
@@ -98,11 +98,11 @@ Sensitivity and specificity are properties of a model *and a population*. A mode
 
 ### 3. Triage is not diagnosis
 
-Almost all of these clearances are for triage and notification — flagging a study for earlier review. That is genuinely valuable: catching an aortic dissection twenty minutes sooner changes outcomes. But it is a workflow intervention. The radiologist still reads the study and still owns the finding, and a triage model's job is to reorder a queue, not to replace a read.
+Almost all of these clearances are for triage and notification: flagging a study for earlier review. That is genuinely valuable: catching an aortic dissection twenty minutes sooner changes outcomes. But it is a workflow intervention. The radiologist still reads the study and still owns the finding, and a triage model's job is to reorder a queue, not to replace a read.
 
 ### 4. Report drafting is a different risk category
 
-*First Read* generating preliminary report text is a real escalation, which is presumably why it is at Breakthrough Device Designation rather than cleared. A triage flag that is wrong costs attention. Draft report text that is wrong enters the record, anchors the reader, and can propagate into downstream care. Automation bias is well studied in this exact setting — physicians assisted by a confidently wrong model do worse than physicians working unaided.
+*First Read* generating preliminary report text is a real escalation, which is presumably why it is at Breakthrough Device Designation rather than cleared. A triage flag that is wrong costs attention. Draft report text that is wrong enters the record, anchors the reader, and can propagate into downstream care. Automation bias is well studied in this exact setting: physicians assisted by a confidently wrong model do worse than physicians working unaided.
 
 The mitigation is not better accuracy alone. It is workflow design: making the draft visibly provisional, making disagreement cheap to express, and not presenting the model's text as a finished read.
 
@@ -136,12 +136,10 @@ The 1,524-algorithm figure will keep climbing. But the shape of what gets cleare
 
 Three open questions will determine how this plays out.
 
-**Does the FDA formalise a foundation-model pathway?** Right now, multi-condition clearance is being achieved through creative use of existing mechanisms. A framework designed for reusable backbones — with predetermined change control for adding indications — would accelerate everything. There is active work in this direction, and it is the single highest-leverage regulatory change available.
+**Does the FDA formalise a foundation-model pathway?** Right now, multi-condition clearance is being achieved through creative use of existing mechanisms. A framework designed for reusable backbones, with predetermined change control for adding indications, would accelerate everything. There is active work in this direction, and it is the single highest-leverage regulatory change available.
 
 **Does post-market surveillance get real teeth?** Continuous monitoring of deployed model performance is the only honest answer to the validation-gap problem. A cleared device whose real-world sensitivity has drifted is more dangerous than one that was never cleared, because clinicians trust it.
 
-**Does report generation clear?** *First Read* is the test case. If AI-drafted radiology reports become a cleared category, the entire relationship between radiologist and model changes — from a system that reorders your queue to a system that writes your first draft. That is a far larger shift than triage ever was, and the workflow and liability questions around it are nowhere near settled.
+**Does report generation clear?** *First Read* is the test case. If AI-drafted radiology reports become a cleared category, the entire relationship between radiologist and model changes: from a system that reorders your queue to one that writes your first draft. That is a far larger shift than triage ever was, and the workflow and liability questions around it are nowhere near settled.
 
-For now, the honest summary is this: the technology is ahead of the regulation, the regulation is adapting faster than it used to, and the gap between them is where most of the clinical risk currently lives.
-
-**Sources**: [Aidoc Secures FDA Clearance for Healthcare's First Comprehensive Foundation Model AI](https://www.prnewswire.com/news-releases/aidoc-secures-fda-clearance-for-healthcares-first-comprehensive-foundation-model-ai-302666640.html), [Aidoc Receives FDA Breakthrough Device Designation for AI That Drafts Radiology Reports](https://www.aidoc.com/about/news/aidoc-receives-fda-breakthrough-device-designation-for-ai-that-drafts-radiology-reports/), [Radiology Business — Radiology gets 68 new FDA-cleared algorithms](https://radiologybusiness.com/topics/artificial-intelligence/radiology-gets-68-new-fda-cleared-algorithms), [Clinical Trial Vanguard — Nature Medicine's June 2026 Benchmark Study](https://www.clinicaltrialvanguard.com/opinion/nature-medicines-june-2026-benchmark-study-reveals-general-purpose-llms-outperform-fda-cleared-clinical-ai-and-exposes-a-validation-gap-regulators-have-not-closed/), [IntuitionLabs — FDA-Approved AI Medical Devices List](https://intuitionlabs.ai/articles/fda-approved-ai-medical-devices-list)
+For now it comes down to this: the technology is ahead of the regulation, the regulation is adapting faster than it used to, and the gap between them is where most of the clinical risk currently lives.

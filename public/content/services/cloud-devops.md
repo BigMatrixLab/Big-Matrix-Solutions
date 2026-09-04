@@ -161,7 +161,7 @@ Design for resilience:
 
 ---
 
-## Why Choose Us?
+## Why teams trust us with this
 
 ✅ **Cloud certified**: AWS Solutions Architect, Azure Administrator  
 ✅ **Kubernetes expertise**: CKA (Certified Kubernetes Administrator)  

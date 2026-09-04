@@ -4,12 +4,18 @@ import Breadcrumb from '../components/Breadcrumb';
 import SectionHead from '../components/SectionHead';
 import CtaBand from '../components/CtaBand';
 import { groupedServices, padIndex } from '../utils/serviceOrder';
+import Seo from '../components/Seo';
 
 const Services = () => {
     const groups = groupedServices(servicesData);
 
     return (
         <>
+            <Seo
+                title="Solutions"
+                description="Practice areas built for regulated, high-load environments: medical imaging AI, agentic engineering, data platforms and clinical infrastructure."
+                path="/service"
+            />
             <Breadcrumb
                 pageTitle="Solutions built for regulated, high-load environments"
                 breadcrumbItem="Solutions"

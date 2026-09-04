@@ -117,7 +117,7 @@ Integrate intelligent automation:
 
 ---
 
-## Why Choose Us?
+## What you get working with us
 
 ✅ **Industrial domain expertise**: Pharma, textiles, food processing  
 ✅ **System integration**: Connect legacy equipment with modern IoT  

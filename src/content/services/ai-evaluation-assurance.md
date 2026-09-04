@@ -4,7 +4,7 @@ slug: "ai-evaluation-assurance"
 title: "AI Evaluation, Benchmarking & Model Assurance"
 icon: "bi bi-clipboard-data"
 image: "https://images.unsplash.com/photo-1518349619113-03114f06ac3a?w=800&q=80&auto=format&fit=crop"
-desc: "Task-specific evaluation sets, honest benchmarking and pre-deployment assurance — so you know what your AI system does before your users find out."
+desc: "Task-specific evaluation sets, honest benchmarking and pre-deployment assurance, so you know what your AI system does before your users find out."
 ---
 
 
@@ -28,7 +28,7 @@ A hundred examples from your own traffic, graded by someone who understands the 
 - Cases drawn from real usage, including the messy ones
 - Domain-expert grading with a written rubric
 - Held-out and rotating splits so you are not tuning on your test set
-- Uncontaminated by construction — nobody else has your data
+- Uncontaminated by construction: nobody else has your data
 
 ---
 
@@ -49,10 +49,10 @@ Tiered families have cliffs. A cheap model within a point of the mid tier on rea
 
 Output-only grading cannot distinguish a system that solved the problem from one that got lucky or gamed the test:
 
-- Trajectory review — what the agent read, ran and changed
-- Plan compliance — did it do what it said it would
-- Seeded-error recovery — does it notice when a step failed
-- False-confidence rate — how often it reports success on incomplete work
+- Trajectory review: what the agent read, ran and changed
+- Plan compliance: did it do what it said it would
+- Seeded-error recovery: does it notice when a step failed
+- False-confidence rate: how often it reports success on incomplete work
 - Cost per successful task, not cost per call
 
 ---
@@ -61,7 +61,7 @@ Output-only grading cannot distinguish a system that solved the problem from one
 
 - Prompt injection and jailbreak probing against your actual tool surface
 - Hallucination rate on domain questions with known answers
-- Refusal calibration — over-refusal is a failure too
+- Refusal calibration: over-refusal is a failure too
 - Subgroup performance, because a good average can hide a bad cohort
 - Adversarial and out-of-distribution inputs
 
@@ -73,18 +73,18 @@ Where the evidence bar is higher and retrospective accuracy is not enough:
 
 - Reader studies and inter-observer variability as the reference band
 - Prospective study design and endpoint selection
-- Automation bias assessment — does the assisted human do better or worse
+- Automation bias assessment: does the assisted human do better or worse
 - Evidence packages for regulatory and procurement review
 
 ---
 
-## Technology Stack
+## How we run it
 
 **Harnesses**: Custom evaluation runners, LLM-as-judge with human calibration, statistical significance testing
 **Observability**: Full trajectory capture, cost and latency instrumentation, drift monitoring
 **Reporting**: Per-case and aggregate dashboards, regression alerts in CI
 
-## Where It Fits
+## When to call us
 
 - Before a model migration or vendor change
 - Pre-deployment assurance on a customer-facing system
@@ -92,6 +92,6 @@ Where the evidence bar is higher and retrospective accuracy is not enough:
 - Procurement due diligence on a vendor's claims
 - Any team that cannot currently answer "did that change help?"
 
-## Why Choose Us?
+## Our credential is public
 
-We publish continuously on evaluation — benchmark saturation, harness effects, trajectory analysis, why a headline score and an API call can differ by eighty points. That work is the credential, and it is why we will tell you when a vendor's number does not mean what it appears to.
+We publish continuously on evaluation: benchmark saturation, harness effects, trajectory analysis, why a headline score and an API call can differ by eighty points. That work is the credential, and it is why we will tell you when a vendor's number does not mean what it appears to.

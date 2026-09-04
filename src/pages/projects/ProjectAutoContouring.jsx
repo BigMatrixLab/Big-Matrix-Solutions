@@ -1,6 +1,7 @@
 import '../../assets/css/ProjectShowcase.css';
 import ShowcaseFacts from '../../components/showcase/ShowcaseFacts';
 import CtaBand from '../../components/CtaBand';
+import Seo from '../../components/Seo';
 
 const heroStats = [
     { icon: 'bi bi-stopwatch', num: '50–70%', label: 'Projected reduction in manual contouring time per case' },
@@ -132,6 +133,11 @@ const SpecGrid = ({ items }) => (
 const ProjectAutoContouring = () => {
     return (
         <>
+            <Seo
+                title="Auto contouring for radiotherapy"
+                description="AI-assisted contouring and planning support for oncology workflows, cutting manual segmentation time by 50 to 70% and improving cross-team consistency."
+                path="/project/auto-contouring"
+            />
         <div className="bc-showcase">
 
             {/* ── Hero ── */}

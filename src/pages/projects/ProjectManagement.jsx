@@ -1,6 +1,7 @@
 import '../../assets/css/ProjectShowcase.css';
 import ShowcaseFacts from '../../components/showcase/ShowcaseFacts';
 import CtaBand from '../../components/CtaBand';
+import Seo from '../../components/Seo';
 
 const heroStats = [
     { icon: 'bi bi-kanban', num: '1 Hub', label: 'Centralised workspace for projects, tasks and updates across every initiative' },
@@ -132,6 +133,11 @@ const SpecGrid = ({ items }) => (
 const ProjectManagement = () => {
     return (
         <>
+            <Seo
+                title="Project management platform"
+                description="Task tracking, deadline management and workload visibility across every project, built in three months to fix real coordination failures."
+                path="/project/bm-project-management"
+            />
         <div className="bc-showcase">
 
             {/* ── Hero ── */}

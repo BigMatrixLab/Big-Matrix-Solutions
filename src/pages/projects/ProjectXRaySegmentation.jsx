@@ -1,6 +1,7 @@
 import '../../assets/css/ProjectShowcase.css';
 import ShowcaseFacts from '../../components/showcase/ShowcaseFacts';
 import CtaBand from '../../components/CtaBand';
+import Seo from '../../components/Seo';
 
 const heroStats = [
     { icon: 'bi bi-lightning-charge', num: '<20s', label: 'Average time to generate an initial segmentation pass from a single upload' },
@@ -132,6 +133,11 @@ const SpecGrid = ({ items }) => (
 const ProjectXRaySegmentation = () => {
     return (
         <>
+            <Seo
+                title="X-ray segmentation editor"
+                description="A browser workspace for reviewing, correcting and packaging chest X-ray segmentations, with an AI starting point generated in under 20 seconds."
+                path="/project/x-ray-segmentation-editor"
+            />
         <div className="bc-showcase">
 
             {/* ── Hero ── */}

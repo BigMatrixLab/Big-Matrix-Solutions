@@ -4,6 +4,7 @@ import Breadcrumb from '../components/Breadcrumb';
 import SectionHead from '../components/SectionHead';
 import careersData from '../data/careers.json';
 import CtaBand from '../components/CtaBand';
+import Seo from '../components/Seo';
 
 const isDeadlinePassed = (deadline) => {
     if (!deadline) return false;
@@ -51,6 +52,11 @@ const Careers = () => {
 
     return (
         <>
+            <Seo
+                title="Careers"
+                description="Open roles at Big-Matrix Solutions. Build AI systems that reach real clinicians, real factories and real patients."
+                path="/careers"
+            />
             <Breadcrumb pageTitle="Build systems that matter" breadcrumbItem="Careers" />
 
             <section className="bm-section">

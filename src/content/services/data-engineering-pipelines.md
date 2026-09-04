@@ -4,7 +4,7 @@ slug: "data-engineering-pipelines"
 title: "Data Engineering & Pipeline Architecture"
 icon: "bi bi-diagram-3"
 image: "https://images.unsplash.com/photo-1587293852726-70cdb56c2866?w=800&q=80&auto=format&fit=crop"
-desc: "Ingestion, transformation and warehouse architecture with tested data quality — the layer everything else in your analytics and AI stack depends on."
+desc: "Ingestion, transformation and warehouse architecture with tested data quality. The layer everything else in your analytics and AI stack depends on."
 ---
 
 
@@ -35,7 +35,7 @@ Getting data out of systems that were not designed to give it up:
 
 ### 2. **Transformation & Modelling**
 
-- Layered architecture — raw, staged, curated
+- Layered architecture: raw, staged, curated
 - Version-controlled transformation logic, reviewed like application code
 - Incremental processing so a reload does not mean a full rebuild
 - Slowly changing dimensions and point-in-time correctness
@@ -83,7 +83,7 @@ The difference between a pipeline that runs and one you can trust:
 Where this practice meets the AI work:
 
 - Feature pipelines shared between training and serving, avoiding skew
-- Point-in-time correct training sets — no leakage from the future
+- Point-in-time correct training sets: no leakage from the future
 - Reproducible dataset snapshots tied to model versions
 - Labelling workflow integration and annotation storage
 
@@ -96,13 +96,13 @@ Where this practice meets the AI work:
 **Quality**: Contract testing, assertion frameworks, lineage tooling
 **Deployment**: Cloud or fully on-premise where data residency requires it
 
-## Where It Fits
+## Where this matters most
 
 - Organisations with data in many systems and one version of the truth in none
 - Clinical and research data platforms with de-identification requirements
 - Analytics programmes blocked on data quality rather than tooling
 - AI projects that need reliable training data before they need a better model
 
-## Why Choose Us?
+## Why we care about this layer
 
 We do this because our own AI and analytics work depends on it. That means we build pipelines to be debugged at 2am by whoever is on call, and we treat data quality tests as part of the deliverable rather than a phase that gets cut.

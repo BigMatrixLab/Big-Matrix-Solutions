@@ -3,6 +3,7 @@ import Breadcrumb from '../components/Breadcrumb';
 import CtaBand from '../components/CtaBand';
 import careersData from '../data/careers.json';
 import NotFound from './NotFound';
+import Seo from '../components/Seo';
 
 const isDeadlinePassed = (deadline) => {
     if (!deadline) return false;
@@ -55,6 +56,12 @@ const CareerDetails = () => {
 
     return (
         <>
+            <Seo
+                title={job.title}
+                description={job.desc || job.roleIntro}
+                path={`/careers/${job.slug}`}
+                noindex={expired}
+            />
             <Breadcrumb pageTitle={job.title} breadcrumbItem="Careers" />
 
             <section className="bm-section bm-doc">

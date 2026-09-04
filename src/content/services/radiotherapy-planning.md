@@ -24,10 +24,10 @@ We build the tools that automate the drawing and leave the judgment where it bel
 Organs at risk and target volumes generated from the planning CT:
 
 **Typical structure sets**:
-- Pelvis — bladder, rectum, femoral heads, small bowel
-- Thorax — lungs, heart, oesophagus, spinal cord
-- Head and neck — parotids, larynx, brainstem, optic structures
-- Target volumes — GTV, CTV and derived expansions
+- Pelvis: bladder, rectum, femoral heads, small bowel
+- Thorax: lungs, heart, oesophagus, spinal cord
+- Head and neck: parotids, larynx, brainstem, optic structures
+- Target volumes: GTV, CTV and derived expansions
 
 ---
 
@@ -57,7 +57,7 @@ Automation is only useful if correcting it is faster than starting over:
 
 The evidence a physics team will ask for before this touches a plan:
 
-- Geometric agreement against clinician contours — Dice and Hausdorff distance
+- Geometric agreement against clinician contours: Dice and Hausdorff distance
 - Dosimetric impact analysis, not just overlap metrics
 - Inter-observer variability as the reference band
 - Per-structure reporting, since a good mean hides a bad organ
@@ -66,19 +66,19 @@ Boundary accuracy is the number that matters here. A structure that is right on 
 
 ---
 
-## Technology Stack
+## Tooling and standards
 
 **Models**: 3D U-Net and nnU-Net, atlas-based hybrids, transformer encoders
 **Standards**: DICOM-RT, RTSTRUCT, RTPLAN, RTDOSE
 **Deployment**: On-premise workstation or departmental server
 
-## Where It Fits
+## Where it lands
 
 - Radiation oncology departments with planning backlogs
 - Centres standardising contouring practice across planners
 - Clinical trials requiring consistent structure definitions
 - Sites preparing for adaptive or online replanning workflows
 
-## Why Choose Us?
+## What we bring to it
 
 This is a system we have built and iterated on, not a capability we are describing. We understand that a contouring tool lives or dies on how fast a planner can fix what it got wrong, and we design the review path first.

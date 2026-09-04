@@ -5,6 +5,7 @@ import SectionHead from '../components/SectionHead';
 import CtaBand from '../components/CtaBand';
 import { sortBlogsByDate } from '../utils/blogSort';
 import { visibleBlogs, isScheduled, daysUntilPublish, usePreviewMode } from '../utils/publishSchedule';
+import Seo from '../components/Seo';
 
 const Blog = () => {
     const preview = usePreviewMode();
@@ -15,6 +16,11 @@ const Blog = () => {
 
     return (
         <>
+            <Seo
+                title="Insights"
+                description="Research notes and architecture decisions from the engineering floor: AI systems, medical imaging, agentic tooling and the infrastructure underneath."
+                path="/blog"
+            />
             <Breadcrumb pageTitle="Insights from the engineering floor" breadcrumbItem="Insights" />
 
             <section className="bm-section">

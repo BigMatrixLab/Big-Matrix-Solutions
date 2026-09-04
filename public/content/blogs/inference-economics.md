@@ -5,7 +5,7 @@ title: "The New Economics of LLM Inference: Sparse Models, Real Context, and Whe
 comments: "0"
 image: "https://images.unsplash.com/photo-1591696205602-2f950c417cb9?auto=format&fit=crop&q=80&w=800"
 category: "AI Infrastructure"
-desc: "Trillion-parameter models got cheaper to serve than dense models a fraction of their size. Here is the trade that made it work, and the bill it moved elsewhere."
+desc: "Trillion-parameter models got cheaper to serve than dense models a fraction of their size. Here is the trade that made it work, and where the bill moved."
 date: "Nov 06, 2026"
 tags: ["Inference", "Mixture of Experts", "Long Context", "AI Infrastructure"]
 ---
@@ -16,7 +16,7 @@ The most consequential AI story of 2026 is not a benchmark. It is a price.
 
 Cost per unit of capability has fallen far enough, often enough, that entire categories of application have crossed from "interesting demo" to "obviously worth building." A verification pass on every generated output used to be a luxury. Running three attempts and taking a vote used to be indefensible. Feeding an entire document to a model instead of building a clever retrieval pipeline used to be the expensive option.
 
-All three are now routine. Understanding why matters, because the same shift that made them cheap moved the bottleneck somewhere else — and if you architect against the old constraint you will build the wrong system.
+All three are now routine. Understanding why matters, because the same shift that made them cheap moved the bottleneck somewhere else, and if you architect against the old constraint you will build the wrong system.
 
 ## The trade at the centre of it: sparsity
 
@@ -40,16 +40,16 @@ For local or single-tenant deployment, it is a bad deal. You are paying the full
 
 There is a second catch, and it shows up at scale rather than in the benchmarks.
 
-The router has to send each token to its chosen experts. If those experts live on different accelerators — and at trillion scale they do — that means a communication step across devices. In serving stacks this is an *all-to-all* pattern: every device potentially talking to every other device, every layer, every token.
+The router has to send each token to its chosen experts. If those experts live on different accelerators, and at trillion scale they do, that means a communication step across devices. In serving stacks this is an *all-to-all* pattern: every device potentially talking to every other device, every layer, every token.
 
 At small batch sizes this is negligible. At the high batch sizes you need for cheap serving, it can partially eat the per-token compute savings you went sparse for in the first place.
 
 This is why a genuinely large slice of 2026 systems research is not about model quality at all. It is about MoE serving mechanics:
 
-- **Expert placement and replication** — putting frequently co-activated experts on the same device, and replicating hot experts so traffic does not funnel through one accelerator.
-- **Network topology** — a growing body of work argues that the interconnect designed for dense training is the wrong shape for sparse serving, and that cheaper topologies serve MoE better.
-- **Batch-aware routing** — adjusting expert selection based on what else is in the batch, so the communication pattern stays tractable.
-- **Proactive expert loading** — predicting which experts a request will need and prefetching them, rather than stalling on demand.
+- **Expert placement and replication**: putting frequently co-activated experts on the same device, and replicating hot experts so traffic does not funnel through one accelerator.
+- **Network topology**: a growing body of work argues that the interconnect designed for dense training is the wrong shape for sparse serving, and that cheaper topologies serve MoE better.
+- **Batch-aware routing**: adjusting expert selection based on what else is in the batch, so the communication pattern stays tractable.
+- **Proactive expert loading**: predicting which experts a request will need and prefetching them, rather than stalling on demand.
 
 None of this is glamorous. All of it is the difference between a headline price and an achievable one.
 
@@ -63,10 +63,10 @@ But the useful question in 2026 is no longer capacity. It is **effective** conte
 
 The failure modes are well documented and consistent:
 
-- **Position sensitivity** — accuracy on a needle-in-a-haystack retrieval task often dips for material in the middle of a very long context and recovers at both ends.
-- **Distraction** — a large volume of loosely relevant text can pull the model toward the wrong answer more reliably than no context at all.
-- **Latency cliffs** — time-to-first-token grows with prompt length, and at extreme lengths prefill dominates the entire request.
-- **Cost asymmetry** — an unnecessary million-token prompt costs the same as a necessary one. Padding the context is not free just because the window allows it.
+- **Position sensitivity**: accuracy on a needle-in-a-haystack retrieval task often dips for material in the middle of a very long context and recovers at both ends.
+- **Distraction**: a large volume of loosely relevant text can pull the model toward the wrong answer more reliably than no context at all.
+- **Latency cliffs**: time-to-first-token grows with prompt length, and at extreme lengths prefill dominates the entire request.
+- **Cost asymmetry**: an unnecessary million-token prompt costs the same as a necessary one. Padding the context is not free just because the window allows it.
 
 The practical upshot is that "just put everything in the context" is a real strategy that works well at moderate lengths and fails quietly at extreme ones. If you plan to rely on a multi-million-token window, test it on your own documents, with your own questions, at your own length. The published capacity tells you almost nothing about whether it will work for you.
 
@@ -78,17 +78,17 @@ If you are trying to bring down cost per million tokens, the levers are not even
 
 This remains the biggest lever and the most commonly skipped. Most production traffic is not hard. Classification, extraction, formatting, routing, and schema-filling are handled well by small models at a fraction of the cost, and the graded model families every lab now ships exist precisely so you can do this.
 
-The pattern that works: cheap tier by default, escalate on an explicit signal. Low confidence, a failed validation, two runs disagreeing, or a user asking for another look. Teams that implement routing properly typically find 70 to 90 percent of requests never need the expensive model — and that users cannot tell.
+The pattern that works: cheap tier by default, escalate on an explicit signal. Low confidence, a failed validation, two runs disagreeing, or a user asking for another look. Teams that implement routing properly typically find 70 to 90 percent of requests never need the expensive model, and that users cannot tell.
 
 ### 2. Reuse the KV cache
 
-Every token in your prompt produces key and value tensors. If your prompts share a long common prefix — a system prompt, a tool schema, a document under discussion — recomputing that prefix on every request is pure waste.
+Every token in your prompt produces key and value tensors. If your prompts share a long common prefix (a system prompt, a tool schema, a document under discussion) then recomputing that prefix on every request is pure waste.
 
 Prefix caching turns a repeated 20,000-token preamble from a per-request cost into a one-time cost. For chat applications, agent loops, and anything with a long fixed instruction block, this is frequently the single largest saving available, and it requires no model change at all. Structure your prompts so the stable part comes first, and you get it nearly for free.
 
 ### 3. Batch continuously, not statically
 
-Naive batching waits for a full batch, runs it, and waits again — which means the accelerator idles while short requests finish early and long ones finish late. Continuous batching admits new requests as slots free up, keeping utilisation high across a mixed workload. It is a serving-layer change with no quality cost.
+Naive batching waits for a full batch, runs it, and waits again, which means the accelerator idles while short requests finish early and long ones finish late. Continuous batching admits new requests as slots free up, keeping utilisation high across a mixed workload. It is a serving-layer change with no quality cost.
 
 ### 4. Quantise deliberately
 
@@ -96,9 +96,9 @@ Lower-precision weights cut memory footprint and improve throughput, which matte
 
 ### 5. Match infrastructure to traffic shape
 
-- **Bursty, user-facing traffic** — serverless or autoscaled inference, so you are not paying for idle accelerators between spikes.
-- **Interruptible batch work** — spot or preemptible capacity, which is dramatically cheaper if your job can checkpoint and resume.
-- **Steady high-volume traffic** — reserved capacity, where the discount for commitment is real and the utilisation is predictable enough to claim it.
+- **Bursty, user-facing traffic**: serverless or autoscaled inference, so you are not paying for idle accelerators between spikes.
+- **Interruptible batch work**: spot or preemptible capacity, which is dramatically cheaper if your job can checkpoint and resume.
+- **Steady high-volume traffic**: reserved capacity, where the discount for commitment is real and the utilisation is predictable enough to claim it.
 
 The common failure is running all three workload types on one always-on cluster sized for peak. That configuration wastes money continuously and is easy to fix.
 
@@ -124,8 +124,6 @@ Three things.
 
 **Advertised context is a capability ceiling, not a promise.** Test effective retrieval at your real lengths before you design around a ten-million-token window.
 
-**Design for the price curve, not the price.** The cost per unit of capability has fallen repeatedly and there is no sign of a floor. Architectures that look extravagant today — verify everything, sample several times, reread the source — have a habit of becoming standard practice inside a year. Build the version that is correct and let the economics arrive.
+**Design for the price curve, not the price.** The cost per unit of capability has fallen repeatedly and there is no sign of a floor. Architectures that look extravagant today (verify everything, sample several times, reread the source) have a habit of becoming standard practice inside a year. Build the version that is correct and let the economics arrive.
 
 The teams that struggled this year were mostly not the ones who picked the wrong model. They were the ones who built elaborate machinery to work around a constraint that quietly stopped applying.
-
-**Sources**: [DeepInfra — How Mixture of Experts Models Changed LLM Economics](https://deepinfra.com/blog/mixture-of-experts-llm-economics-price-drop), [Rethinking Network Topologies for Cost-Effective Mixture-of-Experts LLM Serving](https://arxiv.org/pdf/2605.00254), [CRAFT: Cost-Aware Expert Replication for Efficient MoE Serving](https://arxiv.org/pdf/2603.28768), [LLM Inference Serving: Survey of Recent Advances](https://arxiv.org/pdf/2407.12391), [elvex — AI Model Context Window Comparison 2026](https://www.elvex.com/blog/context-length-comparison-ai-models-2026)

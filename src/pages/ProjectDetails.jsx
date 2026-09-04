@@ -3,6 +3,7 @@ import { useParams, Link } from "react-router-dom";
 import Breadcrumb from "../components/Breadcrumb";
 import MarkdownRenderer from "../components/MarkdownRenderer";
 import { projectData } from "../data/content";
+import Seo from '../components/Seo';
 
 /** `location` doubles as a live URL and as a physical place, so only link it
  *  when it is actually a URL. */
@@ -26,6 +27,7 @@ const ProjectDetails = () => {
   if (!project) {
     return (
       <>
+        <Seo title="Product not found" path={`/project/${slug}`} noindex />
         <Breadcrumb pageTitle="Product Not Found" breadcrumbItem="Products" />
         <div className="project-details-area">
           <div className="container text-center">
@@ -41,6 +43,7 @@ const ProjectDetails = () => {
 
   return (
     <>
+      <Seo title={project.title} description={project.desc} path={`/project/${project.slug}`} />
       <Breadcrumb pageTitle={project.title} breadcrumbItem="Products" />
 
       {/* Project Details Area */}

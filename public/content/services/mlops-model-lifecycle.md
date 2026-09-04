@@ -4,7 +4,7 @@ slug: "mlops-model-lifecycle"
 title: "MLOps & Model Lifecycle Engineering"
 icon: "bi bi-arrow-repeat"
 image: "https://images.unsplash.com/photo-1533749871411-5e21e14bcc7d?w=800&q=80&auto=format&fit=crop"
-desc: "Training pipelines, versioned deployment, drift monitoring and retraining loops — including fully on-premise and sovereign deployment where data cannot leave."
+desc: "Training pipelines, versioned deployment, drift monitoring and retraining loops, including fully on-premise and sovereign deployment where data cannot leave."
 ---
 
 
@@ -21,7 +21,7 @@ Most stalled AI projects did not have a modelling problem.
 
 ### 1. **Training & Experiment Pipelines**
 
-- Reproducible runs — pinned data, code and environment
+- Reproducible runs: pinned data, code and environment
 - Experiment tracking with comparable metrics across runs
 - Versioned datasets, so a result can be traced to its inputs
 - Distributed and scheduled training on your own hardware or cloud
@@ -34,7 +34,7 @@ Every deployed model should be identifiable, reproducible and reversible:
 
 **What we put in place**:
 - Registry with lineage from dataset through to serving artifact
-- Staged promotion — dev, validation, production
+- Staged promotion: dev, validation, production
 - Canary and shadow deployment before full cutover
 - One-command rollback, tested rather than assumed
 
@@ -54,13 +54,13 @@ Every deployed model should be identifiable, reproducible and reversible:
 
 ### 4. **On-Premise & Sovereign Deployment**
 
-For most of our clients this is not a preference, it is the requirement — and it is the reason the rest of the pipeline has to be portable.
+For most of our clients this is not a preference, it is the requirement, and the reason the rest of the pipeline has to be portable.
 
 - **Data never leaves your network.** No third-party API in the inference path.
 - **Air-gapped operation** where the environment demands it, including offline model and dependency mirroring.
-- **Open-weight model hosting** — self-managed serving stacks with the licence terms actually read.
+- **Open-weight model hosting**: self-managed serving stacks with the licence terms actually read.
 - **Data residency and jurisdiction control** for regulated and public-sector work.
-- **Frozen, auditable versions** — a validated model that cannot silently change under you, which is what clinical and regulatory audit trails require.
+- **Frozen, auditable versions**: a validated model that cannot silently change under you, which is what clinical and regulatory audit trails require.
 
 Contractual assurance that a vendor will not train on your data is a legal position. Data that never moves is an architectural one.
 
@@ -78,20 +78,20 @@ Deployed models degrade quietly, and almost nobody is measuring it:
 
 ---
 
-## Technology Stack
+## Platform and tooling
 
 **Orchestration**: Kubernetes, containerised training and serving, workflow schedulers
 **Tracking**: Experiment tracking, model registry, dataset versioning
 **Serving**: GPU inference servers, quantised runtimes, edge deployment
 **Monitoring**: Drift detection, trajectory and prediction logging, alerting
 
-## Where It Fits
+## Who needs this
 
 - Teams with working models and no reliable path to production
 - Regulated environments needing reproducibility and audit trails
 - Organisations moving off third-party APIs to self-hosted models
 - Anyone whose deployed model quality has drifted and nobody noticed
 
-## Why Choose Us?
+## Why this is our default
 
 We build almost exclusively for environments where the data cannot leave the building, so portable, self-hosted, auditable deployment is our default rather than a special case we accommodate.

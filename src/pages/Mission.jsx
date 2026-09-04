@@ -1,10 +1,18 @@
 import React from 'react';
 import Breadcrumb from '../components/Breadcrumb';
 import CtaBand from '../components/CtaBand';
+import Seo from '../components/Seo';
 
 const Mission = () => {
     return (
         <>
+            {/* Placeholder template copy, so this page stays out of the index
+                until it has real content. Also excluded from the sitemap. */}
+            <Seo
+                title="Mission and vision"
+                path="/mission"
+                noindex
+            />
             <Breadcrumb pageTitle="Mission & Vision" breadcrumbItem="Mission" />
 
             {/* Mission Vison Area Inner Style */}

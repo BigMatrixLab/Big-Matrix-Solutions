@@ -14,7 +14,7 @@ desc: "Scalable data engineering, predictive modeling, and large-scale processin
 
 ## Transform Massive Data Into Strategic Insights
 
-In the age of information explosion, the ability to process, analyze, and extract insights from massive datasets separates industry leaders from followers. Our big data solutions handle terabytes of healthcare, pharmaceutical, and enterprise data—turning complexity into competitive advantage.
+Most organisations already hold more data than they can use. The bottleneck is rarely collection; it is getting a trustworthy answer out the other end. We build pipelines and analytics that handle terabytes of healthcare, pharmaceutical and enterprise data, and that someone can actually rely on.
 
 
 ### 1. **Scalable Data Engineering**
@@ -144,7 +144,7 @@ Production-grade machine learning operations (MLOps):
 
 ---
 
-## Why Choose Us?
+## What sets our approach apart
 
 ✅ **Scale Expertise**: Processed 100+ TB of healthcare data  
 ✅ **Performance**: Query billions of rows in < 1 second  

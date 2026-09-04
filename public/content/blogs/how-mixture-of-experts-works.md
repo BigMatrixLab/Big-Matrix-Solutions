@@ -3,7 +3,7 @@ id: "21"
 slug: "how-mixture-of-experts-works"
 title: "How Mixture of Experts Works: A Trillion Parameters You Do Not Have to Pay For"
 comments: "0"
-image: "https://images.unsplash.com/photo-1639762681485-074b7f938ba0?auto=format&fit=crop&q=80&w=800"
+image: "/assets/images/blog/moe-architecture.webp"
 category: "Tutorial"
 desc: "Routers, top-k selection, load balancing loss, and the memory-for-compute trade that made trillion-parameter models economically serveable."
 date: "Jan 22, 2027"
@@ -29,13 +29,13 @@ y = h @ W_2        # 16384 -> 4096
 
 Two big matrices. In a dense transformer, this is where **roughly two-thirds of all parameters live**, and every one of them is multiplied against every token.
 
-That last part is the inefficiency MoE attacks. Consider what those parameters are storing: French grammar, Python syntax, organic chemistry, sonnet form. When the current token is part of a Python function, the French grammar parameters contribute essentially nothing — but you still pay the full matrix multiply against them.
+That last part is the inefficiency MoE attacks. Consider what those parameters are storing: French grammar, Python syntax, organic chemistry, sonnet form. When the current token is part of a Python function, the French grammar parameters contribute essentially nothing, but you still pay the full matrix multiply against them.
 
 The intuition behind MoE is straightforward: **specialise the feed-forward capacity, and only activate the relevant part.**
 
 ## The architecture
 
-Replace the single feed-forward network with *N* parallel ones — the experts — plus a small router that decides which to use.
+Replace the single feed-forward network with *N* parallel ones, the experts, plus a small router that decides which to use.
 
 ```python
 class MoELayer(nn.Module):
@@ -60,7 +60,7 @@ class MoELayer(nn.Module):
         return out
 ```
 
-The router is tiny — one linear layer from `d_model` to `n_experts`, a rounding error in the parameter budget. Everything else is the experts.
+The router is tiny: one linear layer from `d_model` to `n_experts`, a rounding error in the parameter budget. Everything else is the experts.
 
 The arithmetic is what makes this worth doing. With 64 experts at top-2 routing:
 
@@ -78,7 +78,7 @@ There is a failure mode that will happen by default, and preventing it is most o
 
 The router is trained by gradient descent along with everything else. Early in training, one expert is slightly better than the others by chance. The router sends it slightly more tokens. Getting more tokens means more gradient updates, so it improves faster. Being better attracts more tokens still.
 
-This runs away. You end up with two or three experts handling nearly all the traffic and sixty sitting idle — a dense model with a lot of dead weight, having paid the full memory cost for nothing.
+This runs away. You end up with two or three experts handling nearly all the traffic and sixty sitting idle. A dense model with a lot of dead weight, having paid the full memory cost for nothing.
 
 The standard fix is an auxiliary **load balancing loss** added to the training objective:
 
@@ -88,16 +88,16 @@ The standard fix is an auxiliary **load balancing loss** added to the training o
 aux_loss = n_experts * (f * P).sum()
 ```
 
-This is minimised when routing is uniform, and it is added to the main loss with a small coefficient — typically 0.01. Small enough not to distort the language modelling objective, large enough to keep the router honest.
+This is minimised when routing is uniform, and it is added to the main loss with a small coefficient, typically 0.01. Small enough not to distort the language modelling objective, large enough to keep the router honest.
 
 The tension here is real and worth naming. You *want* experts to specialise, because specialisation is the entire point. But you *need* the load roughly balanced, or capacity is wasted. Perfect balance would mean no specialisation at all; perfect specialisation collapses to a few experts. The auxiliary loss coefficient is where you sit on that spectrum, and it is one of the more delicate hyperparameters in the whole architecture.
 
 Related mechanisms in practice:
 
-- **Expert capacity limits** — a cap on tokens per expert per batch. Overflow tokens are dropped (they pass through via the residual connection) or rerouted. Prevents one expert from becoming a throughput bottleneck.
-- **Router z-loss** — penalises large router logits, which improves numerical stability in low precision.
-- **Noisy top-k** — adding noise to router logits during training encourages exploration so the router does not lock in prematurely.
-- **Shared experts** — some designs keep one expert that every token uses, for genuinely general computation, with the routed experts handling specialisation on top. This has become a common pattern.
+- **Expert capacity limits**: a cap on tokens per expert per batch. Overflow tokens are dropped (they pass through via the residual connection) or rerouted. Prevents one expert from becoming a throughput bottleneck.
+- **Router z-loss**: penalises large router logits, which improves numerical stability in low precision.
+- **Noisy top-k**: adding noise to router logits during training encourages exploration so the router does not lock in prematurely.
+- **Shared experts**: some designs keep one expert that every token uses, for genuinely general computation, with the routed experts handling specialisation on top. This has become a common pattern.
 
 ## The trade you are actually making
 
@@ -121,23 +121,23 @@ At small batch sizes this is negligible. At the high batch sizes you need for ch
 
 This is why a substantial share of current systems research is about MoE serving mechanics rather than model quality:
 
-- **Expert placement and replication** — co-locating experts that frequently activate together, and replicating hot experts so traffic does not funnel through one device. Cost-aware replication schemes target exactly this.
-- **Network topology** — a line of work argues that interconnects designed for dense training are the wrong shape for sparse serving, and cheaper topologies serve MoE better.
-- **Batch-aware expert selection** — adjusting routing based on batch composition so the communication pattern stays tractable.
-- **Proactive expert loading** — predicting which experts a request will need and prefetching them rather than stalling.
-- **Memory-efficient inference** — fine-tuning approaches that reduce how much of the expert set must be resident at once.
+- **Expert placement and replication**: co-locating experts that frequently activate together, and replicating hot experts so traffic does not funnel through one device. Cost-aware replication schemes target exactly this.
+- **Network topology**: a line of work argues that interconnects designed for dense training are the wrong shape for sparse serving, and cheaper topologies serve MoE better.
+- **Batch-aware expert selection**: adjusting routing based on batch composition so the communication pattern stays tractable.
+- **Proactive expert loading**: predicting which experts a request will need and prefetching them rather than stalling.
+- **Memory-efficient inference**: fine-tuning approaches that reduce how much of the expert set must be resident at once.
 
 None of this is glamorous. All of it separates a theoretical price from an achievable one.
 
 ## What experts actually specialise in
 
-The natural assumption is that experts learn interpretable domains — one for code, one for French, one for chemistry.
+The natural assumption is that experts learn interpretable domains: one for code, one for French, one for chemistry.
 
 Reality is messier. Interpretability studies of trained MoE models generally find specialisation that is real but not aligned to human categories. Experts tend to organise around:
 
-- **Token-level and syntactic patterns** — punctuation, numerals, whitespace structure, particular morphological shapes.
-- **Positional and contextual role** — where in a sequence a token sits and what structural function it serves.
-- **Statistical clusters with no clean label** — groups of tokens that co-occur in ways the model found useful to handle together, resistant to any tidy description.
+- **Token-level and syntactic patterns**: punctuation, numerals, whitespace structure, particular morphological shapes.
+- **Positional and contextual role**: where in a sequence a token sits and what structural function it serves.
+- **Statistical clusters with no clean label**: groups of tokens that co-occur in ways the model found useful to handle together, resistant to any tidy description.
 
 Domain specialisation does appear, more strongly in later layers, but it is a tendency rather than a partition. This is not a defect. The router is optimising for prediction loss, not for legibility, and there is no reason its useful decomposition should match ours.
 
@@ -153,7 +153,7 @@ More experts means more total capacity for the same compute. It also means more 
 
 ### 2. Top-k
 
-**k=1** is the cheapest and hardest to train — routing becomes a discrete decision with no gradient blending, and quality typically suffers. **k=2** is the most common choice, giving the router a soft blend of two experts and much better gradients for modest extra cost. **k=4 and above** improves quality further with diminishing returns and rising cost.
+**k=1** is the cheapest and hardest to train. Routing becomes a discrete decision with no gradient blending, and quality typically suffers. **k=2** is the most common choice, giving the router a soft blend of two experts and much better gradients for modest extra cost. **k=4 and above** improves quality further with diminishing returns and rising cost.
 
 ### 3. Which layers get experts
 
@@ -169,10 +169,10 @@ Step back and the appeal is a scaling-law argument.
 
 Model quality improves predictably with parameters and with data. But compute per token scales with *activated* parameters, and compute is the binding cost in both training and serving.
 
-MoE decouples those two. You can grow total parameters — and therefore capacity and quality — while holding activated parameters, and therefore cost per token, nearly fixed.
+MoE decouples those two. You can grow total parameters, and therefore capacity and quality, while holding activated parameters and cost per token nearly fixed.
 
 That is why every lab converged here independently, and it is directly responsible for the price-per-capability declines of the last two years. Trillion-parameter models exist because sparsity made them serveable, not because dense training got cheaper.
 
-The catch remains what it always was: you traded a compute problem for a memory-and-networking problem. For hyperscale API serving, that trade is overwhelmingly favourable. For running a model on your own machine, it frequently is not — which is worth remembering the next time an impressive open-weight parameter count arrives and turns out to need a small cluster to load.
+The catch remains what it always was: you traded a compute problem for a memory-and-networking problem. For hyperscale API serving, that trade is overwhelmingly favourable. For running a model on your own machine, it frequently is not, which is worth remembering the next time an impressive open-weight parameter count arrives and turns out to need a small cluster to load.
 
-**Sources**: [DeepInfra — How Mixture of Experts Models Changed LLM Economics](https://deepinfra.com/blog/mixture-of-experts-llm-economics-price-drop), [Rethinking Network Topologies for Cost-Effective MoE LLM Serving](https://arxiv.org/pdf/2605.00254), [CRAFT: Cost-Aware Expert Replication for Efficient MoE Serving](https://arxiv.org/pdf/2603.28768), [PreMoE: Proactive Inference for Efficient Mixture-of-Experts](https://arxiv.org/pdf/2505.17639), [Lynx: Dynamic Batch-Aware Expert Selection](https://arxiv.org/pdf/2411.08982), [MELINOE: Memory-Efficient Inference for MoE Models](https://arxiv.org/pdf/2602.11192), [Stealing User Prompts from Mixture of Experts](https://arxiv.org/pdf/2410.22884)
+Hero diagram: [DeepSeekMoE and Multi-Head Latent Attention](https://commons.wikimedia.org/wiki/File:DeepSeek_MoE_and_MLA_%28DeepSeek-V2%29.svg) by DeepSeek, MIT licence, via Wikimedia Commons. Rasterised and padded to fit; not otherwise altered.

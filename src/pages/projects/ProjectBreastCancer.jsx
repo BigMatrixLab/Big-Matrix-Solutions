@@ -1,6 +1,7 @@
 import '../../assets/css/ProjectShowcase.css';
 import ShowcaseFacts from '../../components/showcase/ShowcaseFacts';
 import CtaBand from '../../components/CtaBand';
+import Seo from '../../components/Seo';
 
 const heroStats = [
     { icon: 'bi bi-bullseye', num: '90%+', label: 'Segmentation accuracy on regions of interest & BI-RADS classification' },
@@ -116,6 +117,11 @@ const SpecGrid = ({ items }) => (
 const ProjectBreastCancer = () => {
     return (
         <>
+            <Seo
+                title="Multimodal AI for breast cancer"
+                description="A multimodal AI system that segments suspicious regions in mammographic images and drafts a preliminary diagnostic report in about 45 seconds per case."
+                path="/project/nsu_ctrg_2021_2022_breast_cancer"
+            />
         <div className="bc-showcase">
 
             {/* ── Hero ── */}

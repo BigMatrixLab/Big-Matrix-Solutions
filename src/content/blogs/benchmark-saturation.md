@@ -24,16 +24,16 @@ Both are worth understanding, because between them they define what evaluation a
 
 Start with the graveyard.
 
-MMLU was the general knowledge standard. It is saturated. GSM8K was the grade-school math standard. Saturated years ago. MATH-500, which required competition-level reasoning, now sits around 96 percent for frontier models. GPQA Diamond — deliberately written by PhDs to be Google-proof — is in the mid-nineties.
+MMLU was the general knowledge standard. It is saturated. GSM8K was the grade-school math standard. Saturated years ago. MATH-500, which required competition-level reasoning, now sits around 96 percent for frontier models. GPQA Diamond, deliberately written by PhDs to be Google-proof, is in the mid-nineties.
 
 None of these got easier. What happened is more interesting and more annoying.
 
 A benchmark has a shelf life that starts the moment it becomes the number people cite. Two clocks run against it at once:
 
-- **Capability closes the gap** — real progress means the headroom shrinks, and once scores cluster above 90 percent the remaining variance is mostly noise, ambiguity in the questions, and grader disagreement.
-- **Exposure contaminates the test** — a popular public benchmark ends up in scraped training data, in blog posts explaining its questions, in synthetic data generated from it. Nobody has to cheat for this to happen. It happens by default.
+- **Capability closes the gap**: real progress means the headroom shrinks, and once scores cluster above 90 percent the remaining variance is mostly noise, ambiguity in the questions, and grader disagreement.
+- **Exposure contaminates the test**: a popular public benchmark ends up in scraped training data, in blog posts explaining its questions, in synthetic data generated from it. Nobody has to cheat for this to happen. It happens by default.
 
-The clearest admission of this came from inside the labs. In February, OpenAI published an article titled, with unusual bluntness, *"Why SWE-bench Verified no longer measures frontier coding capabilities."* SWE-bench Verified had been *the* number for autonomous coding agents — 500 human-reviewed GitHub issues from real Python repositories. Tracked leaderboard scores now run above 95 percent.
+The clearest admission of this came from inside the labs. In February, OpenAI published an article titled, with unusual bluntness, *"Why SWE-bench Verified no longer measures frontier coding capabilities."* SWE-bench Verified had been *the* number for autonomous coding agents: 500 human-reviewed GitHub issues from real Python repositories. Tracked leaderboard scores now run above 95 percent.
 
 When the people selling the models tell you the benchmark is done, the benchmark is done.
 
@@ -43,7 +43,7 @@ When the people selling the models tell you the benchmark is done, the benchmark
 
 It represents the first real format change since the original ARC in 2019. The first two versions were static: look at a few input-output grid examples, infer the transformation, apply it to a new grid. Difficult, but a fixed puzzle with a fixed answer.
 
-Version 3 throws that out. Instead, an agent is dropped into an interactive environment it has never seen, with no instructions, and has to work out what the environment is, what counts as a goal, and how its actions change the world — while it plays. Chollet's stated targets are exploration, planning, memory, on-the-fly goal acquisition, and continuous learning.
+Version 3 throws that out. Instead, an agent is dropped into an interactive environment it has never seen, with no instructions, and has to work out what the environment is, what counts as a goal, and how its actions change the world, while it plays. Chollet's stated targets are exploration, planning, memory, on-the-fly goal acquisition, and continuous learning.
 
 The scoring is also new: it compares human and AI *action efficiency*, not just whether the task was completed.
 
@@ -57,9 +57,9 @@ Here is what happened.
 | Levels cleared by that agent | 18 |
 | Preview submissions received | 12 |
 
-The 30-day developer preview drew twelve submissions, eight of which were tested against the private games. First place went to StochasticGoose, a team at Tufa Labs, with a convolutional neural network action-learning agent — 12.58 percent and 18 levels completed. Second place, Blind Squirrel, scored 6.71 percent across 13 levels.
+The 30-day developer preview drew twelve submissions, eight of which were tested against the private games. First place went to StochasticGoose, a team at Tufa Labs, with a convolutional neural network action-learning agent, scoring 12.58 percent and 18 levels completed. Second place, Blind Squirrel, scored 6.71 percent across 13 levels.
 
-Read that table again with the previous section in mind. The same class of systems scoring in the mid-nineties on PhD-level science scored **half a percent** here. And a small purpose-built agent — no trillion parameters, no frontier pretraining run — beat all of them by roughly 25x.
+Read that table again with the previous section in mind. The same class of systems scoring in the mid-nineties on PhD-level science scored **half a percent** here. And a small purpose-built agent, with no trillion parameters and no frontier pretraining run, beat all of them by roughly 25x.
 
 ## Why the gap is so violent
 
@@ -69,7 +69,7 @@ Everything a frontier model does well, it does by having seen an enormous amount
 
 ARC-AGI-3 deliberately removes the prior. The environments are novel by construction. There is no instruction text to pattern-match against, no genre convention to lean on, no similar problem to recall. The agent has to do what a human does in the first ninety seconds of an unfamiliar video game: press things, notice what changed, form a hypothesis, and revise it.
 
-That loop — act, observe, update, keep the update — is the thing current architectures are worst at. A language model's weights are frozen at inference. Whatever it learns during an episode lives in the context window and dies with it. It is not that the model cannot reason about the environment; it is that it has no efficient mechanism for *accumulating* what it just discovered into something it can build on for the next hundred steps.
+That loop of act, observe, update, keep the update is the thing current architectures are worst at. A language model's weights are frozen at inference. Whatever it learns during an episode lives in the context window and dies with it. It is not that the model cannot reason about the environment; it is that it has no efficient mechanism for *accumulating* what it just discovered into something it can build on for the next hundred steps.
 
 Which is precisely why a small CNN action-learner outperformed it. That architecture learns *from the episode*, which is the whole task.
 
@@ -85,10 +85,10 @@ METR's 2026 measurements include Claude Opus 4.6 in February, GPT-5.4 and Gemini
 
 The caveats deserve equal billing, and METR publishes them prominently:
 
-- **Above sixteen hours, the numbers are unreliable** — their current task suite does not have the resolution to measure further out.
-- **The horizon measures task difficulty, not runtime** — a "four-hour task" is one a human would take four hours on, not one the model spends four hours doing.
-- **The domain is narrow** — mostly software engineering, machine learning, and cybersecurity. It is not a general capability index.
-- **Coverage is incomplete** — METR is a small organisation and cannot evaluate every release.
+- **Above sixteen hours, the numbers are unreliable**: their current task suite does not have the resolution to measure further out.
+- **The horizon measures task difficulty, not runtime**: a "four-hour task" is one a human would take four hours on, not one the model spends four hours doing.
+- **The domain is narrow**: mostly software engineering, machine learning, and cybersecurity. It is not a general capability index.
+- **Coverage is incomplete**: METR is a small organisation and cannot evaluate every release.
 
 It is a good metric. It is a good metric *about a specific thing*, which is more than most of the field can say.
 
@@ -118,14 +118,12 @@ The same model scores very differently at 4k versus 64k thinking tokens, with on
 
 For anyone shipping a product, the public leaderboard is a weak proxy for a decision you can make directly. A hundred real examples from your own traffic, graded by someone who knows the domain, is worth more than every table in this article. It is also the only evaluation that cannot be contaminated, because nobody else has it.
 
-## The honest reading
+## What the two failures actually show
 
-It would be easy to take ARC-AGI-3's 0.51 percent as a debunking — proof that frontier models are shallower than the hype suggests. That is too neat.
+It would be easy to take ARC-AGI-3's 0.51 percent as a debunking, proof that frontier models are shallower than the hype suggests. That is too neat.
 
 What the two failures actually show is that "AI capability" is not one quantity. Along the axis of knowledge-dense, in-distribution reasoning, progress has been extraordinary and the benchmarks genuinely ran out of room. Along the axis of open-ended adaptation to novelty, progress has been close to flat, and we only found out clearly once someone built a test that isolated it.
 
 Both statements are true at once. A system can draft a competent literature review and fail to work out the rules of a simple game, and there is no contradiction, because those tasks were never the same task.
 
 The useful conclusion is not that benchmarks are broken. It is that a single number was always going to be a bad summary of a system this uneven, and we are finally being forced to admit it.
-
-**Sources**: [ARC Prize — Announcing ARC-AGI-3](https://arcprize.org/blog/arc-agi-3-launch), [ARC-AGI-3 Preview: 30-Day Learnings](https://arcprize.org/blog/arc-agi-3-preview-30-day-learnings), [ARC Prize 2025 Results and Analysis](https://arcprize.org/blog/arc-prize-2025-results-analysis), [METR — Task-Completion Time Horizons](https://metr.org/time-horizons/), [Epoch AI — SWE-bench Verified](https://epoch.ai/benchmarks/swe-bench-verified), [Epoch AI — FrontierMath](https://epoch.ai/frontiermath)

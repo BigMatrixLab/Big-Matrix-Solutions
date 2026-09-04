@@ -3,16 +3,16 @@ id: "18"
 slug: "how-unet-works-image-segmentation-explained"
 title: "How U-Net Works: The Architecture That Refuses to Retire"
 comments: "0"
-image: "https://images.unsplash.com/photo-1502691876148-a84978e59af8?auto=format&fit=crop&q=80&w=800"
+image: "/assets/images/blog/unet-architecture.webp"
 category: "Tutorial"
-desc: "Eleven years old, still the default for medical segmentation, and quietly running inside every diffusion model. A walkthrough of why the skip connections matter."
+desc: "Eleven years old, still the default for medical segmentation, and quietly running inside every diffusion model. A walkthrough of why skip connections matter."
 date: "Oct 30, 2026"
 tags: ["U-Net", "Computer Vision", "Tutorial", "Medical Imaging"]
 ---
 
 # How U-Net Works: The Architecture That Refuses to Retire
 
-U-Net was published in 2015 for cell segmentation in microscopy images. Vision architectures have turned over several times since then — ResNets, vision transformers, ConvNeXt, Segment Anything — and U-Net is still the default choice for biomedical segmentation, still winning challenges, and still, in modified form, the backbone inside most image diffusion models.
+U-Net was published in 2015 for cell segmentation in microscopy images. Vision architectures have turned over several times since then (ResNets, vision transformers, ConvNeXt, Segment Anything) and U-Net is still the default choice for biomedical segmentation, still winning challenges, and still, in modified form, the backbone inside most image diffusion models.
 
 Architectures that survive eleven years in this field are rare enough to be worth understanding properly. U-Net survived because it solved a specific tension cleanly, and that tension has not gone away.
 
@@ -22,7 +22,7 @@ Segmentation means labelling every pixel. Not "this image contains a tumour" but
 
 That requirement creates a conflict.
 
-To know *what* a region is, you need context. A dark blob could be a tumour, a blood vessel, or an imaging artefact, and telling them apart requires looking at the surrounding anatomy. Context means a large receptive field, which in a convolutional network means downsampling — pooling and striding until each unit sees a wide area.
+To know *what* a region is, you need context. A dark blob could be a tumour, a blood vessel, or an imaging artefact, and telling them apart requires looking at the surrounding anatomy. Context means a large receptive field, which in a convolutional network means downsampling: pooling and striding until each unit sees a wide area.
 
 To know *where* the boundary is, you need resolution. A tumour margin is a few pixels wide. Downsampling destroys exactly that information.
 
@@ -40,7 +40,7 @@ The architecture is a U, and the two arms do different jobs.
 
 **The bottleneck** sits at the bottom, at the smallest spatial size and largest channel count. Every unit here has an enormous receptive field. This is where the network understands what it is looking at.
 
-**The expanding path (decoder)** reverses the process. Each level upsamples — originally a transposed convolution, commonly bilinear upsampling plus a convolution now — halving channels while doubling spatial size, back up toward the input resolution.
+**The expanding path (decoder)** reverses the process. Each level upsamples, originally with a transposed convolution and commonly now bilinear upsampling plus a convolution, halving channels while doubling spatial size, back up toward the input resolution.
 
 So far this is an encoder-decoder, which existed already and produced blurry masks. The part that makes it U-Net is what connects the arms.
 
@@ -67,8 +67,8 @@ Note `cat`, not `+`. This is concatenation along the channel axis, not addition.
 
 What each source carries is the key:
 
-- **From below (upsampled)** — semantically rich, spatially coarse. "There is a tumour somewhere in this general region."
-- **From the side (encoder skip)** — spatially precise, semantically shallow. "There are strong edges exactly here, here, and here."
+- **From below (upsampled)**: semantically rich, spatially coarse. "There is a tumour somewhere in this general region."
+- **From the side (encoder skip)**: spatially precise, semantically shallow. "There are strong edges exactly here, here, and here."
 
 The convolution after the concatenation learns to use the first to decide *which* edges matter and the second to place the boundary precisely. Semantics from the depth, localisation from the skip. The conflict dissolves because the network no longer has to carry both through the same bottleneck.
 
@@ -80,7 +80,7 @@ Several apparently minor choices in the original paper carry real weight.
 
 ### 1. Symmetry
 
-Encoder and decoder mirror each other exactly. This is not aesthetics — it guarantees that every decoder level has an encoder level at exactly matching spatial resolution to concatenate. Asymmetric variants exist, and they need explicit resizing logic at each junction, which adds interpolation error at precisely the place you were trying to preserve precision.
+Encoder and decoder mirror each other exactly. This is not aesthetics. It guarantees that every decoder level has an encoder level at exactly matching spatial resolution to concatenate. Asymmetric variants exist, and they need explicit resizing logic at each junction, which adds interpolation error at precisely the place you were trying to preserve precision.
 
 ### 2. Channel doubling and halving
 
@@ -118,7 +118,7 @@ def dice_loss(pred, target, eps=1e-6):
 
 **Focal loss.** Downweights easy examples so training concentrates on hard pixels. Useful when the easy majority is drowning out the signal.
 
-**Boundary-aware losses.** Explicitly penalise errors near object edges — which is where clinical relevance usually concentrates, since a margin measurement depends entirely on boundary precision.
+**Boundary-aware losses.** Explicitly penalise errors near object edges, which is where clinical relevance usually concentrates, since a margin measurement depends entirely on boundary precision.
 
 Report Dice or IoU. Not accuracy. Accuracy on a segmentation task is close to meaningless and it is still reported far too often.
 
@@ -126,21 +126,21 @@ Report Dice or IoU. Not accuracy. Accuracy on a segmentation task is close to me
 
 Eleven years of extensions, most of which are minor. The ones that changed practice:
 
-- **3D U-Net** — 3D convolutions throughout, for volumetric data like CT and MRI. Anatomy is three-dimensional, and slice-by-slice 2D segmentation throws away the through-plane context. The cost is memory, which is why 3D models use patch-based training almost universally.
-- **nnU-Net** — arguably the most useful contribution since the original. Not a new architecture but a system that automatically configures preprocessing, patch size, batch size, and topology from a dataset's properties. It has won a remarkable number of challenges by demonstrating that a well-configured plain U-Net beats a poorly configured clever one. If you are starting a medical segmentation project, start here.
-- **Attention U-Net** — attention gates on the skip connections, so the decoder can suppress irrelevant regions arriving from the encoder rather than taking everything.
-- **TransUNet and hybrids** — transformer blocks in the encoder or bottleneck for long-range context, convolutional decoder for localisation. Strong results on large datasets; on small ones the pure convolutional version often still wins, because transformers are hungrier for data.
-- **Residual and dense U-Nets** — modern block designs substituted into the U shape. Consistent, modest improvements.
+- **3D U-Net**: 3D convolutions throughout, for volumetric data like CT and MRI. Anatomy is three-dimensional, and slice-by-slice 2D segmentation throws away the through-plane context. The cost is memory, which is why 3D models use patch-based training almost universally.
+- **nnU-Net**: arguably the most useful contribution since the original. Not a new architecture but a system that automatically configures preprocessing, patch size, batch size, and topology from a dataset's properties. It has won a remarkable number of challenges by demonstrating that a well-configured plain U-Net beats a poorly configured clever one. If you are starting a medical segmentation project, start here.
+- **Attention U-Net**: attention gates on the skip connections, so the decoder can suppress irrelevant regions arriving from the encoder rather than taking everything.
+- **TransUNet and hybrids**: transformer blocks in the encoder or bottleneck for long-range context, convolutional decoder for localisation. Strong results on large datasets; on small ones the pure convolutional version often still wins, because transformers are hungrier for data.
+- **Residual and dense U-Nets**: modern block designs substituted into the U shape. Consistent, modest improvements.
 
 ## The second life: diffusion models
 
 Here is the part people find surprising. The U-Net inside image diffusion models is essentially the same architecture, doing what looks like a completely different job.
 
-It makes sense once you look at the task. A diffusion model's network takes a noisy image and predicts the noise that was added to it. That output has the same spatial dimensions as the input, and it needs both global structure — what is this image *of*, so the denoising is coherent — and fine local detail, since noise is a per-pixel quantity.
+It makes sense once you look at the task. A diffusion model's network takes a noisy image and predicts the noise that was added to it. That output has the same spatial dimensions as the input, and it needs both global structure: what is this image *of*, so the denoising is coherent, and fine local detail, since noise is a per-pixel quantity.
 
 Global semantics plus pixel-precise output. Exactly the tension U-Net was built for.
 
-The diffusion variant adds timestep conditioning so the network knows the noise level, self-attention at lower-resolution levels for global coherence, and cross-attention for text conditioning. The skeleton — encode down, decode up, concatenate skips across — is unchanged.
+The diffusion variant adds timestep conditioning so the network knows the noise level, self-attention at lower-resolution levels for global coherence, and cross-attention for text conditioning. The skeleton of encode down, decode up, concatenate skips across is unchanged.
 
 Latent diffusion models operate on a compressed latent representation instead of pixels, but the denoiser is still a U-Net. (Some recent systems have moved to pure transformer denoisers, which work well at large scale; the U-Net remains the workhorse at most scales.)
 
@@ -152,16 +152,18 @@ If you are building a segmentation model:
 
 **Fix your loss before your architecture.** Dice plus cross-entropy, with class weighting if the imbalance is severe. This affects results more than swapping in a fancier encoder, and it costs an afternoon.
 
-**Augment aggressively.** Medical datasets are small — dozens to hundreds of cases is normal. Rotation, flipping, elastic deformation, intensity shifts, and scanner-appropriate noise. The original U-Net leaned heavily on elastic deformation for exactly this reason, and it remains one of the highest-value augmentations for anatomical data.
+**Augment aggressively.** Medical datasets are small. Dozens to hundreds of cases is normal. Rotation, flipping, elastic deformation, intensity shifts, and scanner-appropriate noise. The original U-Net leaned heavily on elastic deformation for exactly this reason, and it remains one of the highest-value augmentations for anatomical data.
 
 **Normalise per-modality.** CT has physically meaningful Hounsfield units and should be windowed to the anatomy of interest. MRI intensities are not comparable across scanners or sequences and need per-volume normalisation. Getting this wrong quietly costs several points of Dice.
 
-**Watch the boundary specifically.** Overall Dice can look fine while margins are systematically off by two millimetres — which for a surgical plan is the whole question. Evaluate boundary metrics like Hausdorff distance alongside overlap.
+**Watch the boundary specifically.** Overall Dice can look fine while margins are systematically off by two millimetres, which for a surgical plan is the whole question. Evaluate boundary metrics like Hausdorff distance alongside overlap.
 
 ## Why it endured
 
 U-Net lasted because it identified a real structural conflict and resolved it with a mechanism that is close to minimal. Two paths, one for semantics and one for localisation, joined at every scale so the decoder never has to choose.
 
-Every subsequent architecture that does dense prediction well has ended up with some version of the same idea. Feature pyramid networks, DeepLab's decoder, the diffusion denoisers — all of them route high-resolution features around the bottleneck. U-Net just got there first and stated it most clearly.
+Every subsequent architecture that does dense prediction well has ended up with some version of the same idea. Feature pyramid networks, DeepLab's decoder, the diffusion denoisers. All of them route high-resolution features around the bottleneck. U-Net just got there first and stated it most clearly.
 
 Which is usually what it takes for an architecture to still be the default eleven years on.
+
+Hero diagram: [Example architecture of U-Net](https://commons.wikimedia.org/wiki/File:Example_architecture_of_U-Net_for_producing_k_256-by-256_image_masks_for_a_256-by-256_RGB_image.png) by Mehrdad Yazdani, [CC BY-SA 4.0](https://creativecommons.org/licenses/by-sa/4.0/), via Wikimedia Commons. Scaled and padded to fit; not otherwise altered.

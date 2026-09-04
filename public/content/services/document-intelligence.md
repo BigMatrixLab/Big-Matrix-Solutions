@@ -4,7 +4,7 @@ slug: "document-intelligence-reporting"
 title: "Document Intelligence & Automated Report Generation"
 icon: "bi bi-file-earmark-text"
 image: "/assets/images/projects/Scriptor.png"
-desc: "Extraction, structuring and generation across documents — from scanned forms and contracts to authoring workspaces with an AI copilot built in."
+desc: "Extraction, structuring and generation across documents, from scanned forms and contracts to authoring workspaces with an AI copilot built in."
 ---
 
 
@@ -14,7 +14,7 @@ desc: "Extraction, structuring and generation across documents — from scanned 
 
 ## Documents In, Structured Data and Finished Reports Out
 
-Organisations run on documents and almost none of them are structured. Forms, contracts, lab reports, referral letters, invoices, manuscripts — the information is there and unusable.
+Organisations run on documents and almost none of them are structured. Forms, contracts, lab reports, referral letters, invoices, manuscripts. The information is there and unusable.
 
 We build both directions: pulling structure out of documents, and generating documents from structure. Scriptor, our AI document workspace, is the second half shipped as a product.
 
@@ -77,14 +77,14 @@ Extraction is never perfect and pretending otherwise is how bad data enters a sy
 
 ---
 
-## Technology Stack
+## Formats and tooling
 
 **Extraction**: Layout-aware models, OCR, table structure recognition
 **Generation**: LLM drafting with schema constraints and citation grounding
 **Formats**: PDF, DOCX, DICOM-SR, HL7, LaTeX, CSV, JSON
 **Deployment**: On-premise where documents contain regulated or personal data
 
-## Where It Fits
+## Where it earns its keep
 
 - Clinical documentation and referral processing
 - Contract review and obligation extraction
@@ -92,6 +92,6 @@ Extraction is never perfect and pretending otherwise is how bad data enters a sy
 - Research and technical authoring workflows
 - Regulatory submission assembly
 
-## Why Choose Us?
+## What shipping this taught us
 
 We have shipped a document product, so we know where the effort actually goes: not the model, but the layout edge cases, the review interface, and the confidence handling that stops a wrong field becoming a wrong record.

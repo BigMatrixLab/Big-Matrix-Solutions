@@ -4,7 +4,7 @@ slug: "intelligent-healthcare-pharma"
 title: "Intelligent Healthcare & Pharmaceutical Systems"
 icon: "bi bi-hospital"
 image: "https://images.unsplash.com/photo-1576091160399-112ba8d25d1d?w=800&q=80&auto=format&fit=crop"
-desc: "Comprehensive AI-powered solutions for hospitals, diagnostics, medical imaging, and pharmaceutical intelligence that transform healthcare delivery and pharmaceutical operations."
+desc: "AI-powered systems for hospitals, diagnostics and medical imaging: clinical decision support, imaging pipelines and the infrastructure behind them."
 ---
 
 
@@ -26,7 +26,7 @@ From automated disease detection to drug development analytics, we create compre
 
 ### 1. AI-Powered Medical Diagnostics
 
-Leverage cutting-edge machine learning for accurate disease detection and diagnosis:
+Machine learning for disease detection and diagnostic support:
 
 
 
@@ -107,7 +107,7 @@ Advanced analytics for accelerating pharmaceutical R&D:
 
 ### 4. Medical Imaging AI
 
-State-of-the-art computer vision for medical image analysis:
+Computer vision for medical image analysis:
 
 #### Capabilities
 

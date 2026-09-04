@@ -3,7 +3,7 @@ id: "19"
 slug: "how-jepa-works-predicting-in-latent-space"
 title: "How JEPA Works: Why LeCun's World Models Refuse to Predict Pixels"
 comments: "0"
-image: "https://images.unsplash.com/photo-1485846234645-a62644f84728?auto=format&fit=crop&q=80&w=800"
+image: "/assets/images/blog/jepa-architecture.webp"
 category: "Tutorial"
 desc: "Joint Embedding Predictive Architectures predict in representation space instead of input space. What that buys, and how they avoid collapse."
 date: "Nov 27, 2026"
@@ -20,19 +20,19 @@ You know exactly what happens: the ball leaves the table and falls. You are conf
 
 Now predict the next second *pixel by pixel*. Suddenly the task is absurd. You would need the precise lighting on the ball's surface as it rotates, the exact shadow geometry, the specular highlight, the motion blur, the sensor noise. You have no idea about any of that, and none of it is what you meant by understanding what happens next.
 
-This gap — between predicting *what happens* and predicting *what it looks like* — is the entire motivation for Joint Embedding Predictive Architectures.
+That gap, between predicting *what happens* and predicting *what it looks like*, is the entire motivation for Joint Embedding Predictive Architectures.
 
 ## The generative modelling problem
 
 Most self-supervised learning works by reconstruction. Hide part of the input, predict the hidden part, compare against the truth in input space.
 
-For text this works beautifully. Masked and next-token prediction gave us modern language models. The reason it works is that text is already discrete, already compressed, and already abstract — a word is a symbol, and predicting the right symbol requires understanding.
+For text this works beautifully. Masked and next-token prediction gave us modern language models. The reason it works is that text is already discrete, already compressed, and already abstract. A word is a symbol, and predicting the right symbol requires understanding.
 
 For images and video it works much less well, and the reason is instructive.
 
-Predict a masked patch of an image and you are being asked for exact pixel values. Some of that requires understanding — if the patch contains part of a dog's face, you need to know there is a dog. But a large majority of the bits you are being graded on are *unpredictable detail*: exact texture, exact noise, exact lighting.
+Predict a masked patch of an image and you are being asked for exact pixel values. Some of that requires understanding. If the patch contains part of a dog's face, you need to know there is a dog. But a large majority of the bits you are being graded on are *unpredictable detail*: exact texture, exact noise, exact lighting.
 
-So the loss function spends most of its budget pushing the model to model detail that carries no semantic information. The model burns capacity on texture statistics. Worse, since the unpredictable parts cannot be predicted, the optimum under a squared-error loss is to output the blurry average of all possibilities — which is why reconstruction-based video models produce that characteristic smeared prediction.
+So the loss function spends most of its budget pushing the model to model detail that carries no semantic information. The model burns capacity on texture statistics. Worse, since the unpredictable parts cannot be predicted, the optimum under a squared-error loss is to output the blurry average of all possibilities, which is why reconstruction-based video models produce that characteristic smeared prediction.
 
 LeCun's framing of this is that the world is fundamentally not predictable at the pixel level, and a training objective that demands pixel prediction forces the model to waste itself on irreducible noise.
 
@@ -58,9 +58,9 @@ s_y_pred = predictor(s_x, mask)   # predicted representation
 loss = mse(s_y_pred, s_y)         # loss in latent space
 ```
 
-The underlying hypothesis, stated in the JEPA world-model literature, is that predicting future states is *easier* in a learned representation space than in the original observation space — and that requiring predictability in that space pushes the representation toward carrying meaningful, predictable structure.
+The underlying hypothesis, stated in the JEPA world-model literature, is that predicting future states is *easier* in a learned representation space than in the original observation space, and that requiring predictability in that space pushes the representation toward carrying meaningful, predictable structure.
 
-That second clause is the elegant part. The representation is not fixed in advance. It is learned *jointly* with the predictor. So the training pressure is: find a representation in which prediction is possible. Anything unpredictable — sensor noise, exact texture, the specular highlight — is useless for reducing the loss and gets discarded. What survives is what the future depends on.
+That second clause is the elegant part. The representation is not fixed in advance. It is learned *jointly* with the predictor. So the training pressure is: find a representation in which prediction is possible. Anything unpredictable, whether sensor noise, exact texture or the specular highlight, is useless for reducing the loss and gets discarded. What survives is what the future depends on.
 
 Predictability becomes a filter for semantic relevance. That is the whole idea.
 
@@ -70,7 +70,7 @@ There is an obvious hole, and anyone who has worked with joint embedding methods
 
 If both encoders are learned, and the loss is agreement between representations, there is a trivial solution: **output a constant.** Encode everything to the same vector. The predictor learns the identity. Loss is zero. Representation is worthless.
 
-This is representational collapse, and it is not a hypothetical — it is what naive implementations actually do. Preventing it is most of the engineering in this family of methods.
+This is representational collapse, and it is not a hypothetical. It is what naive implementations actually do. Preventing it is most of the engineering in this family of methods.
 
 Approaches in use:
 
@@ -80,7 +80,7 @@ Approaches in use:
 
 **Distributional regularisation.** Recent work such as LeWorldModel trains stably end-to-end from raw pixels using just two terms: a next-embedding prediction loss and a regulariser forcing embeddings toward a Gaussian distribution. A constant output has zero variance and is heavily penalised, so the pressure is explicit and simple.
 
-**Careful masking.** What you mask matters. If the target is trivially inferable from the context, the task is too easy to force good representations. I-JEPA masks large contiguous blocks specifically to require semantic rather than textural inference — you cannot fill in a big block by extrapolating local texture.
+**Careful masking.** What you mask matters. If the target is trivially inferable from the context, the task is too easy to force good representations. I-JEPA masks large contiguous blocks specifically to require semantic rather than textural inference. You cannot fill in a big block by extrapolating local texture.
 
 The recurring lesson across all four: joint embedding methods work when the *objective* prevents collapse, not when you hope the optimiser avoids it.
 
@@ -92,7 +92,7 @@ Take an image. Sample a context block and several target blocks. Encode the cont
 
 Position conditioning is essential. Without knowing *where* it is predicting, the predictor cannot do better than a global average. With it, the task becomes: given what I can see and where I am asked about, what is there semantically?
 
-Results were the argument for the whole approach. I-JEPA produced strong representations without any of the data augmentation that contrastive methods depend on — no crops, colour jitter, or handcrafted invariances. Those augmentations always encoded human assumptions about what should not matter. I-JEPA needed none, and trained more efficiently than masked autoencoders on comparable budgets.
+Results were the argument for the whole approach. I-JEPA produced strong representations without any of the data augmentation that contrastive methods depend on: no crops, colour jitter, or handcrafted invariances. Those augmentations always encoded human assumptions about what should not matter. I-JEPA needed none, and trained more efficiently than masked autoencoders on comparable budgets.
 
 ## V-JEPA: adding time
 
@@ -100,7 +100,7 @@ Video is where the argument gets much stronger, because video has the pixel-unpr
 
 [V-JEPA 2](https://ai.meta.com/research/vjepa/) is described as the first video-trained world model achieving state-of-the-art visual understanding and prediction while enabling zero-shot robot control in new environments. The training recipe combines roughly **a million hours of internet-scale video** with a comparatively small amount of robot trajectory data.
 
-That combination is the interesting part, and it mirrors how the language field learned to do things. The video gives broad physical priors — how objects move, how occlusion works, what happens when something is pushed. The robot data grounds those priors in actions the robot can actually take. Pretrain broadly, adapt narrowly.
+That combination is the interesting part, and it mirrors how the language field learned to do things. The video gives broad physical priors: how objects move, how occlusion works, what happens when something is pushed. The robot data grounds those priors in actions the robot can actually take. Pretrain broadly, adapt narrowly.
 
 The payoff is planning. If you have a model that predicts *representations* of future states given actions, you can search over action sequences: imagine the outcome of each candidate plan in latent space, score it against a goal representation, pick the best. No pixel rendering required, which makes the search cheap enough to be practical.
 
@@ -110,30 +110,30 @@ V-JEPA 2.1, released in March 2026, refines the recipe with more temporally cons
 
 Two years of active work has produced a recognisable research programme:
 
-- **Value-guided planning** — combining JEPA world models with learned value functions so the search over imagined action sequences is directed rather than exhaustive.
-- **Multimodal variants** — VL-JEPA extends the architecture to vision-language, predicting across modalities rather than within one.
-- **Symmetric designs** — BiJEPA makes the prediction bidirectional rather than context-to-target, aiming at more symmetric representations.
-- **End-to-end from pixels** — LeWorldModel is notable for training stably straight from raw pixels with a minimal two-term objective, removing the staged-training complexity earlier versions needed.
-- **Theory** — a 2026 generalisation theory for JEPA-based world models begins to explain *why* latent prediction produces better representations, which the field has mostly justified empirically until now.
+- **Value-guided planning**: combining JEPA world models with learned value functions so the search over imagined action sequences is directed rather than exhaustive.
+- **Multimodal variants**: VL-JEPA extends the architecture to vision-language, predicting across modalities rather than within one.
+- **Symmetric designs**: BiJEPA makes the prediction bidirectional rather than context-to-target, aiming at more symmetric representations.
+- **End-to-end from pixels**: LeWorldModel is notable for training stably straight from raw pixels with a minimal two-term objective, removing the staged-training complexity earlier versions needed.
+- **Theory**: a 2026 generalisation theory for JEPA-based world models begins to explain *why* latent prediction produces better representations, which the field has mostly justified empirically until now.
 
 ## The honest limitations
 
 JEPA is a research programme with real open problems, and the criticism is worth engaging.
 
-**No generation.** A JEPA does not produce images or video. It produces representations. For understanding, planning, and control this is a feature — you were never going to look at the predicted pixels anyway. If you want to generate media, you need a generative model, and diffusion transformers are far ahead there.
+**No generation.** A JEPA does not produce images or video. It produces representations. For understanding, planning, and control this is a feature. You were never going to look at the predicted pixels anyway. If you want to generate media, you need a generative model, and diffusion transformers are far ahead there.
 
-**Evaluation is awkward.** You cannot look at a predicted representation and judge it. Assessment is necessarily indirect — probe the representations on downstream tasks, or measure planning performance. Both work, and both introduce their own confounds. A pixel-space model can at least be inspected by eye.
+**Evaluation is awkward.** You cannot look at a predicted representation and judge it. Assessment is necessarily indirect: probe the representations on downstream tasks, or measure planning performance. Both work, and both introduce their own confounds. A pixel-space model can at least be inspected by eye.
 
 **Collapse remains fiddly.** Every method in this family needs its anti-collapse mechanism tuned. It is not a solved problem, more a managed one, and reproducing results can be sensitive to details.
 
-**"World model" is doing a lot of work.** Critical analyses have argued that systems like V-JEPA and Sora have not learned a complete world model in any strong sense — they capture regularities in their training distribution, which is a genuinely useful thing and not the same as physical understanding. ARC-AGI-3's frontier scores near half a percent on novel interactive environments are a reminder from a different direction that adaptation to true novelty remains largely unsolved.
+**"World model" is doing a lot of work.** Critical analyses have argued that systems like V-JEPA and Sora have not learned a complete world model in any strong sense. They capture regularities in their training distribution, which is a genuinely useful thing and not the same as physical understanding. ARC-AGI-3's frontier scores near half a percent on novel interactive environments are a reminder from a different direction that adaptation to true novelty remains largely unsolved.
 
-## Why it is worth understanding anyway
+## Why the idea outlives the architecture
 
 Even setting aside how the specific architecture fares, the central claim is one of the more durable ideas in recent representation learning: **the loss function determines what the model learns to care about, so put the loss where the meaning is.**
 
 Pixel reconstruction grades a model on detail that no amount of understanding would let it predict. Latent prediction grades it on structure that only understanding can supply. Same data, same encoder capacity, radically different training pressure.
 
-That principle generalises well past vision. It is worth carrying to any self-supervised problem where the raw signal contains much more entropy than meaning — which is most sensory data, and increasingly most of the data we would like models to learn from.
+That principle generalises well past vision. Carry it to any self-supervised problem where the raw signal contains much more entropy than meaning, which is most sensory data and increasingly most of the data we would like models to learn from.
 
-**Sources**: [Meta AI — Introducing V-JEPA 2](https://ai.meta.com/research/vjepa/), [Turing Post — JEPA: Joint Embedding Predictive Architecture Explained](https://www.turingpost.com/p/jepa), [Value-guided action planning with JEPA world models](https://arxiv.org/pdf/2601.00844), [A Generalization Theory for JEPA-Based World Models](https://arxiv.org/pdf/2606.27014), [LeWorldModel: Stable End-to-End JEPA from Pixels](https://arxiv.org/abs/2603.19312), [BiJEPA: Bi-directional Joint Embedding Predictive Architecture](https://arxiv.org/pdf/2603.00049), [awesome-jepa](https://github.com/AbdelStark/awesome-jepa)
+Hero diagram: [Joint Embedding, Generative, and Joint Embedding Predictive Architecture](https://commons.wikimedia.org/wiki/File:Joint_Embedding%2C_Generative%2C_and_Joint_Embedding_Predictive_Architecture.jpg) by Skenderi, Li, Tang and Cristani, [CC BY 4.0](https://creativecommons.org/licenses/by/4.0/), via Wikimedia Commons. Scaled and padded to fit; not otherwise altered.

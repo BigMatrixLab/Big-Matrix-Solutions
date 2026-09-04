@@ -12,7 +12,7 @@ tags: ["Medical AI", "Clinical Reasoning", "LLM", "Healthcare"]
 
 # A Model Beat Two Attending Physicians on ED Triage. Now Comes the Hard Part.
 
-On April 30, 2026, *Science* published a study finding that a large language model outperformed physicians across a range of common clinical reasoning tasks — emergency department decisions, generating likely diagnoses, and choosing next steps in management.
+On April 30, 2026, *Science* published a study finding that a large language model outperformed physicians across a range of common clinical reasoning tasks: emergency department decisions, generating likely diagnoses, and choosing next steps in management.
 
 The result deserves attention, and it deserves more care than most of the coverage gave it. The research team's own conclusion was not "AI is ready." It was closer to "our tests have stopped being able to measure this, and we now urgently need real trials."
 
@@ -22,11 +22,11 @@ Both halves matter.
 
 The strongest experiment in the study simulated an emergency department encounter as it unfolds rather than as a finished case.
 
-This design choice is the important one. Most medical AI evaluations use a completed case vignette: here is the history, the exam, the labs, the imaging — what is the diagnosis? That is a reading comprehension task. Real emergency medicine is nothing like it. You get a complaint and some vitals, you decide what to order, more information arrives, you revise.
+This design choice is the important one. Most medical AI evaluations use a completed case vignette: here is the history, the exam, the labs, the imaging. What is the diagnosis? That is a reading comprehension task. Real emergency medicine is nothing like it. You get a complaint and some vitals, you decide what to order, more information arrives, you revise.
 
 So the researchers staged it. At each point in a standard ED workflow, the model received only the information available *at that point*, drawn directly from actual electronic health records, and was asked to produce likely diagnoses and recommend what should happen next.
 
-On real emergency department cases, diagnostic accuracy — exact or very close:
+On real emergency department cases, diagnostic accuracy, exact or very close:
 
 | Reader | Accuracy at initial triage |
 |---|---|
@@ -34,7 +34,7 @@ On real emergency department cases, diagnostic accuracy — exact or very close:
 | Expert attending physician A | 55.3% |
 | Expert attending physician B | 50.0% |
 
-At initial triage — the point of maximum uncertainty, with the least information available — the model was right about two-thirds of the time, and the two expert attendings roughly half.
+At initial triage, the point of maximum uncertainty with the least information available, the model was right about two-thirds of the time, and the two expert attendings roughly half.
 
 A few things about this comparison are unusually clean. The cases were real, pulled from EHRs rather than written for a textbook. The information staging was faithful to how a real encounter progresses. And the human comparators were expert attending physicians, not residents or medical students, which is where a lot of earlier "AI beats doctors" results got their margin.
 
@@ -42,18 +42,18 @@ A few things about this comparison are unusually clean. The cases were real, pul
 
 Now the part the study authors emphasised and the headlines mostly dropped.
 
-The researchers wrote that this "does not mean AI will necessarily improve care — how and where it should be deployed remain understudied, and we desperately need rigorous prospective trials to evaluate the impact of AI on clinical practice."
+The researchers wrote that this "does not mean AI will necessarily improve care; how and where it should be deployed remain understudied, and we desperately need rigorous prospective trials to evaluate the impact of AI on clinical practice."
 
 That is not routine hedging. It identifies a specific and well-documented gap between two very different claims:
 
-- **The model reasons well in isolation** — measured, and supported by this study.
-- **A clinician using the model produces better outcomes** — not measured, and not implied.
+- **The model reasons well in isolation**: measured, and supported by this study.
+- **A clinician using the model produces better outcomes**: not measured, and not implied.
 
 Those come apart in practice, sometimes badly. The mechanism has a name.
 
 ## Automation bias is the actual obstacle
 
-Research on LLM-assisted diagnostic reasoning has repeatedly found that physicians working with a model do not simply inherit the model's accuracy. They inherit some of its accuracy and some of its errors, and the errors are the problem — because a confident, fluent, well-argued wrong answer is far more persuasive than a hesitant one.
+Research on LLM-assisted diagnostic reasoning has repeatedly found that physicians working with a model do not simply inherit the model's accuracy. They inherit some of its accuracy and some of its errors, and the errors are the problem, because a confident, fluent, well-argued wrong answer is far more persuasive than a hesitant one.
 
 Work specifically examining automation bias among AI-trained physicians found that even clinicians who had been educated about the failure modes were still pulled toward incorrect model suggestions. Knowing about the bias does not neutralise it.
 
@@ -61,7 +61,7 @@ This produces an outcome that is counterintuitive until you have seen it happen:
 
 > A model that is more accurate than the average physician, deployed carelessly, can make a physician-plus-model system *less* accurate than the physician alone.
 
-The reason is asymmetric influence. When the model agrees with the clinician's instinct, nothing changes. When it disagrees and the model is right, the clinician sometimes updates — good. When it disagrees and the *clinician* is right, the clinician sometimes updates anyway — bad. If the second effect is strong enough, average accuracy falls even though the model is individually better.
+The reason is asymmetric influence. When the model agrees with the clinician's instinct, nothing changes. When it disagrees and the model is right, the clinician sometimes updates. Good. When it disagrees and the *clinician* is right, the clinician sometimes updates anyway. Bad. If the second effect is strong enough, average accuracy falls even though the model is individually better.
 
 This is why "the model scored higher" and "deploy the model" are separated by a very large amount of engineering and study design.
 
@@ -69,20 +69,20 @@ This is why "the model scored higher" and "deploy the model" are separated by a 
 
 The study's second contribution is methodological, and it echoes what is happening across AI evaluation generally: the standard tests have run out of room.
 
-Medical AI has been benchmarked for years against multiple-choice licensing exam questions — USMLE-style items and their equivalents. Frontier models saturated those. Scores in the high nineties tell you nothing useful about clinical capability, partly because the questions are in the training data and partly because a well-formed multiple-choice question with one defensible answer bears almost no resemblance to a patient.
+Medical AI has been benchmarked for years against multiple-choice licensing exam questions: USMLE-style items and their equivalents. Frontier models saturated those. Scores in the high nineties tell you nothing useful about clinical capability, partly because the questions are in the training data and partly because a well-formed multiple-choice question with one defensible answer bears almost no resemblance to a patient.
 
-The *Science* team's framing was that the LLM's performance indicated long-standing ways of testing medical AI may no longer capture current systems' performance. That is a strong statement about measurement, and it is consistent with a June *Nature Medicine* benchmark study which found general-purpose LLMs outperforming FDA-cleared clinical AI tools — a result that mainly reveals how differently those two things are validated.
+The *Science* team's framing was that the LLM's performance indicated long-standing ways of testing medical AI may no longer capture current systems' performance. That is a strong statement about measurement, and it is consistent with a June *Nature Medicine* benchmark study which found general-purpose LLMs outperforming FDA-cleared clinical AI tools, a result that mainly reveals how differently those two things are validated.
 
 The replacement is being built, and it is harder and more expensive:
 
-- **Sequential information staging** — evaluating at each decision point rather than on the completed case, as the *Science* study did.
-- **Management, not just diagnosis** — what to order, what to rule out, whether to admit. Diagnosis is one output among several, and often not the one that determines the patient's course.
-- **Randomised assistance trials** — comparing clinician-alone against clinician-plus-model on real workflows. A recent example is a randomised AI physician assistance trial for rare disease diagnosis using a specialised reasoning model, which is exactly the study design the field needs more of.
-- **Outcome endpoints** — time to correct diagnosis, unnecessary testing, length of stay, mortality. The endpoints that justify deployment, rather than the ones that are convenient to measure.
+- **Sequential information staging**: evaluating at each decision point rather than on the completed case, as the *Science* study did.
+- **Management, not just diagnosis**: what to order, what to rule out, whether to admit. Diagnosis is one output among several, and often not the one that determines the patient's course.
+- **Randomised assistance trials**: comparing clinician-alone against clinician-plus-model on real workflows. A recent example is a randomised AI physician assistance trial for rare disease diagnosis using a specialised reasoning model, which is exactly the study design the field needs more of.
+- **Outcome endpoints**: time to correct diagnosis, unnecessary testing, length of stay, mortality. The endpoints that justify deployment, rather than the ones that are convenient to measure.
 
 ## The management reasoning result, which is arguably bigger
 
-Diagnosis gets the headlines, but the *Science* study also covered management reasoning — deciding what to order, what to rule out, whether to admit — and this is where the clinical stakes concentrate.
+Diagnosis gets the headlines, but the *Science* study also covered management reasoning (deciding what to order, what to rule out, whether to admit) and this is where the clinical stakes concentrate.
 
 Diagnosis is a labelling problem with a defensible answer. Management is a sequence of decisions under uncertainty, with costs and trade-offs on every branch. Order too few tests and you miss things; order too many and you generate incidental findings, radiation exposure, false positives, and downstream procedures that carry their own risk. The correct answer often depends on factors that are not in the chart: how far the patient lives from the hospital, whether they will come back for follow-up, what they are willing to tolerate.
 
@@ -96,7 +96,7 @@ Reading the evidence together, the deployments most likely to help share a shape
 
 ### 1. Differential expansion
 
-Asking the model *what else could this be* is close to an ideal use. Human differentials narrow fast under time pressure and anchor on the first plausible explanation. A model reliably surfacing five more possibilities — including the rare ones — adds candidates without taking the decision away. Wrong suggestions cost a moment of consideration.
+Asking the model *what else could this be* is close to an ideal use. Human differentials narrow fast under time pressure and anchor on the first plausible explanation. A model reliably surfacing five more possibilities, including the rare ones, adds candidates without taking the decision away. Wrong suggestions cost a moment of consideration.
 
 ### 2. Rare disease
 
@@ -122,7 +122,7 @@ If a clinical AI product is being sold to you on the strength of results like th
 
 **What was the data source?** Real EHR extracts behave nothing like curated case reports. Published cases are selected for being instructive, which means they are unusually clean and unusually diagnosable. Real charts are messy, contradictory, and full of copy-forward errors.
 
-**Has an assistance trial been run?** The model's solo accuracy is the easy number. The clinically relevant number is whether clinicians using it do better than clinicians not using it — and whether that holds for your clinicians, in your workflow, under your time pressure.
+**Has an assistance trial been run?** The model's solo accuracy is the easy number. The clinically relevant number is whether clinicians using it do better than clinicians not using it, and whether that holds for your clinicians, in your workflow, under your time pressure.
 
 **How does the interface handle disagreement?** This is the question that reveals whether a vendor has thought about automation bias at all. Does the model present its answer before or after the clinician commits to theirs? Is uncertainty communicated in a way that changes behaviour? Is disagreeing with the model cheap, or does it require justification? These design details determine whether a good model helps or hurts, and they are more predictive of outcomes than a few percentage points of accuracy.
 
@@ -130,10 +130,8 @@ If a clinical AI product is being sold to you on the strength of results like th
 
 Not much clinically. Quite a lot in terms of what the field can no longer claim.
 
-Before April, it was defensible to argue that LLMs performed well on exam questions and poorly on realistic clinical reasoning, and that the gap between the two was the reason not to take them seriously. That argument is now much weaker. Real cases, real EHR data, faithful information staging, expert attending comparators — the model still came out ahead.
+Before April, it was defensible to argue that LLMs performed well on exam questions and poorly on realistic clinical reasoning, and that the gap between the two was the reason not to take them seriously. That argument is now much weaker. Real cases, real EHR data, faithful information staging, expert attending comparators. The model still came out ahead.
 
 What the study did not do is establish that deploying it helps, and its authors were explicit about that. The 67.1 percent is a capability result. Whether that capability improves care depends on questions of interface, workflow, override behaviour, and clinician trust calibration that no benchmark can answer.
 
 The next real milestone will not be a higher accuracy number. It will be a prospective randomised trial showing that patients whose clinicians had access to the model did measurably better than patients whose clinicians did not. Until that exists, everything else is a very promising precondition.
-
-**Sources**: [Science — Performance of a large language model on the reasoning tasks of a physician](https://www.science.org/doi/10.1126/science.adz4433), [Harvard Medical School — Study Suggests AI Is Good Enough at Diagnosing Complex Medical Cases To Warrant Clinical Testing](https://hms.harvard.edu/news/study-suggests-ai-good-enough-diagnosing-complex-medical-cases-warrant-clinical-testing), [EurekAlert — Landmark test of clinical reasoning finds AI outperformed physicians](https://www.eurekalert.org/news-releases/1126008), [Automation Bias in Large Language Model Assisted Diagnostic Reasoning Among AI-Trained Physicians](https://www.medrxiv.org/content/10.1101/2025.08.23.25334280.full.pdf), [A specialized reasoning LLM for accelerating rare disease diagnosis: a randomized AI physician assistance trial](https://arxiv.org/pdf/2606.24510)
