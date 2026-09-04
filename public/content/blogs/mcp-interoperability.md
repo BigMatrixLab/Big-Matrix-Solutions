@@ -13,9 +13,8 @@ tags: ["MCP", "Software Development", "AI Integration"]
 
 # 🔗 Model Context Protocol (MCP): The Future of AI Interoperability
 
-*2-minute read | Posted on December 13, 2024*
+*2-minute read*
 
-![AI Interoperability](/assets/images/inner-images/service-details.jpg)
 
 ## 🌐 Introduction
 

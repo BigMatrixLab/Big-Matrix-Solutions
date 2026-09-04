@@ -13,7 +13,7 @@ tags: ["Cyber Security", "AIOps", "Infrastructure"]
 
 # 🚀 Agentic Operations: The Future of DevOps
 
-*3-minute read | Posted on December 5, 2024*
+*3-minute read*
 
 
 ## 🔄 From Automation to Autonomy

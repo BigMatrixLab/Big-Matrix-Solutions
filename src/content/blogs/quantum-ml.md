@@ -13,7 +13,7 @@ tags: ["Quantum Computing", "Machine Learning", "AI Innovation"]
 
 # ⚛️ Quantum Machine Learning: When Physics Meets AI
 
-*3-minute read | Posted on December 10, 2024*
+*3-minute read*
 
 
 ## 🔬 The Intersection of Two Revolutions

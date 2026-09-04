@@ -4,6 +4,7 @@ import MarkdownRenderer from '../components/MarkdownRenderer';
 import CtaBand from '../components/CtaBand';
 import { blogsData } from '../data/content';
 import { stripMarkdownEmoji } from '../utils/docEnrich';
+import { sortBlogsByDate } from '../utils/blogSort';
 import {
     visibleBlogs,
     isScheduled,
@@ -39,7 +40,11 @@ const BlogDetails = () => {
         );
     }
 
-    const others = readable.filter((item) => item.slug !== post.slug).slice(0, 4);
+    // Newest first, not `blogsData` order — `loadContent` sorts by id ascending,
+    // so slicing it raw surfaced the five oldest posts on every article.
+    const others = sortBlogsByDate(
+        readable.filter((item) => item.slug !== post.slug)
+    ).slice(0, 5);
     const queued = isScheduled(post);
 
     const facts = [

@@ -3,18 +3,20 @@ id: "38"
 slug: "grok-bot-always-on-agents-with-their-own-computers"
 title: "Grok Bot Gives Each Agent Its Own Computer. The Benchmarks Say That Is the Hard Part."
 comments: "0"
-image: "https://images.unsplash.com/photo-1620712943543-bcc4688e7485?auto=format&fit=crop&q=80&w=800"
+image: "/assets/images/blog/grok-bot.png"
 category: "Agentic AI"
-desc: "xAI's always-on teammates sign into your real tools and work while you sleep. It is the most ambitious agent product yet shipped, and the timing is awkward."
+desc: "SpaceXAI's always-on teammates sign into your real tools and work while you sleep. It is the most ambitious agent product yet shipped, and the timing is awkward."
 date: "Aug 31, 2026"
-tags: ["Grok", "xAI", "Agentic AI", "Computer Use"]
+tags: ["Grok", "SpaceXAI", "Agentic AI", "Computer Use"]
 ---
 
 # Grok Bot Gives Each Agent Its Own Computer. The Benchmarks Say That Is the Hard Part.
 
-xAI launched **Grok Bot on August 11, 2026**, as a beta. The pitch is the most ambitious framing of agentic AI anyone has shipped as a product: always-on AI agents, each with its own cloud computer, signing into your existing tools and finishing multi-step jobs without supervision.
+SpaceXAI launched **Grok Bot on August 11, 2026**, as a beta. The pitch is the most ambitious framing of agentic AI anyone has shipped as a product: always-on AI agents, each with its own cloud computer, signing into your existing tools and finishing multi-step jobs without supervision.
 
-xAI's line on it is memorable and gets at something real: *"There is a huge difference between 90% done and 100% done… Grok Bot can finish the swing."*
+SpaceXAI's line on it is memorable and gets at something real: *"There is a huge difference between 90% done and 100% done… Grok Bot can finish the swing."*
+
+One naming note, since coverage from around the launch is inconsistent about it. SpaceX absorbed xAI in an all-stock deal on **February 2, 2026**, and the combined entity rebranded as **SpaceXAI on July 6** — a month before Grok Bot shipped. The product brand did not change: Grok, the apps, SuperGrok and the developer API all keep the Grok name. Contemporaneous reporting still says "xAI" because much of it predates the rebrand.
 
 It is worth taking seriously, and it is worth putting next to what the benchmarks currently say about long-horizon computer use.
 
@@ -34,7 +36,7 @@ Availability is bundled rather than sold standalone:
 
 | Tier | Price |
 |---|---|
-| SuperGrok Heavy | Included at xAI's top tier |
+| SuperGrok Heavy | Included at SpaceXAI's top tier |
 | Cursor Ultra | $200/month |
 | Cursor Teams Premium | $120/seat/month, adds team features and SSO |
 
@@ -52,7 +54,7 @@ Three of those choices are, I think, straightforwardly correct, and they address
 
 ## Why the timing is awkward
 
-Now the uncomfortable part, and it is not a criticism of xAI specifically.
+Now the uncomfortable part, and it is not a criticism of SpaceXAI specifically.
 
 The benchmark that measures exactly this capability is OSWorld 2.0 — long-horizon computer use, where the median task takes a human 1.6 hours. Frontier systems were scoring around **20.6 percent** on it earlier this year. GPT-6 Astra, released this month, posts **72.6 percent**, which is a large jump and still not a number you would want between you and an unsupervised multi-hour task on your real accounts.
 
@@ -83,11 +85,11 @@ The defences that work are architectural rather than prompt-level:
 - **Egress control.** A great deal of injection payoff depends on getting data out.
 - **Full trajectory logging.** Injection frequently succeeds without producing an obviously wrong result: the agent does the task *and* something extra. Reviewing only the outcome misses it.
 
-xAI's launch material, as far as I can see, does not address governance frameworks for any of this. For a beta bundled into consumer-tier subscriptions, that is a gap worth closing before enterprise rollout.
+SpaceXAI's launch material, as far as I can see, does not address governance frameworks for any of this. For a beta bundled into consumer-tier subscriptions, that is a gap worth closing before enterprise rollout.
 
 ## Who it is actually for
 
-xAI positions Grok Bot at work that typically requires entry-level or operations staff. That framing is commercially clear and worth examining, because it maps onto a labour question that is already live.
+SpaceXAI positions Grok Bot at work that typically requires entry-level or operations staff. That framing is commercially clear and worth examining, because it maps onto a labour question that is already live.
 
 The tasks in question — data entry across systems, moving information between tools that do not integrate, following a documented multi-step process, chasing something to completion — are real work that consumes real hours. They are also exactly the bundle that used to justify entry-level hiring, and entry-level engineering postings have already fallen roughly 67 percent from their 2022 peak.
 
@@ -105,4 +107,4 @@ If you want to try it, the sensible version is narrow: a dedicated account with 
 
 Pointing it at your actual inbox with your actual credentials and going to bed is a different proposition, and the research on injection says do not.
 
-**Sources**: [Unite.AI — xAI Launches Grok Bot, Always-On AI Teammates With Their Own Cloud Computers](https://www.unite.ai/xai-launches-grok-bot-always-on-ai-teammates-with-their-own-cloud-computers/), [Digital Applied — Grok Bot: xAI's AI Teammates Get Their Own Computer](https://www.digitalapplied.com/blog/grok-bot-ai-teammates-launch-cloud-computer-2026), [AIToolsReview — Grok Bot: xAI's Always-On AI Agents, Explained](https://aitoolsreview.co.uk/insights/grok-bot-agent-launch), [OSWorld 2.0: Benchmarking Computer Use Agents on Long-Horizon Tasks](https://arxiv.org/pdf/2606.29537), [Help Net Security — Prompt injection still drives most agentic AI security failures in production](https://www.helpnetsecurity.com/2026/06/11/owasp-prompt-injection-ai-security-failures/), [The Blind Spot of Agent Safety: How Benign User Instructions Expose Critical Vulnerabilities in Computer-Use Agents](https://arxiv.org/pdf/2604.10577)
+**Sources**: [Unite.AI — xAI Launches Grok Bot, Always-On AI Teammates With Their Own Cloud Computers](https://www.unite.ai/xai-launches-grok-bot-always-on-ai-teammates-with-their-own-cloud-computers/), [Digital Applied — Grok Bot: xAI's AI Teammates Get Their Own Computer](https://www.digitalapplied.com/blog/grok-bot-ai-teammates-launch-cloud-computer-2026), [AIToolsReview — Grok Bot: xAI's Always-On AI Agents, Explained](https://aitoolsreview.co.uk/insights/grok-bot-agent-launch), [Social Media Today — SpaceX rebrands as SpaceXAI](https://www.socialmediatoday.com/news/spacex-rebrands-as-spacexai/824656/), [Stocktwits — xAI Rebrands As SpaceXAI, Drops New Logo As It Fully Merges Into SpaceX](https://stocktwits.com/news-articles/markets/equity/spacexai-drops-new-logo-xai-fully-merges-into-spacex/cZm1YgPR7lz), [OSWorld 2.0: Benchmarking Computer Use Agents on Long-Horizon Tasks](https://arxiv.org/pdf/2606.29537), [Help Net Security — Prompt injection still drives most agentic AI security failures in production](https://www.helpnetsecurity.com/2026/06/11/owasp-prompt-injection-ai-security-failures/), [The Blind Spot of Agent Safety: How Benign User Instructions Expose Critical Vulnerabilities in Computer-Use Agents](https://arxiv.org/pdf/2604.10577)

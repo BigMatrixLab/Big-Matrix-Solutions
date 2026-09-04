@@ -13,7 +13,7 @@ tags: ["UI Design", "UX", "Personalization"]
 
 # 🎨 Adaptive User Interfaces Powered by AI
 
-*3-minute read | Posted on November 28, 2024*
+*3-minute read*
 
 
 ## ⚠️ The Problem with Static UIs

@@ -13,7 +13,7 @@ tags: ["Small Language Models", "AI Efficiency", "Edge Computing"]
 
 # 🎯 Small Language Models vs. Giant Models: Finding the Right Balance
 
-*3-minute read | Posted on November 20, 2024*
+*3-minute read*
 
 
 ## ⚠️ The Bigger-is-Better Myth
