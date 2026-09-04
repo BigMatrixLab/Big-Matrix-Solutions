@@ -12,14 +12,8 @@ import CtaBand from '../components/CtaBand';
 const GROUPS = [
     {
         label: 'Healthcare & life sciences',
-        note: 'Clinical, diagnostic and pharmaceutical systems — from a single lab to national infrastructure.',
-        slugs: [
-            'intelligent-healthcare-pharma',
-            'digital-hospital-infrastructure',
-            'pharmaceutical-intelligence',
-            'national-health-public-policy',
-            'real-time-biosensor-integration',
-        ],
+        note: 'Clinical, diagnostic and pharmaceutical systems — from a single lab to a hospital network.',
+        slugs: ['intelligent-healthcare-pharma', 'digital-hospital-infrastructure'],
     },
     {
         label: 'AI, data & platforms',
@@ -28,8 +22,8 @@ const GROUPS = [
     },
     {
         label: 'Infrastructure & operations',
-        note: 'What keeps the rest running: automation on the floor, scale in the cloud, compliance throughout.',
-        slugs: ['industrial-automation', 'cloud-devops-architecture', 'cybersecurity-compliance'],
+        note: 'What keeps the rest running: automation on the floor and scale in the cloud.',
+        slugs: ['industrial-automation', 'cloud-devops-architecture'],
     },
 ];
 

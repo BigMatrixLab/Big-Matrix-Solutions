@@ -17,7 +17,6 @@ const SERVICE_LINKS = [
     { to: '/service/enterprise-saas-platform', label: 'Enterprise & SaaS' },
     { to: '/service/industrial-automation', label: 'Industrial Automation' },
     { to: '/service/cloud-devops-architecture', label: 'Cloud & DevOps' },
-    { to: '/service/cybersecurity-compliance', label: 'Cybersecurity' },
 ];
 
 const SOCIAL_LINKS = [
