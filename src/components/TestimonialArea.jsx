@@ -34,7 +34,7 @@ const TestimonialArea = ({ transparent = false }) => {
                 <SectionHead
                     eyebrow="Testimonials"
                     title="What our partners say"
-                    lead="Hospitals, manufacturers, pharmaceutical groups and government teams on what changed once the systems went live."
+                    lead="Hospitals, manufacturers and government teams on what changed once the systems went live."
                 />
 
                 <div className="bm-voices__layout">

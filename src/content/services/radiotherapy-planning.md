@@ -76,7 +76,7 @@ Boundary accuracy is the number that matters here. A structure that is right on 
 
 - Radiation oncology departments with planning backlogs
 - Centres standardising contouring practice across planners
-- Clinical trials requiring consistent structure definitions
+- Multi-centre studies requiring consistent structure definitions
 - Sites preparing for adaptive or online replanning workflows
 
 ## What we bring to it

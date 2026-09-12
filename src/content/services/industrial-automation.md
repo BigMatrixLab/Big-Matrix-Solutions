@@ -81,7 +81,7 @@ Integrate intelligent automation:
 
 ## Industry Applications
 
-**Pharmaceuticals**: Batch tracking, cleanroom monitoring, equipment qualification  
+**Food and beverage**: Batch tracking, hygiene-zone monitoring, equipment qualification  
 **Food & Beverage**: Recipe management, quality checks, cold chain monitoring  
 **Textiles**: Loom monitoring, quality inspection, inventory management  
 **Automotive**: Assembly line optimization, defect detection  
@@ -113,13 +113,13 @@ Integrate intelligent automation:
 ## Success Stories
 
 **Garment Factory** (500 looms): Downtime reduced from 12% to 3%, ROI in 14 months  
-**Pharmaceutical Plant**: Batch release time 50% faster with automated quality checks  
+**Food Processing Plant**: Batch release time 50% faster with automated quality checks  
 
 ---
 
 ## What you get working with us
 
-✅ **Industrial domain expertise**: Pharma, textiles, food processing  
+✅ **Industrial domain expertise**: Textiles, food processing, heavy manufacturing  
 ✅ **System integration**: Connect legacy equipment with modern IoT  
 ✅ **Reliability**: 99.9% uptime for critical production systems  
 ✅ **Local support**: On-site engineers in Bangladesh  

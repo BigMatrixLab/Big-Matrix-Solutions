@@ -82,7 +82,7 @@ const AboutOne = () => {
                         items={[
                             "Diagnostic tools for radiology, pathology and general medicine, with the clinician still signing the report.",
                             "Software that drives hospital and infrastructure, so care and production stop waiting on manual steps.",
-                            "Disease mapping and demand forecasting that let governments and pharma move before an outbreak or a stockout.",
+                            "Disease mapping and demand forecasting that let health authorities move before an outbreak becomes a crisis.",
                             "Research that leaves the lab, turning mathematical models and deep learning into systems people actually run."
                         ]}
                         reversed={true}
@@ -95,7 +95,7 @@ const AboutOne = () => {
                             headline="Where it is heading."
                             description="To architect the intelligent infrastructure of the future."
                             items={[
-                                "Integrated ecosystems replace fragmented software, connecting healthcare, pharmaceuticals and industry on shared foundations.",
+                                "Integrated ecosystems replace fragmented software, connecting healthcare, industry and public services on shared foundations.",
                                 "AI-assisted decisions set the working standard for clinical accuracy, industrial efficiency and public health safety.",
                                 "Scalable intelligence reaches every level, from a single clinic to national infrastructure.",
                                 "Prediction replaces reaction, cutting systemic waste and preparing for health and industrial pressures still ahead."

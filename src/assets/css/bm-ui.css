@@ -3219,6 +3219,28 @@ a.bm-card__title:hover,
 .bm-tuned__cta i { transition: transform var(--bm-dur) var(--bm-ease); }
 .bm-tuned__cta:hover i { transform: translate(2px, -2px); }
 
+/* Desktop only. Copy left, the two actions stacked in a right-hand column with
+   a hairline between them — the same divider the job cards use for their aside.
+   Gated at 1200px like .bm-post-lead, so tablets keep the stacked layout rather
+   than inheriting a composition there is no width for. */
+@media (min-width: 1200px) {
+  .bm-tuned {
+    display: grid;
+    grid-template-columns: minmax(0, 1fr) auto;
+    align-items: stretch;
+    gap: clamp(32px, 3.5vw, 56px);
+  }
+
+  .bm-tuned__actions {
+    flex-direction: column;
+    justify-content: center;
+    align-items: stretch;
+    margin-top: 0;
+    padding-left: clamp(32px, 3.5vw, 56px);
+    border-left: 1px solid var(--bm-line);
+  }
+}
+
 @media (max-width: 860px) {
   .bm-job { grid-template-columns: minmax(0, 1fr); }
 

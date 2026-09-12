@@ -1,24 +1,24 @@
 ---
 id: "1"
-slug: "intelligent-healthcare-pharma"
-title: "Intelligent Healthcare & Pharmaceutical Systems"
+slug: "intelligent-healthcare-systems"
+title: "Intelligent Healthcare Systems"
 icon: "bi bi-hospital"
 image: "https://images.unsplash.com/photo-1576091160399-112ba8d25d1d?w=800&q=80&auto=format&fit=crop"
 desc: "AI-powered systems for hospitals, diagnostics and medical imaging: clinical decision support, imaging pipelines and the infrastructure behind them."
 ---
 
 
-# Intelligent Healthcare & Pharmaceutical Systems
+# Intelligent Healthcare Systems
 
-Transform healthcare delivery and pharmaceutical operations with AI-powered comprehensive solutions that revolutionize patient care and operational efficiency.
+Transform healthcare delivery with AI-powered systems that improve patient care and operational efficiency.
 
 ---
 
 ## Overview
 
-We develop **end-to-end intelligent systems** that revolutionize healthcare and pharmaceutical operations. Our solutions integrate AI-driven diagnostics, advanced medical imaging analysis, hospital management systems, and pharmaceutical intelligence platforms.
+We develop **end-to-end intelligent systems** for healthcare delivery. Our solutions integrate AI-driven diagnostics, advanced medical imaging analysis and hospital management systems.
 
-From automated disease detection to drug development analytics, we create comprehensive ecosystems that **improve patient outcomes**, **accelerate drug discovery**, and **optimize pharmaceutical supply chains**.
+From automated disease detection to clinical workflow automation, we build systems that **improve patient outcomes** and **reduce the administrative load on clinical staff**.
 
 ---
 
@@ -86,26 +86,7 @@ Comprehensive digital infrastructure for modern healthcare facilities:
 
 ---
 
-### 3. Pharmaceutical Intelligence Platform
-
-#### Drug Development Analytics
-
-Advanced analytics for accelerating pharmaceutical R&D:
-
-
-
-#### Key Features
-
-✅ **Drug Demand Forecasting**: Predictive models using time-series analysis and ML  
-✅ **Supply Chain Optimization**: Real-time tracking and inventory management  
-✅ **Market Intelligence**: Comprehensive market analysis and competitor tracking  
-✅ **Clinical Data Analytics**: Trial data analysis and safety monitoring  
-✅ **Production Planning**: Batch optimization and resource allocation  
-✅ **Regulatory Compliance**: Automated reporting and audit trails
-
----
-
-### 4. Medical Imaging AI
+### 3. Medical Imaging AI
 
 Computer vision for medical image analysis:
 
@@ -178,43 +159,9 @@ Computer vision for medical image analysis:
 
 ---
 
-## Industry Benefits
-
-### For Hospitals
-
-> **50% reduction** in administrative tasks  
-> **30% improvement** in diagnostic accuracy  
-> **40% faster** patient processing  
-> **25% decrease** in medication errors
-
-### For Pharmaceutical Companies
-
-> **35% improvement** in demand forecasting accuracy  
-> **$2M annual savings** in supply chain optimization  
-> **20% faster** drug development cycles  
-> **90% compliance** with regulatory requirements
-
-### For Patients
-
-> **60% shorter** wait times  
-> **Better care coordination** across departments  
-> **24/7 access** to medical records  
-> **Improved treatment** outcomes
-
----
-
 ## Compliance & Security
 
 Our healthcare solutions are built with security and compliance at the core:
-
-### Regulatory Compliance
-
-✅ **HIPAA** (Health Insurance Portability and Accountability Act)  
-✅ **GDPR** (General Data Protection Regulation)  
-✅ **ISO 27001** (Information Security Management)  
-✅ **HL7 FHIR** (Fast Healthcare Interoperability Resources)  
-✅ **DICOM** (Digital Imaging and Communications in Medicine)  
-✅ **FDA 21 CFR Part 11** (Electronic Records and Signatures)
 
 ### Security Measures
 
@@ -227,47 +174,9 @@ Our healthcare solutions are built with security and compliance at the core:
 
 ---
 
-## Success Stories
-
-### United Hospital Ltd. - Digital Transformation
-
-**Challenge**: Manual processes, fragmented systems, long wait times
-
-**Solution**: Comprehensive HMS with AI diagnostics and PACS integration
-
-**Results**:
-- 45% reduction in patient wait times
-- 60% improvement in bed utilization
-- 99.9% system uptime
-- 4.8/5 patient satisfaction score
-
----
-
-### Square Pharmaceuticals - Supply Chain Intelligence
-
-**Challenge**: Stockouts, overstocking, demand volatility
-
-**Solution**: AI-powered demand forecasting and supply chain optimization
-
-**Results**:
-- 92% forecast accuracy
-- $1.8M annual savings
-- 75% reduction in stockouts
-- Real-time visibility across 200+ distribution points
-
----
-
 ## Get Started
 
-Transform your healthcare organization with intelligent systems designed for the future of medicine.
-
-### Our Process
-
-1. **Free Consultation**: 30-minute discovery call
-2. **Needs Assessment**: Detailed analysis of your requirements
-3. **Proposal**: Customized solution with timeline and pricing
-4. **Pilot Project**: Small-scale implementation to prove value
-5. **Full Deployment**: Complete rollout with training and support
+Transform your healthcare organization with intelligent systems built for clinical reality.
 
 ### Pricing Models
 

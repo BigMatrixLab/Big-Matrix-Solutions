@@ -108,7 +108,7 @@ We don't just build models. We deploy them at scale:
 
 ## Industry Applications
 
-**Healthcare**: Diagnosis, drug discovery, patient risk stratification  
+**Healthcare**: Diagnosis, medical imaging, patient risk stratification  
 **Finance**: Fraud detection, credit scoring, algorithmic trading  
 **Retail**: Demand forecasting, dynamic pricing, churn prediction  
 **Manufacturing**: Quality control, predictive maintenance  
@@ -120,7 +120,7 @@ We don't just build models. We deploy them at scale:
 
 ✅ **10+ years ML experience** across multiple industries  
 ✅ **Production-grade** models (not just research prototypes)  
-✅ **Domain expertise** in healthcare, pharma, finance  
+✅ **Domain expertise** in healthcare, industrial operations, finance  
 ✅ **End-to-end** from data to deployment  
 ✅ **Explainable AI** (interpretable models for regulated industries)  
 ✅ **Continuous improvement** (MLOps, retraining, monitoring)

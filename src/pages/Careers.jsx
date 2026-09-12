@@ -236,22 +236,22 @@ const Careers = () => {
                                     live, before it reaches this board. We still like hearing from
                                     good engineers between postings.
                                 </p>
+                            </div>
 
-                                <div className="bm-tuned__actions">
-                                    <a
-                                        className="bm-tuned__cta"
-                                        href={LINKEDIN}
-                                        target="_blank"
-                                        rel="noopener noreferrer"
-                                    >
-                                        Follow on LinkedIn
-                                        <i className="bi bi-box-arrow-up-right" aria-hidden="true"></i>
-                                    </a>
-                                    <Link to="/contact" className="bm-button bm-button--ghost">
-                                        Get in touch
-                                        <i className="bi bi-arrow-right" aria-hidden="true"></i>
-                                    </Link>
-                                </div>
+                            <div className="bm-tuned__actions">
+                                <a
+                                    className="bm-tuned__cta"
+                                    href={LINKEDIN}
+                                    target="_blank"
+                                    rel="noopener noreferrer"
+                                >
+                                    Follow on LinkedIn
+                                    <i className="bi bi-box-arrow-up-right" aria-hidden="true"></i>
+                                </a>
+                                <Link to="/contact" className="bm-button bm-button--ghost">
+                                    Get in touch
+                                    <i className="bi bi-arrow-right" aria-hidden="true"></i>
+                                </Link>
                             </div>
                         </aside>
                     )}

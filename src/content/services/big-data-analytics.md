@@ -14,7 +14,7 @@ desc: "Scalable data engineering, predictive modeling, and large-scale processin
 
 ## Transform Massive Data Into Strategic Insights
 
-Most organisations already hold more data than they can use. The bottleneck is rarely collection; it is getting a trustworthy answer out the other end. We build pipelines and analytics that handle terabytes of healthcare, pharmaceutical and enterprise data, and that someone can actually rely on.
+Most organisations already hold more data than they can use. The bottleneck is rarely collection; it is getting a trustworthy answer out the other end. We build pipelines and analytics that handle terabytes of healthcare, industrial and enterprise data, and that someone can actually rely on.
 
 
 ### 1. **Scalable Data Engineering**
@@ -33,8 +33,8 @@ Modern data infrastructure that handles massive volumes:
 **Use Cases**:
 - Process 50M+ patient records for population health analytics
 - Real-time IoT sensor data from 10,000+ medical devices
-- Aggregate pharmaceutical sales data from 5,000+ pharmacies
-- Clinical trial data integration (EDC systems, labs, imaging)
+- Aggregate operational data from hundreds of sites
+- Clinical data integration (EMR systems, labs, imaging)
 
 ---
 
@@ -46,7 +46,6 @@ Advanced analytics that forecast outcomes:
 |-------------|-----------|----------|-----------------|
 | **Patient Readmission** | Gradient Boosting | 87% | $2M savings annually |
 | **Disease Outbreak** | Time Series (LSTM) | 14-day accuracy: 82% | Early intervention strategies |
-| **Drug Sales Forecasting** | Prophet + XGBoost | 92% | 30% inventory optimization |
 | **Equipment Failure** | Random Forest | 85% | 40% maintenance cost reduction |
 
 
@@ -112,12 +111,6 @@ Production-grade machine learning operations (MLOps):
 - Revenue cycle analytics (identify billing inefficiencies)
 - Readmission prediction and prevention
 
-### Pharmaceuticals
-- Drug sales forecasting across 1000+ SKUs
-- Supply chain analytics (end-to-end visibility)
-- Clinical trial data integration and analysis
-- Adverse event detection (pharmacovigilance)
-
 ### Industrial
 - Predictive maintenance (equipment failure forecasting)
 - Quality control (defect prediction, root cause analysis)
@@ -148,7 +141,7 @@ Production-grade machine learning operations (MLOps):
 
 ✅ **Scale Expertise**: Processed 100+ TB of healthcare data  
 ✅ **Performance**: Query billions of rows in < 1 second  
-✅ **Domain Knowledge**: Healthcare, pharma, industrial experience  
+✅ **Domain Knowledge**: Healthcare, industrial and public-sector experience  
 ✅ **Cloud Native**: AWS, Azure, GCP certified architects  
 ✅ **Security**: End-to-end encryption, HIPAA/GDPR compliant  
 ✅ **Support**: 24/7 monitoring and on-call data engineers

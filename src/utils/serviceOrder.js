@@ -19,7 +19,7 @@ export const SERVICE_GROUPS = [
         label: 'Healthcare & life sciences',
         note: 'Clinical, diagnostic and pharmaceutical systems — from imaging and treatment planning to hospital infrastructure.',
         slugs: [
-            'intelligent-healthcare-pharma',
+            'intelligent-healthcare-systems',
             'digital-hospital-infrastructure',
             'medical-imaging-ai-radiology',
             'radiotherapy-planning-contouring',

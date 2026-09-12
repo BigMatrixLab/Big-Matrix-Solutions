@@ -84,7 +84,7 @@ A false reject wastes a good part. A false accept ships a bad one. These almost 
 ## Industries we work in
 
 - Manufacturing quality control and end-of-line inspection
-- Pharmaceutical packaging and fill verification
+- Packaging integrity and fill-level verification
 - Electronics assembly and PCB inspection
 - Food and beverage processing
 - Warehouse and logistics verification
