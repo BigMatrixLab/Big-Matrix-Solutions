@@ -77,6 +77,7 @@ const AboutOne = () => {
                     <ValueSection
                         icon="target"
                         title="Our Mission"
+                        headline="What we are building."
                         description="To engineer advanced AI and big data platforms that transform how the world operates."
                         items={[
                             "Diagnostic tools for radiology, pathology and general medicine, with the clinician still signing the report.",
@@ -91,6 +92,7 @@ const AboutOne = () => {
                        <ValueSection
                             icon="eye"
                             title="Our Vision"
+                            headline="Where it is heading."
                             description="To architect the intelligent infrastructure of the future."
                             items={[
                                 "Integrated ecosystems replace fragmented software, connecting healthcare, pharmaceuticals and industry on shared foundations.",
@@ -105,6 +107,7 @@ const AboutOne = () => {
                     <ValueSection
                         icon="stars"
                         title="Core Values"
+                        headline="How we work."
                         description="The principles that guide our work and define our commitment to excellence."
                         items={[
                             "We build interconnected ecosystems rather than standalone apps that solve one problem and stop.",

@@ -11,7 +11,14 @@ const ICONS = {
  * Mission / vision / values block. A hairline-bordered panel with a
  * grid-washed aside and a stacked list of commitments.
  */
-const ValueSection = ({ icon, title, description, items = [], reversed = false }) => {
+const ValueSection = ({
+    icon,
+    title,
+    description,
+    headline = 'Empowering your future.',
+    items = [],
+    reversed = false,
+}) => {
     const IconComponent = ICONS[icon] || Target;
 
     return (
@@ -22,7 +29,7 @@ const ValueSection = ({ icon, title, description, items = [], reversed = false }
                 </span>
                 <div>
                     <span className="bm-value__label">{title}</span>
-                    <h3>Empowering your future.</h3>
+                    <h3>{headline}</h3>
                 </div>
             </div>
             <div className="bm-value__body">
