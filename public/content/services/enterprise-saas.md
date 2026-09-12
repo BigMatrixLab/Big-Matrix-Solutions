@@ -63,9 +63,3 @@ Connect with payment gateways, accounting software, CRMs, communication tools, a
 **Security**: AES-256 encryption, JWT/OAuth 2.0, MFA, SOC 2 compliant  
 **Scalability**: Horizontal scaling, database sharding, CDN, load balancing  
 
----
-
-## Success Stories
-
-**Manufacturing ERP**: Inventory accuracy 98% (was 75%)  
-**SaaS Platform**: 5,000 tenants, 99.97% uptime

@@ -110,13 +110,6 @@ Integrate intelligent automation:
 
 ---
 
-## Success Stories
-
-**Garment Factory** (500 looms): Downtime reduced from 12% to 3%, ROI in 14 months  
-**Food Processing Plant**: Batch release time 50% faster with automated quality checks  
-
----
-
 ## What you get working with us
 
 ✅ **Industrial domain expertise**: Textiles, food processing, heavy manufacturing  

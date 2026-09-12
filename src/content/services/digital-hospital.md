@@ -24,7 +24,6 @@ A hospital runs on a dozen systems that were bought separately and never introdu
 Complete patient history accessible anytime, anywhere:
 
 
-
 **Key Features**:
 - **Instant access** to complete patient history
 - **Templates** for common conditions (reduces documentation time by 40%)
@@ -53,7 +52,6 @@ End-to-end operational management:
 | **Inventory Management** | Medical supplies tracking, automated reordering, expiry alerts |
 | **HR & Payroll** | Staff scheduling, attendance, payroll processing |
 | **Asset Management** | Equipment tracking, maintenance scheduling, utilization analytics |
-
 
 
 **Benefits**:
@@ -118,7 +116,7 @@ Streamlined imaging workflows:
 - Mobile access for on-call radiologists
 
 ---
-![Lab Collaboration](https://images.unsplash.com/photo-1506744038136-46273834b3fb?auto=format&fit=crop&w=800&q=80)
+
 ### 5. **Pharmacy Management System**
 
 Complete medication lifecycle management:
@@ -142,7 +140,6 @@ Complete medication lifecycle management:
 ## Integration & Interoperability
 
 All systems talk to each other:
-
 
 
 ---
@@ -214,27 +211,6 @@ All systems talk to each other:
 - User feedback incorporation
 - Workflow refinements
 - Continuous updates
-
----
-
-## Success Stories
-
-### **City General Hospital** (500-bed facility)
-**Challenge**: Paper-based workflows, 3-day average for lab reports  
-**Solution**: Complete digital infrastructure implementation  
-**Results**:
-- Lab report time: 3 days → 4 hours
-- Billing errors: Reduced by 78%
-- Patient satisfaction: Increased from 3.2/5 to 4.7/5
-- ROI: Achieved in 18 months
-
-### **National Diagnostic Center Chain** (15 locations)
-**Challenge**: Fragmented lab systems, inconsistent reporting  
-**Solution**: Centralized LIMS with RIS integration  
-**Results**:
-- Standardized workflows across all locations
-- 40% increase in test volume capacity
-- Real-time inventory visibility saved $200K annually
 
 ---
 
