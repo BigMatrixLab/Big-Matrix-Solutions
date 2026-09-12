@@ -24,6 +24,11 @@ export const PARTNERS = [
         name: 'Neurogen Healthcare',
         logo: 'https://res.cloudinary.com/dcfny0d5c/image/upload/v1762248091/big-matrix/partners/Neurogen.png',
     },
+    {
+        id: 'cmosh',
+        name: 'Chattagram Maa-O-Shishu Hospital',
+        logo: 'https://res.cloudinary.com/dcfny0d5c/image/upload/v1789232458/big-matrix/partners/maa_o_shishu_hospital_logo_g0yrjy.png',
+    },
 ];
 
 export default PARTNERS;

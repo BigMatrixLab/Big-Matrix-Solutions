@@ -1,4 +1,4 @@
-Big-Matrix Lab Research Projects
+Big-Matrix Research & Development Lab Research Projects
 1. Multimodal Breast Cancer Intelligence Platform
 Development of a comprehensive multimodal AI system integrating mammography, ultrasound, pathology, clinical records, radiology reports, and genomic data for breast cancer screening, diagnosis, prognosis, report generation, treatment planning, and clinical decision support.
 2. AI-Powered Lung Cancer Detection and Reporting System
