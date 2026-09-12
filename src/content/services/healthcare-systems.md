@@ -29,7 +29,6 @@ From automated disease detection to clinical workflow automation, we build syste
 Machine learning for disease detection and diagnostic support:
 
 
-
 #### Supported Modalities
 
 | Modality | Applications | Accuracy |
@@ -116,7 +115,12 @@ Computer vision for medical image analysis:
 
 ### Technology Stack
 
-
+**Imaging AI**: PyTorch, MONAI, U-Net and transformer segmentation backbones, ONNX Runtime  
+**Medical Standards**: DICOM, DICOMweb, HL7 v2, FHIR R4, IHE profiles  
+**Imaging Infrastructure**: Orthanc and dcm4che PACS, OHIF viewer, NIfTI conversion pipelines  
+**Application**: React, TypeScript, FastAPI, PostgreSQL, Redis  
+**Deployment**: Docker, Kubernetes, on-premise or private cloud with air-gapped options  
+**Security**: OAuth 2.0/OIDC, AES-256 at rest, TLS 1.3 in transit, full audit logging  
 
 ---
 

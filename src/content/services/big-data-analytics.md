@@ -22,7 +22,6 @@ Most organisations already hold more data than they can use. The bottleneck is r
 Modern data infrastructure that handles massive volumes:
 
 
-
 **Technologies**:
 - **Apache Spark**: Distributed processing (10x+ faster than traditional ETL)
 - **Apache Kafka**: Real-time data streaming (millions of events/second)
@@ -49,13 +48,11 @@ Advanced analytics that forecast outcomes:
 | **Equipment Failure** | Random Forest | 85% | 40% maintenance cost reduction |
 
 
-
 ---
 
 ### 3. **Real-Time Analytics & Dashboards**
 
 Live insights for operational decision-making:
-
 
 
 **Capabilities**:
@@ -70,7 +67,6 @@ Live insights for operational decision-making:
 ### 4. **Data Warehousing & Business Intelligence**
 
 Centralized analytics infrastructure:
-
 
 
 **Architecture**:
@@ -90,7 +86,6 @@ Centralized analytics infrastructure:
 ### 5. **AI/ML Model Deployment & Monitoring**
 
 Production-grade machine learning operations (MLOps):
-
 
 
 **MLOps Capabilities**:
@@ -121,7 +116,12 @@ Production-grade machine learning operations (MLOps):
 
 ## Technology Stack
 
-
+**Ingestion**: Kafka, Debezium CDC, Airbyte, REST and HL7 feed adapters  
+**Processing**: Apache Spark, dbt, Pandas, Polars  
+**Orchestration**: Airflow, Dagster  
+**Storage**: PostgreSQL, ClickHouse, S3 and Delta Lake, Snowflake or BigQuery  
+**Modelling**: scikit-learn, XGBoost, Prophet, PyTorch  
+**Serving**: Metabase, Superset, Power BI, FastAPI endpoints  
 
 ---
 
