@@ -54,9 +54,7 @@ const AboutArea = () => {
           <div className="bm-lab__intro">
             <h3 className="bm-lab__title">Big-Matrix Research &amp; Development Lab</h3>
             <p className="bm-lab__body">
-              We develop models, software and tooling for medical research and clinical workflows:
-              AI-powered diagnostic systems, machine learning models, and data analytics
-              platforms that shorten the path from discovery to patient outcome.
+              We build AI models, software, and tools for medical research and clinical workflows. Our work includes AI-powered diagnostic systems, machine learning models, and data platforms that help turn research into better patient outcomes.
             </p>
 
             <a
