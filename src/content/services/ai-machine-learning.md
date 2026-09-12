@@ -46,20 +46,7 @@ Conversational AI, document analysis, and intelligent assistants:
 
 ---
 
-### 3. **Predictive Analytics & Forecasting**
-
-Time series, demand forecasting, risk prediction:
-
-| Application | Accuracy | Business Impact |
-|-------------|----------|----------------|
-| Sales Forecasting | 92% | Inventory optimization: 30% cost reduction |
-| Patient Readmission | 87% | $2M annual savings |
-| Equipment Failure | 85% | 40% maintenance cost down |
-| Fraud Detection | 96% | $5M fraud prevented |
-
----
-
-### 4. **Computer Vision Systems**
+### 3. **Computer Vision Systems**
 
 - Quality control (99.5% defect detection)
 - Medical imaging (radiologist-level accuracy)
@@ -69,7 +56,7 @@ Time series, demand forecasting, risk prediction:
 
 ---
 
-### 5. **Natural Language Processing**
+### 4. **Natural Language Processing**
 
 - Sentiment analysis (customer feedback, social media)
 - Named entity recognition (extract structured data from text)
@@ -79,7 +66,7 @@ Time series, demand forecasting, risk prediction:
 
 ---
 
-### 6. **Recommender Systems**
+### 5. **Recommender Systems**
 
 - Product recommendations (e-commerce)
 - Content personalization (news, videos)
@@ -92,7 +79,16 @@ Time series, demand forecasting, risk prediction:
 
 We don't just build models. We deploy them at scale:
 
+**Deployment**:
+- Containerised serving with autoscaling, on your cloud or your own hardware
+- Canary and shadow rollouts, so a new model proves itself against the live one
+- Versioned model registry, so any prediction traces back to the exact artifact
 
+**Keeping it working**:
+- Drift detection on inputs and predictions, with alerting before accuracy slips
+- Scheduled retraining on fresh data, gated by evaluation rather than a calendar
+- Latency, throughput and cost tracked per endpoint
+- Full prediction logging for audit, which regulated deployments need anyway
 
 ---
 
@@ -118,7 +114,7 @@ We don't just build models. We deploy them at scale:
 
 ## Why teams pick us for this
 
-✅ **10+ years ML experience** across multiple industries  
+✅ **7+ years ML experience** across multiple industries  
 ✅ **Production-grade** models (not just research prototypes)  
 ✅ **Domain expertise** in healthcare, industrial operations, finance  
 ✅ **End-to-end** from data to deployment  

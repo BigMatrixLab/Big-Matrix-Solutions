@@ -83,5 +83,3 @@ The last one matters more than it looks. Every hard-coded model name is a small 
 ## Why work with us
 
 We publish on this continuously: evaluation, context engineering, agent security, long-horizon reliability. Not marketing, just what we hit while building. So you get a straight read on what agents can carry today, and when a plain pipeline will serve you better and cost a tenth as much.
-
-Send us the workflow you want automated. We'll tell you whether an agent is the right tool for it.
