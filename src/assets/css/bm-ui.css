@@ -3142,6 +3142,83 @@ a.bm-card__title:hover,
   color: var(--bm-text-2);
 }
 
+/* ---------- Careers: nothing open ----------
+   Shown when no role can be applied for. Same surface, hairline and radius as
+   the job cards above it, so it reads as part of the board rather than a
+   bolted-on advert. Everything is a semantic token, so dark theme follows. */
+
+.bm-tuned {
+  padding: clamp(32px, 4vw, 56px);
+  background: var(--bm-surface);
+  border: 1px solid var(--bm-line);
+  border-radius: var(--bm-r-lg);
+}
+
+.bm-tuned__actions {
+  display: flex;
+  flex-wrap: wrap;
+  gap: var(--bm-3);
+  margin-top: var(--bm-5);
+}
+
+.bm-tuned__eyebrow {
+  display: inline-flex;
+  align-items: center;
+  gap: 10px;
+  margin: 0 0 10px;
+  font-family: var(--bm-font-mono) !important;
+  font-size: var(--bm-fs-label);
+  font-weight: 500;
+  line-height: 1;
+  letter-spacing: var(--bm-track-label);
+  text-transform: uppercase;
+  color: var(--bm-orange-ink);
+}
+
+.bm-tuned__eyebrow::before {
+  content: '';
+  flex: 0 0 auto;
+  width: 6px;
+  height: 6px;
+  background: var(--bm-orange);
+}
+
+.bm-tuned__title {
+  margin: 0 0 8px;
+  font-family: var(--bm-font-display) !important;
+  font-size: clamp(1.25rem, 1.05rem + 0.7vw, 1.6rem);
+  font-weight: 600;
+  line-height: 1.15;
+  letter-spacing: var(--bm-track-display);
+  color: var(--bm-text);
+}
+
+.bm-tuned__text {
+  max-width: 52ch;
+  margin: 0;
+  color: var(--bm-text-2);
+}
+
+.bm-tuned__cta {
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+  gap: 8px;
+  min-height: 44px;
+  padding: 11px 18px;
+  font-size: var(--bm-fs-sm);
+  font-weight: 600;
+  white-space: nowrap;
+  color: var(--bm-solid-fg);
+  background: var(--bm-solid);
+  border-radius: var(--bm-r-sm);
+  transition: background var(--bm-dur) var(--bm-ease), color var(--bm-dur) var(--bm-ease);
+}
+
+.bm-tuned__cta:hover { color: #fff; background: var(--bm-orange-fill); }
+.bm-tuned__cta i { transition: transform var(--bm-dur) var(--bm-ease); }
+.bm-tuned__cta:hover i { transform: translate(2px, -2px); }
+
 @media (max-width: 860px) {
   .bm-job { grid-template-columns: minmax(0, 1fr); }
 
@@ -3156,6 +3233,10 @@ a.bm-card__title:hover,
 @media (max-width: 575px) {
   .bm-jobs__filter { flex-direction: column; align-items: flex-start; }
   .bm-job__facts { grid-template-columns: minmax(0, 1fr); }
+
+  /* Full-width buttons stacked, rather than two cramped side by side. */
+  .bm-tuned__actions { flex-direction: column; align-items: stretch; }
+  .bm-tuned__cta { width: 100%; }
 }
 
 /* ==========================================================================
