@@ -71,7 +71,7 @@ The step almost everyone skips, and the reason most RAG systems never improve:
 **Models**: Embedding and generation models chosen per corpus and budget
 **Deployment**: Fully self-hosted where documents cannot leave your infrastructure
 
-## Typical projects
+## Possible projects
 
 - Internal knowledge bases and policy libraries
 - Clinical guidelines and protocol lookup
