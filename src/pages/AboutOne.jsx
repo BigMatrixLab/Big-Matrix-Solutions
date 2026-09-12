@@ -78,10 +78,10 @@ const AboutOne = () => {
                         icon="target"
                         title="Our Mission"
                         headline="What we are building."
-                        description="To engineer advanced AI and big data platforms that transform how the world operates."
+                        description="To engineer advanced AI platforms that transform how the world operates."
                         items={[
                             "Diagnostic tools for radiology, pathology and general medicine, with the clinician still signing the report.",
-                            "Software that drives hospital and factory machinery, so care and production stop waiting on manual steps.",
+                            "Software that drives hospital and infrastructure, so care and production stop waiting on manual steps.",
                             "Disease mapping and demand forecasting that let governments and pharma move before an outbreak or a stockout.",
                             "Research that leaves the lab, turning mathematical models and deep learning into systems people actually run."
                         ]}
@@ -103,7 +103,7 @@ const AboutOne = () => {
                             reversed={false}
                         />
                    
-{/* Core Values */}
+                    {/* Core Values */}
                     <ValueSection
                         icon="stars"
                         title="Core Values"
