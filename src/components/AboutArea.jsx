@@ -38,7 +38,7 @@ const AboutArea = () => {
         <SectionHead
           eyebrow="Our dedicated lab"
           title="Transforming healthcare with AI-powered systems"
-          lead="Big-Matrix Lab is where the research happens — models, trials and tooling that graduate into the products our clients run every day."
+          lead="Big-Matrix Research &amp; Development Lab is where the research happens — models and tooling that graduate into the products our clients run every day."
         />
 
         <div className="bm-lab__split">
@@ -54,7 +54,7 @@ const AboutArea = () => {
           <div className="bm-lab__intro">
             <h3 className="bm-lab__title">Big-Matrix Research &amp; Development Lab</h3>
             <p className="bm-lab__body">
-              We develop software and tooling for medical research and clinical workflows:
+              We develop models, software and tooling for medical research and clinical workflows:
               AI-powered diagnostic systems, machine learning models, and data analytics
               platforms that shorten the path from discovery to patient outcome.
             </p>

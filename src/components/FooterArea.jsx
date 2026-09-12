@@ -22,7 +22,7 @@ const SERVICE_LINKS = [
 const SOCIAL_LINKS = [
     { href: 'https://www.facebook.com/profile.php?id=61566031568599', label: 'Facebook', icon: 'bi-facebook' },
     { href: 'https://github.com/BigMatrixLab', label: 'GitHub', icon: 'bi-github' },
-    { href: 'https://big-matrix.com', label: 'Big-Matrix Lab', icon: 'bi-globe2' },
+    { href: 'https://big-matrix.com', label: 'Big-Matrix Research & Development Lab', icon: 'bi-globe2' },
 ];
 
 const FooterArea = () => {
@@ -82,7 +82,7 @@ const FooterArea = () => {
 
                 <div className="bm-footer__bottom">
                     <p className="bm-footer__copy">
-                        © {new Date().getFullYear()} Big-Matrix Lab. All rights reserved.
+                        © {new Date().getFullYear()} Big-Matrix Research & Development Lab. All rights reserved.
                     </p>
                     <ul className="bm-footer__social">
                         {SOCIAL_LINKS.map((social) => (
