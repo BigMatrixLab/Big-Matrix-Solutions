@@ -1920,6 +1920,12 @@ a.bm-card__title:hover,
   padding: var(--bm-5);
   border-top: 1px solid var(--bm-line);
   transition: background var(--bm-dur) var(--bm-ease-inout);
+
+  /* Vertical centre of the title's first line, measured from the row's content
+     top: the body's 2px offset plus half the title line box (1.0625rem x 1.3).
+     The index and the icon are centred on this instead of sitting flush with
+     the row top, where a 40px icon box lands about 7px below the title. */
+  --bm-row-title-mid: calc(2px + 1.0625rem * 1.3 / 2);
 }
 
 .bm-row:first-child { border-top: 0; }
@@ -1942,7 +1948,9 @@ a.bm-card__title:hover,
 .bm-row:hover::before { transform: scaleY(1); }
 
 .bm-row__index {
-  padding-top: 10px;
+  /* Centred on the title line: half this element's own line box is
+     12px x 1.65 / 2 = 9.9px. */
+  padding-top: calc(var(--bm-row-title-mid) - 9.9px);
   font-family: var(--bm-font-mono) !important;
   font-size: 12px;
   letter-spacing: 0.08em;
@@ -1950,6 +1958,10 @@ a.bm-card__title:hover,
 }
 
 .bm-row__icon {
+  /* Top edge flush with the title's first line, matching .bm-row__body's own
+     2px offset. Centring the 40px box on a 22px line instead pushed it 9px
+     above the title, which read as floating rather than aligned. */
+  margin-top: 2px;
   display: inline-flex;
   align-items: center;
   justify-content: center;
