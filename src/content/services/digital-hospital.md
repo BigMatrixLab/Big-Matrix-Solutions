@@ -3,7 +3,7 @@ id: "2"
 slug: "digital-hospital-infrastructure"
 title: "Digital Hospital, Laboratory & Clinical Infrastructure"
 icon: "bi bi-building"
-image: "https://images.unsplash.com/photo-1519389950473-47ba0277781c?w=800&q=80&auto=format&fit=crop"
+image: "https://images.unsplash.com/photo-1576091160550-2173dba999ef?w=800&q=80&auto=format&fit=crop"
 desc: "Complete digital infrastructure including EMR, EHR, HMS, LIMS, RIS, and Pharmacy Management systems for modern healthcare facilities."
 ---
 
