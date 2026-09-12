@@ -7,38 +7,40 @@ import CtaBand from '../components/CtaBand';
 import Seo from '../components/Seo';
 
 const PRACTICE_AREAS = [
+   
     {
+        icon: 'bi-cpu',
+        title: 'Advanced AI Development',
+        desc: 'Computational models, deep learning and predictive analytics for complex problem solving.',
+    },
+     {
+        icon: 'bi-cloud-check',
+        title: 'SaaS Platforms',
+        desc: 'Multi-tenant architecture, subscription billing and release engineering for software that runs in production.',
+    },
+     {
         icon: 'bi-hospital',
         title: 'Healthcare Ecosystems',
         desc: 'Intelligent digital solutions including EMR, HMS and diagnostics for modern healthcare delivery.',
-    },
-    {
-        icon: 'bi-cpu',
-        title: 'Advanced AI Research',
-        desc: 'Computational models, deep learning and predictive analytics for complex problem solving.',
     },
     {
         icon: 'bi-gear-wide-connected',
         title: 'Industrial Transformation',
         desc: 'Enterprise automation, smart manufacturing systems and data-driven operational optimisation.',
     },
-    {
-        icon: 'bi-shield-lock',
-        title: 'Secure Infrastructure',
-        desc: 'Scalable, compliant cloud architecture meeting the highest standards of data security.',
-    },
+   
 ];
 
 const AboutOne = () => {
     return (
         <>
             <Seo
-                title="About the lab"
-                description="A research and development lab that ships production software. Who we are, how we work, and the practice areas we build in."
+                title="About the company"
+                description="A research and development company that ships production software. Who we are, how we work, and the practice areas we build in."
                 path="/about"
             />
             <Breadcrumb
-                pageTitle="A lab that ships production software"
+                pageTitle="A company that ships production software"
                 breadcrumbItem="About"
             />
 
@@ -77,11 +79,10 @@ const AboutOne = () => {
                         title="Our Mission"
                         description="To engineer advanced AI and big data platforms that transform how the world operates."
                         items={[
-                            "Developing Clinical Excellence: Building AI-powered diagnostic tools that enhance accuracy in radiology, pathology, and general medicine.",
-                            "Advancing Industrial Automation: Creating software that intelligently handles regular industrial and hospital machinery to optimize production and care.",
-                            "Empowering Public Health: Providing governments and pharma companies with disease mapping and predictive analytics to manage outbreaks and drug supply chains.",
-                            "Bridging Research and Application: Utilizing our dedicated research facility to turn complex mathematical models and deep learning into deployable enterprise solutions.",
-                            "Ensuring Secure Scalability: Designing EHR/EMR and management systems that are secure, compliant, and capable of handling massive datasets across multiple industries."
+                            "Diagnostic tools for radiology, pathology and general medicine, with the clinician still signing the report.",
+                            "Software that drives hospital and factory machinery, so care and production stop waiting on manual steps.",
+                            "Disease mapping and demand forecasting that let governments and pharma move before an outbreak or a stockout.",
+                            "Research that leaves the lab, turning mathematical models and deep learning into systems people actually run."
                         ]}
                         reversed={true}
                     />
@@ -92,24 +93,24 @@ const AboutOne = () => {
                             title="Our Vision"
                             description="To architect the intelligent infrastructure of the future."
                             items={[
-                                "Integrated Ecosystems replace fragmented software, creating seamless connectivity across healthcare, pharma, and industry.",
-                                "AI-Driven Decision Making is the global standard for clinical accuracy, industrial efficiency, and public health safety.",
-                                "Scalable Intelligence is accessible at every level—from individual clinics to national government infrastructures.",
-                                "Data-Driven Prediction eliminates systemic waste and prepares society for future health and industrial challenges."
+                                "Integrated ecosystems replace fragmented software, connecting healthcare, pharmaceuticals and industry on shared foundations.",
+                                "AI-assisted decisions set the working standard for clinical accuracy, industrial efficiency and public health safety.",
+                                "Scalable intelligence reaches every level, from a single clinic to national infrastructure.",
+                                "Prediction replaces reaction, cutting systemic waste and preparing for health and industrial pressures still ahead."
                             ]}
                             reversed={false}
                         />
                    
-
+{/* Core Values */}
                     <ValueSection
                         icon="stars"
                         title="Core Values"
                         description="The principles that guide our work and define our commitment to excellence."
                         items={[
-                            "Systemic Innovation: We don't just build apps; we build interconnected ecosystems.",
-                            "Scientific Integrity: Every AI model is backed by rigorous research and mathematical validation.",
-                            "Scalability by Design: We engineer solutions today that are ready for the data loads of tomorrow.",
-                            "Cross-Industry Transformation: We translate high-level intelligence from healthcare into education, garments, and heavy industry."
+                            "We build interconnected ecosystems rather than standalone apps that solve one problem and stop.",
+                            "Every model is backed by research and mathematical validation before it reaches a patient.",
+                            "We engineer for the data loads of tomorrow, not the ones already comfortable today.",
+                            "Intelligence proven in healthcare carries across into education, garments and heavy industry."
                         ]}
                         reversed={true}
                     />
