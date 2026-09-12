@@ -1,14 +1,14 @@
 ---
 id: "2"
 slug: "digital-hospital-infrastructure"
-title: "Digital Hospital, Laboratory & Clinical Infrastructure"
+title: "Digital Hospital, Laboratory & Clinical Systems"
 icon: "bi bi-building"
 image: "https://images.unsplash.com/photo-1576091160550-2173dba999ef?w=800&q=80&auto=format&fit=crop"
-desc: "Complete digital infrastructure including EMR, EHR, HMS, LIMS, RIS, and Pharmacy Management systems for modern healthcare facilities."
+desc: "EMR, EHR, HMS, LIMS, RIS and pharmacy systems for hospitals and laboratories, with AI diagnostic support built into the clinical workflow."
 ---
 
 
-﻿# Digital Hospital, Laboratory & Clinical Infrastructure
+﻿# Digital Hospital, Laboratory & Clinical Systems
 
 
 ## Transform Healthcare Delivery with Integrated Digital Systems
@@ -137,6 +137,26 @@ Complete medication lifecycle management:
 
 ---
 
+### 6. **AI-Powered Diagnostic Support**
+
+Machine learning for disease detection and diagnostic support, wired into the
+systems above rather than bolted on beside them:
+
+| Modality | Applications |
+|----------|--------------|
+| **Radiology** | X-Ray, CT, MRI analysis |
+| **Pathology** | Tissue slide analysis, cell counting |
+| **Cardiology** | ECG analysis, echo interpretation |
+| **Ophthalmology** | Retinal disease detection |
+| **Dermatology** | Skin lesion classification |
+
+Findings surface inside the clinician's existing workflow, and the clinician
+signs the report. Deeper imaging work, including segmentation, automated
+reporting and radiotherapy contouring, is covered by our medical imaging
+practice.
+
+---
+
 ## Integration & Interoperability
 
 All systems talk to each other:
@@ -180,6 +200,17 @@ All systems talk to each other:
 
 ---
 
+## Technology Stack
+
+**Clinical Standards**: HL7 v2, FHIR R4, DICOM, DICOMweb, IHE profiles, ICD-10, SNOMED CT, LOINC
+**Application**: React, TypeScript, FastAPI, PostgreSQL, Redis
+**Imaging**: Orthanc and dcm4che PACS, OHIF viewer
+**Diagnostic AI**: PyTorch, MONAI, ONNX Runtime
+**Deployment**: Docker, Kubernetes, on-premise or private cloud with air-gapped options
+**Security**: OAuth 2.0/OIDC, AES-256 at rest, TLS 1.3 in transit, full audit logging
+
+---
+
 ## Implementation Methodology
 
 ### Phase 1: Assessment (2-4 weeks)
@@ -211,6 +242,15 @@ All systems talk to each other:
 - User feedback incorporation
 - Workflow refinements
 - Continuous updates
+
+---
+
+## Pricing Models
+
+- **Subscription**: Monthly or annual SaaS pricing
+- **Perpetual License**: One-time purchase with maintenance
+- **Custom Development**: Tailored solutions for unique needs
+- **Managed Services**: Fully managed hosting and support
 
 ---
 

@@ -17,12 +17,10 @@
 export const SERVICE_GROUPS = [
     {
         label: 'Healthcare & life sciences',
-        note: 'Clinical, diagnostic and pharmaceutical systems — from imaging and treatment planning to hospital infrastructure.',
+        note: 'Clinical and diagnostic systems, from imaging and treatment planning to hospital infrastructure.',
         slugs: [
-            'intelligent-healthcare-systems',
             'digital-hospital-infrastructure',
             'medical-imaging-ai-radiology',
-            'radiotherapy-planning-contouring',
         ],
     },
     {
@@ -32,9 +30,7 @@ export const SERVICE_GROUPS = [
             'ai-machine-learning',
             'agentic-ai-llm-engineering',
             'retrieval-knowledge-systems',
-            'document-intelligence-reporting',
             'computer-vision-inspection',
-            'ai-evaluation-assurance',
             'big-data-analytics',
             'enterprise-saas-platform',
         ],
@@ -43,8 +39,6 @@ export const SERVICE_GROUPS = [
         label: 'Infrastructure & operations',
         note: 'What keeps the rest running: automation on the floor, data pipelines underneath, and scale in the cloud.',
         slugs: [
-            'data-engineering-pipelines',
-            'mlops-model-lifecycle',
             'cloud-devops-architecture',
             'industrial-automation',
         ],
