@@ -1,3 +1,4 @@
+import { useState } from 'react';
 import { Link } from 'react-router-dom';
 import { blogsData } from '../data/content';
 import Breadcrumb from '../components/Breadcrumb';
@@ -7,12 +8,32 @@ import { sortBlogsByDate } from '../utils/blogSort';
 import { visibleBlogs, isScheduled, daysUntilPublish, usePreviewMode } from '../utils/publishSchedule';
 import Seo from '../components/Seo';
 
+/* The lead post plus two full rows of three, then three more per click. */
+const INITIAL_CARDS = 6;
+const CARDS_PER_LOAD = 3;
+
 const Blog = () => {
     const preview = usePreviewMode();
     const posts = sortBlogsByDate(visibleBlogs(blogsData, { includeScheduled: preview }));
     const [lead, ...rest] = posts;
     // Wrapped, not passed bare: filter would supply the index as `asOf`.
     const queued = preview ? posts.filter((post) => isScheduled(post)).length : 0;
+
+    const [shown, setShown] = useState(INITIAL_CARDS);
+
+    // Entering or leaving preview changes how many posts exist, so collapse
+    // back to the first page rather than leaving a half-expanded list. Adjusted
+    // during render rather than in an effect: React re-runs this component
+    // immediately without painting the stale count, where an effect would
+    // render the wrong length first and then correct it.
+    const [lastPreview, setLastPreview] = useState(preview);
+    if (lastPreview !== preview) {
+        setLastPreview(preview);
+        setShown(INITIAL_CARDS);
+    }
+
+    const visible = rest.slice(0, shown);
+    const remaining = rest.length - visible.length;
 
     return (
         <>
@@ -72,9 +93,9 @@ const Blog = () => {
                         </article>
                     )}
 
-                    {rest.length > 0 && (
+                    {visible.length > 0 && (
                         <div className="bm-grid bm-posts">
-                            {rest.map((post) => (
+                            {visible.map((post) => (
                                 <article className="bm-card" key={post.id}>
                                     <div className="bm-card__media">
                                         <img src={post.image} alt={post.title} loading="lazy" />
@@ -102,6 +123,24 @@ const Blog = () => {
                                     </div>
                                 </article>
                             ))}
+                        </div>
+                    )}
+
+                    {/* Hidden once the list is exhausted, so the control never
+                        sits there doing nothing. */}
+                    {remaining > 0 && (
+                        <div className="bm-posts__more">
+                            <button
+                                type="button"
+                                className="bm-button bm-button--ghost"
+                                onClick={() => setShown((count) => count + CARDS_PER_LOAD)}
+                            >
+                                Load more posts
+                                <i className="bi bi-arrow-down" aria-hidden="true"></i>
+                            </button>
+                            <p className="bm-posts__count" aria-live="polite">
+                                Showing {visible.length + 1} of {posts.length} posts
+                            </p>
                         </div>
                     )}
                 </div>

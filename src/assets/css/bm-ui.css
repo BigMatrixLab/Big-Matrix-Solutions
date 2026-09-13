@@ -3389,6 +3389,32 @@ a.bm-card__title:hover,
   text-decoration: underline;
 }
 
+/* Load-more control under the insights grid. Centred, with a quiet count so a
+   reader knows how much is left before deciding to click. */
+.bm-posts__more {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  gap: var(--bm-3);
+  margin-top: clamp(32px, 4vw, 56px);
+}
+
+.bm-posts__count {
+  margin: 0;
+  font-family: var(--bm-font-mono) !important;
+  font-size: var(--bm-fs-label);
+  letter-spacing: var(--bm-track-label);
+  color: var(--bm-text-3);
+}
+
+.bm-posts__more .bm-button i {
+  transition: transform var(--bm-dur) var(--bm-ease);
+}
+
+.bm-posts__more .bm-button:hover i {
+  transform: translateY(2px);
+}
+
 .bm-post-lead__title {
   margin: 0 0 var(--bm-3);
   font-family: var(--bm-font-display) !important;
