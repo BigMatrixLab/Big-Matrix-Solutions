@@ -67,6 +67,44 @@ Most production traffic doesn't need a frontier model. Classification, extractio
 The last one matters more than it looks. Every hard-coded model name is a small bet that today's ranking holds. It won't.
 
 
+### 5. **Memory & Long-Horizon State**
+
+An agent that forgets between runs is a chatbot with tools. Anything expected to work across days needs state that outlives the context window.
+
+- Task state in durable storage rather than held in the conversation
+- Scoped memory with explicit boundaries: per user, per project, per organisation
+- Deliberate write points, so recording something is a decision the agent makes rather than a side effect of talking
+- Retrieval over prior runs, so a repeated task starts from what was already established
+- Expiry and correction paths, because stale memory is worse than no memory
+
+The failure here is quiet. An agent acting on a fact that was true last month looks exactly like an agent working correctly, right up until it doesn't.
+
+
+### 6. **Integration Surface**
+
+Most of the engineering is not the agent. It is everything the agent has to reach.
+
+- MCP servers for tools worth reusing across agents and clients
+- Direct API integration where an extra protocol hop costs more than it returns
+- Browser and computer use for systems that never exposed an API
+- Database and warehouse access with read-only roles as the default
+- Webhook and queue triggers, so work starts on an event rather than on someone remembering to ask
+
+On legacy systems specifically: driving a UI is a legitimate last resort and a poor first choice. It breaks when the interface changes, and it usually breaks silently.
+
+
+### 7. **Human Handoff & Approval Design**
+
+The interface between the agent and the person checking it decides whether the system saves work or just moves it somewhere else.
+
+- Diffs and previews before an action commits, not a summary afterwards
+- One approval covering a batch where the risk profile allows it, instead of a prompt per step
+- Escalation that carries its context, so the reviewer is not re-reading an entire trajectory to make one call
+- Provenance on every output: which tool, which source, which run
+
+An approval queue nobody clears is its own failure mode. We design around how the reviewer's day actually works, because a control that gets bypassed is not a control.
+
+
 ## Technology Stack
 
 **Models**: Claude, GPT, Gemini and open-weight models, routed by task rather than by loyalty
@@ -79,6 +117,31 @@ The last one matters more than it looks. Every hard-coded model name is a small 
 - Document and workflow processing at volume
 - Research and analysis assistants over proprietary corpora
 - Customer-facing assistants that need bounded, auditable behaviour
+- Triage and routing work where the judgment is real but the stakes per item are low
+- Migration and refactor tasks that are mechanical in principle and messy in practice
+
+## When an agent is the wrong tool
+
+We would rather say this during scoping than bill for finding it out later.
+
+- **The task is deterministic and fully specified.** A script is cheaper, faster and testable, and it does not need a review step.
+- **Volume is high and per-item value is low.** Inference cost dominates and never stops.
+- **A wrong answer is unacceptable and there is no practical review step.** Without somewhere for a human to stand, the guardrails have nothing to hand off to.
+- **The data is not reachable or not consistent enough to act on.** That is a pipeline problem wearing an agent costume, and it gets solved at the data layer or not at all.
+
+A good share of projects that arrive described as agent work turn out to be a retrieval problem, a data-quality problem, or an ordinary workflow with a language model attached to the front of it.
+
+## How we work
+
+**Scoping.** We map the task as it is actually performed now, including the exceptions people handle without noticing they are handling them. Exceptions are usually where agents fail, and they are almost never in the written process.
+
+**A thin vertical slice.** One real task, end to end, against real systems, with the guardrails switched on. Most assumptions die here, and this is the cheapest place for that to happen.
+
+**Hardening.** Failure paths, approval design, token and step budgets, observability, and an evaluation set drawn from your own traffic rather than a public benchmark.
+
+**Handover.** Runbooks, cost visibility, and enough documentation that your team can change tools, prompts and routing without calling us.
+
+Evaluating the finished system, including trajectory review, regression testing and model migration, is covered by our AI Engineering, MLOps & Model Assurance practice.
 
 ## Why work with us
 

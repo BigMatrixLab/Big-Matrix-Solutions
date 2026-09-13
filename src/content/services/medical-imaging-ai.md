@@ -3,14 +3,14 @@ id: "3"
 slug: "medical-imaging-ai-radiology"
 title: "Medical Imaging AI, Radiology & Radiotherapy Planning"
 icon: "bi bi-lungs"
-image: "/assets/images/projects/lung ct segmentation and report generation.png"
+image: "https://images.unsplash.com/photo-1666214280250-41f16ba24a26?w=800&q=80&auto=format&fit=crop"
 desc: "Segmentation, detection, automated reporting and radiotherapy auto-contouring across X-ray, CT, MRI and pathology, built to survive different scanners and sites."
 ---
 
 
 # Medical Imaging AI, Radiology & Radiotherapy Planning
 
-![Lung CT segmentation with mask, overlay and generated analysis report](/assets/images/projects/lung%20ct%20segmentation%20and%20report%20generation.png)
+![Lung CT segmentation with mask, overlay and generated analysis report](https://images.unsplash.com/photo-1666214280250-41f16ba24a26?w=800&q=80&auto=format&fit=crop)
 
 ## From Pixels to a Report a Radiologist Will Sign
 
@@ -105,6 +105,48 @@ The work that decides whether any of the above survives contact with your depart
 - Drift monitoring after go-live
 
 Boundary accuracy is the number that matters in planning. A structure that is right on average and two millimetres out at the margin changes the plan.
+
+---
+
+### 8. **Clinical Workflow Integration**
+
+A model that requires a radiologist to leave their reporting environment will not be used, however good it is.
+
+- Results delivered into the existing PACS and reporting workflow rather than a separate portal nobody opens
+- Worklist integration, so prioritisation happens where the queue already lives
+- Structured output that populates your report template instead of arriving as free text to retype
+- DICOM secondary capture and structured report objects, so findings are stored where the study is
+- Sensible handling of prior studies, since comparison against last year's scan is most of the clinical question
+
+Adoption is an interface problem far more often than an accuracy problem. We design the handover to the clinician first and work backwards from it.
+
+---
+
+### 9. **Data, Annotation & Ground Truth**
+
+Everything above depends on what the model was taught, and clinical annotation is expensive, scarce and inconsistent.
+
+- Annotation protocols written with the clinicians who will use the output, so labels mean one thing
+- Inter-observer agreement measured before a dataset is trusted, because disagreement between experts is the realistic ceiling on performance
+- De-identification pipelines that handle burned-in pixel text as well as DICOM headers
+- Consent, governance and data-sharing agreements handled as part of the build rather than assumed
+- Versioned datasets tied to model versions, so any result can be traced back to what produced it
+- Deliberate sampling across scanners, protocols, demographics and disease prevalence
+
+---
+
+### 10. **Regulatory Pathway & Evidence**
+
+Where the intended use determines how much evidence is enough.
+
+- Intended-use statement drafted early, because it decides the regulatory class and everything downstream
+- Risk management and traceability documentation maintained during development, not reconstructed afterwards
+- Retrospective validation first, then prospective where the claim requires it
+- Reader studies and automation-bias assessment: whether the assisted clinician performs better, not just whether the model scores well alone
+- Frozen, auditable model versions, since a validated device cannot silently change underneath its evidence
+- Post-market surveillance and drift monitoring as an ongoing obligation
+
+We will be direct about which side of the regulatory line a proposed feature falls on. Research and triage-support tooling, clinical decision support, and a diagnostic claim are three very different projects, and the difference is usually a sentence in the intended-use statement.
 
 ---
 
