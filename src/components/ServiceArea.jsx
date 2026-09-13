@@ -5,10 +5,10 @@ import { servicesData } from '../data/content';
 
 // Explicit display order for the homepage solutions index (cap at five).
 const HOME_SERVICE_ORDER = [
+    'medical-imaging-ai-radiology',
     'ai-machine-learning',
-    'big-data-analytics',
     'enterprise-saas-platform',
-    'industrial-automation',
+    'big-data-analytics',
     'cloud-devops-architecture',
 ];
 
