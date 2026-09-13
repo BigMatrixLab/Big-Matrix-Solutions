@@ -594,7 +594,7 @@ const ProjectRxCloud = () => {
                     </div>
 
                     <div className="bc-pub" style={{ marginTop: '48px' }}>
-                        <span className="bc-pub-icon"><i className="bi bi-hospital"></i></span>
+                        <span className="bc-pub-icon"><img src="https://tousifurrahman.rxcloud.care/doctors/logo.png" alt="" /></span>
                         <div>
                             <div className="bc-pub-label">Try it live</div>
                             <h4>RxCloud is live at rxcloud.care</h4>

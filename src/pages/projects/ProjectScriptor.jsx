@@ -575,7 +575,7 @@ const ProjectScriptor = () => {
             </section> */}
 
             {/* ── Plans ── */}
-            <section className="bc-section" id="plans">
+            {/* <section className="bc-section" id="plans">
                 <div className="bc-container">
                     <div className="bc-section-head">
                         <span className="bc-eyebrow">Plans</span>
@@ -603,7 +603,7 @@ const ProjectScriptor = () => {
                         ))}
                     </div>
                 </div>
-            </section>
+            </section> */}
 
             {/* ── Technology ── */}
             <section className="bc-section bc-alt" id="stack">
