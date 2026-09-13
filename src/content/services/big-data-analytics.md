@@ -160,6 +160,27 @@ Where this practice meets the AI work:
 
 ---
 
+## How we work
+
+**Trace one number end to end.** Before proposing an architecture we follow a single metric the business already argues about, from the system that generates it to the report that shows it. That path exposes the real problem faster than any workshop, and it is usually not where anyone expected.
+
+**Fix the contract before the pipeline.** Agreeing what a field means, who owns it and what happens when it changes prevents most of the failures that later get blamed on tooling.
+
+**Deliver one trustworthy dataset first.** A single curated table that a team genuinely relies on beats a warehouse of everything nobody checks. It also proves the quality tests work before the surface area grows.
+
+**Hand over the tests, not just the tables.** Documentation, lineage and a suite your own analysts can extend, so the platform does not depend on us to stay correct.
+
+---
+
+## When the problem is not the data platform
+
+- **A single report is wrong.** Fix that report. A warehouse programme is a large answer to a small question.
+- **The source systems disagree on definitions.** No pipeline reconciles what the business has not decided. That conversation comes first.
+- **The volume is modest and stable.** A well-indexed database and scheduled queries will outperform a distributed stack that nobody on the team can operate.
+- **The real requirement is a dashboard nobody will open.** We would rather ask who makes which decision with it, and build backwards from that.
+
+---
+
 ## What sets our approach apart
 
 ✅ **We depend on this layer ourselves**: our AI work is only as good as the pipelines under it  
