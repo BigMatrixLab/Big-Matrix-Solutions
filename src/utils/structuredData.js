@@ -54,7 +54,7 @@ export const organisation = () => ({
         'Research and development lab building production AI systems for healthcare, industry and public infrastructure.',
     // Kept in step with SOCIAL_LINKS in src/components/FooterArea.jsx.
     sameAs: [
-        'https://www.facebook.com/profile.php?id=61566031568599',
+        'https://www.linkedin.com/company/big-matrix-solutions/',
         'https://github.com/BigMatrixLab',
     ],
 });

@@ -20,7 +20,7 @@ const SERVICE_LINKS = [
 ];
 
 const SOCIAL_LINKS = [
-    { href: 'https://www.facebook.com/profile.php?id=61566031568599', label: 'Facebook', icon: 'bi-facebook' },
+    { href: 'https://www.linkedin.com/company/big-matrix-solutions/', label: 'LinkedIn', icon: 'bi-linkedin' },
     { href: 'https://github.com/BigMatrixLab', label: 'GitHub', icon: 'bi-github' },
     { href: 'https://big-matrix.com', label: 'Big-Matrix Research & Development Lab', icon: 'bi-globe2' },
 ];
