@@ -66,7 +66,7 @@ const FooterArea = () => {
                         <ul className="bm-footer__contact">
                             <li>
                                 <i className="bi bi-envelope" aria-hidden="true"></i>
-                                <a href="mailto:bigmatrixsolutions@gmail.com">bigmatrixsolutions@gmail.com</a>
+                                <a href="mailto:contact@big-matrix.com">contact@big-matrix.com</a>
                             </li>
                             <li>
                                 <i className="bi bi-telephone" aria-hidden="true"></i>

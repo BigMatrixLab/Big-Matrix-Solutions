@@ -11,7 +11,7 @@ import { graph, service as serviceSchema, breadcrumbs } from '../utils/structure
 
 const PHONE_LABEL = '+880 2 55668200 (6212)';
 const PHONE_HREF = 'tel:+880255668200';
-const EMAIL = 'bigmatrixsolutions@gmail.com';
+const EMAIL = 'contact@big-matrix.com';
 
 const ServiceDetails = () => {
     const { slug } = useParams();

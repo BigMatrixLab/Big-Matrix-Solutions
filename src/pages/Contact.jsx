@@ -144,8 +144,8 @@ const DIRECT_LINES = [
     {
         icon: 'bi bi-envelope-fill',
         label: 'Email',
-        value: 'bigmatrixsolutions@gmail.com',
-        href: 'mailto:bigmatrixsolutions@gmail.com',
+        value: 'contact@big-matrix.com',
+        href: 'mailto:contact@big-matrix.com',
     },
     {
         icon: 'bi bi-geo-alt-fill',
