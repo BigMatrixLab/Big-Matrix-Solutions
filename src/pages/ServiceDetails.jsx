@@ -9,8 +9,8 @@ import { orderedServices, padIndex } from '../utils/serviceOrder';
 import Seo from '../components/Seo';
 import { graph, service as serviceSchema, breadcrumbs } from '../utils/structuredData';
 
-const PHONE_LABEL = '+880 2 55668200 (6212)';
-const PHONE_HREF = 'tel:+880255668200';
+const PHONE_LABEL = '+880 1339 870730';
+const PHONE_HREF = 'tel:+8801339870730';
 const EMAIL = 'contact@big-matrix.com';
 
 const ServiceDetails = () => {
