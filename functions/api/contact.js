@@ -211,22 +211,31 @@ function validate(payload) {
 /* -------------------------------------------------------------------------- */
 
 /*
- * Both templates are intentionally plain: system fonts, one border, no images,
- * no tracking pixel of our own, no promotional wording and at most one link.
- * Image-heavy, button-heavy mail with many links is exactly what Gmail's
- * Promotions classifier looks for. Every message also ships a real plain-text
- * part — a missing text/plain alternative is one of the strongest spam signals
- * there is.
+ * Both templates are intentionally plain: system fonts, no images, no tracking
+ * pixel of our own, no promotional wording and at most one link. Image-heavy,
+ * button-heavy mail with many links is exactly what Gmail's Promotions
+ * classifier looks for. Every message also ships a real plain-text part — a
+ * missing text/plain alternative is one of the strongest spam signals there is.
  */
 
+/*
+ * No centred card: the content runs the full width of whatever the client gives
+ * it, on a plain white background.
+ *
+ * The wrapper div still exists and still carries the typography, because Gmail
+ * discards <html> and <body> and reparents the content — styling the body alone
+ * would silently lose the font stack there. Only the card chrome is gone
+ * (max-width, auto margins, grey page backdrop, border, radius); the padding
+ * stays so copy is not flush against the window edge.
+ */
 const shell = (inner) => `<!doctype html>
 <html lang="en">
 <head>
 <meta charset="utf-8">
 <meta name="viewport" content="width=device-width, initial-scale=1">
 </head>
-<body style="margin:0;padding:24px;background:#f5f5f2;">
-<div style="max-width:560px;margin:0 auto;padding:28px;background:#ffffff;border:1px solid #e3e3de;border-radius:10px;font-family:-apple-system,BlinkMacSystemFont,'Segoe UI',Roboto,Helvetica,Arial,sans-serif;font-size:15px;line-height:1.6;color:#1b1b1b;">
+<body style="margin:0;padding:0;background:#ffffff;">
+<div style="padding:24px;background:#ffffff;font-family:-apple-system,BlinkMacSystemFont,'Segoe UI',Roboto,Helvetica,Arial,sans-serif;font-size:15px;line-height:1.6;color:#1b1b1b;">
 ${inner}
 </div>
 </body>
