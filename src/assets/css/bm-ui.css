@@ -218,6 +218,36 @@
 .bm-button:hover { background: var(--bm-solid-hover); color: var(--bm-solid-fg); transform: translateY(-1px); }
 .bm-button:hover i { transform: translateX(3px); }
 
+/* In-flight submit. Dimmed rather than restyled, so the button keeps its size
+   and the footer does not reflow mid-request. */
+.bm-button[disabled] {
+  cursor: progress;
+  opacity: 0.62;
+}
+
+.bm-button[disabled]:hover { transform: none; background: var(--bm-solid); }
+
+/* Replaces the arrow while a request is in flight. */
+.bm-button__spinner {
+  display: inline-block;
+  width: 13px;
+  height: 13px;
+  border: 2px solid currentColor;
+  border-top-color: transparent;
+  border-radius: 50%;
+  animation: bm-spin 0.6s linear infinite;
+}
+
+@keyframes bm-spin { to { transform: rotate(360deg); } }
+
+/* Honour the OS setting: pulse the opacity instead of spinning. */
+@media (prefers-reduced-motion: reduce) {
+  .bm-button__spinner {
+    animation: bm-pulse 1.4s ease-in-out infinite;
+  }
+  @keyframes bm-pulse { 50% { opacity: 0.35; } }
+}
+
 /* The accent variant always carries a white label: --bm-orange-fill is the
    step chosen for 4.5:1 against white, in both themes. */
 .bm-button--accent { color: #fff; background: var(--bm-orange-fill); }
@@ -3524,6 +3554,34 @@ a.bm-card__title:hover,
   gap: var(--bm-4);
   margin-top: var(--bm-5);
 }
+
+/* Honeypot wrapper. Moved out of view rather than hidden with display:none or
+   visibility:hidden — bots routinely skip those two, but fill anything that
+   looks like a real field. aria-hidden and tabindex="-1" on the input keep it
+   away from screen readers and the tab order. */
+.bm-form__trap {
+  position: absolute;
+  left: -9999px;
+  width: 1px;
+  height: 1px;
+  overflow: hidden;
+}
+
+/* Submit result. Lives in the footer beside the button and shares its baseline.
+   Collapsed while empty so the live region can sit in the DOM from first paint,
+   which is what makes screen readers announce the update reliably. */
+.bm-form__status {
+  flex: 1 1 220px;
+  margin: 0;
+  font-size: var(--bm-fs-sm);
+  line-height: 1.5;
+  color: var(--bm-text-2);
+}
+
+.bm-form__status:empty { display: none; }
+
+.bm-form__status.is-success { color: var(--bm-ok); }
+.bm-form__status.is-error { color: var(--bm-accent-ink); }
 
 /* Direct lines: the one dark panel, so contact details stand out. */
 .bm-contact__aside {

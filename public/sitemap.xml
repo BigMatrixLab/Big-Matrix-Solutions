@@ -97,12 +97,20 @@
         <lastmod>2026-09-10</lastmod>
     </url>
     <url>
+        <loc>https://big-matrix.com/blog/google-medical-ai-stack-medgemma-medasr-txgemma-amie</loc>
+        <lastmod>2026-09-21</lastmod>
+    </url>
+    <url>
         <loc>https://big-matrix.com/blog/gpt-5-6-sol-terra-luna-which-tier-for-which-task</loc>
         <lastmod>2026-09-02</lastmod>
     </url>
     <url>
         <loc>https://big-matrix.com/blog/gpt-6-astra-release-what-the-numbers-say</loc>
         <lastmod>2026-09-03</lastmod>
+    </url>
+    <url>
+        <loc>https://big-matrix.com/blog/grok-4-6-long-running-agents-and-self-testing</loc>
+        <lastmod>2026-09-14</lastmod>
     </url>
     <url>
         <loc>https://big-matrix.com/blog/grok-bot-always-on-agents-with-their-own-computers</loc>
@@ -121,6 +129,10 @@
         <lastmod>2026-08-20</lastmod>
     </url>
     <url>
+        <loc>https://big-matrix.com/blog/medical-foundation-models-clear-the-fda</loc>
+        <lastmod>2026-09-17</lastmod>
+    </url>
+    <url>
         <loc>https://big-matrix.com/blog/nvidia-acquires-hugging-face-what-it-means-for-open-weights</loc>
         <lastmod>2026-09-07</lastmod>
     </url>
@@ -131,6 +143,10 @@
     <url>
         <loc>https://big-matrix.com/blog/the-rise-of-specialized-small-language-models-slms</loc>
         <lastmod>2026-07-23</lastmod>
+    </url>
+    <url>
+        <loc>https://big-matrix.com/blog/swe-bench-is-solved-what-comes-next</loc>
+        <lastmod>2026-09-24</lastmod>
     </url>
     <url>
         <loc>https://big-matrix.com/blog/weathernext-3-learns-from-observations-not-forecasts</loc>

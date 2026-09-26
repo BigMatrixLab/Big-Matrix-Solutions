@@ -12,6 +12,13 @@ dist
 dist-ssr
 *.local
 
+# Secrets. `.dev.vars` holds the local Mailtrap API token; the committed
+# `.dev.vars.example` is the template. Never commit the real values.
+.dev.vars
+.env
+.env.*
+!.env.example
+
 # Editor directories and files
 .vscode/*
 !.vscode/extensions.json

@@ -1,0 +1,29 @@
+# Local secrets for the /functions endpoints.
+#
+# Copy this file to `.dev.vars` and fill in the token. `.dev.vars` is
+# gitignored, so the real token never leaves your machine. Production values
+# live in the Cloudflare Pages dashboard, not here.
+#
+#   cp .dev.vars.example .dev.vars      (macOS / Linux)
+#   Copy-Item .dev.vars.example .dev.vars   (PowerShell)
+#
+# Full walkthrough: docs/EMAIL_SETUP.md
+
+# Required. Mailtrap > Settings > API Tokens, with the "Email Sending"
+# permission on the big-matrix.com sending domain.
+MAILTRAP_API_TOKEN=
+
+# Everything below is optional and already defaults to these values in
+# functions/api/contact.js. Set them only if you want to override.
+
+# Where contact form enquiries are delivered.
+# CONTACT_TO_EMAIL=contact@big-matrix.com
+
+# The From address. Must belong to a domain verified in Mailtrap.
+# CONTACT_FROM_EMAIL=contact@big-matrix.com
+# CONTACT_FROM_NAME=Big-Matrix Solutions
+
+# Used in the auto-reply signature.
+# SITE_URL=https://big-matrix.com
+# CONTACT_PHONE=+880 1339 870730
+# CONTACT_ADDRESS=Bashundhara R/A, Dhaka 1229, Bangladesh
