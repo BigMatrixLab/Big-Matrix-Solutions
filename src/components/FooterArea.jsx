@@ -82,7 +82,7 @@ const FooterArea = () => {
 
                 <div className="bm-footer__bottom">
                     <p className="bm-footer__copy">
-                        © {new Date().getFullYear()} Big-Matrix Research & Development Lab. All rights reserved.
+                        © {new Date().getFullYear()} Big-Matrix Solutions. All rights reserved.
                     </p>
                     <ul className="bm-footer__social">
                         {SOCIAL_LINKS.map((social) => (
