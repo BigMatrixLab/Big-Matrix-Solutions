@@ -219,14 +219,17 @@ function validate(payload) {
  */
 
 /*
- * No centred card: the content runs the full width of whatever the client gives
- * it, on a plain white background.
+ * No centred card and no side padding: the content runs edge to edge across
+ * whatever width the client gives it, on a plain white background. Mail clients
+ * already inset the message body themselves, so adding our own horizontal
+ * padding on top only produced a visible double margin.
+ *
+ * Vertical padding stays — with none at all the greeting butts straight against
+ * the client's header chrome.
  *
  * The wrapper div still exists and still carries the typography, because Gmail
- * discards <html> and <body> and reparents the content — styling the body alone
- * would silently lose the font stack there. Only the card chrome is gone
- * (max-width, auto margins, grey page backdrop, border, radius); the padding
- * stays so copy is not flush against the window edge.
+ * discards <html> and <body> and reparents the content, so styling the body
+ * alone would silently lose the font stack there.
  */
 const shell = (inner) => `<!doctype html>
 <html lang="en">
@@ -235,7 +238,7 @@ const shell = (inner) => `<!doctype html>
 <meta name="viewport" content="width=device-width, initial-scale=1">
 </head>
 <body style="margin:0;padding:0;background:#ffffff;">
-<div style="padding:24px;background:#ffffff;font-family:-apple-system,BlinkMacSystemFont,'Segoe UI',Roboto,Helvetica,Arial,sans-serif;font-size:15px;line-height:1.6;color:#1b1b1b;">
+<div style="padding:20px 0;background:#ffffff;font-family:-apple-system,BlinkMacSystemFont,'Segoe UI',Roboto,Helvetica,Arial,sans-serif;font-size:15px;line-height:1.6;color:#1b1b1b;">
 ${inner}
 </div>
 </body>
