@@ -1,0 +1,43 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 1200 640" width="1200" height="640" role="img" aria-labelledby="t d" font-family="Inter, Segoe UI, Arial, sans-serif">
+  <rect x="0" y="0" width="1200" height="640" fill="#ffffff" rx="16" stroke="#e5e7eb"/>
+  <title id="t">MCP's three components: host, client and server</title>
+  <desc id="d">A host application containing the model and three MCP clients. Each client holds a one-to-one connection to an MCP server, exchanging JSON-RPC 2.0 messages over stdio for local servers or Streamable HTTP for remote ones. The servers front a database, a Git repository and a SaaS API, and expose tools, resources and prompts.</desc>
+  <defs>
+    <marker id="a" viewBox="0 0 10 10" refX="9" refY="5" markerWidth="8" markerHeight="8" orient="auto-start-reverse"><path d="M0,0 L10,5 L0,10 z" fill="#2563eb"/></marker>
+  </defs>
+  <text x="600" y="54" text-anchor="middle" font-size="28" font-weight="700" fill="#111827">MCP: one host, many clients, one server per client</text>
+
+  <g font-size="18" fill="#4b5563" text-anchor="middle">
+    <rect x="30" y="100" width="450" height="460" rx="14" fill="#f3f4f6" stroke="#d1d5db"/>
+    <text x="255" y="138" font-size="22" font-weight="700" fill="#111827">Host application</text>
+    <text x="255" y="166">chat app, IDE or agent</text>
+    <rect x="60" y="190" width="390" height="70" rx="10" fill="#ffffff" stroke="#d1d5db"/>
+    <text x="255" y="232" fill="#111827">Model decides which tool to call</text>
+
+    <rect x="60" y="300" width="390" height="60" rx="10" fill="#ffffff" stroke="#ec362e" stroke-width="2"/>
+    <text x="255" y="337" font-weight="700" fill="#111827">MCP client 1</text>
+    <rect x="60" y="390" width="390" height="60" rx="10" fill="#ffffff" stroke="#ec362e" stroke-width="2"/>
+    <text x="255" y="427" font-weight="700" fill="#111827">MCP client 2</text>
+    <rect x="60" y="480" width="390" height="60" rx="10" fill="#ffffff" stroke="#ec362e" stroke-width="2"/>
+    <text x="255" y="517" font-weight="700" fill="#111827">MCP client 3</text>
+
+    <rect x="760" y="290" width="410" height="80" rx="10" fill="#f3f4f6" stroke="#d1d5db"/>
+    <text x="965" y="324" font-weight="700" fill="#111827">MCP server: database</text>
+    <text x="965" y="352">tools · resources</text>
+    <rect x="760" y="380" width="410" height="80" rx="10" fill="#f3f4f6" stroke="#d1d5db"/>
+    <text x="965" y="414" font-weight="700" fill="#111827">MCP server: Git repository</text>
+    <text x="965" y="442">tools · resources · prompts</text>
+    <rect x="760" y="470" width="410" height="80" rx="10" fill="#f3f4f6" stroke="#d1d5db"/>
+    <text x="965" y="504" font-weight="700" fill="#111827">MCP server: SaaS API</text>
+    <text x="965" y="532">tools</text>
+
+    <text x="605" y="246" font-weight="700" fill="#2563eb">JSON-RPC 2.0</text>
+    <text x="605" y="274">stdio or Streamable HTTP</text>
+  </g>
+  <g stroke="#2563eb" stroke-width="2.5">
+    <line x1="454" y1="330" x2="754" y2="330" marker-start="url(#a)" marker-end="url(#a)"/>
+    <line x1="454" y1="420" x2="754" y2="420" marker-start="url(#a)" marker-end="url(#a)"/>
+    <line x1="454" y1="510" x2="754" y2="510" marker-start="url(#a)" marker-end="url(#a)"/>
+  </g>
+  <text x="600" y="605" text-anchor="middle" font-size="18" fill="#4b5563">Servers expose three primitives: <tspan font-weight="700" fill="#111827">tools</tspan> (actions), <tspan font-weight="700" fill="#111827">resources</tspan> (data) and <tspan font-weight="700" fill="#111827">prompts</tspan> (templates)</text>
+</svg>

@@ -1,0 +1,37 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 1200 560" width="1200" height="560" role="img" aria-labelledby="t d" font-family="Inter, Segoe UI, Arial, sans-serif">
+  <rect x="0" y="0" width="1200" height="560" fill="#ffffff" rx="16" stroke="#e5e7eb"/>
+  <title id="t">Two kinds of tool error in MCP</title>
+  <desc id="d">A tools/call request can fail as a JSON-RPC protocol error, such as an unknown tool or malformed request, or as a tool execution error returned in the result with isError true, such as an API failure, input validation error or business logic error. Execution errors go back to the model so it can self-correct.</desc>
+  <defs>
+    <marker id="a" viewBox="0 0 10 10" refX="9" refY="5" markerWidth="8" markerHeight="8" orient="auto-start-reverse">
+      <path d="M0,0 L10,5 L0,10 z" fill="#4b5563"/>
+    </marker>
+  </defs>
+  <text x="600" y="54" text-anchor="middle" font-size="28" font-weight="700" fill="#111827">Two kinds of tool error in MCP</text>
+
+  <rect x="470" y="84" width="260" height="60" rx="12" fill="#f3f4f6" stroke="#d1d5db"/>
+  <text x="600" y="122" text-anchor="middle" font-size="22" font-weight="700" fill="#111827">tools/call</text>
+  <g stroke="#4b5563" stroke-width="2.5" fill="none" marker-end="url(#a)">
+    <path d="M520,146 L300,196"/>
+    <path d="M680,146 L900,196"/>
+  </g>
+
+  <g font-size="19" fill="#4b5563">
+    <rect x="40" y="200" width="520" height="290" rx="12" fill="#f3f4f6" stroke="#d1d5db"/>
+    <text x="300" y="244" text-anchor="middle" font-size="22" font-weight="700" fill="#111827">Protocol error</text>
+    <text x="300" y="274" text-anchor="middle" font-size="18">JSON-RPC error object</text>
+    <text x="72" y="326">•  Unknown tool</text>
+    <text x="72" y="360">•  Malformed request</text>
+    <text x="72" y="394">•  Server error</text>
+    <text x="300" y="456" text-anchor="middle" font-size="18">Model is less likely to recover</text>
+
+    <rect x="640" y="200" width="520" height="290" rx="12" fill="#ffffff" stroke="#ec362e" stroke-width="3"/>
+    <text x="900" y="244" text-anchor="middle" font-size="22" font-weight="700" fill="#ec362e">Tool execution error</text>
+    <text x="900" y="274" text-anchor="middle" font-size="18">result with isError: true</text>
+    <text x="672" y="326">•  API failure</text>
+    <text x="672" y="360">•  Input validation (bad date, range)</text>
+    <text x="672" y="394">•  Business logic error</text>
+    <text x="900" y="456" text-anchor="middle" font-size="18" fill="#111827">Sent back so the model can self-correct</text>
+  </g>
+  <text x="600" y="530" text-anchor="middle" font-size="18" fill="#4b5563">Classification as in the MCP specification, version 2026-07-28.</text>
+</svg>

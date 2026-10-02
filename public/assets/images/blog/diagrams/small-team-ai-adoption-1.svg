@@ -1,0 +1,40 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 1200 580" width="1200" height="580" role="img">
+<rect x="1" y="1" width="1198" height="578" fill="#ffffff" rx="16" stroke="#e5e7eb" stroke-width="2"/>
+<title>A 90-day AI adoption plan</title>
+<desc>Three phases. Days 1 to 30: record baseline metrics, write the AI policy, pick two or three workflows. Days 31 to 60: pilot on real tickets with small pull requests and a weekly retro. Days 61 to 90: compare against the baseline, standardise what worked and drop what did not.</desc>
+<defs><marker id="ah" viewBox="0 0 10 10" refX="9" refY="5" markerWidth="8" markerHeight="8" orient="auto-start-reverse"><path d="M0,0 L10,5 L0,10 z" fill="#4b5563"/></marker></defs>
+<text x="60" y="64" font-family="Inter, Segoe UI, Arial, sans-serif" font-size="30" fill="#111827" text-anchor="start" font-weight="700">The 90-day plan at a glance</text>
+<text x="60" y="100" font-family="Inter, Segoe UI, Arial, sans-serif" font-size="20" fill="#4b5563" text-anchor="start" font-weight="400">Measure before, pilot on real work, decide with data</text>
+<rect x="60" y="135" width="340" height="84" rx="10" fill="#d1d5db" stroke="none" stroke-width="2"/>
+<text x="80" y="170" font-family="Inter, Segoe UI, Arial, sans-serif" font-size="22" fill="#111827" text-anchor="start" font-weight="700">Days 1-30</text>
+<text x="80" y="200" font-family="Inter, Segoe UI, Arial, sans-serif" font-size="19" fill="#111827" text-anchor="start" font-weight="400">Baseline and rules</text>
+<rect x="60" y="234" width="340" height="290" rx="10" fill="#f3f4f6" stroke="#d1d5db" stroke-width="2"/>
+<circle cx="90" cy="288" r="7" fill="#4b5563"/>
+<text x="110" y="295" font-family="Inter, Segoe UI, Arial, sans-serif" font-size="20" fill="#111827" text-anchor="start" font-weight="400">Record current metrics</text>
+<circle cx="90" cy="368" r="7" fill="#4b5563"/>
+<text x="110" y="375" font-family="Inter, Segoe UI, Arial, sans-serif" font-size="20" fill="#111827" text-anchor="start" font-weight="400">Write the AI policy</text>
+<circle cx="90" cy="448" r="7" fill="#4b5563"/>
+<text x="110" y="455" font-family="Inter, Segoe UI, Arial, sans-serif" font-size="20" fill="#111827" text-anchor="start" font-weight="400">Pick 2-3 workflows</text>
+<rect x="440" y="135" width="340" height="84" rx="10" fill="#2563eb" stroke="none" stroke-width="2"/>
+<text x="460" y="170" font-family="Inter, Segoe UI, Arial, sans-serif" font-size="22" fill="#ffffff" text-anchor="start" font-weight="700">Days 31-60</text>
+<text x="460" y="200" font-family="Inter, Segoe UI, Arial, sans-serif" font-size="19" fill="#ffffff" text-anchor="start" font-weight="400">Pilot on real work</text>
+<rect x="440" y="234" width="340" height="290" rx="10" fill="#f3f4f6" stroke="#d1d5db" stroke-width="2"/>
+<circle cx="470" cy="288" r="7" fill="#4b5563"/>
+<text x="490" y="295" font-family="Inter, Segoe UI, Arial, sans-serif" font-size="20" fill="#111827" text-anchor="start" font-weight="400">Real tickets, not demos</text>
+<circle cx="470" cy="368" r="7" fill="#4b5563"/>
+<text x="490" y="375" font-family="Inter, Segoe UI, Arial, sans-serif" font-size="20" fill="#111827" text-anchor="start" font-weight="400">Small pull requests</text>
+<circle cx="470" cy="448" r="7" fill="#4b5563"/>
+<text x="490" y="455" font-family="Inter, Segoe UI, Arial, sans-serif" font-size="20" fill="#111827" text-anchor="start" font-weight="400">Weekly 30-min retro</text>
+<rect x="820" y="135" width="340" height="84" rx="10" fill="#ec362e" stroke="none" stroke-width="2"/>
+<text x="840" y="170" font-family="Inter, Segoe UI, Arial, sans-serif" font-size="22" fill="#ffffff" text-anchor="start" font-weight="700">Days 61-90</text>
+<text x="840" y="200" font-family="Inter, Segoe UI, Arial, sans-serif" font-size="19" fill="#ffffff" text-anchor="start" font-weight="400">Decide</text>
+<rect x="820" y="234" width="340" height="290" rx="10" fill="#f3f4f6" stroke="#d1d5db" stroke-width="2"/>
+<circle cx="850" cy="288" r="7" fill="#4b5563"/>
+<text x="870" y="295" font-family="Inter, Segoe UI, Arial, sans-serif" font-size="20" fill="#111827" text-anchor="start" font-weight="400">Compare to baseline</text>
+<circle cx="850" cy="368" r="7" fill="#4b5563"/>
+<text x="870" y="375" font-family="Inter, Segoe UI, Arial, sans-serif" font-size="20" fill="#111827" text-anchor="start" font-weight="400">Standardise what worked</text>
+<circle cx="850" cy="448" r="7" fill="#4b5563"/>
+<text x="870" y="455" font-family="Inter, Segoe UI, Arial, sans-serif" font-size="20" fill="#111827" text-anchor="start" font-weight="400">Drop what did not</text>
+<line x1="400" y1="177" x2="438" y2="177" stroke="#4b5563" stroke-width="2.5" marker-end="url(#ah)"/>
+<line x1="780" y1="177" x2="818" y2="177" stroke="#4b5563" stroke-width="2.5" marker-end="url(#ah)"/>
+</svg>

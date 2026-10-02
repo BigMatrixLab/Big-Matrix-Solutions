@@ -6,7 +6,7 @@ comments: "0"
 image: "https://images.unsplash.com/photo-1576086213369-97a306d36557?auto=format&fit=crop&q=80&w=800"
 category: "Medical AI"
 desc: "Foundation models that generalise across stains and scanners, updated CLIA guidance, and a regulatory count that reveals how early this still is."
-date: "Jan 08, 2027"
+date: "Nov 16, 2026"
 tags: ["Medical AI", "Digital Pathology", "Foundation Models", "Oncology"]
 ---
 
@@ -111,7 +111,7 @@ Three signals that will tell you whether this is translating.
 
 ## The honest position
 
-Computational pathology in early 2027 is a field where the technology is well ahead of the deployment, and the bottleneck is not the models.
+Computational pathology in late 2026 is a field where the technology is well ahead of the deployment, and the bottleneck is not the models.
 
 Foundation models that generalise across stains and scanners solved the problem that held the field back for a decade. Multimodal systems are producing results on prognostic and treatment-response questions that matter more than classification accuracy. The regulatory and standards groundwork is materially better than it was.
 

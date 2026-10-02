@@ -1,0 +1,45 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 1200 450" width="1200" height="450" role="img" aria-labelledby="t d" font-family="Inter, Segoe UI, Arial, sans-serif">
+  <rect x="0" y="0" width="1200" height="450" fill="#ffffff" rx="16" stroke="#e5e7eb"/>
+  <title id="t">Separating the read plane from the write plane</title>
+  <desc id="d">Untrusted text from issues, pull requests and code comments goes to a reader agent with no write tools and no secrets. The reader produces a constrained, structured form with fixed, validated fields. An actor agent with privileged write tools acts only on that structure and never sees the original text, so injected instructions have no path to the privileged tools.</desc>
+  <defs>
+    <marker id="a" viewBox="0 0 10 10" refX="9" refY="5" markerWidth="8" markerHeight="8" orient="auto-start-reverse"><path d="M0,0 L10,5 L0,10 z" fill="#4b5563"/></marker>
+  </defs>
+  <text x="600" y="50" text-anchor="middle" font-size="28" font-weight="700" fill="#111827">Two agents, two contexts: the injection has nowhere to travel</text>
+
+  <g font-size="18" fill="#4b5563" text-anchor="middle">
+    <rect x="30" y="95" width="255" height="190" rx="12" fill="#ffffff" stroke="#ec362e" stroke-width="2"/>
+    <text x="157" y="140" font-size="20" font-weight="700" fill="#ec362e">Untrusted text</text>
+    <text x="157" y="184">issues, pull requests,</text>
+    <text x="157" y="210">code comments</text>
+
+    <rect x="325" y="95" width="255" height="190" rx="12" fill="#f3f4f6" stroke="#d1d5db"/>
+    <text x="452" y="140" font-size="20" font-weight="700" fill="#111827">Reader agent</text>
+    <text x="452" y="184">reads untrusted text</text>
+    <text x="452" y="210">no write tools</text>
+    <text x="452" y="236">no secrets</text>
+
+    <rect x="620" y="95" width="255" height="190" rx="12" fill="#ffffff" stroke="#2563eb" stroke-width="2"/>
+    <text x="747" y="140" font-size="20" font-weight="700" fill="#111827">Structured form</text>
+    <text x="747" y="184">fixed fields,</text>
+    <text x="747" y="210">validated schema,</text>
+    <text x="747" y="236">constrained output</text>
+
+    <rect x="915" y="95" width="255" height="190" rx="12" fill="#f3f4f6" stroke="#d1d5db"/>
+    <text x="1042" y="140" font-size="20" font-weight="700" fill="#111827">Actor agent</text>
+    <text x="1042" y="184">privileged writes</text>
+    <text x="1042" y="210">never sees the</text>
+    <text x="1042" y="236">original text</text>
+  </g>
+  <g stroke="#4b5563" stroke-width="2.5">
+    <line x1="287" y1="190" x2="321" y2="190" marker-end="url(#a)"/>
+    <line x1="582" y1="190" x2="616" y2="190" marker-end="url(#a)"/>
+    <line x1="877" y1="190" x2="911" y2="190" marker-end="url(#a)"/>
+  </g>
+  <path d="M157,287 V345 H1042 V291" fill="none" stroke="#ec362e" stroke-width="2.5" stroke-dasharray="9 6"/>
+  <g stroke="#ec362e" stroke-width="5" stroke-linecap="round">
+    <line x1="584" y1="329" x2="616" y2="361"/>
+    <line x1="616" y1="329" x2="584" y2="361"/>
+  </g>
+  <text x="600" y="400" text-anchor="middle" font-size="18" fill="#4b5563">No direct path: the actor's context never contains the attacker's words</text>
+</svg>

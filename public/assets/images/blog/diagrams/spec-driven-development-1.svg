@@ -1,0 +1,58 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 1200 560" width="1200" height="560" role="img" aria-labelledby="t d" font-family="Inter, Segoe UI, Arial, sans-serif">
+  <title id="t">Spec-driven development phases with human checkpoints</title>
+  <desc id="d">A project constitution sits above four phases: specify the what and why, plan the how, break the plan into tasks, and implement. A human review checkpoint sits between each phase, and implementation findings flow back to update the spec.</desc>
+  <rect x="0" y="0" width="1200" height="560" fill="#ffffff" rx="16" stroke="#e5e7eb"/>
+  <text x="600" y="54" text-anchor="middle" font-size="28" font-weight="700" fill="#111827">Spec-driven development, phase by phase</text>
+
+  <defs>
+    <marker id="arrow" viewBox="0 0 10 10" refX="9" refY="5" markerWidth="7" markerHeight="7" orient="auto-start-reverse">
+      <path d="M0,0 L10,5 L0,10 z" fill="#4b5563"/>
+    </marker>
+    <marker id="arrowRed" viewBox="0 0 10 10" refX="9" refY="5" markerWidth="7" markerHeight="7" orient="auto-start-reverse">
+      <path d="M0,0 L10,5 L0,10 z" fill="#ec362e"/>
+    </marker>
+  </defs>
+
+  <rect x="30" y="86" width="1140" height="60" rx="12" fill="#f3f4f6" stroke="#d1d5db"/>
+  <text x="600" y="124" text-anchor="middle" font-size="20" fill="#111827"><tspan font-weight="700">Constitution</tspan><tspan fill="#4b5563">: project-wide rules every phase must respect</tspan></text>
+
+  <g font-size="18" fill="#4b5563" text-anchor="middle">
+    <rect x="30" y="190" width="225" height="190" rx="12" fill="#f3f4f6" stroke="#d1d5db"/>
+    <text x="142" y="232" font-size="22" font-weight="700" fill="#111827">1. Specify</text>
+    <text x="142" y="276">what and why</text>
+    <text x="142" y="304">user journeys</text>
+    <text x="142" y="332">success criteria</text>
+
+    <rect x="335" y="190" width="225" height="190" rx="12" fill="#f3f4f6" stroke="#d1d5db"/>
+    <text x="447" y="232" font-size="22" font-weight="700" fill="#111827">2. Plan</text>
+    <text x="447" y="276">how</text>
+    <text x="447" y="304">stack, architecture</text>
+    <text x="447" y="332">constraints</text>
+
+    <rect x="640" y="190" width="225" height="190" rx="12" fill="#f3f4f6" stroke="#d1d5db"/>
+    <text x="752" y="232" font-size="22" font-weight="700" fill="#111827">3. Tasks</text>
+    <text x="752" y="276">small units</text>
+    <text x="752" y="304">each reviewable</text>
+    <text x="752" y="332">and testable</text>
+
+    <rect x="945" y="190" width="225" height="190" rx="12" fill="#ffffff" stroke="#ec362e" stroke-width="2"/>
+    <text x="1057" y="232" font-size="22" font-weight="700" fill="#111827">4. Implement</text>
+    <text x="1057" y="276">agent works</text>
+    <text x="1057" y="304">task by task</text>
+    <text x="1057" y="332">focused diffs</text>
+  </g>
+
+  <g stroke="#4b5563" stroke-width="2">
+    <line x1="257" y1="285" x2="332" y2="285" marker-end="url(#arrow)"/>
+    <line x1="562" y1="285" x2="637" y2="285" marker-end="url(#arrow)"/>
+    <line x1="867" y1="285" x2="942" y2="285" marker-end="url(#arrow)"/>
+  </g>
+  <g font-size="18" fill="#2563eb" text-anchor="middle" font-weight="600">
+    <text x="295" y="270">review</text>
+    <text x="600" y="270">review</text>
+    <text x="905" y="270">review</text>
+  </g>
+
+  <path d="M1057,382 L1057,450 L142,450 L142,386" fill="none" stroke="#ec362e" stroke-width="3" marker-end="url(#arrowRed)"/>
+  <text x="600" y="484" text-anchor="middle" font-size="18" fill="#111827">What implementation teaches you goes back into the spec, not only the code</text>
+</svg>

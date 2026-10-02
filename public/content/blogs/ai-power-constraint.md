@@ -6,7 +6,7 @@ comments: "0"
 image: "https://images.unsplash.com/photo-1451187580459-43490279c0fa?auto=format&fit=crop&q=80&w=800"
 category: "AI Infrastructure"
 desc: "70 TWh this year, single sites approaching 2 GW, and grids that cannot deliver. The bottleneck stopped being chips and became electricity."
-date: "Feb 26, 2027"
+date: "Nov 30, 2026"
 tags: ["AI Infrastructure", "Energy", "Data Centers", "Compute"]
 ---
 

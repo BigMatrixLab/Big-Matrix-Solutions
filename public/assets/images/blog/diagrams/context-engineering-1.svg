@@ -1,0 +1,58 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 1200 640" width="1200" height="640" role="img" aria-labelledby="t d" font-family="Inter, Segoe UI, Arial, sans-serif">
+  <rect x="0" y="0" width="1200" height="640" fill="#ffffff" rx="16" stroke="#e5e7eb"/>
+  <title id="t">How to assemble an agent's context window</title>
+  <desc id="d">The context window drawn as a column, top to bottom: a stable prefix of system prompt and tool definitions that the prefix cache reuses; task and constraints at the start, where the model reads well; accumulated history in the middle, where recall is weakest and compaction applies; current state and the immediate instruction at the end. Outside the window, a durable state file is read at startup and a subagent searches in its own window and returns only a summary.</desc>
+  <defs>
+    <marker id="a" viewBox="0 0 10 10" refX="9" refY="5" markerWidth="8" markerHeight="8" orient="auto-start-reverse"><path d="M0,0 L10,5 L0,10 z" fill="#2563eb"/></marker>
+  </defs>
+  <text x="600" y="50" text-anchor="middle" font-size="28" font-weight="700" fill="#111827">What goes where in the window</text>
+  <text x="535" y="88" text-anchor="middle" font-size="18" font-weight="700" fill="#4b5563">Context window</text>
+
+  <g font-size="18" fill="#4b5563" text-anchor="middle">
+    <rect x="320" y="105" width="430" height="90" rx="10" fill="#f3f4f6" stroke="#ec362e" stroke-width="2"/>
+    <text x="535" y="143" font-weight="700" fill="#111827">System prompt + tool definitions</text>
+    <text x="535" y="171">stable prefix, never changes</text>
+
+    <rect x="320" y="205" width="430" height="80" rx="10" fill="#f3f4f6" stroke="#d1d5db"/>
+    <text x="535" y="240" font-weight="700" fill="#111827">Task and constraints</text>
+    <text x="535" y="266">start of the variable part</text>
+
+    <rect x="320" y="295" width="430" height="200" rx="10" fill="#ffffff" stroke="#d1d5db" stroke-dasharray="8 5"/>
+    <text x="535" y="380" font-weight="700" fill="#111827">Accumulated history</text>
+    <text x="535" y="408">tool output, reads, dead ends</text>
+
+    <rect x="320" y="505" width="430" height="90" rx="10" fill="#f3f4f6" stroke="#d1d5db"/>
+    <text x="535" y="543" font-weight="700" fill="#111827">Current state + next instruction</text>
+    <text x="535" y="571">end of the window</text>
+  </g>
+
+  <g font-size="18" fill="#4b5563">
+    <text x="780" y="143" font-weight="700" fill="#ec362e">Prefix cache</text>
+    <text x="780" y="171">a 20,000-token preamble paid once</text>
+    <text x="780" y="240" font-weight="700" fill="#111827">Read well</text>
+    <text x="780" y="266">material at the start is favoured</text>
+    <text x="780" y="380" font-weight="700" fill="#111827">Weakest recall</text>
+    <text x="780" y="408">compact here: keep decisions,</text>
+    <text x="780" y="434">constraints and ruled-out approaches</text>
+    <text x="780" y="543" font-weight="700" fill="#111827">Read well</text>
+    <text x="780" y="571">material at the end is favoured</text>
+  </g>
+
+  <g font-size="18" fill="#4b5563" text-anchor="middle">
+    <rect x="30" y="200" width="250" height="110" rx="10" fill="#ffffff" stroke="#2563eb" stroke-width="2"/>
+    <text x="155" y="236" font-weight="700" fill="#111827">Durable state file</text>
+    <text x="155" y="264">conventions, dead ends</text>
+    <text x="155" y="290">read at startup</text>
+
+    <rect x="30" y="360" width="250" height="135" rx="10" fill="#ffffff" stroke="#2563eb" stroke-width="2"/>
+    <text x="155" y="396" font-weight="700" fill="#111827">Subagent</text>
+    <text x="155" y="424">searches in its own</text>
+    <text x="155" y="450">window, returns only</text>
+    <text x="155" y="476">a summary</text>
+  </g>
+  <g stroke="#2563eb" stroke-width="2.5">
+    <line x1="282" y1="245" x2="316" y2="245" marker-end="url(#a)"/>
+    <line x1="282" y1="427" x2="316" y2="427" marker-end="url(#a)"/>
+  </g>
+  <text x="155" y="545" text-anchor="middle" font-size="18" fill="#4b5563">outside the window</text>
+</svg>

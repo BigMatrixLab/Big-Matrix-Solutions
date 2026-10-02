@@ -1,0 +1,25 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 1200 540" width="1200" height="540" font-family="Inter, Segoe UI, Arial, sans-serif">
+<rect x="0.5" y="0.5" width="1199" height="539" fill="#ffffff" rx="16" stroke="#e5e7eb"/>
+<title>Colossus GPU build-out</title>
+<desc>Stacked bar of GPU counts stated by Musk: Colossus 1 with 230,000 GPUs, Colossus 2 with 550,000 and planned additions of 660,000 GB300 in three tranches, for a stated year-end total of roughly 1.44 million GPUs.</desc>
+<text x="40" y="62" font-size="30" fill="#111827" font-weight="700">Colossus GPU counts, as stated by Musk</text>
+<text x="40" y="98" font-size="20" fill="#4b5563">Post on September 25, 2026; the final tranche was conditional</text>
+<rect x="41" y="170" width="177" height="70" fill="#d1d5db" rx="6"/>
+<rect x="220" y="170" width="426" height="70" fill="#2563eb" rx="6"/>
+<rect x="648" y="170" width="511" height="70" fill="#ffffff" rx="6" stroke="#ec362e" stroke-width="3" stroke-dasharray="8 6"/>
+<text x="48" y="282" font-size="21" fill="#111827" font-weight="700">Colossus 1</text>
+<text x="48" y="314" font-size="20" fill="#111827" font-weight="600">230,000 GPUs</text>
+<text x="48" y="342" font-size="19" fill="#4b5563">150K H100,</text>
+<text x="48" y="370" font-size="19" fill="#4b5563">50K H200,</text>
+<text x="48" y="398" font-size="19" fill="#4b5563">30K GB200</text>
+<text x="227" y="282" font-size="21" fill="#111827" font-weight="700">Colossus 2</text>
+<text x="227" y="314" font-size="20" fill="#111827" font-weight="600">550,000 GPUs</text>
+<text x="227" y="342" font-size="19" fill="#4b5563">110K GB200, 440K GB300</text>
+<text x="655" y="282" font-size="21" fill="#111827" font-weight="700">Planned additions</text>
+<text x="655" y="314" font-size="20" fill="#111827" font-weight="600">660,000 GPUs</text>
+<text x="655" y="342" font-size="19" fill="#4b5563">3 × 220K GB300,</text>
+<text x="655" y="370" font-size="19" fill="#4b5563">last for late December</text>
+<line x1="40" y1="420" x2="1160" y2="420" stroke="#f3f4f6" stroke-width="2"/>
+<text x="40" y="466" font-size="24" fill="#111827" font-weight="700">Stated year-end total: roughly 1.44 million GPUs</text>
+<text x="40" y="500" font-size="20" fill="#4b5563">Musk's own figures; “if we get lucky”, as quoted by Benzinga.</text>
+</svg>

@@ -1,0 +1,53 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 1200 490" width="1200" height="490" role="img">
+<rect x="1" y="1" width="1198" height="488" fill="#ffffff" rx="16" stroke="#e5e7eb" stroke-width="2"/>
+<title>Recall at 10 illustrated</title>
+<desc>Illustration of recall@10: an approximate index returns nine of the ten true nearest neighbours plus the fourteenth-closest vector, so recall@10 is 0.9.</desc>
+<defs><marker id="ah" viewBox="0 0 10 10" refX="9" refY="5" markerWidth="8" markerHeight="8" orient="auto-start-reverse"><path d="M0,0 L10,5 L0,10 z" fill="#4b5563"/></marker></defs>
+<text x="60" y="70" font-family="Inter, Segoe UI, Arial, sans-serif" font-size="30" fill="#111827" text-anchor="start" font-weight="700" xml:space="preserve">Recall@10: how much of the true top 10 did the index return?</text>
+<text x="60" y="108" font-family="Inter, Segoe UI, Arial, sans-serif" font-size="20" fill="#4b5563" text-anchor="start" font-weight="400" xml:space="preserve">Illustration. Exact search scans every vector; the approximate index visits a fraction.</text>
+<text x="60" y="186" font-family="Inter, Segoe UI, Arial, sans-serif" font-size="20" fill="#111827" text-anchor="start" font-weight="700" xml:space="preserve">Exact (brute force)</text>
+<rect x="330" y="150" width="72" height="56" rx="8" fill="#f3f4f6" stroke="#2563eb" stroke-width="2"/>
+<text x="366" y="186" font-family="Inter, Segoe UI, Arial, sans-serif" font-size="20" fill="#111827" text-anchor="middle" font-weight="700" xml:space="preserve">#1</text>
+<rect x="412" y="150" width="72" height="56" rx="8" fill="#f3f4f6" stroke="#2563eb" stroke-width="2"/>
+<text x="448" y="186" font-family="Inter, Segoe UI, Arial, sans-serif" font-size="20" fill="#111827" text-anchor="middle" font-weight="700" xml:space="preserve">#2</text>
+<rect x="494" y="150" width="72" height="56" rx="8" fill="#f3f4f6" stroke="#2563eb" stroke-width="2"/>
+<text x="530" y="186" font-family="Inter, Segoe UI, Arial, sans-serif" font-size="20" fill="#111827" text-anchor="middle" font-weight="700" xml:space="preserve">#3</text>
+<rect x="576" y="150" width="72" height="56" rx="8" fill="#f3f4f6" stroke="#2563eb" stroke-width="2"/>
+<text x="612" y="186" font-family="Inter, Segoe UI, Arial, sans-serif" font-size="20" fill="#111827" text-anchor="middle" font-weight="700" xml:space="preserve">#4</text>
+<rect x="658" y="150" width="72" height="56" rx="8" fill="#f3f4f6" stroke="#2563eb" stroke-width="2"/>
+<text x="694" y="186" font-family="Inter, Segoe UI, Arial, sans-serif" font-size="20" fill="#111827" text-anchor="middle" font-weight="700" xml:space="preserve">#5</text>
+<rect x="740" y="150" width="72" height="56" rx="8" fill="#f3f4f6" stroke="#2563eb" stroke-width="2"/>
+<text x="776" y="186" font-family="Inter, Segoe UI, Arial, sans-serif" font-size="20" fill="#111827" text-anchor="middle" font-weight="700" xml:space="preserve">#6</text>
+<rect x="822" y="150" width="72" height="56" rx="8" fill="#ffffff" stroke="#ec362e" stroke-width="3"/>
+<text x="858" y="186" font-family="Inter, Segoe UI, Arial, sans-serif" font-size="20" fill="#ec362e" text-anchor="middle" font-weight="700" xml:space="preserve">#7</text>
+<rect x="904" y="150" width="72" height="56" rx="8" fill="#f3f4f6" stroke="#2563eb" stroke-width="2"/>
+<text x="940" y="186" font-family="Inter, Segoe UI, Arial, sans-serif" font-size="20" fill="#111827" text-anchor="middle" font-weight="700" xml:space="preserve">#8</text>
+<rect x="986" y="150" width="72" height="56" rx="8" fill="#f3f4f6" stroke="#2563eb" stroke-width="2"/>
+<text x="1022" y="186" font-family="Inter, Segoe UI, Arial, sans-serif" font-size="20" fill="#111827" text-anchor="middle" font-weight="700" xml:space="preserve">#9</text>
+<rect x="1068" y="150" width="72" height="56" rx="8" fill="#f3f4f6" stroke="#2563eb" stroke-width="2"/>
+<text x="1104" y="186" font-family="Inter, Segoe UI, Arial, sans-serif" font-size="20" fill="#111827" text-anchor="middle" font-weight="700" xml:space="preserve">#10</text>
+<text x="60" y="276" font-family="Inter, Segoe UI, Arial, sans-serif" font-size="20" fill="#111827" text-anchor="start" font-weight="700" xml:space="preserve">Approximate (HNSW)</text>
+<rect x="330" y="240" width="72" height="56" rx="8" fill="#f3f4f6" stroke="#2563eb" stroke-width="2"/>
+<text x="366" y="276" font-family="Inter, Segoe UI, Arial, sans-serif" font-size="20" fill="#111827" text-anchor="middle" font-weight="700" xml:space="preserve">#1</text>
+<rect x="412" y="240" width="72" height="56" rx="8" fill="#f3f4f6" stroke="#2563eb" stroke-width="2"/>
+<text x="448" y="276" font-family="Inter, Segoe UI, Arial, sans-serif" font-size="20" fill="#111827" text-anchor="middle" font-weight="700" xml:space="preserve">#2</text>
+<rect x="494" y="240" width="72" height="56" rx="8" fill="#f3f4f6" stroke="#2563eb" stroke-width="2"/>
+<text x="530" y="276" font-family="Inter, Segoe UI, Arial, sans-serif" font-size="20" fill="#111827" text-anchor="middle" font-weight="700" xml:space="preserve">#3</text>
+<rect x="576" y="240" width="72" height="56" rx="8" fill="#f3f4f6" stroke="#2563eb" stroke-width="2"/>
+<text x="612" y="276" font-family="Inter, Segoe UI, Arial, sans-serif" font-size="20" fill="#111827" text-anchor="middle" font-weight="700" xml:space="preserve">#4</text>
+<rect x="658" y="240" width="72" height="56" rx="8" fill="#f3f4f6" stroke="#2563eb" stroke-width="2"/>
+<text x="694" y="276" font-family="Inter, Segoe UI, Arial, sans-serif" font-size="20" fill="#111827" text-anchor="middle" font-weight="700" xml:space="preserve">#5</text>
+<rect x="740" y="240" width="72" height="56" rx="8" fill="#f3f4f6" stroke="#2563eb" stroke-width="2"/>
+<text x="776" y="276" font-family="Inter, Segoe UI, Arial, sans-serif" font-size="20" fill="#111827" text-anchor="middle" font-weight="700" xml:space="preserve">#6</text>
+<rect x="822" y="240" width="72" height="56" rx="8" fill="#f3f4f6" stroke="#2563eb" stroke-width="2"/>
+<text x="858" y="276" font-family="Inter, Segoe UI, Arial, sans-serif" font-size="20" fill="#111827" text-anchor="middle" font-weight="700" xml:space="preserve">#8</text>
+<rect x="904" y="240" width="72" height="56" rx="8" fill="#f3f4f6" stroke="#2563eb" stroke-width="2"/>
+<text x="940" y="276" font-family="Inter, Segoe UI, Arial, sans-serif" font-size="20" fill="#111827" text-anchor="middle" font-weight="700" xml:space="preserve">#9</text>
+<rect x="986" y="240" width="72" height="56" rx="8" fill="#f3f4f6" stroke="#2563eb" stroke-width="2"/>
+<text x="1022" y="276" font-family="Inter, Segoe UI, Arial, sans-serif" font-size="20" fill="#111827" text-anchor="middle" font-weight="700" xml:space="preserve">#10</text>
+<rect x="1068" y="240" width="72" height="56" rx="8" fill="#ffffff" stroke="#ec362e" stroke-width="3"/>
+<text x="1104" y="276" font-family="Inter, Segoe UI, Arial, sans-serif" font-size="20" fill="#ec362e" text-anchor="middle" font-weight="700" xml:space="preserve">#14</text>
+<text x="60" y="360" font-family="Inter, Segoe UI, Arial, sans-serif" font-size="24" fill="#111827" text-anchor="start" font-weight="700" xml:space="preserve">9 of the true 10 found  →  recall@10 = 0.9</text>
+<text x="60" y="400" font-family="Inter, Segoe UI, Arial, sans-serif" font-size="20" fill="#4b5563" text-anchor="start" font-weight="400" xml:space="preserve">Missed: #7 (red, top row).  Returned instead: #14, the 14th-closest vector.</text>
+<text x="60" y="450" font-family="Inter, Segoe UI, Arial, sans-serif" font-size="20" fill="#111827" text-anchor="start" font-weight="400" xml:space="preserve">Raising efSearch visits more of the graph: recall goes up, and so does latency.</text>
+</svg>

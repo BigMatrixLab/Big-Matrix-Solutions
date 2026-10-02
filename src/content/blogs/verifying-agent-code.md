@@ -3,10 +3,10 @@ id: "34"
 slug: "verifying-code-you-did-not-write"
 title: "Your Tests Were Never This Important: Verifying Code You Did Not Write"
 comments: "0"
-image: "https://images.unsplash.com/photo-1517180102446-f3ece451e9d8?auto=format&fit=crop&q=80&w=800"
+image: "/assets/images/blog/verifying-agent-code.png"
 category: "Software Development"
 desc: "When generation is cheap, verification is the whole job. Property tests, mutation testing, and why passing your suite means less than it used to."
-date: "Mar 12, 2027"
+date: "Dec 04, 2026"
 tags: ["Testing", "Verification", "Agentic AI", "Software Quality"]
 ---
 
@@ -48,9 +48,17 @@ And **SWE-Cycle**, which benchmarks agents across the complete issue resolution 
 
 The engineering translation is direct. **Grade the trajectory, not just the diff.** What the agent read, what it ran, what it changed, and whether that sequence makes sense. That is where the failures are visible.
 
+![Heatmap of which action a coding agent takes next after each action, such as edit, pytest, search_file and submit, across SWE-agent trajectories](/assets/images/blog/verifying-agent-code-swe-agent-actions.png)
+
+*What an agent actually does, step by step: how often each action follows another across SWE-agent trajectories with GPT-4 Turbo. Output-only grading never sees this. Source: [SWE-agent, Yang et al.](https://arxiv.org/abs/2405.15793) (CC BY 4.0)*
+
 ## Verification that actually helps
 
 Techniques that hold up when the author is a model, roughly in order of return on effort.
+
+![Six verification techniques matched to the failures they catch: example tests, property tests, mutation testing, differential testing, production invariants and trajectory review](/assets/images/blog/diagrams/verifying-agent-code-1.svg)
+
+*Diagram: Big Matrix Solutions, summarising the techniques below; property-based testing as implemented by [Hypothesis](https://hypothesis.readthedocs.io/).*
 
 ### 1. Property-based testing
 
@@ -150,3 +158,8 @@ The actual problem is that when it is wrong, it is wrong in ways that pass revie
 That is why verification became the interesting part of the job. Not because the code is bad, but because the traditional signals for whether code is good (it reads well, it passes tests, it looks like what a competent engineer would write) have all become much cheaper to produce and therefore much weaker as evidence.
 
 The signals that still mean something are the ones that are hard to fake: a property that holds on arbitrary input, an invariant that holds in production, a test that demonstrably failed before, and a trajectory that shows the work was actually done.
+
+**Media credits**:
+- Hero image: SWE-agent overview of an LM agent working through an agent-computer interface, Figure 1 of [SWE-agent: Agent-Computer Interfaces Enable Automated Software Engineering](https://arxiv.org/abs/2405.15793) (Yang et al.), CC BY 4.0. Placed unaltered on a 16:9 white canvas.
+- In-body figure: action transition heatmap from the same [paper](https://arxiv.org/abs/2405.15793), CC BY 4.0. Unaltered.
+- In-body diagram: matching checks to failures, Big Matrix Solutions; property-based testing per [Hypothesis](https://hypothesis.readthedocs.io/).

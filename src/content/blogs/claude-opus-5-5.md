@@ -43,6 +43,10 @@ The input and output prices are 20% lower than Opus 5. The cut on cache reads is
 
 A **fast mode** is also listed at $8 input and $40 output per million tokens.
 
+![Bar chart comparing Claude Opus 5 and Opus 5.5 prices per million tokens for input, output, cache reads and cache writes](/assets/images/blog/diagrams/claude-opus-5-5-1.svg)
+
+*Input, output and cache-write prices fall 20%; cache reads fall 60%. Diagram: Big Matrix Solutions, based on [Anthropic](https://www.anthropic.com/claude-opus-5-5).*
+
 > **⚡ Speed:** Anthropic says Opus 5.5 "generates output more than 30% faster than Opus 5."
 
 ## 📊 Benchmarks: Opus Catches the Bigger Model
@@ -62,6 +66,10 @@ Anthropic published results against Claude Fable 5.1, Claude Opus 5 and competin
 On every row above, Opus 5.5 scores higher than both Opus 5 and the larger Fable 5.1. The scores do not put it ahead of everything else, though. On Anthropic's own chart, OpenAI's GPT-6 Astra scores higher on AutomationBench (41.4%) and on Terminal-Bench-Science 0.1 (64.6% vs. 58.7%).
 
 Anthropic also says that "in our own use, the gap between Opus 5.5 and Claude Fable 5.1 is narrower than these scores suggest". So the benchmark lead does not always show up as a lead in practice.
+
+![Bar chart of benchmark scores for Claude Opus 5.5, Fable 5.1 and Opus 5 on six benchmarks](/assets/images/blog/diagrams/claude-opus-5-5-2.svg)
+
+*Opus 5.5 leads Fable 5.1 and Opus 5 on each of these six benchmarks. Diagram: Big Matrix Solutions, based on [Anthropic](https://www.anthropic.com/claude-opus-5-5).*
 
 ### 🛠️ Real-World Signals
 
@@ -120,3 +128,5 @@ Claude Opus 5.5 shows that frontier performance does not have to cost more each 
 
 **Media credits**:
 - Hero image: Claude Opus 5.5 launch artwork — [Anthropic](https://www.anthropic.com/claude-opus-5-5)
+- Diagram: Opus 5 vs Opus 5.5 prices — Big Matrix Solutions, based on [Anthropic](https://www.anthropic.com/claude-opus-5-5)
+- Diagram: benchmark comparison — Big Matrix Solutions, based on [Anthropic](https://www.anthropic.com/claude-opus-5-5)

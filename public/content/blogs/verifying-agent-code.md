@@ -6,7 +6,7 @@ comments: "0"
 image: "https://images.unsplash.com/photo-1517180102446-f3ece451e9d8?auto=format&fit=crop&q=80&w=800"
 category: "Software Development"
 desc: "When generation is cheap, verification is the whole job. Property tests, mutation testing, and why passing your suite means less than it used to."
-date: "Mar 12, 2027"
+date: "Dec 04, 2026"
 tags: ["Testing", "Verification", "Agentic AI", "Software Quality"]
 ---
 

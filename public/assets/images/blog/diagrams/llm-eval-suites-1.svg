@@ -1,0 +1,54 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 1200 560" width="1200" height="560" role="img" aria-labelledby="t d" font-family="Inter, Segoe UI, Arial, sans-serif">
+  <rect x="0" y="0" width="1200" height="560" fill="#ffffff" rx="16" stroke="#e5e7eb"/>
+  <title id="t">Where an eval suite sits in the release loop</title>
+  <desc id="d">Five stages left to right: tasks, trials, graders, metrics and a release gate. A feedback loop returns new production failures to the task set.</desc>
+  <defs>
+    <marker id="a" viewBox="0 0 10 10" refX="9" refY="5" markerWidth="8" markerHeight="8" orient="auto-start-reverse">
+      <path d="M0,0 L10,5 L0,10 z" fill="#4b5563"/>
+    </marker>
+  </defs>
+  <text x="600" y="58" text-anchor="middle" font-size="28" font-weight="700" fill="#111827">Where an eval suite sits in the release loop</text>
+
+  <g font-size="18" fill="#4b5563">
+    <rect x="24" y="110" width="208" height="220" rx="12" fill="#f3f4f6" stroke="#d1d5db"/>
+    <text x="128" y="152" text-anchor="middle" font-size="22" font-weight="700" fill="#111827">Tasks</text>
+    <text x="128" y="200" text-anchor="middle">20 to 50 to start</text>
+    <text x="128" y="232" text-anchor="middle">from real failures</text>
+    <text x="128" y="264" text-anchor="middle">should + should not</text>
+
+    <rect x="260" y="110" width="208" height="220" rx="12" fill="#f3f4f6" stroke="#d1d5db"/>
+    <text x="364" y="152" text-anchor="middle" font-size="22" font-weight="700" fill="#111827">Trials</text>
+    <text x="364" y="200" text-anchor="middle">k runs per task</text>
+    <text x="364" y="232" text-anchor="middle">clean environment</text>
+    <text x="364" y="264" text-anchor="middle">full transcript</text>
+
+    <rect x="496" y="110" width="208" height="220" rx="12" fill="#f3f4f6" stroke="#d1d5db"/>
+    <text x="600" y="152" text-anchor="middle" font-size="22" font-weight="700" fill="#111827">Graders</text>
+    <text x="600" y="200" text-anchor="middle">code-based</text>
+    <text x="600" y="232" text-anchor="middle">model-based</text>
+    <text x="600" y="264" text-anchor="middle">human, to calibrate</text>
+
+    <rect x="732" y="110" width="208" height="220" rx="12" fill="#f3f4f6" stroke="#d1d5db"/>
+    <text x="836" y="152" text-anchor="middle" font-size="22" font-weight="700" fill="#111827">Metrics</text>
+    <text x="836" y="200" text-anchor="middle">pass@k, pass^k</text>
+    <text x="836" y="232" text-anchor="middle">tokens, latency</text>
+    <text x="836" y="264" text-anchor="middle">cost per task</text>
+
+    <rect x="968" y="110" width="208" height="220" rx="12" fill="#ffffff" stroke="#ec362e" stroke-width="3"/>
+    <text x="1072" y="152" text-anchor="middle" font-size="22" font-weight="700" fill="#ec362e">Gate</text>
+    <text x="1072" y="200" text-anchor="middle">regression: ~100%</text>
+    <text x="1072" y="232" text-anchor="middle">capability: track</text>
+    <text x="1072" y="264" text-anchor="middle">ship or block</text>
+  </g>
+
+  <g stroke="#4b5563" stroke-width="2.5" fill="none" marker-end="url(#a)">
+    <line x1="234" y1="220" x2="256" y2="220"/>
+    <line x1="470" y1="220" x2="492" y2="220"/>
+    <line x1="706" y1="220" x2="728" y2="220"/>
+    <line x1="942" y1="220" x2="964" y2="220"/>
+    <path d="M1072,332 L1072,430 L128,430 L128,336"/>
+  </g>
+  <rect x="330" y="410" width="540" height="40" fill="#ffffff"/>
+  <text x="600" y="437" text-anchor="middle" font-size="20" fill="#111827">New failures from production become new tasks</text>
+  <text x="600" y="512" text-anchor="middle" font-size="20" fill="#4b5563">Read the transcripts, not just the scores.</text>
+</svg>

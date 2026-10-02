@@ -1,0 +1,31 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 1200 580" width="1200" height="580" font-family="Inter, Segoe UI, Arial, sans-serif">
+<rect x="0.5" y="0.5" width="1199" height="579" fill="#ffffff" rx="16" stroke="#e5e7eb"/>
+<title>NVIDIA Hugging Face deal terms</title>
+<desc>Bar showing the ~$12.93 billion deal split into ~$11.9 billion for Hugging Face shareholders and up to $1 billion of retention equity, with expected close in the first half of 2027. Tiles show 18M+ developers, 3M+ models, 500K+ datasets, 1M+ applications and 200K+ companies.</desc>
+<text x="40" y="62" font-size="30" fill="#111827" font-weight="700">NVIDIA and Hugging Face: the deal and the platform</text>
+<text x="40" y="98" font-size="20" fill="#4b5563">Figures as announced on September 3, 2026</text>
+<text x="40" y="160" font-size="22" fill="#111827" font-weight="700">Total consideration: ~$12.93 billion</text>
+<rect x="40" y="180" width="1031" height="56" fill="#ec362e" rx="6"/>
+<rect x="1075" y="180" width="85" height="56" fill="#d1d5db" rx="6"/>
+<text x="64" y="216" font-size="22" fill="#ffffff" font-weight="700">~$11.9B to Hugging Face shareholders</text>
+<text x="1160" y="270" font-size="20" fill="#111827" text-anchor="end">up to $1B employee retention equity</text>
+<line x1="1117" y1="238" x2="1117" y2="250" stroke="#4b5563" stroke-width="2"/>
+<text x="40" y="310" font-size="20" fill="#4b5563">Expected close: first half of 2027, subject to regulatory approval</text>
+<line x1="40" y1="340" x2="1160" y2="340" stroke="#f3f4f6" stroke-width="2"/>
+<text x="40" y="386" font-size="22" fill="#111827" font-weight="700">What is being bought</text>
+<rect x="40" y="408" width="208" height="130" fill="#f3f4f6" rx="14"/>
+<text x="144" y="468" font-size="38" fill="#ec362e" font-weight="700" text-anchor="middle">18M+</text>
+<text x="144" y="506" font-size="20" fill="#111827" text-anchor="middle">developers</text>
+<rect x="268" y="408" width="208" height="130" fill="#f3f4f6" rx="14"/>
+<text x="372" y="468" font-size="38" fill="#ec362e" font-weight="700" text-anchor="middle">3M+</text>
+<text x="372" y="506" font-size="20" fill="#111827" text-anchor="middle">models</text>
+<rect x="496" y="408" width="208" height="130" fill="#f3f4f6" rx="14"/>
+<text x="600" y="468" font-size="38" fill="#ec362e" font-weight="700" text-anchor="middle">500K+</text>
+<text x="600" y="506" font-size="20" fill="#111827" text-anchor="middle">datasets</text>
+<rect x="724" y="408" width="208" height="130" fill="#f3f4f6" rx="14"/>
+<text x="828" y="468" font-size="38" fill="#ec362e" font-weight="700" text-anchor="middle">1M+</text>
+<text x="828" y="506" font-size="20" fill="#111827" text-anchor="middle">applications</text>
+<rect x="952" y="408" width="208" height="130" fill="#f3f4f6" rx="14"/>
+<text x="1056" y="468" font-size="38" fill="#ec362e" font-weight="700" text-anchor="middle">200K+</text>
+<text x="1056" y="506" font-size="20" fill="#111827" text-anchor="middle">companies</text>
+</svg>

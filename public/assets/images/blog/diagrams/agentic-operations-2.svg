@@ -1,0 +1,41 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 1200 580" width="1200" height="580" role="img" aria-labelledby="t d" font-family="Inter, Segoe UI, Arial, sans-serif">
+  <rect x="0" y="0" width="1200" height="580" fill="#ffffff" rx="16" stroke="#e5e7eb"/>
+  <title id="t">AgenticOps implementation roadmap</title>
+  <desc id="d">A four-step staircase. Phase 1, observability, weeks 1 to 2, low risk. Phase 2, a pilot anomaly-detection agent in monitor-only mode, weeks 3 to 4, low risk. Phase 3, expansion to incident response and cost agents, months 2 to 3, medium risk. Phase 4, autonomous operations with auto-remediation and self-healing, months 4 to 6, high risk.</desc>
+  <text x="600" y="54" text-anchor="middle" font-size="28" font-weight="700" fill="#111827">Earn autonomy one phase at a time</text>
+
+  <g font-size="18" fill="#4b5563" text-anchor="middle">
+    <rect x="30" y="300" width="270" height="200" rx="12" fill="#f3f4f6" stroke="#d1d5db"/>
+    <text x="165" y="336" font-weight="700" fill="#4b5563">Phase 1</text>
+    <text x="165" y="366" font-size="22" font-weight="700" fill="#111827">Observability</text>
+    <text x="165" y="396">Weeks 1–2</text>
+    <text x="165" y="426">logs, metrics, tracing</text>
+    <text x="165" y="470" font-weight="700" fill="#4b5563">Risk: low</text>
+
+    <rect x="320" y="250" width="270" height="250" rx="12" fill="#f3f4f6" stroke="#d1d5db"/>
+    <text x="455" y="286" font-weight="700" fill="#4b5563">Phase 2</text>
+    <text x="455" y="316" font-size="22" font-weight="700" fill="#111827">Pilot agent</text>
+    <text x="455" y="346">Weeks 3–4</text>
+    <text x="455" y="376">anomaly detection,</text>
+    <text x="455" y="402">monitor-only mode</text>
+    <text x="455" y="470" font-weight="700" fill="#4b5563">Risk: low</text>
+
+    <rect x="610" y="200" width="270" height="300" rx="12" fill="#f3f4f6" stroke="#2563eb" stroke-width="2"/>
+    <text x="745" y="236" font-weight="700" fill="#2563eb">Phase 3</text>
+    <text x="745" y="266" font-size="22" font-weight="700" fill="#111827">Expansion</text>
+    <text x="745" y="296">Months 2–3</text>
+    <text x="745" y="326">incident response</text>
+    <text x="745" y="352">and cost agents</text>
+    <text x="745" y="470" font-weight="700" fill="#2563eb">Risk: medium</text>
+
+    <rect x="900" y="150" width="270" height="350" rx="12" fill="#f3f4f6" stroke="#ec362e" stroke-width="2"/>
+    <text x="1035" y="186" font-weight="700" fill="#ec362e">Phase 4</text>
+    <text x="1035" y="216" font-size="22" font-weight="700" fill="#111827">Autonomous ops</text>
+    <text x="1035" y="246">Months 4–6</text>
+    <text x="1035" y="276">auto-remediation,</text>
+    <text x="1035" y="302">predictive scaling,</text>
+    <text x="1035" y="328">self-healing</text>
+    <text x="1035" y="470" font-weight="700" fill="#ec362e">Risk: high</text>
+  </g>
+  <text x="600" y="545" text-anchor="middle" font-size="18" fill="#4b5563">autonomy and risk rise left to right; move on only after the agent has shown it is reliable</text>
+</svg>

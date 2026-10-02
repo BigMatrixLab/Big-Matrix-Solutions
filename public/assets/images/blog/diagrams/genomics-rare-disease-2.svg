@@ -1,0 +1,39 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 1200 600" width="1200" height="600" role="img">
+<rect x="1" y="1" width="1198" height="598" fill="#ffffff" rx="16" stroke="#e5e7eb" stroke-width="2"/>
+<title>Agentic pipeline for rare disease diagnosis</title>
+<desc>Clinical notes, phenotype terms and genetic results feed specialised agents for phenotype extraction, phenotype-disease matching, literature retrieval and variant ranking, producing a traceable ranked shortlist reviewed by a clinical geneticist.</desc>
+<defs><marker id="ah" viewBox="0 0 10 10" refX="9" refY="5" markerWidth="8" markerHeight="8" orient="auto-start-reverse"><path d="M0,0 L10,5 L0,10 z" fill="#4b5563"/></marker></defs>
+<g font-family="Inter, Segoe UI, Arial, sans-serif">
+<text x="60" y="70" font-size="30" fill="#111827" text-anchor="start" font-weight="700">An agentic rare-disease pipeline, as in DeepRare</text>
+<text x="60" y="106" font-size="20" fill="#4b5563" text-anchor="start">Specialised components, each doing one job, combined into a traceable shortlist</text>
+<rect x="60" y="160" width="290" height="76" rx="10" fill="#f3f4f6" stroke="#d1d5db" stroke-width="2"/>
+<text x="205" y="206" font-size="19" fill="#111827" text-anchor="middle" font-weight="700">Free-text clinical notes</text>
+<rect x="60" y="270" width="290" height="76" rx="10" fill="#f3f4f6" stroke="#d1d5db" stroke-width="2"/>
+<text x="205" y="316" font-size="19" fill="#111827" text-anchor="middle" font-weight="700">Structured phenotype terms</text>
+<rect x="60" y="380" width="290" height="76" rx="10" fill="#f3f4f6" stroke="#d1d5db" stroke-width="2"/>
+<text x="205" y="426" font-size="19" fill="#111827" text-anchor="middle" font-weight="700">Genetic test results</text>
+<rect x="410" y="140" width="400" height="72" rx="10" fill="#ffffff" stroke="#2563eb" stroke-width="2"/>
+<text x="430" y="172" font-size="20" fill="#111827" text-anchor="start" font-weight="700">Phenotype extraction</text>
+<text x="430" y="198" font-size="18" fill="#4b5563" text-anchor="start">findings out of messy notes</text>
+<rect x="410" y="228" width="400" height="72" rx="10" fill="#ffffff" stroke="#2563eb" stroke-width="2"/>
+<text x="430" y="260" font-size="20" fill="#111827" text-anchor="start" font-weight="700">Phenotype–disease matching</text>
+<text x="430" y="286" font-size="18" fill="#4b5563" text-anchor="start">against known presentations</text>
+<rect x="410" y="316" width="400" height="72" rx="10" fill="#ffffff" stroke="#2563eb" stroke-width="2"/>
+<text x="430" y="348" font-size="20" fill="#111827" text-anchor="start" font-weight="700">Literature retrieval</text>
+<text x="430" y="374" font-size="18" fill="#4b5563" text-anchor="start">similar cases and mechanism papers</text>
+<rect x="410" y="404" width="400" height="72" rx="10" fill="#ffffff" stroke="#2563eb" stroke-width="2"/>
+<text x="430" y="436" font-size="20" fill="#111827" text-anchor="start" font-weight="700">Variant annotation and ranking</text>
+<text x="430" y="462" font-size="18" fill="#4b5563" text-anchor="start">variants scored against candidates</text>
+<line x1="358" y1="300" x2="402" y2="300" stroke="#4b5563" stroke-width="2" marker-end="url(#ah)"/>
+<line x1="820" y1="300" x2="880" y2="300" stroke="#4b5563" stroke-width="2" marker-end="url(#ah)"/>
+<rect x="890" y="200" width="250" height="200" rx="10" fill="#ffffff" stroke="#ec362e" stroke-width="2"/>
+<text x="1015" y="250" font-size="21" fill="#111827" text-anchor="middle" font-weight="700">Ranked shortlist</text>
+<text x="1015" y="284" font-size="18" fill="#4b5563" text-anchor="middle">with reasons:</text>
+<text x="1015" y="312" font-size="18" fill="#4b5563" text-anchor="middle">symptoms matched,</text>
+<text x="1015" y="338" font-size="18" fill="#4b5563" text-anchor="middle">paper cited, variant</text>
+<text x="1015" y="364" font-size="18" fill="#4b5563" text-anchor="middle">predicted damaging</text>
+<line x1="1015" y1="410" x2="1015" y2="470" stroke="#4b5563" stroke-width="2" marker-end="url(#ah)"/>
+<text x="1140" y="506" font-size="21" fill="#111827" text-anchor="end" font-weight="700">Clinical geneticist decides</text>
+<text x="60" y="560" font-size="20" fill="#4b5563" text-anchor="start">Failure mode: a wasted review rather than a wrong treatment, which is why this is deployable.</text>
+</g>
+</svg>

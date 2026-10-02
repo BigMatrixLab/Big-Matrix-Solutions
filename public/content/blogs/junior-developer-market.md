@@ -6,7 +6,7 @@ comments: "0"
 image: "https://images.unsplash.com/photo-1552664730-d307ca884978?auto=format&fit=crop&q=80&w=800"
 category: "Software Development"
 desc: "The junior developer market did not collapse because AI writes code. It collapsed because the tasks that justified a junior hire disappeared."
-date: "Feb 12, 2027"
+date: "Nov 26, 2026"
 tags: ["Careers", "Software Development", "AI Impact", "Hiring"]
 ---
 

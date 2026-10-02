@@ -1,0 +1,34 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 1200 590" width="1200" height="590" role="img">
+<rect x="1" y="1" width="1198" height="588" fill="#ffffff" rx="16" stroke="#e5e7eb" stroke-width="2"/>
+<title>Clinical and laboratory tracks in surgical robotics</title>
+<desc>Clinical track: in January 2026 the teleoperated da Vinci 5 was cleared for cardiac procedures. Laboratory track: STAR in 2022, Johns Hopkins autonomous gallbladder removal on 8 ex vivo specimens with 88 percent of steps unaided, and a January 2026 Chinese Academy of Sciences advance.</desc>
+<defs><marker id="ah" viewBox="0 0 10 10" refX="9" refY="5" markerWidth="8" markerHeight="8" orient="auto-start-reverse"><path d="M0,0 L10,5 L0,10 z" fill="#4b5563"/></marker></defs>
+<g font-family="Inter, Segoe UI, Arial, sans-serif">
+<text x="60" y="70" font-size="30" fill="#111827" text-anchor="start" font-weight="700">Two tracks that have not yet met</text>
+<text x="60" y="106" font-size="20" fill="#4b5563" text-anchor="start">Clinical clearance for better teleoperation, laboratory results for autonomy</text>
+<text x="60" y="170" font-size="22" fill="#2563eb" text-anchor="start" font-weight="700">Clinic</text>
+<text x="60" y="196" font-size="18" fill="#4b5563" text-anchor="start">teleoperation</text>
+<line x1="220" y1="180" x2="1130" y2="180" stroke="#2563eb" stroke-width="4"/>
+<text x="60" y="360" font-size="22" fill="#ec362e" text-anchor="start" font-weight="700">Laboratory</text>
+<text x="60" y="386" font-size="18" fill="#4b5563" text-anchor="start">autonomy</text>
+<line x1="220" y1="370" x2="1130" y2="370" stroke="#ec362e" stroke-width="4"/>
+<circle cx="940" cy="180" r="10" fill="#2563eb"/>
+<text x="940" y="220" font-size="20" fill="#111827" text-anchor="middle" font-weight="700">Jan 2026: da Vinci 5</text>
+<text x="940" y="246" font-size="18" fill="#4b5563" text-anchor="middle">FDA clearance for several</text>
+<text x="940" y="270" font-size="18" fill="#4b5563" text-anchor="middle">cardiac procedures</text>
+<circle cx="330" cy="370" r="10" fill="#ec362e"/>
+<text x="330" y="410" font-size="20" fill="#111827" text-anchor="middle" font-weight="700">2022: STAR</text>
+<text x="330" y="436" font-size="18" fill="#4b5563" text-anchor="middle">first autonomous surgery</text>
+<text x="330" y="460" font-size="18" fill="#4b5563" text-anchor="middle">on a live animal (pig)</text>
+<circle cx="640" cy="370" r="10" fill="#ec362e"/>
+<text x="640" y="410" font-size="20" fill="#111827" text-anchor="middle" font-weight="700">Johns Hopkins</text>
+<text x="640" y="436" font-size="18" fill="#4b5563" text-anchor="middle">8 ex vivo gallbladders,</text>
+<text x="640" y="460" font-size="18" fill="#4b5563" text-anchor="middle">88% of steps unaided</text>
+<circle cx="940" cy="370" r="10" fill="#ec362e"/>
+<text x="940" y="410" font-size="20" fill="#111827" text-anchor="middle" font-weight="700">Jan 2026: CAS Institute</text>
+<text x="940" y="436" font-size="18" fill="#4b5563" text-anchor="middle">of Automation publishes</text>
+<text x="940" y="460" font-size="18" fill="#4b5563" text-anchor="middle">another autonomy advance</text>
+<text x="60" y="530" font-size="20" fill="#4b5563" text-anchor="start">The gap is regulatory and evidential: open-ended failure modes, unclear liability,</text>
+<text x="60" y="558" font-size="20" fill="#4b5563" text-anchor="start">thousands of cases needed for validation, and complicated consent.</text>
+</g>
+</svg>

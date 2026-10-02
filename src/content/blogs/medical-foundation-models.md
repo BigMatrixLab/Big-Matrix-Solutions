@@ -3,7 +3,7 @@ id: "11"
 slug: "medical-foundation-models-clear-the-fda"
 title: "Medical Foundation Models Just Cleared the FDA. That Changes the Regulatory Playbook."
 comments: "0"
-image: "https://images.unsplash.com/photo-1631563019676-dade0dbdb8fc?auto=format&fit=crop&q=80&w=800"
+image: "/assets/images/blog/medical-foundation-models-cover.png"
 category: "Medical AI"
 desc: "One clearance covering 14 conditions from a single CT scan, 1,524 cleared algorithms, and the validation gap regulators have not closed yet."
 date: "Sep 18, 2026"
@@ -15,6 +15,10 @@ tags: ["Medical AI", "Radiology", "FDA", "Foundation Models"]
 For a decade, clinical AI had a shape imposed on it by regulation. You picked one narrow finding (a large-vessel occlusion, a pulmonary embolism, an intracranial haemorrhage), trained a model to detect it, ran a pivotal study, and filed. If you wanted to detect a second thing, you did the whole process again.
 
 The result was predictable. As of March 30, 2026, there are **1,524 FDA-cleared AI algorithms**, and 1,163 of them are for radiology. Radiology alone accounts for 76.31 percent of every AI device the FDA has ever cleared. In the first three months of 2026, another 68 radiology algorithms went through.
+
+![Bar chart: of 1,524 FDA-cleared AI algorithms as of 30 March 2026, 1,163 (76.31%) are for radiology and 361 for other specialties; 68 radiology algorithms were cleared in the first quarter of 2026](/assets/images/blog/diagrams/medical-foundation-models-1.svg)
+
+*Radiology accounts for more than three quarters of FDA-cleared AI. Diagram: Big Matrix Solutions, based on [Radiology Business](https://radiologybusiness.com/topics/artificial-intelligence/radiology-gets-68-new-fda-cleared-algorithms).*
 
 That is not the sign of a healthy platform. It is the sign of a regulatory pathway that rewards fragmentation. A large hospital ends up licensing eight or ten separate products, each watching for one thing, each with its own integration, its own worklist behaviour, and its own alert.
 
@@ -39,6 +43,10 @@ Both numbers are strong, and they are means across fourteen conditions rather th
 Then in June, the FDA granted Breakthrough Device Designation to *First Read*, which extends the same CARE model into a different job entirely: analysing chest radiographs and generating preliminary radiology report text.
 
 That is the pattern worth noticing. One pretrained backbone, then two very different regulated products built on it: multi-condition triage and report drafting. That is the foundation-model playbook, and it has now made it through a medical device pathway.
+
+![Comparison: before, one device per finding such as aortic dissection or appendicitis, each with its own submission and integration; now, the CARE foundation model underpins body CT triage for 14 conditions and First Read for chest X-ray report drafts](/assets/images/blog/diagrams/medical-foundation-models-2.svg)
+
+*From one device per finding to one backbone with several regulated products. Diagram: Big Matrix Solutions, based on [STAT](https://www.statnews.com/2026/01/21/fda-clears-aidoc-tool-detect-multiple-conditions-from-ct-scan/).*
 
 ## Why this is a regulatory story, not just a technical one
 
@@ -143,3 +151,8 @@ Three open questions will determine how this plays out.
 **Does report generation clear?** *First Read* is the test case. If AI-drafted radiology reports become a cleared category, the entire relationship between radiologist and model changes: from a system that reorders your queue to one that writes your first draft. That is a far larger shift than triage ever was, and the workflow and liability questions around it are nowhere near settled.
 
 For now it comes down to this: the technology is ahead of the regulation, the regulation is adapting faster than it used to, and the gap between them is where most of the clinical risk currently lives.
+
+**Media credits**:
+- Hero image: Big Matrix Solutions cover, based on reporting of the Aidoc clearance by [STAT](https://www.statnews.com/2026/01/21/fda-clears-aidoc-tool-detect-multiple-conditions-from-ct-scan/).
+- In-body diagram: FDA-cleared AI by specialty. Big Matrix Solutions, based on [Radiology Business](https://radiologybusiness.com/topics/artificial-intelligence/radiology-gets-68-new-fda-cleared-algorithms).
+- In-body diagram: single-finding devices versus a shared backbone. Big Matrix Solutions, based on [STAT](https://www.statnews.com/2026/01/21/fda-clears-aidoc-tool-detect-multiple-conditions-from-ct-scan/).

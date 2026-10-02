@@ -8,7 +8,7 @@ comments: "0"
 image: "/assets/images/blog/frontier-act-capitol.webp"
 category: "AI Policy"
 desc: "A bipartisan House bill would license independent auditors for the biggest AI labs and override parts of state law. Here is what it says, where it stalled, and who it would actually touch."
-date: "Nov 26, 2026"
+date: "Nov 02, 2026"
 tags: ["AI Policy", "FRONTIER Act", "AI Regulation", "Compliance", "Frontier Models"]
 ---
 
@@ -16,15 +16,19 @@ tags: ["AI Policy", "FRONTIER Act", "AI Regulation", "Compliance", "Frontier Mod
 
 For three years, the most detailed rules on frontier AI in the United States came from Sacramento and Albany, not Washington. In the summer of 2026 a Republican from California and a Democrat from Massachusetts tried to change that, and for a few weeks in September it looked as if Congress might act.
 
-It did not act before the election. But their bill remains the most complete federal proposal on the table, and a good guide to what federal oversight may look like whenever it arrives.
+With the midterms days away, lawmakers on both sides expect nothing to pass before Election Day. But their bill remains the most complete federal proposal on the table, and a good guide to what federal oversight may look like whenever it arrives.
 
-*This is an overview for general information, not legal advice. Status is described as of early October 2026. The November 3, 2026 midterm elections will have taken place by the time this is published. We do not try to predict their effect here.*
+*This is an overview for general information, not legal advice. Status is described as of early October 2026. The November 3, 2026 midterm elections take place the day after publication. We do not try to predict their effect here.*
 
 ## From discussion draft to H.R. 9925
 
 The bill started as a discussion draft. In June 2026, Reps. Jay Obernolte (R-CA) and Lori Trahan (D-MA) released the **Great American AI Act**, which the Future of Privacy Forum (FPF) described as a bipartisan discussion draft, a starting point for debate rather than a finished bill. Its preemption language drew heavy criticism, including a letter from more than 200 state legislators across 42 states, according to the Foundation for American Innovation.
 
 On **July 23, 2026**, the two sponsors introduced a revised version: the **Frontier Risk Oversight, National Transparency, Independent Evaluation, and Reporting (FRONTIER) Act**, **H.R. 9925**. Four co-sponsors joined them: Reps. Houchin, Peters, Scott Franklin and Subramanyam. The bill was referred to the House Energy and Commerce Committee and the Science, Space, and Technology Committee.
+
+![First page of H.R. 9925, the FRONTIER Act, as introduced in the House of Representatives on July 23, 2026](/assets/images/blog/frontier-act-hr9925-first-page.png)
+
+*The first page of H.R. 9925 as introduced. Source: [GovInfo, U.S. Government Publishing Office](https://www.govinfo.gov/app/details/BILLS-119hr9925ih), public domain*
 
 ## What the bill actually requires
 
@@ -35,6 +39,10 @@ According to the introduced text, the bill sets three tiers of developer:
 | Frontier developer | Has trained, or started training, a model using more than 10^26 operations | Transparency report before deployment; critical incident reporting |
 | Large frontier developer | Above, plus over $50M gross revenue and $1B+ AI development spend over 36 months | Publish and follow a "frontier AI framework" for catastrophic risk |
 | Very large frontier developer | Above, plus over $5B gross revenue and $10B+ AI development spend over 36 months | Retain a licensed Independent Verification Organization (IVO), assessed at least every six months |
+
+![Nested boxes showing the FRONTIER Act's three developer tiers and the obligations attached to each](/assets/images/blog/diagrams/frontier-act-congress-1.svg)
+
+*Each tier adds revenue and spending tests to the one above it. Diagram: Big Matrix Solutions, based on [the bill text](https://www.govinfo.gov/app/details/BILLS-119hr9925ih).*
 
 Other provisions in the text:
 
@@ -129,3 +137,5 @@ AI Policy, FRONTIER Act, AI Regulation, Compliance, Frontier Models
 
 **Media credits**:
 - Hero image: U.S. Capitol, from the FRONTIER Act introduction release — [Office of Rep. Jay Obernolte](https://obernolte.house.gov/media/press-releases/obernolte-trahan-introduce-bipartisan-frontier-act-strengthen-oversight)
+- In-body image: first page of H.R. 9925 — [GovInfo](https://www.govinfo.gov/app/details/BILLS-119hr9925ih), public domain
+- Diagram: developer tiers — Big Matrix Solutions, based on [H.R. 9925](https://www.govinfo.gov/app/details/BILLS-119hr9925ih)

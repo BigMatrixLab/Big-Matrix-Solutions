@@ -8,7 +8,7 @@ comments: "0"
 image: "/assets/images/blog/intelligence-explosion-paper.webp"
 category: "AI Research"
 desc: "Hinton, Bengio and senior scientists from OpenAI and Anthropic argue that automating AI research could compress years of progress into months. What the evidence shows, and where critics push back."
-date: "Nov 03, 2026"
+date: "Oct 15, 2026"
 tags: ["AI Research", "AI Safety", "AI Governance", "Recursive Self-Improvement"]
 ---
 

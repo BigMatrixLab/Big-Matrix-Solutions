@@ -6,7 +6,7 @@ comments: "0"
 image: "https://images.unsplash.com/photo-1614064641938-3bbee52942c7?auto=format&fit=crop&q=80&w=800"
 category: "Cyber Security"
 desc: "CVSS 9.8, a backdoored package with 47,000 downloads, and 28 of 53 tracked agentic projects being coding tools. Why injection became code execution."
-date: "Dec 18, 2026"
+date: "Nov 10, 2026"
 tags: ["Security", "Prompt Injection", "Agentic AI", "Supply Chain"]
 ---
 

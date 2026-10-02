@@ -6,7 +6,7 @@ comments: "0"
 image: "https://images.unsplash.com/photo-1628595351029-c2bf17511435?auto=format&fit=crop&q=80&w=800"
 category: "Medical AI"
 desc: "Sequencing got cheap and interpretation became the bottleneck. Agentic systems that read symptoms, papers and variants are starting to close the gap."
-date: "Feb 05, 2027"
+date: "Nov 24, 2026"
 tags: ["Medical AI", "Genomics", "Rare Disease", "Agentic AI"]
 ---
 

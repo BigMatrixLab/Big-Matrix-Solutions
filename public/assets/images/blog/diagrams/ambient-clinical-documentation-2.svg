@@ -1,0 +1,27 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 1200 520" width="1200" height="520" role="img" font-family="Inter, Segoe UI, Arial, sans-serif">
+<rect x="1" y="1" width="1198" height="518" fill="#ffffff" rx="16" stroke="#e5e7eb" stroke-width="2"/>
+<title>Risk profile of an ambient scribe versus diagnostic AI</title>
+<desc>Comparison on three dimensions. Who makes the decision: the clinician before the note, versus the model proposing it. When errors surface: on review by someone present, versus later by consequence. Automation bias: low, versus high.</desc>
+<defs><marker id="ah" viewBox="0 0 10 10" refX="9" refY="5" markerWidth="8" markerHeight="8" orient="auto-start-reverse"><path d="M0,0 L10,5 L0,10 z" fill="#4b5563"/></marker><marker id="ahr" viewBox="0 0 10 10" refX="9" refY="5" markerWidth="8" markerHeight="8" orient="auto-start-reverse"><path d="M0,0 L10,5 L0,10 z" fill="#ec362e"/></marker></defs>
+<text x="600" y="62" font-size="30" font-weight="700" fill="#111827" text-anchor="middle">Why the boring application shipped first</text>
+<text x="600" y="98" font-size="21" font-weight="400" fill="#4b5563" text-anchor="middle">Risk profile of an ambient scribe compared with diagnostic AI</text>
+<rect x="360" y="130" width="390" height="60" rx="12" fill="#ffffff" stroke="#2563eb" stroke-width="2"/>
+<text x="555.0" y="166.6" font-size="22" font-weight="700" fill="#111827" text-anchor="middle">Ambient scribe</text>
+<rect x="770" y="130" width="390" height="60" rx="12" fill="#ffffff" stroke="#ec362e" stroke-width="2"/>
+<text x="965.0" y="166.6" font-size="22" font-weight="700" fill="#111827" text-anchor="middle">Diagnostic AI</text>
+<text x="60" y="257" font-size="21" font-weight="700" fill="#111827" text-anchor="start">Who decides</text>
+<rect x="360" y="210" width="390" height="80" rx="12" fill="#f3f4f6" stroke="#d1d5db" stroke-width="2"/>
+<text x="555" y="257" font-size="20" font-weight="400" fill="#111827" text-anchor="middle">Clinician, before the note</text>
+<rect x="770" y="210" width="390" height="80" rx="12" fill="#f3f4f6" stroke="#d1d5db" stroke-width="2"/>
+<text x="965" y="257" font-size="20" font-weight="400" fill="#111827" text-anchor="middle">The model proposes it</text>
+<text x="60" y="352" font-size="21" font-weight="700" fill="#111827" text-anchor="start">When errors surface</text>
+<rect x="360" y="305" width="390" height="80" rx="12" fill="#f3f4f6" stroke="#d1d5db" stroke-width="2"/>
+<text x="555" y="352" font-size="20" font-weight="400" fill="#111827" text-anchor="middle">On review, by someone present</text>
+<rect x="770" y="305" width="390" height="80" rx="12" fill="#f3f4f6" stroke="#d1d5db" stroke-width="2"/>
+<text x="965" y="352" font-size="20" font-weight="400" fill="#111827" text-anchor="middle">Later, by consequence</text>
+<text x="60" y="447" font-size="21" font-weight="700" fill="#111827" text-anchor="start">Automation bias</text>
+<rect x="360" y="400" width="390" height="80" rx="12" fill="#f3f4f6" stroke="#d1d5db" stroke-width="2"/>
+<text x="555" y="447" font-size="20" font-weight="400" fill="#111827" text-anchor="middle">Low: it records a decision</text>
+<rect x="770" y="400" width="390" height="80" rx="12" fill="#f3f4f6" stroke="#d1d5db" stroke-width="2"/>
+<text x="965" y="447" font-size="20" font-weight="400" fill="#111827" text-anchor="middle">High: anchors before judgement</text>
+</svg>

@@ -1,0 +1,32 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 1200 600" width="1200" height="600" role="img">
+<rect x="1" y="1" width="1198" height="598" fill="#ffffff" rx="16" stroke="#e5e7eb" stroke-width="2"/>
+<title>How IBM restructured the junior developer role</title>
+<desc>Before: the junior bundle was boilerplate, small bug fixes, CRUD endpoints, test scaffolding and straightforward feature work. After: less routine coding, more time with customers gathering requirements, and reviewing AI output.</desc>
+<defs><marker id="ah" viewBox="0 0 10 10" refX="9" refY="5" markerWidth="8" markerHeight="8" orient="auto-start-reverse"><path d="M0,0 L10,5 L0,10 z" fill="#4b5563"/></marker><marker id="ahr" viewBox="0 0 10 10" refX="9" refY="5" markerWidth="8" markerHeight="8" orient="auto-start-reverse"><path d="M0,0 L10,5 L0,10 z" fill="#ec362e"/></marker></defs>
+<text x="60" y="68" font-family="Inter, Segoe UI, Arial, sans-serif" font-size="30" fill="#111827" text-anchor="start" font-weight="700">The junior role: from producing code to judging it</text>
+<text x="60" y="104" font-family="Inter, Segoe UI, Arial, sans-serif" font-size="20" fill="#4b5563" text-anchor="start" font-weight="400">IBM tripled junior intake in 2026 while redesigning what the job is</text>
+<rect x="60" y="140" width="500" height="400" rx="10" fill="#f3f4f6" stroke="#d1d5db" stroke-width="2"/>
+<text x="90" y="186" font-family="Inter, Segoe UI, Arial, sans-serif" font-size="24" fill="#111827" text-anchor="start" font-weight="700">The old bundle</text>
+<text x="90" y="216" font-family="Inter, Segoe UI, Arial, sans-serif" font-size="18" fill="#4b5563" text-anchor="start" font-weight="400">Necessary, and cheap to supervise</text>
+<rect x="90" y="246" width="440" height="42" rx="8" fill="#ffffff" stroke="#d1d5db" stroke-width="2"/>
+<text x="110" y="274" font-family="Inter, Segoe UI, Arial, sans-serif" font-size="20" fill="#4b5563" text-anchor="start" font-weight="400">Boilerplate</text>
+<rect x="90" y="300" width="440" height="42" rx="8" fill="#ffffff" stroke="#d1d5db" stroke-width="2"/>
+<text x="110" y="328" font-family="Inter, Segoe UI, Arial, sans-serif" font-size="20" fill="#4b5563" text-anchor="start" font-weight="400">Small bug fixes</text>
+<rect x="90" y="354" width="440" height="42" rx="8" fill="#ffffff" stroke="#d1d5db" stroke-width="2"/>
+<text x="110" y="382" font-family="Inter, Segoe UI, Arial, sans-serif" font-size="20" fill="#4b5563" text-anchor="start" font-weight="400">CRUD endpoints</text>
+<rect x="90" y="408" width="440" height="42" rx="8" fill="#ffffff" stroke="#d1d5db" stroke-width="2"/>
+<text x="110" y="436" font-family="Inter, Segoe UI, Arial, sans-serif" font-size="20" fill="#4b5563" text-anchor="start" font-weight="400">Test scaffolding</text>
+<rect x="90" y="462" width="440" height="42" rx="8" fill="#ffffff" stroke="#d1d5db" stroke-width="2"/>
+<text x="110" y="490" font-family="Inter, Segoe UI, Arial, sans-serif" font-size="20" fill="#4b5563" text-anchor="start" font-weight="400">Straightforward feature work</text>
+<line x1="575" y1="340" x2="625" y2="340" stroke="#ec362e" stroke-width="3" marker-end="url(#ahr)"/>
+<rect x="640" y="140" width="500" height="400" rx="10" fill="#ffffff" stroke="#ec362e" stroke-width="3"/>
+<text x="670" y="186" font-family="Inter, Segoe UI, Arial, sans-serif" font-size="24" fill="#111827" text-anchor="start" font-weight="700">The restructured role</text>
+<text x="670" y="216" font-family="Inter, Segoe UI, Arial, sans-serif" font-size="18" fill="#4b5563" text-anchor="start" font-weight="400">Less routine coding; AI handles it</text>
+<rect x="670" y="246" width="440" height="42" rx="8" fill="#f3f4f6" stroke="none" stroke-width="2"/>
+<text x="690" y="274" font-family="Inter, Segoe UI, Arial, sans-serif" font-size="20" fill="#111827" text-anchor="start" font-weight="400">Working directly with customers</text>
+<rect x="670" y="300" width="440" height="42" rx="8" fill="#f3f4f6" stroke="none" stroke-width="2"/>
+<text x="690" y="328" font-family="Inter, Segoe UI, Arial, sans-serif" font-size="20" fill="#111827" text-anchor="start" font-weight="400">Turning vague requests into specs</text>
+<rect x="670" y="354" width="440" height="42" rx="8" fill="#f3f4f6" stroke="none" stroke-width="2"/>
+<text x="690" y="382" font-family="Inter, Segoe UI, Arial, sans-serif" font-size="20" fill="#111827" text-anchor="start" font-weight="400">Reviewing and correcting AI output</text>
+<text x="670" y="440" font-family="Inter, Segoe UI, Arial, sans-serif" font-size="18" fill="#ec362e" text-anchor="start" font-weight="600">The two things agents are worst at</text>
+</svg>

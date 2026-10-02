@@ -3,10 +3,10 @@ id: "28"
 slug: "multi-agent-orchestration-what-works"
 title: "Ten Agents, One Task: What Multi-Agent Orchestration Is Actually Good For"
 comments: "0"
-image: "https://images.unsplash.com/photo-1519389950473-47ba0277781c?auto=format&fit=crop&q=80&w=800"
+image: "/assets/images/blog/multi-agent-orchestration.png"
 category: "Agentic AI"
 desc: "Supervisor topologies, parallel subagents, and the convergence problem that makes most multi-agent systems slower and worse than one good agent."
-date: "Jan 15, 2027"
+date: "Nov 18, 2026"
 tags: ["Agentic AI", "Multi-Agent", "Orchestration", "Architecture"]
 ---
 
@@ -31,6 +31,10 @@ Orchestration is the coordination layer managing multiple specialised agents on 
 **Debate or ensemble.** Several agents attempt the same task independently and a judge selects or synthesises. Expensive, occasionally worth it, frequently just a costly way to average.
 
 **Event-driven.** Agents react to events on a bus rather than being called directly. Scales best for long-running enterprise workflows and is the hardest to debug, since there is no single call stack to inspect.
+
+![Five small diagrams of multi-agent topologies: a sequential chain, a supervisor with three subagents, a fan-out and merge, a debate with a judge, and agents attached to an event bus](/assets/images/blog/diagrams/multi-agent-orchestration-1.svg)
+
+*The five topologies side by side. Diagram: Big Matrix Solutions, based on [Fourney et al., Magentic-One (arXiv:2411.04468)](https://arxiv.org/abs/2411.04468) and the patterns described above.*
 
 ## Where multi-agent genuinely wins
 
@@ -112,6 +116,10 @@ What holds up in production.
 
 **Keep the supervisor thin.** Its job is decomposition, dispatch, and assembly. Supervisors that also do substantive work end up with the context pollution the architecture was supposed to prevent.
 
+![Magentic-One orchestrator flowchart: a task ledger and a progress ledger, decision points for task complete, progress being made and stall count, and four agents below: Coder, ComputerTerminal, WebSurfer and FileSurfer](/assets/images/blog/multi-agent-orchestration-magentic-one.png)
+
+*A thin supervisor in practice: Magentic-One's Orchestrator plans, tracks progress in two ledgers, dispatches four specialist agents and replans when progress stalls. Source: [Fourney et al., Magentic-One (arXiv:2411.04468)](https://arxiv.org/abs/2411.04468), CC BY 4.0.*
+
 **Budget and cap everything.** Token limits and step limits per agent, and a global ceiling. Agent systems without caps find creative ways to spend money, and a subagent that spawns subagents is a genuinely expensive bug.
 
 **Instrument for cross-agent debugging from day one.** Correlate every tool call, message, and decision to a trace id, with the full trajectory queryable. Retrofitting this after your first inexplicable failure is painful and you will need it.
@@ -133,3 +141,8 @@ Multi-agent orchestration is a real technique with a narrower application than i
 It reliably helps when work is genuinely parallel, when context needs isolating, or when privileges need separating. It reliably hurts when tasks are coupled, when errors can propagate unnoticed, or when it is being used to paper over a weak single-agent setup.
 
 The convergence argument sharpens this. As models get more similar to each other, the capability case for specialist agents weakens and the structural case is all that remains. Which means the right question is no longer "which agents should I have" but "what are the actual boundaries in this problem", and if you cannot name one, one agent is the better answer.
+
+**Media credits**:
+- Hero image: Figure 1 from Fourney et al., "Magentic-One: A Generalist Multi-Agent System for Solving Complex Tasks", [arXiv:2411.04468](https://arxiv.org/abs/2411.04468), licensed [CC BY 4.0](https://creativecommons.org/licenses/by/4.0/). Placed on a white 16:9 canvas; figure unaltered.
+- Orchestrator diagram: Figure 2 from the same paper, [CC BY 4.0](https://creativecommons.org/licenses/by/4.0/), unaltered.
+- In-body diagram: Big Matrix Solutions.

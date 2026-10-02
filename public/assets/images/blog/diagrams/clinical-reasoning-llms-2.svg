@@ -1,0 +1,33 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 1200 590" width="1200" height="590" role="img">
+<rect x="1" y="1" width="1198" height="588" fill="#ffffff" rx="16" stroke="#e5e7eb" stroke-width="2"/>
+<title>Automation bias and asymmetric influence</title>
+<desc>When the model agrees, nothing changes. When it disagrees and is right, the clinician sometimes updates and accuracy rises. When it disagrees and the clinician is right, the clinician sometimes updates anyway and accuracy falls.</desc>
+<defs><marker id="ah" viewBox="0 0 10 10" refX="9" refY="5" markerWidth="8" markerHeight="8" orient="auto-start-reverse"><path d="M0,0 L10,5 L0,10 z" fill="#4b5563"/></marker></defs>
+<g font-family="Inter, Segoe UI, Arial, sans-serif">
+<text x="60" y="70" font-size="30" fill="#111827" text-anchor="start" font-weight="700">Why a better model can make the team worse</text>
+<text x="60" y="106" font-size="20" fill="#4b5563" text-anchor="start">Asymmetric influence when clinician and model meet (conceptual, no measured rates)</text>
+<rect x="60" y="150" width="345" height="100" rx="10" fill="#f3f4f6" stroke="#d1d5db" stroke-width="2"/>
+<text x="232" y="192" font-size="22" fill="#111827" text-anchor="middle" font-weight="700">Model agrees</text>
+<text x="232" y="222" font-size="20" fill="#4b5563" text-anchor="middle">with clinician</text>
+<line x1="232" y1="256" x2="232" y2="300" stroke="#4b5563" stroke-width="2" marker-end="url(#ah)"/>
+<rect x="60" y="306" width="345" height="110" rx="10" fill="#f3f4f6" stroke="#d1d5db" stroke-width="2"/>
+<text x="232" y="368" font-size="21" fill="#111827" text-anchor="middle" font-weight="700">Nothing changes</text>
+<rect x="425" y="150" width="345" height="100" rx="10" fill="#f3f4f6" stroke="#d1d5db" stroke-width="2"/>
+<text x="597" y="192" font-size="22" fill="#111827" text-anchor="middle" font-weight="700">Model disagrees,</text>
+<text x="597" y="222" font-size="20" fill="#4b5563" text-anchor="middle">model is right</text>
+<line x1="597" y1="256" x2="597" y2="300" stroke="#4b5563" stroke-width="2" marker-end="url(#ah)"/>
+<rect x="425" y="306" width="345" height="110" rx="10" fill="#ffffff" stroke="#2563eb" stroke-width="2"/>
+<text x="597" y="352" font-size="21" fill="#111827" text-anchor="middle" font-weight="700">Clinician sometimes</text>
+<text x="597" y="384" font-size="20" fill="#4b5563" text-anchor="middle">updates: accuracy rises</text>
+<rect x="790" y="150" width="345" height="100" rx="10" fill="#f3f4f6" stroke="#d1d5db" stroke-width="2"/>
+<text x="962" y="192" font-size="22" fill="#111827" text-anchor="middle" font-weight="700">Model disagrees,</text>
+<text x="962" y="222" font-size="20" fill="#4b5563" text-anchor="middle">clinician is right</text>
+<line x1="962" y1="256" x2="962" y2="300" stroke="#4b5563" stroke-width="2" marker-end="url(#ah)"/>
+<rect x="790" y="306" width="345" height="110" rx="10" fill="#ffffff" stroke="#ec362e" stroke-width="2"/>
+<text x="962" y="352" font-size="21" fill="#111827" text-anchor="middle" font-weight="700">Clinician sometimes</text>
+<text x="962" y="384" font-size="20" fill="#4b5563" text-anchor="middle">updates anyway: accuracy falls</text>
+<text x="60" y="476" font-size="21" fill="#111827" text-anchor="start">If the third effect is strong enough, physician-plus-model accuracy falls below</text>
+<text x="60" y="506" font-size="21" fill="#111827" text-anchor="start">the physician alone, even though the model is individually more accurate.</text>
+<text x="60" y="548" font-size="19" fill="#4b5563" text-anchor="start">Safer designs: model adds to a differential, or reviews after the clinician has committed.</text>
+</g>
+</svg>

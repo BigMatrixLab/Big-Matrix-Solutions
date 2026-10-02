@@ -6,7 +6,7 @@ comments: "0"
 image: "https://images.unsplash.com/photo-1579684385127-1ef15d508118?auto=format&fit=crop&q=80&w=800"
 category: "Medical AI"
 desc: "88% of steps completed unaided on ex vivo tissue, and a clearance pathway that still assumes a surgeon's hands on the controls. What autonomy means here."
-date: "Mar 05, 2027"
+date: "Dec 02, 2026"
 tags: ["Medical AI", "Surgical Robotics", "Autonomy", "Robotics"]
 ---
 

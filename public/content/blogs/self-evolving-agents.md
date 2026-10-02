@@ -6,7 +6,7 @@ comments: "0"
 image: "https://images.unsplash.com/photo-1526374965328-7f61d4dc18c5?auto=format&fit=crop&q=80&w=800"
 category: "Agentic AI"
 desc: "Frozen weights, forgotten sessions. The 2026 research push to give coding agents memory that accumulates and behaviour that improves without retraining."
-date: "Nov 20, 2026"
+date: "Oct 31, 2026"
 tags: ["Agentic AI", "Agent Memory", "Self-Improvement", "AI Research"]
 ---
 

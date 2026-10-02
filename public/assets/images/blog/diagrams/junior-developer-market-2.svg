@@ -1,0 +1,33 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 1200 620" width="1200" height="620" role="img">
+<rect x="1" y="1" width="1198" height="618" fill="#ffffff" rx="16" stroke="#e5e7eb" stroke-width="2"/>
+<title>Team shape: pyramid versus a cluster of reviewers</title>
+<desc>Left: the traditional pyramid with a few seniors, more mid-level engineers and a broad base of juniors, where capacity scales with headcount. Right: a small group of reviewers around a generation engine, where capacity scales with agent throughput and the review queue is the bottleneck.</desc>
+<defs><marker id="ah" viewBox="0 0 10 10" refX="9" refY="5" markerWidth="8" markerHeight="8" orient="auto-start-reverse"><path d="M0,0 L10,5 L0,10 z" fill="#4b5563"/></marker><marker id="ahr" viewBox="0 0 10 10" refX="9" refY="5" markerWidth="8" markerHeight="8" orient="auto-start-reverse"><path d="M0,0 L10,5 L0,10 z" fill="#ec362e"/></marker></defs>
+<text x="60" y="68" font-family="Inter, Segoe UI, Arial, sans-serif" font-size="30" fill="#111827" text-anchor="start" font-weight="700">From a pyramid to a cluster of reviewers</text>
+<text x="60" y="104" font-family="Inter, Segoe UI, Arial, sans-serif" font-size="20" fill="#4b5563" text-anchor="start" font-weight="400">Where capacity comes from changes, and so does the bottleneck</text>
+<polygon points="300,150 520,480 80,480" fill="#f3f4f6" stroke="#d1d5db" stroke-width="2"/>
+<line x1="190" y1="315" x2="410" y2="315" stroke="#d1d5db" stroke-width="2.5"/>
+<line x1="153" y1="370" x2="447" y2="370" stroke="#d1d5db" stroke-width="2.5"/>
+<text x="300" y="290" font-family="Inter, Segoe UI, Arial, sans-serif" font-size="20" fill="#111827" text-anchor="middle" font-weight="600">Seniors</text>
+<text x="300" y="350" font-family="Inter, Segoe UI, Arial, sans-serif" font-size="20" fill="#111827" text-anchor="middle" font-weight="600">Mid-level</text>
+<text x="300" y="430" font-family="Inter, Segoe UI, Arial, sans-serif" font-size="20" fill="#111827" text-anchor="middle" font-weight="600">Juniors: volume work</text>
+<text x="300" y="530" font-family="Inter, Segoe UI, Arial, sans-serif" font-size="20" fill="#4b5563" text-anchor="middle" font-weight="400">Capacity scales with headcount</text>
+<text x="300" y="562" font-family="Inter, Segoe UI, Arial, sans-serif" font-size="20" fill="#4b5563" text-anchor="middle" font-weight="400">The pyramid is also the training pipeline</text>
+<rect x="790" y="280" width="220" height="100" rx="10" fill="#ffffff" stroke="#ec362e" stroke-width="3"/>
+<text x="900" y="322" font-family="Inter, Segoe UI, Arial, sans-serif" font-size="22" fill="#111827" text-anchor="middle" font-weight="700">Generation</text>
+<text x="900" y="354" font-family="Inter, Segoe UI, Arial, sans-serif" font-size="20" fill="#4b5563" text-anchor="middle" font-weight="400">engine (agents)</text>
+<rect x="625" y="189" width="130" height="52" rx="26" fill="#f3f4f6" stroke="#d1d5db" stroke-width="2"/>
+<text x="690" y="222" font-family="Inter, Segoe UI, Arial, sans-serif" font-size="18" fill="#111827" text-anchor="middle" font-weight="600">Reviewer</text>
+<line x1="788" y1="278" x2="730" y2="241" stroke="#d1d5db" stroke-width="2.5"/>
+<rect x="1045" y="189" width="130" height="52" rx="26" fill="#f3f4f6" stroke="#d1d5db" stroke-width="2"/>
+<text x="1110" y="222" font-family="Inter, Segoe UI, Arial, sans-serif" font-size="18" fill="#111827" text-anchor="middle" font-weight="600">Reviewer</text>
+<line x1="1012" y1="278" x2="1070" y2="241" stroke="#d1d5db" stroke-width="2.5"/>
+<rect x="625" y="419" width="130" height="52" rx="26" fill="#f3f4f6" stroke="#d1d5db" stroke-width="2"/>
+<text x="690" y="452" font-family="Inter, Segoe UI, Arial, sans-serif" font-size="18" fill="#111827" text-anchor="middle" font-weight="600">Reviewer</text>
+<line x1="788" y1="382" x2="730" y2="419" stroke="#d1d5db" stroke-width="2.5"/>
+<rect x="1045" y="419" width="130" height="52" rx="26" fill="#f3f4f6" stroke="#d1d5db" stroke-width="2"/>
+<text x="1110" y="452" font-family="Inter, Segoe UI, Arial, sans-serif" font-size="18" fill="#111827" text-anchor="middle" font-weight="600">Reviewer</text>
+<line x1="1012" y1="382" x2="1070" y2="419" stroke="#d1d5db" stroke-width="2.5"/>
+<text x="900" y="530" font-family="Inter, Segoe UI, Arial, sans-serif" font-size="20" fill="#4b5563" text-anchor="middle" font-weight="400">Capacity scales with agent throughput</text>
+<text x="900" y="562" font-family="Inter, Segoe UI, Arial, sans-serif" font-size="20" fill="#ec362e" text-anchor="middle" font-weight="600">Bottleneck: the review queue (human attention)</text>
+</svg>

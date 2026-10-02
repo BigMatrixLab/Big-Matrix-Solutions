@@ -1,0 +1,40 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 1200 906" width="1200" height="906" role="img">
+<title>EU AI Act application timeline after the Digital Omnibus</title>
+<desc>Vertical timeline of AI Act application dates from August 2024 to August 2028, with dates changed or added by Regulation (EU) 2026/1744 highlighted.</desc>
+<rect x="0" y="0" width="1200" height="906" fill="#ffffff" rx="16" stroke="#e5e7eb" stroke-width="2"/>
+<text x="60" y="70" font-family="Inter, Segoe UI, Arial, sans-serif" font-size="30" font-weight="700" fill="#111827" text-anchor="start">EU AI Act: when each layer applies</text>
+<text x="60" y="108" font-family="Inter, Segoe UI, Arial, sans-serif" font-size="19" font-weight="400" fill="#4b5563" text-anchor="start">Red markers: dates set or changed by the Digital Omnibus on AI (Regulation (EU) 2026/1744)</text>
+<line x1="300" y1="160" x2="300" y2="824" stroke="#d1d5db" stroke-width="4"/>
+<circle cx="300" cy="170" r="11" fill="#2563eb"/>
+<text x="270" y="177" font-family="Inter, Segoe UI, Arial, sans-serif" font-size="22" font-weight="700" fill="#111827" text-anchor="end">1 Aug 2024</text>
+<text x="330" y="172" font-family="Inter, Segoe UI, Arial, sans-serif" font-size="22" font-weight="600" fill="#111827" text-anchor="start">Entry into force</text>
+<text x="330" y="200" font-family="Inter, Segoe UI, Arial, sans-serif" font-size="19" font-weight="400" fill="#4b5563" text-anchor="start">Regulation (EU) 2024/1689</text>
+<circle cx="300" cy="262" r="11" fill="#2563eb"/>
+<text x="270" y="269" font-family="Inter, Segoe UI, Arial, sans-serif" font-size="22" font-weight="700" fill="#111827" text-anchor="end">2 Feb 2025</text>
+<text x="330" y="264" font-family="Inter, Segoe UI, Arial, sans-serif" font-size="22" font-weight="600" fill="#111827" text-anchor="start">Prohibited practices; AI literacy</text>
+<text x="330" y="292" font-family="Inter, Segoe UI, Arial, sans-serif" font-size="19" font-weight="400" fill="#4b5563" text-anchor="start">Articles 4 and 5</text>
+<circle cx="300" cy="354" r="11" fill="#2563eb"/>
+<text x="270" y="361" font-family="Inter, Segoe UI, Arial, sans-serif" font-size="22" font-weight="700" fill="#111827" text-anchor="end">2 Aug 2025</text>
+<text x="330" y="356" font-family="Inter, Segoe UI, Arial, sans-serif" font-size="22" font-weight="600" fill="#111827" text-anchor="start">General-purpose AI model obligations</text>
+<text x="330" y="384" font-family="Inter, Segoe UI, Arial, sans-serif" font-size="19" font-weight="400" fill="#4b5563" text-anchor="start">Plus governance and penalties</text>
+<circle cx="300" cy="446" r="11" fill="#2563eb"/>
+<text x="270" y="453" font-family="Inter, Segoe UI, Arial, sans-serif" font-size="22" font-weight="700" fill="#111827" text-anchor="end">2 Aug 2026</text>
+<text x="330" y="448" font-family="Inter, Segoe UI, Arial, sans-serif" font-size="22" font-weight="600" fill="#111827" text-anchor="start">General application date</text>
+<text x="330" y="476" font-family="Inter, Segoe UI, Arial, sans-serif" font-size="19" font-weight="400" fill="#4b5563" text-anchor="start">Incl. Article 50 transparency duties</text>
+<circle cx="300" cy="538" r="11" fill="#ec362e"/>
+<text x="270" y="545" font-family="Inter, Segoe UI, Arial, sans-serif" font-size="22" font-weight="700" fill="#111827" text-anchor="end">2 Dec 2026</text>
+<text x="330" y="540" font-family="Inter, Segoe UI, Arial, sans-serif" font-size="22" font-weight="600" fill="#111827" text-anchor="start">New bans on intimate-image and CSAM AI</text>
+<text x="330" y="568" font-family="Inter, Segoe UI, Arial, sans-serif" font-size="19" font-weight="400" fill="#4b5563" text-anchor="start">Art. 50(2) marking for pre-Aug 2026 systems</text>
+<circle cx="300" cy="630" r="11" fill="#2563eb"/>
+<text x="270" y="637" font-family="Inter, Segoe UI, Arial, sans-serif" font-size="22" font-weight="700" fill="#111827" text-anchor="end">2 Aug 2027</text>
+<text x="330" y="632" font-family="Inter, Segoe UI, Arial, sans-serif" font-size="22" font-weight="600" fill="#111827" text-anchor="start">Deadline for GPAI models placed before 2 Aug 2025</text>
+<text x="330" y="660" font-family="Inter, Segoe UI, Arial, sans-serif" font-size="19" font-weight="400" fill="#4b5563" text-anchor="start">Article 111(3)</text>
+<circle cx="300" cy="722" r="11" fill="#ec362e"/>
+<text x="270" y="729" font-family="Inter, Segoe UI, Arial, sans-serif" font-size="22" font-weight="700" fill="#111827" text-anchor="end">2 Dec 2027</text>
+<text x="330" y="724" font-family="Inter, Segoe UI, Arial, sans-serif" font-size="22" font-weight="600" fill="#111827" text-anchor="start">High-risk: Annex III use cases</text>
+<text x="330" y="752" font-family="Inter, Segoe UI, Arial, sans-serif" font-size="19" font-weight="400" fill="#4b5563" text-anchor="start">Employment, credit, education, etc.</text>
+<circle cx="300" cy="814" r="11" fill="#ec362e"/>
+<text x="270" y="821" font-family="Inter, Segoe UI, Arial, sans-serif" font-size="22" font-weight="700" fill="#111827" text-anchor="end">2 Aug 2028</text>
+<text x="330" y="816" font-family="Inter, Segoe UI, Arial, sans-serif" font-size="22" font-weight="600" fill="#111827" text-anchor="start">High-risk: Annex I regulated products</text>
+<text x="330" y="844" font-family="Inter, Segoe UI, Arial, sans-serif" font-size="19" font-weight="400" fill="#4b5563" text-anchor="start">Machinery, medical devices, toys, etc.</text>
+</svg>

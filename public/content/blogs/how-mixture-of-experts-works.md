@@ -6,7 +6,7 @@ comments: "0"
 image: "/assets/images/blog/moe-architecture.webp"
 category: "Tutorial"
 desc: "Routers, top-k selection, load balancing loss, and the memory-for-compute trade that made trillion-parameter models economically serveable."
-date: "Jan 22, 2027"
+date: "Nov 20, 2026"
 tags: ["Mixture of Experts", "LLM", "Tutorial", "Model Architecture"]
 ---
 

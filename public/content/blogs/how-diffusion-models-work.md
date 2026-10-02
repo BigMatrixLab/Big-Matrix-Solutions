@@ -6,7 +6,7 @@ comments: "0"
 image: "/assets/images/blog/diffusion-architecture.webp"
 category: "Tutorial"
 desc: "Forward noising, reverse denoising, why the model predicts noise instead of images, and how classifier-free guidance actually steers generation."
-date: "Dec 25, 2026"
+date: "Nov 12, 2026"
 tags: ["Diffusion Models", "Generative AI", "Tutorial", "Deep Learning"]
 ---
 

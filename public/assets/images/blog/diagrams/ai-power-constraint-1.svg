@@ -1,0 +1,23 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 1200 520" width="1200" height="520" role="img">
+<rect x="1" y="1" width="1198" height="518" fill="#ffffff" rx="16" stroke="#e5e7eb" stroke-width="2"/>
+<title>Electricity use of AI data centres of six leading firms, 2024 and 2030</title>
+<desc>Bar chart: about 118 TWh in 2024, projected 239 to 295 TWh in 2030. For comparison, global AI computation in 2026 is projected at about 70 TWh.</desc>
+<defs><marker id="ah" viewBox="0 0 10 10" refX="9" refY="5" markerWidth="8" markerHeight="8" orient="auto-start-reverse"><path d="M0,0 L10,5 L0,10 z" fill="#4b5563"/></marker><marker id="ahr" viewBox="0 0 10 10" refX="9" refY="5" markerWidth="8" markerHeight="8" orient="auto-start-reverse"><path d="M0,0 L10,5 L0,10 z" fill="#ec362e"/></marker></defs>
+<text x="60" y="68" font-family="Inter, Segoe UI, Arial, sans-serif" font-size="30" fill="#111827" text-anchor="start" font-weight="700">Leading firms’ data centre electricity, TWh per year</text>
+<text x="60" y="104" font-family="Inter, Segoe UI, Arial, sans-serif" font-size="20" fill="#4b5563" text-anchor="start" font-weight="400">Amazon, Microsoft, Google, Meta, Oracle and Apple</text>
+<text x="240" y="184" font-family="Inter, Segoe UI, Arial, sans-serif" font-size="20" fill="#111827" text-anchor="end" font-weight="600">2024</text>
+<rect x="260" y="150" width="275.33333333333337" height="50" rx="6" fill="#d1d5db" stroke="none" stroke-width="2"/>
+<text x="549.3333333333334" y="184" font-family="Inter, Segoe UI, Arial, sans-serif" font-size="20" fill="#111827" text-anchor="start" font-weight="700">~118 TWh</text>
+<text x="240" y="264" font-family="Inter, Segoe UI, Arial, sans-serif" font-size="20" fill="#111827" text-anchor="end" font-weight="600">2030 (projected)</text>
+<rect x="260" y="230" width="557.6666666666667" height="50" rx="6" fill="#ec362e" stroke="none" stroke-width="2"/>
+<rect x="817.6666666666667" y="230" width="130.66666666666669" height="50" rx="6" fill="#ffffff" stroke="#ec362e" stroke-width="3"/>
+<rect x="809.6666666666667" y="230" width="12" height="50" fill="#ec362e"/>
+<text x="962.3333333333334" y="264" font-family="Inter, Segoe UI, Arial, sans-serif" font-size="20" fill="#111827" text-anchor="start" font-weight="700">239–295 TWh</text>
+<line x1="260" y1="330" x2="960.0" y2="330" stroke="#d1d5db" stroke-width="2"/>
+<text x="260.0" y="360" font-family="Inter, Segoe UI, Arial, sans-serif" font-size="18" fill="#4b5563" text-anchor="middle" font-weight="400">0</text>
+<text x="493.33333333333337" y="360" font-family="Inter, Segoe UI, Arial, sans-serif" font-size="18" fill="#4b5563" text-anchor="middle" font-weight="400">100</text>
+<text x="726.6666666666667" y="360" font-family="Inter, Segoe UI, Arial, sans-serif" font-size="18" fill="#4b5563" text-anchor="middle" font-weight="400">200</text>
+<text x="960.0" y="360" font-family="Inter, Segoe UI, Arial, sans-serif" font-size="18" fill="#4b5563" text-anchor="middle" font-weight="400">300</text>
+<text x="60" y="430" font-family="Inter, Segoe UI, Arial, sans-serif" font-size="20" fill="#4b5563" text-anchor="start" font-weight="400">For scale: all AI computation worldwide is projected at about 70 TWh in 2026,</text>
+<text x="60" y="462" font-family="Inter, Segoe UI, Arial, sans-serif" font-size="20" fill="#4b5563" text-anchor="start" font-weight="400">comparable to the annual electricity use of Austria or Finland.</text>
+</svg>

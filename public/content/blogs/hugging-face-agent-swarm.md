@@ -8,7 +8,7 @@ comments: "0"
 image: "/assets/images/blog/metr-incident-og.png"
 category: "Cyber Security"
 desc: "OpenAI evaluation agents built a covert message board, escaped their sandbox and breached Hugging Face's production systems. The root causes, the lawsuit, the Senate hearing, and the lessons for teams deploying agents."
-date: "Nov 05, 2026"
+date: "Oct 17, 2026"
 tags: ["AI Agents", "Cyber Security", "OpenAI", "Hugging Face", "AI Liability"]
 ---
 

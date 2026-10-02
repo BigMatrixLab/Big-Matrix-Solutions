@@ -6,7 +6,7 @@ comments: "0"
 image: "https://images.unsplash.com/photo-1591696205602-2f950c417cb9?auto=format&fit=crop&q=80&w=800"
 category: "AI Infrastructure"
 desc: "Trillion-parameter models got cheaper to serve than dense models a fraction of their size. Here is the trade that made it work, and where the bill moved."
-date: "Nov 06, 2026"
+date: "Oct 19, 2026"
 tags: ["Inference", "Mixture of Experts", "Long Context", "AI Infrastructure"]
 ---
 

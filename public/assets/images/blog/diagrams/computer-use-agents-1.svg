@@ -1,0 +1,37 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 1200 540" width="1200" height="540" role="img" aria-labelledby="t d" font-family="Inter, Segoe UI, Arial, sans-serif">
+  <rect x="0" y="0" width="1200" height="540" fill="#ffffff" rx="16" stroke="#e5e7eb"/>
+  <title id="t">Computer-use scores, and why long horizons break</title>
+  <desc id="d">Left: horizontal bars. Best OSWorld score 12 percent in April 2024 and 85 percent in June 2026; best OSWorld 2.0 score 20.6 percent, where the median task takes a human 1.6 hours. Right: a 200-step task at 99 percent per-step reliability succeeds about 13 percent of the time, and a 2 percent grounding error rate over 200 steps means four misclicks.</desc>
+  <text x="600" y="54" text-anchor="middle" font-size="28" font-weight="700" fill="#111827">Short tasks are nearly solved. Long ones are not.</text>
+
+  <g font-size="18" fill="#4b5563">
+    <text x="60" y="130" font-size="22" font-weight="700" fill="#111827">Best score</text>
+    <text x="60" y="180">OSWorld, April 2024</text>
+    <rect x="60" y="192" width="57.6" height="40" rx="4" fill="#d1d5db"/>
+    <text x="129" y="219" font-weight="700" fill="#111827">12%</text>
+
+    <text x="60" y="280">OSWorld, June 2026 (tasks of minutes)</text>
+    <rect x="60" y="292" width="408" height="40" rx="4" fill="#2563eb"/>
+    <text x="480" y="319" font-weight="700" fill="#111827">85%</text>
+
+    <text x="60" y="380">OSWorld 2.0 (median task: 1.6 human hours)</text>
+    <rect x="60" y="392" width="98.9" height="40" rx="4" fill="#ec362e"/>
+    <text x="171" y="419" font-weight="700" fill="#111827">20.6%</text>
+
+    <line x1="60" y1="455" x2="540" y2="455" stroke="#d1d5db" stroke-width="2"/>
+    <text x="60" y="482">0%</text>
+    <text x="540" y="482" text-anchor="end">100%</text>
+  </g>
+
+  <rect x="630" y="95" width="540" height="410" rx="14" fill="#f3f4f6" stroke="#d1d5db"/>
+  <g text-anchor="middle" font-size="18" fill="#4b5563">
+    <text x="900" y="135" font-size="22" font-weight="700" fill="#111827">Why long horizons break</text>
+    <text x="900" y="235" font-size="72" font-weight="700" fill="#ec362e">13%</text>
+    <text x="900" y="272">success on a 200-step task</text>
+    <text x="900" y="298">at 99% reliability per step</text>
+    <line x1="680" y1="330" x2="1120" y2="330" stroke="#d1d5db" stroke-width="2"/>
+    <text x="900" y="400" font-size="48" font-weight="700" fill="#111827">4 misclicks</text>
+    <text x="900" y="440">from a 2% grounding error rate</text>
+    <text x="900" y="466">over the same 200 steps</text>
+  </g>
+</svg>

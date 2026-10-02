@@ -1,0 +1,37 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 1200 560" width="1200" height="560" font-family="Inter, Segoe UI, Arial, sans-serif" role="img">
+<rect x="0.5" y="0.5" width="1199" height="559" rx="16" fill="#ffffff" stroke="#e5e7eb"/>
+<title>RAG query-time retrieval</title>
+<desc>A query is filtered on metadata, then searched two ways in parallel: dense vector search and BM25 keyword search. Reciprocal rank fusion merges the two rankings into roughly fifty candidates, a cross-encoder reranker keeps the best five, and the language model answers from those chunks with citations.</desc>
+<defs><marker id="a" viewBox="0 0 10 10" refX="9" refY="5" markerWidth="8" markerHeight="8" orient="auto-start-reverse"><path d="M0,0 L10,5 L0,10 z" fill="#111827"/></marker><marker id="ar" viewBox="0 0 10 10" refX="9" refY="5" markerWidth="8" markerHeight="8" orient="auto-start-reverse"><path d="M0,0 L10,5 L0,10 z" fill="#ec362e"/></marker><marker id="ab" viewBox="0 0 10 10" refX="9" refY="5" markerWidth="8" markerHeight="8" orient="auto-start-reverse"><path d="M0,0 L10,5 L0,10 z" fill="#2563eb"/></marker><marker id="ag" viewBox="0 0 10 10" refX="9" refY="5" markerWidth="8" markerHeight="8" orient="auto-start-reverse"><path d="M0,0 L10,5 L0,10 z" fill="#4b5563"/></marker></defs>
+<text x="600" y="48" font-size="26" fill="#111827" text-anchor="middle" font-weight="bold">Query time: retrieve broadly, rerank precisely</text>
+<rect x="30" y="230" width="160" height="90" rx="10" fill="#f3f4f6" stroke="#d1d5db" stroke-width="2"/>
+<text x="110.0" y="268.3" font-size="18" fill="#111827" text-anchor="middle" font-weight="bold">User query</text>
+<text x="110.0" y="294.3" font-size="18" fill="#4b5563" text-anchor="middle" font-weight="normal">+ metadata filter</text>
+<rect x="240" y="120" width="230" height="90" rx="10" fill="#ffffff" stroke="#2563eb" stroke-width="2"/>
+<text x="355.0" y="158.3" font-size="18" fill="#111827" text-anchor="middle" font-weight="bold">Vector search</text>
+<text x="355.0" y="184.3" font-size="18" fill="#4b5563" text-anchor="middle" font-weight="normal">semantic match</text>
+<rect x="240" y="340" width="230" height="90" rx="10" fill="#ffffff" stroke="#2563eb" stroke-width="2"/>
+<text x="355.0" y="378.3" font-size="18" fill="#111827" text-anchor="middle" font-weight="bold">BM25 search</text>
+<text x="355.0" y="404.3" font-size="18" fill="#4b5563" text-anchor="middle" font-weight="normal">exact terms, codes</text>
+<rect x="520" y="230" width="210" height="90" rx="10" fill="#f3f4f6" stroke="#d1d5db" stroke-width="2"/>
+<text x="625.0" y="268.3" font-size="18" fill="#111827" text-anchor="middle" font-weight="bold">Rank fusion</text>
+<text x="625.0" y="294.3" font-size="18" fill="#4b5563" text-anchor="middle" font-weight="normal">RRF</text>
+<rect x="780" y="230" width="200" height="90" rx="10" fill="#ffffff" stroke="#ec362e" stroke-width="2"/>
+<text x="880.0" y="268.3" font-size="18" fill="#111827" text-anchor="middle" font-weight="bold">Rerank</text>
+<text x="880.0" y="294.3" font-size="18" fill="#4b5563" text-anchor="middle" font-weight="normal">cross-encoder</text>
+<rect x="1020" y="230" width="150" height="90" rx="10" fill="#f3f4f6" stroke="#d1d5db" stroke-width="2"/>
+<text x="1095.0" y="268.3" font-size="18" fill="#111827" text-anchor="middle" font-weight="bold">LLM</text>
+<text x="1095.0" y="294.3" font-size="18" fill="#4b5563" text-anchor="middle" font-weight="normal">cites sources</text>
+<path d="M190,275 L215,275 L215,165 L238,165" stroke="#111827" stroke-width="2" fill="none" marker-end="url(#a)"/>
+<path d="M215,275 L215,385 L238,385" stroke="#111827" stroke-width="2" fill="none" marker-end="url(#a)"/>
+<path d="M470,165 L495,165 L495,275 L518,275" stroke="#111827" stroke-width="2" fill="none" marker-end="url(#a)"/>
+<path d="M470,385 L495,385 L495,275" stroke="#111827" stroke-width="2" fill="none"/>
+<line x1="730" y1="275" x2="778" y2="275" stroke="#111827" stroke-width="2" marker-end="url(#a)"/>
+<line x1="980" y1="275" x2="1018" y2="275" stroke="#111827" stroke-width="2" marker-end="url(#a)"/>
+<text x="625" y="352" font-size="18" fill="#4b5563" text-anchor="middle" font-weight="normal">~50 candidates</text>
+<text x="880" y="352" font-size="18" fill="#ec362e" text-anchor="middle" font-weight="bold">top 5 kept</text>
+<rect x="520" y="372" width="210" height="16" rx="4" fill="#d1d5db"/>
+<rect x="859" y="372" width="42" height="16" rx="4" fill="#ec362e"/>
+<text x="600" y="480" font-size="18" fill="#4b5563" text-anchor="middle" font-weight="normal">Filter on date, version and permissions before ranking. Retrieval optimises recall; the reranker supplies precision.</text>
+<text x="600" y="512" font-size="18" fill="#4b5563" text-anchor="middle" font-weight="normal">Measure retrieval (was the right chunk found?) separately from generation (was it used correctly?).</text>
+</svg>

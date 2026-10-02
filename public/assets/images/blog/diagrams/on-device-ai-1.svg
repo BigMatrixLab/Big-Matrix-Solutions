@@ -1,0 +1,33 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 1200 600" width="1200" height="600" font-family="Inter, Segoe UI, Arial, sans-serif">
+  <title>Memory bandwidth sets the ceiling on local token speed</title>
+  <desc>Theoretical upper bound on decode speed for dense models on a chip with 153 GB/s of unified memory bandwidth, computed as bandwidth divided by the bytes of weights read per token. A 3B model at 2 bits gives about 204 tokens per second; 8B at 4 bits about 38; 14B at 4 bits about 22; 32B at 4 bits about 10.</desc>
+  <rect x="0" y="0" width="1200" height="600" fill="#ffffff" rx="16" stroke="#e5e7eb"/>
+  <text x="60" y="64" font-size="30" font-weight="700" fill="#111827">Bandwidth, not TOPS, caps local token speed</text>
+  <text x="60" y="100" font-size="20" fill="#4b5563">Ceiling = memory bandwidth / weight bytes read per token. Example: 153 GB/s (Apple M5).</text>
+
+  <g font-size="20" fill="#111827">
+    <text x="60" y="178">3B at 2-bit</text>
+    <text x="60" y="203" font-size="18" fill="#4b5563">~0.75 GB weights</text>
+    <text x="60" y="278">8B at 4-bit</text>
+    <text x="60" y="303" font-size="18" fill="#4b5563">~4 GB weights</text>
+    <text x="60" y="378">14B at 4-bit</text>
+    <text x="60" y="403" font-size="18" fill="#4b5563">~7 GB weights</text>
+    <text x="60" y="478">32B at 4-bit</text>
+    <text x="60" y="503" font-size="18" fill="#4b5563">~16 GB weights</text>
+  </g>
+
+  <rect x="300" y="160" width="660" height="44" rx="6" fill="#ec362e"/>
+  <rect x="300" y="260" width="123" height="44" rx="6" fill="#ec362e"/>
+  <rect x="300" y="360" width="71" height="44" rx="6" fill="#ec362e"/>
+  <rect x="300" y="460" width="31" height="44" rx="6" fill="#ec362e"/>
+
+  <g font-size="22" font-weight="700" fill="#111827">
+    <text x="975" y="190">~204 tok/s</text>
+    <text x="438" y="290">~38 tok/s</text>
+    <text x="386" y="390">~22 tok/s</text>
+    <text x="346" y="490">~10 tok/s</text>
+  </g>
+
+  <line x1="300" y1="140" x2="300" y2="520" stroke="#d1d5db" stroke-width="2"/>
+  <text x="60" y="566" font-size="18" fill="#4b5563">Upper bounds for dense models; real speeds are lower (KV cache reads, compute, other overheads).</text>
+</svg>

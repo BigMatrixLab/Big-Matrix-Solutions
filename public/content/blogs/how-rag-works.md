@@ -6,7 +6,7 @@ comments: "0"
 image: "/assets/images/blog/rag-architecture.webp"
 category: "Tutorial"
 desc: "Chunking, embeddings, vector search, reranking and the failure modes nobody mentions. Plus an honest look at whether long context has made RAG optional."
-date: "Feb 19, 2027"
+date: "Nov 28, 2026"
 tags: ["RAG", "Embeddings", "Vector Search", "Tutorial"]
 ---
 

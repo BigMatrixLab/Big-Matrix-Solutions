@@ -1,0 +1,38 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 1200 600" width="1200" height="600" role="img" font-family="Inter, Segoe UI, Arial, sans-serif">
+<rect x="1" y="1" width="1198" height="598" fill="#ffffff" rx="16" stroke="#e5e7eb" stroke-width="2"/>
+<title>Single-finding devices versus one shared foundation-model backbone</title>
+<desc>Before: one model per finding, each with its own submission, integration and alert stream. Now: Aidoc CARE foundation model underpins body CT triage for 14 conditions (FDA-cleared January 2026) and First Read for chest X-ray report drafting (Breakthrough Device Designation).</desc>
+<defs><marker id="ah" viewBox="0 0 10 10" refX="9" refY="5" markerWidth="8" markerHeight="8" orient="auto-start-reverse"><path d="M0,0 L10,5 L0,10 z" fill="#4b5563"/></marker><marker id="ahr" viewBox="0 0 10 10" refX="9" refY="5" markerWidth="8" markerHeight="8" orient="auto-start-reverse"><path d="M0,0 L10,5 L0,10 z" fill="#ec362e"/></marker></defs>
+<text x="600" y="62" font-size="30" font-weight="700" fill="#111827" text-anchor="middle">One model per finding, or one shared backbone</text>
+<text x="600" y="98" font-size="21" font-weight="400" fill="#4b5563" text-anchor="middle">How the regulated product shape is changing</text>
+<rect x="40" y="130" width="540" height="430" rx="12" fill="#f3f4f6" stroke="#d1d5db" stroke-width="2"/>
+<text x="310" y="172" font-size="23" font-weight="700" fill="#111827" text-anchor="middle">Before: one device per finding</text>
+<rect x="70" y="200" width="230" height="60" rx="12" fill="#ffffff" stroke="#d1d5db" stroke-width="2"/>
+<text x="185.0" y="235.7" font-size="19" font-weight="700" fill="#111827" text-anchor="middle">Aortic dissection</text>
+<rect x="320" y="200" width="230" height="60" rx="12" fill="#ffffff" stroke="#d1d5db" stroke-width="2"/>
+<text x="435.0" y="235.7" font-size="19" font-weight="700" fill="#111827" text-anchor="middle">Appendicitis</text>
+<rect x="70" y="280" width="230" height="60" rx="12" fill="#ffffff" stroke="#d1d5db" stroke-width="2"/>
+<text x="185.0" y="315.7" font-size="19" font-weight="700" fill="#111827" text-anchor="middle">Bowel obstruction</text>
+<rect x="320" y="280" width="230" height="60" rx="12" fill="#ffffff" stroke="#d1d5db" stroke-width="2"/>
+<text x="435.0" y="315.7" font-size="19" font-weight="700" fill="#111827" text-anchor="middle">Splenic injury</text>
+<rect x="70" y="360" width="480" height="60" rx="12" fill="#ffffff" stroke="#d1d5db" stroke-width="2"/>
+<text x="310.0" y="395.7" font-size="19" font-weight="700" fill="#111827" text-anchor="middle">+ 10 more, each one its own:</text>
+<text x="310" y="460" font-size="20" font-weight="400" fill="#4b5563" text-anchor="middle">submission and pivotal study</text>
+<text x="310" y="492" font-size="20" font-weight="400" fill="#4b5563" text-anchor="middle">integration and alert stream</text>
+<rect x="620" y="130" width="540" height="430" rx="12" fill="#f3f4f6" stroke="#d1d5db" stroke-width="2"/>
+<text x="890" y="172" font-size="23" font-weight="700" fill="#111827" text-anchor="middle">Now: one pretrained backbone</text>
+<rect x="740" y="200" width="300" height="70" rx="12" fill="#ffffff" stroke="#ec362e" stroke-width="2"/>
+<text x="890.0" y="241.3" font-size="21" font-weight="700" fill="#111827" text-anchor="middle">CARE foundation model</text>
+<line x1="850" y1="272" x2="770" y2="326" stroke="#4b5563" stroke-width="3" marker-end="url(#ah)"/>
+<line x1="930" y1="272" x2="1010" y2="326" stroke="#4b5563" stroke-width="3" marker-end="url(#ah)"/>
+<rect x="645" y="330" width="240" height="110" rx="12" fill="#ffffff" stroke="#d1d5db" stroke-width="2"/>
+<text x="765.0" y="365.0" font-size="20" font-weight="700" fill="#111827" text-anchor="middle">Body CT triage</text>
+<text x="765.0" y="391.0" font-size="18" font-weight="400" fill="#4b5563" text-anchor="middle">14 conditions</text>
+<text x="765.0" y="417.0" font-size="18" font-weight="400" fill="#4b5563" text-anchor="middle">FDA-cleared, Jan 2026</text>
+<rect x="895" y="330" width="240" height="110" rx="12" fill="#ffffff" stroke="#d1d5db" stroke-width="2"/>
+<text x="1015.0" y="365.0" font-size="20" font-weight="700" fill="#111827" text-anchor="middle">First Read</text>
+<text x="1015.0" y="391.0" font-size="18" font-weight="400" fill="#4b5563" text-anchor="middle">chest X-ray drafts</text>
+<text x="1015.0" y="417.0" font-size="18" font-weight="400" fill="#4b5563" text-anchor="middle">Breakthrough Device</text>
+<text x="890" y="488" font-size="20" font-weight="400" fill="#4b5563" text-anchor="middle">Each new indication becomes a</text>
+<text x="890" y="516" font-size="20" font-weight="400" fill="#4b5563" text-anchor="middle">fine-tune and validation exercise</text>
+</svg>

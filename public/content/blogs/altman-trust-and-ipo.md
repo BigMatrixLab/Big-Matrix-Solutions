@@ -8,7 +8,7 @@ comments: "0"
 image: "/assets/images/blog/openai-devday-2026.png"
 category: "Industry Analysis"
 desc: "In September 2026, OpenAI asked for trust, backed federal rules, shelved a model and pushed back its IPO. How trust, capital and safety now pull on each other."
-date: "Nov 12, 2026"
+date: "Oct 23, 2026"
 tags: ["OpenAI", "AI Safety", "IPO", "AI Governance", "Industry Analysis"]
 ---
 

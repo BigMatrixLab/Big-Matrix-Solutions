@@ -8,7 +8,7 @@ comments: "0"
 image: "/assets/images/blog/amodei-pace-the-frontier.jpg"
 category: "AI Policy"
 desc: "Anthropic's CEO asked the industry to slow the rate at which models get more capable. Altman, Musk and Nadella agreed within days. What the plan says, and how to read it."
-date: "Nov 10, 2026"
+date: "Oct 21, 2026"
 tags: ["AI Policy", "AI Safety", "Anthropic", "Frontier AI", "Regulation"]
 ---
 
@@ -53,6 +53,10 @@ The proposal has three steps, each broader and harder than the last.
 **Step two** asks frontier companies in democratic countries to coordinate on common safety standards, either through government-mediated voluntary agreement or formal regulation. The essay is candid that rivals agreeing on pace raises a legal problem: "For antitrust reasons," it says, the US government should mediate or enable these talks and "issue a narrow waiver for certain kinds of safety conversations." Amodei pairs this with measures meant to preserve the democratic lead, including not selling powerful AI chips to authoritarian countries and cracking down on unauthorized distillation of models.
 
 **Step three** is global. The essay describes four levels of possible agreement with authoritarian governments, China foremost, in rising order of ambition: prohibiting narrow, obviously dangerous uses such as biological weapons; pre-release testing for acute risks; a "speed limit on the rate of recursive self-improvement"; and, at the far end, substantially limiting the overall rate of AI development. Amodei treats the middle levels as the more realistic targets and concedes verification is hard.
+
+![Staircase diagram of the three steps in We Must Pace the Frontier: embedded evaluators, pacing among democracies and global coordination](/assets/images/blog/diagrams/amodei-pace-the-frontier-1.svg)
+
+*The essay's three steps, from what one lab can do alone to what only governments can do. Diagram: Big Matrix Solutions, based on [Dario Amodei, "We Must Pace the Frontier"](https://darioamodei.com/post/we-must-pace-the-frontier).*
 
 ## Who agreed, and how quickly
 
@@ -107,3 +111,4 @@ The real test is not who said yes in September. It is whether, when a lab has a 
 
 **Media credits**:
 - Hero image: essay title card — [Dario Amodei](https://darioamodei.com/post/we-must-pace-the-frontier)
+- Diagram: three-part plan — Big Matrix Solutions, based on [Dario Amodei](https://darioamodei.com/post/we-must-pace-the-frontier)

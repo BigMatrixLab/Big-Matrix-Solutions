@@ -1,0 +1,46 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 1200 685" width="1200" height="685" role="img">
+<rect x="1" y="1" width="1198" height="683" fill="#ffffff" rx="16" stroke="#e5e7eb" stroke-width="2"/>
+<title>Byte pair encoding merge steps</title>
+<desc>The first five merges learned by the minimal BPE algorithm from Sennrich et al. 2016 on the dictionary low, lower, newest, widest, with pair counts.</desc>
+<defs><marker id="ah" viewBox="0 0 10 10" refX="9" refY="5" markerWidth="8" markerHeight="8" orient="auto-start-reverse"><path d="M0,0 L10,5 L0,10 z" fill="#4b5563"/></marker></defs>
+<text x="60" y="70" font-family="Inter, Segoe UI, Arial, sans-serif" font-size="30" fill="#111827" text-anchor="start" font-weight="700" xml:space="preserve">BPE learns merges by counting adjacent pairs</text>
+<text x="60" y="108" font-family="Inter, Segoe UI, Arial, sans-serif" font-size="20" fill="#4b5563" text-anchor="start" font-weight="400" xml:space="preserve">Toy dictionary from Sennrich et al. (2016), Algorithm 1. Word frequencies in brackets.</text>
+<rect x="60" y="135" width="255" height="56" rx="8" fill="#f3f4f6" stroke="#d1d5db" stroke-width="2"/>
+<text x="187.5" y="171" font-family="Consolas, Menlo, monospace" font-size="20" fill="#111827" text-anchor="middle" font-weight="400" xml:space="preserve">l o w &lt;/w&gt;  (5)</text>
+<rect x="329" y="135" width="255" height="56" rx="8" fill="#f3f4f6" stroke="#d1d5db" stroke-width="2"/>
+<text x="456.5" y="171" font-family="Consolas, Menlo, monospace" font-size="20" fill="#111827" text-anchor="middle" font-weight="400" xml:space="preserve">l o w e r &lt;/w&gt;  (2)</text>
+<rect x="598" y="135" width="255" height="56" rx="8" fill="#f3f4f6" stroke="#d1d5db" stroke-width="2"/>
+<text x="725.5" y="171" font-family="Consolas, Menlo, monospace" font-size="20" fill="#111827" text-anchor="middle" font-weight="400" xml:space="preserve">n e w e s t &lt;/w&gt;  (6)</text>
+<rect x="867" y="135" width="255" height="56" rx="8" fill="#f3f4f6" stroke="#d1d5db" stroke-width="2"/>
+<text x="994.5" y="171" font-family="Consolas, Menlo, monospace" font-size="20" fill="#111827" text-anchor="middle" font-weight="400" xml:space="preserve">w i d e s t &lt;/w&gt;  (3)</text>
+<text x="60" y="245" font-family="Inter, Segoe UI, Arial, sans-serif" font-size="20" fill="#4b5563" text-anchor="start" font-weight="700" xml:space="preserve">Merge</text>
+<text x="170" y="245" font-family="Inter, Segoe UI, Arial, sans-serif" font-size="20" fill="#4b5563" text-anchor="start" font-weight="700" xml:space="preserve">Most frequent pair</text>
+<text x="430" y="245" font-family="Inter, Segoe UI, Arial, sans-serif" font-size="20" fill="#4b5563" text-anchor="start" font-weight="700" xml:space="preserve">Count</text>
+<text x="540" y="245" font-family="Inter, Segoe UI, Arial, sans-serif" font-size="20" fill="#4b5563" text-anchor="start" font-weight="700" xml:space="preserve">Affected words afterwards</text>
+<rect x="60" y="265" width="1080" height="58" rx="8" fill="#ffffff" stroke="#d1d5db" stroke-width="2"/>
+<text x="95" y="302" font-family="Inter, Segoe UI, Arial, sans-serif" font-size="22" fill="#ec362e" text-anchor="middle" font-weight="700" xml:space="preserve">1</text>
+<text x="170" y="302" font-family="Consolas, Menlo, monospace" font-size="22" fill="#111827" text-anchor="start" font-weight="700" xml:space="preserve">e + s</text>
+<text x="430" y="302" font-family="Inter, Segoe UI, Arial, sans-serif" font-size="22" fill="#111827" text-anchor="start" font-weight="400" xml:space="preserve">9</text>
+<text x="540" y="302" font-family="Consolas, Menlo, monospace" font-size="20" fill="#4b5563" text-anchor="start" font-weight="400" xml:space="preserve">n e w es t &lt;/w&gt;   w i d es t &lt;/w&gt;</text>
+<rect x="60" y="335" width="1080" height="58" rx="8" fill="#ffffff" stroke="#d1d5db" stroke-width="2"/>
+<text x="95" y="372" font-family="Inter, Segoe UI, Arial, sans-serif" font-size="22" fill="#ec362e" text-anchor="middle" font-weight="700" xml:space="preserve">2</text>
+<text x="170" y="372" font-family="Consolas, Menlo, monospace" font-size="22" fill="#111827" text-anchor="start" font-weight="700" xml:space="preserve">es + t</text>
+<text x="430" y="372" font-family="Inter, Segoe UI, Arial, sans-serif" font-size="22" fill="#111827" text-anchor="start" font-weight="400" xml:space="preserve">9</text>
+<text x="540" y="372" font-family="Consolas, Menlo, monospace" font-size="20" fill="#4b5563" text-anchor="start" font-weight="400" xml:space="preserve">n e w est &lt;/w&gt;   w i d est &lt;/w&gt;</text>
+<rect x="60" y="405" width="1080" height="58" rx="8" fill="#ffffff" stroke="#d1d5db" stroke-width="2"/>
+<text x="95" y="442" font-family="Inter, Segoe UI, Arial, sans-serif" font-size="22" fill="#ec362e" text-anchor="middle" font-weight="700" xml:space="preserve">3</text>
+<text x="170" y="442" font-family="Consolas, Menlo, monospace" font-size="22" fill="#111827" text-anchor="start" font-weight="700" xml:space="preserve">est + &lt;/w&gt;</text>
+<text x="430" y="442" font-family="Inter, Segoe UI, Arial, sans-serif" font-size="22" fill="#111827" text-anchor="start" font-weight="400" xml:space="preserve">9</text>
+<text x="540" y="442" font-family="Consolas, Menlo, monospace" font-size="20" fill="#4b5563" text-anchor="start" font-weight="400" xml:space="preserve">n e w est&lt;/w&gt;   w i d est&lt;/w&gt;</text>
+<rect x="60" y="475" width="1080" height="58" rx="8" fill="#ffffff" stroke="#d1d5db" stroke-width="2"/>
+<text x="95" y="512" font-family="Inter, Segoe UI, Arial, sans-serif" font-size="22" fill="#ec362e" text-anchor="middle" font-weight="700" xml:space="preserve">4</text>
+<text x="170" y="512" font-family="Consolas, Menlo, monospace" font-size="22" fill="#111827" text-anchor="start" font-weight="700" xml:space="preserve">l + o</text>
+<text x="430" y="512" font-family="Inter, Segoe UI, Arial, sans-serif" font-size="22" fill="#111827" text-anchor="start" font-weight="400" xml:space="preserve">7</text>
+<text x="540" y="512" font-family="Consolas, Menlo, monospace" font-size="20" fill="#4b5563" text-anchor="start" font-weight="400" xml:space="preserve">lo w &lt;/w&gt;   lo w e r &lt;/w&gt;</text>
+<rect x="60" y="545" width="1080" height="58" rx="8" fill="#ffffff" stroke="#d1d5db" stroke-width="2"/>
+<text x="95" y="582" font-family="Inter, Segoe UI, Arial, sans-serif" font-size="22" fill="#ec362e" text-anchor="middle" font-weight="700" xml:space="preserve">5</text>
+<text x="170" y="582" font-family="Consolas, Menlo, monospace" font-size="22" fill="#111827" text-anchor="start" font-weight="700" xml:space="preserve">lo + w</text>
+<text x="430" y="582" font-family="Inter, Segoe UI, Arial, sans-serif" font-size="22" fill="#111827" text-anchor="start" font-weight="400" xml:space="preserve">7</text>
+<text x="540" y="582" font-family="Consolas, Menlo, monospace" font-size="20" fill="#4b5563" text-anchor="start" font-weight="400" xml:space="preserve">low &lt;/w&gt;   low e r &lt;/w&gt;</text>
+<text x="60" y="645" font-family="Inter, Segoe UI, Arial, sans-serif" font-size="20" fill="#111827" text-anchor="start" font-weight="400" xml:space="preserve">Vocabulary size = starting characters + number of merges. The merge count is the only knob.</text>
+</svg>

@@ -1,0 +1,49 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 1200 600" width="1200" height="600" role="img">
+<rect x="1" y="1" width="1198" height="598" fill="#ffffff" rx="16" stroke="#e5e7eb" stroke-width="2"/>
+<title>Dense versus mixture-of-experts: parameters held versus parameters used</title>
+<desc>In a dense model every parameter is used for every token. In a mixture-of-experts model a router picks a few experts per token: a model may hold a trillion parameters but activate about thirty billion per token. Compute tracks the active parameters; memory must hold all of them.</desc>
+<defs><marker id="ah" viewBox="0 0 10 10" refX="9" refY="5" markerWidth="8" markerHeight="8" orient="auto-start-reverse"><path d="M0,0 L10,5 L0,10 z" fill="#4b5563"/></marker><marker id="ahr" viewBox="0 0 10 10" refX="9" refY="5" markerWidth="8" markerHeight="8" orient="auto-start-reverse"><path d="M0,0 L10,5 L0,10 z" fill="#ec362e"/></marker></defs>
+<text x="60" y="68" font-family="Inter, Segoe UI, Arial, sans-serif" font-size="30" fill="#111827" text-anchor="start" font-weight="700">Sparse models trade compute for memory</text>
+<text x="60" y="104" font-family="Inter, Segoe UI, Arial, sans-serif" font-size="20" fill="#4b5563" text-anchor="start" font-weight="400">Illustrative: ~1T parameters held, ~30B activated per token</text>
+<text x="60" y="160" font-family="Inter, Segoe UI, Arial, sans-serif" font-size="24" fill="#111827" text-anchor="start" font-weight="700">Dense</text>
+<text x="60" y="190" font-family="Inter, Segoe UI, Arial, sans-serif" font-size="18" fill="#4b5563" text-anchor="start" font-weight="400">Every parameter, every token</text>
+<rect x="60" y="215" width="58" height="50" rx="6" fill="#2563eb" stroke="none" stroke-width="2"/>
+<rect x="130" y="215" width="58" height="50" rx="6" fill="#2563eb" stroke="none" stroke-width="2"/>
+<rect x="200" y="215" width="58" height="50" rx="6" fill="#2563eb" stroke="none" stroke-width="2"/>
+<rect x="270" y="215" width="58" height="50" rx="6" fill="#2563eb" stroke="none" stroke-width="2"/>
+<rect x="60" y="277" width="58" height="50" rx="6" fill="#2563eb" stroke="none" stroke-width="2"/>
+<rect x="130" y="277" width="58" height="50" rx="6" fill="#2563eb" stroke="none" stroke-width="2"/>
+<rect x="200" y="277" width="58" height="50" rx="6" fill="#2563eb" stroke="none" stroke-width="2"/>
+<rect x="270" y="277" width="58" height="50" rx="6" fill="#2563eb" stroke="none" stroke-width="2"/>
+<rect x="60" y="339" width="58" height="50" rx="6" fill="#2563eb" stroke="none" stroke-width="2"/>
+<rect x="130" y="339" width="58" height="50" rx="6" fill="#2563eb" stroke="none" stroke-width="2"/>
+<rect x="200" y="339" width="58" height="50" rx="6" fill="#2563eb" stroke="none" stroke-width="2"/>
+<rect x="270" y="339" width="58" height="50" rx="6" fill="#2563eb" stroke="none" stroke-width="2"/>
+<rect x="60" y="401" width="58" height="50" rx="6" fill="#2563eb" stroke="none" stroke-width="2"/>
+<rect x="130" y="401" width="58" height="50" rx="6" fill="#2563eb" stroke="none" stroke-width="2"/>
+<rect x="200" y="401" width="58" height="50" rx="6" fill="#2563eb" stroke="none" stroke-width="2"/>
+<rect x="270" y="401" width="58" height="50" rx="6" fill="#2563eb" stroke="none" stroke-width="2"/>
+<text x="60" y="490" font-family="Inter, Segoe UI, Arial, sans-serif" font-size="20" fill="#111827" text-anchor="start" font-weight="600">Compute ∝ all parameters</text>
+<text x="60" y="520" font-family="Inter, Segoe UI, Arial, sans-serif" font-size="20" fill="#111827" text-anchor="start" font-weight="600">Memory ∝ all parameters</text>
+<text x="480" y="160" font-family="Inter, Segoe UI, Arial, sans-serif" font-size="24" fill="#111827" text-anchor="start" font-weight="700">Mixture of experts</text>
+<text x="480" y="190" font-family="Inter, Segoe UI, Arial, sans-serif" font-size="18" fill="#4b5563" text-anchor="start" font-weight="400">Router picks a handful of experts per token</text>
+<rect x="480" y="215" width="150" height="50" rx="8" fill="#ffffff" stroke="#111827" stroke-width="2"/>
+<text x="555" y="248" font-family="Inter, Segoe UI, Arial, sans-serif" font-size="20" fill="#111827" text-anchor="middle" font-weight="600">Token</text>
+<rect x="480" y="300" width="150" height="50" rx="8" fill="#ffffff" stroke="#ec362e" stroke-width="3"/>
+<text x="555" y="333" font-family="Inter, Segoe UI, Arial, sans-serif" font-size="20" fill="#ec362e" text-anchor="middle" font-weight="700">Router</text>
+<line x1="555" y1="265" x2="555" y2="296" stroke="#4b5563" stroke-width="2.5" marker-end="url(#ah)"/>
+<rect x="680" y="300" width="46" height="56" rx="6" fill="#f3f4f6" stroke="#d1d5db" stroke-width="2"/>
+<rect x="738" y="300" width="46" height="56" rx="6" fill="#f3f4f6" stroke="#d1d5db" stroke-width="2"/>
+<rect x="796" y="300" width="46" height="56" rx="6" fill="#ec362e" stroke="none" stroke-width="2"/>
+<rect x="854" y="300" width="46" height="56" rx="6" fill="#f3f4f6" stroke="#d1d5db" stroke-width="2"/>
+<rect x="912" y="300" width="46" height="56" rx="6" fill="#f3f4f6" stroke="#d1d5db" stroke-width="2"/>
+<rect x="970" y="300" width="46" height="56" rx="6" fill="#ec362e" stroke="none" stroke-width="2"/>
+<rect x="1028" y="300" width="46" height="56" rx="6" fill="#f3f4f6" stroke="#d1d5db" stroke-width="2"/>
+<rect x="1086" y="300" width="46" height="56" rx="6" fill="#f3f4f6" stroke="#d1d5db" stroke-width="2"/>
+<path d="M 632 325 L 652 325 L 652 272 L 819 272 L 819 294" fill="none" stroke="#ec362e" stroke-width="2.5" marker-end="url(#ahr)"/>
+<path d="M 632 325 L 652 325 L 652 272 L 993 272 L 993 294" fill="none" stroke="#ec362e" stroke-width="2.5" marker-end="url(#ahr)"/>
+<text x="680" y="390" font-family="Inter, Segoe UI, Arial, sans-serif" font-size="18" fill="#4b5563" text-anchor="start" font-weight="400">8 experts shown; 2 active for this token</text>
+<text x="680" y="490" font-family="Inter, Segoe UI, Arial, sans-serif" font-size="20" fill="#111827" text-anchor="start" font-weight="600">Compute ∝ active experts (~30B)</text>
+<text x="680" y="520" font-family="Inter, Segoe UI, Arial, sans-serif" font-size="20" fill="#ec362e" text-anchor="start" font-weight="700">Memory ∝ all experts (~1T), resident</text>
+<text x="60" y="572" font-family="Inter, Segoe UI, Arial, sans-serif" font-size="18" fill="#4b5563" text-anchor="start" font-weight="400">Behind an API the memory bill is shared across thousands of requests; single-tenant, it is not.</text>
+</svg>

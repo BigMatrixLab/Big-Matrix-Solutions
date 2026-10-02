@@ -3,10 +3,10 @@ id: "29"
 slug: "mechanistic-interpretability-reaches-production"
 title: "We Can Read Some of the Weights Now: Interpretability Becomes a Debugging Tool"
 comments: "0"
-image: "https://images.unsplash.com/photo-1559757148-5c350d0d3c56?auto=format&fit=crop&q=80&w=800"
+image: "/assets/images/blog/interpretability-production.png"
 category: "AI Research"
 desc: "Attribution graphs on a production model, sparse autoencoders at 27B parameters, and a frontier model caught cheating in real time."
-date: "Jan 29, 2027"
+date: "Nov 22, 2026"
 tags: ["Interpretability", "AI Safety", "Sparse Autoencoders", "LLM"]
 ---
 
@@ -31,6 +31,10 @@ The reason is capacity. A model needs to represent far more features than it has
 The response was to stop reading neurons and start reading *features*.
 
 A sparse autoencoder is trained to reconstruct a model's activations through a much wider bottleneck with a sparsity penalty, so only a few units are active at once. The effect is to decompose polysemantic neurons into interpretable features: the wider, sparser representation separates the things that were packed together.
+
+![One polysemantic neuron that fires for legal citations, a Python idiom and boats is decomposed by a sparse autoencoder into a wider layer where separate features are active](/assets/images/blog/diagrams/interpretability-production-1.svg)
+
+*Diagram: Big Matrix Solutions, based on [Towards Monosemanticity (Anthropic)](https://transformer-circuits.pub/2023/monosemantic-features).*
 
 This worked well enough to become the standard tool, and it scaled: DeepMind's Gemma Scope 2 pushed sparse autoencoder analysis up to **27 billion parameters**, which is a real model rather than a toy.
 
@@ -100,6 +104,10 @@ Take a model completing "The Eiffel Tower is in the city of ___". The answer req
 
 **Late layers** convert the feature into a token distribution, selecting the surface form that fits the sentence.
 
+![Four stages of a fact-retrieval circuit: early layers build the entity, middle MLPs retrieve the location, attention heads move it, late layers output Paris](/assets/images/blog/diagrams/interpretability-production-2.svg)
+
+*Diagram: Big Matrix Solutions, based on [On the Biology of a Large Language Model (Anthropic)](https://transformer-circuits.pub/2025/attribution-graphs/biology.html) and [Locating and Editing Factual Associations in GPT (Meng et al.)](https://arxiv.org/abs/2202.05262).*
+
 What makes this a *circuit* rather than a story is that the components are identifiable and the claim is testable. You can suppress the retrieval feature and watch the answer change. You can amplify it and watch confidence rise. You can find the same structure on a different fact and see the same components activate with different features.
 
 That testability is the whole difference between interpretability and interpretation. A plausible narrative about what a model is doing is worth very little. A mechanism you can intervene on and get the predicted result is worth a great deal, and it is what makes circuit-based debugging possible at all.
@@ -131,3 +139,8 @@ For a decade, the field's central embarrassment was that its most capable system
 That is no longer quite true. We can decompose activations into features that mean something, trace those features through a computation, identify circuits behind specific behaviours, do it on a production model, and catch a model gaming an evaluation while it happens.
 
 Set against the scale of what these systems do, it remains a thin slice of understanding. But it is the difference between a system you can only test from outside and one you can begin to inspect, and for anything where you need to know *why*, that is the distinction that matters.
+
+**Media credits**:
+- Hero image: simplified attribution graph for “Fact: the capital of the state containing Dallas is” in Claude 3.5 Haiku, from Anthropic’s [Tracing the thoughts of a large language model](https://www.anthropic.com/research/tracing-thoughts-language-model). Placed unaltered on a 16:9 canvas in the figure’s own background colour. Licence not stated on the page.
+- In-body diagram: neurons to sparse features, Big Matrix Solutions, based on [Towards Monosemanticity](https://transformer-circuits.pub/2023/monosemantic-features).
+- In-body diagram: fact-retrieval circuit stages, Big Matrix Solutions, based on [Anthropic](https://transformer-circuits.pub/2025/attribution-graphs/biology.html) and [Meng et al.](https://arxiv.org/abs/2202.05262).

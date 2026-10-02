@@ -6,7 +6,7 @@ comments: "0"
 image: "https://images.unsplash.com/photo-1519389950473-47ba0277781c?auto=format&fit=crop&q=80&w=800"
 category: "Agentic AI"
 desc: "Supervisor topologies, parallel subagents, and the convergence problem that makes most multi-agent systems slower and worse than one good agent."
-date: "Jan 15, 2027"
+date: "Nov 18, 2026"
 tags: ["Agentic AI", "Multi-Agent", "Orchestration", "Architecture"]
 ---
 

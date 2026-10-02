@@ -1,0 +1,27 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 1200 680" width="1200" height="680" role="img">
+<rect x="1" y="1" width="1198" height="678" fill="#ffffff" rx="16" stroke="#e5e7eb" stroke-width="2"/>
+<title>Layers between clinical data and an LLM in a FHIR-based system</title>
+<desc>Five stacked layers: source systems, mapping and terminology, the FHIR API with US Core, SMART on FHIR and Bulk Data, retrieval and tools, and the LLM at the top producing answers that cite resource IDs.</desc>
+<defs><marker id="ah" viewBox="0 0 10 10" refX="9" refY="5" markerWidth="8" markerHeight="8" orient="auto-start-reverse"><path d="M0,0 L10,5 L0,10 z" fill="#4b5563"/></marker></defs>
+<text x="60" y="70" font-family="Inter, Segoe UI, Arial, sans-serif" font-size="30" fill="#111827" text-anchor="start" font-weight="700" xml:space="preserve">Where an LLM sits in a FHIR stack</text>
+<text x="60" y="106" font-family="Inter, Segoe UI, Arial, sans-serif" font-size="20" fill="#4b5563" text-anchor="start" font-weight="400" xml:space="preserve">Data passes through four layers before the model sees it</text>
+<rect x="60" y="140" width="1080" height="80" rx="10" fill="#f3f4f6" stroke="#d1d5db" stroke-width="2"/>
+<text x="90" y="174" font-family="Inter, Segoe UI, Arial, sans-serif" font-size="22" fill="#111827" text-anchor="start" font-weight="700" xml:space="preserve">Source systems</text>
+<text x="90" y="202" font-family="Inter, Segoe UI, Arial, sans-serif" font-size="18" fill="#4b5563" text-anchor="start" font-weight="400" xml:space="preserve">EHR, labs, pharmacy, claims: local codes and free text</text>
+<line x1="600" y1="220" x2="600" y2="242" stroke="#4b5563" stroke-width="3" marker-end="url(#ah)"/>
+<rect x="60" y="244" width="1080" height="80" rx="10" fill="#f3f4f6" stroke="#d1d5db" stroke-width="2"/>
+<text x="90" y="278" font-family="Inter, Segoe UI, Arial, sans-serif" font-size="22" fill="#111827" text-anchor="start" font-weight="700" xml:space="preserve">Mapping and terminology</text>
+<text x="90" y="306" font-family="Inter, Segoe UI, Arial, sans-serif" font-size="18" fill="#4b5563" text-anchor="start" font-weight="400" xml:space="preserve">Local codes to SNOMED CT, LOINC, RxNorm; text to resources</text>
+<line x1="600" y1="324" x2="600" y2="346" stroke="#4b5563" stroke-width="3" marker-end="url(#ah)"/>
+<rect x="60" y="348" width="1080" height="80" rx="10" fill="#f3f4f6" stroke="#d1d5db" stroke-width="2"/>
+<text x="90" y="382" font-family="Inter, Segoe UI, Arial, sans-serif" font-size="22" fill="#111827" text-anchor="start" font-weight="700" xml:space="preserve">FHIR API</text>
+<text x="90" y="410" font-family="Inter, Segoe UI, Arial, sans-serif" font-size="18" fill="#4b5563" text-anchor="start" font-weight="400" xml:space="preserve">US Core profiles, SMART on FHIR auth, Bulk Data export</text>
+<line x1="600" y1="428" x2="600" y2="450" stroke="#4b5563" stroke-width="3" marker-end="url(#ah)"/>
+<rect x="60" y="452" width="1080" height="80" rx="10" fill="#f3f4f6" stroke="#d1d5db" stroke-width="2"/>
+<text x="90" y="486" font-family="Inter, Segoe UI, Arial, sans-serif" font-size="22" fill="#111827" text-anchor="start" font-weight="700" xml:space="preserve">Retrieval and tools</text>
+<text x="90" y="514" font-family="Inter, Segoe UI, Arial, sans-serif" font-size="18" fill="#4b5563" text-anchor="start" font-weight="400" xml:space="preserve">Search queries, paging, reference following, code execution</text>
+<line x1="600" y1="532" x2="600" y2="554" stroke="#4b5563" stroke-width="3" marker-end="url(#ah)"/>
+<rect x="60" y="556" width="1080" height="80" rx="10" fill="#ffffff" stroke="#ec362e" stroke-width="2"/>
+<text x="90" y="590" font-family="Inter, Segoe UI, Arial, sans-serif" font-size="22" fill="#ec362e" text-anchor="start" font-weight="700" xml:space="preserve">LLM</text>
+<text x="90" y="618" font-family="Inter, Segoe UI, Arial, sans-serif" font-size="18" fill="#4b5563" text-anchor="start" font-weight="400" xml:space="preserve">Answers, summaries, drafts, with citations to resource IDs</text>
+</svg>

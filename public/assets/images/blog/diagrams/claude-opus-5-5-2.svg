@@ -1,0 +1,56 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 1200 854" width="1200" height="854" font-family="Inter, Segoe UI, Arial, sans-serif">
+<rect x="0.5" y="0.5" width="1199" height="853" fill="#ffffff" rx="16" stroke="#e5e7eb"/>
+<title>Claude Opus 5.5 benchmark comparison</title>
+<desc>Horizontal bar chart. Opus 5.5 scores higher than Fable 5.1 and Opus 5 on Terminal-Bench 4.0 (66.4), FrontierCode v1.1 (54.4), CursorBench 4.0 (57.8), AutomationBench (40.0), Humanity's Last Exam with tools (67.7) and OSWorld 2.1 (81.8).</desc>
+<text x="40" y="62" font-size="30" fill="#111827" font-weight="700">Opus 5.5 against Fable 5.1 and Opus 5</text>
+<text x="40" y="98" font-size="20" fill="#4b5563">Selected benchmark scores (%) published by Anthropic; higher is better</text>
+<rect x="40" y="124" width="20" height="20" fill="#ec362e" rx="4"/>
+<text x="70" y="140" font-size="20" fill="#111827">Opus 5.5</text>
+<rect x="198" y="124" width="20" height="20" fill="#2563eb" rx="4"/>
+<text x="228" y="140" font-size="20" fill="#111827">Fable 5.1</text>
+<rect x="367" y="124" width="20" height="20" fill="#d1d5db" rx="4"/>
+<text x="397" y="140" font-size="20" fill="#111827">Opus 5</text>
+<text x="40" y="222" font-size="20" fill="#111827" font-weight="600">Terminal-Bench 4.0</text>
+<rect x="290" y="180" width="531.2" height="21" fill="#ec362e" rx="3"/>
+<text x="831.2" y="198" font-size="18" fill="#111827" font-weight="700">66.4</text>
+<rect x="290" y="205" width="446.4" height="21" fill="#2563eb" rx="3"/>
+<text x="746.4" y="223" font-size="18" fill="#4b5563">55.8</text>
+<rect x="290" y="230" width="418.4" height="21" fill="#d1d5db" rx="3"/>
+<text x="718.4" y="248" font-size="18" fill="#4b5563">52.3</text>
+<text x="40" y="326" font-size="20" fill="#111827" font-weight="600">FrontierCode v1.1</text>
+<rect x="290" y="284" width="435.2" height="21" fill="#ec362e" rx="3"/>
+<text x="735.2" y="302" font-size="18" fill="#111827" font-weight="700">54.4</text>
+<rect x="290" y="309" width="402.4" height="21" fill="#2563eb" rx="3"/>
+<text x="702.4" y="327" font-size="18" fill="#4b5563">50.3</text>
+<rect x="290" y="334" width="384.0" height="21" fill="#d1d5db" rx="3"/>
+<text x="684.0" y="352" font-size="18" fill="#4b5563">48.0</text>
+<text x="40" y="430" font-size="20" fill="#111827" font-weight="600">CursorBench 4.0</text>
+<rect x="290" y="388" width="462.4" height="21" fill="#ec362e" rx="3"/>
+<text x="762.4" y="406" font-size="18" fill="#111827" font-weight="700">57.8</text>
+<rect x="290" y="413" width="414.4" height="21" fill="#2563eb" rx="3"/>
+<text x="714.4" y="431" font-size="18" fill="#4b5563">51.8</text>
+<rect x="290" y="438" width="372.8" height="21" fill="#d1d5db" rx="3"/>
+<text x="672.8" y="456" font-size="18" fill="#4b5563">46.6</text>
+<text x="40" y="534" font-size="20" fill="#111827" font-weight="600">AutomationBench</text>
+<rect x="290" y="492" width="320.0" height="21" fill="#ec362e" rx="3"/>
+<text x="620.0" y="510" font-size="18" fill="#111827" font-weight="700">40.0</text>
+<rect x="290" y="517" width="251.2" height="21" fill="#2563eb" rx="3"/>
+<text x="551.2" y="535" font-size="18" fill="#4b5563">31.4</text>
+<rect x="290" y="542" width="215.2" height="21" fill="#d1d5db" rx="3"/>
+<text x="515.2" y="560" font-size="18" fill="#4b5563">26.9</text>
+<text x="40" y="638" font-size="20" fill="#111827" font-weight="600">Humanity's Last Exam</text>
+<rect x="290" y="596" width="541.6" height="21" fill="#ec362e" rx="3"/>
+<text x="841.6" y="614" font-size="18" fill="#111827" font-weight="700">67.7</text>
+<rect x="290" y="621" width="524.8" height="21" fill="#2563eb" rx="3"/>
+<text x="824.8" y="639" font-size="18" fill="#4b5563">65.6</text>
+<rect x="290" y="646" width="508.8" height="21" fill="#d1d5db" rx="3"/>
+<text x="808.8" y="664" font-size="18" fill="#4b5563">63.6</text>
+<text x="40" y="742" font-size="20" fill="#111827" font-weight="600">OSWorld 2.1</text>
+<rect x="290" y="700" width="654.4" height="21" fill="#ec362e" rx="3"/>
+<text x="954.4" y="718" font-size="18" fill="#111827" font-weight="700">81.8</text>
+<rect x="290" y="725" width="645.6" height="21" fill="#2563eb" rx="3"/>
+<text x="945.6" y="743" font-size="18" fill="#4b5563">80.7</text>
+<rect x="290" y="750" width="592.0" height="21" fill="#d1d5db" rx="3"/>
+<text x="892.0" y="768" font-size="18" fill="#4b5563">74.0</text>
+<text x="40" y="824" font-size="18" fill="#4b5563">Opus 5.5 results use adaptive thinking at max effort with production safeguards enabled.</text>
+</svg>

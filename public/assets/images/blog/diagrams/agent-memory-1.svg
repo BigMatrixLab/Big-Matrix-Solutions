@@ -1,0 +1,46 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 1200 610" width="1200" height="610" role="img" aria-labelledby="t d" font-family="Inter, Segoe UI, Arial, sans-serif">
+  <rect x="0" y="0" width="1200" height="610" fill="#ffffff" rx="16" stroke="#e5e7eb"/>
+  <title id="t">Four places agent state can live</title>
+  <desc id="d">Context window as working memory, session state for one conversation, a long-term store for semantic and episodic memory, and versioned instructions and code as procedural memory, with a write path and a read path underneath.</desc>
+  <text x="600" y="54" text-anchor="middle" font-size="28" font-weight="700" fill="#111827">Four places agent state can live</text>
+
+  <g font-size="18" fill="#4b5563" text-anchor="middle">
+    <rect x="24" y="96" width="270" height="250" rx="12" fill="#f3f4f6" stroke="#d1d5db"/>
+    <text x="159" y="138" font-size="22" font-weight="700" fill="#111827">Context window</text>
+    <text x="159" y="170" fill="#ec362e">working memory</text>
+    <text x="159" y="222">this step only</text>
+    <text x="159" y="254">gone after compaction</text>
+    <text x="159" y="286">or a new session</text>
+
+    <rect x="318" y="96" width="270" height="250" rx="12" fill="#f3f4f6" stroke="#d1d5db"/>
+    <text x="453" y="138" font-size="22" font-weight="700" fill="#111827">Session state</text>
+    <text x="453" y="170" fill="#ec362e">short-term</text>
+    <text x="453" y="222">one conversation</text>
+    <text x="453" y="254">checkpointed</text>
+    <text x="453" y="286">keyed by thread id</text>
+
+    <rect x="612" y="96" width="270" height="250" rx="12" fill="#f3f4f6" stroke="#d1d5db"/>
+    <text x="747" y="138" font-size="22" font-weight="700" fill="#111827">Long-term store</text>
+    <text x="747" y="170" fill="#ec362e">semantic + episodic</text>
+    <text x="747" y="222">facts, preferences</text>
+    <text x="747" y="254">past runs, outcomes</text>
+    <text x="747" y="286">scoped per user</text>
+
+    <rect x="906" y="96" width="270" height="250" rx="12" fill="#f3f4f6" stroke="#d1d5db"/>
+    <text x="1041" y="138" font-size="22" font-weight="700" fill="#111827">Instructions + code</text>
+    <text x="1041" y="170" fill="#ec362e">procedural</text>
+    <text x="1041" y="222">prompts, skills, tools</text>
+    <text x="1041" y="254">versioned in git</text>
+    <text x="1041" y="286">changed by review</text>
+  </g>
+
+  <rect x="24" y="378" width="1152" height="80" rx="12" fill="#ffffff" stroke="#2563eb" stroke-width="2.5"/>
+  <text x="48" y="426" font-size="22" font-weight="700" fill="#2563eb">Write</text>
+  <text x="140" y="425" font-size="19" fill="#111827">extract a candidate, check it against what exists, scope it, set an expiry</text>
+
+  <rect x="24" y="474" width="1152" height="80" rx="12" fill="#ffffff" stroke="#2563eb" stroke-width="2.5"/>
+  <text x="48" y="522" font-size="22" font-weight="700" fill="#2563eb">Read</text>
+  <text x="140" y="521" font-size="19" fill="#111827">filter by scope first, then rank by relevance, recency and importance</text>
+
+  <text x="600" y="590" text-anchor="middle" font-size="18" fill="#4b5563">Memory types follow the CoALA framework (Sumers et al.).</text>
+</svg>

@@ -8,7 +8,7 @@ comments: "0"
 image: "/assets/images/blog/hinton-nobel.webp"
 category: "AI Policy"
 desc: "In September 2026 the Nobel laureate told lawmakers they had about a year to act on AI. What he said, what he co-signed, and why serious researchers disagree."
-date: "Nov 17, 2026"
+date: "Oct 27, 2026"
 tags: ["AI Policy", "AI Safety", "Geoffrey Hinton", "Regulation"]
 ---
 

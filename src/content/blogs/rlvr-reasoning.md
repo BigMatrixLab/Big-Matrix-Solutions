@@ -6,7 +6,7 @@ comments: "0"
 image: "https://images.unsplash.com/photo-1509228468518-180dd4864904?auto=format&fit=crop&q=80&w=800"
 category: "LLM Research"
 desc: "RLVR gave us o-series, R1 and every reasoning model since. It also confined the gains to domains where a computer can check the answer."
-date: "Jan 01, 2027"
+date: "Nov 14, 2026"
 tags: ["RLVR", "Reinforcement Learning", "Reasoning", "LLM"]
 ---
 

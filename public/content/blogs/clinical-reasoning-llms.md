@@ -6,7 +6,7 @@ comments: "0"
 image: "https://images.unsplash.com/photo-1631217868264-e5b90bb7e133?auto=format&fit=crop&q=80&w=800"
 category: "Medical AI"
 desc: "67.1% versus 55.3% and 50.0% on real emergency department cases. What the Science study actually measured, and why the authors are urging caution."
-date: "Oct 16, 2026"
+date: "Oct 09, 2026"
 tags: ["Medical AI", "Clinical Reasoning", "LLM", "Healthcare"]
 ---
 

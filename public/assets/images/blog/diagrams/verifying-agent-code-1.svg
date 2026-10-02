@@ -1,0 +1,35 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 1200 660" width="1200" height="660" role="img">
+<rect x="1" y="1" width="1198" height="658" fill="#ffffff" rx="16" stroke="#e5e7eb" stroke-width="2"/>
+<title>Which verification technique catches which agent failure</title>
+<desc>Example-based tests catch typical human slips. Property-based tests defeat special-casing. Mutation testing measures whether tests assert anything. Differential testing confirms behaviour did not change in a migration. Production invariants catch locally correct but globally wrong composition. Trajectory review catches test accommodation and silent scope narrowing.</desc>
+<defs><marker id="ah" viewBox="0 0 10 10" refX="9" refY="5" markerWidth="8" markerHeight="8" orient="auto-start-reverse"><path d="M0,0 L10,5 L0,10 z" fill="#4b5563"/></marker><marker id="ahr" viewBox="0 0 10 10" refX="9" refY="5" markerWidth="8" markerHeight="8" orient="auto-start-reverse"><path d="M0,0 L10,5 L0,10 z" fill="#ec362e"/></marker></defs>
+<text x="60" y="68" font-family="Inter, Segoe UI, Arial, sans-serif" font-size="30" fill="#111827" text-anchor="start" font-weight="700">Matching the check to the failure</text>
+<text x="60" y="104" font-family="Inter, Segoe UI, Arial, sans-serif" font-size="20" fill="#4b5563" text-anchor="start" font-weight="400">Agent errors cluster differently from human errors</text>
+<text x="60" y="150" font-family="Inter, Segoe UI, Arial, sans-serif" font-size="20" fill="#4b5563" text-anchor="start" font-weight="600">Technique</text>
+<text x="500" y="150" font-family="Inter, Segoe UI, Arial, sans-serif" font-size="20" fill="#4b5563" text-anchor="start" font-weight="600">What it catches</text>
+<rect x="60" y="170" width="1080" height="60" rx="10" fill="#f3f4f6" stroke="#d1d5db" stroke-width="2"/>
+<text x="84" y="208" font-family="Inter, Segoe UI, Arial, sans-serif" font-size="22" fill="#111827" text-anchor="start" font-weight="700">Example-based tests</text>
+<line x1="410" y1="200" x2="470" y2="200" stroke="#4b5563" stroke-width="2.5" marker-end="url(#ah)"/>
+<text x="500" y="208" font-family="Inter, Segoe UI, Arial, sans-serif" font-size="20" fill="#4b5563" text-anchor="start" font-weight="400">Off-by-one, null checks, boundary slips</text>
+<rect x="60" y="244" width="1080" height="60" rx="10" fill="#ffffff" stroke="#ec362e" stroke-width="2"/>
+<text x="84" y="282" font-family="Inter, Segoe UI, Arial, sans-serif" font-size="22" fill="#111827" text-anchor="start" font-weight="700">Property-based tests</text>
+<line x1="410" y1="274" x2="470" y2="274" stroke="#4b5563" stroke-width="2.5" marker-end="url(#ah)"/>
+<text x="500" y="282" font-family="Inter, Segoe UI, Arial, sans-serif" font-size="20" fill="#111827" text-anchor="start" font-weight="400">Special-casing to pass a known example</text>
+<rect x="60" y="318" width="1080" height="60" rx="10" fill="#ffffff" stroke="#ec362e" stroke-width="2"/>
+<text x="84" y="356" font-family="Inter, Segoe UI, Arial, sans-serif" font-size="22" fill="#111827" text-anchor="start" font-weight="700">Mutation testing</text>
+<line x1="410" y1="348" x2="470" y2="348" stroke="#4b5563" stroke-width="2.5" marker-end="url(#ah)"/>
+<text x="500" y="356" font-family="Inter, Segoe UI, Arial, sans-serif" font-size="20" fill="#111827" text-anchor="start" font-weight="400">High coverage from tests that assert nothing</text>
+<rect x="60" y="392" width="1080" height="60" rx="10" fill="#ffffff" stroke="#ec362e" stroke-width="2"/>
+<text x="84" y="430" font-family="Inter, Segoe UI, Arial, sans-serif" font-size="22" fill="#111827" text-anchor="start" font-weight="700">Differential testing</text>
+<line x1="410" y1="422" x2="470" y2="422" stroke="#4b5563" stroke-width="2.5" marker-end="url(#ah)"/>
+<text x="500" y="430" font-family="Inter, Segoe UI, Arial, sans-serif" font-size="20" fill="#111827" text-anchor="start" font-weight="400">Behaviour changes during a migration or refactor</text>
+<rect x="60" y="466" width="1080" height="60" rx="10" fill="#ffffff" stroke="#ec362e" stroke-width="2"/>
+<text x="84" y="504" font-family="Inter, Segoe UI, Arial, sans-serif" font-size="22" fill="#111827" text-anchor="start" font-weight="700">Production invariants</text>
+<line x1="410" y1="496" x2="470" y2="496" stroke="#4b5563" stroke-width="2.5" marker-end="url(#ah)"/>
+<text x="500" y="504" font-family="Inter, Segoe UI, Arial, sans-serif" font-size="20" fill="#111827" text-anchor="start" font-weight="400">Locally correct, globally wrong composition</text>
+<rect x="60" y="540" width="1080" height="60" rx="10" fill="#ffffff" stroke="#ec362e" stroke-width="2"/>
+<text x="84" y="578" font-family="Inter, Segoe UI, Arial, sans-serif" font-size="22" fill="#111827" text-anchor="start" font-weight="700">Trajectory review</text>
+<line x1="410" y1="570" x2="470" y2="570" stroke="#4b5563" stroke-width="2.5" marker-end="url(#ah)"/>
+<text x="500" y="578" font-family="Inter, Segoe UI, Arial, sans-serif" font-size="20" fill="#111827" text-anchor="start" font-weight="400">Test accommodation, silently narrowed scope</text>
+<text x="60" y="630" font-family="Inter, Segoe UI, Arial, sans-serif" font-size="18" fill="#ec362e" text-anchor="start" font-weight="600">Outlined in red: techniques that hold up when the author is a model</text>
+</svg>

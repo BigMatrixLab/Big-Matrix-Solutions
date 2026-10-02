@@ -1,0 +1,53 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 1200 820" width="1200" height="820" font-family="Inter, Segoe UI, Arial, sans-serif">
+<rect x="0.5" y="0.5" width="1199" height="819" fill="#ffffff" rx="16" stroke="#e5e7eb"/>
+<title>Decision-model latency claims</title>
+<desc>Bar chart. A standard GPT-6 Luna call takes 1.6 s versus about 150 ms for the Decisions API; TypeSafe quotes 70 to 500 ms for Jev. In Every's test the Decisions API took 230 ms vs 500 ms for Jev on multi-step text, while Jev took 161 ms vs 309 ms on classification.</desc>
+<text x="40" y="62" font-size="30" fill="#111827" font-weight="700">Latency claims: Decisions API vs Jev</text>
+<text x="40" y="98" font-size="20" fill="#4b5563">Milliseconds, lower is faster. Vendor claims and one early hands-on test</text>
+<text x="40" y="150" font-size="22" fill="#111827" font-weight="700">Stated by the vendors</text>
+<line x1="400.0" y1="166" x2="400.0" y2="360" stroke="#f3f4f6" stroke-width="1"/>
+<text x="400.0" y="386" font-size="18" fill="#4b5563" text-anchor="middle">0</text>
+<line x1="580.0" y1="166" x2="580.0" y2="360" stroke="#f3f4f6" stroke-width="1"/>
+<text x="580.0" y="386" font-size="18" fill="#4b5563" text-anchor="middle">400</text>
+<line x1="760.0" y1="166" x2="760.0" y2="360" stroke="#f3f4f6" stroke-width="1"/>
+<text x="760.0" y="386" font-size="18" fill="#4b5563" text-anchor="middle">800</text>
+<line x1="940.0" y1="166" x2="940.0" y2="360" stroke="#f3f4f6" stroke-width="1"/>
+<text x="940.0" y="386" font-size="18" fill="#4b5563" text-anchor="middle">1,200</text>
+<line x1="1120.0" y1="166" x2="1120.0" y2="360" stroke="#f3f4f6" stroke-width="1"/>
+<text x="1120.0" y="386" font-size="18" fill="#4b5563" text-anchor="middle">1,600</text>
+<text x="40" y="204" font-size="20" fill="#111827">Standard GPT-6 Luna call</text>
+<rect x="400.0" y="180" width="720.0" height="32" fill="#d1d5db" rx="4"/>
+<text x="1132.0" y="204" font-size="20" fill="#111827" font-weight="600">1.6 s</text>
+<text x="40" y="262" font-size="20" fill="#111827">Decisions API (OpenAI)</text>
+<rect x="400.0" y="238" width="67.5" height="32" fill="#ec362e" rx="4"/>
+<text x="479.5" y="262" font-size="20" fill="#111827" font-weight="600">~150 ms</text>
+<text x="40" y="320" font-size="20" fill="#111827">Jev end-to-end (TypeSafe)</text>
+<rect x="431.5" y="296" width="193.5" height="32" fill="#2563eb" rx="4"/>
+<text x="637.0" y="320" font-size="20" fill="#111827" font-weight="600">70–500 ms</text>
+<text x="40" y="450" font-size="22" fill="#111827" font-weight="700">Every's hands-on test (via Firecrawl), on a wider scale</text>
+<line x1="400.0" y1="466" x2="400.0" y2="718" stroke="#f3f4f6" stroke-width="1"/>
+<text x="400.0" y="744" font-size="18" fill="#4b5563" text-anchor="middle">0</text>
+<line x1="500.0" y1="466" x2="500.0" y2="718" stroke="#f3f4f6" stroke-width="1"/>
+<text x="500.0" y="744" font-size="18" fill="#4b5563" text-anchor="middle">100</text>
+<line x1="600.0" y1="466" x2="600.0" y2="718" stroke="#f3f4f6" stroke-width="1"/>
+<text x="600.0" y="744" font-size="18" fill="#4b5563" text-anchor="middle">200</text>
+<line x1="700.0" y1="466" x2="700.0" y2="718" stroke="#f3f4f6" stroke-width="1"/>
+<text x="700.0" y="744" font-size="18" fill="#4b5563" text-anchor="middle">300</text>
+<line x1="800.0" y1="466" x2="800.0" y2="718" stroke="#f3f4f6" stroke-width="1"/>
+<text x="800.0" y="744" font-size="18" fill="#4b5563" text-anchor="middle">400</text>
+<line x1="900.0" y1="466" x2="900.0" y2="718" stroke="#f3f4f6" stroke-width="1"/>
+<text x="900.0" y="744" font-size="18" fill="#4b5563" text-anchor="middle">500</text>
+<line x1="1000.0" y1="466" x2="1000.0" y2="718" stroke="#f3f4f6" stroke-width="1"/>
+<text x="1000.0" y="744" font-size="18" fill="#4b5563" text-anchor="middle">600</text>
+<text x="40" y="528" font-size="20" fill="#111827">Multi-step text tasks</text>
+<rect x="400" y="482" width="230.0" height="30" fill="#ec362e" rx="4"/>
+<text x="642.0" y="504" font-size="18" fill="#111827">Decisions API 230 ms</text>
+<rect x="400" y="522" width="500.0" height="30" fill="#2563eb" rx="4"/>
+<text x="912.0" y="544" font-size="18" fill="#111827">Jev 500 ms</text>
+<text x="40" y="644" font-size="20" fill="#111827">Classification</text>
+<rect x="400" y="598" width="309.0" height="30" fill="#ec362e" rx="4"/>
+<text x="721.0" y="620" font-size="18" fill="#111827">Decisions API 309 ms</text>
+<rect x="400" y="638" width="161.0" height="30" fill="#2563eb" rx="4"/>
+<text x="573.0" y="660" font-size="18" fill="#111827">Jev 161 ms</text>
+<text x="40" y="790" font-size="18" fill="#4b5563">One test is not a benchmark: measure from the region your app runs in.</text>
+</svg>

@@ -6,7 +6,7 @@ comments: "0"
 image: "/assets/images/blog/unet-architecture.webp"
 category: "Tutorial"
 desc: "Eleven years old, still the default for medical segmentation, and quietly running inside every diffusion model. A walkthrough of why skip connections matter."
-date: "Oct 30, 2026"
+date: "Oct 13, 2026"
 tags: ["U-Net", "Computer Vision", "Tutorial", "Medical Imaging"]
 ---
 

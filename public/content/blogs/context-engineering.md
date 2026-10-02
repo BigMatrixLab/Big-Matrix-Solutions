@@ -6,7 +6,7 @@ comments: "0"
 image: "https://images.unsplash.com/photo-1517971071642-34a2d3ecc9cd?auto=format&fit=crop&q=80&w=800"
 category: "Agentic AI"
 desc: "When an agent runs for hours, the binding constraint is not the prompt. It is what occupies the window, in what order, and what you throw away."
-date: "Apr 02, 2027"
+date: "Dec 10, 2026"
 tags: ["Context Engineering", "Agentic AI", "LLM", "Architecture"]
 ---
 

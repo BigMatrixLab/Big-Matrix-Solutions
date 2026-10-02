@@ -8,7 +8,7 @@ comments: "0"
 image: "/assets/images/blog/amodei-pace-the-frontier.jpg"
 category: "AI Policy"
 desc: "Anthropic's CEO asked the industry to slow the rate at which models get more capable. Altman, Musk and Nadella agreed within days. What the plan says, and how to read it."
-date: "Nov 10, 2026"
+date: "Oct 21, 2026"
 tags: ["AI Policy", "AI Safety", "Anthropic", "Frontier AI", "Regulation"]
 ---
 

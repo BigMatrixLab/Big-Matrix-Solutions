@@ -1,0 +1,22 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 1200 560" width="1200" height="560" role="img">
+<rect x="1" y="1" width="1198" height="558" fill="#ffffff" rx="16" stroke="#e5e7eb" stroke-width="2"/>
+<title>Rentosertib Phase IIa lung function results</title>
+<desc>Mean change in forced vital capacity: +98.4 mL with rentosertib 60 mg once daily versus -20.3 mL with placebo.</desc>
+<defs><marker id="ah" viewBox="0 0 10 10" refX="9" refY="5" markerWidth="8" markerHeight="8" orient="auto-start-reverse"><path d="M0,0 L10,5 L0,10 z" fill="#4b5563"/></marker></defs>
+<g font-family="Inter, Segoe UI, Arial, sans-serif">
+<text x="60" y="70" font-size="30" fill="#111827" text-anchor="start" font-weight="700">Rentosertib Phase IIa: change in lung function</text>
+<text x="60" y="106" font-size="20" fill="#4b5563" text-anchor="start">Mean change in forced vital capacity (FVC), in millilitres</text>
+<line x1="560" y1="150" x2="560" y2="380" stroke="#4b5563" stroke-width="2"/>
+<text x="560" y="410" font-size="20" fill="#4b5563" text-anchor="middle">0 mL</text>
+<text x="60" y="222" font-size="22" fill="#111827" text-anchor="start" font-weight="700">Rentosertib 60 mg</text>
+<text x="60" y="250" font-size="20" fill="#4b5563" text-anchor="start">once daily</text>
+<rect x="560" y="190" width="394" height="64" rx="4" fill="#ec362e"/>
+<text x="970" y="232" font-size="26" fill="#111827" text-anchor="start" font-weight="700">+98.4 mL</text>
+<text x="60" y="330" font-size="22" fill="#111827" text-anchor="start" font-weight="700">Placebo</text>
+<rect x="479" y="298" width="81" height="64" rx="4" fill="#9ca3af"/>
+<text x="576" y="340" font-size="26" fill="#111827" text-anchor="start" font-weight="700">−20.3 mL</text>
+<line x1="60" y1="450" x2="1140" y2="450" stroke="#d1d5db" stroke-width="2"/>
+<text x="60" y="492" font-size="20" fill="#4b5563" text-anchor="start">Improvement rather than a slower decline, in a disease where the standard of care slows decline.</text>
+<text x="60" y="524" font-size="20" fill="#4b5563" text-anchor="start">Phase IIa is small and early: designed for safety and dosing, not powered to prove efficacy.</text>
+</g>
+</svg>

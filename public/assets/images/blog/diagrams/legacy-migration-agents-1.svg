@@ -1,0 +1,60 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 1200 560" width="1200" height="560" role="img" aria-labelledby="t d" font-family="Inter, Segoe UI, Arial, sans-serif">
+  <title id="t">An agent-assisted migration pipeline</title>
+  <desc id="d">Five stages: find the code to change with deterministic tools, pin current behaviour with tests, let the agent transform small groups of files, verify with build, tests and comparison against the old behaviour, feeding failures back to the agent, then have human owners review and land small batches.</desc>
+  <rect x="0" y="0" width="1200" height="560" fill="#ffffff" rx="16" stroke="#e5e7eb"/>
+  <text x="600" y="54" text-anchor="middle" font-size="28" font-weight="700" fill="#111827">An agent-assisted migration pipeline</text>
+
+  <defs>
+    <marker id="arrow" viewBox="0 0 10 10" refX="9" refY="5" markerWidth="7" markerHeight="7" orient="auto-start-reverse">
+      <path d="M0,0 L10,5 L0,10 z" fill="#4b5563"/>
+    </marker>
+    <marker id="arrowRed" viewBox="0 0 10 10" refX="9" refY="5" markerWidth="7" markerHeight="7" orient="auto-start-reverse">
+      <path d="M0,0 L10,5 L0,10 z" fill="#ec362e"/>
+    </marker>
+  </defs>
+
+  <g font-size="18" fill="#4b5563" text-anchor="middle">
+    <rect x="30" y="110" width="200" height="200" rx="12" fill="#f3f4f6" stroke="#d1d5db"/>
+    <text x="130" y="152" font-size="22" font-weight="700" fill="#111827">1. Find</text>
+    <text x="130" y="200">locate every</text>
+    <text x="130" y="226">call site</text>
+    <text x="130" y="270" fill="#2563eb">AST, code search</text>
+
+    <rect x="265" y="110" width="200" height="200" rx="12" fill="#f3f4f6" stroke="#d1d5db"/>
+    <text x="365" y="152" font-size="22" font-weight="700" fill="#111827">2. Pin</text>
+    <text x="365" y="200">lock current</text>
+    <text x="365" y="226">behaviour</text>
+    <text x="365" y="270" fill="#2563eb">tests, recordings</text>
+
+    <rect x="500" y="110" width="200" height="200" rx="12" fill="#ffffff" stroke="#ec362e" stroke-width="2"/>
+    <text x="600" y="152" font-size="22" font-weight="700" fill="#111827">3. Transform</text>
+    <text x="600" y="200">agent edits</text>
+    <text x="600" y="226">small file groups</text>
+    <text x="600" y="270" fill="#ec362e">the only AI step</text>
+
+    <rect x="735" y="110" width="200" height="200" rx="12" fill="#f3f4f6" stroke="#d1d5db"/>
+    <text x="835" y="152" font-size="22" font-weight="700" fill="#111827">4. Verify</text>
+    <text x="835" y="200">build, tests,</text>
+    <text x="835" y="226">old vs new</text>
+    <text x="835" y="270" fill="#2563eb">automated</text>
+
+    <rect x="970" y="110" width="200" height="200" rx="12" fill="#f3f4f6" stroke="#d1d5db"/>
+    <text x="1070" y="152" font-size="22" font-weight="700" fill="#111827">5. Land</text>
+    <text x="1070" y="200">code owners</text>
+    <text x="1070" y="226">review batches</text>
+    <text x="1070" y="270" fill="#2563eb">human</text>
+  </g>
+
+  <g stroke="#4b5563" stroke-width="2">
+    <line x1="232" y1="210" x2="262" y2="210" marker-end="url(#arrow)"/>
+    <line x1="467" y1="210" x2="497" y2="210" marker-end="url(#arrow)"/>
+    <line x1="702" y1="210" x2="732" y2="210" marker-end="url(#arrow)"/>
+    <line x1="937" y1="210" x2="967" y2="210" marker-end="url(#arrow)"/>
+  </g>
+
+  <path d="M835,312 L835,380 L600,380 L600,316" fill="none" stroke="#ec362e" stroke-width="3" marker-end="url(#arrowRed)"/>
+  <text x="718" y="412" text-anchor="middle" font-size="18" fill="#111827">failures go back to the agent</text>
+  <text x="718" y="438" text-anchor="middle" font-size="18" fill="#4b5563">retry until green or a cap is hit</text>
+
+  <text x="600" y="510" text-anchor="middle" font-size="18" fill="#4b5563">Review throughput, not generation speed, usually sets the pace.</text>
+</svg>

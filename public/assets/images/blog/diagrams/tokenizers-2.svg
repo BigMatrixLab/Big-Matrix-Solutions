@@ -1,0 +1,38 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 1200 654" width="1200" height="654" role="img">
+<rect x="1" y="1" width="1198" height="652" fill="#ffffff" rx="16" stroke="#e5e7eb" stroke-width="2"/>
+<title>Measured token splits</title>
+<desc>Token splits measured with tiktoken: strawberry is three tokens without a leading space and one with it; digits group in threes; a short Hindi sentence costs 23, 17 or 5 tokens depending on the vocabulary.</desc>
+<defs><marker id="ah" viewBox="0 0 10 10" refX="9" refY="5" markerWidth="8" markerHeight="8" orient="auto-start-reverse"><path d="M0,0 L10,5 L0,10 z" fill="#4b5563"/></marker></defs>
+<text x="60" y="70" font-family="Inter, Segoe UI, Arial, sans-serif" font-size="30" fill="#111827" text-anchor="start" font-weight="700" xml:space="preserve">What the model actually sees</text>
+<text x="60" y="108" font-family="Inter, Segoe UI, Arial, sans-serif" font-size="20" fill="#4b5563" text-anchor="start" font-weight="400" xml:space="preserve">Splits measured with OpenAI's tiktoken library. Each box is one token.</text>
+<text x="60" y="176" font-family="Inter, Segoe UI, Arial, sans-serif" font-size="20" fill="#4b5563" text-anchor="start" font-weight="400" xml:space="preserve">"strawberry"</text>
+<rect x="330" y="140" width="56" height="54" rx="8" fill="#f3f4f6" stroke="#ec362e" stroke-width="2"/>
+<text x="358.0" y="175" font-family="Consolas, Menlo, monospace" font-size="22" fill="#111827" text-anchor="middle" font-weight="400" xml:space="preserve">st</text>
+<rect x="396" y="140" width="70" height="54" rx="8" fill="#f3f4f6" stroke="#ec362e" stroke-width="2"/>
+<text x="431.0" y="175" font-family="Consolas, Menlo, monospace" font-size="22" fill="#111827" text-anchor="middle" font-weight="400" xml:space="preserve">raw</text>
+<rect x="476" y="140" width="98" height="54" rx="8" fill="#f3f4f6" stroke="#ec362e" stroke-width="2"/>
+<text x="525.0" y="175" font-family="Consolas, Menlo, monospace" font-size="22" fill="#111827" text-anchor="middle" font-weight="400" xml:space="preserve">berry</text>
+<text x="596" y="175" font-family="Inter, Segoe UI, Arial, sans-serif" font-size="20" fill="#4b5563" text-anchor="start" font-weight="400" xml:space="preserve">3 tokens; the letters are hidden inside ids</text>
+<text x="60" y="251" font-family="Inter, Segoe UI, Arial, sans-serif" font-size="20" fill="#4b5563" text-anchor="start" font-weight="400" xml:space="preserve">" strawberry"</text>
+<rect x="330" y="215" width="182" height="54" rx="8" fill="#f3f4f6" stroke="#2563eb" stroke-width="2"/>
+<text x="421.0" y="250" font-family="Consolas, Menlo, monospace" font-size="22" fill="#111827" text-anchor="middle" font-weight="400" xml:space="preserve">␣strawberry</text>
+<text x="534" y="250" font-family="Inter, Segoe UI, Arial, sans-serif" font-size="20" fill="#4b5563" text-anchor="start" font-weight="400" xml:space="preserve">1 token with a leading space</text>
+<text x="60" y="326" font-family="Inter, Segoe UI, Arial, sans-serif" font-size="20" fill="#4b5563" text-anchor="start" font-weight="400" xml:space="preserve">"12345678"</text>
+<rect x="330" y="290" width="70" height="54" rx="8" fill="#f3f4f6" stroke="#ec362e" stroke-width="2"/>
+<text x="365.0" y="325" font-family="Consolas, Menlo, monospace" font-size="22" fill="#111827" text-anchor="middle" font-weight="400" xml:space="preserve">123</text>
+<rect x="410" y="290" width="70" height="54" rx="8" fill="#f3f4f6" stroke="#ec362e" stroke-width="2"/>
+<text x="445.0" y="325" font-family="Consolas, Menlo, monospace" font-size="22" fill="#111827" text-anchor="middle" font-weight="400" xml:space="preserve">456</text>
+<rect x="490" y="290" width="56" height="54" rx="8" fill="#f3f4f6" stroke="#ec362e" stroke-width="2"/>
+<text x="518.0" y="325" font-family="Consolas, Menlo, monospace" font-size="22" fill="#111827" text-anchor="middle" font-weight="400" xml:space="preserve">78</text>
+<text x="568" y="325" font-family="Inter, Segoe UI, Arial, sans-serif" font-size="20" fill="#4b5563" text-anchor="start" font-weight="400" xml:space="preserve">digits grouped in threes</text>
+<text x="60" y="410" font-family="Inter, Segoe UI, Arial, sans-serif" font-size="22" fill="#111827" text-anchor="start" font-weight="700" xml:space="preserve">Same Hindi sentence (“how are you today?”), three tokenizers</text>
+<text x="60" y="470" font-family="Inter, Segoe UI, Arial, sans-serif" font-size="20" fill="#4b5563" text-anchor="start" font-weight="400" xml:space="preserve">gpt2, vocab 50,257</text>
+<rect x="330" y="444" width="644" height="38" rx="6" fill="#ec362e" stroke="none" stroke-width="0"/>
+<text x="988" y="471" font-family="Inter, Segoe UI, Arial, sans-serif" font-size="20" fill="#111827" text-anchor="start" font-weight="700" xml:space="preserve">23 tokens</text>
+<text x="60" y="528" font-family="Inter, Segoe UI, Arial, sans-serif" font-size="20" fill="#4b5563" text-anchor="start" font-weight="400" xml:space="preserve">cl100k_base, 100,277</text>
+<rect x="330" y="502" width="476" height="38" rx="6" fill="#ec362e" stroke="none" stroke-width="0"/>
+<text x="820" y="529" font-family="Inter, Segoe UI, Arial, sans-serif" font-size="20" fill="#111827" text-anchor="start" font-weight="700" xml:space="preserve">17 tokens</text>
+<text x="60" y="586" font-family="Inter, Segoe UI, Arial, sans-serif" font-size="20" fill="#4b5563" text-anchor="start" font-weight="400" xml:space="preserve">o200k_base, 200,019</text>
+<rect x="330" y="560" width="140" height="38" rx="6" fill="#2563eb" stroke="none" stroke-width="0"/>
+<text x="484" y="587" font-family="Inter, Segoe UI, Arial, sans-serif" font-size="20" fill="#111827" text-anchor="start" font-weight="700" xml:space="preserve">5 tokens</text>
+</svg>

@@ -6,7 +6,7 @@ comments: "0"
 image: "/assets/images/blog/moe-architecture.webp"
 category: "Tutorial"
 desc: "Routers, top-k selection, load balancing loss, and the memory-for-compute trade that made trillion-parameter models economically serveable."
-date: "Jan 22, 2027"
+date: "Nov 20, 2026"
 tags: ["Mixture of Experts", "LLM", "Tutorial", "Model Architecture"]
 ---
 
@@ -62,6 +62,10 @@ class MoELayer(nn.Module):
 
 The router is tiny: one linear layer from `d_model` to `n_experts`, a rounding error in the parameter budget. Everything else is the experts.
 
+![Mixtral mixture of experts layer: a router assigns each input to experts and their outputs are combined with the gating weights](/assets/images/blog/moe-mixtral-layer.png)
+
+*Each token is sent to two of eight experts; their outputs are summed using the router’s weights. Source: [Mixtral of Experts, Fig. 1](https://arxiv.org/abs/2401.04088), Jiang et al., CC BY 4.0.*
+
 The arithmetic is what makes this worth doing. With 64 experts at top-2 routing:
 
 | Quantity | Value |
@@ -71,6 +75,10 @@ The arithmetic is what makes this worth doing. With 64 experts at top-2 routing:
 | Ratio of stored to used | 32x |
 
 A model can hold a trillion parameters and activate thirty billion per token. The FLOPs you pay track the thirty billion. The knowledge capacity tracks something much closer to the trillion.
+
+![Worked top-2 routing example: router logits for eight experts, experts 3 and 5 selected with weights 0.67 and 0.33, output is their weighted sum](/assets/images/blog/diagrams/how-mixture-of-experts-works-1.svg)
+
+*Top-2 routing worked through with eight experts and illustrative logits. Diagram: Big Matrix Solutions, based on [Mixtral of Experts](https://arxiv.org/abs/2401.04088).*
 
 ## The problem that nearly killed the idea
 
@@ -110,6 +118,10 @@ All those experts have to be resident and reachable. You are not doing the arith
 **Hosted API inference: excellent deal.** Memory cost is fixed and amortised across thousands of concurrent requests. Pay once to keep the weights resident, then serve enormous traffic against them. Cost per token drops sharply, which is the direct cause of the price declines across the industry.
 
 **Local or single-tenant deployment: bad deal.** You pay the entire memory bill for a trillion-parameter model to get the throughput of a thirty-billion one, with no other requests to spread the cost over. This is exactly why the open-weight MoE releases of 2026 are simultaneously an achievement in API economics and a headache for anyone trying to run them on their own hardware. A smaller dense model is often the better choice.
+
+![Grid of 64 experts with 2 highlighted, showing all 64 held in memory and 2 computed per token, and why that suits hosted serving but not single-tenant deployment](/assets/images/blog/diagrams/how-mixture-of-experts-works-2.svg)
+
+*Memory scales with every expert; compute scales with the two that run. Diagram: Big Matrix Solutions, based on [Switch Transformers](https://arxiv.org/abs/2101.03961).*
 
 ## The overhead nobody puts in the announcement
 
@@ -176,3 +188,7 @@ That is why every lab converged here independently, and it is directly responsib
 The catch remains what it always was: you traded a compute problem for a memory-and-networking problem. For hyperscale API serving, that trade is overwhelmingly favourable. For running a model on your own machine, it frequently is not, which is worth remembering the next time an impressive open-weight parameter count arrives and turns out to need a small cluster to load.
 
 Hero diagram: [DeepSeekMoE and Multi-Head Latent Attention](https://commons.wikimedia.org/wiki/File:DeepSeek_MoE_and_MLA_%28DeepSeek-V2%29.svg) by DeepSeek, MIT licence, via Wikimedia Commons. Rasterised and padded to fit; not otherwise altered.
+
+**Media credits**:
+- In-body figure: Mixture of Experts layer, Figure 1 of [Mixtral of Experts](https://arxiv.org/abs/2401.04088) (Jiang et al., 2024), [CC BY 4.0](https://creativecommons.org/licenses/by/4.0/). Not altered.
+- In-body diagrams (top-2 routing, stored vs activated parameters): Big Matrix Solutions, based on [Mixtral of Experts](https://arxiv.org/abs/2401.04088) and [Switch Transformers](https://arxiv.org/abs/2101.03961).

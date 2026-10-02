@@ -8,7 +8,7 @@ comments: "0"
 image: "/assets/images/blog/frontier-act-capitol.webp"
 category: "AI Policy"
 desc: "A bipartisan House bill would license independent auditors for the biggest AI labs and override parts of state law. Here is what it says, where it stalled, and who it would actually touch."
-date: "Nov 26, 2026"
+date: "Nov 02, 2026"
 tags: ["AI Policy", "FRONTIER Act", "AI Regulation", "Compliance", "Frontier Models"]
 ---
 
@@ -16,9 +16,9 @@ tags: ["AI Policy", "FRONTIER Act", "AI Regulation", "Compliance", "Frontier Mod
 
 For three years, the most detailed rules on frontier AI in the United States came from Sacramento and Albany, not Washington. In the summer of 2026 a Republican from California and a Democrat from Massachusetts tried to change that, and for a few weeks in September it looked as if Congress might act.
 
-It did not act before the election. But their bill remains the most complete federal proposal on the table, and a good guide to what federal oversight may look like whenever it arrives.
+With the midterms days away, lawmakers on both sides expect nothing to pass before Election Day. But their bill remains the most complete federal proposal on the table, and a good guide to what federal oversight may look like whenever it arrives.
 
-*This is an overview for general information, not legal advice. Status is described as of early October 2026. The November 3, 2026 midterm elections will have taken place by the time this is published. We do not try to predict their effect here.*
+*This is an overview for general information, not legal advice. Status is described as of early October 2026. The November 3, 2026 midterm elections take place the day after publication. We do not try to predict their effect here.*
 
 ## From discussion draft to H.R. 9925
 

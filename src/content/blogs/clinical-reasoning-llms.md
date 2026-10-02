@@ -3,10 +3,10 @@ id: "13"
 slug: "llms-outperform-physicians-clinical-reasoning"
 title: "A Model Beat Two Attending Physicians on ED Triage. Now Comes the Hard Part."
 comments: "0"
-image: "https://images.unsplash.com/photo-1631217868264-e5b90bb7e133?auto=format&fit=crop&q=80&w=800"
+image: "/assets/images/blog/clinical-reasoning-llms.png"
 category: "Medical AI"
 desc: "67.1% versus 55.3% and 50.0% on real emergency department cases. What the Science study actually measured, and why the authors are urging caution."
-date: "Oct 16, 2026"
+date: "Oct 09, 2026"
 tags: ["Medical AI", "Clinical Reasoning", "LLM", "Healthcare"]
 ---
 
@@ -36,6 +36,10 @@ On real emergency department cases, diagnostic accuracy, exact or very close:
 
 At initial triage, the point of maximum uncertainty with the least information available, the model was right about two-thirds of the time, and the two expert attendings roughly half.
 
+![Bar chart: diagnostic accuracy at initial ED triage, o1 model 67.1 percent, attending physician A 55.3 percent, attending physician B 50.0 percent](/assets/images/blog/diagrams/clinical-reasoning-llms-1.svg)
+
+*Diagram: Big Matrix Solutions, based on [Brodeur et al., Science 2026](https://www.science.org/doi/10.1126/science.adz4433).*
+
 A few things about this comparison are unusually clean. The cases were real, pulled from EHRs rather than written for a textbook. The information staging was faithful to how a real encounter progresses. And the human comparators were expert attending physicians, not residents or medical students, which is where a lot of earlier "AI beats doctors" results got their margin.
 
 ## What was not measured
@@ -62,6 +66,10 @@ This produces an outcome that is counterintuitive until you have seen it happen:
 > A model that is more accurate than the average physician, deployed carelessly, can make a physician-plus-model system *less* accurate than the physician alone.
 
 The reason is asymmetric influence. When the model agrees with the clinician's instinct, nothing changes. When it disagrees and the model is right, the clinician sometimes updates. Good. When it disagrees and the *clinician* is right, the clinician sometimes updates anyway. Bad. If the second effect is strong enough, average accuracy falls even though the model is individually better.
+
+![Three cases of clinician-model interaction: agreement changes nothing, a right model raises accuracy, a wrong model followed anyway lowers it](/assets/images/blog/diagrams/clinical-reasoning-llms-2.svg)
+
+*Diagram: Big Matrix Solutions, based on the automation-bias mechanism described in this article; conceptual, no measured rates.*
 
 This is why "the model scored higher" and "deploy the model" are separated by a very large amount of engineering and study design.
 
@@ -135,3 +143,8 @@ Before April, it was defensible to argue that LLMs performed well on exam questi
 What the study did not do is establish that deploying it helps, and its authors were explicit about that. The 67.1 percent is a capability result. Whether that capability improves care depends on questions of interface, workflow, override behaviour, and clinician trust calibration that no benchmark can answer.
 
 The next real milestone will not be a higher accuracy number. It will be a prospective randomised trial showing that patients whose clinicians had access to the model did measurably better than patients whose clinicians did not. Until that exists, everything else is a very promising precondition.
+
+**Media credits**:
+- Hero image: Big Matrix Solutions, based on [Brodeur et al., Science 2026](https://www.science.org/doi/10.1126/science.adz4433)
+- Diagram: diagnostic accuracy at triage — Big Matrix Solutions, based on [Brodeur et al., Science 2026](https://www.science.org/doi/10.1126/science.adz4433)
+- Diagram: automation bias and asymmetric influence — Big Matrix Solutions (conceptual)

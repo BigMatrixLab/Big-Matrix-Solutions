@@ -6,7 +6,7 @@ comments: "0"
 image: "https://images.unsplash.com/photo-1590959651373-a3db0f38a961?auto=format&fit=crop&q=80&w=800"
 category: "LLM Research"
 desc: "Four of the five leading open-weight models now come from Chinese labs, shipping under MIT and Apache licences roughly three months behind the frontier."
-date: "Dec 04, 2026"
+date: "Nov 06, 2026"
 tags: ["Open Weights", "LLM", "DeepSeek", "Model Licensing"]
 ---
 

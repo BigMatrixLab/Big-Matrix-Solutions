@@ -8,7 +8,7 @@ comments: "0"
 image: "/assets/images/blog/intelligence-explosion-paper.webp"
 category: "AI Research"
 desc: "Hinton, Bengio and senior scientists from OpenAI and Anthropic argue that automating AI research could compress years of progress into months. What the evidence shows, and where critics push back."
-date: "Nov 03, 2026"
+date: "Oct 15, 2026"
 tags: ["AI Research", "AI Safety", "AI Governance", "Recursive Self-Improvement"]
 ---
 
@@ -25,6 +25,10 @@ The paper does not predict an intelligence explosion. It argues that one is plau
 The paper defines an intelligence explosion as an AI-driven acceleration that compresses advances "that would otherwise take years into months or less." It focuses on the *software* route: AI systems doing the research that improves AI systems, with no new hardware required.
 
 The mechanism has two steps: better AI expands the effective research workforce, and that workforce builds better AI, which expands it again. Software gets the focus because a software improvement can go back into research almost immediately, while hardware takes years to build.
+
+![Figure from the paper: an expanding AI R&D workforce of AIs and humans performs more AI R&D, which improves and multiplies the AIs in a feedback loop](/assets/images/blog/intelligence-explosion-fig2-feedback-loop.png)
+
+*Figure 2 from the paper: AI systems expand the effective R&D workforce, which produces still better AI systems. Source: [Chan et al. (2026), CASP and GovAI](https://arxiv.org/abs/2609.36054), CC BY 4.0*
 
 ## The evidence they cite
 
@@ -77,6 +81,10 @@ The recommendations fall into three groups.
 
 The authors warn that a badly designed pause power could let a government slow every company but its favourite. They close with one line: "Once an intelligence explosion begins, the window for action may close."
 
+![Figure from the paper showing three policy priorities: visibility into AI R&D automation, ways to steer and constrain an intelligence explosion, and preparing to adapt](/assets/images/blog/intelligence-explosion-fig1-policy-priorities.png)
+
+*Figure 1 from the paper: the three priorities the authors set for policymakers. Source: [Chan et al. (2026), CASP and GovAI](https://arxiv.org/abs/2609.36054), CC BY 4.0*
+
 ## The strongest pushback
 
 Detailed public rebuttals were still scarce as of early October 2026. The best criticism so far falls along four lines.
@@ -117,3 +125,5 @@ The paper's real contribution is to state the bet in numbers. If *r* stays above
 
 **Media credits**:
 - Hero image: cover of the paper (shown on a background) — [CASP, University of Cambridge](https://casp.ac/reports/intelligence-explosion)
+- In-body figure: Figure 2, feedback loop — [Chan et al. (2026)](https://arxiv.org/abs/2609.36054), CC BY 4.0
+- In-body figure: Figure 1, policy priorities — [Chan et al. (2026)](https://arxiv.org/abs/2609.36054), CC BY 4.0

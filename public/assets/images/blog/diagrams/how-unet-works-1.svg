@@ -1,0 +1,49 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 1200 620" width="1200" height="620" font-family="Inter, Segoe UI, Arial, sans-serif" role="img">
+<rect x="0.5" y="0.5" width="1199" height="619" rx="16" fill="#ffffff" stroke="#e5e7eb"/>
+<title>U-Net encoder, bottleneck and decoder with skip connections</title>
+<desc>Three encoder levels with 64, 128 and 256 channels at full, half and quarter resolution, each followed by 2 by 2 max pooling, lead to a 512-channel bottleneck at one eighth resolution. The decoder upsamples back up. At each level the matching encoder features are concatenated onto the upsampled features before the convolutions, giving 512 plus 256, 256 plus 128 and 128 plus 64 input channels.</desc>
+<defs><marker id="a" viewBox="0 0 10 10" refX="9" refY="5" markerWidth="8" markerHeight="8" orient="auto-start-reverse"><path d="M0,0 L10,5 L0,10 z" fill="#111827"/></marker><marker id="ar" viewBox="0 0 10 10" refX="9" refY="5" markerWidth="8" markerHeight="8" orient="auto-start-reverse"><path d="M0,0 L10,5 L0,10 z" fill="#ec362e"/></marker><marker id="ab" viewBox="0 0 10 10" refX="9" refY="5" markerWidth="8" markerHeight="8" orient="auto-start-reverse"><path d="M0,0 L10,5 L0,10 z" fill="#2563eb"/></marker><marker id="ag" viewBox="0 0 10 10" refX="9" refY="5" markerWidth="8" markerHeight="8" orient="auto-start-reverse"><path d="M0,0 L10,5 L0,10 z" fill="#4b5563"/></marker></defs>
+<text x="600" y="48" font-size="26" fill="#111827" text-anchor="middle" font-weight="bold">U-Net: semantics from the depth, localisation from the skips</text>
+<rect x="70" y="110" width="220" height="76" rx="10" fill="#ffffff" stroke="#2563eb" stroke-width="2"/>
+<text x="180.0" y="141.3" font-size="18" fill="#111827" text-anchor="middle" font-weight="bold">Encoder 1</text>
+<text x="180.0" y="167.3" font-size="18" fill="#4b5563" text-anchor="middle" font-weight="normal">64 ch · full res</text>
+<rect x="910" y="110" width="220" height="76" rx="10" fill="#ffffff" stroke="#111827" stroke-width="2"/>
+<text x="1020.0" y="141.3" font-size="18" fill="#111827" text-anchor="middle" font-weight="bold">Decoder 1</text>
+<text x="1020.0" y="167.3" font-size="18" fill="#4b5563" text-anchor="middle" font-weight="normal">128+64 → 64</text>
+<line x1="290" y1="148.0" x2="908" y2="148.0" stroke="#ec362e" stroke-width="3" stroke-dasharray="10 6" marker-end="url(#ar)"/>
+<text x="600.0" y="136.0" font-size="18" fill="#ec362e" text-anchor="middle" font-weight="bold">skip: concat</text>
+<rect x="160" y="230" width="220" height="76" rx="10" fill="#ffffff" stroke="#2563eb" stroke-width="2"/>
+<text x="270.0" y="261.3" font-size="18" fill="#111827" text-anchor="middle" font-weight="bold">Encoder 2</text>
+<text x="270.0" y="287.3" font-size="18" fill="#4b5563" text-anchor="middle" font-weight="normal">128 ch · 1/2 res</text>
+<rect x="820" y="230" width="220" height="76" rx="10" fill="#ffffff" stroke="#111827" stroke-width="2"/>
+<text x="930.0" y="261.3" font-size="18" fill="#111827" text-anchor="middle" font-weight="bold">Decoder 2</text>
+<text x="930.0" y="287.3" font-size="18" fill="#4b5563" text-anchor="middle" font-weight="normal">256+128 → 128</text>
+<line x1="380" y1="268.0" x2="818" y2="268.0" stroke="#ec362e" stroke-width="3" stroke-dasharray="10 6" marker-end="url(#ar)"/>
+<text x="600.0" y="256.0" font-size="18" fill="#ec362e" text-anchor="middle" font-weight="bold">skip: concat</text>
+<rect x="250" y="350" width="220" height="76" rx="10" fill="#ffffff" stroke="#2563eb" stroke-width="2"/>
+<text x="360.0" y="381.3" font-size="18" fill="#111827" text-anchor="middle" font-weight="bold">Encoder 3</text>
+<text x="360.0" y="407.3" font-size="18" fill="#4b5563" text-anchor="middle" font-weight="normal">256 ch · 1/4 res</text>
+<rect x="730" y="350" width="220" height="76" rx="10" fill="#ffffff" stroke="#111827" stroke-width="2"/>
+<text x="840.0" y="381.3" font-size="18" fill="#111827" text-anchor="middle" font-weight="bold">Decoder 3</text>
+<text x="840.0" y="407.3" font-size="18" fill="#4b5563" text-anchor="middle" font-weight="normal">512+256 → 256</text>
+<line x1="470" y1="388.0" x2="728" y2="388.0" stroke="#ec362e" stroke-width="3" stroke-dasharray="10 6" marker-end="url(#ar)"/>
+<text x="600.0" y="376.0" font-size="18" fill="#ec362e" text-anchor="middle" font-weight="bold">skip: concat</text>
+<rect x="490" y="470" width="220" height="76" rx="10" fill="#f3f4f6" stroke="#d1d5db" stroke-width="2"/>
+<text x="600.0" y="501.3" font-size="18" fill="#111827" text-anchor="middle" font-weight="bold">Bottleneck</text>
+<text x="600.0" y="527.3" font-size="18" fill="#4b5563" text-anchor="middle" font-weight="normal">512 ch · 1/8 res</text>
+<line x1="200" y1="186" x2="200" y2="228" stroke="#2563eb" stroke-width="2" marker-end="url(#ab)"/>
+<text x="212" y="213.0" font-size="18" fill="#2563eb" text-anchor="start" font-weight="bold">max pool 2×2</text>
+<line x1="300" y1="306" x2="300" y2="348" stroke="#2563eb" stroke-width="2" marker-end="url(#ab)"/>
+<text x="312" y="333.0" font-size="18" fill="#2563eb" text-anchor="start" font-weight="bold">max pool 2×2</text>
+<path d="M360,426 L360,508 L488,508" stroke="#2563eb" stroke-width="2" fill="none" marker-end="url(#ab)"/>
+<text x="372" y="470" font-size="18" fill="#2563eb" text-anchor="start" font-weight="bold">max pool</text>
+<line x1="900" y1="350" x2="900" y2="308" stroke="#111827" stroke-width="2" marker-end="url(#a)"/>
+<text x="888" y="335.0" font-size="18" fill="#111827" text-anchor="end" font-weight="bold">upsample 2×</text>
+<line x1="1000" y1="230" x2="1000" y2="188" stroke="#111827" stroke-width="2" marker-end="url(#a)"/>
+<text x="988" y="215.0" font-size="18" fill="#111827" text-anchor="end" font-weight="bold">upsample 2×</text>
+<path d="M710,508 L840,508 L840,428" stroke="#111827" stroke-width="2" fill="none" marker-end="url(#a)"/>
+<text x="852" y="470" font-size="18" fill="#111827" text-anchor="start" font-weight="bold">upsample</text>
+<text x="70" y="96" font-size="18" fill="#4b5563" text-anchor="start" font-weight="normal">input image</text>
+<text x="1130" y="96" font-size="18" fill="#4b5563" text-anchor="end" font-weight="normal">per-pixel class map</text>
+<text x="600" y="590" font-size="18" fill="#4b5563" text-anchor="middle" font-weight="normal">Coarse “what” comes up from the bottleneck; precise “where” arrives through the skip at matching resolution.</text>
+</svg>

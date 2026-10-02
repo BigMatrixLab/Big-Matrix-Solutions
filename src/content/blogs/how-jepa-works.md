@@ -6,7 +6,7 @@ comments: "0"
 image: "/assets/images/blog/jepa-architecture.webp"
 category: "Tutorial"
 desc: "Joint Embedding Predictive Architectures predict in representation space instead of input space. What that buys, and how they avoid collapse."
-date: "Nov 27, 2026"
+date: "Nov 04, 2026"
 tags: ["JEPA", "Self-Supervised Learning", "World Models", "Tutorial"]
 ---
 
@@ -92,6 +92,10 @@ Take an image. Sample a context block and several target blocks. Encode the cont
 
 Position conditioning is essential. Without knowing *where* it is predicting, the predictor cannot do better than a global average. With it, the task becomes: given what I can see and where I am asked about, what is there semantically?
 
+![One I-JEPA training step: a context block is encoded and a predictor, given target positions, predicts the representations of masked target blocks produced by an EMA target encoder, with the loss computed in latent space](/assets/images/blog/diagrams/how-jepa-works-1.svg)
+
+*One I-JEPA training step: the loss lives in representation space. Diagram: Big Matrix Solutions, based on [I-JEPA (Assran et al., 2023)](https://arxiv.org/abs/2301.08243).*
+
 Results were the argument for the whole approach. I-JEPA produced strong representations without any of the data augmentation that contrastive methods depend on: no crops, colour jitter, or handcrafted invariances. Those augmentations always encoded human assumptions about what should not matter. I-JEPA needed none, and trained more efficiently than masked autoencoders on comparable budgets.
 
 ## V-JEPA: adding time
@@ -102,7 +106,15 @@ Video is where the argument gets much stronger, because video has the pixel-unpr
 
 That combination is the interesting part, and it mirrors how the language field learned to do things. The video gives broad physical priors: how objects move, how occlusion works, what happens when something is pushed. The robot data grounds those priors in actions the robot can actually take. Pretrain broadly, adapt narrowly.
 
+![V-JEPA 2 overview: pretraining on internet video and images, then language alignment, attentive probes, and action-conditioned post-training on 62 hours of robot data for planning](/assets/images/blog/vjepa2-overview.png)
+
+*V-JEPA 2 is pretrained on over a million hours of video, then post-trained on 62 hours of robot data for planning. Source: [V-JEPA 2, Fig. 1](https://arxiv.org/abs/2506.09985), Assran et al., CC BY 4.0.*
+
 The payoff is planning. If you have a model that predicts *representations* of future states given actions, you can search over action sequences: imagine the outcome of each candidate plan in latent space, score it against a goal representation, pick the best. No pixel rendering required, which makes the search cheap enough to be practical.
+
+![V-JEPA 2-AC model predictive control: current observation and goal image are encoded, the predictor rolls out candidate actions in latent space, and an L1 distance to the goal representation scores them](/assets/images/blog/vjepa2-planning.png)
+
+*Planning in latent space: candidate actions are scored by how close the predicted representation lands to the goal’s. Source: [V-JEPA 2](https://arxiv.org/abs/2506.09985), Assran et al., CC BY 4.0.*
 
 V-JEPA 2.1, released in March 2026, refines the recipe with more temporally consistent dense features, adding a dense predictive loss, deep self-supervision, and multimodal tokenizers, with pretrained checkpoints released for dense video and image features.
 
@@ -137,3 +149,7 @@ Pixel reconstruction grades a model on detail that no amount of understanding wo
 That principle generalises well past vision. Carry it to any self-supervised problem where the raw signal contains much more entropy than meaning, which is most sensory data and increasingly most of the data we would like models to learn from.
 
 Hero diagram: [Joint Embedding, Generative, and Joint Embedding Predictive Architecture](https://commons.wikimedia.org/wiki/File:Joint_Embedding%2C_Generative%2C_and_Joint_Embedding_Predictive_Architecture.jpg) by Skenderi, Li, Tang and Cristani, [CC BY 4.0](https://creativecommons.org/licenses/by/4.0/), via Wikimedia Commons. Scaled and padded to fit; not otherwise altered.
+
+**Media credits**:
+- In-body figures: V-JEPA 2 overview and V-JEPA 2-AC model predictive control, from [V-JEPA 2: Self-Supervised Video Models Enable Understanding, Prediction and Planning](https://arxiv.org/abs/2506.09985) (Assran et al., 2025), [CC BY 4.0](https://creativecommons.org/licenses/by/4.0/). Not altered.
+- In-body diagram (I-JEPA training step): Big Matrix Solutions, based on [Assran et al., 2023](https://arxiv.org/abs/2301.08243).

@@ -6,7 +6,7 @@ comments: "0"
 image: "https://images.unsplash.com/photo-1516321318423-f06f85e504b3?auto=format&fit=crop&q=80&w=800"
 category: "Agentic AI"
 desc: "Agents that drive a mouse and keyboard went from 12% to 85% in two years. Then a harder benchmark put the best system at one fifth."
-date: "Mar 19, 2027"
+date: "Dec 06, 2026"
 tags: ["Computer Use", "Agentic AI", "Benchmarks", "Automation"]
 ---
 

@@ -6,7 +6,7 @@ comments: "0"
 image: "https://images.unsplash.com/photo-1559757148-5c350d0d3c56?auto=format&fit=crop&q=80&w=800"
 category: "AI Research"
 desc: "Attribution graphs on a production model, sparse autoencoders at 27B parameters, and a frontier model caught cheating in real time."
-date: "Jan 29, 2027"
+date: "Nov 22, 2026"
 tags: ["Interpretability", "AI Safety", "Sparse Autoencoders", "LLM"]
 ---
 

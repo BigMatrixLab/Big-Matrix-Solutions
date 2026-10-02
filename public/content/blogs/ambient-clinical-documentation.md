@@ -6,7 +6,7 @@ comments: "0"
 image: "https://images.unsplash.com/photo-1478737270239-2f02b77fc618?auto=format&fit=crop&q=80&w=800"
 category: "Medical AI"
 desc: "238 physicians, 14 specialties, head-to-head against usual care. The clearest evidence yet that a boring AI application beats an exciting one."
-date: "Dec 11, 2026"
+date: "Nov 08, 2026"
 tags: ["Medical AI", "Ambient AI", "Clinical Documentation", "Burnout"]
 ---
 

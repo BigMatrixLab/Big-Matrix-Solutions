@@ -1,0 +1,28 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 1200 606" width="1200" height="606" role="img">
+<rect x="1" y="1" width="1198" height="604" fill="#ffffff" rx="16" stroke="#e5e7eb" stroke-width="2"/>
+<title>AUROC of Epic sepsis models across external evaluations</title>
+<desc>Epic Sepsis Model version 1 had AUROC 0.63 at Michigan (Wong 2021) and 0.62 for all predictions but 0.47 for predictions before clinicians acted (Kamran 2024). Version 2 had encounter-level AUROC 0.82 to 0.92 across four health systems (Wong 2026), with positive predictive value 0.13 to 0.26.</desc>
+<defs><marker id="ah" viewBox="0 0 10 10" refX="9" refY="5" markerWidth="8" markerHeight="8" orient="auto-start-reverse"><path d="M0,0 L10,5 L0,10 z" fill="#4b5563"/></marker></defs>
+<text x="60" y="70" font-family="Inter, Segoe UI, Arial, sans-serif" font-size="30" fill="#111827" text-anchor="start" font-weight="700" xml:space="preserve">One model family, four evaluations</text>
+<text x="60" y="106" font-family="Inter, Segoe UI, Arial, sans-serif" font-size="20" fill="#4b5563" text-anchor="start" font-weight="400" xml:space="preserve">AUROC for Epic&#x27;s sepsis models in published external evaluations</text>
+<text x="60" y="178" font-family="Inter, Segoe UI, Arial, sans-serif" font-size="20" fill="#111827" text-anchor="start" font-weight="700" xml:space="preserve">v1, Michigan 2018-19</text>
+<text x="60" y="204" font-family="Inter, Segoe UI, Arial, sans-serif" font-size="18" fill="#4b5563" text-anchor="start" font-weight="400" xml:space="preserve">Wong et al., 2021</text>
+<rect x="420" y="158" width="378.0" height="40" rx="6" fill="#d1d5db" stroke="none" stroke-width="2"/>
+<text x="810.0" y="186" font-family="Inter, Segoe UI, Arial, sans-serif" font-size="20" fill="#111827" text-anchor="start" font-weight="700" xml:space="preserve">0.63</text>
+<text x="60" y="268" font-family="Inter, Segoe UI, Arial, sans-serif" font-size="20" fill="#111827" text-anchor="start" font-weight="700" xml:space="preserve">v1, all predictions</text>
+<text x="60" y="294" font-family="Inter, Segoe UI, Arial, sans-serif" font-size="18" fill="#4b5563" text-anchor="start" font-weight="400" xml:space="preserve">Kamran et al., 2024</text>
+<rect x="420" y="248" width="372.0" height="40" rx="6" fill="#d1d5db" stroke="none" stroke-width="2"/>
+<text x="804.0" y="276" font-family="Inter, Segoe UI, Arial, sans-serif" font-size="20" fill="#111827" text-anchor="start" font-weight="700" xml:space="preserve">0.62</text>
+<text x="60" y="358" font-family="Inter, Segoe UI, Arial, sans-serif" font-size="20" fill="#111827" text-anchor="start" font-weight="700" xml:space="preserve">v1, before clinicians act</text>
+<text x="60" y="384" font-family="Inter, Segoe UI, Arial, sans-serif" font-size="18" fill="#4b5563" text-anchor="start" font-weight="400" xml:space="preserve">Kamran et al., 2024</text>
+<rect x="420" y="338" width="282.0" height="40" rx="6" fill="#ec362e" stroke="none" stroke-width="2"/>
+<text x="714.0" y="366" font-family="Inter, Segoe UI, Arial, sans-serif" font-size="20" fill="#111827" text-anchor="start" font-weight="700" xml:space="preserve">0.47</text>
+<text x="60" y="448" font-family="Inter, Segoe UI, Arial, sans-serif" font-size="20" fill="#111827" text-anchor="start" font-weight="700" xml:space="preserve">v2, four health systems</text>
+<text x="60" y="474" font-family="Inter, Segoe UI, Arial, sans-serif" font-size="18" fill="#4b5563" text-anchor="start" font-weight="400" xml:space="preserve">Wong et al., 2026</text>
+<rect x="420" y="428" width="491.99999999999994" height="40" rx="6" fill="#f3f4f6" stroke="none" stroke-width="2"/>
+<rect x="912.0" y="428" width="60.00000000000006" height="40" rx="6" fill="#2563eb" stroke="none" stroke-width="2"/>
+<text x="984.0" y="456" font-family="Inter, Segoe UI, Arial, sans-serif" font-size="20" fill="#111827" text-anchor="start" font-weight="700" xml:space="preserve">0.82-0.92</text>
+<line x1="720.0" y1="140" x2="720.0" y2="510" stroke="#ec362e" stroke-width="2" stroke-dasharray="6 6"/>
+<text x="720.0" y="536" font-family="Inter, Segoe UI, Arial, sans-serif" font-size="18" fill="#ec362e" text-anchor="middle" font-weight="700" xml:space="preserve">0.5 = chance</text>
+<text x="60" y="574" font-family="Inter, Segoe UI, Arial, sans-serif" font-size="20" fill="#4b5563" text-anchor="start" font-weight="400" xml:space="preserve">v2 bar spans the range across sites. Its PPV was 0.13 to 0.26.</text>
+</svg>

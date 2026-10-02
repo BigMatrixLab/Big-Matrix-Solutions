@@ -1,0 +1,31 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 1200 648" width="1200" height="648" role="img">
+<title>The twelve risks in NIST's Generative AI Profile (NIST AI 600-1)</title>
+<desc>Grid of the twelve generative AI risks named in NIST AI 600-1, with four that most product teams meet highlighted.</desc>
+<rect x="0" y="0" width="1200" height="648" fill="#ffffff" rx="16" stroke="#e5e7eb" stroke-width="2"/>
+<text x="60" y="68" font-family="Inter, Segoe UI, Arial, sans-serif" font-size="30" font-weight="700" fill="#111827" text-anchor="start">NIST AI 600-1: twelve generative AI risks</text>
+<text x="60" y="104" font-family="Inter, Segoe UI, Arial, sans-serif" font-size="19" font-weight="400" fill="#4b5563" text-anchor="start">Highlighted: the four most product teams meet first (our selection)</text>
+<rect x="60" y="140" width="530" height="62" rx="12" fill="#f3f4f6" stroke="#d1d5db" stroke-width="2"/>
+<text x="84" y="179" font-family="Inter, Segoe UI, Arial, sans-serif" font-size="20" font-weight="500" fill="#111827" text-anchor="start">CBRN information or capabilities</text>
+<rect x="610" y="140" width="530" height="62" rx="12" fill="#ffffff" stroke="#ec362e" stroke-width="2"/>
+<text x="634" y="179" font-family="Inter, Segoe UI, Arial, sans-serif" font-size="20" font-weight="700" fill="#111827" text-anchor="start">Confabulation</text>
+<rect x="60" y="218" width="530" height="62" rx="12" fill="#f3f4f6" stroke="#d1d5db" stroke-width="2"/>
+<text x="84" y="257" font-family="Inter, Segoe UI, Arial, sans-serif" font-size="20" font-weight="500" fill="#111827" text-anchor="start">Dangerous, violent or hateful content</text>
+<rect x="610" y="218" width="530" height="62" rx="12" fill="#ffffff" stroke="#ec362e" stroke-width="2"/>
+<text x="634" y="257" font-family="Inter, Segoe UI, Arial, sans-serif" font-size="20" font-weight="700" fill="#111827" text-anchor="start">Data privacy</text>
+<rect x="60" y="296" width="530" height="62" rx="12" fill="#f3f4f6" stroke="#d1d5db" stroke-width="2"/>
+<text x="84" y="335" font-family="Inter, Segoe UI, Arial, sans-serif" font-size="20" font-weight="500" fill="#111827" text-anchor="start">Environmental impacts</text>
+<rect x="610" y="296" width="530" height="62" rx="12" fill="#f3f4f6" stroke="#d1d5db" stroke-width="2"/>
+<text x="634" y="335" font-family="Inter, Segoe UI, Arial, sans-serif" font-size="20" font-weight="500" fill="#111827" text-anchor="start">Harmful bias and homogenization</text>
+<rect x="60" y="374" width="530" height="62" rx="12" fill="#f3f4f6" stroke="#d1d5db" stroke-width="2"/>
+<text x="84" y="413" font-family="Inter, Segoe UI, Arial, sans-serif" font-size="20" font-weight="500" fill="#111827" text-anchor="start">Human-AI configuration</text>
+<rect x="610" y="374" width="530" height="62" rx="12" fill="#f3f4f6" stroke="#d1d5db" stroke-width="2"/>
+<text x="634" y="413" font-family="Inter, Segoe UI, Arial, sans-serif" font-size="20" font-weight="500" fill="#111827" text-anchor="start">Information integrity</text>
+<rect x="60" y="452" width="530" height="62" rx="12" fill="#ffffff" stroke="#ec362e" stroke-width="2"/>
+<text x="84" y="491" font-family="Inter, Segoe UI, Arial, sans-serif" font-size="20" font-weight="700" fill="#111827" text-anchor="start">Information security</text>
+<rect x="610" y="452" width="530" height="62" rx="12" fill="#ffffff" stroke="#ec362e" stroke-width="2"/>
+<text x="634" y="491" font-family="Inter, Segoe UI, Arial, sans-serif" font-size="20" font-weight="700" fill="#111827" text-anchor="start">Intellectual property</text>
+<rect x="60" y="530" width="530" height="62" rx="12" fill="#f3f4f6" stroke="#d1d5db" stroke-width="2"/>
+<text x="84" y="569" font-family="Inter, Segoe UI, Arial, sans-serif" font-size="20" font-weight="500" fill="#111827" text-anchor="start">Obscene, degrading or abusive content</text>
+<rect x="610" y="530" width="530" height="62" rx="12" fill="#f3f4f6" stroke="#d1d5db" stroke-width="2"/>
+<text x="634" y="569" font-family="Inter, Segoe UI, Arial, sans-serif" font-size="20" font-weight="500" fill="#111827" text-anchor="start">Value chain and component integration</text>
+</svg>

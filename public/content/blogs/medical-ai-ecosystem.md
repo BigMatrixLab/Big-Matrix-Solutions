@@ -6,7 +6,7 @@ comments: "0"
 image: "/assets/images/blog/alphafold-3.jpg"
 category: "Medical AI"
 desc: "AlphaFold 3, the open medical model ecosystem, Mayo's 150 models, $9-an-hour care agents, 500 petabytes of oncology data, and FDA-cleared pathology."
-date: "Oct 06, 2026"
+date: "Oct 05, 2026"
 tags: ["Medical AI", "AlphaFold", "Precision Medicine", "Digital Pathology"]
 ---
 

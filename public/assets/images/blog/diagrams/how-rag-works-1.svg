@@ -1,0 +1,35 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 1200 520" width="1200" height="520" font-family="Inter, Segoe UI, Arial, sans-serif" role="img">
+<rect x="0.5" y="0.5" width="1199" height="519" rx="16" fill="#ffffff" stroke="#e5e7eb"/>
+<title>RAG indexing pipeline</title>
+<desc>Documents are split into chunks along their own structure with some overlap, each chunk is embedded with the same model used for queries, and stored in both a vector index and a keyword (BM25) index. Below, the same chunk with and without its document title and section heading prepended.</desc>
+<defs><marker id="a" viewBox="0 0 10 10" refX="9" refY="5" markerWidth="8" markerHeight="8" orient="auto-start-reverse"><path d="M0,0 L10,5 L0,10 z" fill="#111827"/></marker><marker id="ar" viewBox="0 0 10 10" refX="9" refY="5" markerWidth="8" markerHeight="8" orient="auto-start-reverse"><path d="M0,0 L10,5 L0,10 z" fill="#ec362e"/></marker><marker id="ab" viewBox="0 0 10 10" refX="9" refY="5" markerWidth="8" markerHeight="8" orient="auto-start-reverse"><path d="M0,0 L10,5 L0,10 z" fill="#2563eb"/></marker><marker id="ag" viewBox="0 0 10 10" refX="9" refY="5" markerWidth="8" markerHeight="8" orient="auto-start-reverse"><path d="M0,0 L10,5 L0,10 z" fill="#4b5563"/></marker></defs>
+<text x="600" y="48" font-size="26" fill="#111827" text-anchor="middle" font-weight="bold">Indexing: from documents to searchable chunks</text>
+<rect x="40" y="90" width="250" height="130" rx="10" fill="#f3f4f6" stroke="#d1d5db" stroke-width="2"/>
+<text x="165.0" y="148.3" font-size="18" fill="#111827" text-anchor="middle" font-weight="bold">Documents</text>
+<text x="165.0" y="174.3" font-size="18" fill="#4b5563" text-anchor="middle" font-weight="normal">docs, PDFs, wiki</text>
+<rect x="330" y="90" width="250" height="130" rx="10" fill="#f3f4f6" stroke="#d1d5db" stroke-width="2"/>
+<text x="455.0" y="135.3" font-size="18" fill="#111827" text-anchor="middle" font-weight="bold">Chunk</text>
+<text x="455.0" y="161.3" font-size="18" fill="#4b5563" text-anchor="middle" font-weight="normal">split on headings</text>
+<text x="455.0" y="187.3" font-size="18" fill="#4b5563" text-anchor="middle" font-weight="normal">10–20% overlap</text>
+<rect x="620" y="90" width="250" height="130" rx="10" fill="#f3f4f6" stroke="#d1d5db" stroke-width="2"/>
+<text x="745.0" y="135.3" font-size="18" fill="#111827" text-anchor="middle" font-weight="bold">Embed</text>
+<text x="745.0" y="161.3" font-size="18" fill="#4b5563" text-anchor="middle" font-weight="normal">same model as</text>
+<text x="745.0" y="187.3" font-size="18" fill="#4b5563" text-anchor="middle" font-weight="normal">the queries</text>
+<rect x="910" y="90" width="250" height="130" rx="10" fill="#f3f4f6" stroke="#d1d5db" stroke-width="2"/>
+<text x="1035.0" y="135.3" font-size="18" fill="#111827" text-anchor="middle" font-weight="bold">Index</text>
+<text x="1035.0" y="161.3" font-size="18" fill="#4b5563" text-anchor="middle" font-weight="normal">vectors: HNSW</text>
+<text x="1035.0" y="187.3" font-size="18" fill="#4b5563" text-anchor="middle" font-weight="normal">text: BM25</text>
+<line x1="290" y1="155" x2="328" y2="155" stroke="#111827" stroke-width="2" marker-end="url(#a)"/>
+<line x1="580" y1="155" x2="618" y2="155" stroke="#111827" stroke-width="2" marker-end="url(#a)"/>
+<line x1="870" y1="155" x2="908" y2="155" stroke="#111827" stroke-width="2" marker-end="url(#a)"/>
+<text x="40" y="280" font-size="20" fill="#111827" text-anchor="start" font-weight="bold">Prepend context to every chunk before embedding</text>
+<rect x="40" y="300" width="540" height="170" rx="12" fill="#f3f4f6" stroke="#d1d5db" stroke-width="2"/>
+<text x="64" y="336" font-size="18" fill="#4b5563" text-anchor="start" font-weight="bold">Bare chunk</text>
+<text x="64" y="384" font-size="18" fill="#111827" text-anchor="start" font-weight="normal">“The limit is 500 requests per minute.”</text>
+<text x="64" y="446" font-size="18" fill="#4b5563" text-anchor="start" font-weight="normal">Limit of what? Hard to retrieve.</text>
+<rect x="620" y="300" width="540" height="170" rx="12" fill="#ffffff" stroke="#ec362e" stroke-width="2"/>
+<text x="644" y="336" font-size="18" fill="#ec362e" text-anchor="start" font-weight="bold">Contextual chunk</text>
+<text x="644" y="384" font-size="18" fill="#111827" text-anchor="start" font-weight="bold">“API Reference &gt; Rate Limits:</text>
+<text x="644" y="410" font-size="18" fill="#111827" text-anchor="start" font-weight="normal">The limit is 500 requests per minute.”</text>
+<text x="644" y="446" font-size="18" fill="#4b5563" text-anchor="start" font-weight="normal">Matches “how many API calls can I make?”</text>
+</svg>

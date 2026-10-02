@@ -1,0 +1,32 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 1200 680" width="1200" height="680" role="img">
+<title>Five stages of an enterprise AI procurement</title>
+<desc>Five numbered stages: define, classify, evaluate, contract and operate, with the key checks at each stage.</desc>
+<rect x="0" y="0" width="1200" height="680" fill="#ffffff" rx="16" stroke="#e5e7eb" stroke-width="2"/>
+<text x="60" y="68" font-family="Inter, Segoe UI, Arial, sans-serif" font-size="30" font-weight="700" fill="#111827" text-anchor="start">Buying AI: five stages, one owner</text>
+<text x="60" y="104" font-family="Inter, Segoe UI, Arial, sans-serif" font-size="19" font-weight="400" fill="#4b5563" text-anchor="start">Each stage produces an artefact the next one depends on</text>
+<rect x="60" y="140" width="1080" height="80" rx="12" fill="#f3f4f6" stroke="#d1d5db" stroke-width="2"/>
+<circle cx="112" cy="180" r="26" fill="#ec362e"/>
+<text x="112" y="188" font-family="Inter, Segoe UI, Arial, sans-serif" font-size="24" font-weight="700" fill="#ffffff" text-anchor="middle">1</text>
+<text x="164" y="188" font-family="Inter, Segoe UI, Arial, sans-serif" font-size="24" font-weight="700" fill="#111827" text-anchor="start">Define</text>
+<text x="340" y="188" font-family="Inter, Segoe UI, Arial, sans-serif" font-size="21" font-weight="400" fill="#4b5563" text-anchor="start">Problem, owner, baseline metric, exit criteria</text>
+<rect x="60" y="240" width="1080" height="80" rx="12" fill="#f3f4f6" stroke="#d1d5db" stroke-width="2"/>
+<circle cx="112" cy="280" r="26" fill="#ec362e"/>
+<text x="112" y="288" font-family="Inter, Segoe UI, Arial, sans-serif" font-size="24" font-weight="700" fill="#ffffff" text-anchor="middle">2</text>
+<text x="164" y="288" font-family="Inter, Segoe UI, Arial, sans-serif" font-size="24" font-weight="700" fill="#111827" text-anchor="start">Classify</text>
+<text x="340" y="288" font-family="Inter, Segoe UI, Arial, sans-serif" font-size="21" font-weight="400" fill="#4b5563" text-anchor="start">Your AI Act role, data categories, risk tier</text>
+<rect x="60" y="340" width="1080" height="80" rx="12" fill="#f3f4f6" stroke="#d1d5db" stroke-width="2"/>
+<circle cx="112" cy="380" r="26" fill="#ec362e"/>
+<text x="112" y="388" font-family="Inter, Segoe UI, Arial, sans-serif" font-size="24" font-weight="700" fill="#ffffff" text-anchor="middle">3</text>
+<text x="164" y="388" font-family="Inter, Segoe UI, Arial, sans-serif" font-size="24" font-weight="700" fill="#111827" text-anchor="start">Evaluate</text>
+<text x="340" y="388" font-family="Inter, Segoe UI, Arial, sans-serif" font-size="21" font-weight="400" fill="#4b5563" text-anchor="start">Test on your own data, against a non-AI baseline</text>
+<rect x="60" y="440" width="1080" height="80" rx="12" fill="#f3f4f6" stroke="#d1d5db" stroke-width="2"/>
+<circle cx="112" cy="480" r="26" fill="#ec362e"/>
+<text x="112" y="488" font-family="Inter, Segoe UI, Arial, sans-serif" font-size="24" font-weight="700" fill="#ffffff" text-anchor="middle">4</text>
+<text x="164" y="488" font-family="Inter, Segoe UI, Arial, sans-serif" font-size="24" font-weight="700" fill="#111827" text-anchor="start">Contract</text>
+<text x="340" y="488" font-family="Inter, Segoe UI, Arial, sans-serif" font-size="21" font-weight="400" fill="#4b5563" text-anchor="start">Data use, retention, model changes, incidents, exit</text>
+<rect x="60" y="540" width="1080" height="80" rx="12" fill="#f3f4f6" stroke="#d1d5db" stroke-width="2"/>
+<circle cx="112" cy="580" r="26" fill="#ec362e"/>
+<text x="112" y="588" font-family="Inter, Segoe UI, Arial, sans-serif" font-size="24" font-weight="700" fill="#ffffff" text-anchor="middle">5</text>
+<text x="164" y="588" font-family="Inter, Segoe UI, Arial, sans-serif" font-size="24" font-weight="700" fill="#111827" text-anchor="start">Operate</text>
+<text x="340" y="588" font-family="Inter, Segoe UI, Arial, sans-serif" font-size="21" font-weight="400" fill="#4b5563" text-anchor="start">Monitor quality and cost; re-evaluate on change</text>
+</svg>

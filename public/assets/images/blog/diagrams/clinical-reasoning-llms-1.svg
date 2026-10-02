@@ -1,0 +1,24 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 1200 570" width="1200" height="570" role="img">
+<rect x="1" y="1" width="1198" height="568" fill="#ffffff" rx="16" stroke="#e5e7eb" stroke-width="2"/>
+<title>LLM versus attending physicians at ED triage</title>
+<desc>Diagnostic accuracy at initial triage: OpenAI o1 67.1 percent, expert attending A 55.3 percent, expert attending B 50.0 percent.</desc>
+<defs><marker id="ah" viewBox="0 0 10 10" refX="9" refY="5" markerWidth="8" markerHeight="8" orient="auto-start-reverse"><path d="M0,0 L10,5 L0,10 z" fill="#4b5563"/></marker></defs>
+<g font-family="Inter, Segoe UI, Arial, sans-serif">
+<text x="60" y="70" font-size="30" fill="#111827" text-anchor="start" font-weight="700">Diagnostic accuracy at initial ED triage</text>
+<text x="60" y="106" font-size="20" fill="#4b5563" text-anchor="start">Exact or very close diagnosis on real emergency department cases (Science, 2026)</text>
+<line x1="780" y1="150" x2="780" y2="440" stroke="#d1d5db" stroke-width="2" stroke-dasharray="6 6"/>
+<text x="60" y="198" font-size="22" fill="#111827" text-anchor="start" font-weight="700">OpenAI o1 model</text>
+<rect x="330" y="160" width="604" height="56" rx="4" fill="#ec362e"/>
+<text x="950" y="198" font-size="26" fill="#111827" text-anchor="start" font-weight="700">67.1%</text>
+<text x="60" y="288" font-size="22" fill="#111827" text-anchor="start">Attending physician A</text>
+<rect x="330" y="250" width="498" height="56" rx="4" fill="#9ca3af"/>
+<text x="844" y="288" font-size="26" fill="#111827" text-anchor="start" font-weight="700">55.3%</text>
+<text x="60" y="378" font-size="22" fill="#111827" text-anchor="start">Attending physician B</text>
+<rect x="330" y="340" width="450" height="56" rx="4" fill="#9ca3af"/>
+<text x="796" y="378" font-size="26" fill="#111827" text-anchor="start" font-weight="700">50.0%</text>
+<line x1="330" y1="150" x2="330" y2="440" stroke="#4b5563" stroke-width="2"/>
+<text x="330" y="470" font-size="18" fill="#4b5563" text-anchor="middle">0%</text>
+<text x="780" y="470" font-size="18" fill="#4b5563" text-anchor="middle">50%</text>
+<text x="60" y="530" font-size="20" fill="#4b5563" text-anchor="start">Measured: model reasoning in isolation. Not measured: whether clinicians using it do better.</text>
+</g>
+</svg>

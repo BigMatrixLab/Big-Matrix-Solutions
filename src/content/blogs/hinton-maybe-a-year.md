@@ -8,7 +8,7 @@ comments: "0"
 image: "/assets/images/blog/hinton-nobel.webp"
 category: "AI Policy"
 desc: "In September 2026 the Nobel laureate told lawmakers they had about a year to act on AI. What he said, what he co-signed, and why serious researchers disagree."
-date: "Nov 17, 2026"
+date: "Oct 27, 2026"
 tags: ["AI Policy", "AI Safety", "Geoffrey Hinton", "Regulation"]
 ---
 
@@ -36,6 +36,10 @@ On Newsnight, presenter Victoria Derbyshire asked him about a roughly ten percen
 
 On CNN, he said he was "very concerned" about recent reports of AI agents going rogue. On Capitol Hill, NBC reported, he called a July incident at Hugging Face a "little Chernobyl".
 
+![Vertical timeline of Geoffrey Hinton's statements in September 2026, from BBC Newsnight to the CASP working paper](/assets/images/blog/diagrams/hinton-maybe-a-year-1.svg)
+
+*Hinton's September 2026, as reported. Diagram: Big Matrix Solutions, based on [NBC News](https://www.nbcnews.com/politics/congress/godfather-ai-warns-congress-maybe-year-left-regulate-ai-rcna598330), [Fortune](https://fortune.com/2026/09/26/geoffrey-hinton-godfather-of-ai-humanity-end-existential-threat-subgoals-rogue-agents/) and [CASP](https://casp.ac/reports/intelligence-explosion).*
+
 ## The argument underneath
 
 Hinton's worry is not mainly about bad actors. He is worried about the systems themselves.
@@ -53,6 +57,10 @@ On September 28, Hinton was one of 22 authors of a working paper from the Cambri
 The paper's main claim is that "AI systems now write most of the code inside the companies that build them". Its evidence includes Anthropic's report that AI wrote low single digits of its approved code in January 2025 and more than 80 percent by May 2026, [according to Post-Cutoff's summary](https://postcutoff.com/e/2026-09-28-intelligence-explosion-paper/). It recommends better visibility into how much AI R&D is automated, ways to steer or slow that process, and preparation for what follows. The authors also say there is "much uncertainty about these possibilities".
 
 That uncertainty matters for how the paper should be read. It is a scenario analysis signed by people inside the frontier labs, not a forecast. Still, executives from the companies building these systems signed it, and that makes it hard to dismiss as outsider alarmism.
+
+![Figure from the intelligence-explosion paper: AI systems expand the AI R&D workforce, which builds better AI systems in a feedback loop](/assets/images/blog/intelligence-explosion-fig2-feedback-loop.png)
+
+*The feedback loop at the centre of the paper Hinton co-signed (its Figure 2). Source: [Chan et al. (2026), CASP and GovAI](https://arxiv.org/abs/2609.36054), CC BY 4.0*
 
 ## How Hinton got here
 
@@ -119,3 +127,5 @@ AI Policy, AI Safety, Geoffrey Hinton, Regulation
 
 **Media credits**:
 - Hero image: portrait of Geoffrey Hinton, © Nobel Prize Outreach, photo: Clément Morin (shown on a background) — [NobelPrize.org](https://www.nobelprize.org/prizes/physics/2024/hinton/facts/)
+- Diagram: September 2026 timeline — Big Matrix Solutions, based on NBC News, Fortune and CASP
+- In-body figure: Figure 2 of the intelligence-explosion paper — [Chan et al. (2026)](https://arxiv.org/abs/2609.36054), CC BY 4.0

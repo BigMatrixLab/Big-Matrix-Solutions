@@ -1,0 +1,27 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 1200 540" width="1200" height="540" role="img">
+<rect x="1" y="1" width="1198" height="538" fill="#ffffff" rx="16" stroke="#e5e7eb" stroke-width="2"/>
+<title>Skill-based interface levels</title>
+<desc>Novice users get tooltips, wizards, constrained options and helper text. Intermediate users get keyboard shortcuts and advanced features revealed. Power users get dense information, a command palette, automation and batch operations.</desc>
+<defs><marker id="ah" viewBox="0 0 10 10" refX="9" refY="5" markerWidth="8" markerHeight="8" orient="auto-start-reverse"><path d="M0,0 L10,5 L0,10 z" fill="#4b5563"/></marker><marker id="ahr" viewBox="0 0 10 10" refX="9" refY="5" markerWidth="8" markerHeight="8" orient="auto-start-reverse"><path d="M0,0 L10,5 L0,10 z" fill="#ec362e"/></marker></defs>
+<text x="60" y="68" font-family="Inter, Segoe UI, Arial, sans-serif" font-size="30" fill="#111827" text-anchor="start" font-weight="700">One product, three levels of complexity</text>
+<text x="60" y="104" font-family="Inter, Segoe UI, Arial, sans-serif" font-size="20" fill="#4b5563" text-anchor="start" font-weight="400">The system detects proficiency and adjusts what it shows</text>
+<rect x="60" y="220" width="340" height="220" rx="10" fill="#f3f4f6" stroke="#d1d5db" stroke-width="3"/>
+<text x="84" y="264" font-family="Inter, Segoe UI, Arial, sans-serif" font-size="24" fill="#111827" text-anchor="start" font-weight="700">Novice</text>
+<text x="84" y="304" font-family="Inter, Segoe UI, Arial, sans-serif" font-size="19" fill="#4b5563" text-anchor="start" font-weight="400">Tooltips and wizards</text>
+<text x="84" y="336" font-family="Inter, Segoe UI, Arial, sans-serif" font-size="19" fill="#4b5563" text-anchor="start" font-weight="400">Constrained options</text>
+<text x="84" y="368" font-family="Inter, Segoe UI, Arial, sans-serif" font-size="19" fill="#4b5563" text-anchor="start" font-weight="400">Helper text</text>
+<rect x="430" y="180" width="340" height="260" rx="10" fill="#f3f4f6" stroke="#2563eb" stroke-width="3"/>
+<text x="454" y="224" font-family="Inter, Segoe UI, Arial, sans-serif" font-size="24" fill="#111827" text-anchor="start" font-weight="700">Intermediate</text>
+<text x="454" y="264" font-family="Inter, Segoe UI, Arial, sans-serif" font-size="19" fill="#4b5563" text-anchor="start" font-weight="400">Shortcuts disclosed</text>
+<text x="454" y="296" font-family="Inter, Segoe UI, Arial, sans-serif" font-size="19" fill="#4b5563" text-anchor="start" font-weight="400">Advanced features</text>
+<text x="454" y="328" font-family="Inter, Segoe UI, Arial, sans-serif" font-size="19" fill="#4b5563" text-anchor="start" font-weight="400">revealed</text>
+<rect x="800" y="140" width="340" height="300" rx="10" fill="#f3f4f6" stroke="#ec362e" stroke-width="3"/>
+<text x="824" y="184" font-family="Inter, Segoe UI, Arial, sans-serif" font-size="24" fill="#111827" text-anchor="start" font-weight="700">Power user</text>
+<text x="824" y="224" font-family="Inter, Segoe UI, Arial, sans-serif" font-size="19" fill="#4b5563" text-anchor="start" font-weight="400">Dense information</text>
+<text x="824" y="256" font-family="Inter, Segoe UI, Arial, sans-serif" font-size="19" fill="#4b5563" text-anchor="start" font-weight="400">Command palette</text>
+<text x="824" y="288" font-family="Inter, Segoe UI, Arial, sans-serif" font-size="19" fill="#4b5563" text-anchor="start" font-weight="400">Automation, batch ops</text>
+<line x1="60" y1="470" x2="1130" y2="470" stroke="#4b5563" stroke-width="2.5" marker-end="url(#ah)"/>
+<text x="60" y="500" font-family="Inter, Segoe UI, Arial, sans-serif" font-size="18" fill="#4b5563" text-anchor="start" font-weight="400">Less</text>
+<text x="1130" y="500" font-family="Inter, Segoe UI, Arial, sans-serif" font-size="18" fill="#4b5563" text-anchor="end" font-weight="400">More</text>
+<text x="600" y="500" font-family="Inter, Segoe UI, Arial, sans-serif" font-size="18" fill="#4b5563" text-anchor="middle" font-weight="400">Interface density</text>
+</svg>

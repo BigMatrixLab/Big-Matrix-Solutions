@@ -1,0 +1,36 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 1200 540" width="1200" height="540" role="img" font-family="Inter, Segoe UI, Arial, sans-serif">
+<rect x="1" y="1" width="1198" height="538" fill="#ffffff" rx="16" stroke="#e5e7eb" stroke-width="2"/>
+<title>Illustrative crisis-handling flow for a mental health chatbot</title>
+<desc>A user message passes a crisis classifier. If no risk is detected the conversation continues with AI disclosure. If suicidal ideation or self-harm is detected, the system breaks the frame, escalates to crisis resources or a human, and logs the event for reporting.</desc>
+<defs><marker id="ah" viewBox="0 0 10 10" refX="9" refY="5" markerWidth="8" markerHeight="8" orient="auto-start-reverse"><path d="M0,0 L10,5 L0,10 z" fill="#4b5563"/></marker><marker id="ahr" viewBox="0 0 10 10" refX="9" refY="5" markerWidth="8" markerHeight="8" orient="auto-start-reverse"><path d="M0,0 L10,5 L0,10 z" fill="#ec362e"/></marker></defs>
+<text x="600" y="62" font-size="30" font-weight="700" fill="#111827" text-anchor="middle">Crisis handling: the requirement most laws share</text>
+<text x="600" y="98" font-size="21" font-weight="400" fill="#4b5563" text-anchor="middle">Illustrative flow; the specific duties differ from state to state</text>
+<rect x="40" y="150" width="220" height="110" rx="12" fill="#f3f4f6" stroke="#d1d5db" stroke-width="2"/>
+<text x="150.0" y="196.6" font-size="22" font-weight="700" fill="#111827" text-anchor="middle">User message</text>
+<text x="150.0" y="226.6" font-size="20" font-weight="400" fill="#4b5563" text-anchor="middle">any turn</text>
+<rect x="320" y="150" width="280" height="110" rx="12" fill="#f3f4f6" stroke="#d1d5db" stroke-width="2"/>
+<text x="460.0" y="185.6" font-size="22" font-weight="700" fill="#111827" text-anchor="middle">Crisis classifier</text>
+<text x="460.0" y="211.6" font-size="20" font-weight="400" fill="#4b5563" text-anchor="middle">suicidal ideation</text>
+<text x="460.0" y="237.6" font-size="20" font-weight="400" fill="#4b5563" text-anchor="middle">or self-harm?</text>
+<rect x="660" y="150" width="220" height="110" rx="12" fill="#ffffff" stroke="#ec362e" stroke-width="2"/>
+<text x="770.0" y="197.1" font-size="22" font-weight="700" fill="#111827" text-anchor="middle">Break the frame</text>
+<text x="770.0" y="226.1" font-size="19" font-weight="400" fill="#4b5563" text-anchor="middle">stop the normal reply</text>
+<rect x="940" y="150" width="220" height="110" rx="12" fill="#ffffff" stroke="#ec362e" stroke-width="2"/>
+<text x="1050.0" y="185.6" font-size="22" font-weight="700" fill="#111827" text-anchor="middle">Escalate</text>
+<text x="1050.0" y="211.6" font-size="20" font-weight="400" fill="#4b5563" text-anchor="middle">crisis resources,</text>
+<text x="1050.0" y="237.6" font-size="20" font-weight="400" fill="#4b5563" text-anchor="middle">a human</text>
+<line x1="262" y1="205" x2="316" y2="205" stroke="#4b5563" stroke-width="3" marker-end="url(#ah)"/>
+<line x1="602" y1="205" x2="656" y2="205" stroke="#ec362e" stroke-width="3" marker-end="url(#ahr)"/>
+<text x="629" y="190" font-size="18" font-weight="700" fill="#ec362e" text-anchor="middle">yes</text>
+<line x1="882" y1="205" x2="936" y2="205" stroke="#ec362e" stroke-width="3" marker-end="url(#ahr)"/>
+<line x1="460" y1="262" x2="460" y2="356" stroke="#4b5563" stroke-width="3" marker-end="url(#ah)"/>
+<text x="480" y="316" font-size="18" font-weight="700" fill="#4b5563" text-anchor="start">no</text>
+<rect x="300" y="360" width="320" height="110" rx="12" fill="#f3f4f6" stroke="#d1d5db" stroke-width="2"/>
+<text x="460.0" y="406.8" font-size="21" font-weight="700" fill="#111827" text-anchor="middle">Continue the conversation</text>
+<text x="460.0" y="435.8" font-size="19" font-weight="400" fill="#4b5563" text-anchor="middle">with AI disclosure in place</text>
+<line x1="1050" y1="262" x2="1050" y2="356" stroke="#ec362e" stroke-width="3" marker-end="url(#ahr)"/>
+<rect x="820" y="360" width="340" height="110" rx="12" fill="#f3f4f6" stroke="#d1d5db" stroke-width="2"/>
+<text x="990.0" y="395.6" font-size="22" font-weight="700" fill="#111827" text-anchor="middle">Log the event</text>
+<text x="990.0" y="421.6" font-size="19" font-weight="400" fill="#4b5563" text-anchor="middle">e.g. Colorado: annual report</text>
+<text x="990.0" y="447.6" font-size="19" font-weight="400" fill="#4b5563" text-anchor="middle">to the Attorney General</text>
+</svg>

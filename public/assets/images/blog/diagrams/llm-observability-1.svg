@@ -1,0 +1,36 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 1200 616" width="1200" height="616" role="img" aria-labelledby="t d" font-family="Inter, Segoe UI, Arial, sans-serif">
+  <rect x="0" y="0" width="1200" height="616" fill="#ffffff" rx="16" stroke="#e5e7eb"/>
+  <title id="t">One agent request as an OpenTelemetry GenAI trace</title>
+  <desc id="d">A trace waterfall with an invoke_agent root span containing alternating chat and execute_tool child spans, one tool span marked as an error, and a list of the attributes recorded on each chat span by default.</desc>
+  <text x="600" y="54" text-anchor="middle" font-size="28" font-weight="700" fill="#111827">One agent request as a GenAI trace</text>
+
+  <g font-size="19" fill="#111827">
+    <text x="40" y="118" font-weight="700">invoke_agent support-bot</text>
+    <rect x="540" y="98" width="620" height="28" rx="6" fill="#2563eb"/>
+
+    <text x="72" y="168">chat {model}</text>
+    <rect x="540" y="148" width="180" height="28" rx="6" fill="#d1d5db"/>
+
+    <text x="72" y="218">execute_tool search_orders</text>
+    <rect x="724" y="198" width="110" height="28" rx="6" fill="#d1d5db"/>
+
+    <text x="72" y="268">chat {model}</text>
+    <rect x="838" y="248" width="150" height="28" rx="6" fill="#d1d5db"/>
+
+    <text x="72" y="318">execute_tool refund_order</text>
+    <rect x="992" y="298" width="80" height="28" rx="6" fill="#ec362e"/>
+    <text x="1080" y="318" font-size="18" fill="#ec362e">error.type</text>
+
+    <text x="72" y="368">chat {model}</text>
+    <rect x="1076" y="348" width="84" height="28" rx="6" fill="#d1d5db"/>
+  </g>
+  <line x1="540" y1="388" x2="1160" y2="388" stroke="#d1d5db" stroke-width="2"/>
+  <text x="540" y="412" font-size="18" fill="#4b5563">start</text>
+  <text x="1160" y="412" text-anchor="end" font-size="18" fill="#4b5563">end</text>
+
+  <rect x="40" y="432" width="1120" height="160" rx="12" fill="#f3f4f6" stroke="#d1d5db"/>
+  <text x="64" y="470" font-size="20" font-weight="700" fill="#111827">On each chat span</text>
+  <text x="64" y="504" font-size="18" fill="#4b5563">gen_ai.operation.name, gen_ai.provider.name, gen_ai.request.model, gen_ai.response.model</text>
+  <text x="64" y="536" font-size="18" fill="#4b5563">gen_ai.usage.input_tokens, gen_ai.usage.output_tokens, gen_ai.response.finish_reasons</text>
+  <text x="64" y="574" font-size="18" fill="#ec362e">Prompt and completion content: opt-in only</text>
+</svg>

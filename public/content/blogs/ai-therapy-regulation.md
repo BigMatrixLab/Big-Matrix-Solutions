@@ -6,7 +6,7 @@ comments: "0"
 image: "https://images.unsplash.com/photo-1589829545856-d10d557cf95f?auto=format&fit=crop&q=80&w=800"
 category: "Medical AI"
 desc: "Eleven states, more than a dozen laws, three incompatible models, and no FDA authorisation. What happens when a technology outruns its regulator."
-date: "Mar 26, 2027"
+date: "Dec 08, 2026"
 tags: ["Medical AI", "Regulation", "Mental Health", "AI Policy"]
 ---
 

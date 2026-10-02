@@ -43,6 +43,10 @@ OpenAI describes dots as agents that work toward your goals 24/7, learn from fee
 
 TechCrunch reports that users can name their dot and that OpenAI envisions **specialist dots** with their own identities, credentials and tools, and eventually teams of dots working together. With permission, a dot can also connect to other devices or work on your laptop.
 
+![Diagram of an OpenAI dot: channels and memory feed a GPT-6 Astra agent with its own cloud computer and 4,000+ apps, with auto-review and actions that always need confirmation](/assets/images/blog/diagrams/openai-dots-1.svg)
+
+*What a dot connects to, and the guardrails around it. Diagram: Big Matrix Solutions, based on [OpenAI](https://openai.com/index/introducing-dots/) and [Unite.AI](https://www.unite.ai/openai-rolls-out-dots-agents-powered-by-gpt-6-astra-in-chatgpt/).*
+
 > 🎬 **Watch it work:** OpenAI's launch post includes short videos of dots working on their own, working where you work, and keeping you in control. [Watch them on OpenAI's site](https://openai.com/index/introducing-dots/).
 
 ### 🧪 OpenAI's Own Examples
@@ -144,3 +148,4 @@ Region limits, an off-by-default Enterprise beta and unpublished pricing for ext
 
 **Media credits**:
 - Hero image: dots launch artwork — [OpenAI](https://openai.com/index/introducing-dots/)
+- Diagram: anatomy of a dot — Big Matrix Solutions, based on [OpenAI](https://openai.com/index/introducing-dots/) and [Unite.AI](https://www.unite.ai/openai-rolls-out-dots-agents-powered-by-gpt-6-astra-in-chatgpt/)

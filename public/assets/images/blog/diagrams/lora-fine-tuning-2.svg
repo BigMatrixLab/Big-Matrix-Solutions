@@ -1,0 +1,35 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 1200 540" width="1200" height="540" role="img">
+<rect x="1" y="1" width="1198" height="538" fill="#ffffff" rx="16" stroke="#e5e7eb" stroke-width="2"/>
+<title>LoRA adapter storage</title>
+<desc>From the LoRA paper: one hundred full fine-tunes of GPT-3 175B need about 35 TB, while one base model plus one hundred 35 MB LoRA adapters need about 354 GB.</desc>
+<defs><marker id="ah" viewBox="0 0 10 10" refX="9" refY="5" markerWidth="8" markerHeight="8" orient="auto-start-reverse"><path d="M0,0 L10,5 L0,10 z" fill="#4b5563"/></marker></defs>
+<text x="60" y="70" font-family="Inter, Segoe UI, Arial, sans-serif" font-size="30" fill="#111827" text-anchor="start" font-weight="700" xml:space="preserve">Storing 100 fine-tuned variants of GPT-3 175B</text>
+<text x="60" y="108" font-family="Inter, Segoe UI, Arial, sans-serif" font-size="20" fill="#4b5563" text-anchor="start" font-weight="400" xml:space="preserve">Figures from Hu et al. (2021): r = 4, adapting only the query and value projections.</text>
+<text x="60" y="170" font-family="Inter, Segoe UI, Arial, sans-serif" font-size="22" fill="#111827" text-anchor="start" font-weight="700" xml:space="preserve">100 full fine-tunes</text>
+<rect x="60" y="190" width="70" height="70" rx="6" fill="#d1d5db" stroke="none" stroke-width="0"/>
+<rect x="140" y="190" width="70" height="70" rx="6" fill="#d1d5db" stroke="none" stroke-width="0"/>
+<rect x="220" y="190" width="70" height="70" rx="6" fill="#d1d5db" stroke="none" stroke-width="0"/>
+<rect x="300" y="190" width="70" height="70" rx="6" fill="#d1d5db" stroke="none" stroke-width="0"/>
+<rect x="380" y="190" width="70" height="70" rx="6" fill="#d1d5db" stroke="none" stroke-width="0"/>
+<rect x="460" y="190" width="70" height="70" rx="6" fill="#d1d5db" stroke="none" stroke-width="0"/>
+<rect x="540" y="190" width="70" height="70" rx="6" fill="#d1d5db" stroke="none" stroke-width="0"/>
+<rect x="620" y="190" width="70" height="70" rx="6" fill="#d1d5db" stroke="none" stroke-width="0"/>
+<rect x="700" y="190" width="70" height="70" rx="6" fill="#d1d5db" stroke="none" stroke-width="0"/>
+<rect x="780" y="190" width="70" height="70" rx="6" fill="#d1d5db" stroke="none" stroke-width="0"/>
+<text x="880" y="235" font-family="Inter, Segoe UI, Arial, sans-serif" font-size="22" fill="#111827" text-anchor="start" font-weight="700" xml:space="preserve">100 × 350 GB ≈ 35 TB</text>
+<text x="60" y="300" font-family="Inter, Segoe UI, Arial, sans-serif" font-size="20" fill="#4b5563" text-anchor="start" font-weight="400" xml:space="preserve">(10 of 100 copies shown)</text>
+<text x="60" y="370" font-family="Inter, Segoe UI, Arial, sans-serif" font-size="22" fill="#111827" text-anchor="start" font-weight="700" xml:space="preserve">One base model + 100 LoRA adapters</text>
+<rect x="60" y="390" width="70" height="70" rx="6" fill="#d1d5db" stroke="none" stroke-width="0"/>
+<rect x="150" y="412" width="16" height="26" rx="3" fill="#ec362e" stroke="none" stroke-width="0"/>
+<rect x="176" y="412" width="16" height="26" rx="3" fill="#ec362e" stroke="none" stroke-width="0"/>
+<rect x="202" y="412" width="16" height="26" rx="3" fill="#ec362e" stroke="none" stroke-width="0"/>
+<rect x="228" y="412" width="16" height="26" rx="3" fill="#ec362e" stroke="none" stroke-width="0"/>
+<rect x="254" y="412" width="16" height="26" rx="3" fill="#ec362e" stroke="none" stroke-width="0"/>
+<rect x="280" y="412" width="16" height="26" rx="3" fill="#ec362e" stroke="none" stroke-width="0"/>
+<rect x="306" y="412" width="16" height="26" rx="3" fill="#ec362e" stroke="none" stroke-width="0"/>
+<rect x="332" y="412" width="16" height="26" rx="3" fill="#ec362e" stroke="none" stroke-width="0"/>
+<rect x="358" y="412" width="16" height="26" rx="3" fill="#ec362e" stroke="none" stroke-width="0"/>
+<rect x="384" y="412" width="16" height="26" rx="3" fill="#ec362e" stroke="none" stroke-width="0"/>
+<text x="440" y="435" font-family="Inter, Segoe UI, Arial, sans-serif" font-size="22" fill="#111827" text-anchor="start" font-weight="700" xml:space="preserve">350 GB + 100 × 35 MB ≈ 354 GB</text>
+<text x="60" y="500" font-family="Inter, Segoe UI, Arial, sans-serif" font-size="20" fill="#4b5563" text-anchor="start" font-weight="400" xml:space="preserve">Each adapter checkpoint: 35 MB, roughly 10,000× smaller than the model.</text>
+</svg>

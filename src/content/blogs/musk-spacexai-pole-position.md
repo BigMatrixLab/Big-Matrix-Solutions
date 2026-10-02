@@ -8,7 +8,7 @@ comments: "0"
 image: "/assets/images/blog/spacex-share-wide.jpg"
 category: "Industry Analysis"
 desc: "In September 2026 Musk said SpaceX would match the frontier within three months and lead it within six. Here is the compute, the release record and the forecasting history behind it."
-date: "Nov 19, 2026"
+date: "Oct 29, 2026"
 tags: ["SpaceXAI", "Grok", "Elon Musk", "AI Industry"]
 ---
 
@@ -45,6 +45,10 @@ The hardware side is the most concrete part. In a post on September 25, Musk des
 
 These are Musk's own figures, and the last tranche was conditional. [Benzinga's headline](https://www.benzinga.com/markets/tech/26/09/61991512/elon-musk-says-spacexais-colossus-2-could-run-more-than-1-2-million-nvidia-gb200-and-gb300-chips-by-year-end-if-we-get-lucky) quoted him as saying "if we get lucky". Even so, SpaceX has a real record of building large amounts of compute quickly. Of all his claims, this is the easiest to believe.
 
+![Stacked bar of GPU counts stated by Musk: Colossus 1 230,000, Colossus 2 550,000 and 660,000 planned, about 1.44 million in total](/assets/images/blog/diagrams/musk-spacexai-pole-position-2.svg)
+
+*Musk's stated GPU counts for the Memphis Colossus clusters; the planned tranches are not yet built. Diagram: Big Matrix Solutions, based on [Tesla North](https://teslanorth.com/2026/09/25/spacexai-colossus-gpu-buildout/).*
+
 The open question is whether more compute is enough. Compute is necessary for a frontier model, but other labs have plenty too.
 
 ## The record so far
@@ -74,6 +78,10 @@ In 2025 Musk set the end of that year as the target for Grok 5. In November 2025
 As of early October 2026, Grok 5 has not been released. Third-party trackers such as [GeoToolbox](https://geotoolbox.ai/blog/grok-5) list it as still in training, with no official date and with Grok 4.8 and 4.9 ahead of it.
 
 Smaller deadlines have slipped less. One tracker [records](https://www.orcarouter.ai/blog/grok-5-release-date) that Grok 4.6 was expected around August 7 and shipped on August 12. So the record is not "never delivers". The big flagship dates slip by quarters. The point releases slip by days.
+
+![Table-style diagram comparing Musk's AI target dates with outcomes: Grok 5 slipped, Grok 4.6 shipped days late, and two September 2026 forecasts still pending](/assets/images/blog/diagrams/musk-spacexai-pole-position-1.svg)
+
+*Claimed dates against outcomes, as of early October 2026. Diagram: Big Matrix Solutions, based on [The Information via Techmeme](https://www.techmeme.com/251114/p25), [OrcaRouter](https://www.orcarouter.ai/blog/grok-5-release-date) and [Benzinga](https://www.benzinga.com/markets/tech/26/09/61989367/elon-musk-says-spacex-could-have-gpt-6-level-ai-in-3-months-reach-pole-position-within-6-spacexai-plans-massive-gpu-expansion).*
 
 ## Safety talk, regulation sceptic
 
@@ -127,3 +135,5 @@ SpaceXAI, Grok, Elon Musk, AI Industry
 
 **Media credits**:
 - Hero image: SpaceX share image (shown on a background) — [SpaceX](https://www.spacex.com/ai)
+- Diagram: Colossus GPU counts — Big Matrix Solutions, based on [Tesla North](https://teslanorth.com/2026/09/25/spacexai-colossus-gpu-buildout/)
+- Diagram: claimed vs delivered dates — Big Matrix Solutions, based on Techmeme, OrcaRouter and Benzinga reporting
