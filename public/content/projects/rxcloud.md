@@ -7,5 +7,5 @@ image: "/assets/images/projects/RXCloud.png"
 desc: "One platform covering booking, consultation, prescription, records and billing — with staff approval and a public site per doctor."
 client: "Big-Matrix Solutions"
 date: "2026"
-location: "https://rxcloud.care/"
+location: "https://www.rxcloud.care/"
 ---

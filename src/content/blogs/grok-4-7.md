@@ -1,11 +1,11 @@
 ---
-id: "15"
+id: "56"
 slug: "spacexai-releases-grok-4-7-for-long-running-coding-and-knowledge-work"
 title: "SpaceXAI Releases Grok 4.7: Built for Long-Running Coding and Knowledge Work"
 author: "Mera"
 admin: "Mera"
 comments: "0"
-image: "https://images.unsplash.com/photo-1457364887197-9150188c107b?auto=format&fit=crop&q=80&w=800"
+image: "/assets/images/blog/grok-4-7-cursorbench-chart.jpeg"
 category: "AI Models"
 desc: "Grok 4.7 brings a larger base model, longer reinforcement learning on multi-hour tasks and a new safeguard stack, at the same $2/$6 per million token price as Grok 4.6."
 date: "Sep 21, 2026"
@@ -56,6 +56,10 @@ Here are the scores SpaceXAI published. These are vendor-reported results and ha
 | **HealthBench Professional** | 56.7% | 48.5% | 60.5% | 62.1% |
 
 *\*High-effort score.*
+
+![CursorBench 4.0 score vs average cost per task for Grok 4.7 and other models](/assets/images/blog/grok-4-7-cursorbench-chart.jpeg)
+
+*CursorBench 4.0 score vs average cost per task, as shared at launch. Source: [Cursor](https://forum.cursor.com/t/grok-4-7-is-now-live/172526)*
 
 ### 🔍 How to read these numbers
 
@@ -133,3 +137,6 @@ Grok 4.7 is an incremental release, but a meaningful one. It brings a larger bas
 - [SpaceX launches Grok 4.7 with long-horizon processing, safety upgrades — SiliconANGLE](https://siliconangle.com/2026/09/21/spacex-launches-grok-4-7-with-long-horizon-processing-safety-upgrades/)
 - [Grok 4.7: Features, Benchmarks, and Pricing — DataCamp](https://www.datacamp.com/blog/grok-4-7)
 - [SpaceXAI gives Grok 4.7 a larger base model at the same price — TechBriefly](https://techbriefly.com/2026/09/22/grok-4-7-spacexai-launches-coding-knowledge-work/)
+
+**Media credits**:
+- Hero image and CursorBench 4.0 chart — [Cursor](https://forum.cursor.com/t/grok-4-7-is-now-live/172526)

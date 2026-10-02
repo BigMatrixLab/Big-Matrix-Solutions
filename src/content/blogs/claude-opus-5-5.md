@@ -1,11 +1,11 @@
 ---
-id: "8"
+id: "49"
 slug: "claude-opus-5-5-fable-level-performance-at-a-lower-price"
 title: "Claude Opus 5.5: Fable-Level Performance at a Lower Price"
 author: "Mera"
 admin: "Mera"
 comments: "0"
-image: "https://images.unsplash.com/photo-1709377195538-5522ed0f9e10?auto=format&fit=crop&q=80&w=800"
+image: "/assets/images/blog/claude-opus-5-5.jpg"
 category: "AI Models"
 desc: "Anthropic's Claude Opus 5.5 matches Claude Fable 5.1 on most work, cuts token prices by 20%, and costs 40% less than Opus 5 on typical workloads."
 date: "Sep 22, 2026"
@@ -117,3 +117,6 @@ Claude Opus 5.5 shows that frontier performance does not have to cost more each 
 - [Introducing Claude Opus 5.5 — Anthropic](https://www.anthropic.com/claude-opus-5-5)
 - [Anthropic releases Opus 5.5 with lower prices and Fable-level performance — TechCrunch](https://techcrunch.com/2026/09/22/anthropic-releases-opus-5-5-with-lower-prices-and-fable-level-performance/)
 - [Anthropic launches Opus 5.5, its first model since CEO Amodei called for AI slowdown — Yahoo Finance](https://finance.yahoo.com/technology/article/anthropic-launches-opus-55-its-first-model-since-ceo-amodei-called-for-ai-slowdown-163000869.html)
+
+**Media credits**:
+- Hero image: Claude Opus 5.5 launch artwork — [Anthropic](https://www.anthropic.com/claude-opus-5-5)

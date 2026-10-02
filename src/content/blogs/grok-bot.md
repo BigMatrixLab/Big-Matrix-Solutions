@@ -1,11 +1,11 @@
 ---
-id: "14"
+id: "55"
 slug: "spacexai-and-cursor-launch-grok-bot-always-on-ai-teammates"
 title: "SpaceXAI and Cursor Launch Grok Bot: Always-On AI Teammates in the Cloud"
 author: "Mera"
 admin: "Mera"
 comments: "0"
-image: "https://images.unsplash.com/photo-1744868562210-fffb7fa882d9?auto=format&fit=crop&q=80&w=800"
+image: "/assets/images/blog/grok-bot-launch.jpeg"
 category: "Agentic AI"
 desc: "SpaceXAI and Cursor open an early beta of Grok Bot, AI teammates that sign into your tools on their own cloud computer and keep working after you close your laptop."
 date: "Aug 11, 2026"
@@ -138,3 +138,6 @@ Grok Bot is SpaceXAI and Cursor's bet that the next step in agentic AI is **fini
 - [Grok Bot Launches Early Beta — Ultrathink](https://ultrathink.ai/news/grok-bot-early-beta-cursor-spacexai)
 - [SpaceX Unveils New xAI Logo — Not a Tesla App](https://www.notateslaapp.com/news/4410/spacex-unveils-new-xai-logo)
 - [SpaceXAI — Wikipedia](https://en.wikipedia.org/wiki/SpaceXAI)
+
+**Media credits**:
+- Hero image: Grok Bot launch artwork — [Cursor](https://forum.cursor.com/t/introducing-grok-bot/168053)

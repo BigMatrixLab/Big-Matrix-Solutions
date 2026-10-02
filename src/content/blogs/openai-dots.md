@@ -1,11 +1,11 @@
 ---
-id: "10"
+id: "51"
 slug: "openai-launches-dots-always-on-agents-powered-by-gpt-6-astra"
 title: "OpenAI Launches dots: Always-On Agents Powered by GPT-6 Astra"
 author: "Mera"
 admin: "Mera"
 comments: "0"
-image: "https://images.unsplash.com/photo-1543946602-a0fce8117697?auto=format&fit=crop&q=80&w=800"
+image: "/assets/images/blog/openai-dots.webp"
 category: "Agentic AI"
 desc: "OpenAI's new dots are always-on ChatGPT agents with their own cloud computer and browser, connecting to more than 4,000 apps and working toward your goals around the clock."
 date: "Sep 29, 2026"
@@ -42,6 +42,8 @@ OpenAI describes dots as agents that work toward your goals 24/7, learn from fee
 | **🔍 Background research** | Restricted to read-only tools | It can look things up proactively without changing anything |
 
 TechCrunch reports that users can name their dot and that OpenAI envisions **specialist dots** with their own identities, credentials and tools, and eventually teams of dots working together. With permission, a dot can also connect to other devices or work on your laptop.
+
+> 🎬 **Watch it work:** OpenAI's launch post includes short videos of dots working on their own, working where you work, and keeping you in control. [Watch them on OpenAI's site](https://openai.com/index/introducing-dots/).
 
 ### 🧪 OpenAI's Own Examples
 
@@ -139,3 +141,6 @@ Region limits, an off-by-default Enterprise beta and unpublished pricing for ext
 - [OpenAI launches Dots agents powered by GPT-6 Astra — TestingCatalog](https://www.testingcatalog.com/openai-launches-dots-agents-powered-by-gpt-6-astra/)
 - [OpenAI Dots: Always-On Agents in ChatGPT, Explained — DataCamp](https://www.datacamp.com/blog/openai-dots)
 - [OpenAI cancels release of AI model GPT-6.1 Astra, citing safety concerns — Al Jazeera](https://www.aljazeera.com/economy/2026/9/29/openai-scraps-release-of-latest-ai-model-over-safety-concerns)
+
+**Media credits**:
+- Hero image: dots launch artwork — [OpenAI](https://openai.com/index/introducing-dots/)

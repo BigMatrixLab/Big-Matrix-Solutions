@@ -1,11 +1,11 @@
 ---
-id: "12"
+id: "53"
 slug: "meta-launches-muse-a-personal-ai-agent-that-does-the-work"
 title: "Meta Launches Muse: A Personal AI Agent That Does the Work"
 author: "Mera"
 admin: "Mera"
 comments: "0"
-image: "https://images.unsplash.com/photo-1592890288564-76628a30a657?auto=format&fit=crop&q=80&w=800"
+image: "/assets/images/blog/meta-muse-agent.jpg"
 category: "Agentic AI"
 desc: "Meta's new Muse agent, powered by Muse Spark 1.3, sends emails, books travel, fills forms and checks out on your behalf, launching today in the US."
 date: "Sep 08, 2026"
@@ -54,6 +54,10 @@ Meta's launch materials list a set of everyday jobs that Muse can take off your 
 
 Muse also remembers your preferences, learns from your conversations, and is meant to get more useful over time.
 
+<video controls preload="metadata" playsinline style="width:100%;border-radius:12px" src="https://about.fb.com/wp-content/uploads/2026/09/Introducing-Muse_Sizzle-Video.mp4"></video>
+
+*Meta's launch video for Muse. Source: [Meta Newsroom](https://about.fb.com/news/2026/09/introducing-muse-personal-ai-agent/)*
+
 ## 🏗️ How It Works: A Computer of Its Own
 
 The most interesting part of the launch for engineers is the architecture. Muse does its work on a dedicated, isolated machine that has its own browser.
@@ -66,6 +70,10 @@ The most interesting part of the launch for engineers is the architecture. Muse 
 > 4. 🔐 **Muse Confidential VM (later)** - Meta says a future version will use encryption that only the user controls
 
 TechCrunch reports built-in connectors for email, calendars, payments, health and fitness, smart home, dining, shopping, music and events, with 1Password support also coming.
+
+<video controls preload="metadata" playsinline style="width:100%;border-radius:12px" src="https://about.fb.com/wp-content/uploads/2026/09/Muse_FieldTrip.mp4"></video>
+
+*Muse planning a field trip, from Meta's How It Works demos. Source: [Meta Newsroom](https://about.fb.com/news/2026/09/introducing-muse-personal-ai-agent/)*
 
 ## 🔒 Privacy and Control
 
@@ -137,3 +145,6 @@ Muse is Meta's bet that the next consumer interface is delegation, not conversat
 - [Introducing Muse Spark: Meta's Most Powerful Model Yet (Meta Newsroom)](https://about.fb.com/news/2026/04/introducing-muse-spark-meta-superintelligence-labs/)
 - [Introducing Muse Spark 1.3 (Meta AI Research)](https://research.meta.ai/blog/introducing-muse-spark-1-3)
 - [Meta launches Muse personal AI agent in the US (TechNode Global)](https://technode.global/2026/09/09/meta-launches-muse-personal-ai-agent-us/)
+
+**Media credits**:
+- Hero image and videos — [Meta Newsroom](https://about.fb.com/news/2026/09/introducing-muse-personal-ai-agent/)

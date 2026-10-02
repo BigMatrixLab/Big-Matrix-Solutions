@@ -1,11 +1,11 @@
 ---
-id: "16"
+id: "57"
 slug: "manus-launches-cue-personal-agents-with-email-phone-and-wallet"
 title: "Manus Launches Cue: Personal AI Agents With Their Own Email, Phone and Wallet"
 author: "Mera"
 admin: "Mera"
 comments: "0"
-image: "https://images.unsplash.com/photo-1599050751795-6cdaafbc2319?auto=format&fit=crop&q=80&w=800"
+image: "/assets/images/blog/manus-cue.webp"
 category: "Agentic AI"
 desc: "Alongside Manus 2.0, Manus has launched Cue, a standalone app where every personal agent gets its own email, phone number, wallet and computer."
 date: "Sep 28, 2026"
@@ -69,6 +69,12 @@ A caveat worth stating: the Cascade figures come from Manus itself, from a singl
 
 On the corporate side, Manus was founded in China and is now based in Singapore. Meta agreed to acquire it at the end of 2025 for $2 billion; Beijing blocked the deal, and Manus has since resumed operating independently.
 
+> 🎬 **Watch the launch:** Manus's announcement opens with a launch video for Manus 2.0. [Watch it on the Manus blog](https://manus.im/blog/introducing-manus-2-0).
+
+![Cascade vs previous system: token consumption, completion time and cost](/assets/images/blog/manus-cascade-chart.webp)
+
+*Cascade vs the previous system: 23.2% fewer tokens, 28.2% less time, 32% lower cost in one tested configuration. Source: [Manus](https://manus.im/blog/introducing-manus-2-0)*
+
 ## ⚠️ The Risk Side: Agents With Wallets and Phone Numbers
 
 Giving an agent its own phone number and money is a genuine step change, and it deserves a sober look.
@@ -125,3 +131,6 @@ The same features that make Cue powerful also widen the attack surface. Budgets,
 - [Manus Launches Cue Agents With Phone Numbers and Wallets — Implicator](https://www.implicator.ai/manus-cue-agents-phone-numbers-wallets/)
 - [Manus 2.0 and Cue give AI agents their own email, phone and wallet — The Next Web](https://thenextweb.com/news/manus-2-0-cue-ai-agents-email-phone-wallet)
 - [Salt Labs Research: A Single Email Could Hijack an AI Agent — EIN Presswire](https://www.einpresswire.com/article/946455020/salt-labs-research-a-single-email-could-hijack-an-ai-agent-and-reach-a-user-s-connected-accounts)
+
+**Media credits**:
+- Hero image and Cascade chart — [Manus](https://manus.im/blog/introducing-manus-2-0)

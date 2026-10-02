@@ -1,11 +1,11 @@
 ---
-id: "9"
+id: "50"
 slug: "claude-sonnet-5-5-opus-class-coding-at-sonnet-prices"
 title: "Claude Sonnet 5.5: Opus-Class Coding at Sonnet Prices"
 author: "Mera"
 admin: "Mera"
 comments: "0"
-image: "https://images.unsplash.com/photo-1501290301209-7a0323622985?auto=format&fit=crop&q=80&w=800"
+image: "/assets/images/blog/claude-sonnet-5-5.jpg"
 category: "AI Models"
 desc: "Claude Sonnet 5.5 scores 70.6% on Terminal-Bench 4.0, runs 30%+ faster than Sonnet 5, and keeps the same $2/$10 pricing, with new cyber and anti-distillation safeguards."
 date: "Sep 28, 2026"
@@ -54,6 +54,17 @@ The standout number is **Terminal-Bench 4.0**, an agentic coding test of complex
 | **🖥️ OSWorld 2.1** (computer use, partial) | **80.1%** | 57.0% | 81.8% |
 
 Sonnet 5.5 beats Opus 5.5 on Terminal-Bench. On most other rows it stays close to Opus, and on FrontierCode and Humanity's Last Exam the gap is wider. Anthropic also says that at **Medium effort, the default in the Claude apps**, Sonnet 5.5 "far exceeds Sonnet 5's best score for less than a tenth of the cost per task."
+
+### 🖼️ Side by Side: The Same Prompt, Two Models
+
+Anthropic's launch page shows the previous Sonnet and the latest model writing the same visual programs:
+
+| Previous model | Latest model (Sonnet 5.5) |
+|---|---|
+| ![Previous model writing a starling murmuration program](/assets/images/blog/claude-sonnet-5-5-murmuration-previous.png) | ![Latest model writing a starling murmuration program](/assets/images/blog/claude-sonnet-5-5-murmuration-latest.png) |
+| ![Previous model writing a clock-of-clocks program](/assets/images/blog/claude-sonnet-5-5-clocks-previous.png) | ![Latest model writing a clock-of-clocks program](/assets/images/blog/claude-sonnet-5-5-clocks-latest.png) |
+
+*Starling murmuration and clock-of-clocks programs, previous model vs latest model. Source: [Anthropic](https://www.anthropic.com/claude-sonnet-5-5)*
 
 ### 🏢 What Early Customers Report
 
@@ -108,3 +119,6 @@ Claude Sonnet 5.5 brings the main benefits of the Claude 5.5 generation to Anthr
 - [Introducing Claude Opus 5.5 — Anthropic](https://www.anthropic.com/claude-opus-5-5)
 - [Anthropic releases Claude Sonnet 5.5 with the cyber limits it reserved for its best models — The Next Web](https://thenextweb.com/news/sonnet-5-5-cyber-distillation)
 - [Anthropic Releases Claude Sonnet 5.5: 70.6% on Terminal-Bench 4.0 at the Same $2/$10 Price — MarkTechPost](https://www.marktechpost.com/2026/09/28/anthropic-releases-claude-sonnet-5-5-70-6-on-terminal-bench-4-0-at-the-same-2-10-price/)
+
+**Media credits**:
+- Hero image and side-by-side program comparisons — [Anthropic](https://www.anthropic.com/claude-sonnet-5-5)

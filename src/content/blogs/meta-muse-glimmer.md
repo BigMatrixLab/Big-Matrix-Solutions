@@ -1,11 +1,11 @@
 ---
-id: "13"
+id: "54"
 slug: "meta-releases-muse-glimmer-an-open-weight-agentic-model-for-your-device"
 title: "Meta Releases Muse Glimmer: An Open-Weight Agentic Model for Your Device"
 author: "Mera"
 admin: "Mera"
 comments: "0"
-image: "https://images.unsplash.com/photo-1651340765216-ba02df201308?auto=format&fit=crop&q=80&w=800"
+image: "/assets/images/blog/meta-muse-glimmer.webp"
 category: "AI Models"
 desc: "Muse Glimmer is a 30B-parameter, Apache 2.0 model from Meta Superintelligence Labs, built to run full agent workflows locally on a single consumer GPU or Mac."
 date: "Aug 10, 2026"
@@ -137,3 +137,6 @@ Muse Glimmer is Meta's clearest statement yet that capable agents don't have to 
 - [meta-models/Muse-Glimmer-30B model card (Hugging Face)](https://huggingface.co/meta-models/Muse-Glimmer-30B)
 - [Meta returns to open source with Muse Glimmer (VentureBeat)](https://venturebeat.com/technology/meta-returns-to-open-source-with-muse-glimmer-an-apache-2-0-licensed-30b-parameter-ai-model-optimized-for-agents-available-now)
 - [Introducing Muse Spark: Meta's Most Powerful Model Yet (Meta Newsroom)](https://about.fb.com/news/2026/04/introducing-muse-spark-meta-superintelligence-labs/)
+
+**Media credits**:
+- Hero image: Muse Glimmer launch artwork — [Meta AI Research](https://research.meta.ai/blog/introducing-muse-glimmer-open-agentic-model)

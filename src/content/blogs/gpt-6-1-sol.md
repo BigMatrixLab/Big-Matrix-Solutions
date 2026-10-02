@@ -1,11 +1,11 @@
 ---
-id: "11"
+id: "52"
 slug: "openai-gpt-6-1-sol-near-astra-intelligence-at-a-fifth-of-the-price"
 title: "OpenAI GPT-6.1 Sol: Near-Astra Intelligence at a Fifth of the Price"
 author: "Mera"
 admin: "Mera"
 comments: "0"
-image: "https://images.unsplash.com/photo-1767812116063-104a14d2fb69?auto=format&fit=crop&q=80&w=800"
+image: "/assets/images/blog/gpt-6-1-sol.webp"
 category: "AI Models"
 desc: "OpenAI's GPT-6.1 Sol nearly matches GPT-6 Astra on agentic coding, computer use and professional work, at $2 input and $10 output per million tokens."
 date: "Sep 29, 2026"
@@ -72,6 +72,14 @@ On **Terminal-Bench Science 0.1**, Astra posted the top score (68.1%). Cost per 
 | **☀️ GPT-6.1 Sol** | $5.47 |
 | **🟠 Opus 5.5** | $23.21 |
 | **🌟 GPT-6 Astra** | $23.80 |
+
+![DeepSWE score vs cost per task for GPT-6.1 Sol, GPT-6 Sol and GPT-6 Astra](/assets/images/blog/gpt-6-1-sol-deepswe-chart.png)
+
+*DeepSWE 1.1: score vs cost per task across reasoning settings. Source: [OpenAI](https://openai.com/index/introducing-gpt-6-1-sol/)*
+
+![Terminal-Bench Science 0.1 score vs cost per task for GPT-6.1 Sol, GPT-6 Sol, GPT-6 Astra and Opus 5.5](/assets/images/blog/gpt-6-1-sol-terminal-bench-science-chart.png)
+
+*Terminal-Bench Science 0.1: score vs cost per task, including Opus 5.5 with fallbacks. Source: [OpenAI](https://openai.com/index/introducing-gpt-6-1-sol/)*
 
 ### 🎯 Factual Accuracy
 
@@ -156,3 +164,7 @@ For most teams, the playbook is simple: default to Sol, escalate to Astra only w
 - [OpenAI launches GPT-6.1 Sol, says it nearly matches GPT-6 Astra and costs less — TechCrunch](https://techcrunch.com/2026/09/29/openai-launches-gpt-6-1-sol-says-it-nearly-matches-gpt-6-astra-and-costs-less/)
 - [OpenAI cancels release of AI model GPT-6.1 Astra, citing safety concerns — Al Jazeera](https://www.aljazeera.com/economy/2026/9/29/openai-scraps-release-of-latest-ai-model-over-safety-concerns)
 - [OpenAI Launches GPT-6.1 Sol At DevDay — Dataconomy](https://dataconomy.com/2026/09/30/openai-launches-gpt-6-1-sol-at-devday/)
+
+**Media credits**:
+- Hero image: GPT-6.1 Sol launch artwork — [OpenAI](https://openai.com/index/introducing-gpt-6-1-sol/)
+- DeepSWE and Terminal-Bench Science charts (captured from the interactive charts) — [OpenAI](https://openai.com/index/introducing-gpt-6-1-sol/)

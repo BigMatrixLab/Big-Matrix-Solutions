@@ -1,11 +1,11 @@
 ---
-id: "17"
+id: "58"
 slug: "google-releases-gemini-4-argon-1m-output-tokens-cyber-defense"
 title: "Google Releases Gemini 4 Argon: 1M Output Tokens, Built for Long-Horizon Work"
 author: "Mera"
 admin: "Mera"
 comments: "0"
-image: "https://images.unsplash.com/photo-1515879218367-8466d910aaa4?auto=format&fit=crop&q=80&w=800"
+image: "/assets/images/blog/gemini-4-argon.webp"
 category: "AI Models"
 desc: "Google's new frontier model targets long-horizon coding, enterprise knowledge work and cyber defense, with a 1M-token output limit and a limited first rollout."
 date: "Sep 30, 2026"
@@ -53,6 +53,18 @@ Google published a comparison table against **OpenAI's GPT-6 Astra** and **Anthr
 | **LVBench** (long video) | 91.7% | GPT-6 Astra: 87.5% |
 | **Harvey Legal Agent Benchmark** | 19.6% | Fable 5.1: 6.7% |
 | **CWE-bench v1** (vuln remediation) | 68.0% | GPT-6 Astra: 68.0% (tie) |
+
+![DeepSWE v1.1 benchmark chart: Gemini 4 Argon vs GPT-6 Astra, Claude Fable 5.1 and Claude Opus 5.5](/assets/images/blog/gemini-4-argon-deepswe.gif)
+
+*DeepSWE v1.1 (long-horizon software engineering). Source: [Google](https://blog.google/innovation-and-ai/models-and-research/gemini-models/gemini-4-argon/)*
+
+![AutomationBench chart: Gemini 4 Argon vs GPT-6 Astra, Claude Fable 5.1 and Claude Opus 5.5](/assets/images/blog/gemini-4-argon-automationbench.gif)
+
+*AutomationBench (enterprise workflow automation). Source: [Google](https://blog.google/innovation-and-ai/models-and-research/gemini-models/gemini-4-argon/)*
+
+![Vals Index chart: Gemini 4 Argon vs GPT-6 Astra, Claude Fable 5.1 and Claude Opus 5.5](/assets/images/blog/gemini-4-argon-vals-index.gif)
+
+*Vals Index (GDP-weighted suite of evals). Source: [Google](https://blog.google/innovation-and-ai/models-and-research/gemini-models/gemini-4-argon/)*
 
 ### ⚠️ Where Argon trails
 
@@ -135,3 +147,6 @@ Gemini 4 Argon is Google's clearest bet yet on long-horizon, agentic work. Its m
 - [Google debuts Gemini 4 Argon, its latest frontier model — Yahoo Finance](https://finance.yahoo.com/technology/article/google-debuts-gemini-4-argon-its-latest-frontier-model-204002322.html)
 - [Google Launches Gemini 4 Argon With a 1 Million Token Output Limit — gHacks](https://www.ghacks.net/2026/10/02/google-launches-gemini-4-argon-with-a-1-million-token-output-limit-starting-with-cyber-defenders/)
 - [Google Introduces Gemini 4 Argon, Beats GPT 6 Astra And Opus 5.5 On Many Benchmarks — OfficeChai](https://officechai.com/ai/gemini-4-argon-benchmarks/)
+
+**Media credits**:
+- Hero image and benchmark charts — [Google](https://blog.google/innovation-and-ai/models-and-research/gemini-models/gemini-4-argon/)
