@@ -4,14 +4,29 @@ import MarkdownRenderer from '../components/MarkdownRenderer';
 import CtaBand from '../components/CtaBand';
 import { blogsData } from '../data/content';
 import { stripMarkdownEmoji } from '../utils/docEnrich';
+import { sortBlogsByDate } from '../utils/blogSort';
+import Seo from '../components/Seo';
+import { graph, blogPosting, breadcrumbs } from '../utils/structuredData';
+import {
+    visibleBlogs,
+    isScheduled,
+    daysUntilPublish,
+    usePreviewMode,
+} from '../utils/publishSchedule';
 
 const BlogDetails = () => {
     const { slug } = useParams();
-    const post = blogsData.find((item) => item.slug === slug);
+    const preview = usePreviewMode();
+
+    // Resolve against the visible set, so a scheduled post reached by a direct
+    // link falls through to the not-found state instead of leaking early.
+    const readable = visibleBlogs(blogsData, { includeScheduled: preview });
+    const post = readable.find((item) => item.slug === slug);
 
     if (!post) {
         return (
             <>
+                <Seo title="Post not found" path={`/blog/${slug}`} noindex />
                 <Breadcrumb pageTitle="Post not found" breadcrumbItem="Insights" />
                 <section className="bm-section">
                     <div className="bm-container">
@@ -28,10 +43,19 @@ const BlogDetails = () => {
         );
     }
 
-    const others = blogsData.filter((item) => item.slug !== post.slug).slice(0, 4);
+    // Newest first, not `blogsData` order — `loadContent` sorts by id ascending,
+    // so slicing it raw surfaced the five oldest posts on every article.
+    const others = sortBlogsByDate(
+        readable.filter((item) => item.slug !== post.slug)
+    ).slice(0, 5);
+    const queued = isScheduled(post);
 
     const facts = [
-        { icon: 'bi bi-calendar-event', label: 'Published', value: post.date },
+        {
+            icon: 'bi bi-calendar-event',
+            label: queued ? 'Scheduled for' : 'Published',
+            value: post.date,
+        },
         { icon: 'bi bi-person', label: 'Author', value: post.author || post.admin },
         { icon: 'bi bi-tag', label: 'Category', value: post.category },
     ].filter((fact) => fact.value);
@@ -39,9 +63,30 @@ const BlogDetails = () => {
     return (
         <>
             <Breadcrumb pageTitle={post.title} breadcrumbItem="Insights" />
+            <Seo
+                title={post.title}
+                description={post.desc}
+                path={`/blog/${post.slug}`}
+                schema={graph(
+                    blogPosting(post),
+                    breadcrumbs([
+                        { name: 'Home', path: '/' },
+                        { name: 'Insights', path: '/blog' },
+                        { name: post.title, path: `/blog/${post.slug}` },
+                    ])
+                )}
+            />
 
             <section className="bm-section bm-doc">
                 <div className="bm-container">
+                    {queued && (
+                        <p className="bm-preview-note">
+                            <i className="bi bi-clock-history" aria-hidden="true"></i>
+                            Preview — this post publishes on {post.date}, in {daysUntilPublish(post)} days.
+                            Visitors get a not-found page until then.
+                        </p>
+                    )}
+
                     <div className="bm-doc__layout">
                         <article className="bm-doc__main">
                             {post.image && (

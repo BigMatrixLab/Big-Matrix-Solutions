@@ -1,6 +1,7 @@
 import '../../assets/css/ProjectShowcase.css';
 import ShowcaseFacts from '../../components/showcase/ShowcaseFacts';
 import CtaBand from '../../components/CtaBand';
+import Seo from '../../components/Seo';
 
 const heroStats = [
     { icon: 'bi bi-stopwatch', num: '50–70%', label: 'Projected reduction in manual contouring time per case' },
@@ -102,6 +103,121 @@ const engineering = [
     },
 ];
 
+const dataFoundation = [
+    {
+        icon: 'bi bi-clipboard-check',
+        title: 'Expert-Delineated Ground Truth',
+        desc: 'Models are trained against structures drawn by clinicians, not against automatically derived labels. In contouring the target is a judgment call, so the only defensible training signal is the judgment of the people who make it.',
+    },
+    {
+        icon: 'bi bi-building',
+        title: 'Multi-Site CT and MRI',
+        desc: 'Training data spans multiple sites rather than a single department, because scanner, protocol and reconstruction differences are the first thing that breaks a segmentation model when it moves. Building across that variation is cheaper than discovering it at deployment.',
+    },
+    {
+        icon: 'bi bi-rulers',
+        title: 'Contours Aligned To Local Definition',
+        desc: 'Boundaries are designed to match the anatomical definitions the deploying clinical team actually uses, not a generic research convention. A contour that is technically defensible and departmentally wrong still gets redrawn by hand, which removes the entire time saving.',
+    },
+    {
+        icon: 'bi bi-shield-check',
+        title: 'Validated Against Protocol Constraints',
+        desc: 'Validation runs against clinical protocol constraints rather than overlap metrics alone, so protocol compliance is part of what the model is optimised for rather than something a physicist discovers at plan review.',
+    },
+];
+
+const qaLayer = [
+    {
+        icon: 'bi bi-bounding-box',
+        title: 'Volume Plausibility',
+        desc: 'A structure whose volume falls outside the expected range for that organ is surfaced before anyone plans against it. Most gross segmentation failures are visible as a number long before they are visible on a slice.',
+    },
+    {
+        icon: 'bi bi-layers-half',
+        title: 'Overlap Constraints',
+        desc: 'Structures that should not intersect are checked against each other. Overlapping organs at risk and target volumes produce dose calculations that look valid and are not.',
+    },
+    {
+        icon: 'bi bi-graph-up',
+        title: 'Dose-Volume Thresholds',
+        desc: 'Checks run against dose-volume histogram constraints so a likely protocol violation is raised at contour review rather than at final plan sign-off, which is where corrections cost the most.',
+    },
+    {
+        icon: 'bi bi-info-circle',
+        title: 'Explained, Not Just Flagged',
+        desc: 'Every anomaly is surfaced with the reason it was raised. A flag with no explanation gets dismissed, and a QA layer that gets dismissed is a QA layer that does not exist.',
+    },
+];
+
+const dosePrediction = [
+    {
+        icon: 'bi bi-lightning-charge',
+        title: 'An Estimate Before The Plan',
+        desc: 'Deep learning estimates the expected dose distribution from the contoured anatomy before full planning optimisation runs. The value is timing: a likely problem becomes visible while contours are still being reviewed.',
+    },
+    {
+        icon: 'bi bi-arrow-repeat',
+        title: 'Fewer Full Replanning Cycles',
+        desc: 'Every contour revision restarts dosimetry, physicist review and clinical sign-off. Catching a constraint violation at the contour stage removes a loop that otherwise costs days of calendar time.',
+    },
+    {
+        icon: 'bi bi-compass',
+        title: 'Planning Guidance From Anatomy',
+        desc: 'Planning-support logic reads the relationship between organs at risk and target volumes, including proximity and dose-gradient constraints, and gives the dosimetry team direction before optimisation begins.',
+    },
+    {
+        icon: 'bi bi-sliders',
+        title: 'Parameterised Per Site',
+        desc: 'Protocol-specific logic is defined per cancer site and updated as clinical guidelines change, so adding a site is a training and validation exercise rather than a software rebuild.',
+    },
+];
+
+const evidence = [
+    {
+        icon: 'bi bi-graph-down-arrow',
+        title: 'The Time Saving Is Projected, Not Measured',
+        desc: 'The 50–70% reduction in manual contouring time is a projection drawn from comparable AI-assisted contouring deployments reported in the radiotherapy literature. It is not a measured result from this system in clinical use, and we will replace it with measured timing data once the system has produced some.',
+    },
+    {
+        icon: 'bi bi-hammer',
+        title: 'Status Is In Development',
+        desc: 'The system is in development and moving through validation. It is not in routine clinical deployment, and nothing on this page should be read as describing a system currently treating patients.',
+    },
+    {
+        icon: 'bi bi-shield-exclamation',
+        title: 'QA-Ready Is An Architecture Claim',
+        desc: 'The automated QA layer describes how the software is built. It is not a regulatory certification, and it carries no implication of FDA clearance, CE marking or any other approval.',
+    },
+    {
+        icon: 'bi bi-diagram-3',
+        title: 'Site Coverage Is Deliberately Unquantified',
+        desc: 'The architecture supports multiple cancer sites and extends without rebuilding. We do not publish a validated site count, because that list is a clinical question and it changes as validation progresses.',
+    },
+];
+
+const boundaries = [
+    {
+        icon: 'bi bi-person-check',
+        title: 'The Clinician Owns The Contour',
+        desc: 'The AI produces a starting point. A radiation oncologist or dosimetrist reviews and refines every structure in their existing TPS environment, and nothing reaches a plan without that review.',
+    },
+    {
+        icon: 'bi bi-x-octagon',
+        title: 'It Does Not Approve Plans',
+        desc: 'Dose prediction supports evaluation. It does not replace full treatment planning optimisation, and it does not sign anything off. Clinical approval stays where it is.',
+    },
+    {
+        icon: 'bi bi-rulers',
+        title: 'Boundary Accuracy Is The Real Metric',
+        desc: 'A structure that is correct on average and a couple of millimetres out at the margin still changes the plan. Overlap scores alone do not capture that, which is why review remains a step rather than a formality.',
+    },
+    {
+        icon: 'bi bi-building',
+        title: 'Scanner And Protocol Variation Is Unfinished Work',
+        desc: 'Performance across varied scanner hardware and departmental protocols is precisely what the planned multi-institution validation is for. Until then, treat cross-site behaviour as an open question.',
+    },
+];
+
 const futureDirections = [
     'Expand contouring coverage for additional disease sites and adaptive radiotherapy pathways.',
     'Integrate longitudinal treatment-response analysis for re-planning decision support.',
@@ -132,6 +248,11 @@ const SpecGrid = ({ items }) => (
 const ProjectAutoContouring = () => {
     return (
         <>
+            <Seo
+                title="Auto contouring for radiotherapy"
+                description="AI-assisted contouring and planning support for oncology workflows, cutting manual segmentation time by 50 to 70% and improving cross-team consistency."
+                path="/project/auto-contouring"
+            />
         <div className="bc-showcase">
 
             {/* ── Hero ── */}
@@ -277,8 +398,44 @@ const ProjectAutoContouring = () => {
                 </div>
             </section>
 
+            {/* ── Data foundation ── */}
+            <section className="bc-section bc-alt" id="data">
+                <div className="bc-container">
+                    <div className="bc-section-head">
+                        <span className="bc-eyebrow">Training data</span>
+                        <h2>What The Models Were Taught</h2>
+                        <p>A contouring model is only as good as the delineations it learned from, and in this domain those are a clinical judgment rather than a measurement.</p>
+                    </div>
+                    <SpecGrid items={dataFoundation} />
+                </div>
+            </section>
+
+            {/* ── Dose prediction ── */}
+            <section className="bc-section" id="dose">
+                <div className="bc-container">
+                    <div className="bc-section-head">
+                        <span className="bc-eyebrow">Planning support</span>
+                        <h2>Seeing The Dose Before The Plan Exists</h2>
+                        <p>Most of the cost in replanning is the loop, not the work. Early estimates move the discovery of a problem earlier in that loop.</p>
+                    </div>
+                    <SpecGrid items={dosePrediction} />
+                </div>
+            </section>
+
+            {/* ── QA layer ── */}
+            <section className="bc-section bc-alt" id="qa">
+                <div className="bc-container">
+                    <div className="bc-section-head">
+                        <span className="bc-eyebrow">Quality assurance</span>
+                        <h2>What The QA Layer Actually Checks</h2>
+                        <p>Rule-based constraints with model-assisted anomaly detection, run before anything is finalised for the planning system.</p>
+                    </div>
+                    <SpecGrid items={qaLayer} />
+                </div>
+            </section>
+
             {/* ── Impact ── */}
-            <section className="bc-section bc-alt" id="impact">
+            <section className="bc-section" id="impact">
                 <div className="bc-container">
                     <div className="bc-section-head">
                         <span className="bc-eyebrow">Key outcomes</span>
@@ -296,8 +453,32 @@ const ProjectAutoContouring = () => {
                 </div>
             </section>
 
+            {/* ── Evidence standing ── */}
+            <section className="bc-section bc-alt" id="evidence">
+                <div className="bc-container">
+                    <div className="bc-section-head">
+                        <span className="bc-eyebrow">Claim discipline</span>
+                        <h2>Where The Evidence Actually Stands</h2>
+                        <p>Every headline number on this page, with the qualification it deserves. A projection and a measured result are different things, and we would rather say which is which.</p>
+                    </div>
+                    <SpecGrid items={evidence} />
+                </div>
+            </section>
+
+            {/* ── Boundaries ── */}
+            <section className="bc-section" id="boundaries">
+                <div className="bc-container">
+                    <div className="bc-section-head">
+                        <span className="bc-eyebrow">Scope</span>
+                        <h2>What This System Is Not</h2>
+                        <p>The limits are part of the design. In radiotherapy they are also the reason it is safe to use.</p>
+                    </div>
+                    <SpecGrid items={boundaries} />
+                </div>
+            </section>
+
             {/* ── Future ── */}
-            <section className="bc-section" id="future">
+            <section className="bc-section bc-alt" id="future">
                 <div className="bc-container">
                     <div className="bc-section-head">
                         <span className="bc-eyebrow">What&apos;s next</span>
@@ -331,7 +512,7 @@ const ProjectAutoContouring = () => {
             </section>
 
             {/* ── Team ── */}
-            <section className="bc-section bc-alt" id="team">
+            <section className="bc-section" id="team">
                 <div className="bc-container">
                     <div className="bc-section-head bc-left">
                         <span className="bc-eyebrow">Collaboration</span>

@@ -5,10 +5,13 @@
   <meta charset="UTF-8" />
   <link rel="icon" type="image/png" sizes="56x56" href="/assets/images/big_matrix_cube.png" />
   <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-  <meta name="description"
-    content="Big-Matrix Research & Development Lab - Revolutionizing healthcare through AI, machine learning, and advanced data analytics solutions." />
   <title>Big-Matrix Solutions</title>
-  <link rel="canonical" href="https://big-matrix.com/" />
+  <!--
+    Title, description and canonical are set per route by src/components/Seo.jsx.
+    They are deliberately absent here: a static canonical would point every URL
+    at the homepage, and a static description would duplicate Helmet's.
+    Googlebot renders JavaScript, so per-page tags are seen.
+  -->
 
   <!--
     Social preview (Open Graph + Twitter Card).

@@ -4,6 +4,7 @@ import Breadcrumb from '../components/Breadcrumb';
 import SectionHead from '../components/SectionHead';
 import careersData from '../data/careers.json';
 import CtaBand from '../components/CtaBand';
+import Seo from '../components/Seo';
 
 const isDeadlinePassed = (deadline) => {
     if (!deadline) return false;
@@ -11,6 +12,19 @@ const isDeadlinePassed = (deadline) => {
     date.setHours(23, 59, 59, 999);
     return new Date() > date;
 };
+
+/* A closed role stays on the page for a week so anyone following a link still
+   sees what happened to it, then drops off on its own. No edit required. */
+const HIDE_AFTER_DAYS = 7;
+
+const isRetired = (deadline) => {
+    if (!deadline) return false;
+    const date = new Date(deadline);
+    date.setHours(23, 59, 59, 999);
+    return new Date() > new Date(date.getTime() + HIDE_AFTER_DAYS * 86400000);
+};
+
+const LINKEDIN = 'https://www.linkedin.com/company/big-matrix-solutions/posts/?viewAsMember=true';
 
 const formatDeadline = (deadline) =>
     deadline
@@ -28,7 +42,10 @@ const Careers = () => {
     const [openOnly, setOpenOnly] = useState(false);
 
     const jobs = useMemo(
-        () => careersData.map((job) => ({ ...job, closed: isDeadlinePassed(job.deadline) })),
+        () =>
+            careersData
+                .filter((job) => !isRetired(job.deadline))
+                .map((job) => ({ ...job, closed: isDeadlinePassed(job.deadline) })),
         []
     );
 
@@ -44,6 +61,11 @@ const Careers = () => {
         (job) => (type === ALL || job.type === type) && (!openOnly || !job.closed)
     );
 
+    // There are listings, but the current filter hides all of them. That is a
+    // different message from "nothing is open", and only one of the two ever
+    // shows, so the page never stacks two notice cards.
+    const filteredOut = jobs.length > 0 && visible.length === 0;
+
     const reset = () => {
         setType(ALL);
         setOpenOnly(false);
@@ -51,6 +73,11 @@ const Careers = () => {
 
     return (
         <>
+            <Seo
+                title="Careers"
+                description="Open roles at Big-Matrix Solutions. Build AI systems that reach real clinicians, real factories and real patients."
+                path="/careers"
+            />
             <Breadcrumb pageTitle="Build systems that matter" breadcrumbItem="Careers" />
 
             <section className="bm-section">
@@ -62,7 +89,7 @@ const Careers = () => {
                                 ? `${openCount} role${openCount === 1 ? '' : 's'} open right now`
                                 : 'No roles open at the moment'
                         }
-                        lead="We are a small team shipping software into hospitals, labs and factory floors. If that appeals, take a look."
+                        lead="We are a team shipping software clients. If that sounds like your kind of work, take a look."
                     />
 
                     {jobs.length > 0 && (
@@ -106,25 +133,14 @@ const Careers = () => {
                         </div>
                     )}
 
-                    {visible.length === 0 ? (
+                    {filteredOut ? (
                         <div className="bm-jobs__empty">
-                            <p>
-                                {jobs.length === 0
-                                    ? 'There are no listings right now. We still like hearing from good engineers.'
-                                    : 'No roles match that filter.'}
-                            </p>
-                            {jobs.length > 0 ? (
-                                <button type="button" className="bm-button bm-button--ghost" onClick={reset}>
-                                    Clear filters
-                                </button>
-                            ) : (
-                                <Link to="/contact" className="bm-button bm-button--ghost">
-                                    Get in touch
-                                    <i className="bi bi-arrow-right" aria-hidden="true"></i>
-                                </Link>
-                            )}
+                            <p>No roles match that filter.</p>
+                            <button type="button" className="bm-button bm-button--ghost" onClick={reset}>
+                                Clear filters
+                            </button>
                         </div>
-                    ) : (
+                    ) : visible.length > 0 ? (
                         <div className="bm-jobs">
                             {visible.map((job) => (
                                 <article
@@ -204,6 +220,40 @@ const Careers = () => {
                                 </article>
                             ))}
                         </div>
+                    ) : null}
+
+                    {/* Nothing to apply for, either because the board is empty or
+                        the only listings left are closed. One card carries both
+                        the follow prompt and the open invitation, so an empty
+                        board never shows two panels saying much the same thing. */}
+                    {openCount === 0 && !filteredOut && (
+                        <aside className="bm-tuned">
+                            <div className="bm-tuned__body">
+                                <p className="bm-tuned__eyebrow">Stay tuned</p>
+                                <h3 className="bm-tuned__title">New roles go up on LinkedIn first</h3>
+                                <p className="bm-tuned__text">
+                                    Follow the page and you will see an opening the day it goes
+                                    live, before it reaches this board. We still like hearing from
+                                    good engineers between postings.
+                                </p>
+                            </div>
+
+                            <div className="bm-tuned__actions">
+                                <a
+                                    className="bm-tuned__cta"
+                                    href={LINKEDIN}
+                                    target="_blank"
+                                    rel="noopener noreferrer"
+                                >
+                                    Follow on LinkedIn
+                                    <i className="bi bi-box-arrow-up-right" aria-hidden="true"></i>
+                                </a>
+                                <Link to="/contact" className="bm-button bm-button--ghost">
+                                    Get in touch
+                                    <i className="bi bi-arrow-right" aria-hidden="true"></i>
+                                </Link>
+                            </div>
+                        </aside>
                     )}
                 </div>
             </section>

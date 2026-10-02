@@ -1,10 +1,11 @@
 import '../../assets/css/ProjectShowcase.css';
 import ShowcaseFacts from '../../components/showcase/ShowcaseFacts';
 import CtaBand from '../../components/CtaBand';
+import Seo from '../../components/Seo';
 
 const heroStats = [
     { icon: 'bi bi-arrow-repeat', num: 'Full Loop', label: 'Public booking, appointment, consultation, prescription, records, billing and follow-up in one platform' },
-    { icon: 'bi bi-file-earmark-medical', num: '8 / 6', label: 'Prescription templates and designs, assigned per doctor without a code fork' },
+    { icon: 'bi bi-file-earmark-medical', num: '8+', label: 'Prescription templates and designs, assigned per doctor without a code fork' },
     { icon: 'bi bi-capsule', num: '21,600+', label: 'Brand-name drugs with brand-first autocomplete across ~1,660 generics' },
     { icon: 'bi bi-translate', num: 'Bilingual', label: 'English and Bangla throughout, including printed prescriptions' },
 ];
@@ -46,7 +47,7 @@ const capabilities = [
     { icon: 'bi bi-geo-alt', title: 'Multi-Chamber Booking', desc: 'Clinic, portal, phone and walk-in sources. Per-branch schedules, fees, availability and collision detection from one account.' },
     { icon: 'bi bi-receipt', title: 'Invoicing With PDF', desc: 'Sequential codes, line items, discount and tax, and a server-rendered invoice PDF. Payments are recorded by hand against cash, card, bKash, Nagad, Rocket or bank.' },
     { icon: 'bi bi-people', title: 'Staff Permissions And Approval', desc: 'Nine independent capability flags, branch scoping, and a unified doctor inbox so drafts do not go live until they are approved.' },
-    { icon: 'bi bi-person-vcard', title: 'Global Patient Records', desc: 'One row per person, shared across clinics and cities, with explicit consent, OTP-verified access requests and a full access audit log.' },
+    { icon: 'bi bi-person', title: 'Global Patient Records', desc: 'One row per person, shared across clinics and cities, with explicit consent, OTP-verified access requests and a full access audit log.' },
     { icon: 'bi bi-file-earmark-arrow-up', title: 'Document OCR And Auto-Promotion', desc: 'A scanned lab report becomes structured parameters; a scanned prescription becomes a real prescription the doctor can pull into the form.' },
     { icon: 'bi bi-robot', title: 'Doctor AI Assistant', desc: 'Plain-language questions over authorised patient history only. Decision support — the clinician verifies the output.' },
     { icon: 'bi bi-camera-video', title: 'Invite-Link Video Consults', desc: 'The doctor starts a call; the patient joins from a browser with no login and no app install.' },
@@ -225,6 +226,11 @@ const SpecGrid = ({ items }) => (
 const ProjectRxCloud = () => {
     return (
         <>
+            <Seo
+                title="RxCloud practice management"
+                description="Patients, appointments, prescriptions and billing in one platform, with direct patient booking. Practice management doctors actually trust."
+                path="/project/rxcloud"
+            />
         <div className="bc-showcase">
 
             {/* ── Hero ── */}
@@ -244,7 +250,7 @@ const ProjectRxCloud = () => {
                         <figure className="bc-hero-figure">
                             <a
                                 className="bc-hero-figure__link"
-                                href="https://rxcloud.care/"
+                                href="https://www.rxcloud.care/"
                                 target="_blank"
                                 rel="noopener noreferrer"
                                 aria-label="Open the live RxCloud platform at rxcloud.care in a new tab"
@@ -509,7 +515,7 @@ const ProjectRxCloud = () => {
             </section>
 
             {/* ── Architecture ── */}
-            <section className="bc-section bc-alt" id="architecture">
+            {/* <section className="bc-section bc-alt" id="architecture">
                 <div className="bc-container">
                     <div className="bc-section-head">
                         <span className="bc-eyebrow">How it is built</span>
@@ -531,7 +537,7 @@ const ProjectRxCloud = () => {
                         ))}
                     </div>
                 </div>
-            </section>
+            </section> */}
 
             {/* ── Numbers ── */}
             {/* <section className="bc-section" id="numbers">
@@ -588,7 +594,7 @@ const ProjectRxCloud = () => {
                     </div>
 
                     <div className="bc-pub" style={{ marginTop: '48px' }}>
-                        <span className="bc-pub-icon"><i className="bi bi-hospital"></i></span>
+                        <span className="bc-pub-icon"><img src="https://tousifurrahman.rxcloud.care/doctors/logo.png" alt="" /></span>
                         <div>
                             <div className="bc-pub-label">Try it live</div>
                             <h4>RxCloud is live at rxcloud.care</h4>
@@ -596,7 +602,7 @@ const ProjectRxCloud = () => {
                                 Submit the Start your service form to plan a setup. Every doctor site is
                                 a working demo of the public booking loop.
                             </p>
-                            <a className="bc-pub-status" href="https://rxcloud.care/" target="_blank" rel="noopener noreferrer">
+                            <a className="bc-pub-status" href="https://www.rxcloud.care/" target="_blank" rel="noopener noreferrer">
                                 <i className="bi bi-box-arrow-up-right"></i> rxcloud.care
                             </a>
                         </div>

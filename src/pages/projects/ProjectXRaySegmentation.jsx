@@ -1,6 +1,7 @@
 import '../../assets/css/ProjectShowcase.css';
 import ShowcaseFacts from '../../components/showcase/ShowcaseFacts';
 import CtaBand from '../../components/CtaBand';
+import Seo from '../../components/Seo';
 
 const heroStats = [
     { icon: 'bi bi-lightning-charge', num: '<20s', label: 'Average time to generate an initial segmentation pass from a single upload' },
@@ -102,6 +103,121 @@ const benefits = [
     'Supports repeatable quality-control workflows for both research and production deployment pipelines.',
 ];
 
+const packageContents = [
+    {
+        icon: 'bi bi-image',
+        title: 'The Source Image',
+        desc: 'The original X-ray travels with its masks rather than being referenced by a path that will eventually break. A package that assumes the image is still where it was six months ago is a package that stops working the first time a folder is reorganised.',
+    },
+    {
+        icon: 'bi bi-layers',
+        title: 'Mask Files Per Region',
+        desc: 'Each anatomy region is stored as its own mask rather than flattened into a single indexed image, so a downstream team can take the lungs and ignore everything else without decoding a colour table to work out which value meant what.',
+    },
+    {
+        icon: 'bi bi-eye',
+        title: 'A Rendered Overlay',
+        desc: 'A composed view of masks over the image, so a reviewer can judge a case at a glance without loading it into anything. It is the artefact that makes a package reviewable by someone who does not have the editor open.',
+    },
+    {
+        icon: 'bi bi-file-earmark-code',
+        title: 'The Manifest',
+        desc: 'Labels, colours, layer order and the source image reference. This is the part that turns a folder of files into a session: load the ZIP back and the case reopens exactly as it was left, months later and on someone else\'s machine.',
+    },
+];
+
+const roles = [
+    {
+        icon: 'bi bi-person-badge',
+        title: 'The Clinical Reviewer',
+        desc: 'Judges whether a boundary is anatomically right. They need layer visibility, overlay inspection and a way to correct a mask directly, and they should not need a command line or a Python environment to do any of it.',
+    },
+    {
+        icon: 'bi bi-kanban',
+        title: 'The Annotation Team',
+        desc: 'Works through volume. They need auto-segmentation to remove the drawing-from-scratch cost, brush and erase for the cases the model gets wrong, and undo so a slip does not cost a session.',
+    },
+    {
+        icon: 'bi bi-cpu',
+        title: 'The AI Engineer',
+        desc: 'Consumes the output in batches. They need a fixed schema, consistent naming and predictable structure, so a cohort can be processed programmatically without opening cases one at a time to check what is inside.',
+    },
+    {
+        icon: 'bi bi-arrow-left-right',
+        title: 'Why One Interface Matters',
+        desc: 'These three groups are rarely the same people. When each has its own tooling, every review cycle costs a translation step and a file handoff, and the errors live in the gaps. A shared workspace removes the gap rather than documenting it.',
+    },
+];
+
+const consistency = [
+    {
+        icon: 'bi bi-tag',
+        title: 'Names Are Assigned, Not Typed',
+        desc: 'One annotator writes left_lung and another writes lung_L, and a dataset built from both trains a model against two labels for one structure. Segment names come from the tool rather than from whoever is working, which removes the failure entirely rather than documenting a convention nobody reads.',
+    },
+    {
+        icon: 'bi bi-palette',
+        title: 'Colour Means The Same Thing Every Time',
+        desc: 'Each anatomy region carries a fixed colour across every case and every session. A reviewer builds an instinct for what they are looking at, and a colour that shifts between cases quietly destroys that.',
+    },
+    {
+        icon: 'bi bi-bounding-box',
+        title: 'Boundary Decisions Are Visible',
+        desc: 'Whether the lung boundary runs to the costal margin or stops short of it is a real disagreement between annotators. Seeing masks layered against each other in context is what turns that into a decision a team can make once rather than a difference nobody notices until the model behaves oddly.',
+    },
+    {
+        icon: 'bi bi-box-seam',
+        title: 'One Structure, Every Export',
+        desc: 'Same layout, same naming, same manifest schema on every package. A batch from three annotators across three weeks processes identically, which is the difference between a dataset and a pile of folders.',
+    },
+];
+
+const evidence = [
+    {
+        icon: 'bi bi-stopwatch',
+        title: 'What The 20 Seconds Covers',
+        desc: 'Under 20 seconds is the stated average for the initial automated pass on a single upload. It does not include the manual refinement that follows, and it is an average rather than a guarantee across every image quality, resolution and source device.',
+    },
+    {
+        icon: 'bi bi-layers',
+        title: 'Anatomy Coverage',
+        desc: 'The editor supports 12 or more colour-coded regions. Lungs, heart silhouette, clavicles and diaphragm are the documented structures; we do not publish a full named list here, because the supported set moves as the tool is developed and a stale list is worse than a count.',
+    },
+    {
+        icon: 'bi bi-hourglass-split',
+        title: 'Status Is Ongoing',
+        desc: 'This is an actively developed tool rather than a finished product. Everything in the future directions section is planned work and none of it is available today.',
+    },
+    {
+        icon: 'bi bi-shield-lock',
+        title: 'The Partner Is Unnamed Deliberately',
+        desc: 'The healthcare partner behind this work is not identified here. We name clients only where they have explicitly agreed to be named in published material, and that agreement is theirs to give rather than ours to assume.',
+    },
+];
+
+const boundaries = [
+    {
+        icon: 'bi bi-x-circle',
+        title: 'It Does Not Diagnose',
+        desc: 'This is an annotation and dataset tool. It delineates anatomy so that models can be trained and evaluated. It makes no clinical finding, offers no interpretation, and is not part of a diagnostic pathway.',
+    },
+    {
+        icon: 'bi bi-person-check',
+        title: 'The AI Generates, The Expert Decides',
+        desc: 'Auto-segmentation produces a starting point on every case. A human reviews and corrects it, and nothing enters a dataset on the model\'s say-so alone. A tool that quietly accepted its own output would industrialise its own mistakes.',
+    },
+    {
+        icon: 'bi bi-file-earmark-x',
+        title: 'Not A PACS Or An Archive',
+        desc: 'Cases travel as exported packages. Direct PACS integration is planned work rather than a current capability, so today the tool sits beside clinical systems rather than inside them.',
+    },
+    {
+        icon: 'bi bi-graph-up',
+        title: 'Annotation Quality Is Still A Human Problem',
+        desc: 'Consistent tooling removes the mechanical sources of disagreement: naming, colour, format. It does not settle where a boundary genuinely belongs. That remains a clinical judgment the team has to align on, and the tool makes it visible rather than deciding it.',
+    },
+];
+
 const futureDirections = [
     'Active-learning loop to prioritise difficult cases and improve model performance over time.',
     'Expanded anatomy library for broader thoracic findings and pathology-focused segment classes.',
@@ -132,6 +248,11 @@ const SpecGrid = ({ items }) => (
 const ProjectXRaySegmentation = () => {
     return (
         <>
+            <Seo
+                title="X-ray segmentation editor"
+                description="A browser workspace for reviewing, correcting and packaging chest X-ray segmentations, with an AI starting point generated in under 20 seconds."
+                path="/project/x-ray-segmentation-editor"
+            />
         <div className="bc-showcase">
 
             {/* ── Hero ── */}
@@ -288,8 +409,44 @@ const ProjectXRaySegmentation = () => {
                 </div>
             </section>
 
+            {/* ── Package contents ── */}
+            <section className="bc-section bc-alt" id="package">
+                <div className="bc-container">
+                    <div className="bc-section-head">
+                        <span className="bc-eyebrow">The deliverable</span>
+                        <h2>What Travels In A Case Package</h2>
+                        <p>Four things, always in the same shape. This is what makes a case reopenable months later and processable in a batch.</p>
+                    </div>
+                    <SpecGrid items={packageContents} />
+                </div>
+            </section>
+
+            {/* ── Consistency ── */}
+            <section className="bc-section" id="consistency">
+                <div className="bc-container">
+                    <div className="bc-section-head">
+                        <span className="bc-eyebrow">Label discipline</span>
+                        <h2>Consistency Enforced By The Tool</h2>
+                        <p>Annotation conventions written in a document drift. Conventions built into the interface do not.</p>
+                    </div>
+                    <SpecGrid items={consistency} />
+                </div>
+            </section>
+
+            {/* ── Roles ── */}
+            <section className="bc-section bc-alt" id="roles">
+                <div className="bc-container">
+                    <div className="bc-section-head">
+                        <span className="bc-eyebrow">Who uses it</span>
+                        <h2>Three Roles, One Interface</h2>
+                        <p>The people who can judge a segmentation are rarely the people who process the dataset. The tool has to serve both without either learning the other&rsquo;s tooling.</p>
+                    </div>
+                    <SpecGrid items={roles} />
+                </div>
+            </section>
+
             {/* ── Impact ── */}
-            <section className="bc-section bc-alt" id="impact">
+            <section className="bc-section" id="impact">
                 <div className="bc-container">
                     <div className="bc-section-head">
                         <span className="bc-eyebrow">Key outcomes</span>
@@ -307,8 +464,32 @@ const ProjectXRaySegmentation = () => {
                 </div>
             </section>
 
+            {/* ── Evidence standing ── */}
+            <section className="bc-section bc-alt" id="evidence">
+                <div className="bc-container">
+                    <div className="bc-section-head">
+                        <span className="bc-eyebrow">Claim discipline</span>
+                        <h2>Where The Evidence Actually Stands</h2>
+                        <p>Every headline number on this page, with the qualification it deserves.</p>
+                    </div>
+                    <SpecGrid items={evidence} />
+                </div>
+            </section>
+
+            {/* ── Boundaries ── */}
+            <section className="bc-section" id="boundaries">
+                <div className="bc-container">
+                    <div className="bc-section-head">
+                        <span className="bc-eyebrow">Scope</span>
+                        <h2>What This Tool Is Not</h2>
+                        <p>It builds the data that diagnostic models learn from. It is not one of them.</p>
+                    </div>
+                    <SpecGrid items={boundaries} />
+                </div>
+            </section>
+
             {/* ── Future ── */}
-            <section className="bc-section" id="future">
+            <section className="bc-section bc-alt" id="future">
                 <div className="bc-container">
                     <div className="bc-section-head">
                         <span className="bc-eyebrow">What&apos;s next</span>
@@ -346,7 +527,7 @@ const ProjectXRaySegmentation = () => {
             </section>
 
             {/* ── Team ── */}
-            <section className="bc-section bc-alt" id="team">
+            <section className="bc-section" id="team">
                 <div className="bc-container">
                     <div className="bc-section-head bc-left">
                         <span className="bc-eyebrow">Collaboration</span>

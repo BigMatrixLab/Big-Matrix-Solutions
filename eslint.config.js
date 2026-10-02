@@ -26,4 +26,14 @@ export default defineConfig([
       'no-unused-vars': ['error', { varsIgnorePattern: '^[A-Z_]' }],
     },
   },
+  {
+    /* Build and dev tooling runs in Node, not the browser, so it needs Node
+       globals (process, Buffer, __dirname). The block above supplies browser
+       globals, which is right for src/ and for functions/ — Cloudflare Workers
+       expose fetch, Request/Response, crypto and Intl, not Node's. */
+    files: ['scripts/**/*.js', 'vite.config.js', 'eslint.config.js'],
+    languageOptions: {
+      globals: globals.node,
+    },
+  },
 ])

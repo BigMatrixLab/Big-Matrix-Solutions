@@ -5,16 +5,20 @@ import MarkdownRenderer from '../components/MarkdownRenderer';
 import CtaBand from '../components/CtaBand';
 import { servicesData } from '../data/content';
 import { enrichSolutionHtml } from '../utils/docEnrich';
+import { orderedServices, padIndex } from '../utils/serviceOrder';
+import Seo from '../components/Seo';
+import { graph, service as serviceSchema, breadcrumbs } from '../utils/structuredData';
 
-const PHONE_LABEL = '+880 2 55668200 (6212)';
-const PHONE_HREF = 'tel:+880255668200';
-const EMAIL = 'bigmatrixsolutions@gmail.com';
-
-const pad = (value) => String(value).padStart(2, '0');
+const PHONE_LABEL = '+880 1339 870730';
+const PHONE_HREF = 'tel:+8801339870730';
+const EMAIL = 'contact@big-matrix.com';
 
 const ServiceDetails = () => {
     const { slug } = useParams();
     const service = servicesData.find((s) => s.slug === slug);
+
+    // Catalogue order and numbering, so the rail matches /service exactly.
+    const index = orderedServices(servicesData);
 
     const listRef = useRef(null);
     const currentRef = useRef(null);
@@ -33,6 +37,7 @@ const ServiceDetails = () => {
     if (!service) {
         return (
             <>
+                <Seo title="Solution not found" path={`/service/${slug}`} noindex />
                 <Breadcrumb pageTitle="Solution not found" breadcrumbItem="Solutions" />
                 <section className="bm-section">
                     <div className="bm-container">
@@ -52,6 +57,19 @@ const ServiceDetails = () => {
     return (
         <>
             <Breadcrumb pageTitle={service.title} breadcrumbItem="Solutions" />
+            <Seo
+                title={service.title}
+                description={service.desc}
+                path={`/service/${service.slug}`}
+                schema={graph(
+                    serviceSchema(service),
+                    breadcrumbs([
+                        { name: 'Home', path: '/' },
+                        { name: 'Solutions', path: '/service' },
+                        { name: service.title, path: `/service/${service.slug}` },
+                    ])
+                )}
+            />
 
             <section className="bm-section bm-doc">
                 <div className="bm-container">
@@ -75,7 +93,7 @@ const ServiceDetails = () => {
                             <nav className="bm-doc__index" aria-label="All solutions">
                                 <p className="bm-doc__index-label">Solutions index</p>
                                 <ul ref={listRef}>
-                                    {servicesData.map((item) => {
+                                    {index.map((item) => {
                                         const current = item.slug === service.slug;
                                         return (
                                             <li key={item.slug} ref={current ? currentRef : undefined}>
@@ -84,7 +102,7 @@ const ServiceDetails = () => {
                                                     className={current ? 'is-current' : undefined}
                                                     aria-current={current ? 'page' : undefined}
                                                 >
-                                                    <em>{pad(item.id)}</em>
+                                                    <em>{padIndex(item.n)}</em>
                                                     <span>{item.title}</span>
                                                 </Link>
                                             </li>

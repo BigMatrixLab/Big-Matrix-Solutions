@@ -1,6 +1,7 @@
 import '../../assets/css/ProjectShowcase.css';
 import ShowcaseFacts from '../../components/showcase/ShowcaseFacts';
 import CtaBand from '../../components/CtaBand';
+import Seo from '../../components/Seo';
 
 const heroStats = [
     { icon: 'bi bi-stopwatch', num: '50–70%', label: 'Projected reduction in manual CT reading and reporting time per case' },
@@ -102,6 +103,98 @@ const benefits = [
     'Supports seamless integration with standard PACS, RIS and hospital speech-recognition ecosystems.',
 ];
 
+const characterisation = [
+    {
+        icon: 'bi bi-circle-half',
+        title: 'Density Category',
+        desc: 'Solid, part-solid or ground-glass. This is the first branch in almost every follow-up decision, because the three categories carry different growth behaviour and different surveillance intervals, and a part-solid nodule is not a solid one with less contrast.',
+    },
+    {
+        icon: 'bi bi-bounding-box-circles',
+        title: 'Shape Characteristics',
+        desc: 'Round, lobulated or spiculated. Margin morphology is one of the stronger visual predictors available from the image alone, and describing it consistently is exactly the kind of judgment that drifts between readers and between sessions.',
+    },
+    {
+        icon: 'bi bi-geo',
+        title: 'Anatomical Location',
+        desc: 'Lobe and segment, plus the relationship to pleura and airways. Location changes both the differential and the practicality of biopsy, and it is tedious enough to state precisely that it is often stated loosely.',
+    },
+    {
+        icon: 'bi bi-speedometer2',
+        title: 'Malignancy Risk Score',
+        desc: 'A risk score computed from the characterisation above, following established screening guidance so the output lands in a decision pathway the clinician already follows rather than a private scale that has to be interpreted.',
+    },
+];
+
+const reportAnatomy = [
+    {
+        icon: 'bi bi-rulers',
+        title: 'Volumetric Measurements',
+        desc: 'Measured from the three-dimensional object rather than estimated from a single axial slice, which is what makes the number comparable to the same nodule measured on a different study by a different reader.',
+    },
+    {
+        icon: 'bi bi-list-check',
+        title: 'Structured Findings Per Nodule',
+        desc: 'Each detected nodule carries its density, shape, location and risk in a consistent structure, so a report reads the same way whoever signs it and whatever week it was produced.',
+    },
+    {
+        icon: 'bi bi-arrow-left-right',
+        title: 'Comparison Against Priors',
+        desc: 'Size change and volume doubling time computed against previous studies, with cases flagged where growth crosses a clinical action threshold. This is the part radiologists currently do by retrieving old reports by hand.',
+    },
+    {
+        icon: 'bi bi-pencil',
+        title: 'An Editable Narrative',
+        desc: 'The natural-language draft follows the reporting conventions of the deploying institution and stays fully editable. The radiologist is handed a starting document, never a locked output, and the signature remains theirs.',
+    },
+];
+
+const evidence = [
+    {
+        icon: 'bi bi-graph-down-arrow',
+        title: 'The Time Saving Is Projected',
+        desc: 'The 50–70% reduction in reporting time is a projection consistent with the AI-assisted radiology literature. It is not a measured result from clinical validation of this system, and it will be replaced with measured data once that validation produces some.',
+    },
+    {
+        icon: 'bi bi-hammer',
+        title: 'Status Is In Development',
+        desc: 'The system is in development and moving through validation. It is not in routine clinical use, and nothing here describes a tool currently reporting on patients outside a validation setting.',
+    },
+    {
+        icon: 'bi bi-shield-exclamation',
+        title: 'QA-Ready Is Not A Clearance',
+        desc: 'The automated quality layer describes how the software is built. It carries no implication of FDA 510(k) clearance, CE marking or any other regulatory approval, and we do not present it as one.',
+    },
+    {
+        icon: 'bi bi-clipboard-data',
+        title: 'Guideline Conformance Is Not Yet Claimed',
+        desc: 'Risk scoring is designed around established screening guidance, but we do not assert conformance with any named guideline framework. That is a validation question for the clinical team, and stating it before it is confirmed would be the easiest claim on this page to get wrong.',
+    },
+];
+
+const boundaries = [
+    {
+        icon: 'bi bi-person-check',
+        title: 'The Radiologist Reports',
+        desc: 'The system detects, measures, characterises and drafts. A qualified reader reviews every finding and signs the report. Nothing becomes a clinical document without that step.',
+    },
+    {
+        icon: 'bi bi-x-circle',
+        title: 'Not A Screening Programme',
+        desc: 'It supports interpretation of chest CT studies that are already being acquired and read. It does not decide who is scanned, and it does not replace a reader in the pathway.',
+    },
+    {
+        icon: 'bi bi-eye',
+        title: 'Detection Is Not Diagnosis',
+        desc: 'A risk score is a prioritisation aid computed from imaging features. It is not a tissue diagnosis, and the distinction matters most exactly where the score is highest.',
+    },
+    {
+        icon: 'bi bi-buildings',
+        title: 'Cross-Site Behaviour Is Open',
+        desc: 'Chest CT varies by scanner, reconstruction kernel and acquisition protocol, and that variation is the usual cause of degradation when imaging models move between departments. Multi-site validation is planned work, not finished work.',
+    },
+];
+
 const futureDirections = [
     'Expand segmentation and reporting coverage for interstitial lung diseases, COPD and cardiac scoring.',
     'Integrate longitudinal prior-exam comparison for automated tracking of disease progression.',
@@ -132,6 +225,11 @@ const SpecGrid = ({ items }) => (
 const ProjectLungCTReport = () => {
     return (
         <>
+            <Seo
+                title="Lung CT report generation"
+                description="AI-assisted lung nodule detection, volumetric segmentation and automated report generation, handing the radiologist a structured draft to verify."
+                path="/project/lung-ct-report-generation"
+            />
         <div className="bc-showcase">
 
             {/* ── Hero ── */}
@@ -278,6 +376,30 @@ const ProjectLungCTReport = () => {
                 </div>
             </section>
 
+            {/* ── Characterisation ── */}
+            <section className="bc-section bc-alt" id="characterisation">
+                <div className="bc-container">
+                    <div className="bc-section-head">
+                        <span className="bc-eyebrow">Nodule characterisation</span>
+                        <h2>Four Axes Per Nodule</h2>
+                        <p>Detection is the easy half. What a nodule is, and what should happen next, comes from describing it consistently.</p>
+                    </div>
+                    <SpecGrid items={characterisation} />
+                </div>
+            </section>
+
+            {/* ── Report anatomy ── */}
+            <section className="bc-section" id="report">
+                <div className="bc-container">
+                    <div className="bc-section-head">
+                        <span className="bc-eyebrow">The output</span>
+                        <h2>What Lands On The Radiologist&rsquo;s Screen</h2>
+                        <p>The draft report is the deliverable, and every element in it traces back to something measured on the volume.</p>
+                    </div>
+                    <SpecGrid items={reportAnatomy} />
+                </div>
+            </section>
+
             {/* ── Impact ── */}
             <section className="bc-section bc-alt" id="impact">
                 <div className="bc-container">
@@ -294,6 +416,30 @@ const ProjectLungCTReport = () => {
                             </div>
                         ))}
                     </div>
+                </div>
+            </section>
+
+            {/* ── Evidence standing ── */}
+            <section className="bc-section" id="evidence">
+                <div className="bc-container">
+                    <div className="bc-section-head">
+                        <span className="bc-eyebrow">Claim discipline</span>
+                        <h2>Where The Evidence Actually Stands</h2>
+                        <p>Every headline number on this page, with the qualification it deserves. A projection and a measured result are different things.</p>
+                    </div>
+                    <SpecGrid items={evidence} />
+                </div>
+            </section>
+
+            {/* ── Boundaries ── */}
+            <section className="bc-section bc-alt" id="boundaries">
+                <div className="bc-container">
+                    <div className="bc-section-head">
+                        <span className="bc-eyebrow">Scope</span>
+                        <h2>What This System Is Not</h2>
+                        <p>The limits are part of the design rather than an omission from it.</p>
+                    </div>
+                    <SpecGrid items={boundaries} />
                 </div>
             </section>
 

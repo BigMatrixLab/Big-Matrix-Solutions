@@ -1,12 +1,13 @@
 import '../../assets/css/ProjectShowcase.css';
 import ShowcaseFacts from '../../components/showcase/ShowcaseFacts';
 import CtaBand from '../../components/CtaBand';
+import Seo from '../../components/Seo';
 
 const heroStats = [
     { icon: 'bi bi-kanban', num: '1 Hub', label: 'Centralised workspace for projects, tasks and updates across every initiative' },
     { icon: 'bi bi-clock-history', num: 'Real-time', label: 'Deadline visibility and progress tracking without manual status requests' },
     { icon: 'bi bi-people', num: 'Cross-Team', label: 'Workload visibility across engineering and product streams' },
-    { icon: 'bi bi-calendar3', num: '3 Months', label: 'From first commit to active internal use — Feb to Apr 2026' },
+    { icon: 'bi bi-recycle', num: 'Daily Use', label: 'Every client engagement and R&D project in the lab runs through it' },
 ];
 
 const projectFacts = [
@@ -102,6 +103,98 @@ const benefits = [
     'Creates a repeatable execution model that applies consistently across all internal product and R&D initiatives.',
 ];
 
+const workloadView = [
+    {
+        icon: 'bi bi-person-lines-fill',
+        title: 'Capacity Per Contributor, Not Per Project',
+        desc: 'Engineers here move between a SaaS product, a research programme and a client engagement in the same week. A per-project view shows each of those as healthy while the person sitting in all three is underwater. The workload view is organised around people for exactly that reason.',
+    },
+    {
+        icon: 'bi bi-exclamation-diamond',
+        title: 'Overload And Idle Capacity In One Place',
+        desc: 'Both failure modes appear in the same panel. Spotting someone with nothing queued is as useful as spotting someone with too much, and asking around for either is the coordination cost the platform exists to remove.',
+    },
+    {
+        icon: 'bi bi-arrow-left-right',
+        title: 'Rebalancing Before The Milestone, Not After',
+        desc: 'Workload review is a stage in the workflow rather than something that happens when a deadline is already missed. The point is to move work while moving it still helps.',
+    },
+    {
+        icon: 'bi bi-eye',
+        title: 'Visible Without Being Requested',
+        desc: 'Nobody has to compile a status update for this to be accurate. It reflects the same task records people are already updating as they work, which is the only way a shared picture stays current.',
+    },
+];
+
+const buildVsBuy = [
+    {
+        icon: 'bi bi-check-circle',
+        title: 'When Buying Is The Right Call',
+        desc: 'If your projects share a shape, your team stays on one project at a time, and a mature tool fits within configuration, buy it. You will get more features than you can build, maintained by someone else, on the day you sign. Most teams are in this position and should act accordingly.',
+    },
+    {
+        icon: 'bi bi-diagram-2',
+        title: 'What Pushed Us The Other Way',
+        desc: 'Concurrent R&D initiatives with non-standard lifecycles, contributors who move between projects continuously, and workload visibility that needed to be real rather than assembled by hand. Those three together sat outside what configuration could reach.',
+    },
+    {
+        icon: 'bi bi-scissors',
+        title: 'The Scope Was The Hard Part',
+        desc: 'Three months to daily use means the specification was narrow and the tradeoffs were made early. The failure mode of internal tooling is not building it badly, it is building the general-purpose product nobody asked for and never finishing.',
+    },
+    {
+        icon: 'bi bi-wrench-adjustable',
+        title: 'The Ongoing Cost Is Real',
+        desc: 'Building means owning the maintenance, the upgrades and the support forever. That is a genuine cost and it should be counted honestly on the way in. We took it on because the tool is used every day by the team that maintains it, which is the case where it pays.',
+    },
+];
+
+const evidence = [
+    {
+        icon: 'bi bi-house',
+        title: 'This Is Internal Tooling',
+        desc: 'It was purpose-built for how this team operates, not designed as a general-purpose product. It is presented here as evidence of how we scope and ship, not as software being offered for sale.',
+    },
+    {
+        icon: 'bi bi-bar-chart',
+        title: 'No Efficiency Percentages',
+        desc: 'Coordination overhead is lower and the shared picture of the schedule is current rather than stale. Those are things the team can speak to from daily use. We have not measured a delivery-speed improvement, so we do not publish one.',
+    },
+    {
+        icon: 'bi bi-calendar-check',
+        title: 'Three Months, And Then Daily Use',
+        desc: 'February to April 2026 from inception to active internal use. That timeline is verifiable against the platform itself, and it is the claim on this page we would most like to be judged on.',
+    },
+    {
+        icon: 'bi bi-people',
+        title: 'One Team, One Operating Context',
+        desc: 'Everything here is validated against a single organisation running its own projects. It has not been deployed to another company, and we make no claim about how it would behave in one.',
+    },
+];
+
+const boundaries = [
+    {
+        icon: 'bi bi-x-circle',
+        title: 'Not A Product You Can Buy',
+        desc: 'There is no commercial version, no pricing page and no support offering. If you want a project management tool, we will point you at one that exists.',
+    },
+    {
+        icon: 'bi bi-tools',
+        title: 'Not A General-Purpose Platform',
+        desc: 'It fits our lifecycles, our roles and our reporting needs. Another organisation with a different shape of work would need something different, which is precisely the argument we made to ourselves before building it.',
+    },
+    {
+        icon: 'bi bi-shield-lock',
+        title: 'The Live Link Is Access Controlled',
+        desc: 'pm.big-matrix.com runs real internal project data. It is behind authentication, and the link is here as evidence the platform is genuinely in use rather than as an open demo.',
+    },
+    {
+        icon: 'bi bi-hourglass-split',
+        title: 'The Roadmap Is Not Shipped',
+        desc: 'Predictive risk alerts, automation hooks, unified planning views and delivery analytics are gaps the team is feeling right now. None of them are available today, and they are listed as direction rather than capability.',
+    },
+];
+
 const futureDirections = [
     'Predictive risk alerts for tasks and milestones likely to slip, based on activity signals rather than current status alone.',
     'Automation hooks for deadline reminders, escalation triggers and dependency-based status updates.',
@@ -132,6 +225,11 @@ const SpecGrid = ({ items }) => (
 const ProjectManagement = () => {
     return (
         <>
+            <Seo
+                title="Project management platform"
+                description="Task tracking, deadline management and workload visibility across every project, built in three months to fix real coordination failures."
+                path="/project/bm-project-management"
+            />
         <div className="bc-showcase">
 
             {/* ── Hero ── */}
@@ -283,6 +381,30 @@ const ProjectManagement = () => {
                 </div>
             </section>
 
+            {/* ── Workload view ── */}
+            <section className="bc-section bc-alt" id="workload">
+                <div className="bc-container">
+                    <div className="bc-section-head">
+                        <span className="bc-eyebrow">The view that mattered most</span>
+                        <h2>Workload, Organised Around People</h2>
+                        <p>The capability that decided the build. Engineers here sit across several projects at once, and no per-project board shows that.</p>
+                    </div>
+                    <SpecGrid items={workloadView} />
+                </div>
+            </section>
+
+            {/* ── Build vs buy ── */}
+            <section className="bc-section" id="buildvsbuy">
+                <div className="bc-container">
+                    <div className="bc-section-head">
+                        <span className="bc-eyebrow">The decision</span>
+                        <h2>Build Versus Buy, Honestly</h2>
+                        <p>We build software for a living, which makes &ldquo;build it ourselves&rdquo; the easiest wrong answer available. Here is the reasoning both ways.</p>
+                    </div>
+                    <SpecGrid items={buildVsBuy} />
+                </div>
+            </section>
+
             {/* ── Impact ── */}
             <section className="bc-section bc-alt" id="impact">
                 <div className="bc-container">
@@ -299,6 +421,30 @@ const ProjectManagement = () => {
                             </div>
                         ))}
                     </div>
+                </div>
+            </section>
+
+            {/* ── Evidence standing ── */}
+            <section className="bc-section" id="evidence">
+                <div className="bc-container">
+                    <div className="bc-section-head">
+                        <span className="bc-eyebrow">Claim discipline</span>
+                        <h2>Where The Evidence Actually Stands</h2>
+                        <p>What we can say about this platform from daily use, and what we deliberately will not say without data.</p>
+                    </div>
+                    <SpecGrid items={evidence} />
+                </div>
+            </section>
+
+            {/* ── Boundaries ── */}
+            <section className="bc-section bc-alt" id="boundaries">
+                <div className="bc-container">
+                    <div className="bc-section-head">
+                        <span className="bc-eyebrow">Scope</span>
+                        <h2>What This Is Not</h2>
+                        <p>An internal tool presented as one, rather than dressed up as a product.</p>
+                    </div>
+                    <SpecGrid items={boundaries} />
                 </div>
             </section>
 

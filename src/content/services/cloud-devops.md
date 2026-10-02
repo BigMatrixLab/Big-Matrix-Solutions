@@ -71,7 +71,6 @@ Break monoliths into scalable, independently deployable services:
 Automate testing and deployment:
 
 
-
 **Tools**: GitHub Actions, GitLab CI, Jenkins, CircleCI  
 **Benefits**: Deploy 10x per day (vs. weekly), 60% fewer bugs in production  
 
@@ -80,7 +79,6 @@ Automate testing and deployment:
 ### 5. **Infrastructure as Code (IaC)**
 
 Define infrastructure in version-controlled code:
-
 
 
 **Benefits**:
@@ -120,6 +118,56 @@ Design for resilience:
 
 ---
 
+### 8. **On-Premise & Sovereign Infrastructure**
+
+For a large share of our work the cloud is not an option, and the architecture has to be portable from the first decision rather than ported later.
+
+- Kubernetes on your own hardware, with the same manifests and pipelines the cloud environments use
+- Air-gapped operation where the environment demands it, including offline registries and dependency mirrors
+- Data residency and jurisdiction control for regulated and public-sector work
+- Capacity planning against fixed hardware, where autoscaling stops at the size of the rack
+- Hybrid patterns: sensitive workloads in your building, elastic workloads in the cloud, one deployment process for both
+
+Designing cloud-first and relocating under regulatory pressure is one of the more expensive rewrites we get asked to rescue. Deciding this early costs very little.
+
+---
+
+### 9. **Release Strategy & Safe Rollout**
+
+Deploying often is only an advantage if a bad release is cheap to undo.
+
+- Blue-green and canary deployments, with promotion driven by error and latency signals rather than by a person watching a graph
+- Feature flags decoupling release from deployment, so shipping code and enabling behaviour are separate decisions
+- Database migrations designed to be backwards compatible, because schema changes are the deploys that cannot be rolled back
+- Tested rollback, rehearsed rather than documented and assumed
+- Deployment windows and change freezes where the operational context requires them
+
+---
+
+### 10. **Reliability Engineering**
+
+The practices that keep a system up between incidents.
+
+- Service level objectives chosen with the business, with error budgets that actually influence release pace
+- Timeouts, retries with backoff, circuit breakers and bulkheads, so one slow dependency does not take the system with it
+- Graceful degradation: decide in advance which features shed load first
+- Load and soak testing against realistic traffic shapes, not a flat benchmark
+- Failure injection on the dependencies you assume are reliable
+
+---
+
+### 11. **Incident Response & On-Call**
+
+- Alerting tuned to symptoms users feel rather than every metric that can move
+- Runbooks written for the person paged at 3am with no context
+- Clear escalation paths and a named incident commander role
+- Blameless post-incident review with tracked follow-up actions
+- Alert review as a standing practice, because unactioned alerts train people to ignore the ones that matter
+
+An on-call rotation that burns people out is a reliability risk in itself. We design the alerting so it stays quiet unless something is genuinely wrong.
+
+---
+
 ## Scalability Patterns
 
 **Vertical Scaling**: Larger servers (quick fix, limited)  
@@ -153,15 +201,7 @@ Design for resilience:
 
 ---
 
-## Success Stories
-
-**Healthtech Startup**: Scaled from 1,000 to 100,000 users without downtime  
-**E-commerce Platform**: Reduced infrastructure costs by 45% through optimization  
-**Enterprise SaaS**: 99.97% uptime over 12 months  
-
----
-
-## Why Choose Us?
+## Why teams trust us with this
 
 ✅ **Cloud certified**: AWS Solutions Architect, Azure Administrator  
 ✅ **Kubernetes expertise**: CKA (Certified Kubernetes Administrator)  

@@ -793,7 +793,10 @@
 .bc-benefit i {
     color: var(--bc-primary-text);
     font-size: 22px;
-    margin-top: 2px;
+    /* Give the icon the same line box as the paragraph's first line
+       (0.98rem x 1.75). At 22px it would otherwise build a taller box than the
+       text and, with align-items: flex-start, sit about 6px low against it. */
+    line-height: calc(0.98rem * 1.75);
     flex-shrink: 0;
 }
 

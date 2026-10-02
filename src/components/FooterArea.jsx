@@ -17,13 +17,12 @@ const SERVICE_LINKS = [
     { to: '/service/enterprise-saas-platform', label: 'Enterprise & SaaS' },
     { to: '/service/industrial-automation', label: 'Industrial Automation' },
     { to: '/service/cloud-devops-architecture', label: 'Cloud & DevOps' },
-    { to: '/service/cybersecurity-compliance', label: 'Cybersecurity' },
 ];
 
 const SOCIAL_LINKS = [
-    { href: 'https://www.facebook.com/profile.php?id=61566031568599', label: 'Facebook', icon: 'bi-facebook' },
+    { href: 'https://www.linkedin.com/company/big-matrix-solutions/', label: 'LinkedIn', icon: 'bi-linkedin' },
     { href: 'https://github.com/BigMatrixLab', label: 'GitHub', icon: 'bi-github' },
-    { href: 'https://big-matrix.com', label: 'Big-Matrix Lab', icon: 'bi-globe2' },
+    { href: 'https://big-matrix.com', label: 'Big-Matrix Research & Development Lab', icon: 'bi-globe2' },
 ];
 
 const FooterArea = () => {
@@ -67,7 +66,7 @@ const FooterArea = () => {
                         <ul className="bm-footer__contact">
                             <li>
                                 <i className="bi bi-envelope" aria-hidden="true"></i>
-                                <a href="mailto:bigmatrixsolutions@gmail.com">bigmatrixsolutions@gmail.com</a>
+                                <a href="mailto:contact@big-matrix.com">contact@big-matrix.com</a>
                             </li>
                             <li>
                                 <i className="bi bi-telephone" aria-hidden="true"></i>
@@ -83,7 +82,7 @@ const FooterArea = () => {
 
                 <div className="bm-footer__bottom">
                     <p className="bm-footer__copy">
-                        © {new Date().getFullYear()} Big-Matrix Lab. All rights reserved.
+                        © {new Date().getFullYear()} Big-Matrix Solutions. All rights reserved.
                     </p>
                     <ul className="bm-footer__social">
                         {SOCIAL_LINKS.map((social) => (

@@ -3,6 +3,7 @@ import Breadcrumb from '../components/Breadcrumb';
 import SectionHead from '../components/SectionHead';
 import CtaBand from '../components/CtaBand';
 import { projectData } from '../data/content';
+import Seo from '../components/Seo';
 
 /** "February, 2026 - April, 2026" -> "2026" */
 const yearOf = (date) => {
@@ -97,6 +98,11 @@ const Project = () => {
 
     return (
         <>
+            <Seo
+                title="Products"
+                description="Systems we have shipped: clinical AI tools, radiotherapy planning software, document workspaces and practice management platforms."
+                path="/project"
+            />
             <Breadcrumb pageTitle="Systems we have shipped" breadcrumbItem="Products" />
 
             <section className="bm-section">

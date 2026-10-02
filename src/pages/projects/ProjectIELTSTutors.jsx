@@ -1,6 +1,7 @@
 import '../../assets/css/ProjectShowcase.css';
 import ShowcaseFacts from '../../components/showcase/ShowcaseFacts';
 import CtaBand from '../../components/CtaBand';
+import Seo from '../../components/Seo';
 
 const heroStats = [
     { icon: 'bi bi-4-circle', num: '4 Skills', label: 'Writing, Speaking, Reading and Listening — full exam coverage under real conditions' },
@@ -122,6 +123,11 @@ const SpecGrid = ({ items }) => (
 const ProjectIELTSTutors = () => {
     return (
         <>
+            <Seo
+                title="IELTS Tutors"
+                description="All four IELTS skills under real exam conditions, with live AI feedback and tracking that shows a candidate exactly what to fix next."
+                path="/project/ielts-tutors"
+            />
         <div className="bc-showcase">
 
             {/* ── Hero ── */}

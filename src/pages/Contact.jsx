@@ -1,6 +1,7 @@
 import { useEffect, useRef, useState } from 'react';
 import Breadcrumb from '../components/Breadcrumb';
 import SectionHead from '../components/SectionHead';
+import Seo from '../components/Seo';
 
 const SUBJECTS = [
     { value: 'research', label: 'Research collaboration' },
@@ -143,8 +144,8 @@ const DIRECT_LINES = [
     {
         icon: 'bi bi-envelope-fill',
         label: 'Email',
-        value: 'bigmatrixsolutions@gmail.com',
-        href: 'mailto:bigmatrixsolutions@gmail.com',
+        value: 'contact@big-matrix.com',
+        href: 'mailto:contact@big-matrix.com',
     },
     {
         icon: 'bi bi-geo-alt-fill',
@@ -160,46 +161,102 @@ const DIRECT_LINES = [
 
 const EMPTY = { name: '', email: '', phone: '', subject: '', message: '' };
 
+const FALLBACK_EMAIL = 'contact@big-matrix.com';
+
 const Contact = () => {
     const [formData, setFormData] = useState(EMPTY);
     const [subjectInvalid, setSubjectInvalid] = useState(false);
+    const [submitting, setSubmitting] = useState(false);
+    const [status, setStatus] = useState(null);
+
+    /* Scripts submit the moment the page parses. The endpoint discards anything
+       returned faster than a person could plausibly type, so it needs to know
+       when the form appeared. */
+    const mountedAt = useRef(Date.now());
+    const honeypotRef = useRef(null);
 
     const handleChange = (event) => {
         const { name, value } = event.target;
         setFormData((prev) => ({ ...prev, [name]: value }));
+        setStatus(null);
     };
 
     const handleSubjectChange = (value) => {
         setFormData((prev) => ({ ...prev, subject: value }));
         setSubjectInvalid(false);
+        setStatus(null);
     };
 
-    const handleSubmit = (event) => {
+    const handleSubmit = async (event) => {
         event.preventDefault();
+        if (submitting) return;
 
+        // The custom combobox is not a real form control, so `required` cannot
+        // cover it — the browser validates the other four fields for us.
         if (!formData.subject) {
             setSubjectInvalid(true);
             document.getElementById('contact-subject')?.focus();
             return;
         }
 
-        const subject = `Contact Form - ${formData.subject}`;
-        const body =
-            `Name: ${formData.name}\n` +
-            `Email: ${formData.email}\n` +
-            `Phone: ${formData.phone}\n` +
-            `Subject: ${formData.subject}\n\n` +
-            `Message:\n${formData.message}`;
+        setSubmitting(true);
+        setStatus(null);
 
-        const gmailUrl = `https://mail.google.com/mail/?view=cm&fs=1&to=monirresearchlab@gmail.com&su=${encodeURIComponent(
-            subject
-        )}&body=${encodeURIComponent(body)}`;
+        try {
+            /* Mail is sent by /functions/api/contact.js. It has to be a server
+               call: the Mailtrap token cannot ship to the browser. */
+            const response = await fetch('/api/contact', {
+                method: 'POST',
+                headers: { 'Content-Type': 'application/json' },
+                body: JSON.stringify({
+                    ...formData,
+                    company_website: honeypotRef.current?.value || '',
+                    elapsed: Date.now() - mountedAt.current,
+                }),
+            });
 
-        window.open(gmailUrl, '_blank', 'noopener,noreferrer');
+            const result = await response.json().catch(() => ({}));
+
+            if (!response.ok || !result.ok) {
+                if (result.field === 'subject') setSubjectInvalid(true);
+                setStatus({
+                    type: 'error',
+                    message:
+                        result.error ||
+                        `Something went wrong at our end. Please try again, or email ${FALLBACK_EMAIL}.`,
+                });
+                if (result.field) {
+                    document.getElementById(`contact-${result.field}`)?.focus();
+                }
+                return;
+            }
+
+            setFormData(EMPTY);
+            mountedAt.current = Date.now();
+            setStatus({
+                type: 'success',
+                message:
+                    'Thanks — your message is with the engineering team. A confirmation is on its way to your inbox, and we will reply within one business day.',
+            });
+        } catch {
+            // Offline, DNS failure, blocked request: nothing the visitor can fix
+            // by resubmitting, so hand them the direct address.
+            setStatus({
+                type: 'error',
+                message: `We could not reach the server. Check your connection, or email us at ${FALLBACK_EMAIL}.`,
+            });
+        } finally {
+            setSubmitting(false);
+        }
     };
 
     return (
         <>
+            <Seo
+                title="Contact"
+                description="Talk to the engineering team. Tell us the constraints and we will map them to an architecture."
+                path="/contact"
+            />
             <Breadcrumb pageTitle="Talk to the engineering team" breadcrumbItem="Contact" />
 
             <section className="bm-section">
@@ -211,7 +268,12 @@ const Contact = () => {
                     />
 
                     <div className="bm-contact">
-                        <form className="bm-form" onSubmit={handleSubmit} noValidate={false}>
+                        <form
+                            className="bm-form"
+                            onSubmit={handleSubmit}
+                            noValidate={false}
+                            aria-busy={submitting || undefined}
+                        >
                             <div className="bm-form__grid">
                                 <p className="bm-field">
                                     <label htmlFor="contact-name">Your name</label>
@@ -277,11 +339,50 @@ const Contact = () => {
                                 </p>
                             </div>
 
+                            {/* Honeypot. Positioned off-screen rather than
+                                display:none, because plenty of bots skip hidden
+                                inputs but fill anything with a tempting name.
+                                A non-empty value makes the server drop the
+                                submission silently. */}
+                            <div className="bm-form__trap" aria-hidden="true">
+                                <label htmlFor="contact-company-website">Company website</label>
+                                <input
+                                    id="contact-company-website"
+                                    ref={honeypotRef}
+                                    type="text"
+                                    name="company_website"
+                                    tabIndex={-1}
+                                    autoComplete="off"
+                                />
+                            </div>
+
                             <div className="bm-form__foot">
-                                <button type="submit" className="bm-button">
-                                    Send message
-                                    <i className="bi bi-arrow-right" aria-hidden="true"></i>
+                                <button
+                                    type="submit"
+                                    className="bm-button"
+                                    disabled={submitting}
+                                >
+                                    {submitting ? 'Sending' : 'Send message'}
+                                    {submitting ? (
+                                        <span
+                                            className="bm-button__spinner"
+                                            aria-hidden="true"
+                                        ></span>
+                                    ) : (
+                                        <i className="bi bi-arrow-right" aria-hidden="true"></i>
+                                    )}
                                 </button>
+
+                                {/* Rendered even when empty so the live region
+                                    exists before there is anything to announce;
+                                    CSS collapses it while it has no content. */}
+                                <p
+                                    className={`bm-form__status${status ? ` is-${status.type}` : ''}`}
+                                    role="status"
+                                    aria-live="polite"
+                                >
+                                    {status?.message}
+                                </p>
                             </div>
                         </form>
 

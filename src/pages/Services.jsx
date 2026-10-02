@@ -3,66 +3,19 @@ import { servicesData } from '../data/content';
 import Breadcrumb from '../components/Breadcrumb';
 import SectionHead from '../components/SectionHead';
 import CtaBand from '../components/CtaBand';
-
-/**
- * Solutions are grouped by domain so the page reads as a catalogue: pick the
- * problem area first, the practice area second. Slugs are listed explicitly to
- * keep the reading order stable regardless of file or id order.
- */
-const GROUPS = [
-    {
-        label: 'Healthcare & life sciences',
-        note: 'Clinical, diagnostic and pharmaceutical systems — from a single lab to national infrastructure.',
-        slugs: [
-            'intelligent-healthcare-pharma',
-            'digital-hospital-infrastructure',
-            'pharmaceutical-intelligence',
-            'national-health-public-policy',
-            'real-time-biosensor-integration',
-        ],
-    },
-    {
-        label: 'AI, data & platforms',
-        note: 'The intelligence layer: models, analytics pipelines and the products built on top of them.',
-        slugs: ['ai-machine-learning', 'big-data-analytics', 'enterprise-saas-platform'],
-    },
-    {
-        label: 'Infrastructure & operations',
-        note: 'What keeps the rest running: automation on the floor, scale in the cloud, compliance throughout.',
-        slugs: ['industrial-automation', 'cloud-devops-architecture', 'cybersecurity-compliance'],
-    },
-];
-
-const pad = (value) => String(value).padStart(2, '0');
-
-const buildGroups = (services) => {
-    const bySlug = new Map(services.map((service) => [service.slug, service]));
-    const grouped = GROUPS.map((group) => ({
-        ...group,
-        items: group.slugs.map((slug) => bySlug.get(slug)).filter(Boolean),
-    })).filter((group) => group.items.length > 0);
-
-    // Anything added to /content/services later still surfaces here.
-    const claimed = new Set(GROUPS.flatMap((group) => group.slugs));
-    const rest = services.filter((service) => !claimed.has(service.slug));
-
-    return rest.length > 0
-        ? [
-              ...grouped,
-              {
-                  label: 'Additional practice areas',
-                  note: 'Newer capabilities that sit alongside the core domains.',
-                  items: rest,
-              },
-          ]
-        : grouped;
-};
+import { groupedServices, padIndex } from '../utils/serviceOrder';
+import Seo from '../components/Seo';
 
 const Services = () => {
-    const groups = buildGroups(servicesData);
+    const groups = groupedServices(servicesData);
 
     return (
         <>
+            <Seo
+                title="Solutions"
+                description="Practice areas built for regulated, high-load environments: medical imaging AI, agentic engineering, data platforms and clinical infrastructure."
+                path="/service"
+            />
             <Breadcrumb
                 pageTitle="Solutions built for regulated, high-load environments"
                 breadcrumbItem="Solutions"
@@ -82,14 +35,14 @@ const Services = () => {
                                 <h3>{group.label}</h3>
                                 <p>{group.note}</p>
                                 <span className="bm-catalogue__count">
-                                    {pad(group.items.length)} solutions
+                                    {padIndex(group.items.length)} solutions
                                 </span>
                             </div>
 
                             <div className="bm-rows">
                                 {group.items.map((service) => (
                                     <div className="bm-row" key={service.slug}>
-                                        <span className="bm-row__index">{pad(service.id)}</span>
+                                        <span className="bm-row__index">{padIndex(service.n)}</span>
                                         <span className="bm-row__icon">
                                             <i
                                                 className={service.icon || 'bi bi-braces'}

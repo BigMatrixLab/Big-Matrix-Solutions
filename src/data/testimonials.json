@@ -1,30 +1,30 @@
 [
-    {
-        "id": 1,
-        "name": "Dr. Tahmina Rahman",
-        "designation": "Medical Director, United Hospital Ltd.",
-        "feedback": "Big-Matrix Solutions transformed our hospital operations with their integrated EMR and HMS platform. The AI-powered diagnostic tools have significantly improved our radiology department's accuracy and efficiency. Their team's deep understanding of healthcare workflows is exceptional.",
-        "rating": 5
-    },
-    {
-        "id": 2,
-        "name": "Md. Ashraful Haque",
-        "designation": "Operations Manager, Bengal Textiles",
-        "feedback": "The industrial automation system they developed has revolutionized our production line. Real-time monitoring and predictive maintenance have reduced downtime by 40%. Big-Matrix's expertise in connecting complex machinery with intelligent software is unmatched.",
-        "rating": 5
-    },
-    {
-        "id": 3,
-        "name": "Nusrat Jahan",
-        "designation": "Chief Information Officer, Square Pharmaceuticals",
-        "feedback": "Their disease mapping and supply chain analytics platform has been instrumental in managing our nationwide drug distribution. The predictive models help us anticipate demand and prevent stockouts. A truly data-driven solution that scales with our needs.",
-        "rating": 5
-    },
-    {
-        "id": 4,
-        "name": "Rifat Ahmed Khan",
-        "designation": "Director of Digital Health, Ministry of Health",
-        "feedback": "Big-Matrix Solutions delivered a secure, scalable national health information system that connects over 200 facilities. Their understanding of compliance, data security, and government infrastructure requirements is outstanding. They're setting the standard for digital transformation in healthcare.",
-        "rating": 5
-    }
+{
+"id": 1,
+"name": "Dr. Md. Arifur Rahman",
+"designation": "Cancer & Tumor Specialist, Registrar, Mymensingh Medical College & Hospital",
+"feedback": "The breast cancer AI system has been really helpful in my work. Having the lesions already segmented makes the findings much easier to review, and it also helps reduce the differences I sometimes see between readings.",
+"rating": 5
+},
+{
+"id": 2,
+"name": "Dr. Mahmud Hasan Mostofa Kamal",
+"designation": "Associate Professor, Department of Radiology and Imaging, Bangladesh Medical University",
+"feedback": "Working with Big-Matrix Solutions has felt more like a real collaboration than a typical vendor relationship. Their team takes the time to understand how our radiologists actually work before suggesting or building a solution. I really appreciate that approach.",
+"rating": 5
+},
+{
+"id": 3,
+"name": "Dr. Mohammad Monir Uddin",
+"designation": "Professor, North South University",
+"feedback": "Scriptor has made my research workflow much simpler. I can work on a paper in LaTeX, prepare a presentation from the same project, and review PDFs without constantly switching between different tools. It has also made it much easier to keep track of what projects I'm working on.",
+"rating": 5
+},
+{
+"id": 4,
+"name": "Dr. Sheikh Anisul Haque",
+"designation": "Associate Consultant, Bangladesh Specialized Hospital, Dhaka",
+"feedback": "RxCloud has made it much easier to manage prescriptions across my chambers. My assistant can prepare everything for me, and I can review and approve it before anything is sent out. It gives me better control over the process and helps make sure nothing goes out without my approval.",
+"rating": 5
+}
 ]

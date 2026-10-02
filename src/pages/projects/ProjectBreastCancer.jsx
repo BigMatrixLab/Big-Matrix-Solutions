@@ -1,6 +1,7 @@
 import '../../assets/css/ProjectShowcase.css';
 import ShowcaseFacts from '../../components/showcase/ShowcaseFacts';
 import CtaBand from '../../components/CtaBand';
+import Seo from '../../components/Seo';
 
 const heroStats = [
     { icon: 'bi bi-bullseye', num: '90%+', label: 'Segmentation accuracy on regions of interest & BI-RADS classification' },
@@ -14,7 +15,7 @@ const projectFacts = [
     { icon: 'bi bi-tag', label: 'Category', value: 'AI in Healthcare' },
     { icon: 'bi bi-calendar3', label: 'Starting Date', value: 'April 2022' },
     { icon: 'bi bi-hourglass-split', label: 'Duration', value: '1 Year' },
-    { icon: 'bi bi-cash-coin', label: 'Funding', value: 'Grant CTRG-21-SEPS-15' },
+    // { icon: 'bi bi-cash-coin', label: 'Funding', value: 'Grant CTRG-21-SEPS-15' },
 ];
 
 const problems = [
@@ -84,6 +85,135 @@ const benefits = [
     'Automated comprehensive report generation for medical professionals.',
     'Improved clinical decision-making with actionable diagnostic insights.',
     'Reduced diagnostic time while maintaining high accuracy standards.',
+    'Consistent quantification across readers, so the same region is measured the same way each time.',
+    ];
+
+const integration = [
+    {
+        icon: 'bi bi-plug',
+        title: 'Built Around The Existing Equipment',
+        desc: 'The pipeline consumes studies from standard FWHM-compliant mammography equipment already installed in the department. Nothing in the design assumes a hardware purchase, because a research system that requires new scanners never reaches the patients it was built for.',
+    },
+    {
+        icon: 'bi bi-arrow-left-right',
+        title: 'Additive To The Workflow, Not A Detour',
+        desc: 'The five stages the system touches are the five stages that already exist. The AI pass sits between acquisition and review, so the radiologist encounters it inside the sequence they already follow rather than in a separate application with a separate login.',
+    },
+    {
+        icon: 'bi bi-eye',
+        title: 'Findings Shown On The Image',
+        desc: 'Every flagged region is drawn where it was found. A reviewer can accept or dismiss a finding by looking at it, which is the difference between a second opinion and a number that has to be taken on trust.',
+    },
+    {
+        icon: 'bi bi-pencil-square',
+        title: 'The Draft Is Editable, Not Final',
+        desc: 'The generated report is a starting document. The radiologist edits the narrative, adjusts or removes findings, and signs. The system never produces a clinical document without a human approving it.',
+    },
+    {
+        icon: 'bi bi-hourglass-split',
+        title: 'Latency Sized For A Reading Session',
+        desc: 'Around 45 seconds per case means the analysis completes while the reader works through the preceding study. A pipeline that took ten minutes would be technically equivalent and practically unusable in a high-volume list.',
+    },
+    {
+        icon: 'bi bi-people',
+        title: 'Designed With The Reader In Mind',
+        desc: 'The output format follows BI-RADS because that is the vocabulary of the follow-up decision. Fitting the clinician was treated as a design constraint from the start rather than a presentation layer added at the end.',
+    },
+];
+
+const modalities = [
+    {
+        icon: 'bi bi-image',
+        title: 'Mammography',
+        desc: 'The primary signal. Standard views carry the lesion morphology, margin characteristics and calcification patterns that drive a BI-RADS assessment, and they are what the segmentation model operates on directly.',
+    }, 
+    {
+        icon: 'bi bi-clipboard2-pulse',
+        title: 'Clinical Records',
+        desc: 'Age, history, risk factors and prior findings change how the same image should be read. A model that sees only pixels discards the context a radiologist would never work without.',
+    },
+    {
+        icon: 'bi bi-file-text',
+        title: 'Radiology Reports',
+        desc: 'Existing narrative reports carry the reasoning behind past assessments, including how the same patient was described over time.',
+    },
+  
+];
+
+const whyMultimodal = [
+    {
+        icon: 'bi bi-layers',
+        title: 'One Modality Is An Incomplete Question',
+        desc: 'A suspicious density on a mammogram is a different finding in a 38-year-old with dense tissue and no history than in a 65-year-old with a prior biopsy at the same site. Single-image models cannot make that distinction because the information is not in the image.',
+    },
+    {
+        icon: 'bi bi-funnel',
+        title: 'Context Is What Reduces False Positives',
+        desc: 'Traditional CAD flags shapes. Most of what it flags is benign, which is how false-positive rates reach 70–80%. Adding clinical and prior-study context is the mechanism by which a system flags fewer things and is right more often about the ones it does flag.',
+    },
+    {
+        icon: 'bi bi-bullseye',
+        title: 'Attention Decides Where Capacity Goes',
+        desc: 'A mammogram is mostly normal tissue. Attention mechanisms concentrate model capacity on the regions that carry diagnostic signal, which matters most in exactly the dense-tissue cases where lesions are subtle and manual review is hardest.',
+    },
+    {
+        icon: 'bi bi-translate',
+        title: 'BI-RADS Keeps The Output Legible',
+        desc: 'A model can output any label it was trained on. Producing BI-RADS categories means the result lands in a framework radiologists already use for follow-up decisions, so nothing has to be translated or learned before it is usable.',
+    },
+];
+
+const reportAnatomy = [
+    { icon: 'bi bi-vector-pen', title: 'Segmented Regions', desc: 'Each region of interest delineated on the image, so the reviewer sees exactly what the model responded to rather than a score with no visual basis.' },
+    { icon: 'bi bi-card-checklist', title: 'BI-RADS Category', desc: 'The standard assessment category for each finding, carrying its implied follow-up pathway.' },
+    { icon: 'bi bi-rulers', title: 'Quantitative Measurements', desc: 'Region dimensions and extent, captured consistently rather than estimated by eye and re-estimated at the next visit.' },
+    { icon: 'bi bi-speedometer', title: 'Confidence Indicators', desc: 'How certain the model is about each finding, so a borderline call is visibly borderline and can be treated as such.' },
+];
+
+const evidence = [
+    {
+        icon: 'bi bi-clipboard-data',
+        title: 'Where The Accuracy Figure Comes From',
+        desc: 'The 90%+ segmentation accuracy is a development-dataset evaluation carried out during the funded programme. It is a research result on the data the system was built against, not a multi-site clinical performance claim.',
+    },
+    {
+        icon: 'bi bi-stopwatch',
+        title: 'What The 45 Seconds Measures',
+        desc: 'Average automated analysis time per case on the development hardware configuration. It covers the AI pass, not the radiologist review that follows it.',
+    },
+    {
+        icon: 'bi bi-flag',
+        title: 'The False-Positive Number Is A Target',
+        desc: 'The 5–7% false-positive rate is the design target set against the 70–80% typical of traditional CAD. It is stated here as a target, because that is what it is. Confirming it requires prospective multi-centre evaluation.',
+    },
+    {
+        icon: 'bi bi-journal-text',
+        title: 'Publication Status',
+        desc: 'The OncoVision paper documenting architecture, training methodology and validation is under review at Nature Communications Medicine. Under review is not published, and we do not describe it as such.',
+    },
+];
+
+const boundaries = [
+    {
+        icon: 'bi bi-person-check',
+        title: 'The Radiologist Signs',
+        desc: 'This is radiologist-in-the-loop AI. The system segments, classifies and drafts. A qualified reader verifies, edits and approves every report before it becomes a clinical document.',
+    },
+    {
+        icon: 'bi bi-shield-exclamation',
+        title: 'Not A Cleared Diagnostic Device',
+        desc: 'The work was carried out as a funded research programme. It has not been through a regulatory clearance pathway, and nothing here should be read as an approved diagnostic claim.',
+    },
+    {
+        icon: 'bi bi-building',
+        title: 'Single-Programme Validation So Far',
+        desc: 'Results come from the research dataset assembled for this grant. Performance across other scanners, protocols and patient populations is exactly what the planned multi-centre validation is for.',
+    },
+    {
+        icon: 'bi bi-x-circle',
+        title: 'Not A Screening Replacement',
+        desc: 'The system supports interpretation of studies already being read. It does not decide who gets imaged, and it does not remove a reader from the pathway.',
+    },
 ];
 
 const futureDirections = [
@@ -116,6 +246,11 @@ const SpecGrid = ({ items }) => (
 const ProjectBreastCancer = () => {
     return (
         <>
+            <Seo
+                title="Multimodal AI for breast cancer"
+                description="A multimodal AI system that segments suspicious regions in mammographic images and drafts a preliminary diagnostic report in about 45 seconds per case."
+                path="/project/nsu_ctrg_2021_2022_breast_cancer"
+            />
         <div className="bc-showcase">
 
             {/* ── Hero ── */}
@@ -276,6 +411,62 @@ const ProjectBreastCancer = () => {
                 </div>
             </section>
 
+            {/* ── Modalities ── */}
+            <section className="bc-section bc-alt" id="modalities">
+                <div className="bc-container">
+                    <div className="bc-section-head">
+                        <span className="bc-eyebrow">The data</span>
+                        <h2>Three Modalities, One Assessment</h2>
+                        <p>What each input contributes, and why the system reads them together rather than one at a time.</p>
+                    </div>
+                    <SpecGrid items={modalities} />
+                </div>
+            </section>
+
+            {/* ── Why multimodal ── */}
+            <section className="bc-section" id="rationale">
+                <div className="bc-container">
+                    <div className="bc-section-head">
+                        <span className="bc-eyebrow">Design rationale</span>
+                        <h2>Why Fusion, And Why Attention</h2>
+                        <p>The reasoning behind the architecture, stated plainly enough to disagree with.</p>
+                    </div>
+                    <div className="bc-grid bc-grid-2">
+                        {whyMultimodal.map((item) => (
+                            <div className="bc-card" key={item.title}>
+                                <span className="bc-card-icon"><i className={item.icon}></i></span>
+                                <h3>{item.title}</h3>
+                                <p>{item.desc}</p>
+                            </div>
+                        ))}
+                    </div>
+                </div>
+            </section>
+
+            {/* ── Report anatomy ── */}
+            <section className="bc-section bc-alt" id="report">
+                <div className="bc-container">
+                    <div className="bc-section-head">
+                        <span className="bc-eyebrow">The output</span>
+                        <h2>What Lands On The Radiologist&rsquo;s Screen</h2>
+                        <p>The draft report is the deliverable. Every element in it is traceable to something on the image.</p>
+                    </div>
+                    <SpecGrid items={reportAnatomy} />
+                </div>
+            </section>
+
+            {/* ── Integration ── */}
+            <section className="bc-section" id="integration">
+                <div className="bc-container">
+                    <div className="bc-section-head">
+                        <span className="bc-eyebrow">Clinical fit</span>
+                        <h2>Fitting A Department That Cannot Stop</h2>
+                        <p>Research systems fail at the point of contact with a working radiology list. These were the constraints that shaped the build.</p>
+                    </div>
+                    <SpecGrid items={integration} />
+                </div>
+            </section>
+
             {/* ── Benefits ── */}
             <section className="bc-section bc-alt" id="impact">
                 <div className="bc-container">
@@ -289,6 +480,38 @@ const ProjectBreastCancer = () => {
                             <div className="bc-benefit" key={benefit}>
                                 <i className="bi bi-check-circle-fill"></i>
                                 <p>{benefit}</p>
+                            </div>
+                        ))}
+                    </div>
+                </div>
+            </section>
+
+            {/* ── Evidence standing ── */}
+            <section className="bc-section" id="evidence">
+                <div className="bc-container">
+                    <div className="bc-section-head">
+                        <span className="bc-eyebrow">Claim discipline</span>
+                        <h2>Where The Evidence Actually Stands</h2>
+                        <p>Every number on this page, with the qualification it deserves. Research results and clinical performance are different things, and we would rather say which is which.</p>
+                    </div>
+                    <SpecGrid items={evidence} />
+                </div>
+            </section>
+
+            {/* ── Boundaries ── */}
+            <section className="bc-section bc-alt" id="boundaries">
+                <div className="bc-container">
+                    <div className="bc-section-head">
+                        <span className="bc-eyebrow">Scope</span>
+                        <h2>What This System Is Not</h2>
+                        <p>The limits are part of the design, not an omission from it.</p>
+                    </div>
+                    <div className="bc-grid bc-grid-2">
+                        {boundaries.map((item) => (
+                            <div className="bc-card" key={item.title}>
+                                <span className="bc-card-icon"><i className={item.icon}></i></span>
+                                <h3>{item.title}</h3>
+                                <p>{item.desc}</p>
                             </div>
                         ))}
                     </div>

@@ -1,19 +1,19 @@
 ---
 id: "2"
 slug: "digital-hospital-infrastructure"
-title: "Digital Hospital, Laboratory & Clinical Infrastructure"
+title: "Digital Hospital, Laboratory & Clinical Systems"
 icon: "bi bi-building"
-image: "https://images.unsplash.com/photo-1519389950473-47ba0277781c?w=800&q=80&auto=format&fit=crop"
-desc: "Complete digital infrastructure including EMR, EHR, HMS, LIMS, RIS, and Pharmacy Management systems for modern healthcare facilities."
+image: "https://images.unsplash.com/photo-1576091160550-2173dba999ef?w=800&q=80&auto=format&fit=crop"
+desc: "EMR, EHR, HMS, LIMS, RIS and pharmacy systems for hospitals and laboratories, with AI diagnostic support built into the clinical workflow."
 ---
 
 
-﻿# Digital Hospital, Laboratory & Clinical Infrastructure
+﻿# Digital Hospital, Laboratory & Clinical Systems
 
 
 ## Transform Healthcare Delivery with Integrated Digital Systems
 
-Modern healthcare facilities require seamless digital infrastructure that connects every department, streamlines workflows, and puts patient data at clinicians' fingertips. Our comprehensive suite of healthcare information systems creates a unified digital ecosystem for hospitals, diagnostic centers, laboratories, and clinics.
+A hospital runs on a dozen systems that were bought separately and never introduced to each other. Records live in one, imaging in another, billing somewhere else, and clinicians pay for the gaps in time they do not have. We build the connective layer for hospitals, diagnostic centres, laboratories and clinics.
 
 ---
 
@@ -22,7 +22,6 @@ Modern healthcare facilities require seamless digital infrastructure that connec
 ### 1. **Electronic Medical Records (EMR) & Electronic Health Records (EHR)**
 
 Complete patient history accessible anytime, anywhere:
-
 
 
 **Key Features**:
@@ -53,7 +52,6 @@ End-to-end operational management:
 | **Inventory Management** | Medical supplies tracking, automated reordering, expiry alerts |
 | **HR & Payroll** | Staff scheduling, attendance, payroll processing |
 | **Asset Management** | Equipment tracking, maintenance scheduling, utilization analytics |
-
 
 
 **Benefits**:
@@ -104,7 +102,7 @@ Streamlined imaging workflows:
 - Technologist worklists
 
 **PACS Integration**:
-- Seamless connection with Picture Archiving and Communication System
+- Direct connection to your Picture Archiving and Communication System
 - DICOM image viewing and manipulation
 - 3D reconstruction capabilities
 
@@ -114,11 +112,11 @@ Streamlined imaging workflows:
 **Benefits**:
 - 35% reduction in report turnaround time
 - AI-assisted detection of abnormalities
-- Seamless EMR integration for clinicians
+- EMR integration clinicians do not have to think about
 - Mobile access for on-call radiologists
 
 ---
-![Lab Collaboration](https://images.unsplash.com/photo-1506744038136-46273834b3fb?auto=format&fit=crop&w=800&q=80)
+
 ### 5. **Pharmacy Management System**
 
 Complete medication lifecycle management:
@@ -139,10 +137,29 @@ Complete medication lifecycle management:
 
 ---
 
+### 6. **AI-Powered Diagnostic Support**
+
+Machine learning for disease detection and diagnostic support, wired into the
+systems above rather than bolted on beside them:
+
+| Modality | Applications |
+|----------|--------------|
+| **Radiology** | X-Ray, CT, MRI analysis |
+| **Pathology** | Tissue slide analysis, cell counting |
+| **Cardiology** | ECG analysis, echo interpretation |
+| **Ophthalmology** | Retinal disease detection |
+| **Dermatology** | Skin lesion classification |
+
+Findings surface inside the clinician's existing workflow, and the clinician
+signs the report. Deeper imaging work, including segmentation, automated
+reporting and radiotherapy contouring, is covered by our medical imaging
+practice.
+
+---
+
 ## Integration & Interoperability
 
-All systems communicate seamlessly:
-
+All systems talk to each other:
 
 
 ---
@@ -183,6 +200,17 @@ All systems communicate seamlessly:
 
 ---
 
+## Technology Stack
+
+**Clinical Standards**: HL7 v2, FHIR R4, DICOM, DICOMweb, IHE profiles, ICD-10, SNOMED CT, LOINC
+**Application**: React, TypeScript, FastAPI, PostgreSQL, Redis
+**Imaging**: Orthanc and dcm4che PACS, OHIF viewer
+**Diagnostic AI**: PyTorch, MONAI, ONNX Runtime
+**Deployment**: Docker, Kubernetes, on-premise or private cloud with air-gapped options
+**Security**: OAuth 2.0/OIDC, AES-256 at rest, TLS 1.3 in transit, full audit logging
+
+---
+
 ## Implementation Methodology
 
 ### Phase 1: Assessment (2-4 weeks)
@@ -217,32 +245,20 @@ All systems communicate seamlessly:
 
 ---
 
-## Success Stories
+## Pricing Models
 
-### **City General Hospital** (500-bed facility)
-**Challenge**: Paper-based workflows, 3-day average for lab reports  
-**Solution**: Complete digital infrastructure implementation  
-**Results**:
-- Lab report time: 3 days → 4 hours
-- Billing errors: Reduced by 78%
-- Patient satisfaction: Increased from 3.2/5 to 4.7/5
-- ROI: Achieved in 18 months
-
-### **National Diagnostic Center Chain** (15 locations)
-**Challenge**: Fragmented lab systems, inconsistent reporting  
-**Solution**: Centralized LIMS with RIS integration  
-**Results**:
-- Standardized workflows across all locations
-- 40% increase in test volume capacity
-- Real-time inventory visibility saved $200K annually
+- **Subscription**: Monthly or annual SaaS pricing
+- **Perpetual License**: One-time purchase with maintenance
+- **Custom Development**: Tailored solutions for unique needs
+- **Managed Services**: Fully managed hosting and support
 
 ---
 
 ## Why Choose Big-Matrix Solutions?
 
 ✅ **Healthcare Domain Expertise**: 10+ years implementing systems for hospitals and labs  
-✅ **Customization**: No two facilities are alike—we tailor to your workflows  
+✅ **Customization**: No two facilities are alike, so we tailor to your workflows  
 ✅ **Local Support**: Bangladesh-based team with 24/7 support  
 ✅ **Scalability**: Start with one module, expand to complete digital hospital  
-✅ **Interoperability**: HL7 FHIR standard-compliant for seamless integrations  
+✅ **Interoperability**: HL7 FHIR standard-compliant, so integrations are routine  
 ✅ **Training**: Comprehensive on-site and remote training programs

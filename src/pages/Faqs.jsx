@@ -1,10 +1,18 @@
 import Breadcrumb from '../components/Breadcrumb';
 import SectionHead from '../components/SectionHead';
 import CtaBand from '../components/CtaBand';
+import Seo from '../components/Seo';
 
 const Faqs = () => {
     return (
         <>
+            {/* Placeholder template copy, so this page stays out of the index
+                until it has real content. Also excluded from the sitemap. */}
+            <Seo
+                title="FAQs"
+                path="/faqs"
+                noindex
+            />
             <Breadcrumb pageTitle="Frequently asked questions" breadcrumbItem="FAQs" />
 
             <div className="faq-area">

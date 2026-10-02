@@ -1,6 +1,7 @@
 import { defineConfig } from 'vite'
 import react from '@vitejs/plugin-react'
 import { syncContent } from './scripts/sync-content.js'
+import { devApiPlugin } from './scripts/dev-api-plugin.js'
 
 // Simple Vite plugin to sync content
 const syncContentPlugin = () => ({
@@ -17,7 +18,10 @@ const syncContentPlugin = () => ({
 
 // https://vite.dev/config/
 export default defineConfig({
-  plugins: [react(), syncContentPlugin()],
+  /* devApiPlugin serves /functions locally; on Cloudflare Pages those files are
+     run by the platform, so the plugin is dev-only and adds nothing to the
+     production bundle. */
+  plugins: [react(), syncContentPlugin(), devApiPlugin()],
   server: {
     /* Not Vite's default 5173: on this Windows host, Hyper-V/WSL reserves the
        5141-5240 range, so binding 5173 fails with EACCES even though nothing is
