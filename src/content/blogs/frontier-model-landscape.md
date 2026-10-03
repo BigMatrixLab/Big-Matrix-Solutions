@@ -3,7 +3,7 @@ id: "8"
 slug: "the-frontier-model-landscape-september-2026"
 title: "The Frontier Model Landscape: Why Nobody Owns the Lead Anymore"
 comments: "0"
-image: "https://images.unsplash.com/photo-1541746972996-4e0b0f43e02a?auto=format&fit=crop&q=80&w=800"
+image: "/assets/images/blog/frontier-model-landscape.png"
 category: "LLM Research"
 desc: "Five labs, four model families, and a leaderboard that reshuffles every six weeks. What the 2026 release cadence actually changed."
 date: "Sep 11, 2026"
@@ -41,11 +41,19 @@ Teams doing this well have converged on a rough shape:
 - **Heavy tier on escalation**: triggered by an explicit signal: low confidence, a failed verification pass, two cheap runs disagreeing, or a user asking for a second look.
 - **A different vendor as fallback**: not for quality, for availability. Outages happen, and a hard dependency on one API is now treated as a design flaw rather than a simplification.
 
+![Diagram of tiered routing: requests go to a cheap tier first, a mid tier by default, and a heavy tier only on escalation signals, with a different vendor as availability fallback](/assets/images/blog/diagrams/frontier-model-landscape-1.svg)
+
+*Diagram: Big Matrix Solutions, based on the routing pattern described in this article.*
+
 ## Where the actual gains landed
 
 Strip out the leaderboard noise and ask what a model can do in 2026 that it could not do eighteen months ago. The answer is not "reason better." It is "stay coherent longer."
 
 METR's framing is the clearest way to see this. Instead of scoring accuracy on a fixed test, they ask how *long* a task can be, measured in the time a skilled human would need, before the model's success rate drops to 50 percent. That number has climbed exponentially since 2019, and it tracks what people actually notice when they upgrade better than any accuracy score does.
+
+![METR methodology: a diverse task suite, human and agent runs giving time estimates and success rates, and a fitted 50 percent time horizon tracked against model release dates](/assets/images/blog/frontier-model-landscape-metr-method.png)
+
+*How METR measures a time horizon: time human baseliners, measure agent success rates, and fit the task length at which success falls to 50%. Source: [Kwa et al., METR, "Measuring AI Ability to Complete Long Software Tasks" (arXiv:2503.14499)](https://arxiv.org/abs/2503.14499), [CC BY 4.0](https://creativecommons.org/licenses/by/4.0/).*
 
 It also comes with caveats that get dropped constantly in the retellings. METR states plainly that measurements above sixteen hours are unreliable with their current task suite, and that the horizon describes task *difficulty*, not how long the model spends working. The suite is weighted toward software engineering, machine learning, and cybersecurity. It is a real signal about a real capability. It is not a general intelligence score, and the people who built it are the first to say so.
 
@@ -106,3 +114,8 @@ The competitive picture in late 2026 is not a race with a leader. It is four or 
 That is a harder world to write a headline about and a much better world to build in. The interesting engineering question stopped being "which model is smartest" some time ago. It is now: what do you compose, how do you check the output, and how fast can you swap a piece when something better ships next month?
 
 Because something better will ship next month. That part has been reliable all year.
+
+**Media credits**:
+- Hero image: Figure 1 ("Length of tasks AI agents have been able to complete autonomously") from [Kwa et al., METR, "Measuring AI Ability to Complete Long Software Tasks" (arXiv:2503.14499)](https://arxiv.org/abs/2503.14499), licensed [CC BY 4.0](https://creativecommons.org/licenses/by/4.0/). Placed on a white 16:9 canvas; figure unaltered.
+- METR methodology figure: Figure 2 from the same paper, licensed [CC BY 4.0](https://creativecommons.org/licenses/by/4.0/).
+- Routing diagram: Big Matrix Solutions.

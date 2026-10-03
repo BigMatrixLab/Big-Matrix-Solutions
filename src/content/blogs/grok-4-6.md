@@ -20,6 +20,10 @@ The benchmark story is solid and unremarkable: a good model, competitive at the 
 
 On the Artificial Analysis Intelligence Index, Grok 4.6 scores **61**: level with GPT-5.6 Sol, behind Fable 5 Max at 62, and well ahead of Grok 4.5 High at 56.
 
+![Bar chart of Artificial Analysis Intelligence Index scores: Fable 5 Max 62, Grok 4.6 61, GPT-5.6 Sol Max 61, Grok 4.5 High 56](/assets/images/blog/grok-4-6-aa-index.png)
+
+*Artificial Analysis Intelligence Index as published at launch. Source: [SpaceXAI](https://x.ai/news/grok-4-6)*
+
 Per-benchmark, against the strongest competition:
 
 | Benchmark | Grok 4.6 | Grok 4.5 | Best rival |
@@ -33,6 +37,10 @@ Two honest readings of that table.
 **The generational jump is large.** DeepSWE from 54% to 65.9%, Terminal-Bench from 15.7% to 26%. That is a 66% relative improvement on terminal work in one point release. Whatever SpaceXAI changed in the post-training run worked.
 
 **It is still second tier on coding.** 65.9% against 73%, and 26% against 34%. On the benchmarks that matter most for agentic software work, GPT-5.6 Sol Max and Fable 5 Max remain ahead by meaningful margins. Grok 4.6 closed a lot of ground and did not take the lead.
+
+![Bar chart of DeepSWE 1.1 pass@1: GPT-5.6 Sol Max 73.0 percent, Fable 5 Max 70.0 percent, Grok 4.6 65.9 percent, Grok 4.5 High 54.0 percent](/assets/images/blog/grok-4-6-deepswe.png)
+
+*DeepSWE 1.1 pass@1, mini-swe-agent harness run by Datacurve. Source: [SpaceXAI](https://x.ai/news/grok-4-6)*
 
 The exception is **GDPVal-AA v2**, a knowledge-work evaluation, where it leads at 1753. Notable precisely because it is not a coding benchmark. The model appears genuinely strongest on the general professional-work axis rather than on the engineering axis its marketing emphasises.
 
@@ -99,3 +107,6 @@ Grok Bot and Grok 4.6 shipping a day apart tells you how SpaceXAI is thinking ab
 Grok Bot is an unsupervised agent with its own cloud computer, signed into real tools, working while nobody watches. That product only makes sense if the underlying model can sustain a long task and, crucially, notice when it has gone wrong. Shipping the agent product and the self-verifying model together is a coherent bet: the capability that makes long autonomy viable is not raw intelligence, it is knowing when to stop and check.
 
 Whether Grok 4.6 delivers enough of that to make Grok Bot trustworthy is an open question, and the benchmarks do not answer it. But it is the right question to be building against, and more of the field should be measuring it.
+
+**Media credits**:
+- Intelligence Index and DeepSWE charts: captured from the [Grok 4.6 announcement](https://x.ai/news/grok-4-6), © SpaceXAI.

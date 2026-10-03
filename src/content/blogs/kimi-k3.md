@@ -31,7 +31,15 @@ K3 is a mixture-of-experts model at a scale that would be impossible as a dense 
 
 The sparsity ratio is the thing to look at: **16 experts out of 896**, activating 104 billion of 2.8 trillion parameters. You get the knowledge capacity of a 2.8T model at roughly the compute cost of a 104B one.
 
+![Kimi K3 architecture diagram: Kimi Delta Attention and Gated MLA layers with Stable LatentMoE blocks of shared and routed experts, attention residuals across blocks, and a MoonViT-V2 vision pathway](/assets/images/blog/kimi-k3-architecture.png)
+
+*Kimi K3 architecture: three Kimi Delta Attention layers per Gated MLA layer, each followed by a Stable LatentMoE block, with Attention Residuals across depth and a native vision pathway. Source: [Moonshot AI, Kimi K3 technical report](https://github.com/MoonshotAI/Kimi-K3)*
+
 Three architectural pieces are doing the work. **Kimi Delta Attention** and **Attention Residuals** improve information flow through the network, and a **Stable LatentMoE** framework delivers what Moonshot reports as a roughly **2.5x improvement in overall scaling efficiency** over its predecessor. That last figure is the one that matters technically. At this scale training stability is the binding constraint, and a 2.5x efficiency gain is what makes 2.8T trainable at all.
+
+![Fitted scaling-law curves of validation loss against training FLOPs for Kimi K2 and Kimi K3, with K3 reaching the same loss at 2.5 times less compute](/assets/images/blog/kimi-k3-scaling.png)
+
+*Fitted scaling-law curves: Kimi K3 reaches the same validation loss as Kimi K2 with about 2.5x less compute. Source: [Moonshot AI, Kimi K3 technical report](https://github.com/MoonshotAI/Kimi-K3)*
 
 ## Where it lands
 
@@ -92,3 +100,6 @@ Lambert frames this as broadly good: it enables wider AI diffusion across indust
 You can disagree with the policy conclusion and the economic observation still holds. K3 is a demonstration that the three-month lag between open and closed is real, that it applies at genuine frontier scale, and that the party doing the commoditising has every incentive to keep going.
 
 For anyone building, the practical read is unchanged from the general open-weights picture: benchmark it on your own tasks rather than trusting the index position, split traffic by requirement rather than by ideology, and in K3's case specifically, put a verification layer in front of it.
+
+**Media credits**:
+- Architecture and scaling figures: Figures 2 and 7 from the [Kimi K3 technical report](https://github.com/MoonshotAI/Kimi-K3/blob/main/k3_tech_report.pdf), © Moonshot AI, distributed under the [Kimi K3 License](https://github.com/MoonshotAI/Kimi-K3/blob/main/LICENSE).

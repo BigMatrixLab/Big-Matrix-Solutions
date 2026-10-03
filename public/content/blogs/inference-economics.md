@@ -3,7 +3,7 @@ id: "10"
 slug: "the-new-economics-of-llm-inference-2026"
 title: "The New Economics of LLM Inference: Sparse Models, Real Context, and Where the Money Goes"
 comments: "0"
-image: "https://images.unsplash.com/photo-1591696205602-2f950c417cb9?auto=format&fit=crop&q=80&w=800"
+image: "/assets/images/blog/inference-economics.png"
 category: "AI Infrastructure"
 desc: "Trillion-parameter models got cheaper to serve than dense models a fraction of their size. Here is the trade that made it work, and where the bill moved."
 date: "Oct 19, 2026"
@@ -25,6 +25,10 @@ The most capable open-weight models of 2026 are trillion-parameter mixture-of-ex
 The mechanism is simple enough to state in a sentence. In a dense model, every parameter participates in every token. In a mixture-of-experts model, the feed-forward layers are split into many parallel "experts," and a small router network picks a handful of them per token. Total parameters go up enormously; *activated* parameters per token stay modest.
 
 So a model might hold a trillion parameters and activate thirty billion of them for any given token. The compute you pay for tracks the thirty billion. The capability you get tracks something much closer to the trillion.
+
+![Dense model where every parameter is used for every token, compared with a mixture-of-experts model where a router activates two of eight experts per token](/assets/images/blog/diagrams/inference-economics-1.svg)
+
+*Diagram: Big Matrix Solutions, based on the routing design in [Switch Transformers (Fedus et al.)](https://arxiv.org/abs/2101.03961).*
 
 That is not a free lunch, though. It is a trade, and the thing you trade away is memory.
 
@@ -86,6 +90,10 @@ Every token in your prompt produces key and value tensors. If your prompts share
 
 Prefix caching turns a repeated 20,000-token preamble from a per-request cost into a one-time cost. For chat applications, agent loops, and anything with a long fixed instruction block, this is frequently the single largest saving available, and it requires no model change at all. Structure your prompts so the stable part comes first, and you get it nearly for free.
 
+![Without prefix caching, a 20,000-token shared prefix is recomputed for each request; with prefix caching it is computed once and reused](/assets/images/blog/diagrams/inference-economics-2.svg)
+
+*Diagram: Big Matrix Solutions, based on [vLLM’s automatic prefix caching documentation](https://docs.vllm.ai/en/latest/features/automatic_prefix_caching.html).*
+
 ### 3. Batch continuously, not statically
 
 Naive batching waits for a full batch, runs it, and waits again, which means the accelerator idles while short requests finish early and long ones finish late. Continuous batching admits new requests as slots free up, keeping utilisation high across a mixed workload. It is a serving-layer change with no quality cost.
@@ -127,3 +135,8 @@ Three things.
 **Design for the price curve, not the price.** The cost per unit of capability has fallen repeatedly and there is no sign of a floor. Architectures that look extravagant today (verify everything, sample several times, reread the source) have a habit of becoming standard practice inside a year. Build the version that is correct and let the economics arrive.
 
 The teams that struggled this year were mostly not the ones who picked the wrong model. They were the ones who built elaborate machinery to work around a constraint that quietly stopped applying.
+
+**Media credits**:
+- Hero image: “LLM inference prices have fallen 9x to 900x/year, depending on the task”, from [Epoch AI](https://epoch.ai/data-insights/llm-inference-price-trends) (Ben Cottier, Ben Snodin, David Owen, Tom Adamczewski), CC BY 4.0. Placed unaltered on a 16:9 white canvas.
+- In-body diagram: dense versus mixture of experts, Big Matrix Solutions, based on [Switch Transformers](https://arxiv.org/abs/2101.03961).
+- In-body diagram: prefix caching, Big Matrix Solutions, based on [vLLM documentation](https://docs.vllm.ai/en/latest/features/automatic_prefix_caching.html).

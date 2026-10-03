@@ -36,6 +36,10 @@ On benchmarks:
 
 AutomationBench nearly doubling from Fable 5 is the standout. It targets business workflow completion, which is the least glamorous and most commercially relevant thing on the list.
 
+![Anthropic's benchmark table for Claude Fable 5.1 against Fable 5, Opus 5 and GPT-5.6 Sol, including AutomationBench 31.4 percent, CursorBench 73.4 percent and Humanity's Last Exam with tools 65.0 percent](/assets/images/blog/claude-fable-5-1-benchmarks.png)
+
+*Anthropic's published benchmark table for Fable 5.1 against Fable 5, Opus 5 and GPT-5.6 Sol. Source: [Anthropic](https://www.anthropic.com/claude-fable-and-mythos-5-1)*
+
 And note the last two rows against the current frontier. Fable 5.1 leads GPT-6 Astra by eight points on hard reasoning with tools, and leads GPT-5.6 Sol by fifteen on repository-scale coding, while Astra leads decisively on computer use. Nobody owns the lead; the split is just unusually legible this month.
 
 ## The cache discount is the actual news
@@ -51,6 +55,10 @@ Prefix caching already turned that into a one-time cost plus a cheap read. Cutti
 - **Bigger contexts become defensible.** Retrieving fifty chunks instead of five, and keeping them cached, is now the obvious choice rather than an indulgence.
 
 This is the pattern worth watching across the industry generally: capability releases get the coverage, and pricing changes to caching and serving are frequently what actually shifts what people build.
+
+![Stacked bar chart of indexed cost on Fable 5 versus Fable 5.1: about 25 percent lower for a typical workload and about 45 percent lower for a highly agentic workload where cache reads dominate](/assets/images/blog/claude-fable-5-1-cache-cost.png)
+
+*Indexed cost of the same workloads on Fable 5 and Fable 5.1: roughly 25% less for typical use and 45% less for cache-heavy agentic work. Source: [Anthropic](https://www.anthropic.com/claude-fable-and-mythos-5-1)*
 
 ## The two-name arrangement
 
@@ -97,3 +105,6 @@ EFS is the attempt to have both: monitoring that satisfies the vendor's safety o
 **Fable 5.1 for hard reasoning and repo-scale coding.** The eight-point lead over Astra on HLE-with-tools and the fifteen-point lead over Sol on SWE-Bench Pro are the clearest signals in this month's releases. Route accordingly, and do not assume the newest model is the best one for your task.
 
 **Treat model availability as a real risk.** June demonstrated that a frontier model can vanish globally for eighteen days for reasons entirely outside the vendor's control. If a workflow depends on one specific model, have a fallback wired and tested: a different vendor, and ideally an open-weight option you can run yourself.
+
+**Media credits**:
+- Benchmark table and indexed-cost chart: captured from [Anthropic's Fable 5.1 launch page](https://www.anthropic.com/claude-fable-and-mythos-5-1), © Anthropic.

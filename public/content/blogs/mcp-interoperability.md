@@ -3,7 +3,7 @@ id: "2"
 slug: "mcp-the-new-standard-for-ai-tool-interoperability"
 title: "MCP: The New Standard for AI Tool Interoperability"
 comments: "08"
-image: "https://images.unsplash.com/photo-1667372393119-3d4c48d07fc9?auto=format&fit=crop&q=80&w=800"
+image: "/assets/images/blog/mcp-interoperability.png"
 category: "Software Development"
 desc: "How the Model Context Protocol (MCP) is revolutionizing how AI agents connect to data and local tools."
 date: "Aug 21, 2026"
@@ -82,6 +82,10 @@ Companies use MCP to connect:
 ## 🏗️ Technical Architecture
 
 MCP operates on a **client-server model** with three core components:
+
+![Diagram of MCP architecture: a host application containing a model and three MCP clients, each connected by JSON-RPC 2.0 to its own MCP server for a database, a Git repository and a SaaS API](/assets/images/blog/diagrams/mcp-interoperability-1.svg)
+
+*The three components: a host application runs one MCP client per server, and each server exposes tools, resources or prompts. Diagram: Big Matrix Solutions, based on the [MCP architecture overview](https://modelcontextprotocol.io/docs/learn/architecture).*
 
 ### 📋 Message Format
 
@@ -162,3 +166,7 @@ The Model Context Protocol isn't only a technical standard. It changes how we ar
 
 ### 🏷️ Tags
 #ModelContextProtocol #AIInteroperability #MachineLearning #EnterpriseAI #AgenticSystems #Healthcare #BigMatrixSolutions
+
+**Media credits**:
+- Hero image: MCP overview diagram from the [Model Context Protocol documentation](https://modelcontextprotocol.io/docs/getting-started/intro) (`docs/images/mcp-simple-diagram.png` in the [modelcontextprotocol repository](https://github.com/modelcontextprotocol/modelcontextprotocol)), documentation licensed [CC BY 4.0](https://creativecommons.org/licenses/by/4.0/). Placed on a white 16:9 canvas; diagram unaltered.
+- In-body diagram: Big Matrix Solutions, based on the [MCP architecture overview](https://modelcontextprotocol.io/docs/learn/architecture).

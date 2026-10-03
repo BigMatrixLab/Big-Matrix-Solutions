@@ -5,7 +5,7 @@ title: "The EU AI Act for Builders: What Applies to Your Product and When"
 author: "Mera"
 admin: "Mera"
 comments: "0"
-image: "/assets/images/blog/eu-ai-act-builders.jpg"
+image: "/assets/images/blog/eu-ai-act-builders-cover.png"
 category: "AI Policy"
 desc: "The AI Act now applies in layers, and the 2026 Digital Omnibus moved the high-risk dates. A practical guide to working out your role, your risk tier and your deadlines."
 date: "Dec 18, 2026"
@@ -128,6 +128,6 @@ The AI Act is less a single deadline than a set of switches tied to what your pr
 - https://www.orrick.com/en/Insights/2026/07/EU-AI-Act-Update-Digital-Omnibus-Finalizes-8-Compliance-Changes
 
 **Media credits**:
-- Hero image: "AI Act" illustration from the European Commission's AI Act policy page — [European Commission, Shaping Europe's digital future](https://digital-strategy.ec.europa.eu/en/policies/regulatory-framework-ai). © European Union; reuse under the Commission's reuse policy (Decision 2011/833/EU), third-party elements may be excluded.
+- Hero image: Big Matrix Solutions cover, based on [Regulation (EU) 2024/1689](https://eur-lex.europa.eu/eli/reg/2024/1689/oj/eng) and [Regulation (EU) 2026/1744](https://eur-lex.europa.eu/eli/reg/2026/1744/oj/eng).
 - In-body figure: AI Act risk pyramid — [European Commission](https://digital-strategy.ec.europa.eu/en/policies/regulatory-framework-ai). © European Union; reuse under the Commission's reuse policy.
 - In-body diagram: AI Act application timeline — Big Matrix Solutions, based on [Regulation (EU) 2026/1744](https://eur-lex.europa.eu/eli/reg/2026/1744/oj/eng) and the [European Commission](https://digital-strategy.ec.europa.eu/en/policies/regulatory-framework-ai).

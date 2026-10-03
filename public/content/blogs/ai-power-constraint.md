@@ -3,7 +3,7 @@ id: "32"
 slug: "ai-is-power-bound-not-gpu-bound"
 title: "Power-Bound, Not GPU-Bound: The Constraint That Now Shapes AI"
 comments: "0"
-image: "https://images.unsplash.com/photo-1451187580459-43490279c0fa?auto=format&fit=crop&q=80&w=800"
+image: "/assets/images/blog/ai-power-constraint.png"
 category: "AI Infrastructure"
 desc: "70 TWh this year, single sites approaching 2 GW, and grids that cannot deliver. The bottleneck stopped being chips and became electricity."
 date: "Nov 30, 2026"
@@ -33,9 +33,17 @@ The trajectory matters more than the level:
 | US electricity going to AI by 2030 | ~7.4% |
 | Data centres as share of US demand by 2030 | approaching 10% |
 
+![Bar chart: leading firms’ data centre electricity of about 118 TWh in 2024, projected at 239 to 295 TWh in 2030](/assets/images/blog/diagrams/ai-power-constraint-1.svg)
+
+*Diagram: Big Matrix Solutions, based on [Artificial intelligence data centers could reach one percent of global electricity demand by 2030](https://www.nature.com/articles/s44458-026-00152-5).*
+
 The gigawatt figures are the ones to sit with, because they are about *instantaneous* draw rather than annual consumption. OpenAI's planned Stargate facility reaches **1.2 GW**. Meta's planned Louisiana site is projected to exceed **2 GW**.
 
 For scale: a large nuclear reactor produces roughly 1 GW. A single AI training facility is being designed around a demand equivalent to one or two reactors, dedicated.
+
+![Bar chart in gigawatts: a large nuclear reactor about 1 GW, OpenAI Stargate 1.2 GW, Meta Louisiana over 2 GW, and the largest 2030 training run forecast at 4 to 16 GW](/assets/images/blog/diagrams/ai-power-constraint-2.svg)
+
+*Diagram: Big Matrix Solutions, based on [Epoch AI and EPRI, Scaling Intelligence: The Exponential Growth of AI’s Power Needs](https://epoch.ai/publications/power-demands-of-frontier-ai-training).*
 
 ## Why the grid is the hard part
 
@@ -116,3 +124,8 @@ That reframing makes several otherwise-puzzling things obvious. Why frontier lab
 It also sets the right expectation for the next few years. The constraint is not going away, and it is not the kind of constraint that yields to a clever algorithm. Grid buildout is a decade-scale physical process governed by permitting, land acquisition, and utility planning cycles, none of which move at the pace the industry has become accustomed to.
 
 Progress will continue, because the infrastructure is being built and efficiency keeps improving. It will be shaped, in a way it has not been before, by the physical business of moving electricity from where it is made to where the computers are.
+
+**Media credits**:
+- Hero image: “Projected power growth for frontier AI training”, from [Epoch AI and EPRI](https://epoch.ai/publications/power-demands-of-frontier-ai-training) (Joshua You, David Owen, David Porter, Tom Wilson), CC BY 4.0. Placed unaltered on a 16:9 white canvas.
+- In-body diagram: leading firms’ data centre electricity, Big Matrix Solutions, based on [this study](https://www.nature.com/articles/s44458-026-00152-5).
+- In-body diagram: site power in gigawatts, Big Matrix Solutions, based on [Epoch AI and EPRI](https://epoch.ai/publications/power-demands-of-frontier-ai-training).

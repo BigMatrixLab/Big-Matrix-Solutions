@@ -28,6 +28,10 @@ After price cuts on July 30:
 
 Luna took an 80 percent cut, which opened a **25x gap between Sol and Luna** on both input and output. Sol's price did not change.
 
+![Bar charts of GPT-5.6 prices per million tokens: input Sol $5, Terra $2, Luna $0.20; output Sol $30, Terra $12, Luna $1.20](/assets/images/blog/diagrams/gpt-56-sol-terra-luna-1.svg)
+
+*Diagram: Big Matrix Solutions, based on [OpenAI](https://openai.com/index/gpt-5-6/) pricing.*
+
 That 25x is the number to hold onto, because the capability gap is nothing like 25x. On most benchmarks the three tiers sit within a few points of each other. Which means routing decisions are worth real money, and defaulting everything to the flagship is the most common and most expensive mistake.
 
 ## The benchmarks
@@ -52,6 +56,10 @@ Then look at the fourth row.
 MRCR measures multi-round coreference resolution over long context: can the model track entities and references across a large body of text. Sol posts 91.5 percent, Terra 89.6 percent, and Luna **41.3 percent**.
 
 That is not a gradient. It is a cliff, and it is the single most important practical fact about this model family.
+
+![Grouped bar chart of GPT-5.6 Sol, Terra and Luna on Agents' Last Exam, Terminal-Bench 2.1, Coding Agent Index and MRCR, where Luna falls to 41.3 percent on MRCR](/assets/images/blog/diagrams/gpt-56-sol-terra-luna-2.svg)
+
+*Diagram: Big Matrix Solutions, based on [OpenAI](https://openai.com/index/gpt-5-6/) benchmark results.*
 
 Luna is a genuinely capable model that is 25x cheaper than Sol and roughly as good on short-context reasoning tasks. Feed it a long document and ask it to track something across the whole thing, and it falls apart. Not gracefully either. By fifty points.
 
@@ -113,3 +121,6 @@ Two things generalise past OpenAI's lineup.
 **The price of the flagship is not a quality signal.** A 25x spread across a family whose benchmark range is single digits means price is tracking something other than general capability: inference cost, positioning, and the narrow set of tasks where the top tier genuinely separates. Paying flagship rates for work the mid tier handles is the most common waste in production LLM spend, and it is invisible on your quality metrics because the output is fine.
 
 The GPT-5.6 line is, in that sense, a well-designed family that requires you to do some work. Three models, one of which is right for nearly everything, one of which is right for a specific short list, and one of which is a bargain with a trapdoor.
+
+**Media credits**:
+- In-body charts: Big Matrix Solutions, drawn from the figures in this article.

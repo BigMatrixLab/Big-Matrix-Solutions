@@ -1,0 +1,49 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 1200 560" width="1200" height="560" role="img" aria-labelledby="t d" font-family="Inter, Segoe UI, Arial, sans-serif">
+  <rect x="0" y="0" width="1200" height="560" fill="#ffffff" rx="16" stroke="#e5e7eb"/>
+  <title id="t">Where the reward comes from: RLHF versus RLVR</title>
+  <desc id="d">Two pipelines. In RLHF a prompt goes to the policy, its response is scored by a reward model learned from human preferences, giving an approximate and hackable score. In RLVR the response's final answer is checked by a verifier such as an answer comparison, a test suite or a proof checker, giving a reward of 1 if correct and 0 otherwise.</desc>
+  <defs>
+    <marker id="a" viewBox="0 0 10 10" refX="9" refY="5" markerWidth="8" markerHeight="8" orient="auto-start-reverse">
+      <path d="M0 0 L10 5 L0 10 z" fill="#4b5563"/>
+    </marker>
+  </defs>
+  <text x="40" y="54" font-size="28" font-weight="700" fill="#111827">Same loop, different judge</text>
+  <text x="40" y="90" font-size="20" fill="#4b5563">The only change RLVR makes is where the reward comes from</text>
+
+  <g font-size="20" fill="#111827">
+    <text x="40" y="150" font-size="22" font-weight="700">RLHF</text>
+    <rect x="40" y="168" width="200" height="96" rx="12" fill="#f3f4f6" stroke="#d1d5db"/>
+    <text x="140" y="223" text-anchor="middle">Prompt</text>
+    <rect x="300" y="168" width="200" height="96" rx="12" fill="#f3f4f6" stroke="#d1d5db"/>
+    <text x="400" y="210" text-anchor="middle">Policy</text>
+    <text x="400" y="240" text-anchor="middle" font-size="18" fill="#4b5563">writes a response</text>
+    <rect x="560" y="168" width="300" height="96" rx="12" fill="#ffffff" stroke="#2563eb" stroke-width="2"/>
+    <text x="710" y="206" text-anchor="middle" font-weight="700">Reward model</text>
+    <text x="710" y="236" text-anchor="middle" font-size="18" fill="#4b5563">learned from human preferences</text>
+    <rect x="920" y="168" width="240" height="96" rx="12" fill="#ffffff" stroke="#d1d5db"/>
+    <text x="1040" y="206" text-anchor="middle" font-weight="700">Score</text>
+    <text x="1040" y="236" text-anchor="middle" font-size="18" fill="#4b5563">approximate, hackable</text>
+
+    <text x="40" y="340" font-size="22" font-weight="700">RLVR</text>
+    <rect x="40" y="358" width="200" height="96" rx="12" fill="#f3f4f6" stroke="#d1d5db"/>
+    <text x="140" y="413" text-anchor="middle">Prompt</text>
+    <rect x="300" y="358" width="200" height="96" rx="12" fill="#f3f4f6" stroke="#d1d5db"/>
+    <text x="400" y="400" text-anchor="middle">Policy</text>
+    <text x="400" y="430" text-anchor="middle" font-size="18" fill="#4b5563">writes a response</text>
+    <rect x="560" y="358" width="300" height="96" rx="12" fill="#ffffff" stroke="#ec362e" stroke-width="2"/>
+    <text x="710" y="396" text-anchor="middle" font-weight="700">Verifier</text>
+    <text x="710" y="426" text-anchor="middle" font-size="18" fill="#4b5563">answer match, tests, proof check</text>
+    <rect x="920" y="358" width="240" height="96" rx="12" fill="#ffffff" stroke="#d1d5db"/>
+    <text x="1040" y="396" text-anchor="middle" font-weight="700" fill="#ec362e">1 or 0</text>
+    <text x="1040" y="426" text-anchor="middle" font-size="18" fill="#4b5563">correct or not</text>
+  </g>
+  <g stroke="#4b5563" stroke-width="2" fill="none">
+    <path d="M240 216 H294" marker-end="url(#a)"/>
+    <path d="M500 216 H554" marker-end="url(#a)"/>
+    <path d="M860 216 H914" marker-end="url(#a)"/>
+    <path d="M240 406 H294" marker-end="url(#a)"/>
+    <path d="M500 406 H554" marker-end="url(#a)"/>
+    <path d="M860 406 H914" marker-end="url(#a)"/>
+  </g>
+  <text x="40" y="508" font-size="18" fill="#4b5563">Only the final answer is graded, so the path to it is free to explore, backtrack and self-correct.</text>
+</svg>

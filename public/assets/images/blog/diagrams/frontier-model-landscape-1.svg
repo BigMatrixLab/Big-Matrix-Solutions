@@ -1,0 +1,54 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 1200 560" width="1200" height="560" role="img" aria-labelledby="t d" font-family="Inter, Segoe UI, Arial, sans-serif">
+  <rect x="0" y="0" width="1200" height="560" fill="#ffffff" rx="16" stroke="#e5e7eb"/>
+  <title id="t">Routing a request across model tiers</title>
+  <desc id="d">A request goes to the cheap tier first, which handles 70 to 90 percent of production traffic. Anything beyond it goes to the mid tier as the default. The heavy tier is reached only on an explicit escalation signal: low confidence, a failed verification pass, two cheap runs disagreeing, or a user asking for a second look. A different vendor sits underneath as an availability fallback.</desc>
+  <defs>
+    <marker id="a" viewBox="0 0 10 10" refX="9" refY="5" markerWidth="8" markerHeight="8" orient="auto-start-reverse">
+      <path d="M0 0 L10 5 L0 10 z" fill="#4b5563"/>
+    </marker>
+  </defs>
+  <text x="40" y="54" font-size="28" font-weight="700" fill="#111827">Picking a model per request, not per product</text>
+  <text x="40" y="90" font-size="20" fill="#4b5563">The tiered routing shape teams converged on in 2026</text>
+
+  <g font-size="20" fill="#111827">
+    <rect x="40" y="170" width="150" height="90" rx="12" fill="#f3f4f6" stroke="#d1d5db"/>
+    <text x="115" y="222" text-anchor="middle" font-weight="700">Request</text>
+
+    <rect x="250" y="130" width="270" height="170" rx="12" fill="#ffffff" stroke="#d1d5db"/>
+    <text x="270" y="166" font-size="22" font-weight="700">Cheap tier first</text>
+    <text x="270" y="198" fill="#ec362e" font-weight="700">70–90% of traffic</text>
+    <text x="270" y="232" fill="#4b5563">classification, extraction,</text>
+    <text x="270" y="260" fill="#4b5563">formatting, schemas</text>
+
+    <rect x="580" y="130" width="270" height="170" rx="12" fill="#ffffff" stroke="#d1d5db"/>
+    <text x="600" y="166" font-size="22" font-weight="700">Mid tier as default</text>
+    <text x="600" y="198" fill="#4b5563">general reasoning,</text>
+    <text x="600" y="226" fill="#4b5563">drafting, tool calls</text>
+    <text x="600" y="254" fill="#4b5563">with a handful of steps</text>
+
+    <rect x="910" y="130" width="250" height="170" rx="12" fill="#ffffff" stroke="#ec362e" stroke-width="2"/>
+    <text x="930" y="166" font-size="22" font-weight="700">Heavy tier</text>
+    <text x="930" y="198" fill="#ec362e" font-weight="700">on escalation only</text>
+    <text x="930" y="232" fill="#4b5563">hardest reasoning,</text>
+    <text x="930" y="260" fill="#4b5563">long agent runs</text>
+  </g>
+  <path d="M190 215 H244" stroke="#4b5563" stroke-width="2" fill="none" marker-end="url(#a)"/>
+  <path d="M520 215 H574" stroke="#4b5563" stroke-width="2" fill="none" marker-end="url(#a)"/>
+  <path d="M850 215 H904" stroke="#4b5563" stroke-width="2" fill="none" marker-end="url(#a)"/>
+
+  <g font-size="18" fill="#4b5563">
+    <text x="40" y="350" font-size="20" font-weight="700" fill="#111827">Escalation signals</text>
+    <rect x="40" y="368" width="250" height="44" rx="22" fill="#f3f4f6"/>
+    <text x="165" y="396" text-anchor="middle">low confidence</text>
+    <rect x="306" y="368" width="270" height="44" rx="22" fill="#f3f4f6"/>
+    <text x="441" y="396" text-anchor="middle">failed verification pass</text>
+    <rect x="592" y="368" width="280" height="44" rx="22" fill="#f3f4f6"/>
+    <text x="732" y="396" text-anchor="middle">two cheap runs disagree</text>
+    <rect x="888" y="368" width="272" height="44" rx="22" fill="#f3f4f6"/>
+    <text x="1024" y="396" text-anchor="middle">user asks for a second look</text>
+  </g>
+
+  <rect x="40" y="446" width="1120" height="76" rx="12" fill="#ffffff" stroke="#2563eb" stroke-dasharray="6 6"/>
+  <text x="64" y="480" font-size="20" font-weight="700" fill="#111827">A different vendor as fallback</text>
+  <text x="64" y="508" font-size="18" fill="#4b5563">For availability, not quality: a hard dependency on one API is treated as a design flaw.</text>
+</svg>

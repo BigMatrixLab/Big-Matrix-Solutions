@@ -36,6 +36,10 @@ The **computer use** result is the most practically meaningful. OSWorld 2.0 is t
 
 The **weakness** is equally informative. On Humanity's Last Exam with tools, Astra trails Claude Fable 5.1 by nearly eight points. This is the pattern that has held all year: no model leads everywhere, and the model that dominates agentic and computer-use work is not automatically the best at hard open-ended reasoning.
 
+![Bar chart of GPT-6 Astra against rivals: OSWorld 2.0 72.6 percent versus 70.2 and 65.7, Terminal-Bench 4.0 57.7 versus 55.8, Humanity's Last Exam with tools 57.2 versus Fable 5.1 at 65.0](/assets/images/blog/diagrams/gpt-6-astra-1.svg)
+
+*Diagram: Big Matrix Solutions, based on [OpenAI](https://openai.com/index/gpt-6-astra/) and [Anthropic](https://www.anthropic.com/claude-fable-and-mythos-5-1) results.*
+
 Pricing is $10 per million input tokens and $50 per million output, with a fast mode offering 2.5x speed at 2x price. Context runs 256K to 1M, with 96.3 percent retrieval reliability quoted in the 512K–1M range. It is available in ChatGPT Plus, Pro, Business and Enterprise, through the API as `gpt-6-astra`, and on Amazon Bedrock, though enterprise admins must enable it per workspace, and it is **off by default**.
 
 ## The asterisk on the headline number
@@ -47,6 +51,10 @@ The qualification matters enormously: that score requires **a stateful, expensiv
 This is not a scandal, and OpenAI disclosed it. But it is the clearest example yet of something worth internalising about 2026 benchmarks: **the harness is frequently a larger factor in the number than the model is.** We saw the same effect on ARC-AGI-2, where a Gemini 3 Pro-based system from Poetiq reached 54 percent against 37.6 percent for the top raw commercial entry, purely by wrapping the model in an iterative refinement loop.
 
 So what the ARC-AGI-3 result actually shows is that a purpose-built stateful scaffold around Astra can adapt to novel interactive environments. That is a genuine and important capability. It is not the same claim as "the model scores 99.9 percent," and if you call the API expecting the headline figure you will be disappointed by a wide margin.
+
+![Bar chart of ARC-AGI-3 scores: frontier AI at launch 0.51 percent, Astra through a stateless API 17 to 63 percent, Astra with a stateful harness 99.9 percent, humans 100 percent](/assets/images/blog/diagrams/gpt-6-astra-2.svg)
+
+*Diagram: Big Matrix Solutions, based on [OpenAI](https://openai.com/index/gpt-6-astra/) and [ARC Prize](https://arcprize.org/blog/arc-agi-3-launch).*
 
 ## The recurrent depth problem
 
@@ -96,3 +104,6 @@ The more useful question is what changes for people building things. The answer 
 **Model selection stays a routing problem.** Astra for agentic and computer-use work, Fable 5.1 for the hardest reasoning and repo-level coding, cheaper tiers for volume. The tiered-routing pattern that has held all year holds through this release too.
 
 **Read the harness, not the headline.** Before you architect around any 2026 benchmark number, find out what scaffold produced it and what the same model does through a plain API call. On ARC-AGI-3 the spread between those two is over 80 points.
+
+**Media credits**:
+- In-body charts: Big Matrix Solutions, drawn from the figures in this article.

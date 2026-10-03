@@ -47,6 +47,10 @@ According to the launch announcement, Grok Bot started as an internal prototype 
 
 Bots run on a cloud computer that keeps their files and logins, so a job doesn't stop when you step away. The bot uses **connectors and MCP where they exist** and falls back to **computer use everywhere else**. That means it can also work on platforms that have no clean API, and the result lands in the real tool instead of a draft you have to copy across.
 
+![Diagram of Grok Bot: you assign tasks to Bots that each have a screen on a shared persistent cloud computer and reach your tools via connectors, MCP or computer use](/assets/images/blog/diagrams/grok-bot-1.svg)
+
+*Bots share one persistent cloud computer, each with its own screen, and use connectors or MCP where they exist and computer use elsewhere. Diagram: Big Matrix Solutions, based on [SpaceXAI](https://x.ai/news/introducing-grok-bot).*
+
 ### 2. 💬 Managed Like a Teammate
 
 You message a Bot from your phone or desktop, the same way you would text someone on your team. SpaceXAI says Bots "keep context on how you like work done," so they get better the more you work with them.
@@ -141,3 +145,4 @@ Grok Bot is SpaceXAI and Cursor's bet that the next step in agentic AI is **fini
 
 **Media credits**:
 - Hero image: Grok Bot launch artwork — [Cursor](https://forum.cursor.com/t/introducing-grok-bot/168053)
+- Diagram: how Grok Bot works — Big Matrix Solutions, based on [SpaceXAI](https://x.ai/news/introducing-grok-bot)

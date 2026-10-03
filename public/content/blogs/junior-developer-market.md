@@ -3,7 +3,7 @@ id: "31"
 slug: "junior-developer-market-after-coding-agents"
 title: "Entry-Level Postings Fell 67%. IBM Tripled Its Intake. Both Are Rational."
 comments: "0"
-image: "https://images.unsplash.com/photo-1552664730-d307ca884978?auto=format&fit=crop&q=80&w=800"
+image: "/assets/images/blog/junior-developer-market.png"
 category: "Software Development"
 desc: "The junior developer market did not collapse because AI writes code. It collapsed because the tasks that justified a junior hire disappeared."
 date: "Nov 26, 2026"
@@ -58,6 +58,10 @@ They tripled junior intake while **restructuring the roles**: juniors spend less
 
 Read that as a design decision rather than a hiring decision. The old junior role was defined by *producing* code. The restructured role is defined by *evaluating* code and *gathering requirements*: the two things AI is worst at and that senior engineers are chronically short of time for.
 
+![The old junior bundle of boilerplate, small bug fixes, CRUD endpoints, test scaffolding and straightforward features, compared with the restructured role of customer work, requirements and reviewing AI output](/assets/images/blog/diagrams/junior-developer-market-1.svg)
+
+*Diagram: Big Matrix Solutions, based on [IBM’s description of its restructured entry-level roles (PYMNTS)](https://www.pymnts.com/artificial-intelligence-2/2026/ibm-to-triple-entry-level-hiring-as-ai-rewrites-junior-roles/).*
+
 This is a genuinely coherent answer to the problem, and it works because:
 
 **Review is now the bottleneck.** Teams running coding agents generate diffs faster than they can competently read them. Review capacity is the constraint, and reviewing is a skill that can be learned faster than architecture.
@@ -107,6 +111,10 @@ What is emerging looks less like a pyramid and more like a **cluster of reviewer
 
 That last point is the one boards have not priced in. A team optimised for present output with no training function is efficient right up until it needs to replace someone.
 
+![A traditional pyramid of seniors, mid-level engineers and juniors compared with a small cluster of reviewers around an agent generation engine](/assets/images/blog/diagrams/junior-developer-market-2.svg)
+
+*Diagram: Big Matrix Solutions, illustrating the two team shapes described above.*
+
 ## The uncomfortable synthesis
 
 Both headline facts are rational responses to the same change.
@@ -118,3 +126,8 @@ The second group is making the better bet, but only because the first group is m
 For an individual entering the field, the practical read is narrow but clear. The market is harder than it was and not closed. The roles that exist have shifted from producing code to judging it and to figuring out what to build. Someone who can review an agent's output critically, debug a system they did not write, and turn a vague requirement into a specification is employable, and there are fewer of those people than there are open positions of that shape.
 
 The path in is narrower and it points somewhere different. Both halves of that are true.
+
+**Media credits**:
+- Hero image: Big Matrix Solutions, designed from the figures cited in this article.
+- In-body diagram: old versus restructured junior role, Big Matrix Solutions, based on [IBM’s announcement as reported by PYMNTS](https://www.pymnts.com/artificial-intelligence-2/2026/ibm-to-triple-entry-level-hiring-as-ai-rewrites-junior-roles/).
+- In-body diagram: pyramid versus reviewer cluster, Big Matrix Solutions.

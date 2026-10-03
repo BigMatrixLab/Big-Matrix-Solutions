@@ -1,0 +1,30 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 1200 446" width="1200" height="446" role="img" aria-labelledby="t d" font-family="Inter, Segoe UI, Arial, sans-serif">
+  <rect x="0" y="0" width="1200" height="446" fill="#ffffff" rx="16" stroke="#e5e7eb"/>
+  <title id="t">ARC-AGI-3: the harness moves the number</title>
+  <desc id="d">Bars: frontier AI systems at ARC-AGI-3 launch 0.51 percent; GPT-6 Astra through a standard stateless API between 17 and 63 percent depending on tier, drawn as a range; Astra with a stateful harness 99.9 percent; human testers 100 percent.</desc>
+  <text x="40" y="54" font-size="28" fill="#111827" text-anchor="start" font-weight="700">ARC-AGI-3: the harness moves the number</text>
+  <text x="40" y="90" font-size="20" fill="#4b5563" text-anchor="start">Scores as reported in the article, 0 to 100% scale</text>
+  <line x1="370.0" y1="130" x2="370.0" y2="344" stroke="#d1d5db" stroke-dasharray="4 6"/>
+  <line x1="720.0" y1="130" x2="720.0" y2="344" stroke="#d1d5db" stroke-dasharray="4 6"/>
+  <line x1="1070.0" y1="130" x2="1070.0" y2="344" stroke="#d1d5db" stroke-dasharray="4 6"/>
+  <rect x="370" y="140" width="700" height="30" rx="4" fill="#f3f4f6"/>
+  <rect x="370.0" y="140" width="3.6" height="30" rx="4" fill="#d1d5db"/>
+  <text x="40" y="162" font-size="20" fill="#111827" text-anchor="start">Frontier AI at launch (Mar 2026)</text>
+  <text x="385.57" y="162" font-size="20" fill="#111827" text-anchor="start" font-weight="700">0.51%</text>
+  <rect x="370" y="196" width="700" height="30" rx="4" fill="#f3f4f6"/>
+  <rect x="489.0" y="196" width="322.0" height="30" rx="4" fill="#2563eb"/>
+  <text x="40" y="218" font-size="20" fill="#111827" text-anchor="start">Astra, standard stateless API</text>
+  <text x="823.0" y="218" font-size="20" fill="#111827" text-anchor="start" font-weight="700">17–63% (by tier)</text>
+  <rect x="370" y="252" width="700" height="30" rx="4" fill="#f3f4f6"/>
+  <rect x="370.0" y="252" width="699.3" height="30" rx="4" fill="#ec362e"/>
+  <text x="40" y="274" font-size="20" fill="#111827" text-anchor="start">Astra, stateful harness</text>
+  <text x="1057.3" y="274" font-size="20" fill="#ffffff" text-anchor="end" font-weight="700">99.9%</text>
+  <rect x="370" y="308" width="700" height="30" rx="4" fill="#f3f4f6"/>
+  <rect x="370.0" y="308" width="700.0" height="30" rx="4" fill="#d1d5db"/>
+  <text x="40" y="330" font-size="20" fill="#111827" text-anchor="start">Human testers</text>
+  <text x="1058.0" y="330" font-size="20" fill="#111827" text-anchor="end" font-weight="700">100%</text>
+  <text x="370.0" y="378" font-size="18" fill="#4b5563" text-anchor="middle">0%</text>
+  <text x="720.0" y="378" font-size="18" fill="#4b5563" text-anchor="middle">50%</text>
+  <text x="1070.0" y="378" font-size="18" fill="#4b5563" text-anchor="middle">100%</text>
+  <text x="40" y="418" font-size="18" fill="#4b5563" text-anchor="start">The blue bar spans the stateless range (17% to 63%); the spread to 99.9% is over 80 points.</text>
+</svg>

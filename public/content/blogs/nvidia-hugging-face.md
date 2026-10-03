@@ -44,6 +44,10 @@ Hugging Face is not primarily a technology asset. It is the **default distributi
 
 If you have ever run `from transformers import AutoModel`, you have a dependency on this company. Most teams have several, and most have not thought about it as a dependency at all.
 
+![Diagram of the NVIDIA–Hugging Face deal: about $11.9 billion to shareholders plus up to $1 billion retention equity, and platform figures of 18M+ developers and 3M+ models](/assets/images/blog/diagrams/nvidia-hugging-face-1.svg)
+
+*The deal terms and the platform NVIDIA is buying. Diagram: Big Matrix Solutions, based on [NVIDIA's Form 8-K](https://www.sec.gov/Archives/edgar/data/0001045810/000104581026000078/nvda-20260902.htm) and the September 3 announcement.*
+
 ## The neutrality question
 
 Which brings us to the concern everyone raised within about ten minutes of the announcement: a hardware company now controls the place models are distributed. What stops Hugging Face becoming a funnel into CUDA?
@@ -109,3 +113,6 @@ But it is a good moment for an audit that most teams have never done:
 **Keep one non-NVIDIA path warm.** Not because neutrality will definitely erode, but because the cost of having an alternative you have actually tested is low and the cost of discovering you have none is not.
 
 None of that is a reaction to NVIDIA specifically. It is what you would want to be true about any single point of failure that 18 million developers share, and the acquisition is a useful prompt to notice that Hugging Face had quietly become one.
+
+**Media credits**:
+- Deal diagram: Big Matrix Solutions, based on [NVIDIA's Form 8-K](https://www.sec.gov/Archives/edgar/data/0001045810/000104581026000078/nvda-20260902.htm)

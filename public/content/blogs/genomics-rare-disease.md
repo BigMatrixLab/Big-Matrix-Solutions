@@ -3,7 +3,7 @@ id: "30"
 slug: "ai-genomics-rare-disease-diagnostic-odyssey"
 title: "Four Million Variants, One Answer: AI and the Rare Disease Diagnostic Odyssey"
 comments: "0"
-image: "https://images.unsplash.com/photo-1628595351029-c2bf17511435?auto=format&fit=crop&q=80&w=800"
+image: "/assets/images/blog/genomics-rare-disease.png"
 category: "Medical AI"
 desc: "Sequencing got cheap and interpretation became the bottleneck. Agentic systems that read symptoms, papers and variants are starting to close the gap."
 date: "Nov 24, 2026"
@@ -61,6 +61,10 @@ Worth walking through, because "AI finds the variant" compresses a pipeline with
 
 Each stage is imperfect and each discards real candidates alongside noise. The failure that matters most is a causal variant filtered out early, because nothing downstream can recover it. That is one argument for keeping the pipeline auditable rather than end-to-end: a geneticist who suspects the answer was discarded needs to be able to go back and look.
 
+![Variant prioritisation funnel from about four million variants through frequency, consequence, pathogenicity, gene-phenotype and inheritance filters to a shortlist](/assets/images/blog/diagrams/genomics-rare-disease-1.svg)
+
+*Diagram: Big Matrix Solutions, based on the variant prioritisation stages described in this article; stage widths are illustrative.*
+
 ## The agentic turn
 
 The more interesting recent development is architectural. The systems that work best are not a single model answering a question; they are pipelines of specialised components.
@@ -75,6 +79,10 @@ DeepRare is representative of the approach. It uses key symptoms to find similar
 The decomposition is doing real work here, and for the structural reasons rather than because the agents differ in ability. Variant annotation is a bioinformatics pipeline with defined inputs and outputs. Phenotype extraction is a language task on messy text. Literature retrieval is search. Forcing one model to do all of it in one context produces worse results than routing each to something appropriate, and keeps each component's intermediate mess out of the others.
 
 It also makes the output auditable, which matters enormously in this domain. A geneticist can see *why* a candidate was ranked highly: these symptoms matched, this paper described a similar case, this variant is predicted damaging in this gene. That traceability is the difference between a tool a clinician will use and one they will not.
+
+![Agentic pipeline: clinical notes, phenotype terms and genetic results feed four specialised agents that produce a traceable ranked shortlist for a geneticist](/assets/images/blog/diagrams/genomics-rare-disease-2.svg)
+
+*Diagram: Big Matrix Solutions, based on [Zhao et al., An agentic system for rare disease diagnosis with traceable reasoning, Nature 2026](https://www.nature.com/articles/s41586-025-10097-9).*
 
 ## The access problem this addresses
 
@@ -111,3 +119,8 @@ A patient is sequenced. Instead of the file sitting in a queue waiting for scarc
 That is a workflow change rather than a capability revolution, and it counts for a great deal anyway. It moves expert attention from search to judgment, which is what expert attention should be spent on, and it makes interpretation available in places that cannot staff a genetics department.
 
 For a family several years into an odyssey, the difference between a genome that has been sequenced and a genome that has been *read* is the entire point.
+
+**Media credits**:
+- Hero image: Big Matrix Solutions (illustrative)
+- Diagram: variant prioritisation funnel — Big Matrix Solutions
+- Diagram: agentic pipeline — Big Matrix Solutions, based on [Zhao et al., Nature 2026](https://www.nature.com/articles/s41586-025-10097-9)

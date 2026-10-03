@@ -3,7 +3,7 @@ id: "1"
 slug: "the-rise-of-agentic-ai-from-chatbots-to-autonomous-partners"
 title: "The Rise of Agentic AI: From Chatbots to Autonomous Partners"
 comments: "12"
-image: "https://images.unsplash.com/photo-1677442136019-21780ecad995?w=800&q=80&auto=format&fit=crop"
+image: "/assets/images/blog/agentic-ai.png"
 category: "Agentic AI"
 desc: "Moving beyond reactive prompts to proactive agents that plan, decide, and execute tasks independently."
 date: "Aug 28, 2026"
@@ -94,6 +94,10 @@ The core architecture of an agentic AI system consists of several interconnected
 >
 > This continuous loop enables agents to handle complex, multi-step tasks while adapting to unexpected challenges.
 
+![Diagram of the agentic loop: plan, execute, adapt and synthesise in a row, a red replan arrow from adapt back to plan, and memory and tools bands underneath](/assets/images/blog/diagrams/agentic-ai-1.svg)
+
+*The four phases above as one loop: the agent replans when a step fails, drawing on memory and tools throughout. Diagram: Big Matrix Solutions, based on [Yao et al., ReAct (arXiv:2210.03629)](https://arxiv.org/abs/2210.03629).*
+
 ## ⚠️ Challenges and Considerations
 
 While agentic AI offers tremendous potential, several challenges remain:
@@ -147,3 +151,7 @@ Agentic AI marks the transition from AI as a tool to AI as a partner. These syst
 - [Model Context Protocol: The New Standard for AI Interoperability](#)
 - [Building Reliable AI Systems at Scale](#)
 - [The Future of Human-AI Collaboration](#)
+
+**Media credits**:
+- Hero image: Figure 1 from Yao et al., "ReAct: Synergizing Reasoning and Acting in Language Models", [arXiv:2210.03629](https://arxiv.org/abs/2210.03629), licensed [CC BY 4.0](https://creativecommons.org/licenses/by/4.0/). Placed on a white 16:9 canvas; figure unaltered.
+- In-body diagram: Big Matrix Solutions, based on [ReAct](https://arxiv.org/abs/2210.03629).

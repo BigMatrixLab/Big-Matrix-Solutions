@@ -54,6 +54,10 @@ The proposal has three steps, each broader and harder than the last.
 
 **Step three** is global. The essay describes four levels of possible agreement with authoritarian governments, China foremost, in rising order of ambition: prohibiting narrow, obviously dangerous uses such as biological weapons; pre-release testing for acute risks; a "speed limit on the rate of recursive self-improvement"; and, at the far end, substantially limiting the overall rate of AI development. Amodei treats the middle levels as the more realistic targets and concedes verification is hard.
 
+![Staircase diagram of the three steps in We Must Pace the Frontier: embedded evaluators, pacing among democracies and global coordination](/assets/images/blog/diagrams/amodei-pace-the-frontier-1.svg)
+
+*The essay's three steps, from what one lab can do alone to what only governments can do. Diagram: Big Matrix Solutions, based on [Dario Amodei, "We Must Pace the Frontier"](https://darioamodei.com/post/we-must-pace-the-frontier).*
+
 ## Who agreed, and how quickly
 
 The response was fast.
@@ -107,3 +111,4 @@ The real test is not who said yes in September. It is whether, when a lab has a 
 
 **Media credits**:
 - Hero image: essay title card — [Dario Amodei](https://darioamodei.com/post/we-must-pace-the-frontier)
+- Diagram: three-part plan — Big Matrix Solutions, based on [Dario Amodei](https://darioamodei.com/post/we-must-pace-the-frontier)

@@ -3,7 +3,7 @@ id: "4"
 slug: "agentic-ops-the-future-of-self-healing-infrastructure"
 title: "Agentic Ops: The Future of Self-Healing Infrastructure"
 comments: "14"
-image: "https://images.unsplash.com/photo-1550751827-4bd374c3f58b?auto=format&fit=crop&q=80&w=800"
+image: "/assets/images/blog/agentic-operations.png"
 category: "Cyber Security"
 desc: "Autonomous agents are now monitoring and fixing server vulnerabilities in real-time using Agentic Ops."
 date: "Jul 31, 2026"
@@ -58,6 +58,10 @@ When a production incident occurs, an AI agent:
 > The system maintains complete audit trails and can operate with approval gates for critical actions.
 
 **Impact**: ✅ 70% of incidents resolved within 5 minutes • ✅ Automatic learning from each event • ✅ 24/7 intelligent monitoring
+
+![Diagram of an incident response loop: detect, diagnose, a dashed red human approval gate, execute and learn, with a loop back to detect and an immutable audit log underneath](/assets/images/blog/diagrams/agentic-operations-1.svg)
+
+*The incident loop with an approval gate before critical actions and an audit log under every step. Diagram: Big Matrix Solutions, based on [Roy et al., LLM-based agents for root cause analysis (arXiv:2403.04123)](https://arxiv.org/abs/2403.04123).*
 
 ### 2. **📈 Predictive Scaling**
 
@@ -168,6 +172,10 @@ Database agents:
 | **🚀 Phase 3: Expansion** | Months 2-3 | Add incident response and cost optimization agents | 🟡 Medium |
 | **✨ Phase 4: Autonomous Ops** | Months 4-6 | Enable auto-remediation, predictive scaling, self-healing | 🟠 High |
 
+![Staircase diagram of the four AgenticOps phases: observability in weeks 1 to 2, a monitor-only pilot agent in weeks 3 to 4, expansion in months 2 to 3, and autonomous ops in months 4 to 6, with risk rising from low to high](/assets/images/blog/diagrams/agentic-operations-2.svg)
+
+*The roadmap above as a staircase: each phase adds autonomy and risk. Diagram: Big Matrix Solutions, based on the implementation roadmap in this article.*
+
 ## ⚠️ Challenges and Considerations
 
 ### 1. 🤝 **Trust and Control**
@@ -224,3 +232,7 @@ At Big-Matrix Solutions, we're helping enterprises in Bangladesh and beyond tran
 - [AgenticOps SDK (GitHub)](https://github.com/big-matrix/agenticops)
 - [Case Study: Healthcare AgenticOps](https://big-matrix.com/case-studies/healthops)
 - [Whitepaper: Economics of AgenticOps](https://big-matrix.com/whitepapers/agenticops)
+
+**Media credits**:
+- Hero image: Figure 2 (an RCA agent's ReAct reasoning trajectory) from Roy et al., "Exploring LLM-based Agents for Root Cause Analysis", [arXiv:2403.04123](https://arxiv.org/abs/2403.04123), licensed [CC BY-SA 4.0](https://creativecommons.org/licenses/by-sa/4.0/). Placed on a white 16:9 canvas; figure unaltered.
+- In-body diagrams: Big Matrix Solutions.

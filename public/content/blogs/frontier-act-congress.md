@@ -26,6 +26,10 @@ The bill started as a discussion draft. In June 2026, Reps. Jay Obernolte (R-CA)
 
 On **July 23, 2026**, the two sponsors introduced a revised version: the **Frontier Risk Oversight, National Transparency, Independent Evaluation, and Reporting (FRONTIER) Act**, **H.R. 9925**. Four co-sponsors joined them: Reps. Houchin, Peters, Scott Franklin and Subramanyam. The bill was referred to the House Energy and Commerce Committee and the Science, Space, and Technology Committee.
 
+![First page of H.R. 9925, the FRONTIER Act, as introduced in the House of Representatives on July 23, 2026](/assets/images/blog/frontier-act-hr9925-first-page.png)
+
+*The first page of H.R. 9925 as introduced. Source: [GovInfo, U.S. Government Publishing Office](https://www.govinfo.gov/app/details/BILLS-119hr9925ih), public domain*
+
 ## What the bill actually requires
 
 According to the introduced text, the bill sets three tiers of developer:
@@ -35,6 +39,10 @@ According to the introduced text, the bill sets three tiers of developer:
 | Frontier developer | Has trained, or started training, a model using more than 10^26 operations | Transparency report before deployment; critical incident reporting |
 | Large frontier developer | Above, plus over $50M gross revenue and $1B+ AI development spend over 36 months | Publish and follow a "frontier AI framework" for catastrophic risk |
 | Very large frontier developer | Above, plus over $5B gross revenue and $10B+ AI development spend over 36 months | Retain a licensed Independent Verification Organization (IVO), assessed at least every six months |
+
+![Nested boxes showing the FRONTIER Act's three developer tiers and the obligations attached to each](/assets/images/blog/diagrams/frontier-act-congress-1.svg)
+
+*Each tier adds revenue and spending tests to the one above it. Diagram: Big Matrix Solutions, based on [the bill text](https://www.govinfo.gov/app/details/BILLS-119hr9925ih).*
 
 Other provisions in the text:
 
@@ -129,3 +137,5 @@ AI Policy, FRONTIER Act, AI Regulation, Compliance, Frontier Models
 
 **Media credits**:
 - Hero image: U.S. Capitol, from the FRONTIER Act introduction release — [Office of Rep. Jay Obernolte](https://obernolte.house.gov/media/press-releases/obernolte-trahan-introduce-bipartisan-frontier-act-strengthen-oversight)
+- In-body image: first page of H.R. 9925 — [GovInfo](https://www.govinfo.gov/app/details/BILLS-119hr9925ih), public domain
+- Diagram: developer tiers — Big Matrix Solutions, based on [H.R. 9925](https://www.govinfo.gov/app/details/BILLS-119hr9925ih)

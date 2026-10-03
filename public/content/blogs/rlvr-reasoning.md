@@ -3,7 +3,7 @@ id: "26"
 slug: "rlvr-how-reasoning-models-got-good"
 title: "The Trick That Made Models Reason: Verifiable Rewards, and Where They Run Out"
 comments: "0"
-image: "https://images.unsplash.com/photo-1509228468518-180dd4864904?auto=format&fit=crop&q=80&w=800"
+image: "/assets/images/blog/rlvr-reasoning.png"
 category: "LLM Research"
 desc: "RLVR gave us o-series, R1 and every reasoning model since. It also confined the gains to domains where a computer can check the answer."
 date: "Nov 14, 2026"
@@ -37,6 +37,10 @@ That last point is the fatal one for reasoning specifically. RLHF's signal rewar
 RLVR proceeds similarly to RLHF but makes the reward model optional, replacing it with a scoring function that returns a positive reward when the answer is correct and zero otherwise.
 
 That is it. No learned reward model. No human in the loop at training time. A verifier.
+
+![Diagram comparing RLHF, where a learned reward model gives an approximate score, with RLVR, where a verifier returns 1 for a correct answer and 0 otherwise](/assets/images/blog/diagrams/rlvr-reasoning-1.svg)
+
+*Diagram: Big Matrix Solutions, based on [Lambert et al., Tulu 3 (arXiv:2411.15124)](https://arxiv.org/abs/2411.15124).*
 
 ```python
 # RLHF: learned, approximate, hackable
@@ -80,6 +84,10 @@ This is classic sparse-reward reinforcement learning, and the standard mitigatio
 - **Many rollouts per problem**: which is exactly why repeated generation dominates the compute bill, and why efficiency work in this area is so active.
 
 It also explains a counterintuitive property of the method: RLVR is best at problems the base model can *occasionally* already solve. It amplifies and reliabilises latent capability rather than installing new capability. Findings that RLVR implicitly incentivises correct reasoning already present in base models point in the same direction. The reinforcement is selecting for reasoning paths the pretrained model could produce, not teaching it to produce new ones.
+
+![Figure showing reasoning paths in a base model and after RLVR, with pass@k curves on AIME 2024 and 2025 where the RLVR model leads at low k and the base model catches up at high k](/assets/images/blog/rlvr-reasoning-pass-at-k.png)
+
+*RLVR mostly raises the odds of correct reasoning paths the base model can already produce: the gap is largest at pass@1 and narrows as k grows. Source: [Wen et al. (arXiv:2506.14245)](https://arxiv.org/abs/2506.14245), [CC BY 4.0](https://creativecommons.org/licenses/by/4.0/).*
 
 That has a real implication for expectations. RLVR made models dramatically more reliable at things they could sometimes do. It did not make them able to do things that were entirely outside reach, and there is no reason to expect more RL compute to change that.
 
@@ -139,3 +147,8 @@ Someone noticed that the expensive, noisy, hackable part of RLHF, the human judg
 It also drew a boundary. Capability grew fastest exactly where verification was cheapest, and the frontier of what models reason well about now tracks the frontier of what we can automatically check.
 
 Which makes the most consequential open problem in the field somewhat unexpected. It is not a better architecture. It is: how do you build a verifier for a domain where correctness is a matter of judgment?
+
+**Media credits**:
+- Hero image: Figure 18 ("An overview of how Reinforcement Learning with Verifiable Rewards (RLVR) works") from Lambert et al., "Tulu 3: Pushing Frontiers in Open Language Model Post-Training", [arXiv:2411.15124](https://arxiv.org/abs/2411.15124), licensed [CC BY 4.0](https://creativecommons.org/licenses/by/4.0/). Placed on a white 16:9 canvas; figure unaltered.
+- Pass@k figure: Figure 1 from Wen et al., "Reinforcement Learning with Verifiable Rewards Implicitly Incentivizes Correct Reasoning in Base LLMs", [arXiv:2506.14245](https://arxiv.org/abs/2506.14245), licensed [CC BY 4.0](https://creativecommons.org/licenses/by/4.0/).
+- RLHF vs RLVR diagram: Big Matrix Solutions.

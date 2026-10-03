@@ -50,6 +50,10 @@ One equation, any timestep, no loop. This is what makes training practical. Samp
 
 Note the structure: `sqrt(ᾱ_t)` scales down the original image while `sqrt(1 - ᾱ_t)` scales up the noise, and the two coefficients keep total variance roughly constant. At `t = 0` you have the image. At `t = T` with `ᾱ_T ≈ 0`, you have pure noise. In between, a controlled blend.
 
+![Five panels showing an image becoming pure noise under the forward process, with reverse arrows showing the learned denoiser stepping back, and the closed-form equation for x_t](/assets/images/blog/diagrams/how-diffusion-models-work-1.svg)
+
+*Forward noising is fixed; the reverse step is what the network learns. Diagram: Big Matrix Solutions, based on [Denoising Diffusion Probabilistic Models](https://arxiv.org/abs/2006.11239).*
+
 ## Part two: the reverse process (learning to rebuild)
 
 The forward process destroys. Generation needs the reverse: given `x_t`, produce `x_{t-1}`.
@@ -128,6 +132,10 @@ eps = eps_uncond + guidance_scale * (eps_cond - eps_uncond)
 
 The difference `(eps_cond - eps_uncond)` is the direction the prompt pulls in. Multiplying it by a scale greater than one exaggerates that pull, pushing the sample further toward the prompt than the model's honest conditional estimate would.
 
+![Vector sketch of classifier-free guidance: the unconditional and conditional noise estimates, and the guided estimate extrapolated along their difference at scales 1, 2 and 3](/assets/images/blog/diagrams/how-diffusion-models-work-2.svg)
+
+*Classifier-free guidance pushes past the conditional estimate along the prompt direction. Diagram: Big Matrix Solutions, based on [Classifier-Free Diffusion Guidance](https://arxiv.org/abs/2207.12598).*
+
 This is exactly the CFG scale in every image tool:
 
 | Scale | Behaviour |
@@ -195,3 +203,6 @@ The compute cost at inference was the one real disadvantage, and better samplers
 Which is a fairly common pattern in this field: the method that wins is not the one that was fastest at the start, but the one whose main problem turned out to be an engineering problem.
 
 Hero diagram: [latent diffusion architecture](https://commons.wikimedia.org/wiki/File:Diffusion_Architecture.png) by Rombach, Blattmann, Lorenz, Esser and Ommer, [CC BY 4.0](https://creativecommons.org/licenses/by/4.0/), via Wikimedia Commons. Scaled and padded to fit; not otherwise altered.
+
+**Media credits**:
+- In-body diagrams (forward/reverse process, classifier-free guidance): Big Matrix Solutions, based on [Ho et al., 2020](https://arxiv.org/abs/2006.11239) and [Ho and Salimans, 2022](https://arxiv.org/abs/2207.12598).

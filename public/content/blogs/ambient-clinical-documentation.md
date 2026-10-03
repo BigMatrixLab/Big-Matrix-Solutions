@@ -3,7 +3,7 @@ id: "24"
 slug: "ambient-ai-scribes-randomized-trial-results"
 title: "The Randomised Trial on AI Scribes Is In: 30 Minutes a Day and a Real Dent in Burnout"
 comments: "0"
-image: "https://images.unsplash.com/photo-1478737270239-2f02b77fc618?auto=format&fit=crop&q=80&w=800"
+image: "/assets/images/blog/ambient-clinical-documentation-cover.png"
 category: "Medical AI"
 desc: "238 physicians, 14 specialties, head-to-head against usual care. The clearest evidence yet that a boring AI application beats an exciting one."
 date: "Nov 08, 2026"
@@ -49,6 +49,10 @@ That distinction is the whole reason the risk profile is acceptable:
 
 Compare that to the risk surface of a model recommending a diagnosis, and the difference in deployability is obvious. The boring application shipped first because it deserved to.
 
+![Comparison table: an ambient scribe records a decision the clinician already made and its errors surface on review, while diagnostic AI proposes the decision, its errors surface later, and it can anchor the clinician](/assets/images/blog/diagrams/ambient-clinical-documentation-2.svg)
+
+*Why the risk profile of a scribe is easier to accept than diagnostic AI. Diagram: Big Matrix Solutions, based on [the randomised trial of two ambient AI scribes](https://pmc.ncbi.nlm.nih.gov/articles/PMC12768499/).*
+
 ## What actually gets deployed
 
 Adoption has moved past pilots. UW Health, after a successful trial, rolled out ambient documentation across clinics and hospitals in Wisconsin and Illinois, with roughly **800 physicians and advanced practice providers** using it.
@@ -84,6 +88,10 @@ Ambient documentation sounds like speech-to-text plus summarisation. It is consi
 **Structuring to a specialty format.** The extracted content has to land in the right section of the right note template, coded appropriately for billing. This is where most of the deployment engineering goes, and it is why the products that work ship specialty-specific structuring rather than one universal note.
 
 **Handling what was not said.** Clinicians document negatives: the absence of chest pain, no family history of the relevant condition. Some of those were explicitly asked and answered. Some are inferred from the clinician's assessment. A system that fabricates a negative finding nobody discussed has introduced something false into the record, and this is a real and specific failure mode rather than a hypothetical one.
+
+![Six-stage pipeline for an ambient scribe: diarisation, clinical vocabulary, relevance, specialty template, draft note, clinician sign-off, with fabricated negative findings flagged as a failure mode](/assets/images/blog/diagrams/ambient-clinical-documentation-1.svg)
+
+*The stages an ambient scribe has to get right between room audio and a signed note. Diagram: Big Matrix Solutions, based on [the randomised trial of two ambient AI scribes](https://pmc.ncbi.nlm.nih.gov/articles/PMC12768499/).*
 
 ## The uncomfortable questions
 
@@ -126,3 +134,7 @@ Set the specifics aside and the deployment pattern here is the one worth copying
 The lesson generalises past medicine. The applications that landed in 2026 were mostly not the ones that replaced expert judgment. They were the ones that removed the administrative tax around expert judgment, and there is a great deal of that tax in every profession.
 
 Which suggests the question worth asking of any proposed AI deployment is not "can the model do the expert's job." It is "what is the expert doing that is not their job, and can the model do that instead."
+
+**Media credits**:
+- Hero image: Big Matrix Solutions cover, based on [the randomised trial of two ambient AI scribes](https://pmc.ncbi.nlm.nih.gov/articles/PMC12768499/).
+- In-body diagrams: risk-profile comparison and scribe pipeline. Big Matrix Solutions, based on [the same trial](https://pmc.ncbi.nlm.nih.gov/articles/PMC12768499/).

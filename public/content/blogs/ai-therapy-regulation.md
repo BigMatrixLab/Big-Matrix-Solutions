@@ -3,7 +3,7 @@ id: "36"
 slug: "ai-therapy-regulation-state-patchwork"
 title: "Five States Banned It, One Built a Safe Harbour: AI Therapy's Regulatory Split"
 comments: "0"
-image: "https://images.unsplash.com/photo-1589829545856-d10d557cf95f?auto=format&fit=crop&q=80&w=800"
+image: "/assets/images/blog/ai-therapy-regulation-cover.png"
 category: "Medical AI"
 desc: "Eleven states, more than a dozen laws, three incompatible models, and no FDA authorisation. What happens when a technology outruns its regulator."
 date: "Dec 08, 2026"
@@ -46,6 +46,10 @@ Idaho and Nebraska passed Conversational AI Safety Acts requiring public-facing 
 
 This model targets the specific failure that motivated the whole conversation: a system encountering someone in crisis and handling it badly.
 
+![Three columns comparing US state approaches to AI therapy: prohibition in Illinois, Nevada and Maine; disclosure and safe harbour in Utah; safety duties in California, New York, Idaho, Nebraska and Colorado](/assets/images/blog/diagrams/ai-therapy-regulation-1.svg)
+
+*The three regulatory models side by side, and the crisis-response floor they share. Diagram: Big Matrix Solutions, based on [Maine LD 2082](https://legislature.maine.gov/billtracker/#Paper/HP1397?legislature=132) and [Utah HB 452](https://le.utah.gov/~2025/bills/static/HB0452.html).*
+
 ## The compliance problem this creates
 
 | Model | States | Mechanism |
@@ -85,6 +89,10 @@ Disclosure requirements vary. Data restrictions vary. Licensure positions are op
 That is the load-bearing concern, and it is well chosen. It is the scenario where the gap between a chatbot and a clinician is widest and the consequence is most severe. A clinician recognises risk, assesses it, and escalates. A general-purpose model may fail to recognise it, may respond with generic sympathy, or, in the case that produced legislative urgency, may respond in a way that makes things worse.
 
 It is also the requirement most amenable to engineering. Crisis detection is a classification problem with a clear escalation path, and it is far more tractable than "provide good therapy." The laws converged on the part that can actually be specified and audited.
+
+![Flow diagram: a crisis classifier checks each user message; on a positive it breaks the frame, escalates to crisis resources or a human, and logs the event; otherwise the conversation continues with AI disclosure](/assets/images/blog/diagrams/ai-therapy-regulation-2.svg)
+
+*An illustrative crisis-handling flow; the exact duties differ by state. Diagram: Big Matrix Solutions, based on [California SB 243](https://leginfo.legislature.ca.gov/faces/billNavClient.xhtml?bill_id=202520260SB243).*
 
 ## Why general models are a bad fit here specifically
 
@@ -132,3 +140,8 @@ The demand is real, the shortage of human alternatives is real, and the harm fro
 What the regulatory split reveals is that the disagreement is not empirical. Illinois and Utah are not looking at different data about chatbot safety. They are answering a different question: whether an unlicensed system should be permitted to do a licensed thing at all, versus whether a regulated version is better than the unregulated one people will use anyway.
 
 Both positions are coherent. The technology arrived before anyone chose, and eleven states chose differently. That is what a governance failure looks like in practice. Not an absence of rules, but too many incompatible ones written by whoever moved first.
+
+**Media credits**:
+- Hero image: Big Matrix Solutions cover summarising the three state models, based on the statutes cited below.
+- In-body diagram: the three regulatory models. Big Matrix Solutions, based on [Maine LD 2082](https://legislature.maine.gov/billtracker/#Paper/HP1397?legislature=132) and [Utah HB 452](https://le.utah.gov/~2025/bills/static/HB0452.html).
+- In-body diagram: illustrative crisis-handling flow. Big Matrix Solutions, based on [California SB 243](https://leginfo.legislature.ca.gov/faces/billNavClient.xhtml?bill_id=202520260SB243).

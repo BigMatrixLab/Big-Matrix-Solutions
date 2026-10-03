@@ -31,6 +31,10 @@ The sequence matters, so here it is by date.
 | Sep 28 | OpenAI, via head of safety systems | Planned GPT-6.1 Astra release cancelled over safety testing |
 | Sep 29 | DevDay, San Francisco | Altman: no set IPO timeline; CFO Sarah Friar: IPO "not a destination" |
 
+![Vertical timeline of Sam Altman's September 2026 statements and OpenAI decisions, from September 12 to September 29](/assets/images/blog/diagrams/altman-trust-and-ipo-1.svg)
+
+*Six dated events in September 2026. Diagram: Big Matrix Solutions, based on [Fortune](https://fortune.com/2026/09/12/sam-altman-openai-ipo-delay-ill-advised-moment-safety-concerns/), [CNBC](https://www.cnbc.com/2026/09/14/sam-altman-ai-slowdown-anthropic-amodei-musk.html) and [The San Francisco Standard](https://sfstandard.com/2026/09/16/sam-altman-trust-us/).*
+
 ### The pacing endorsement
 
 On September 12, Anthropic chief executive Dario Amodei published an essay arguing the industry should slow the rate at which model capabilities improve, and committed Anthropic to giving independent evaluators employee-like access. Altman replied on X the same day: "I agree with Dario that we need to pace the frontier." He said such evaluators were "a great idea, and we will do the same."
@@ -97,3 +101,4 @@ Altman asked the world to trust OpenAI. The more durable version of that request
 
 **Media credits**:
 - Hero image: DevDay 2026 artwork — [OpenAI](https://openai.com/index/devday-2026-recap/)
+- Diagram: September 2026 timeline — Big Matrix Solutions, based on Fortune, CNBC and The San Francisco Standard reporting

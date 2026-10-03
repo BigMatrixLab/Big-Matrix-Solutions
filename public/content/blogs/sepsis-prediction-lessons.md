@@ -5,7 +5,7 @@ title: "What the Sepsis Model Taught Medical AI About External Validation"
 author: "Mera"
 admin: "Mera"
 comments: "0"
-image: "/assets/images/blog/sepsis-prediction-lessons.jpg"
+image: "/assets/images/blog/sepsis-prediction-lessons-cover.jpg"
 category: "Medical AI"
 desc: "A widely deployed sepsis model looked very different once independent researchers tested it. Five years of follow-up studies turned one case into a working checklist for anyone evaluating clinical prediction models."
 date: "Feb 22, 2027"
@@ -121,5 +121,5 @@ Clinical prediction models are now routinely bought, configured and switched on 
 - [Adams et al., Prospective, multi-site study of patient outcomes after implementation of the TREWS machine learning-based early warning system for sepsis, Nature Medicine 2022](https://pubmed.ncbi.nlm.nih.gov/35864252/)
 
 **Media credits**:
-- Hero image: proportion of patients generating sepsis alerts per day at 24 hospitals before and during COVID-19, Figure from Wong et al., JAMA Network Open 2021 — [PMC](https://pmc.ncbi.nlm.nih.gov/articles/PMC8605481/), CC BY
+- Hero image: AUROC of ESM v2 versus v1 at four health systems, before Sepsis-3 positivity and before clinician recognition, Figure 2 from Wong et al., JAMA Network Open 2026 — [PMC](https://pmc.ncbi.nlm.nih.gov/articles/PMC12949446/), CC BY, placed on a 16:9 canvas
 - Diagram: AUROC across evaluations — Big Matrix Solutions, based on the Wong 2021, Kamran 2024 and Wong 2026 studies listed above

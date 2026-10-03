@@ -37,6 +37,10 @@ The idea is simple. A normal LLM call can return anything. The Decisions API con
 > - ✅ You pass context as **text or images**
 > - ✅ Luna returns **one of your answers**, never free-form text
 
+![Diagram of the Decisions API: a question, allowed answers and text or image context go into a constrained GPT-6 Luna, which returns one of your answers](/assets/images/blog/diagrams/openai-decisions-api-1.svg)
+
+*The Decisions API returns one of the answers you define, never free-form text. Diagram: Big Matrix Solutions, based on [The Decoder](https://the-decoder.com/openai-expands-codex-and-its-api-at-devday-with-security-scans-a-decisions-api-and-ultrafast/).*
+
 Because the model only has to choose, OpenAI can make it much faster. According to The Decoder, OpenAI says the Decisions API answers in about **150 milliseconds**, about **ten times faster** than a regular GPT-6 Luna call. Firecrawl reports that OpenAI's DevDay slide puts the standard Luna call at **1.6 seconds**.
 
 ## 🚧 What OpenAI Hasn't Published Yet
@@ -75,6 +79,10 @@ TypeSafe's own benchmark page claims Jev ran its workflow tasks **193.6x faster*
 The early response was large. Bloomberg reported that Jev's launch video was viewed about **40 million times** on X. It also said TypeSafe received funding offers valuing it at more than **$10 billion**.
 
 > ⚠️ Firecrawl cites an early hands-on test by Every with a split result. The Decisions API was faster on multi-step text tasks, about **230 ms vs 500 ms**. Jev was faster on classification, about **161 ms vs 309 ms**. One test is not a benchmark, so measure on your own data.
+
+![Bar chart of latency claims: standard GPT-6 Luna 1.6 seconds, Decisions API about 150 ms, Jev 70 to 500 ms, plus Every's split test results](/assets/images/blog/diagrams/openai-decisions-api-2.svg)
+
+*Vendor latency claims, and one early hands-on test with a split result. Diagram: Big Matrix Solutions, based on [Firecrawl](https://www.firecrawl.dev/blog/openai-decisions-api-vs-jev).*
 
 ## 💼 What It Means for Teams and Developers
 
@@ -131,3 +139,5 @@ Jev, by contrast, is live, priced and documented, but text-only. For most teams 
 
 **Media credits**:
 - Hero image: DevDay 2026 artwork — [OpenAI](https://openai.com/index/devday-2026-recap/)
+- Diagram: Decisions API flow — Big Matrix Solutions, based on [The Decoder](https://the-decoder.com/openai-expands-codex-and-its-api-at-devday-with-security-scans-a-decisions-api-and-ultrafast/)
+- Diagram: latency claims — Big Matrix Solutions, based on [Firecrawl](https://www.firecrawl.dev/blog/openai-decisions-api-vs-jev)

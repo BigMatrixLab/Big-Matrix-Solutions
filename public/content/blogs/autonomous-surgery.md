@@ -3,7 +3,7 @@ id: "33"
 slug: "autonomous-surgical-robots-where-they-stand"
 title: "A Robot Removed Eight Gallbladders Without Help. Read the Asterisks."
 comments: "0"
-image: "https://images.unsplash.com/photo-1579684385127-1ef15d508118?auto=format&fit=crop&q=80&w=800"
+image: "/assets/images/blog/autonomous-surgery.png"
 category: "Medical AI"
 desc: "88% of steps completed unaided on ex vivo tissue, and a clearance pathway that still assumes a surgeon's hands on the controls. What autonomy means here."
 date: "Dec 02, 2026"
@@ -61,6 +61,10 @@ The Johns Hopkins gallbladder work is a level 2 demonstration edging toward leve
 
 What the framework makes clear is that the interesting jump is 1 to 2: from *constraining* a surgeon's motion to *originating* motion. That is where the system starts making a decision, and it is where the regulatory and liability questions all appear at once. Levels 3 through 5 are extensions of the same problem rather than new ones.
 
+![Levels of surgical autonomy from 0 (teleoperation) to 5 (full autonomy), with clinical systems at levels 0 to 1 and the Johns Hopkins work at level 2 edging toward 3](/assets/images/blog/diagrams/autonomous-surgery-1.svg)
+
+*Diagram: Big Matrix Solutions, based on the levels framework described in this article and [Kim et al., SRT-H](https://arxiv.org/abs/2505.10251).*
+
 It also explains why orthopaedics is likely to get there first. Level 1 bone cutting is already routine, the anatomy is rigid, the plan comes from a preoperative CT, and the gap between constraining a cut and making it is narrow. Soft tissue offers no such gentle path. Tissue deforms, bleeds, and looks different from one patient to the next.
 
 ## What is actually clearing regulators
@@ -72,6 +76,10 @@ In January 2026, Intuitive secured FDA clearance for the da Vinci 5 for several 
 Meanwhile a team at the Institute of Automation of the Chinese Academy of Sciences published another autonomous surgical robotics advance in January 2026, so the research is progressing on multiple fronts.
 
 The pattern is consistent: **clinical clearance for better teleoperation, laboratory results for autonomy.** Those two tracks have not yet met, and the reason is less about capability than about how devices are regulated.
+
+![Two parallel tracks: clinical clearance of the teleoperated da Vinci 5 versus laboratory autonomy milestones from STAR in 2022 to the Johns Hopkins gallbladder work](/assets/images/blog/diagrams/autonomous-surgery-2.svg)
+
+*Diagram: Big Matrix Solutions, based on [Saeidi et al., Science Robotics 2022 (STAR)](https://www.science.org/doi/10.1126/scirobotics.abj2908) and [Kim et al., SRT-H](https://arxiv.org/abs/2505.10251).*
 
 ## Why the regulatory path is genuinely hard
 
@@ -133,3 +141,8 @@ Autonomous soft-tissue surgery is a real research capability, demonstrated on ex
 Clinical robotic surgery is teleoperation, expanding into harder procedures, with a surgeon's hands on the controls.
 
 The distance between those is measured in regulatory frameworks and clinical evidence rather than in algorithms, which is a familiar pattern across medical AI, and here it is arguably appropriate. The 88 percent figure is a strong result and a reminder of the arithmetic: for a procedure performed hundreds of thousands of times a year, the interesting number is not the 88 percent that worked. It is what happens in the remaining 12 percent, and how reliably someone is there to notice.
+
+**Media credits**:
+- Hero image: Big Matrix Solutions, based on [Kim et al., SRT-H](https://arxiv.org/abs/2505.10251)
+- Diagram: levels of surgical autonomy — Big Matrix Solutions, based on this article and [Kim et al.](https://arxiv.org/abs/2505.10251)
+- Diagram: clinical versus laboratory tracks — Big Matrix Solutions, based on [STAR](https://www.science.org/doi/10.1126/scirobotics.abj2908) and [SRT-H](https://arxiv.org/abs/2505.10251)

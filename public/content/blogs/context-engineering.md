@@ -3,7 +3,7 @@ id: "37"
 slug: "context-engineering-replaced-prompt-engineering"
 title: "Prompt Engineering Is Dead. Context Engineering Is the Job Now."
 comments: "0"
-image: "https://images.unsplash.com/photo-1517971071642-34a2d3ecc9cd?auto=format&fit=crop&q=80&w=800"
+image: "/assets/images/blog/context-engineering.png"
 category: "Agentic AI"
 desc: "When an agent runs for hours, the binding constraint is not the prompt. It is what occupies the window, in what order, and what you throw away."
 date: "Dec 10, 2026"
@@ -96,6 +96,10 @@ Given position sensitivity, put the most important material where the model read
 
 Practically: task and constraints at the start, current state and immediate instruction at the end, accumulated history in the middle where its lower weight matters least. This is a free improvement that costs one decision about assembly order.
 
+![Diagram of a context window as a column: system prompt and tool definitions as a cached stable prefix, task and constraints near the start, accumulated history in the middle where recall is weakest, and current state at the end, with a durable state file and a subagent feeding in from outside](/assets/images/blog/diagrams/context-engineering-1.svg)
+
+*Stable prefix first, important material at both ends, history in the middle where it gets compacted. Diagram: Big Matrix Solutions, based on [Zhang et al., Agentic Context Engineering (arXiv:2510.04618)](https://arxiv.org/abs/2510.04618).*
+
 ## A worked example
 
 Concrete, because the techniques are easier to see applied than listed.
@@ -129,6 +133,10 @@ Four, and they are recognisable once named.
 **Context rot.** Gradual accumulation of stale material until the useful signal is a minority of the window. Symptom: an agent that starts sharp and becomes unreliable over hours, with no single point of failure.
 
 **Over-compaction.** Summarising so aggressively that essential state is lost. Symptom: an agent that re-does completed work, or contradicts a decision it made an hour ago.
+
+![Line chart from the ACE paper: tokens in context climb to 18,282 with accuracy 66.7, then a single rewrite collapses the context to 122 tokens and accuracy falls to 57.1, below the 63.7 baseline with no context](/assets/images/blog/context-engineering-context-collapse.png)
+
+*Over-compaction measured: one wholesale LLM rewrite shrank a context from 18,282 tokens to 122, and accuracy fell from 66.7 to 57.1, below the 63.7 scored with no context at all. Source: [Zhang et al., Agentic Context Engineering (arXiv:2510.04618)](https://arxiv.org/abs/2510.04618), CC BY 4.0.*
 
 **Duplicate content.** The same file read three times because three steps needed it, occupying three copies of the window. Symptom: token consumption that grows much faster than task progress.
 
@@ -165,3 +173,8 @@ If you are building agentic systems, in order:
 **Stop tuning prompt wording.** If a change in phrasing meaningfully alters your results, the instruction was ambiguous. Fix the ambiguity rather than finding the phrasing the model happens to like. That fix survives a model upgrade; the phrasing will not.
 
 The last one is the clearest signal of the shift. Two years ago, finding the wording a model responded to was the work. Now, needing to find it means something upstream is underspecified, and specifying it properly is the job that replaced prompting.
+
+**Media credits**:
+- Hero image: Figure 4 (the ACE framework) from Zhang et al., "Agentic Context Engineering: Evolving Contexts for Self-Improving Language Models", [arXiv:2510.04618](https://arxiv.org/abs/2510.04618), licensed [CC BY 4.0](https://creativecommons.org/licenses/by/4.0/). Placed on a white 16:9 canvas; figure unaltered.
+- Context collapse chart: Figure 2 from the same paper, [CC BY 4.0](https://creativecommons.org/licenses/by/4.0/), unaltered.
+- In-body diagram: Big Matrix Solutions.

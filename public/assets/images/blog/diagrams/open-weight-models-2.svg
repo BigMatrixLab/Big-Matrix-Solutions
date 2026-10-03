@@ -1,0 +1,112 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 1200 506" width="1200" height="506" role="img" aria-labelledby="t d" font-family="Inter, Segoe UI, Arial, sans-serif">
+  <rect x="0" y="0" width="1200" height="506" fill="#ffffff" rx="16" stroke="#e5e7eb"/>
+  <title id="t">You pay memory for all of it, compute for a sliver</title>
+  <desc id="d">A grid of 100 squares, each 1 percent of a trillion-parameter mixture-of-experts model. All squares are resident in memory; 3 squares, about 30 billion parameters, are active per token.</desc>
+  <text x="40" y="54" font-size="28" fill="#111827" text-anchor="start" font-weight="700">You pay memory for all of it, compute for a sliver</text>
+  <text x="40" y="90" font-size="20" fill="#4b5563" text-anchor="start">Trillion-parameter MoE: one square = 1% of total parameters</text>
+  <rect x="40" y="130" width="40" height="40" rx="4" fill="#ec362e"/>
+  <rect x="86" y="130" width="40" height="40" rx="4" fill="#ec362e"/>
+  <rect x="132" y="130" width="40" height="40" rx="4" fill="#ec362e"/>
+  <rect x="178" y="130" width="40" height="40" rx="4" fill="#d1d5db"/>
+  <rect x="224" y="130" width="40" height="40" rx="4" fill="#d1d5db"/>
+  <rect x="270" y="130" width="40" height="40" rx="4" fill="#d1d5db"/>
+  <rect x="316" y="130" width="40" height="40" rx="4" fill="#d1d5db"/>
+  <rect x="362" y="130" width="40" height="40" rx="4" fill="#d1d5db"/>
+  <rect x="408" y="130" width="40" height="40" rx="4" fill="#d1d5db"/>
+  <rect x="454" y="130" width="40" height="40" rx="4" fill="#d1d5db"/>
+  <rect x="500" y="130" width="40" height="40" rx="4" fill="#d1d5db"/>
+  <rect x="546" y="130" width="40" height="40" rx="4" fill="#d1d5db"/>
+  <rect x="592" y="130" width="40" height="40" rx="4" fill="#d1d5db"/>
+  <rect x="638" y="130" width="40" height="40" rx="4" fill="#d1d5db"/>
+  <rect x="684" y="130" width="40" height="40" rx="4" fill="#d1d5db"/>
+  <rect x="730" y="130" width="40" height="40" rx="4" fill="#d1d5db"/>
+  <rect x="776" y="130" width="40" height="40" rx="4" fill="#d1d5db"/>
+  <rect x="822" y="130" width="40" height="40" rx="4" fill="#d1d5db"/>
+  <rect x="868" y="130" width="40" height="40" rx="4" fill="#d1d5db"/>
+  <rect x="914" y="130" width="40" height="40" rx="4" fill="#d1d5db"/>
+  <rect x="40" y="176" width="40" height="40" rx="4" fill="#d1d5db"/>
+  <rect x="86" y="176" width="40" height="40" rx="4" fill="#d1d5db"/>
+  <rect x="132" y="176" width="40" height="40" rx="4" fill="#d1d5db"/>
+  <rect x="178" y="176" width="40" height="40" rx="4" fill="#d1d5db"/>
+  <rect x="224" y="176" width="40" height="40" rx="4" fill="#d1d5db"/>
+  <rect x="270" y="176" width="40" height="40" rx="4" fill="#d1d5db"/>
+  <rect x="316" y="176" width="40" height="40" rx="4" fill="#d1d5db"/>
+  <rect x="362" y="176" width="40" height="40" rx="4" fill="#d1d5db"/>
+  <rect x="408" y="176" width="40" height="40" rx="4" fill="#d1d5db"/>
+  <rect x="454" y="176" width="40" height="40" rx="4" fill="#d1d5db"/>
+  <rect x="500" y="176" width="40" height="40" rx="4" fill="#d1d5db"/>
+  <rect x="546" y="176" width="40" height="40" rx="4" fill="#d1d5db"/>
+  <rect x="592" y="176" width="40" height="40" rx="4" fill="#d1d5db"/>
+  <rect x="638" y="176" width="40" height="40" rx="4" fill="#d1d5db"/>
+  <rect x="684" y="176" width="40" height="40" rx="4" fill="#d1d5db"/>
+  <rect x="730" y="176" width="40" height="40" rx="4" fill="#d1d5db"/>
+  <rect x="776" y="176" width="40" height="40" rx="4" fill="#d1d5db"/>
+  <rect x="822" y="176" width="40" height="40" rx="4" fill="#d1d5db"/>
+  <rect x="868" y="176" width="40" height="40" rx="4" fill="#d1d5db"/>
+  <rect x="914" y="176" width="40" height="40" rx="4" fill="#d1d5db"/>
+  <rect x="40" y="222" width="40" height="40" rx="4" fill="#d1d5db"/>
+  <rect x="86" y="222" width="40" height="40" rx="4" fill="#d1d5db"/>
+  <rect x="132" y="222" width="40" height="40" rx="4" fill="#d1d5db"/>
+  <rect x="178" y="222" width="40" height="40" rx="4" fill="#d1d5db"/>
+  <rect x="224" y="222" width="40" height="40" rx="4" fill="#d1d5db"/>
+  <rect x="270" y="222" width="40" height="40" rx="4" fill="#d1d5db"/>
+  <rect x="316" y="222" width="40" height="40" rx="4" fill="#d1d5db"/>
+  <rect x="362" y="222" width="40" height="40" rx="4" fill="#d1d5db"/>
+  <rect x="408" y="222" width="40" height="40" rx="4" fill="#d1d5db"/>
+  <rect x="454" y="222" width="40" height="40" rx="4" fill="#d1d5db"/>
+  <rect x="500" y="222" width="40" height="40" rx="4" fill="#d1d5db"/>
+  <rect x="546" y="222" width="40" height="40" rx="4" fill="#d1d5db"/>
+  <rect x="592" y="222" width="40" height="40" rx="4" fill="#d1d5db"/>
+  <rect x="638" y="222" width="40" height="40" rx="4" fill="#d1d5db"/>
+  <rect x="684" y="222" width="40" height="40" rx="4" fill="#d1d5db"/>
+  <rect x="730" y="222" width="40" height="40" rx="4" fill="#d1d5db"/>
+  <rect x="776" y="222" width="40" height="40" rx="4" fill="#d1d5db"/>
+  <rect x="822" y="222" width="40" height="40" rx="4" fill="#d1d5db"/>
+  <rect x="868" y="222" width="40" height="40" rx="4" fill="#d1d5db"/>
+  <rect x="914" y="222" width="40" height="40" rx="4" fill="#d1d5db"/>
+  <rect x="40" y="268" width="40" height="40" rx="4" fill="#d1d5db"/>
+  <rect x="86" y="268" width="40" height="40" rx="4" fill="#d1d5db"/>
+  <rect x="132" y="268" width="40" height="40" rx="4" fill="#d1d5db"/>
+  <rect x="178" y="268" width="40" height="40" rx="4" fill="#d1d5db"/>
+  <rect x="224" y="268" width="40" height="40" rx="4" fill="#d1d5db"/>
+  <rect x="270" y="268" width="40" height="40" rx="4" fill="#d1d5db"/>
+  <rect x="316" y="268" width="40" height="40" rx="4" fill="#d1d5db"/>
+  <rect x="362" y="268" width="40" height="40" rx="4" fill="#d1d5db"/>
+  <rect x="408" y="268" width="40" height="40" rx="4" fill="#d1d5db"/>
+  <rect x="454" y="268" width="40" height="40" rx="4" fill="#d1d5db"/>
+  <rect x="500" y="268" width="40" height="40" rx="4" fill="#d1d5db"/>
+  <rect x="546" y="268" width="40" height="40" rx="4" fill="#d1d5db"/>
+  <rect x="592" y="268" width="40" height="40" rx="4" fill="#d1d5db"/>
+  <rect x="638" y="268" width="40" height="40" rx="4" fill="#d1d5db"/>
+  <rect x="684" y="268" width="40" height="40" rx="4" fill="#d1d5db"/>
+  <rect x="730" y="268" width="40" height="40" rx="4" fill="#d1d5db"/>
+  <rect x="776" y="268" width="40" height="40" rx="4" fill="#d1d5db"/>
+  <rect x="822" y="268" width="40" height="40" rx="4" fill="#d1d5db"/>
+  <rect x="868" y="268" width="40" height="40" rx="4" fill="#d1d5db"/>
+  <rect x="914" y="268" width="40" height="40" rx="4" fill="#d1d5db"/>
+  <rect x="40" y="314" width="40" height="40" rx="4" fill="#d1d5db"/>
+  <rect x="86" y="314" width="40" height="40" rx="4" fill="#d1d5db"/>
+  <rect x="132" y="314" width="40" height="40" rx="4" fill="#d1d5db"/>
+  <rect x="178" y="314" width="40" height="40" rx="4" fill="#d1d5db"/>
+  <rect x="224" y="314" width="40" height="40" rx="4" fill="#d1d5db"/>
+  <rect x="270" y="314" width="40" height="40" rx="4" fill="#d1d5db"/>
+  <rect x="316" y="314" width="40" height="40" rx="4" fill="#d1d5db"/>
+  <rect x="362" y="314" width="40" height="40" rx="4" fill="#d1d5db"/>
+  <rect x="408" y="314" width="40" height="40" rx="4" fill="#d1d5db"/>
+  <rect x="454" y="314" width="40" height="40" rx="4" fill="#d1d5db"/>
+  <rect x="500" y="314" width="40" height="40" rx="4" fill="#d1d5db"/>
+  <rect x="546" y="314" width="40" height="40" rx="4" fill="#d1d5db"/>
+  <rect x="592" y="314" width="40" height="40" rx="4" fill="#d1d5db"/>
+  <rect x="638" y="314" width="40" height="40" rx="4" fill="#d1d5db"/>
+  <rect x="684" y="314" width="40" height="40" rx="4" fill="#d1d5db"/>
+  <rect x="730" y="314" width="40" height="40" rx="4" fill="#d1d5db"/>
+  <rect x="776" y="314" width="40" height="40" rx="4" fill="#d1d5db"/>
+  <rect x="822" y="314" width="40" height="40" rx="4" fill="#d1d5db"/>
+  <rect x="868" y="314" width="40" height="40" rx="4" fill="#d1d5db"/>
+  <rect x="914" y="314" width="40" height="40" rx="4" fill="#d1d5db"/>
+  <rect x="40" y="372" width="22" height="22" rx="4" fill="#d1d5db"/>
+  <text x="72" y="390" font-size="20" fill="#111827" text-anchor="start">Resident in memory: about 1 trillion parameters (all 100 squares)</text>
+  <rect x="40" y="412" width="22" height="22" rx="4" fill="#ec362e"/>
+  <text x="72" y="430" font-size="20" fill="#111827" text-anchor="start">Active per token: about 30 billion parameters (3 squares)</text>
+  <text x="40" y="476" font-size="18" fill="#4b5563" text-anchor="start">Hosted APIs spread the memory bill across thousands of requests; a single-tenant deployment pays all of it.</text>
+</svg>

@@ -113,3 +113,6 @@ But it is a good moment for an audit that most teams have never done:
 **Keep one non-NVIDIA path warm.** Not because neutrality will definitely erode, but because the cost of having an alternative you have actually tested is low and the cost of discovering you have none is not.
 
 None of that is a reaction to NVIDIA specifically. It is what you would want to be true about any single point of failure that 18 million developers share, and the acquisition is a useful prompt to notice that Hugging Face had quietly become one.
+
+**Media credits**:
+- Deal diagram: Big Matrix Solutions, based on [NVIDIA's Form 8-K](https://www.sec.gov/Archives/edgar/data/0001045810/000104581026000078/nvda-20260902.htm)
