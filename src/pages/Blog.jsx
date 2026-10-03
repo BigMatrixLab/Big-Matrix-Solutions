@@ -7,6 +7,8 @@ import CtaBand from '../components/CtaBand';
 import { sortBlogsByDate } from '../utils/blogSort';
 import { visibleBlogs, isScheduled, daysUntilPublish, usePreviewMode } from '../utils/publishSchedule';
 import Seo from '../components/Seo';
+import ShareDialog from '../components/ShareDialog';
+import { useShareDialog } from '../utils/share';
 
 /* The lead post plus two full rows of three, then three more per click. */
 const INITIAL_CARDS = 6;
@@ -20,6 +22,7 @@ const Blog = () => {
     const queued = preview ? posts.filter((post) => isScheduled(post)).length : 0;
 
     const [shown, setShown] = useState(INITIAL_CARDS);
+    const share = useShareDialog();
 
     // Entering or leaving preview changes how many posts exist, so collapse
     // back to the first page rather than leaving a half-expanded list. Adjusted
@@ -85,10 +88,22 @@ const Blog = () => {
 
                                 {lead.desc && <p className="bm-post-lead__text">{lead.desc}</p>}
 
-                                <Link to={`/blog/${lead.slug}`} className="bm-button bm-button--ghost">
-                                    Read the post
-                                    <i className="bi bi-arrow-right" aria-hidden="true"></i>
-                                </Link>
+                                <div className="bm-post-lead__actions">
+                                    <Link to={`/blog/${lead.slug}`} className="bm-button bm-button--ghost">
+                                        Read the post
+                                        <i className="bi bi-arrow-right" aria-hidden="true"></i>
+                                    </Link>
+
+                                    <button
+                                        type="button"
+                                        onClick={() => share.open(lead)}
+                                        className="bm-button bm-button--ghost"
+                                        aria-label={`Share ${lead.title}`}
+                                    >
+                                        Share
+                                        <i className="bi bi-share" aria-hidden="true"></i>
+                                    </button>
+                                </div>
                             </div>
                         </article>
                     )}
@@ -114,11 +129,20 @@ const Blog = () => {
                                             <Link to={`/blog/${post.slug}`}>{post.title}</Link>
                                         </h3>
                                         {post.desc && <p className="bm-card__text">{post.desc}</p>}
-                                        <div className="bm-card__foot">
+                                        <div className="bm-card__foot bm-card__foot--share">
                                             <Link to={`/blog/${post.slug}`} className="bm-link">
                                                 Read post
                                                 <i className="bi bi-arrow-right" aria-hidden="true"></i>
                                             </Link>
+                                            <button
+                                                type="button"
+                                                onClick={() => share.open(post)}
+                                                className="bm-link bm-link--button"
+                                                aria-label={`Share ${post.title}`}
+                                            >
+                                                Share
+                                                <i className="bi bi-share" aria-hidden="true"></i>
+                                            </button>
                                         </div>
                                     </div>
                                 </article>
@@ -145,6 +169,13 @@ const Blog = () => {
                     )}
                 </div>
             </section>
+
+            <ShareDialog
+                post={share.post}
+                copied={share.copied}
+                onClose={share.close}
+                preview
+            />
 
             <CtaBand />
         </>

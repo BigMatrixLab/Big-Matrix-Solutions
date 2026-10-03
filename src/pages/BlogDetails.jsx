@@ -6,6 +6,9 @@ import { blogsData } from '../data/content';
 import { stripMarkdownEmoji } from '../utils/docEnrich';
 import { sortBlogsByDate } from '../utils/blogSort';
 import Seo from '../components/Seo';
+import ShareButtons from '../components/ShareButtons';
+import ShareDialog from '../components/ShareDialog';
+import { useShareDialog } from '../utils/share';
 import { graph, blogPosting, breadcrumbs } from '../utils/structuredData';
 import {
     visibleBlogs,
@@ -17,6 +20,7 @@ import {
 const BlogDetails = () => {
     const { slug } = useParams();
     const preview = usePreviewMode();
+    const share = useShareDialog();
 
     // Resolve against the visible set, so a scheduled post reached by a direct
     // link falls through to the not-found state instead of leaking early.
@@ -130,6 +134,11 @@ const BlogDetails = () => {
                                 </dl>
                             </div>
 
+                            <div>
+                                <p className="bm-doc__index-label">Share this post</p>
+                                <ShareButtons post={post} onOpenDialog={() => share.open(post)} />
+                            </div>
+
                             {others.length > 0 && (
                                 <nav className="bm-doc__more" aria-label="More insights">
                                     <p className="bm-doc__index-label">More insights</p>
@@ -159,6 +168,8 @@ const BlogDetails = () => {
                     </div>
                 </div>
             </section>
+
+            <ShareDialog post={share.post} copied={share.copied} onClose={share.close} />
 
             <CtaBand />
         </>
