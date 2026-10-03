@@ -1,4 +1,4 @@
-import React, { useRef, useState } from 'react';
+import React, { useState } from 'react';
 import {
     blogShareUrl,
     copyText,
@@ -31,13 +31,10 @@ const TARGETS = [
  */
 const ShareButtons = ({ post, caption, onOpenDialog }) => {
     const [status, setStatus] = useState('');
-    const timer = useRef(null);
 
-    const flash = (message) => {
-        setStatus(message);
-        clearTimeout(timer.current);
-        timer.current = setTimeout(() => setStatus(''), 4000);
-    };
+    // The message stays until the next click: clearing it on a timer made the
+    // line collapse and the surrounding sheet change height.
+    const flash = setStatus;
 
     const copyLink = () => {
         flash(copyText(blogShareUrl(post)) ? 'Link copied.' : 'Copy failed — select the address bar instead.');

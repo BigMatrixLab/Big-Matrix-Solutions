@@ -5,7 +5,7 @@ title: "Migrating Legacy Code With AI Agents: A Playbook"
 author: "Mera"
 admin: "Mera"
 comments: "0"
-image: "/assets/images/blog/legacy-migration-agents.png"
+image: "/assets/images/blog/legacy-migration-agents.webp"
 category: "Software Development"
 desc: "Google, Airbnb and Amazon have published what worked when they pointed LLMs at large migrations. The common pattern, the numbers behind it, and a playbook for doing it on your own codebase."
 date: "Jan 17, 2027"
@@ -72,7 +72,7 @@ Google's JUnit team named the real bottleneck: "the speed at which engineers cou
 
 ## Measuring progress
 
-![Line chart of cumulative submitted changelists from AI-powered migrations at Google, rising from near zero in spring 2024 to over 2,000 by October 2024](/assets/images/blog/legacy-migration-agents-landed-cls.png)
+![Line chart of cumulative submitted changelists from AI-powered migrations at Google, rising from near zero in spring 2024 to over 2,000 by October 2024](/assets/images/blog/legacy-migration-agents-landed-cls.webp)
 
 *Landed changelists of AI-powered migrations, first three quarters of 2024. Source: [Nikolov et al., Google (arXiv)](https://arxiv.org/abs/2501.06972), CC BY 4.0*
 

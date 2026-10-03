@@ -5,7 +5,7 @@ title: "SpaceXAI Releases Grok 4.7: Built for Long-Running Coding and Knowledge 
 author: "Mera"
 admin: "Mera"
 comments: "0"
-image: "/assets/images/blog/grok-4-7-cursorbench-chart.jpeg"
+image: "/assets/images/blog/grok-4-7-cursorbench-chart.webp"
 category: "AI Models"
 desc: "Grok 4.7 brings a larger base model, longer reinforcement learning on multi-hour tasks and a new safeguard stack, at the same $2/$6 per million token price as Grok 4.6."
 date: "Sep 21, 2026"
@@ -57,7 +57,7 @@ Here are the scores SpaceXAI published. These are vendor-reported results and ha
 
 *\*High-effort score.*
 
-![CursorBench 4.0 score vs average cost per task for Grok 4.7 and other models](/assets/images/blog/grok-4-7-cursorbench-chart.jpeg)
+![CursorBench 4.0 score vs average cost per task for Grok 4.7 and other models](/assets/images/blog/grok-4-7-cursorbench-chart.webp)
 
 *CursorBench 4.0 score vs average cost per task, as shared at launch. Source: [Cursor](https://forum.cursor.com/t/grok-4-7-is-now-live/172526)*
 

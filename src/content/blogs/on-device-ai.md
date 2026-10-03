@@ -5,7 +5,7 @@ title: "On-Device AI and NPUs: When Inference Belongs on the Laptop"
 author: "Mera"
 admin: "Mera"
 comments: "0"
-image: "/assets/images/blog/on-device-ai-m5-lm-studio.jpg"
+image: "/assets/images/blog/on-device-ai-m5-lm-studio.webp"
 category: "AI Infrastructure"
 desc: "Laptop NPUs now advertise 40 to 80 TOPS. What they are actually good at, why memory bandwidth matters more than TOPS for local LLMs, and a simple test for when a workload should leave the cloud."
 date: "Jan 05, 2027"
@@ -70,7 +70,7 @@ That split is a good general rule:
 | Long multi-step reasoning or agentic coding | Usually no |
 | Very long contexts | Limited by memory |
 
-![Apple M5 chip](/assets/images/blog/on-device-ai-m5-chip.jpg)
+![Apple M5 chip](/assets/images/blog/on-device-ai-m5-chip.webp)
 
 *Apple M5. Apple says it delivers over 4x the peak GPU compute for AI of M4. Source: [Apple Newsroom](https://www.apple.com/newsroom/2025/10/apple-unleashes-m5-the-next-big-leap-in-ai-performance-for-apple-silicon/)*
 

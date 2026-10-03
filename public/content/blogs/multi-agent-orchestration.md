@@ -3,7 +3,7 @@ id: "28"
 slug: "multi-agent-orchestration-what-works"
 title: "Ten Agents, One Task: What Multi-Agent Orchestration Is Actually Good For"
 comments: "0"
-image: "/assets/images/blog/multi-agent-orchestration.png"
+image: "/assets/images/blog/multi-agent-orchestration.webp"
 category: "Agentic AI"
 desc: "Supervisor topologies, parallel subagents, and the convergence problem that makes most multi-agent systems slower and worse than one good agent."
 date: "Nov 18, 2026"
@@ -116,7 +116,7 @@ What holds up in production.
 
 **Keep the supervisor thin.** Its job is decomposition, dispatch, and assembly. Supervisors that also do substantive work end up with the context pollution the architecture was supposed to prevent.
 
-![Magentic-One orchestrator flowchart: a task ledger and a progress ledger, decision points for task complete, progress being made and stall count, and four agents below: Coder, ComputerTerminal, WebSurfer and FileSurfer](/assets/images/blog/multi-agent-orchestration-magentic-one.png)
+![Magentic-One orchestrator flowchart: a task ledger and a progress ledger, decision points for task complete, progress being made and stall count, and four agents below: Coder, ComputerTerminal, WebSurfer and FileSurfer](/assets/images/blog/multi-agent-orchestration-magentic-one.webp)
 
 *A thin supervisor in practice: Magentic-One's Orchestrator plans, tracks progress in two ledgers, dispatches four specialist agents and replans when progress stalls. Source: [Fourney et al., Magentic-One (arXiv:2411.04468)](https://arxiv.org/abs/2411.04468), CC BY 4.0.*
 

@@ -5,7 +5,7 @@ title: "The EU AI Act for Builders: What Applies to Your Product and When"
 author: "Mera"
 admin: "Mera"
 comments: "0"
-image: "/assets/images/blog/eu-ai-act-builders-cover.png"
+image: "/assets/images/blog/eu-ai-act-builders-cover.webp"
 category: "AI Policy"
 desc: "The AI Act now applies in layers, and the 2026 Digital Omnibus moved the high-risk dates. A practical guide to working out your role, your risk tier and your deadlines."
 date: "Dec 18, 2026"
@@ -28,7 +28,7 @@ Before you read any article of the Act, answer three questions about your produc
 2. **What risk tier is the use case in?** Prohibited, high-risk, transparency-only or minimal. The tier depends on the intended purpose.
 3. **Is there a general-purpose AI model in the stack, and who provides it?** Model providers have their own set of obligations, separate from those of the people who build products on top.
 
-![The European Commission's risk pyramid for the AI Act, with unacceptable, high, limited and minimal risk tiers](/assets/images/blog/eu-ai-act-risk-pyramid.jpg)
+![The European Commission's risk pyramid for the AI Act, with unacceptable, high, limited and minimal risk tiers](/assets/images/blog/eu-ai-act-risk-pyramid.webp)
 
 *The AI Act's four risk tiers. Source: [European Commission, AI Act policy page](https://digital-strategy.ec.europa.eu/en/policies/regulatory-framework-ai)*
 

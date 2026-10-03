@@ -58,7 +58,7 @@ The paper's main claim is that "AI systems now write most of the code inside the
 
 That uncertainty matters for how the paper should be read. It is a scenario analysis signed by people inside the frontier labs, not a forecast. Still, executives from the companies building these systems signed it, and that makes it hard to dismiss as outsider alarmism.
 
-![Figure from the intelligence-explosion paper: AI systems expand the AI R&D workforce, which builds better AI systems in a feedback loop](/assets/images/blog/intelligence-explosion-fig2-feedback-loop.png)
+![Figure from the intelligence-explosion paper: AI systems expand the AI R&D workforce, which builds better AI systems in a feedback loop](/assets/images/blog/intelligence-explosion-fig2-feedback-loop.webp)
 
 *The feedback loop at the centre of the paper Hinton co-signed (its Figure 2). Source: [Chan et al. (2026), CASP and GovAI](https://arxiv.org/abs/2609.36054), CC BY 4.0*
 

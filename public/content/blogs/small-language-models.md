@@ -3,7 +3,7 @@ id: "6"
 slug: "the-rise-of-specialized-small-language-models-slms"
 title: "The Rise of Specialized Small Language Models (SLMs)"
 comments: "11"
-image: "/assets/images/blog/small-language-models.png"
+image: "/assets/images/blog/small-language-models.webp"
 category: "Software"
 desc: "Why the industry is moving away from massive models toward efficient, task-specific SLMs."
 date: "Jul 24, 2026"
@@ -45,7 +45,7 @@ SLMs are language models optimized for **efficiency** over raw capability:
 - **Gemma 2B** - Google's ultra-compact model for edge devices
 - **Qwen2.5 7B** - Alibaba's multilingual SLM with strong coding abilities
 
-![Scatter plot of MMLU error rate against model size: Phi models reach lower error at smaller sizes than Llama-2 models trained on the same data](/assets/images/blog/small-language-models-phi-3-scaling.png)
+![Scatter plot of MMLU error rate against model size: Phi models reach lower error at smaller sizes than Llama-2 models trained on the same data](/assets/images/blog/small-language-models-phi-3-scaling.webp)
 
 *Small models trained on better data: MMLU error rate against model size for Phi models versus Llama-2 models trained on the same fixed data. Source: [Phi-3 Technical Report, Microsoft](https://arxiv.org/abs/2404.14219) (CC BY 4.0)*
 

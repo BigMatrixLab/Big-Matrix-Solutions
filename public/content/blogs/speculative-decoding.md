@@ -5,7 +5,7 @@ title: "How Speculative Decoding Works: Big-Model Answers at Small-Model Speed"
 author: "Mera"
 admin: "Mera"
 comments: "0"
-image: "/assets/images/blog/speculative-decoding.png"
+image: "/assets/images/blog/speculative-decoding.webp"
 category: "Tutorial"
 desc: "A small model guesses, a big model checks several guesses in one pass, and the output distribution does not change. How speculative decoding works, and when it stops helping."
 date: "Jan 09, 2027"
@@ -78,7 +78,7 @@ The original recipe needs a separate small model from the same family with the s
 
 **Extra decoding heads.** Medusa (Cai et al., 2024) bolts several small heads onto the target model, each predicting a token further ahead from the same final hidden state. The candidates form a tree that is verified in a single pass using tree attention.
 
-![Medusa architecture: extra decoding heads on the original model propose candidates that are verified in one step](/assets/images/blog/speculative-decoding-medusa.jpg)
+![Medusa architecture: extra decoding heads on the original model propose candidates that are verified in one step](/assets/images/blog/speculative-decoding-medusa.webp)
 
 *Medusa heads propose several future tokens; candidates are verified together. Source: [FasterDecoding/Medusa](https://github.com/FasterDecoding/Medusa) (Apache 2.0)*
 

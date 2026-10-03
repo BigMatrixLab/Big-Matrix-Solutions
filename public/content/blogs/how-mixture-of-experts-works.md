@@ -62,7 +62,7 @@ class MoELayer(nn.Module):
 
 The router is tiny: one linear layer from `d_model` to `n_experts`, a rounding error in the parameter budget. Everything else is the experts.
 
-![Mixtral mixture of experts layer: a router assigns each input to experts and their outputs are combined with the gating weights](/assets/images/blog/moe-mixtral-layer.png)
+![Mixtral mixture of experts layer: a router assigns each input to experts and their outputs are combined with the gating weights](/assets/images/blog/moe-mixtral-layer.webp)
 
 *Each token is sent to two of eight experts; their outputs are summed using the router’s weights. Source: [Mixtral of Experts, Fig. 1](https://arxiv.org/abs/2401.04088), Jiang et al., CC BY 4.0.*
 

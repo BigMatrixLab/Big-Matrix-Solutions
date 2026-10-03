@@ -3,7 +3,7 @@ id: "45"
 slug: "grok-4-6-long-running-agents-and-self-testing"
 title: "Grok 4.6 Checks Its Own Work. That Matters More Than Its Benchmark Score."
 comments: "0"
-image: "/assets/images/blog/grok-4-6.jpg"
+image: "/assets/images/blog/grok-4-6.webp"
 category: "LLM Research"
 desc: "A 500K context, $2 per million input tokens, and a jump from 54% to 65.9% on DeepSWE. The interesting claim is about verification, not capability."
 date: "Sep 15, 2026"
@@ -20,7 +20,7 @@ The benchmark story is solid and unremarkable: a good model, competitive at the 
 
 On the Artificial Analysis Intelligence Index, Grok 4.6 scores **61**: level with GPT-5.6 Sol, behind Fable 5 Max at 62, and well ahead of Grok 4.5 High at 56.
 
-![Bar chart of Artificial Analysis Intelligence Index scores: Fable 5 Max 62, Grok 4.6 61, GPT-5.6 Sol Max 61, Grok 4.5 High 56](/assets/images/blog/grok-4-6-aa-index.png)
+![Bar chart of Artificial Analysis Intelligence Index scores: Fable 5 Max 62, Grok 4.6 61, GPT-5.6 Sol Max 61, Grok 4.5 High 56](/assets/images/blog/grok-4-6-aa-index.webp)
 
 *Artificial Analysis Intelligence Index as published at launch. Source: [SpaceXAI](https://x.ai/news/grok-4-6)*
 
@@ -38,7 +38,7 @@ Two honest readings of that table.
 
 **It is still second tier on coding.** 65.9% against 73%, and 26% against 34%. On the benchmarks that matter most for agentic software work, GPT-5.6 Sol Max and Fable 5 Max remain ahead by meaningful margins. Grok 4.6 closed a lot of ground and did not take the lead.
 
-![Bar chart of DeepSWE 1.1 pass@1: GPT-5.6 Sol Max 73.0 percent, Fable 5 Max 70.0 percent, Grok 4.6 65.9 percent, Grok 4.5 High 54.0 percent](/assets/images/blog/grok-4-6-deepswe.png)
+![Bar chart of DeepSWE 1.1 pass@1: GPT-5.6 Sol Max 73.0 percent, Fable 5 Max 70.0 percent, Grok 4.6 65.9 percent, Grok 4.5 High 54.0 percent](/assets/images/blog/grok-4-6-deepswe.webp)
 
 *DeepSWE 1.1 pass@1, mini-swe-agent harness run by Datacurve. Source: [SpaceXAI](https://x.ai/news/grok-4-6)*
 

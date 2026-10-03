@@ -5,7 +5,7 @@ title: "How Tokenizers Work: BPE, Vocabularies and Why Models Can't Count Letter
 author: "Mera"
 admin: "Mera"
 comments: "0"
-image: "/assets/images/blog/tokenizers.png"
+image: "/assets/images/blog/tokenizers.webp"
 category: "Tutorial"
 desc: "Byte pair encoding, vocabulary size, byte-level fallback and the strange failures that come from a model never seeing letters. Explained with real token splits."
 date: "Dec 12, 2026"

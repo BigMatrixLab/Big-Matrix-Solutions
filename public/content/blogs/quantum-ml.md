@@ -3,7 +3,7 @@ id: "3"
 slug: "quantum-enhanced-machine-learning-breaking-the-compute-barrier"
 title: "Quantum-Enhanced Machine Learning: Breaking the Compute Barrier"
 comments: "05"
-image: "/assets/images/blog/quantum-ml.jpg"
+image: "/assets/images/blog/quantum-ml.webp"
 category: "AI Innovation"
 desc: "Exploring how quantum processors are beginning to accelerate neural network training and complex simulations."
 date: "Aug 07, 2026"
@@ -113,7 +113,7 @@ Our intelligent healthcare systems could integrate QML for:
 | **❌ Error rates** | ~1% gate failure rate | Classical: 1 in 10^17 |
 | **⏱️ Decoherence** | Qubits lose quantum properties in milliseconds | Short computation windows |
 
-![IBM engineers in masks installing the cryostat of an IBM Quantum System One inside its glass enclosure](/assets/images/blog/quantum-ml-system-one-installation.jpg)
+![IBM engineers in masks installing the cryostat of an IBM Quantum System One inside its glass enclosure](/assets/images/blog/quantum-ml-system-one-installation.webp)
 
 *IBM engineers installing an IBM Quantum System One in Ehningen, Germany. Source: [IBM Research via Wikimedia Commons](https://commons.wikimedia.org/wiki/File:IBM_Q_System_One_(Fraunhofer)_installation.jpg) (CC BY 2.0)*
 

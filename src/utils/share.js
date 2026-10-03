@@ -1,4 +1,4 @@
-import { useRef, useState } from 'react';
+import { useState } from 'react';
 
 /**
  * Social sharing for blog posts.
@@ -100,27 +100,18 @@ export const shareOnInstagram = (post, caption = shareCaption(post)) => {
 };
 
 /**
- * Open/close state for the share dialog plus the "caption copied" notice.
- * Opening the dialog copies the default caption straight away.
+ * Open/close state for the share dialog. Opening it copies the caption straight
+ * away, so it is already on the clipboard whichever target is picked.
  */
 export const useShareDialog = () => {
     const [post, setPost] = useState(null);
-    const [copied, setCopied] = useState(false);
-    const timer = useRef(null);
-
-    const flashCopied = () => {
-        setCopied(true);
-        clearTimeout(timer.current);
-        timer.current = setTimeout(() => setCopied(false), 4000);
-    };
 
     const open = (target) => {
         copyText(shareCaption(target));
-        flashCopied();
         setPost(target);
     };
 
     const close = () => setPost(null);
 
-    return { post, copied, open, close };
+    return { post, open, close };
 };

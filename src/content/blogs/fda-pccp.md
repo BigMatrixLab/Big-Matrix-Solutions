@@ -5,7 +5,7 @@ title: "Predetermined Change Control Plans: How the FDA Lets AI Devices Learn"
 author: "Mera"
 admin: "Mera"
 comments: "0"
-image: "/assets/images/blog/fda-pccp.jpg"
+image: "/assets/images/blog/fda-pccp.webp"
 category: "Medical AI"
 desc: "A PCCP lets a cleared AI device change without a new submission, as long as the change was described, tested and bounded in advance. What goes in one, and what it does not allow."
 date: "Dec 14, 2026"
@@ -78,7 +78,7 @@ In practice, the guidance describes a spectrum. At one end are devices updated p
 
 Uptake has been real but early. A 2025 review in JMIR AI counted 1,016 AI/ML-enabled devices authorised by the FDA through the end of 2024, and 15 AI/ML-enabled devices authorised with a PCCP, 11 of them in 2024.
 
-![FDA approvals of AI/ML-enabled devices per year, with the number approved with a PCCP](/assets/images/blog/fda-pccp-approvals.jpg)
+![FDA approvals of AI/ML-enabled devices per year, with the number approved with a PCCP](/assets/images/blog/fda-pccp-approvals.webp)
 
 *FDA AI/ML-enabled device approvals per year and those approved with a PCCP, through 2024. Source: [Carvalho et al., JMIR AI 2025 (CC BY 4.0)](https://pmc.ncbi.nlm.nih.gov/articles/PMC12577744/)*
 

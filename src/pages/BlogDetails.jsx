@@ -7,6 +7,7 @@ import { stripMarkdownEmoji } from '../utils/docEnrich';
 import { sortBlogsByDate } from '../utils/blogSort';
 import Seo from '../components/Seo';
 import ShareButtons from '../components/ShareButtons';
+import BlogThumb from '../components/BlogThumb';
 import ShareDialog from '../components/ShareDialog';
 import { useShareDialog } from '../utils/share';
 import { graph, blogPosting, breadcrumbs } from '../utils/structuredData';
@@ -147,7 +148,7 @@ const BlogDetails = () => {
                                             <li key={item.slug}>
                                                 <Link to={`/blog/${item.slug}`}>
                                                     <span className="bm-doc__more-thumb">
-                                                        <img src={item.image} alt="" loading="lazy" />
+                                                        <BlogThumb src={item.image} />
                                                     </span>
                                                     <span>
                                                         <strong>{item.title}</strong>
@@ -169,7 +170,7 @@ const BlogDetails = () => {
                 </div>
             </section>
 
-            <ShareDialog post={share.post} copied={share.copied} onClose={share.close} />
+            <ShareDialog post={share.post} onClose={share.close} />
 
             <CtaBand />
         </>

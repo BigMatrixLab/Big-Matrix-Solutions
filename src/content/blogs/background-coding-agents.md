@@ -3,7 +3,7 @@ id: "15"
 slug: "asynchronous-delegation-background-coding-agents"
 title: "From Pair Programmer to Colleague: The Year Coding Agents Went Asynchronous"
 comments: "0"
-image: "/assets/images/blog/background-coding-agents.png"
+image: "/assets/images/blog/background-coding-agents.webp"
 category: "Software Development"
 desc: "The biggest shift of 2026 was not smarter models. It was agents that accept a task, work while you sleep, and hand you a pull request."
 date: "Oct 11, 2026"
@@ -44,7 +44,7 @@ The agent works in an isolated environment: a container, a worktree, a fresh bra
 
 Isolation is not optional. An agent working directly in your checkout while you are elsewhere is a category of problem nobody needs. Every serious setup gives each agent its own sandbox.
 
-![OpenHands architecture: an agent produces actions, a Docker sandbox runtime executes them in a bash shell, Python server and browser, and an event stream records every action and observation](/assets/images/blog/background-coding-agents-openhands-architecture.png)
+![OpenHands architecture: an agent produces actions, a Docker sandbox runtime executes them in a bash shell, Python server and browser, and an event stream records every action and observation](/assets/images/blog/background-coding-agents-openhands-architecture.webp)
 
 *An open agent platform’s architecture: the agent proposes actions, a Docker sandbox executes them, and an event stream records every action and observation. Source: [OpenHands, Wang et al.](https://arxiv.org/abs/2407.16741) (CC BY 4.0)*
 

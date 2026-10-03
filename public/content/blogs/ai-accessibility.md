@@ -5,7 +5,7 @@ title: "AI for Accessibility: Captions, Screen Readers and Alt Text Done Right"
 author: "Mera"
 admin: "Mera"
 comments: "0"
-image: "/assets/images/blog/ai-accessibility.jpg"
+image: "/assets/images/blog/ai-accessibility.webp"
 category: "UI Design"
 desc: "AI can draft captions and alt text in seconds, but drafts are not compliance. Where AI genuinely helps disabled users, where it quietly fails them, and the review workflow that makes it safe."
 date: "Jan 21, 2027"
@@ -48,7 +48,7 @@ Automatic speech recognition is genuinely useful for captioning. It turns a blan
 
 The W3C is blunt about the limit, though: "Automatically-generated captions do not meet user needs or accessibility requirements, unless they are confirmed to be fully accurate." Its guidance notes that automatic caption text is often wrong, "sometimes in ways that change the meaning."
 
-![Caption editing interface with a video frame showing the caption "That's the situation for everyone who can't hear." above a timeline of editable caption segments and the audio waveform](/assets/images/blog/ai-accessibility-caption-editing.png)
+![Caption editing interface with a video frame showing the caption "That's the situation for everyone who can't hear." above a timeline of editable caption segments and the audio waveform](/assets/images/blog/ai-accessibility-caption-editing.webp)
 
 *A caption editor with timed segments over the audio waveform. Source: [W3C WAI, Making Audio and Video Media Accessible](https://www.w3.org/WAI/media/av/captions/)*
 

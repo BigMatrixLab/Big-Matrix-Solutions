@@ -5,7 +5,7 @@ title: "Pace the Frontier: Dario Amodei's Case for Slowing Down, and Why His Riv
 author: "Mera"
 admin: "Mera"
 comments: "0"
-image: "/assets/images/blog/amodei-pace-the-frontier.jpg"
+image: "/assets/images/blog/amodei-pace-the-frontier.webp"
 category: "AI Policy"
 desc: "Anthropic's CEO asked the industry to slow the rate at which models get more capable. Altman, Musk and Nadella agreed within days. What the plan says, and how to read it."
 date: "Oct 21, 2026"

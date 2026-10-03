@@ -3,7 +3,7 @@ id: 7
 slug: "healthcare-digital-twins-evolution"
 title: "The Evolution of Digital Twins in Healthcare"
 comments: "0"
-image: "/assets/images/blog/healthcare-digital-twins-cover.png"
+image: "/assets/images/blog/healthcare-digital-twins-cover.webp"
 category: "Healthcare Tech"
 desc: "Exploring how virtual replicas of patients and organs are transforming surgical planning and personalized medicine."
 date: "Aug 25, 2026"
@@ -14,7 +14,7 @@ tags: ["Digital Twins", "Healthcare", "Simulation", "AI in Medicine"]
 
 Digital twin technology is no longer restricted to jet engines and smart buildings. In 2026, we are seeing a massive shift towards **Medical Digital Twins (MDTs)**: dynamic, virtual representations of individual patients.
 
-![Concept diagram: a physical object such as the patient in real space exchanges data flow and information flow with a virtual object in virtual space through transformative technologies](/assets/images/blog/healthcare-digital-twins-concept.png)
+![Concept diagram: a physical object such as the patient in real space exchanges data flow and information flow with a virtual object in virtual space through transformative technologies](/assets/images/blog/healthcare-digital-twins-concept.webp)
 
 *The digital twin as a cyber-physical system: data flows from the patient to the virtual model, and information flows back. Source: [Coorey et al., npj Digital Medicine, 2022](https://www.nature.com/articles/s41746-022-00640-7), CC BY 4.0.*
 

@@ -58,7 +58,7 @@ Meta also ships a **DFlash** speculative-decoding draft model to speed up genera
 | **Apple M5 Max** | 26.6 | 50.2 | 1.8x |
 | **Apple M4 Max** | 23.7 | 37.8 | 1.5x |
 
-![Side-by-side terminal demo of Muse Glimmer running 57.8 tokens per second with DFlash speculative decoding and 26.2 without, on a MacBook Pro M5 Max](/assets/images/blog/meta-muse-glimmer-dflash-demo.jpg)
+![Side-by-side terminal demo of Muse Glimmer running 57.8 tokens per second with DFlash speculative decoding and 26.2 without, on a MacBook Pro M5 Max](/assets/images/blog/meta-muse-glimmer-dflash-demo.webp)
 
 *Meta's DFlash demo on ExecuTorch on a MacBook Pro M5 Max with 64 GB unified memory: 57.8 tok/s with speculative decoding vs 26.2 tok/s without. The demo's numbers differ slightly from the model-card table above. Source: [Meta AI Research](https://research.meta.ai/blog/introducing-muse-glimmer-open-agentic-model)*
 
@@ -96,7 +96,7 @@ The pattern is clear. Glimmer's biggest leads are on the agentic benchmarks, esp
 
 VentureBeat reports that Meta is also working with AMD, Arm, Dell, Intel and Nvidia on performance optimization. It quotes Mark Zuckerberg as saying, "Meta is a strong supporter of open source."
 
-![Muse Glimmer working in the OpenCode terminal agent, planning a custom Home Assistant dashboard](/assets/images/blog/meta-muse-glimmer-opencode-demo.jpg)
+![Muse Glimmer working in the OpenCode terminal agent, planning a custom Home Assistant dashboard](/assets/images/blog/meta-muse-glimmer-opencode-demo.webp)
 
 *Muse Glimmer completing an agentic task in OpenCode, planning and building a Home Assistant dashboard (Meta notes the sequence is shortened). Source: [Meta AI Research](https://research.meta.ai/blog/introducing-muse-glimmer-open-agentic-model)*
 

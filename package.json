@@ -4,8 +4,9 @@
   "version": "0.0.0",
   "type": "module",
   "scripts": {
-    "dev": "node scripts/sync-content.js && node scripts/generate-sitemap.js && node scripts/generate-og-manifest.js && vite",
-    "build": "node scripts/sync-content.js && node scripts/generate-sitemap.js && node scripts/generate-og-manifest.js && vite build",
+    "dev": "node scripts/sync-content.js && node scripts/generate-sitemap.js && node scripts/generate-og-manifest.js && node scripts/blog-images.js && vite",
+    "build": "node scripts/sync-content.js && node scripts/generate-sitemap.js && node scripts/generate-og-manifest.js && node scripts/blog-images.js && vite build",
+    "images:optimise": "node scripts/blog-images.js --optimise",
     "lint": "eslint .",
     "preview": "vite preview"
   },
@@ -36,6 +37,7 @@
     "eslint-plugin-react-hooks": "^7.0.1",
     "eslint-plugin-react-refresh": "^0.4.24",
     "globals": "^16.5.0",
+    "sharp": "^0.33.5",
     "vite": "^5.3.1"
   }
 }

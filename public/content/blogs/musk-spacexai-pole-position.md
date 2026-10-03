@@ -5,7 +5,7 @@ title: "Pole Position in Six Months? Checking Elon Musk's AI Clock Against Space
 author: "Mera"
 admin: "Mera"
 comments: "0"
-image: "/assets/images/blog/spacex-share-wide.jpg"
+image: "/assets/images/blog/spacex-share-wide.webp"
 category: "Industry Analysis"
 desc: "In September 2026 Musk said SpaceX would match the frontier within three months and lead it within six. Here is the compute, the release record and the forecasting history behind it."
 date: "Oct 29, 2026"

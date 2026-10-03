@@ -5,7 +5,7 @@ title: "AI Gateways: Platform Engineering for Teams Using Many Models"
 author: "Mera"
 admin: "Mera"
 comments: "0"
-image: "/assets/images/blog/ai-gateways.png"
+image: "/assets/images/blog/ai-gateways.webp"
 category: "Software Development"
 desc: "Once several teams call several model providers, keys, costs and outages stop being an application problem. What an AI gateway does, how the open-source options compare, and how to roll one out."
 date: "Feb 28, 2027"
@@ -47,7 +47,7 @@ Cloud providers and model vendors also offer managed gateways and routing layers
 
 ## Two tiers, not one
 
-![Envoy AI Gateway data plane: client requests pass through authorisation, authentication, the AI Gateway external processor for request transformation and upstream authentication, a token rate limit filter and a route filter before reaching external or internal AI services, with token usage and cost calculated on the response path](/assets/images/blog/ai-gateways-data-plane.png)
+![Envoy AI Gateway data plane: client requests pass through authorisation, authentication, the AI Gateway external processor for request transformation and upstream authentication, a token rate limit filter and a route filter before reaching external or internal AI services, with token usage and cost calculated on the response path](/assets/images/blog/ai-gateways-data-plane.webp)
 
 *Request and response path through the data plane, from the project's original design proposal. Source: [Envoy AI Gateway / Agent Router project](https://github.com/theagentrouter/agent-router), Apache 2.0*
 

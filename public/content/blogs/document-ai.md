@@ -5,7 +5,7 @@ title: "Document AI: From OCR Pipelines to Vision-Language Models"
 author: "Mera"
 admin: "Mera"
 comments: "0"
-image: "/assets/images/blog/document-ai.jpg"
+image: "/assets/images/blog/document-ai.webp"
 category: "LLM Research"
 desc: "Small specialised vision-language models now lead document parsing benchmarks. How they compare with classic OCR pipelines, how to read OmniDocBench, and how to build extraction you can trust."
 date: "Feb 18, 2027"
@@ -64,7 +64,7 @@ What makes it useful is that it scores components separately:
 
 The headline **Overall** score combines three of them: ((1 − text edit distance) × 100 + table TEDS + formula CDM) / 3.
 
-![OmniDocBench evaluation pipeline: model Markdown output is split into tables, text and formulas, normalised, and matched against ground-truth JSON annotations by category](/assets/images/blog/document-ai-evaluation.jpg)
+![OmniDocBench evaluation pipeline: model Markdown output is split into tables, text and formulas, normalised, and matched against ground-truth JSON annotations by category](/assets/images/blog/document-ai-evaluation.webp)
 
 *How OmniDocBench matches model output to ground truth. Source: [OpenDataLab, OmniDocBench](https://github.com/opendatalab/OmniDocBench), Apache-2.0*
 

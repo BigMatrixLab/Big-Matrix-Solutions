@@ -3,7 +3,7 @@ id: "34"
 slug: "verifying-code-you-did-not-write"
 title: "Your Tests Were Never This Important: Verifying Code You Did Not Write"
 comments: "0"
-image: "/assets/images/blog/verifying-agent-code.png"
+image: "/assets/images/blog/verifying-agent-code.webp"
 category: "Software Development"
 desc: "When generation is cheap, verification is the whole job. Property tests, mutation testing, and why passing your suite means less than it used to."
 date: "Dec 04, 2026"
@@ -48,7 +48,7 @@ And **SWE-Cycle**, which benchmarks agents across the complete issue resolution 
 
 The engineering translation is direct. **Grade the trajectory, not just the diff.** What the agent read, what it ran, what it changed, and whether that sequence makes sense. That is where the failures are visible.
 
-![Heatmap of which action a coding agent takes next after each action, such as edit, pytest, search_file and submit, across SWE-agent trajectories](/assets/images/blog/verifying-agent-code-swe-agent-actions.png)
+![Heatmap of which action a coding agent takes next after each action, such as edit, pytest, search_file and submit, across SWE-agent trajectories](/assets/images/blog/verifying-agent-code-swe-agent-actions.webp)
 
 *What an agent actually does, step by step: how often each action follows another across SWE-agent trajectories with GPT-4 Turbo. Output-only grading never sees this. Source: [SWE-agent, Yang et al.](https://arxiv.org/abs/2405.15793) (CC BY 4.0)*
 

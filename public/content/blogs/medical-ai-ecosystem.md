@@ -3,7 +3,7 @@ id: "48"
 slug: "medical-ai-ecosystem-alphafold-tempus-pathai-hippocratic"
 title: "Six Places Medical AI Is Actually Working, From Protein Folds to Phone Calls"
 comments: "0"
-image: "/assets/images/blog/alphafold-3.jpg"
+image: "/assets/images/blog/alphafold-3.webp"
 category: "Medical AI"
 desc: "AlphaFold 3, the open medical model ecosystem, Mayo's 150 models, $9-an-hour care agents, 500 petabytes of oncology data, and FDA-cleared pathology."
 date: "Oct 05, 2026"
@@ -26,7 +26,7 @@ The accuracy claims held up under scrutiny, and the comparisons that matter are 
 - **Much higher accuracy on protein–nucleic acid interactions** than nucleic-acid-specific predictors.
 - **Substantially better antibody–antigen prediction** than AlphaFold-Multimer v2.
 
-![Figure 1 of the AlphaFold 3 paper: example predicted structures, bar charts of AF3 success rates against AutoDock Vina, RoseTTAFold All-Atom, RoseTTAFold2NA and AlphaFold-Multimer, and the AF3 architecture with Pairformer and diffusion modules](/assets/images/blog/medical-ai-ecosystem-alphafold3-fig1.png)
+![Figure 1 of the AlphaFold 3 paper: example predicted structures, bar charts of AF3 success rates against AutoDock Vina, RoseTTAFold All-Atom, RoseTTAFold2NA and AlphaFold-Multimer, and the AF3 architecture with Pairformer and diffusion modules](/assets/images/blog/medical-ai-ecosystem-alphafold3-fig1.webp)
 
 *AlphaFold 3 accuracy across ligands, nucleic acids, covalent modifications and proteins, with its diffusion-based architecture (panel d). Source: [Abramson et al., Nature, 2024](https://www.nature.com/articles/s41586-024-07487-w), CC BY 4.0.*
 

@@ -5,7 +5,7 @@ title: "Claude Sonnet 5.5: Opus-Class Coding at Sonnet Prices"
 author: "Mera"
 admin: "Mera"
 comments: "0"
-image: "/assets/images/blog/claude-sonnet-5-5.jpg"
+image: "/assets/images/blog/claude-sonnet-5-5.webp"
 category: "AI Models"
 desc: "Claude Sonnet 5.5 scores 70.6% on Terminal-Bench 4.0, runs 30%+ faster than Sonnet 5, and keeps the same $2/$10 pricing, with new cyber and anti-distillation safeguards."
 date: "Sep 28, 2026"
@@ -61,8 +61,8 @@ Anthropic's launch page shows the previous Sonnet and the latest model writing t
 
 | Previous model | Latest model (Sonnet 5.5) |
 |---|---|
-| ![Previous model writing a starling murmuration program](/assets/images/blog/claude-sonnet-5-5-murmuration-previous.png) | ![Latest model writing a starling murmuration program](/assets/images/blog/claude-sonnet-5-5-murmuration-latest.png) |
-| ![Previous model writing a clock-of-clocks program](/assets/images/blog/claude-sonnet-5-5-clocks-previous.png) | ![Latest model writing a clock-of-clocks program](/assets/images/blog/claude-sonnet-5-5-clocks-latest.png) |
+| ![Previous model writing a starling murmuration program](/assets/images/blog/claude-sonnet-5-5-murmuration-previous.webp) | ![Latest model writing a starling murmuration program](/assets/images/blog/claude-sonnet-5-5-murmuration-latest.webp) |
+| ![Previous model writing a clock-of-clocks program](/assets/images/blog/claude-sonnet-5-5-clocks-previous.webp) | ![Latest model writing a clock-of-clocks program](/assets/images/blog/claude-sonnet-5-5-clocks-latest.webp) |
 
 *Starling murmuration and clock-of-clocks programs, previous model vs latest model. Source: [Anthropic](https://www.anthropic.com/claude-sonnet-5-5)*
 

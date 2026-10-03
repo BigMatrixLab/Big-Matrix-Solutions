@@ -8,6 +8,7 @@ import { sortBlogsByDate } from '../utils/blogSort';
 import { visibleBlogs, isScheduled, daysUntilPublish, usePreviewMode } from '../utils/publishSchedule';
 import Seo from '../components/Seo';
 import ShareDialog from '../components/ShareDialog';
+import BlogThumb from '../components/BlogThumb';
 import { useShareDialog } from '../utils/share';
 
 /* The lead post plus two full rows of three, then three more per click. */
@@ -113,7 +114,7 @@ const Blog = () => {
                             {visible.map((post) => (
                                 <article className="bm-card" key={post.id}>
                                     <div className="bm-card__media">
-                                        <img src={post.image} alt={post.title} loading="lazy" />
+                                        <BlogThumb src={post.image} alt={post.title} />
                                     </div>
                                     <div className="bm-card__body">
                                         <div className="bm-card__meta">
@@ -172,7 +173,6 @@ const Blog = () => {
 
             <ShareDialog
                 post={share.post}
-                copied={share.copied}
                 onClose={share.close}
                 preview
             />

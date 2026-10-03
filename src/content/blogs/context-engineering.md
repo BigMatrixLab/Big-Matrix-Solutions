@@ -3,7 +3,7 @@ id: "37"
 slug: "context-engineering-replaced-prompt-engineering"
 title: "Prompt Engineering Is Dead. Context Engineering Is the Job Now."
 comments: "0"
-image: "/assets/images/blog/context-engineering.png"
+image: "/assets/images/blog/context-engineering.webp"
 category: "Agentic AI"
 desc: "When an agent runs for hours, the binding constraint is not the prompt. It is what occupies the window, in what order, and what you throw away."
 date: "Dec 10, 2026"
@@ -134,7 +134,7 @@ Four, and they are recognisable once named.
 
 **Over-compaction.** Summarising so aggressively that essential state is lost. Symptom: an agent that re-does completed work, or contradicts a decision it made an hour ago.
 
-![Line chart from the ACE paper: tokens in context climb to 18,282 with accuracy 66.7, then a single rewrite collapses the context to 122 tokens and accuracy falls to 57.1, below the 63.7 baseline with no context](/assets/images/blog/context-engineering-context-collapse.png)
+![Line chart from the ACE paper: tokens in context climb to 18,282 with accuracy 66.7, then a single rewrite collapses the context to 122 tokens and accuracy falls to 57.1, below the 63.7 baseline with no context](/assets/images/blog/context-engineering-context-collapse.webp)
 
 *Over-compaction measured: one wholesale LLM rewrite shrank a context from 18,282 tokens to 122, and accuracy fell from 66.7 to 57.1, below the 63.7 scored with no context at all. Source: [Zhang et al., Agentic Context Engineering (arXiv:2510.04618)](https://arxiv.org/abs/2510.04618), CC BY 4.0.*
 

@@ -3,7 +3,7 @@ id: "40"
 slug: "claude-fable-5-1-release-and-the-export-control-episode"
 title: "Claude Fable 5.1 Ships With a 75% Cache Discount. The Interesting Story Is From June."
 comments: "0"
-image: "/assets/images/blog/claude-fable-5.jpg"
+image: "/assets/images/blog/claude-fable-5.webp"
 category: "LLM Research"
 desc: "Multimodal input, a 1M window, and agent economics that finally work. Plus the eighteen days a frontier model spent switched off by export controls."
 date: "Sep 02, 2026"
@@ -36,7 +36,7 @@ On benchmarks:
 
 AutomationBench nearly doubling from Fable 5 is the standout. It targets business workflow completion, which is the least glamorous and most commercially relevant thing on the list.
 
-![Anthropic's benchmark table for Claude Fable 5.1 against Fable 5, Opus 5 and GPT-5.6 Sol, including AutomationBench 31.4 percent, CursorBench 73.4 percent and Humanity's Last Exam with tools 65.0 percent](/assets/images/blog/claude-fable-5-1-benchmarks.png)
+![Anthropic's benchmark table for Claude Fable 5.1 against Fable 5, Opus 5 and GPT-5.6 Sol, including AutomationBench 31.4 percent, CursorBench 73.4 percent and Humanity's Last Exam with tools 65.0 percent](/assets/images/blog/claude-fable-5-1-benchmarks.webp)
 
 *Anthropic's published benchmark table for Fable 5.1 against Fable 5, Opus 5 and GPT-5.6 Sol. Source: [Anthropic](https://www.anthropic.com/claude-fable-and-mythos-5-1)*
 

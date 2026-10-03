@@ -5,7 +5,7 @@ title: "Designing Tools and APIs That Agents Can Actually Use"
 author: "Mera"
 admin: "Mera"
 comments: "0"
-image: "/assets/images/blog/tools-for-agents.png"
+image: "/assets/images/blog/tools-for-agents.webp"
 category: "Agentic AI"
 desc: "Agents read your tool descriptions on every call, never ask clarifying questions and pay for every token you return. How to design names, schemas, responses and errors for that kind of consumer."
 date: "Jan 27, 2027"
@@ -93,7 +93,7 @@ The MCP specification formalises this with two error channels.
 
 Protocol errors cover unknown tools and malformed requests. Tool execution errors, returned in a normal result with `isError: true`, cover API failures, input validation and business rule violations, and the specification says they "contain actionable feedback that language models can use to self-correct." Clients should pass them back to the model. Put the useful information in that channel.
 
-![Example of a helpful tool error response that explains why a user ID was invalid, shows valid ID examples and suggests calling user_search](/assets/images/blog/tools-for-agents-error-response.png)
+![Example of a helpful tool error response that explains why a user ID was invalid, shows valid ID examples and suggests calling user_search](/assets/images/blog/tools-for-agents-error-response.webp)
 
 *A helpful error tells the agent what went wrong and which tool to call next. Source: [Anthropic Engineering](https://www.anthropic.com/engineering/writing-tools-for-agents)*
 

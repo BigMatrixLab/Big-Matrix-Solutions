@@ -3,7 +3,7 @@ id: "35"
 slug: "computer-use-agents-the-hardest-easy-problem"
 title: "85% on OSWorld, 20% on the Sequel: The Hardest Easy Problem in AI"
 comments: "0"
-image: "/assets/images/blog/computer-use-agents.png"
+image: "/assets/images/blog/computer-use-agents.webp"
 category: "Agentic AI"
 desc: "Agents that drive a mouse and keyboard went from 12% to 85% in two years. Then a harder benchmark put the best system at one fifth."
 date: "Dec 06, 2026"
@@ -102,7 +102,7 @@ Three directions, and they are converging on the same insight.
 
 **Compositional generalist-specialist designs.** Agent S2 splits a generalist planner from specialists that handle particular applications or interaction types. This is the same conclusion multi-agent work reached: decompose on genuine boundaries, and keep each component's mess out of the others' context.
 
-![Agent S2 framework diagram: a Manager issues subgoals to a chain of Worker steps, and a Mixture of Grounding module routes each action to one of three grounding experts](/assets/images/blog/computer-use-agents-agent-s2.png)
+![Agent S2 framework diagram: a Manager issues subgoals to a chain of Worker steps, and a Mixture of Grounding module routes each action to one of three grounding experts](/assets/images/blog/computer-use-agents-agent-s2.webp)
 
 *Agent S2 separates a Manager that sets subgoals, a Worker that acts, and a Mixture of Grounding experts that turn each action into a screen location. Source: [Agashe et al., Agent S2 (arXiv:2504.00906)](https://arxiv.org/abs/2504.00906), CC BY 4.0.*
 

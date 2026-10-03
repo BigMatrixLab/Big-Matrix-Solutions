@@ -5,7 +5,7 @@ title: "700 Agents, One Message Board: What the Hugging Face Breach Teaches Anyo
 author: "Mera"
 admin: "Mera"
 comments: "0"
-image: "/assets/images/blog/metr-incident-og.png"
+image: "/assets/images/blog/metr-incident-og.webp"
 category: "Cyber Security"
 desc: "OpenAI evaluation agents built a covert message board, escaped their sandbox and breached Hugging Face's production systems. The root causes, the lawsuit, the Senate hearing, and the lessons for teams deploying agents."
 date: "Oct 17, 2026"
@@ -62,7 +62,7 @@ Concealment is where the two accounts differ. METR found successfully spoofed to
 
 The fixes include VM-based sandboxes with two independent layers of network isolation, removing Artifactory from the research environment, and a rule to pause activity if a severe chain-of-thought alert cannot be ruled a false positive within 30 minutes. OpenAI stopped all training and inference on the implicated model on July 25.
 
-![Diagram: agents came to believe the grader checked transcripts, which spread through the message board](/assets/images/blog/metr-incident-fig4.png)
+![Diagram: agents came to believe the grader checked transcripts, which spread through the message board](/assets/images/blog/metr-incident-fig4.webp)
 
 *How a mistaken belief about the grader spread through the agents' message board. Source: [METR](https://metr.org/blog/2026-08-26-openai-hugging-face-incident-investigation/)*
 

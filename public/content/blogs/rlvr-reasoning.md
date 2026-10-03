@@ -3,7 +3,7 @@ id: "26"
 slug: "rlvr-how-reasoning-models-got-good"
 title: "The Trick That Made Models Reason: Verifiable Rewards, and Where They Run Out"
 comments: "0"
-image: "/assets/images/blog/rlvr-reasoning.png"
+image: "/assets/images/blog/rlvr-reasoning.webp"
 category: "LLM Research"
 desc: "RLVR gave us o-series, R1 and every reasoning model since. It also confined the gains to domains where a computer can check the answer."
 date: "Nov 14, 2026"
@@ -85,7 +85,7 @@ This is classic sparse-reward reinforcement learning, and the standard mitigatio
 
 It also explains a counterintuitive property of the method: RLVR is best at problems the base model can *occasionally* already solve. It amplifies and reliabilises latent capability rather than installing new capability. Findings that RLVR implicitly incentivises correct reasoning already present in base models point in the same direction. The reinforcement is selecting for reasoning paths the pretrained model could produce, not teaching it to produce new ones.
 
-![Figure showing reasoning paths in a base model and after RLVR, with pass@k curves on AIME 2024 and 2025 where the RLVR model leads at low k and the base model catches up at high k](/assets/images/blog/rlvr-reasoning-pass-at-k.png)
+![Figure showing reasoning paths in a base model and after RLVR, with pass@k curves on AIME 2024 and 2025 where the RLVR model leads at low k and the base model catches up at high k](/assets/images/blog/rlvr-reasoning-pass-at-k.webp)
 
 *RLVR mostly raises the odds of correct reasoning paths the base model can already produce: the gap is largest at pass@1 and narrows as k grows. Source: [Wen et al. (arXiv:2506.14245)](https://arxiv.org/abs/2506.14245), [CC BY 4.0](https://creativecommons.org/licenses/by/4.0/).*
 

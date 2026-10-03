@@ -5,7 +5,7 @@ title: "Observability for LLM Apps: Tracing, OpenTelemetry GenAI and What to Log
 author: "Mera"
 admin: "Mera"
 comments: "0"
-image: "/assets/images/blog/llm-observability.png"
+image: "/assets/images/blog/llm-observability.webp"
 category: "Agentic AI"
 desc: "An LLM feature can return HTTP 200 with a wrong answer, a doubled bill or a twelve-step tool loop. How to trace it with the OpenTelemetry GenAI conventions, and what to log beyond them."
 date: "Feb 10, 2027"

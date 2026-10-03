@@ -5,7 +5,7 @@ title: "SpaceXAI and Cursor Launch Grok Bot: Always-On AI Teammates in the Cloud
 author: "Mera"
 admin: "Mera"
 comments: "0"
-image: "/assets/images/blog/grok-bot-launch.jpeg"
+image: "/assets/images/blog/grok-bot-launch.webp"
 category: "Agentic AI"
 desc: "SpaceXAI and Cursor open an early beta of Grok Bot, AI teammates that sign into your tools on their own cloud computer and keep working after you close your laptop."
 date: "Aug 11, 2026"

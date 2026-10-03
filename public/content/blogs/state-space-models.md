@@ -5,7 +5,7 @@ title: "How State Space Models Work: Mamba and Life Beyond Attention"
 author: "Mera"
 admin: "Mera"
 comments: "0"
-image: "/assets/images/blog/state-space-models-mamba-selective-ssm.png"
+image: "/assets/images/blog/state-space-models-mamba-selective-ssm.webp"
 category: "Tutorial"
 desc: "A fixed-size state instead of a growing KV cache: how SSMs and Mamba's selection mechanism work, where they fall short, and why production models now mix them with attention."
 date: "Feb 02, 2027"
@@ -74,7 +74,7 @@ The reported results were strong for their size. The paper reports **5x higher i
 
 **Mamba-3** (Lahoti et al., March 2026) focuses on inference efficiency. It adds a refined discretisation, complex-valued state updates for better state tracking, and an optional multi-input, multi-output (MIMO) form. The authors report perplexity comparable to Mamba-2 while using **half the state size**.
 
-![Block diagrams of the Mamba-2 and Mamba-3 blocks, showing linear projections, the SSM, RoPE and optional MIMO projections](/assets/images/blog/state-space-models-mamba3-block.png)
+![Block diagrams of the Mamba-2 and Mamba-3 blocks, showing linear projections, the SSM, RoPE and optional MIMO projections](/assets/images/blog/state-space-models-mamba3-block.webp)
 
 *Mamba-2 and Mamba-3 blocks. Source: [state-spaces/mamba](https://github.com/state-spaces/mamba), Apache 2.0*
 

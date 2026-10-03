@@ -26,7 +26,7 @@ The bill started as a discussion draft. In June 2026, Reps. Jay Obernolte (R-CA)
 
 On **July 23, 2026**, the two sponsors introduced a revised version: the **Frontier Risk Oversight, National Transparency, Independent Evaluation, and Reporting (FRONTIER) Act**, **H.R. 9925**. Four co-sponsors joined them: Reps. Houchin, Peters, Scott Franklin and Subramanyam. The bill was referred to the House Energy and Commerce Committee and the Science, Space, and Technology Committee.
 
-![First page of H.R. 9925, the FRONTIER Act, as introduced in the House of Representatives on July 23, 2026](/assets/images/blog/frontier-act-hr9925-first-page.png)
+![First page of H.R. 9925, the FRONTIER Act, as introduced in the House of Representatives on July 23, 2026](/assets/images/blog/frontier-act-hr9925-first-page.webp)
 
 *The first page of H.R. 9925 as introduced. Source: [GovInfo, U.S. Government Publishing Office](https://www.govinfo.gov/app/details/BILLS-119hr9925ih), public domain*
 

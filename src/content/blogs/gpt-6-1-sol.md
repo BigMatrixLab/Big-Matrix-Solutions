@@ -73,11 +73,11 @@ On **Terminal-Bench Science 0.1**, Astra posted the top score (68.1%). Cost per 
 | **🟠 Opus 5.5** | $23.21 |
 | **🌟 GPT-6 Astra** | $23.80 |
 
-![DeepSWE score vs cost per task for GPT-6.1 Sol, GPT-6 Sol and GPT-6 Astra](/assets/images/blog/gpt-6-1-sol-deepswe-chart.png)
+![DeepSWE score vs cost per task for GPT-6.1 Sol, GPT-6 Sol and GPT-6 Astra](/assets/images/blog/gpt-6-1-sol-deepswe-chart.webp)
 
 *DeepSWE 1.1: score vs cost per task across reasoning settings. Source: [OpenAI](https://openai.com/index/introducing-gpt-6-1-sol/)*
 
-![Terminal-Bench Science 0.1 score vs cost per task for GPT-6.1 Sol, GPT-6 Sol, GPT-6 Astra and Opus 5.5](/assets/images/blog/gpt-6-1-sol-terminal-bench-science-chart.png)
+![Terminal-Bench Science 0.1 score vs cost per task for GPT-6.1 Sol, GPT-6 Sol, GPT-6 Astra and Opus 5.5](/assets/images/blog/gpt-6-1-sol-terminal-bench-science-chart.webp)
 
 *Terminal-Bench Science 0.1: score vs cost per task, including Opus 5.5 with fallbacks. Source: [OpenAI](https://openai.com/index/introducing-gpt-6-1-sol/)*
 

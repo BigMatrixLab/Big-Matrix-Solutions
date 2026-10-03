@@ -3,7 +3,7 @@ id: "16"
 slug: "self-evolving-agents-and-memory-that-compounds"
 title: "Agents That Learn From Yesterday: Inside the Self-Improving Coding Loop"
 comments: "0"
-image: "/assets/images/blog/self-evolving-agents.png"
+image: "/assets/images/blog/self-evolving-agents.webp"
 category: "Agentic AI"
 desc: "Frozen weights, forgotten sessions. The 2026 research push to give coding agents memory that accumulates and behaviour that improves without retraining."
 date: "Oct 31, 2026"
@@ -66,7 +66,7 @@ The framing here separates two things that usually get conflated. There is the m
 
 The Darwin Gödel Machine line of work explores exactly this: agents that read their own implementation, propose modifications, evaluate whether the modified version performs better on a benchmark, and keep the improvements. Open-ended evolution of self-improving agents, with the model held constant and the scaffolding under selection.
 
-![DGM archive tree: about 80 numbered agent variants branching from a root, coloured by SWE-bench score, with a bold path leading to a star marking the best agent](/assets/images/blog/self-evolving-agents-dgm-archive.png)
+![DGM archive tree: about 80 numbered agent variants branching from a root, coloured by SWE-bench score, with a bold path leading to a star marking the best agent](/assets/images/blog/self-evolving-agents-dgm-archive.webp)
 
 *The Darwin Gödel Machine archive: every node is a self-modified variant of the coding agent, coloured by SWE-bench score, and the bold path leads to the best one found. Source: [Zhang et al., Darwin Gödel Machine (arXiv:2505.22954)](https://arxiv.org/abs/2505.22954), CC BY 4.0.*
 

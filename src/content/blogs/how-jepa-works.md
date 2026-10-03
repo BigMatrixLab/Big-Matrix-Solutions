@@ -106,13 +106,13 @@ Video is where the argument gets much stronger, because video has the pixel-unpr
 
 That combination is the interesting part, and it mirrors how the language field learned to do things. The video gives broad physical priors: how objects move, how occlusion works, what happens when something is pushed. The robot data grounds those priors in actions the robot can actually take. Pretrain broadly, adapt narrowly.
 
-![V-JEPA 2 overview: pretraining on internet video and images, then language alignment, attentive probes, and action-conditioned post-training on 62 hours of robot data for planning](/assets/images/blog/vjepa2-overview.png)
+![V-JEPA 2 overview: pretraining on internet video and images, then language alignment, attentive probes, and action-conditioned post-training on 62 hours of robot data for planning](/assets/images/blog/vjepa2-overview.webp)
 
 *V-JEPA 2 is pretrained on over a million hours of video, then post-trained on 62 hours of robot data for planning. Source: [V-JEPA 2, Fig. 1](https://arxiv.org/abs/2506.09985), Assran et al., CC BY 4.0.*
 
 The payoff is planning. If you have a model that predicts *representations* of future states given actions, you can search over action sequences: imagine the outcome of each candidate plan in latent space, score it against a goal representation, pick the best. No pixel rendering required, which makes the search cheap enough to be practical.
 
-![V-JEPA 2-AC model predictive control: current observation and goal image are encoded, the predictor rolls out candidate actions in latent space, and an L1 distance to the goal representation scores them](/assets/images/blog/vjepa2-planning.png)
+![V-JEPA 2-AC model predictive control: current observation and goal image are encoded, the predictor rolls out candidate actions in latent space, and an L1 distance to the goal representation scores them](/assets/images/blog/vjepa2-planning.webp)
 
 *Planning in latent space: candidate actions are scored by how close the predicted representation lands to the goal’s. Source: [V-JEPA 2](https://arxiv.org/abs/2506.09985), Assran et al., CC BY 4.0.*
 

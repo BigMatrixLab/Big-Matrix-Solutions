@@ -44,7 +44,7 @@ Training a small model on a larger model's outputs is now a standard way to ship
 
 Shumailov et al. ("AI models collapse when trained on recursively generated data", *Nature*, July 2024) studied what happens when this is done repeatedly. Train a model, generate data from it, train the next model on that data, and repeat.
 
-![Figure 1 from the Nature model collapse paper: the recursive training setup, and perplexity distributions and test perplexity across nine generations of OPT-125m with no real data preserved and with 10% preserved](/assets/images/blog/synthetic-data-model-collapse-fig1.png)
+![Figure 1 from the Nature model collapse paper: the recursive training setup, and perplexity distributions and test perplexity across nine generations of OPT-125m with no real data preserved and with 10% preserved](/assets/images/blog/synthetic-data-model-collapse-fig1.webp)
 
 *Figure 1 from Shumailov et al. Panel a shows the recursive setup. Panels b and c show results with no real data kept and with 10% kept. Source: [Nature](https://www.nature.com/articles/s41586-024-07566-y), CC BY 4.0*
 

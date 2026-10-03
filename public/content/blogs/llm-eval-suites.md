@@ -5,7 +5,7 @@ title: "Building an Eval Suite for an LLM Feature"
 author: "Mera"
 admin: "Mera"
 comments: "0"
-image: "/assets/images/blog/llm-eval-suites.png"
+image: "/assets/images/blog/llm-eval-suites.webp"
 category: "Agentic AI"
 desc: "Tasks, trials, graders and gates: how to build an evaluation suite that tells you whether a prompt or model change made your LLM feature better or worse."
 date: "Dec 16, 2026"
@@ -84,7 +84,7 @@ A single run per task tells you very little. The same input can pass on one tria
 - **pass@k**: the probability that at least one of *k* trials succeeds. Useful when a human or a verifier picks the best attempt.
 - **pass^k**: the probability that *all k* trials succeed. Useful when every user interaction has to work.
 
-![Chart showing pass@k rising towards 100 percent and pass^k falling towards zero as the number of trials increases](/assets/images/blog/llm-eval-suites-pass-k.png)
+![Chart showing pass@k rising towards 100 percent and pass^k falling towards zero as the number of trials increases](/assets/images/blog/llm-eval-suites-pass-k.webp)
 
 *In Anthropic's illustration, the same agent scores 97% pass@3 but only 39% pass^3. Source: [Anthropic](https://www.anthropic.com/engineering/demystifying-evals-for-ai-agents)*
 

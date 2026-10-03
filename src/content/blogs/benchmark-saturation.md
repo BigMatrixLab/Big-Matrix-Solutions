@@ -3,7 +3,7 @@ id: "9"
 slug: "arc-agi-3-and-the-collapse-of-the-ai-benchmark"
 title: "Humans 100%, Frontier AI 0.51%: Inside the Benchmark That Broke the Streak"
 comments: "0"
-image: "/assets/images/blog/benchmark-saturation.png"
+image: "/assets/images/blog/benchmark-saturation.webp"
 category: "AI Benchmarks"
 desc: "Models are acing graduate physics and failing puzzles a child can solve. ARC-AGI-3, METR's time horizons, and what evaluation looks like after saturation."
 date: "Oct 07, 2026"
@@ -89,7 +89,7 @@ The most useful answer right now comes from [METR](https://metr.org/time-horizon
 
 That number has been rising exponentially since 2019. It also matches lived experience better than anything else on offer: what users notice when they upgrade is rarely "it knows more," it is "it did not fall apart three hours in."
 
-![METR chart of the 50 percent time horizon of AI agents by model release date, rising from seconds for GPT-2 to around two hours for o3, with a doubling time of about 7 months](/assets/images/blog/benchmark-saturation-metr-horizon.png)
+![METR chart of the 50 percent time horizon of AI agents by model release date, rising from seconds for GPT-2 to around two hours for o3, with a doubling time of about 7 months](/assets/images/blog/benchmark-saturation-metr-horizon.webp)
 
 *METR's headline chart: the task length frontier agents complete with 50% reliability, by release date (paper version, models up to o3). Source: [Kwa et al., METR, "Measuring AI Ability to Complete Long Software Tasks" (arXiv:2503.14499)](https://arxiv.org/abs/2503.14499), [CC BY 4.0](https://creativecommons.org/licenses/by/4.0/).*
 

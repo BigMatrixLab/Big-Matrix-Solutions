@@ -3,7 +3,7 @@ id: "8"
 slug: "the-frontier-model-landscape-september-2026"
 title: "The Frontier Model Landscape: Why Nobody Owns the Lead Anymore"
 comments: "0"
-image: "/assets/images/blog/frontier-model-landscape.png"
+image: "/assets/images/blog/frontier-model-landscape.webp"
 category: "LLM Research"
 desc: "Five labs, four model families, and a leaderboard that reshuffles every six weeks. What the 2026 release cadence actually changed."
 date: "Sep 11, 2026"
@@ -51,7 +51,7 @@ Strip out the leaderboard noise and ask what a model can do in 2026 that it coul
 
 METR's framing is the clearest way to see this. Instead of scoring accuracy on a fixed test, they ask how *long* a task can be, measured in the time a skilled human would need, before the model's success rate drops to 50 percent. That number has climbed exponentially since 2019, and it tracks what people actually notice when they upgrade better than any accuracy score does.
 
-![METR methodology: a diverse task suite, human and agent runs giving time estimates and success rates, and a fitted 50 percent time horizon tracked against model release dates](/assets/images/blog/frontier-model-landscape-metr-method.png)
+![METR methodology: a diverse task suite, human and agent runs giving time estimates and success rates, and a fitted 50 percent time horizon tracked against model release dates](/assets/images/blog/frontier-model-landscape-metr-method.webp)
 
 *How METR measures a time horizon: time human baseliners, measure agent success rates, and fit the task length at which success falls to 50%. Source: [Kwa et al., METR, "Measuring AI Ability to Complete Long Software Tasks" (arXiv:2503.14499)](https://arxiv.org/abs/2503.14499), [CC BY 4.0](https://creativecommons.org/licenses/by/4.0/).*
 

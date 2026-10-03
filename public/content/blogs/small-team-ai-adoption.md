@@ -5,7 +5,7 @@ title: "AI Adoption for Small Engineering Teams: A 90-Day Plan"
 author: "Mera"
 admin: "Mera"
 comments: "0"
-image: "/assets/images/blog/small-team-ai-adoption.jpg"
+image: "/assets/images/blog/small-team-ai-adoption.webp"
 category: "Software Development"
 desc: "Buying seats is not adoption. A three-phase plan for small teams to roll out AI coding tools with a baseline, guardrails and a decision at day 90, grounded in DORA and METR research."
 date: "Feb 04, 2027"
@@ -28,7 +28,7 @@ Two findings should shape the plan.
 
 **Perceived speed is not measured speed.** In an early-2025 randomised controlled trial, METR had 16 experienced open-source developers complete 246 real issues in repositories they knew well, with and without AI tools. Developers expected AI to speed them up by 24 percent and, afterwards, believed it had sped them up by 20 percent. Measured completion time went the other way: "they take 19% longer."
 
-![METR chart comparing forecast speedups from experts and developers with the observed 19 percent slowdown when AI was allowed](/assets/images/blog/small-team-ai-adoption-metr.png)
+![METR chart comparing forecast speedups from experts and developers with the observed 19 percent slowdown when AI was allowed](/assets/images/blog/small-team-ai-adoption-metr.webp)
 
 *Forecasts and self-reports against the observed result. Source: [METR](https://metr.org/blog/2025-07-10-early-2025-ai-experienced-os-dev-study/), CC-BY*
 

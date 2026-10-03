@@ -5,7 +5,7 @@ title: "Least Privilege for AI Agents: Designing Permissions That Survive Mistak
 author: "Mera"
 admin: "Mera"
 comments: "0"
-image: "/assets/images/blog/agent-permissions.png"
+image: "/assets/images/blog/agent-permissions.webp"
 category: "Agentic AI"
 desc: "Agents will misread instructions, act on bad data and occasionally get hijacked. A layered permission design decides how much damage any one of those mistakes can do."
 date: "Dec 30, 2026"
