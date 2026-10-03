@@ -1,6 +1,7 @@
 import React, { useRef, useState } from 'react';
 import {
     blogShareUrl,
+    copyText,
     shareOnFacebook,
     shareOnInstagram,
     shareOnLinkedIn,
@@ -24,10 +25,11 @@ const TARGETS = [
 
 /**
  * One-click share targets for a post, in the site's square icon-button style.
- * Facebook, LinkedIn and Instagram also copy a ready-made caption, so the
- * status line tells the reader it is on their clipboard.
+ * `caption` overrides the default (the share dialog lets it be edited). The
+ * status line says where the caption went, since Facebook and Instagram only
+ * get it through the clipboard.
  */
-const ShareButtons = ({ post, onOpenDialog }) => {
+const ShareButtons = ({ post, caption, onOpenDialog }) => {
     const [status, setStatus] = useState('');
     const timer = useRef(null);
 
@@ -38,30 +40,25 @@ const ShareButtons = ({ post, onOpenDialog }) => {
     };
 
     const copyLink = () => {
-        try {
-            navigator.clipboard?.writeText(blogShareUrl(post));
-            flash('Link copied.');
-        } catch {
-            flash('Copy failed — select the address bar instead.');
-        }
+        flash(copyText(blogShareUrl(post)) ? 'Link copied.' : 'Copy failed — select the address bar instead.');
     };
 
     const share = (id) => {
         switch (id) {
             case 'facebook':
-                shareOnFacebook(post);
-                flash('Caption copied — paste it into your post.');
+                shareOnFacebook(post, caption);
+                flash('Caption copied — press Ctrl+V (⌘V on Mac) in your Facebook post.');
                 break;
             case 'linkedin':
-                shareOnLinkedIn(post);
-                flash('Caption copied — paste it into your post.');
+                shareOnLinkedIn(post, caption);
+                flash('Caption added to your LinkedIn post. It is on your clipboard too.');
                 break;
             case 'x':
-                shareOnX(post);
+                shareOnX(post, caption);
                 break;
             case 'instagram':
-                shareOnInstagram(post);
-                flash('Caption copied — paste it into Instagram.');
+                shareOnInstagram(post, caption);
+                flash('Caption copied — paste it into your Instagram post.');
                 break;
             default:
                 copyLink();

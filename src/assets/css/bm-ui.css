@@ -4134,6 +4134,42 @@ a.bm-card__title:hover,
 
 .bm-share-dialog__foot { display: flex; justify-content: flex-end; padding: var(--bm-4) var(--bm-5); border-top: 1px solid var(--bm-line); }
 
+/* Editable caption, in the contact form's field style. */
+.bm-share-dialog__caption { margin-bottom: var(--bm-5); }
+
+.bm-share-dialog__caption-head {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  gap: var(--bm-3);
+  margin-bottom: var(--bm-2);
+}
+
+.bm-share-dialog__caption-head .bm-doc__index-label { margin: 0; }
+
+.bm-share-dialog__textarea {
+  display: block;
+  width: 100%;
+  min-height: 150px;
+  padding: 12px 14px;
+  font-family: var(--bm-font-body) !important;
+  font-size: var(--bm-fs-sm);
+  line-height: 1.5;
+  color: var(--bm-text);
+  background: var(--bm-bg);
+  border: 1px solid var(--bm-line-strong);
+  border-radius: var(--bm-r-sm);
+  resize: vertical;
+  transition: border-color var(--bm-dur) var(--bm-ease-inout),
+              box-shadow var(--bm-dur) var(--bm-ease-inout);
+}
+
+.bm-share-dialog__textarea:focus {
+  outline: none;
+  border-color: var(--bm-orange);
+  box-shadow: 0 0 0 3px rgba(236, 54, 46, 0.16);
+}
+
 /* Phones: a bottom sheet. */
 @keyframes bm-sheet-up {
   from { transform: translateY(100%); }

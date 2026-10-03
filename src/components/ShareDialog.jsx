@@ -1,11 +1,11 @@
-import React from 'react';
+import React, { useState } from 'react';
 import useBodyScrollLock from '../utils/useBodyScrollLock';
 import ShareButtons from './ShareButtons';
+import { copyText, shareCaption } from '../utils/share';
 
 /**
- * "Share this article" sheet: the post being shared, a note that the caption
- * is already on the clipboard, and the share targets. Renders nothing until a
- * post is passed in.
+ * "Share this article" sheet: the post being shared, an editable caption, and
+ * the share targets. Renders nothing until a post is passed in.
  *
  * `preview` shows the post as a card: wanted on the index, where the dialog is
  * opened from a list, and redundant on the article page itself.
@@ -14,6 +14,18 @@ const ShareDialog = ({ post, copied, onClose, preview = false }) => {
     useBodyScrollLock(Boolean(post));
 
     if (!post) return null;
+
+    // Keyed by post so the caption starts fresh for each post opened.
+    return <SharePanel key={post.slug} post={post} copied={copied} onClose={onClose} preview={preview} />;
+};
+
+const SharePanel = ({ post, copied, onClose, preview }) => {
+    const [caption, setCaption] = useState(() => shareCaption(post));
+    const [note, setNote] = useState('');
+
+    const copyCaption = () => {
+        setNote(copyText(caption) ? 'Caption copied.' : 'Copy failed — select the text and copy it.');
+    };
 
     return (
         <div
@@ -61,8 +73,28 @@ const ShareDialog = ({ post, copied, onClose, preview = false }) => {
                         <p className="bm-share-dialog__lead">{post.title}</p>
                     )}
 
+                    <div className="bm-share-dialog__caption">
+                        <div className="bm-share-dialog__caption-head">
+                            <label className="bm-doc__index-label" htmlFor="share-caption">Caption</label>
+                            <button type="button" className="bm-link bm-link--button" onClick={copyCaption}>
+                                Copy caption
+                                <i className="bi bi-clipboard" aria-hidden="true"></i>
+                            </button>
+                        </div>
+                        <textarea
+                            id="share-caption"
+                            className="bm-share-dialog__textarea"
+                            rows={7}
+                            value={caption}
+                            onChange={(event) => setCaption(event.target.value)}
+                        />
+                        <p className="bm-share__status" aria-live="polite">
+                            {note || 'Edit before sharing. LinkedIn and X fill it in for you; for Facebook and Instagram it is copied, so paste it into the post.'}
+                        </p>
+                    </div>
+
                     <p className="bm-doc__index-label">Share to</p>
-                    <ShareButtons post={post} />
+                    <ShareButtons post={post} caption={caption} />
                 </div>
 
                 <div className="bm-share-dialog__foot">
