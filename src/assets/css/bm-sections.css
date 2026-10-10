@@ -1934,6 +1934,25 @@
 
 .bc-showcase .bc-hero-badge i { color: var(--bm-orange-on-ink) !important; }
 
+/* Project pages: text runs the full width of its container. The global
+   `text-wrap: balance` on headings (bm-core.css) and the measure caps on the
+   hero lead and section intros are switched off here only. */
+.bc-showcase h1,
+.bc-showcase h2,
+.bc-showcase h3,
+.bc-showcase h4,
+.bc-showcase h5,
+.bc-showcase h6,
+.bc-showcase p {
+  text-wrap: wrap;
+}
+
+.bc-showcase .bc-hero-sub,
+.bc-showcase .bc-section-head,
+.bc-showcase .bc-section-head p {
+  max-width: none;
+}
+
 /* --------------------------------------------------------------------------
    21. Mission page (legacy template markup)
    -------------------------------------------------------------------------- */

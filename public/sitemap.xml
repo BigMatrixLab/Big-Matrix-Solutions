@@ -59,7 +59,13 @@
         <loc>https://big-matrix.com/project/nsu_ctrg_2021_2022_breast_cancer</loc>
     </url>
     <url>
+        <loc>https://big-matrix.com/project/dicomviewer</loc>
+    </url>
+    <url>
         <loc>https://big-matrix.com/project/ielts-tutors</loc>
+    </url>
+    <url>
+        <loc>https://big-matrix.com/project/linac-qa-guardian</loc>
     </url>
     <url>
         <loc>https://big-matrix.com/project/lung-ct-report-generation</loc>
@@ -89,6 +95,14 @@
         <lastmod>2026-07-30</lastmod>
     </url>
     <url>
+        <loc>https://big-matrix.com/blog/asynchronous-delegation-background-coding-agents</loc>
+        <lastmod>2026-10-10</lastmod>
+    </url>
+    <url>
+        <loc>https://big-matrix.com/blog/arc-agi-3-and-the-collapse-of-the-ai-benchmark</loc>
+        <lastmod>2026-10-06</lastmod>
+    </url>
+    <url>
         <loc>https://big-matrix.com/blog/claude-fable-5-1-release-and-the-export-control-episode</loc>
         <lastmod>2026-09-01</lastmod>
     </url>
@@ -99,6 +113,10 @@
     <url>
         <loc>https://big-matrix.com/blog/claude-sonnet-5-5-opus-class-coding-at-sonnet-prices</loc>
         <lastmod>2026-09-27</lastmod>
+    </url>
+    <url>
+        <loc>https://big-matrix.com/blog/llms-outperform-physicians-clinical-reasoning</loc>
+        <lastmod>2026-10-08</lastmod>
     </url>
     <url>
         <loc>https://big-matrix.com/blog/the-frontier-model-landscape-september-2026</loc>
@@ -155,6 +173,10 @@
     <url>
         <loc>https://big-matrix.com/blog/mcp-the-new-standard-for-ai-tool-interoperability</loc>
         <lastmod>2026-08-20</lastmod>
+    </url>
+    <url>
+        <loc>https://big-matrix.com/blog/medical-ai-ecosystem-alphafold-tempus-pathai-hippocratic</loc>
+        <lastmod>2026-10-04</lastmod>
     </url>
     <url>
         <loc>https://big-matrix.com/blog/medical-foundation-models-clear-the-fda</loc>
