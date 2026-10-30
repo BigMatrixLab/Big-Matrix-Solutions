@@ -15,7 +15,10 @@
  * and creates elements from their text, so nothing unsafe is introduced.
  */
 
-const LEADING_EMOJI = /^\s*(?:\p{Extended_Pictographic}\uFE0F?\s*)+/u;
+// ©, ® and ™ are Extended_Pictographic in Unicode but are typography here
+// (trademark and legal lines), so neither pattern treats them as emoji.
+const NOT_TYPOGRAPHIC = '(?![\\u00A9\\u00AE\\u2122])';
+const LEADING_EMOJI = new RegExp(`^\\s*(?:${NOT_TYPOGRAPHIC}\\p{Extended_Pictographic}\\uFE0F?\\s*)+`, 'u');
 const LEADING_COLON = /^\s*[:\u2013\u2014-]\s*/;
 const NUMBERED_HEADING = /^\s*(\d{1,2})\.\s+/;
 
@@ -268,7 +271,7 @@ const convertHeading = (doc, heading) => {
 /** Every emoji form: pictographs, skin-tone modifiers, ZWJ and variation
  *  selectors. Kept as alternation rather than one character class, since ZWJ
  *  and variation selectors inside a class are ambiguous. */
-const ANY_EMOJI = /\p{Extended_Pictographic}|[\u{1F3FB}-\u{1F3FF}]|\u200D|\uFE0F/gu;
+const ANY_EMOJI = new RegExp(`${NOT_TYPOGRAPHIC}\\p{Extended_Pictographic}|[\\u{1F3FB}-\\u{1F3FF}]|\\u200D|\\uFE0F`, 'gu');
 
 /**
  * Strips decorative emoji out of rendered markdown. Article bodies use them as

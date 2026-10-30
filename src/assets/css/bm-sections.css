@@ -589,12 +589,12 @@
    below it stays visible no matter how short the viewport is. */
 .bm-doc__aside {
   position: sticky;
-  top: calc(var(--bm-header-h) + var(--bm-5));
+  top: calc(var(--bm-header-h) + var(--bm-announce-h, 0px) + var(--bm-5));
   display: flex;
   flex-direction: column;
   gap: var(--bm-5);
-  max-height: calc(100vh - var(--bm-header-h) - var(--bm-6));
-  max-height: calc(100dvh - var(--bm-header-h) - var(--bm-6));
+  max-height: calc(100vh - var(--bm-header-h) - var(--bm-announce-h, 0px) - var(--bm-6));
+  max-height: calc(100dvh - var(--bm-header-h) - var(--bm-announce-h, 0px) - var(--bm-6));
 }
 
 .bm-doc__index {
@@ -1259,7 +1259,7 @@
      resolves against each element's own font-size, so smaller blocks such as
      tables and notes would end short of the rules above them. */
   --doc-measure: 100%;
-  --doc-anchor: calc(var(--bm-header-h) + var(--bm-5));
+  --doc-anchor: calc(var(--bm-header-h) + var(--bm-announce-h, 0px) + var(--bm-5));
 }
 
 .bm-doc__body {
