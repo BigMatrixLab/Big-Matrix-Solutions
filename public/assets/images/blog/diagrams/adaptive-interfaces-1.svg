@@ -1,0 +1,26 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 1200 600" width="1200" height="600" role="img">
+<rect x="1" y="1" width="1198" height="598" fill="#ffffff" rx="16" stroke="#e5e7eb" stroke-width="2"/>
+<title>The continuous optimisation loop for an adaptive interface</title>
+<desc>A cycle of four steps: show a variant, measure task completion time, errors and satisfaction, reward configurations that improve the metrics, and converge gradually toward the best interface for each user, with transparency and user control as guard rails.</desc>
+<defs><marker id="ah" viewBox="0 0 10 10" refX="9" refY="5" markerWidth="8" markerHeight="8" orient="auto-start-reverse"><path d="M0,0 L10,5 L0,10 z" fill="#4b5563"/></marker><marker id="ahr" viewBox="0 0 10 10" refX="9" refY="5" markerWidth="8" markerHeight="8" orient="auto-start-reverse"><path d="M0,0 L10,5 L0,10 z" fill="#ec362e"/></marker></defs>
+<text x="60" y="68" font-family="Inter, Segoe UI, Arial, sans-serif" font-size="30" fill="#111827" text-anchor="start" font-weight="700">How an adaptive UI learns</text>
+<text x="60" y="104" font-family="Inter, Segoe UI, Arial, sans-serif" font-size="20" fill="#4b5563" text-anchor="start" font-weight="400">Show, measure, learn, converge, then repeat</text>
+<rect x="450" y="150" width="300" height="80" rx="10" fill="#f3f4f6" stroke="#d1d5db" stroke-width="2"/>
+<text x="600" y="184" font-family="Inter, Segoe UI, Arial, sans-serif" font-size="22" fill="#111827" text-anchor="middle" font-weight="700">Show a variant</text>
+<text x="600" y="214" font-family="Inter, Segoe UI, Arial, sans-serif" font-size="18" fill="#4b5563" text-anchor="middle" font-weight="400">A vs. B</text>
+<rect x="750" y="310" width="300" height="80" rx="10" fill="#f3f4f6" stroke="#d1d5db" stroke-width="2"/>
+<text x="900" y="344" font-family="Inter, Segoe UI, Arial, sans-serif" font-size="22" fill="#111827" text-anchor="middle" font-weight="700">Measure</text>
+<text x="900" y="374" font-family="Inter, Segoe UI, Arial, sans-serif" font-size="18" fill="#4b5563" text-anchor="middle" font-weight="400">time, errors, satisfaction</text>
+<rect x="450" y="470" width="300" height="80" rx="10" fill="#f3f4f6" stroke="#d1d5db" stroke-width="2"/>
+<text x="600" y="504" font-family="Inter, Segoe UI, Arial, sans-serif" font-size="22" fill="#111827" text-anchor="middle" font-weight="700">Learn</text>
+<text x="600" y="534" font-family="Inter, Segoe UI, Arial, sans-serif" font-size="18" fill="#4b5563" text-anchor="middle" font-weight="400">reward what improves metrics</text>
+<rect x="150" y="310" width="300" height="80" rx="10" fill="#f3f4f6" stroke="#d1d5db" stroke-width="2"/>
+<text x="300" y="344" font-family="Inter, Segoe UI, Arial, sans-serif" font-size="22" fill="#111827" text-anchor="middle" font-weight="700">Converge</text>
+<text x="300" y="374" font-family="Inter, Segoe UI, Arial, sans-serif" font-size="18" fill="#4b5563" text-anchor="middle" font-weight="400">gradually, per user</text>
+<path d="M 752 195 Q 900 200 900 306" fill="none" stroke="#ec362e" stroke-width="2.5" marker-end="url(#ahr)"/>
+<path d="M 900 394 Q 900 510 754 510" fill="none" stroke="#ec362e" stroke-width="2.5" marker-end="url(#ahr)"/>
+<path d="M 448 510 Q 300 510 300 396" fill="none" stroke="#ec362e" stroke-width="2.5" marker-end="url(#ahr)"/>
+<path d="M 300 306 Q 300 195 446 192" fill="none" stroke="#ec362e" stroke-width="2.5" marker-end="url(#ahr)"/>
+<text x="600" y="344" font-family="Inter, Segoe UI, Arial, sans-serif" font-size="20" fill="#111827" text-anchor="middle" font-weight="700">Guard rails:</text>
+<text x="600" y="374" font-family="Inter, Segoe UI, Arial, sans-serif" font-size="18" fill="#4b5563" text-anchor="middle" font-weight="400">tell the user, allow undo</text>
+</svg>

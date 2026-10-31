@@ -59,7 +59,13 @@
         <loc>https://big-matrix.com/project/nsu_ctrg_2021_2022_breast_cancer</loc>
     </url>
     <url>
+        <loc>https://big-matrix.com/project/dicomviewer</loc>
+    </url>
+    <url>
         <loc>https://big-matrix.com/project/ielts-tutors</loc>
+    </url>
+    <url>
+        <loc>https://big-matrix.com/project/linac-qa-guardian</loc>
     </url>
     <url>
         <loc>https://big-matrix.com/project/lung-ct-report-generation</loc>
@@ -89,16 +95,60 @@
         <lastmod>2026-07-31</lastmod>
     </url>
     <url>
+        <loc>https://big-matrix.com/blog/ai-designed-drugs-reach-the-clinic</loc>
+        <lastmod>2026-10-25</lastmod>
+    </url>
+    <url>
+        <loc>https://big-matrix.com/blog/sam-altman-trust-safety-openai-ipo</loc>
+        <lastmod>2026-10-23</lastmod>
+    </url>
+    <url>
+        <loc>https://big-matrix.com/blog/dario-amodei-we-must-pace-the-frontier</loc>
+        <lastmod>2026-10-21</lastmod>
+    </url>
+    <url>
+        <loc>https://big-matrix.com/blog/asynchronous-delegation-background-coding-agents</loc>
+        <lastmod>2026-10-11</lastmod>
+    </url>
+    <url>
+        <loc>https://big-matrix.com/blog/arc-agi-3-and-the-collapse-of-the-ai-benchmark</loc>
+        <lastmod>2026-10-07</lastmod>
+    </url>
+    <url>
         <loc>https://big-matrix.com/blog/claude-fable-5-1-release-and-the-export-control-episode</loc>
         <lastmod>2026-09-02</lastmod>
+    </url>
+    <url>
+        <loc>https://big-matrix.com/blog/claude-opus-5-5-fable-level-performance-at-a-lower-price</loc>
+        <lastmod>2026-09-22</lastmod>
+    </url>
+    <url>
+        <loc>https://big-matrix.com/blog/claude-sonnet-5-5-opus-class-coding-at-sonnet-prices</loc>
+        <lastmod>2026-09-28</lastmod>
+    </url>
+    <url>
+        <loc>https://big-matrix.com/blog/llms-outperform-physicians-clinical-reasoning</loc>
+        <lastmod>2026-10-09</lastmod>
     </url>
     <url>
         <loc>https://big-matrix.com/blog/the-frontier-model-landscape-september-2026</loc>
         <lastmod>2026-09-11</lastmod>
     </url>
     <url>
+        <loc>https://big-matrix.com/blog/google-releases-gemini-4-argon-1m-output-tokens-cyber-defense</loc>
+        <lastmod>2026-09-30</lastmod>
+    </url>
+    <url>
+        <loc>https://big-matrix.com/blog/google-medical-ai-stack-medgemma-medasr-txgemma-amie</loc>
+        <lastmod>2026-09-22</lastmod>
+    </url>
+    <url>
         <loc>https://big-matrix.com/blog/gpt-5-6-sol-terra-luna-which-tier-for-which-task</loc>
         <lastmod>2026-09-03</lastmod>
+    </url>
+    <url>
+        <loc>https://big-matrix.com/blog/openai-gpt-6-1-sol-near-astra-intelligence-at-a-fifth-of-the-price</loc>
+        <lastmod>2026-09-29</lastmod>
     </url>
     <url>
         <loc>https://big-matrix.com/blog/gpt-6-astra-release-what-the-numbers-say</loc>
@@ -109,36 +159,112 @@
         <lastmod>2026-09-15</lastmod>
     </url>
     <url>
-        <loc>https://big-matrix.com/blog/grok-bot-always-on-agents-with-their-own-computers</loc>
-        <lastmod>2026-08-31</lastmod>
+        <loc>https://big-matrix.com/blog/spacexai-releases-grok-4-7-for-long-running-coding-and-knowledge-work</loc>
+        <lastmod>2026-09-21</lastmod>
+    </url>
+    <url>
+        <loc>https://big-matrix.com/blog/spacexai-and-cursor-launch-grok-bot-always-on-ai-teammates</loc>
+        <lastmod>2026-08-11</lastmod>
     </url>
     <url>
         <loc>https://big-matrix.com/blog/healthcare-digital-twins-evolution</loc>
         <lastmod>2026-08-25</lastmod>
     </url>
     <url>
+        <loc>https://big-matrix.com/blog/geoffrey-hinton-maybe-a-year-ai-regulation-deadline</loc>
+        <lastmod>2026-10-27</lastmod>
+    </url>
+    <url>
+        <loc>https://big-matrix.com/blog/how-transformers-work-a-practical-walkthrough</loc>
+        <lastmod>2026-10-02</lastmod>
+    </url>
+    <url>
+        <loc>https://big-matrix.com/blog/how-unet-works-image-segmentation-explained</loc>
+        <lastmod>2026-10-13</lastmod>
+    </url>
+    <url>
+        <loc>https://big-matrix.com/blog/openai-hugging-face-agent-swarm-breach-lawsuit</loc>
+        <lastmod>2026-10-17</lastmod>
+    </url>
+    <url>
+        <loc>https://big-matrix.com/blog/the-new-economics-of-llm-inference-2026</loc>
+        <lastmod>2026-10-19</lastmod>
+    </url>
+    <url>
+        <loc>https://big-matrix.com/blog/intelligence-explosion-paper-automating-ai-research</loc>
+        <lastmod>2026-10-15</lastmod>
+    </url>
+    <url>
         <loc>https://big-matrix.com/blog/kimi-k3-largest-open-weights-model</loc>
         <lastmod>2026-09-01</lastmod>
+    </url>
+    <url>
+        <loc>https://big-matrix.com/blog/manus-launches-cue-personal-agents-with-email-phone-and-wallet</loc>
+        <lastmod>2026-09-28</lastmod>
     </url>
     <url>
         <loc>https://big-matrix.com/blog/mcp-the-new-standard-for-ai-tool-interoperability</loc>
         <lastmod>2026-08-21</lastmod>
     </url>
     <url>
+        <loc>https://big-matrix.com/blog/medical-ai-ecosystem-alphafold-tempus-pathai-hippocratic</loc>
+        <lastmod>2026-10-05</lastmod>
+    </url>
+    <url>
         <loc>https://big-matrix.com/blog/medical-foundation-models-clear-the-fda</loc>
         <lastmod>2026-09-18</lastmod>
+    </url>
+    <url>
+        <loc>https://big-matrix.com/blog/meta-launches-muse-a-personal-ai-agent-that-does-the-work</loc>
+        <lastmod>2026-09-08</lastmod>
+    </url>
+    <url>
+        <loc>https://big-matrix.com/blog/meta-releases-muse-glimmer-an-open-weight-agentic-model-for-your-device</loc>
+        <lastmod>2026-08-10</lastmod>
+    </url>
+    <url>
+        <loc>https://big-matrix.com/blog/microsoft-healthcare-ai-models-medimageinsight-biogpt</loc>
+        <lastmod>2026-09-29</lastmod>
+    </url>
+    <url>
+        <loc>https://big-matrix.com/blog/musk-spacexai-pole-position-reality-check</loc>
+        <lastmod>2026-10-29</lastmod>
+    </url>
+    <url>
+        <loc>https://big-matrix.com/blog/nadella-copilot-new-os-for-work-microsoft-strategy</loc>
+        <lastmod>2026-10-03</lastmod>
     </url>
     <url>
         <loc>https://big-matrix.com/blog/nvidia-acquires-hugging-face-what-it-means-for-open-weights</loc>
         <lastmod>2026-09-08</lastmod>
     </url>
     <url>
+        <loc>https://big-matrix.com/blog/openai-decisions-api-gpt-6-luna-picks-from-your-answers</loc>
+        <lastmod>2026-09-29</lastmod>
+    </url>
+    <url>
+        <loc>https://big-matrix.com/blog/openai-launches-dots-always-on-agents-powered-by-gpt-6-astra</loc>
+        <lastmod>2026-09-29</lastmod>
+    </url>
+    <url>
         <loc>https://big-matrix.com/blog/quantum-enhanced-machine-learning-breaking-the-compute-barrier</loc>
         <lastmod>2026-08-07</lastmod>
     </url>
     <url>
+        <loc>https://big-matrix.com/blog/self-evolving-agents-and-memory-that-compounds</loc>
+        <lastmod>2026-10-31</lastmod>
+    </url>
+    <url>
         <loc>https://big-matrix.com/blog/the-rise-of-specialized-small-language-models-slms</loc>
         <lastmod>2026-07-24</lastmod>
+    </url>
+    <url>
+        <loc>https://big-matrix.com/blog/swe-bench-is-solved-what-comes-next</loc>
+        <lastmod>2026-09-25</lastmod>
+    </url>
+    <url>
+        <loc>https://big-matrix.com/blog/typesafe-ai-jev-a-system-one-model-that-returns-decisions-not-text</loc>
+        <lastmod>2026-09-15</lastmod>
     </url>
     <url>
         <loc>https://big-matrix.com/blog/weathernext-3-learns-from-observations-not-forecasts</loc>

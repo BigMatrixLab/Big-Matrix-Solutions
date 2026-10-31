@@ -1,0 +1,43 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 1200 698" width="1200" height="698" font-family="Inter, Segoe UI, Arial, sans-serif">
+<rect x="0.5" y="0.5" width="1199" height="697" fill="#ffffff" rx="16" stroke="#e5e7eb"/>
+<title>How an OpenAI dot works</title>
+<desc>Diagram: you talk to a dot in ChatGPT, Slack or Teams; it runs on GPT-6 Astra with its own cloud computer and browser and connects to more than 4,000 apps. Auto-review checks actions against your instructions and Custom Rules, and password changes, money transfers, permanent deletion, unrecognised software installs and card purchases always require confirmation.</desc>
+<defs><marker id="arr" viewBox="0 0 10 10" refX="9" refY="5" markerWidth="8" markerHeight="8" orient="auto-start-reverse"><path d="M0,0 L10,5 L0,10 z" fill="#4b5563"/></marker></defs>
+<text x="40" y="62" font-size="30" fill="#111827" font-weight="700">Anatomy of a dot</text>
+<text x="40" y="98" font-size="20" fill="#4b5563">OpenAI's always-on ChatGPT agent, as described at launch on September 29, 2026</text>
+<rect x="40" y="150" width="300" height="230" fill="#f3f4f6" rx="14" stroke="#d1d5db" stroke-width="2"/>
+<text x="64" y="190" font-size="22" fill="#111827" font-weight="700">Where you talk to it</text>
+<text x="64" y="226" font-size="20" fill="#4b5563">ChatGPT desktop, web,</text>
+<text x="64" y="256" font-size="20" fill="#4b5563">mobile</text>
+<text x="64" y="286" font-size="20" fill="#4b5563">Slack and Teams</text>
+<text x="64" y="330" font-size="20" fill="#111827">Memory from ChatGPT</text>
+<text x="64" y="358" font-size="20" fill="#111827">and connected apps</text>
+<line x1="342" y1="265" x2="436" y2="265" stroke="#4b5563" stroke-width="2" marker-end="url(#arr)"/>
+<rect x="440" y="150" width="320" height="230" fill="#ffffff" rx="16" stroke="#ec362e" stroke-width="3"/>
+<text x="600" y="215" font-size="34" fill="#ec362e" font-weight="700" text-anchor="middle">dot</text>
+<text x="600" y="255" font-size="20" fill="#111827" text-anchor="middle">runs on GPT-6 Astra</text>
+<text x="600" y="290" font-size="20" fill="#4b5563" text-anchor="middle">works toward your goal</text>
+<text x="600" y="318" font-size="20" fill="#4b5563" text-anchor="middle">24/7 in the background</text>
+<line x1="762" y1="265" x2="856" y2="265" stroke="#4b5563" stroke-width="2" marker-end="url(#arr)"/>
+<rect x="860" y="150" width="300" height="230" fill="#f3f4f6" rx="14" stroke="#d1d5db" stroke-width="2"/>
+<text x="884" y="190" font-size="22" fill="#111827" font-weight="700">What it works with</text>
+<text x="884" y="226" font-size="20" fill="#111827">Its own cloud computer</text>
+<text x="884" y="256" font-size="20" fill="#4b5563">and browser</text>
+<text x="884" y="286" font-size="20" fill="#111827">4,000+ apps via plugins</text>
+<text x="884" y="316" font-size="20" fill="#111827">Read-only tools for</text>
+<text x="884" y="346" font-size="20" fill="#4b5563">background research</text>
+<rect x="40" y="410" width="1120" height="80" fill="#f3f4f6" rx="14"/>
+<text x="64" y="445" font-size="20" fill="#111827">Auto-review checks actions against your instructions, your Custom Rules</text>
+<text x="64" y="473" font-size="20" fill="#111827">and OpenAI's safety requirements. You can pause or stop work at any time.</text>
+<text x="40" y="540" font-size="22" fill="#111827" font-weight="700">Always requires your confirmation</text>
+<rect x="40" y="562" width="230" height="42" fill="#ffffff" rx="21" stroke="#ec362e" stroke-width="2"/>
+<text x="155.0" y="590" font-size="19" fill="#111827" text-anchor="middle">Changing a password</text>
+<rect x="286" y="562" width="220" height="42" fill="#ffffff" rx="21" stroke="#ec362e" stroke-width="2"/>
+<text x="396.0" y="590" font-size="19" fill="#111827" text-anchor="middle">Transferring money</text>
+<rect x="522" y="562" width="290" height="42" fill="#ffffff" rx="21" stroke="#ec362e" stroke-width="2"/>
+<text x="667.0" y="590" font-size="19" fill="#111827" text-anchor="middle">Permanently deleting data</text>
+<rect x="40" y="618" width="360" height="42" fill="#ffffff" rx="21" stroke="#ec362e" stroke-width="2"/>
+<text x="220.0" y="646" font-size="19" fill="#111827" text-anchor="middle">Installing unrecognised software</text>
+<rect x="416" y="618" width="250" height="42" fill="#ffffff" rx="21" stroke="#ec362e" stroke-width="2"/>
+<text x="541.0" y="646" font-size="19" fill="#111827" text-anchor="middle">Making card purchases</text>
+</svg>

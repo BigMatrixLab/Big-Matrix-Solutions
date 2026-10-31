@@ -1,0 +1,43 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 1200 590" width="1200" height="590" font-family="Inter, Segoe UI, Arial, sans-serif">
+<rect x="0.5" y="0.5" width="1199" height="589" fill="#ffffff" rx="16" stroke="#e5e7eb"/>
+<title>Grok Bot architecture</title>
+<desc>Diagram: you assign tasks from desktop or iOS to Bots that each have their own screen on a shared, persistent cloud computer. Bots message each other, hand off tasks, and reach your tools through connectors and MCP where they exist and computer use elsewhere, returning to you for approvals.</desc>
+<defs><marker id="arr" viewBox="0 0 10 10" refX="9" refY="5" markerWidth="8" markerHeight="8" orient="auto-start-reverse"><path d="M0,0 L10,5 L0,10 z" fill="#4b5563"/></marker></defs>
+<text x="40" y="62" font-size="30" fill="#111827" font-weight="700">How Grok Bot works</text>
+<text x="40" y="98" font-size="20" fill="#4b5563">Each Bot gets its own screen on a persistent cloud computer</text>
+<rect x="40" y="170" width="230" height="250" fill="#f3f4f6" rx="14" stroke="#d1d5db" stroke-width="2"/>
+<text x="155" y="214" font-size="24" fill="#111827" font-weight="700" text-anchor="middle">You</text>
+<text x="155" y="250" font-size="20" fill="#4b5563" text-anchor="middle">desktop or iOS</text>
+<text x="155" y="310" font-size="20" fill="#111827" text-anchor="middle">assign a task,</text>
+<text x="155" y="338" font-size="20" fill="#111827" text-anchor="middle">approve when</text>
+<text x="155" y="366" font-size="20" fill="#111827" text-anchor="middle">asked</text>
+<line x1="272" y1="270" x2="326" y2="270" stroke="#4b5563" stroke-width="2" marker-end="url(#arr)"/>
+<line x1="326" y1="320" x2="272" y2="320" stroke="#4b5563" stroke-width="2" marker-end="url(#arr)"/>
+<rect x="330" y="140" width="500" height="330" fill="#ffffff" rx="16" stroke="#ec362e" stroke-width="3"/>
+<text x="580" y="180" font-size="22" fill="#111827" font-weight="700" text-anchor="middle">Shared persistent cloud computer</text>
+<text x="580" y="210" font-size="20" fill="#4b5563" text-anchor="middle">browser · filesystem · terminal</text>
+<rect x="356" y="238" width="140" height="100" fill="#f3f4f6" rx="10" stroke="#d1d5db" stroke-width="2"/>
+<text x="426" y="280" font-size="20" fill="#111827" font-weight="700" text-anchor="middle">Bot A</text>
+<text x="426" y="312" font-size="18" fill="#4b5563" text-anchor="middle">own screen</text>
+<rect x="510" y="238" width="140" height="100" fill="#f3f4f6" rx="10" stroke="#d1d5db" stroke-width="2"/>
+<text x="580" y="280" font-size="20" fill="#111827" font-weight="700" text-anchor="middle">Bot B</text>
+<text x="580" y="312" font-size="18" fill="#4b5563" text-anchor="middle">own screen</text>
+<rect x="664" y="238" width="140" height="100" fill="#f3f4f6" rx="10" stroke="#d1d5db" stroke-width="2"/>
+<text x="734" y="280" font-size="20" fill="#111827" font-weight="700" text-anchor="middle">Bot C</text>
+<text x="734" y="312" font-size="18" fill="#4b5563" text-anchor="middle">own screen</text>
+<text x="580" y="376" font-size="20" fill="#111827" text-anchor="middle">keeps files and logins between sessions</text>
+<text x="580" y="406" font-size="20" fill="#111827" text-anchor="middle">Bots message each other and hand off tasks</text>
+<text x="580" y="436" font-size="20" fill="#4b5563" text-anchor="middle">several can run in parallel</text>
+<line x1="832" y1="250" x2="896" y2="222" stroke="#4b5563" stroke-width="2" marker-end="url(#arr)"/>
+<line x1="832" y1="360" x2="896" y2="388" stroke="#4b5563" stroke-width="2" marker-end="url(#arr)"/>
+<rect x="900" y="160" width="260" height="120" fill="#f3f4f6" rx="14" stroke="#d1d5db" stroke-width="2"/>
+<text x="1030" y="204" font-size="22" fill="#111827" font-weight="700" text-anchor="middle">Connectors</text>
+<text x="1030" y="236" font-size="20" fill="#4b5563" text-anchor="middle">and MCP</text>
+<text x="1030" y="262" font-size="20" fill="#4b5563" text-anchor="middle">where they exist</text>
+<rect x="900" y="330" width="260" height="120" fill="#f3f4f6" rx="14" stroke="#d1d5db" stroke-width="2"/>
+<text x="1030" y="374" font-size="22" fill="#111827" font-weight="700" text-anchor="middle">Computer use</text>
+<text x="1030" y="406" font-size="20" fill="#4b5563" text-anchor="middle">everywhere else,</text>
+<text x="1030" y="432" font-size="20" fill="#4b5563" text-anchor="middle">in the real tool</text>
+<line x1="40" y1="510" x2="1160" y2="510" stroke="#f3f4f6" stroke-width="2"/>
+<text x="40" y="550" font-size="20" fill="#111827">Bots “only come back when something needs your approval”. Early beta from August 11, 2026.</text>
+</svg>

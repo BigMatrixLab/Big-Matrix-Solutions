@@ -1,0 +1,70 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 1200 600" width="1200" height="600" font-family="Inter, Segoe UI, Arial, sans-serif" role="img">
+<rect x="0.5" y="0.5" width="1199" height="599" rx="16" fill="#ffffff" stroke="#e5e7eb"/>
+<title>One I-JEPA training step</title>
+<desc>An image is split into patches. A large context block is encoded by the context encoder. A predictor, told the positions of the masked target blocks, predicts their representations. A target encoder, an exponential moving average of the context encoder with no gradient flow, encodes the targets. The loss compares predicted and actual representations; pixels never enter the loss.</desc>
+<defs><marker id="a" viewBox="0 0 10 10" refX="9" refY="5" markerWidth="8" markerHeight="8" orient="auto-start-reverse"><path d="M0,0 L10,5 L0,10 z" fill="#111827"/></marker><marker id="ar" viewBox="0 0 10 10" refX="9" refY="5" markerWidth="8" markerHeight="8" orient="auto-start-reverse"><path d="M0,0 L10,5 L0,10 z" fill="#ec362e"/></marker><marker id="ab" viewBox="0 0 10 10" refX="9" refY="5" markerWidth="8" markerHeight="8" orient="auto-start-reverse"><path d="M0,0 L10,5 L0,10 z" fill="#2563eb"/></marker><marker id="ag" viewBox="0 0 10 10" refX="9" refY="5" markerWidth="8" markerHeight="8" orient="auto-start-reverse"><path d="M0,0 L10,5 L0,10 z" fill="#4b5563"/></marker></defs>
+<text x="600" y="48" font-size="26" fill="#111827" text-anchor="middle" font-weight="bold">I-JEPA: predict the target’s representation, not its pixels</text>
+<rect x="40" y="190" width="42" height="42" fill="#2563eb" fill-opacity="0.22" stroke="#ffffff" stroke-width="2"/>
+<rect x="82" y="190" width="42" height="42" fill="#2563eb" fill-opacity="0.22" stroke="#ffffff" stroke-width="2"/>
+<rect x="124" y="190" width="42" height="42" fill="#2563eb" fill-opacity="0.22" stroke="#ffffff" stroke-width="2"/>
+<rect x="166" y="190" width="42" height="42" fill="#2563eb" fill-opacity="0.22" stroke="#ffffff" stroke-width="2"/>
+<rect x="208" y="190" width="42" height="42" fill="#ec362e" fill-opacity="0.35" stroke="#ffffff" stroke-width="2"/>
+<rect x="250" y="190" width="42" height="42" fill="#ec362e" fill-opacity="0.35" stroke="#ffffff" stroke-width="2"/>
+<rect x="40" y="232" width="42" height="42" fill="#2563eb" fill-opacity="0.22" stroke="#ffffff" stroke-width="2"/>
+<rect x="82" y="232" width="42" height="42" fill="#2563eb" fill-opacity="0.22" stroke="#ffffff" stroke-width="2"/>
+<rect x="124" y="232" width="42" height="42" fill="#2563eb" fill-opacity="0.22" stroke="#ffffff" stroke-width="2"/>
+<rect x="166" y="232" width="42" height="42" fill="#2563eb" fill-opacity="0.22" stroke="#ffffff" stroke-width="2"/>
+<rect x="208" y="232" width="42" height="42" fill="#ec362e" fill-opacity="0.35" stroke="#ffffff" stroke-width="2"/>
+<rect x="250" y="232" width="42" height="42" fill="#ec362e" fill-opacity="0.35" stroke="#ffffff" stroke-width="2"/>
+<rect x="40" y="274" width="42" height="42" fill="#2563eb" fill-opacity="0.22" stroke="#ffffff" stroke-width="2"/>
+<rect x="82" y="274" width="42" height="42" fill="#2563eb" fill-opacity="0.22" stroke="#ffffff" stroke-width="2"/>
+<rect x="124" y="274" width="42" height="42" fill="#2563eb" fill-opacity="0.22" stroke="#ffffff" stroke-width="2"/>
+<rect x="166" y="274" width="42" height="42" fill="#2563eb" fill-opacity="0.22" stroke="#ffffff" stroke-width="2"/>
+<rect x="208" y="274" width="42" height="42" fill="#f3f4f6" fill-opacity="1" stroke="#ffffff" stroke-width="2"/>
+<rect x="250" y="274" width="42" height="42" fill="#f3f4f6" fill-opacity="1" stroke="#ffffff" stroke-width="2"/>
+<rect x="40" y="316" width="42" height="42" fill="#2563eb" fill-opacity="0.22" stroke="#ffffff" stroke-width="2"/>
+<rect x="82" y="316" width="42" height="42" fill="#2563eb" fill-opacity="0.22" stroke="#ffffff" stroke-width="2"/>
+<rect x="124" y="316" width="42" height="42" fill="#2563eb" fill-opacity="0.22" stroke="#ffffff" stroke-width="2"/>
+<rect x="166" y="316" width="42" height="42" fill="#2563eb" fill-opacity="0.22" stroke="#ffffff" stroke-width="2"/>
+<rect x="208" y="316" width="42" height="42" fill="#ec362e" fill-opacity="0.35" stroke="#ffffff" stroke-width="2"/>
+<rect x="250" y="316" width="42" height="42" fill="#ec362e" fill-opacity="0.35" stroke="#ffffff" stroke-width="2"/>
+<rect x="40" y="358" width="42" height="42" fill="#2563eb" fill-opacity="0.22" stroke="#ffffff" stroke-width="2"/>
+<rect x="82" y="358" width="42" height="42" fill="#2563eb" fill-opacity="0.22" stroke="#ffffff" stroke-width="2"/>
+<rect x="124" y="358" width="42" height="42" fill="#2563eb" fill-opacity="0.22" stroke="#ffffff" stroke-width="2"/>
+<rect x="166" y="358" width="42" height="42" fill="#2563eb" fill-opacity="0.22" stroke="#ffffff" stroke-width="2"/>
+<rect x="208" y="358" width="42" height="42" fill="#ec362e" fill-opacity="0.35" stroke="#ffffff" stroke-width="2"/>
+<rect x="250" y="358" width="42" height="42" fill="#ec362e" fill-opacity="0.35" stroke="#ffffff" stroke-width="2"/>
+<rect x="40" y="400" width="42" height="42" fill="#2563eb" fill-opacity="0.22" stroke="#ffffff" stroke-width="2"/>
+<rect x="82" y="400" width="42" height="42" fill="#2563eb" fill-opacity="0.22" stroke="#ffffff" stroke-width="2"/>
+<rect x="124" y="400" width="42" height="42" fill="#2563eb" fill-opacity="0.22" stroke="#ffffff" stroke-width="2"/>
+<rect x="166" y="400" width="42" height="42" fill="#2563eb" fill-opacity="0.22" stroke="#ffffff" stroke-width="2"/>
+<rect x="208" y="400" width="42" height="42" fill="#f3f4f6" fill-opacity="1" stroke="#ffffff" stroke-width="2"/>
+<rect x="250" y="400" width="42" height="42" fill="#f3f4f6" fill-opacity="1" stroke="#ffffff" stroke-width="2"/>
+<text x="124" y="470" font-size="18" fill="#2563eb" text-anchor="middle" font-weight="bold">context</text>
+<text x="250" y="470" font-size="18" fill="#ec362e" text-anchor="middle" font-weight="bold">targets</text>
+<text x="166" y="498" font-size="18" fill="#4b5563" text-anchor="middle" font-weight="normal">image patches</text>
+<rect x="380" y="110" width="230" height="90" rx="10" fill="#ffffff" stroke="#2563eb" stroke-width="2"/>
+<text x="495.0" y="148.3" font-size="18" fill="#111827" text-anchor="middle" font-weight="bold">Context encoder</text>
+<text x="495.0" y="174.3" font-size="18" fill="#4b5563" text-anchor="middle" font-weight="normal">ViT, trained</text>
+<rect x="380" y="400" width="230" height="90" rx="10" fill="#ffffff" stroke="#d1d5db" stroke-width="2"/>
+<text x="495.0" y="438.3" font-size="18" fill="#111827" text-anchor="middle" font-weight="bold">Target encoder</text>
+<text x="495.0" y="464.3" font-size="18" fill="#4b5563" text-anchor="middle" font-weight="normal">EMA copy, no grad</text>
+<rect x="690" y="110" width="210" height="90" rx="10" fill="#ffffff" stroke="#2563eb" stroke-width="2"/>
+<text x="795.0" y="148.3" font-size="18" fill="#111827" text-anchor="middle" font-weight="bold">Predictor</text>
+<text x="795.0" y="174.3" font-size="18" fill="#4b5563" text-anchor="middle" font-weight="normal">+ target positions</text>
+<rect x="960" y="255" width="200" height="100" rx="10" fill="#f3f4f6" stroke="#ec362e" stroke-width="2"/>
+<text x="1060.0" y="298.3" font-size="18" fill="#111827" text-anchor="middle" font-weight="bold">Loss</text>
+<text x="1060.0" y="324.3" font-size="18" fill="#4b5563" text-anchor="middle" font-weight="normal">in latent space</text>
+<path d="M124,190 L124,155 L378,155" stroke="#2563eb" stroke-width="2" fill="none" marker-end="url(#ab)"/>
+<path d="M292,355 L330,355 L330,445 L378,445" stroke="#ec362e" stroke-width="2" fill="none" marker-end="url(#ar)"/>
+<line x1="610" y1="155" x2="688" y2="155" stroke="#2563eb" stroke-width="2" marker-end="url(#ab)"/>
+<text x="649" y="143" font-size="18" fill="#2563eb" text-anchor="middle" font-weight="bold">s_x</text>
+<path d="M900,155 L1060,155 L1060,253" stroke="#2563eb" stroke-width="2" fill="none" marker-end="url(#ab)"/>
+<text x="980" y="143" font-size="18" fill="#2563eb" text-anchor="middle" font-weight="bold">predicted ŝ_y</text>
+<path d="M610,445 L1060,445 L1060,357" stroke="#ec362e" stroke-width="2" fill="none" marker-end="url(#ar)"/>
+<text x="835" y="433" font-size="18" fill="#ec362e" text-anchor="middle" font-weight="bold">s_y (stop-gradient)</text>
+<path d="M495,200 L495,398" stroke="#4b5563" stroke-width="2" fill="none" stroke-dasharray="6 6" marker-end="url(#ag)"/>
+<text x="510" y="300" font-size="18" fill="#4b5563" text-anchor="start" font-weight="normal">EMA weight update</text>
+<text x="510" y="326" font-size="18" fill="#4b5563" text-anchor="start" font-weight="normal">(not backprop)</text>
+<text x="600" y="550" font-size="18" fill="#4b5563" text-anchor="middle" font-weight="normal">Large target blocks force semantic inference; the EMA target plus stop-gradient keeps the encoders from collapsing to a constant.</text>
+</svg>

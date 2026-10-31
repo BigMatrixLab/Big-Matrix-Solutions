@@ -1,0 +1,57 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 1200 610" width="1200" height="610" role="img">
+<rect x="1" y="1" width="1198" height="608" fill="#ffffff" rx="16" stroke="#e5e7eb" stroke-width="2"/>
+<title>Where AI helps in drug development</title>
+<desc>Target identification: genuinely transformed. Molecule design: substantially accelerated. Preclinical validation: modestly helped. Clinical trials: barely touched, yet they are the majority of time and cost.</desc>
+<defs><marker id="ah" viewBox="0 0 10 10" refX="9" refY="5" markerWidth="8" markerHeight="8" orient="auto-start-reverse"><path d="M0,0 L10,5 L0,10 z" fill="#4b5563"/></marker></defs>
+<g font-family="Inter, Segoe UI, Arial, sans-serif">
+<text x="60" y="70" font-size="30" fill="#111827" text-anchor="start" font-weight="700">Where AI changes drug development, phase by phase</text>
+<text x="60" y="106" font-size="20" fill="#4b5563" text-anchor="start">Qualitative assessment from the article; block counts are illustrative, not measured</text>
+<rect x="60" y="150" width="255" height="250" rx="12" fill="#f3f4f6" stroke="#d1d5db" stroke-width="2"/>
+<text x="84" y="196" font-size="22" fill="#ec362e" text-anchor="start" font-weight="700">1</text>
+<text x="84" y="236" font-size="24" fill="#111827" text-anchor="start" font-weight="700">Target</text>
+<text x="84" y="268" font-size="24" fill="#111827" text-anchor="start" font-weight="700">identification</text>
+<text x="84" y="318" font-size="19" fill="#4b5563" text-anchor="start">Genuinely transformed</text>
+<rect x="84" y="346" width="44" height="22" rx="4" fill="#ec362e"/>
+<rect x="136" y="346" width="44" height="22" rx="4" fill="#ec362e"/>
+<rect x="188" y="346" width="44" height="22" rx="4" fill="#ec362e"/>
+<rect x="240" y="346" width="44" height="22" rx="4" fill="#ec362e"/>
+<rect x="335" y="150" width="255" height="250" rx="12" fill="#f3f4f6" stroke="#d1d5db" stroke-width="2"/>
+<text x="359" y="196" font-size="22" fill="#ec362e" text-anchor="start" font-weight="700">2</text>
+<text x="359" y="236" font-size="24" fill="#111827" text-anchor="start" font-weight="700">Molecule</text>
+<text x="359" y="268" font-size="24" fill="#111827" text-anchor="start" font-weight="700">design</text>
+<text x="359" y="318" font-size="19" fill="#4b5563" text-anchor="start">Substantially accelerated</text>
+<rect x="359" y="346" width="44" height="22" rx="4" fill="#ec362e"/>
+<rect x="411" y="346" width="44" height="22" rx="4" fill="#ec362e"/>
+<rect x="463" y="346" width="44" height="22" rx="4" fill="#ec362e"/>
+<rect x="515" y="346" width="44" height="22" rx="4" fill="#ffffff" stroke="#d1d5db" stroke-width="2"/>
+<rect x="610" y="150" width="255" height="250" rx="12" fill="#f3f4f6" stroke="#d1d5db" stroke-width="2"/>
+<text x="634" y="196" font-size="22" fill="#ec362e" text-anchor="start" font-weight="700">3</text>
+<text x="634" y="236" font-size="24" fill="#111827" text-anchor="start" font-weight="700">Preclinical</text>
+<text x="634" y="268" font-size="24" fill="#111827" text-anchor="start" font-weight="700">validation</text>
+<text x="634" y="318" font-size="19" fill="#4b5563" text-anchor="start">Modestly helped</text>
+<rect x="634" y="346" width="44" height="22" rx="4" fill="#ec362e"/>
+<rect x="686" y="346" width="44" height="22" rx="4" fill="#ec362e"/>
+<rect x="738" y="346" width="44" height="22" rx="4" fill="#ffffff" stroke="#d1d5db" stroke-width="2"/>
+<rect x="790" y="346" width="44" height="22" rx="4" fill="#ffffff" stroke="#d1d5db" stroke-width="2"/>
+<rect x="885" y="150" width="255" height="250" rx="12" fill="#f3f4f6" stroke="#d1d5db" stroke-width="2"/>
+<text x="909" y="196" font-size="22" fill="#ec362e" text-anchor="start" font-weight="700">4</text>
+<text x="909" y="236" font-size="24" fill="#111827" text-anchor="start" font-weight="700">Clinical</text>
+<text x="909" y="268" font-size="24" fill="#111827" text-anchor="start" font-weight="700">trials</text>
+<text x="909" y="318" font-size="19" fill="#4b5563" text-anchor="start">Barely touched</text>
+<rect x="909" y="346" width="44" height="22" rx="4" fill="#ec362e"/>
+<rect x="961" y="346" width="44" height="22" rx="4" fill="#ffffff" stroke="#d1d5db" stroke-width="2"/>
+<rect x="1013" y="346" width="44" height="22" rx="4" fill="#ffffff" stroke="#d1d5db" stroke-width="2"/>
+<rect x="1065" y="346" width="44" height="22" rx="4" fill="#ffffff" stroke="#d1d5db" stroke-width="2"/>
+<line x1="70" y1="440" x2="860" y2="440" stroke="#ec362e" stroke-width="3"/>
+<line x1="70" y1="430" x2="70" y2="450" stroke="#ec362e" stroke-width="3"/>
+<line x1="860" y1="430" x2="860" y2="450" stroke="#ec362e" stroke-width="3"/>
+<text x="70" y="480" font-size="20" fill="#111827" text-anchor="start" font-weight="700">AI compresses discovery and preclinical work:</text>
+<text x="70" y="508" font-size="20" fill="#4b5563" text-anchor="start">months instead of years to candidate nomination</text>
+<line x1="885" y1="440" x2="1130" y2="440" stroke="#4b5563" stroke-width="3"/>
+<line x1="885" y1="430" x2="885" y2="450" stroke="#4b5563" stroke-width="3"/>
+<line x1="1130" y1="430" x2="1130" y2="450" stroke="#4b5563" stroke-width="3"/>
+<text x="885" y="480" font-size="20" fill="#111827" text-anchor="start" font-weight="700">Majority of time and cost,</text>
+<text x="885" y="508" font-size="20" fill="#4b5563" text-anchor="start">gated by biology and people</text>
+<text x="60" y="570" font-size="20" fill="#111827" text-anchor="start">No AI-designed drug had received FDA approval as of mid-2026.</text>
+</g>
+</svg>

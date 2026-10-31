@@ -3,10 +3,10 @@ id: "25"
 slug: "prompt-injection-is-the-agentic-security-story"
 title: "A GitHub Issue Is Now an Attack Vector: Prompt Injection Meets the Coding Agent"
 comments: "0"
-image: "https://images.unsplash.com/photo-1614064641938-3bbee52942c7?auto=format&fit=crop&q=80&w=800"
+image: "/assets/images/blog/prompt-injection-agents.webp"
 category: "Cyber Security"
 desc: "CVSS 9.8, a backdoored package with 47,000 downloads, and 28 of 53 tracked agentic projects being coding tools. Why injection became code execution."
-date: "Dec 18, 2026"
+date: "Nov 10, 2026"
 tags: ["Security", "Prompt Injection", "Agentic AI", "Supply Chain"]
 ---
 
@@ -84,6 +84,10 @@ This is the highest-value control by a wide margin, and it is skipped constantly
 
 An agent that reads untrusted content and an agent that performs privileged writes should not be the same agent with the same context. One process summarises the issue into a structured, constrained form; a second process acts on that structure with no access to the original text. The injection has nowhere to travel.
 
+![Diagram: untrusted text goes to a reader agent with no write tools or secrets, which produces a validated structured form for an actor agent with privileged writes; a dashed red path from the untrusted text straight to the actor is crossed out](/assets/images/blog/diagrams/prompt-injection-agents-2.svg)
+
+*Read plane and write plane: the actor only ever sees the structured form. Diagram: Big Matrix Solutions, based on [Debenedetti et al., CaMeL (arXiv:2503.18813)](https://arxiv.org/abs/2503.18813).*
+
 ### 3. Human approval on the irreversible steps
 
 Not on everything, because approval fatigue defeats itself. On the specific operations that are hard to undo: pushing to a protected branch, publishing a package, touching production configuration, exfiltrating anything over the network. Approval gates work when they are rare enough to still be read.
@@ -118,6 +122,10 @@ The last point deserves emphasis, because it is what makes this a supply chain p
 
 Note also that no step in this chain requires a novel vulnerability. Every component is behaving as designed. The failure is that a system which follows instructions in text was given both privileged tools and untrusted input, and those two facts are individually reasonable.
 
+![Five-step attack chain from a GitHub issue to a signed release, with the control that breaks each step underneath: none for step one, then split read and write planes, trajectory logging, a least-privilege token, and an egress allowlist with approval before publishing](/assets/images/blog/diagrams/prompt-injection-agents-1.svg)
+
+*The chain above, with the control from this article that breaks each link. Diagram: Big Matrix Solutions, based on the attack chain in this article.*
+
 ## The framework problem
 
 One more layer, and it is the one most teams have not looked at.
@@ -137,3 +145,7 @@ That is not a reason to stop using agents. It is a reason to stop expecting the 
 The teams running agents safely are the ones that assumed the agent would eventually be hijacked and designed so that it did not matter much: narrow credentials, isolated execution, controlled egress, approval on irreversible actions, full trajectory logging. Those measures cost real engineering effort and they are boring. They are also the ones that hold when the injection lands.
 
 The teams that got hurt this year mostly had good prompts and bad permissions.
+
+**Media credits**:
+- Hero image: Figure 2 (the CaMeL system) from Debenedetti et al., "Defeating Prompt Injections by Design", [arXiv:2503.18813](https://arxiv.org/abs/2503.18813), licensed [CC BY 4.0](https://creativecommons.org/licenses/by/4.0/). Placed on a white 16:9 canvas; figure unaltered.
+- In-body diagrams: Big Matrix Solutions.

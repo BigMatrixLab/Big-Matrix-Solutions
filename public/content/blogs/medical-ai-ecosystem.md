@@ -3,10 +3,10 @@ id: "48"
 slug: "medical-ai-ecosystem-alphafold-tempus-pathai-hippocratic"
 title: "Six Places Medical AI Is Actually Working, From Protein Folds to Phone Calls"
 comments: "0"
-image: "/assets/images/blog/alphafold-3.jpg"
+image: "/assets/images/blog/alphafold-3.webp"
 category: "Medical AI"
 desc: "AlphaFold 3, the open medical model ecosystem, Mayo's 150 models, $9-an-hour care agents, 500 petabytes of oncology data, and FDA-cleared pathology."
-date: "Oct 06, 2026"
+date: "Oct 05, 2026"
 tags: ["Medical AI", "AlphaFold", "Precision Medicine", "Digital Pathology"]
 ---
 
@@ -25,6 +25,10 @@ The accuracy claims held up under scrutiny, and the comparisons that matter are 
 - **Far greater accuracy on protein–ligand interactions** than state-of-the-art docking tools. Full-atom docking accuracy reached **76.4%**, roughly **1.8x** RoseTTAFold All-Atom's 42%.
 - **Much higher accuracy on protein–nucleic acid interactions** than nucleic-acid-specific predictors.
 - **Substantially better antibody–antigen prediction** than AlphaFold-Multimer v2.
+
+![Figure 1 of the AlphaFold 3 paper: example predicted structures, bar charts of AF3 success rates against AutoDock Vina, RoseTTAFold All-Atom, RoseTTAFold2NA and AlphaFold-Multimer, and the AF3 architecture with Pairformer and diffusion modules](/assets/images/blog/medical-ai-ecosystem-alphafold3-fig1.webp)
+
+*AlphaFold 3 accuracy across ligands, nucleic acids, covalent modifications and proteins, with its diffusion-based architecture (panel d). Source: [Abramson et al., Nature, 2024](https://www.nature.com/articles/s41586-024-07487-w), CC BY 4.0.*
 
 Why this matters more than the fold problem: drugs work by binding things. A tool that predicts protein structure alone tells you the shape of the lock; one that predicts protein–ligand complexes tells you whether your key fits. That is the actual question in structure-based drug design, and beating dedicated docking software by 1.8x is a large jump in a mature field.
 
@@ -95,6 +99,10 @@ The finding that matters clinically is the JCO one: not that AI is clever, but t
 
 Read the scanner list again, because it is the whole lesson. Clearance is not for "AI pathology". It is for a platform **with named scanners**. Change the scanner and you are outside the cleared configuration. Digital pathology's domain-shift problem is severe enough that regulators treat the scanner as part of the device, and every scanner added is regulatory work.
 
+![Diagram: AISight Dx paired with the Hamamatsu NanoZoomer S360MD or Leica Aperio GT 450 DX is inside the cleared configuration; an unlisted scanner is outside the clearance](/assets/images/blog/diagrams/medical-ai-ecosystem-1.svg)
+
+*Primary-diagnosis clearance covers the platform with named scanners. Diagram: Big Matrix Solutions, based on [PathAI](https://www.pathai.com/resources/pathai-receives-fda-clearance-for-aisight-dx-platform-for-primary-diagnosis).*
+
 **Labcorp** has expanded its collaboration to deploy AISight Dx across its national network of anatomic pathology labs and hospital collaborations. National lab deployment is the real validation. It means the workflow, the storage, and the throughput all hold at volume, which is where most pathology AI has previously stalled.
 
 ## What the set tells you
@@ -112,3 +120,7 @@ Line these six up and a pattern emerges that contradicts most of the discourse.
 **The infrastructure is the hard part.** Storage, scanner interoperability, latency, evidence thresholds, regulatory configuration. None of it is a modelling problem, and all of it determines whether the models reach a patient.
 
 If you are looking for where medical AI goes next, the answer is probably not a better model. It is whichever of these six figures out deployment first.
+
+**Media credits**:
+- In-body figure: Fig. 1 from [Abramson et al., Accurate structure prediction of biomolecular interactions with AlphaFold 3, Nature 630, 493-500 (2024)](https://www.nature.com/articles/s41586-024-07487-w). CC BY 4.0.
+- In-body diagram: AISight Dx cleared configuration. Big Matrix Solutions, based on [PathAI](https://www.pathai.com/resources/pathai-receives-fda-clearance-for-aisight-dx-platform-for-primary-diagnosis).

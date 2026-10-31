@@ -3,7 +3,7 @@ id: "46"
 slug: "google-medical-ai-stack-medgemma-medasr-txgemma-amie"
 title: "Google Built Four Medical AI Models. Three Are Downloadable and One Is Not."
 comments: "0"
-image: "/assets/images/blog/medgemma-1-5.png"
+image: "/assets/images/blog/medgemma-1-5.webp"
 category: "Medical AI"
 desc: "MedGemma 1.5 for imaging, MedASR for dictation, TxGemma for drug discovery, AMIE for clinical dialogue. What each is actually for, and where the line falls."
 date: "Sep 22, 2026"
@@ -65,7 +65,7 @@ Worth situating this against what the field has learned: AI has genuinely compre
 
 It conducts the conversation. In its doctor-agent role, AMIE is instructed to act as an empathetic clinician, interviewing a patient about history and symptoms to reach a diagnosis. It was trained through **self-play in a simulated environment with automated feedback**, letting it scale across conditions, specialties and contexts without needing a human on the other side for every training episode.
 
-![AMIE: Google's research AI system for medical reasoning and conversations, evolving from one-off diagnostic dialogue to managing disease over time](/assets/images/blog/amie-architecture.png)
+![AMIE: Google's research AI system for medical reasoning and conversations, evolving from one-off diagnostic dialogue to managing disease over time](/assets/images/blog/amie-architecture.webp)
 
 The newer work extends it from one-off diagnosis to **multi-visit disease management**, using Gemini's long context to combine in-context retrieval with structured reasoning so its output aligns with current clinical practice guidelines and drug formularies. It analyses content, generates a response, refines it against guidelines, and produces a management plan across visits.
 

@@ -1,0 +1,87 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 1200 560" width="1200" height="560" role="img" aria-labelledby="t d" font-family="Inter, Segoe UI, Arial, sans-serif">
+  <rect x="0" y="0" width="1200" height="560" fill="#ffffff" rx="16" stroke="#e5e7eb"/>
+  <title id="t">A prompt-injection attack chain and the control that breaks each step</title>
+  <desc id="d">Five attack steps in a row: an attacker opens an issue with a payload hidden in a fake stack trace; the CI agent reads it; the agent runs a command such as reading an env file or adding a git hook; the payload runs with the CI runner's privileges; data leaves or a signed package ships from the real pipeline. Under each step is the control that breaks it: none for step one, since any free account can open an issue; split read and write planes; log the trajectory and watch tool calls; a least-privilege token; an egress allowlist plus approval before publishing.</desc>
+  <defs>
+    <marker id="a" viewBox="0 0 10 10" refX="9" refY="5" markerWidth="8" markerHeight="8" orient="auto-start-reverse"><path d="M0,0 L10,5 L0,10 z" fill="#4b5563"/></marker>
+  </defs>
+  <text x="600" y="50" text-anchor="middle" font-size="28" font-weight="700" fill="#111827">From a GitHub issue to a signed release</text>
+
+  <g font-size="18" fill="#4b5563" text-anchor="middle">
+    <rect x="30" y="85" width="204" height="190" rx="12" fill="#ffffff" stroke="#ec362e" stroke-width="2"/>
+    <text x="132" y="118" font-weight="700" fill="#ec362e">1</text>
+    <text x="132" y="148" font-weight="700" fill="#111827">Attacker</text>
+    <text x="132" y="174" font-weight="700" fill="#111827">opens an issue</text>
+    <text x="132" y="218">payload hidden in</text>
+    <text x="132" y="244">a fake stack trace</text>
+
+    <rect x="264" y="85" width="204" height="190" rx="12" fill="#ffffff" stroke="#ec362e" stroke-width="2"/>
+    <text x="366" y="118" font-weight="700" fill="#ec362e">2</text>
+    <text x="366" y="148" font-weight="700" fill="#111827">CI agent</text>
+    <text x="366" y="174" font-weight="700" fill="#111827">reads the issue</text>
+    <text x="366" y="218">the hidden text</text>
+    <text x="366" y="244">joins its context</text>
+
+    <rect x="498" y="85" width="204" height="190" rx="12" fill="#ffffff" stroke="#ec362e" stroke-width="2"/>
+    <text x="600" y="118" font-weight="700" fill="#ec362e">3</text>
+    <text x="600" y="148" font-weight="700" fill="#111827">Agent runs</text>
+    <text x="600" y="174" font-weight="700" fill="#111827">a command</text>
+    <text x="600" y="218">env file, git hook,</text>
+    <text x="600" y="244">build script edit</text>
+
+    <rect x="732" y="85" width="204" height="190" rx="12" fill="#ffffff" stroke="#ec362e" stroke-width="2"/>
+    <text x="834" y="118" font-weight="700" fill="#ec362e">4</text>
+    <text x="834" y="148" font-weight="700" fill="#111827">Payload gets</text>
+    <text x="834" y="174" font-weight="700" fill="#111827">CI privileges</text>
+    <text x="834" y="218">repo write, tokens,</text>
+    <text x="834" y="244">cloud credentials</text>
+
+    <rect x="966" y="85" width="204" height="190" rx="12" fill="#ffffff" stroke="#ec362e" stroke-width="2"/>
+    <text x="1068" y="118" font-weight="700" fill="#ec362e">5</text>
+    <text x="1068" y="148" font-weight="700" fill="#111827">Data leaves or</text>
+    <text x="1068" y="174" font-weight="700" fill="#111827">a package ships</text>
+    <text x="1068" y="218">signed, from the</text>
+    <text x="1068" y="244">real pipeline</text>
+  </g>
+  <g stroke="#4b5563" stroke-width="2">
+    <line x1="236" y1="180" x2="260" y2="180" marker-end="url(#a)"/>
+    <line x1="470" y1="180" x2="494" y2="180" marker-end="url(#a)"/>
+    <line x1="704" y1="180" x2="728" y2="180" marker-end="url(#a)"/>
+    <line x1="938" y1="180" x2="962" y2="180" marker-end="url(#a)"/>
+  </g>
+
+  <text x="600" y="532" text-anchor="middle" font-size="20" font-weight="700" fill="#111827">Below each step: the control that breaks the chain there</text>
+  <g stroke="#d1d5db" stroke-width="2" stroke-dasharray="5 5">
+    <line x1="132" y1="277" x2="132" y2="343"/>
+    <line x1="366" y1="277" x2="366" y2="343"/>
+    <line x1="600" y1="277" x2="600" y2="343"/>
+    <line x1="834" y1="277" x2="834" y2="343"/>
+    <line x1="1068" y1="277" x2="1068" y2="343"/>
+  </g>
+  <g font-size="18" fill="#4b5563" text-anchor="middle">
+    <rect x="30" y="345" width="204" height="150" rx="12" fill="#ffffff" stroke="#d1d5db" stroke-dasharray="8 5"/>
+    <text x="132" y="390" font-weight="700" fill="#4b5563">None possible:</text>
+    <text x="132" y="418">any free account</text>
+    <text x="132" y="446">can open an issue</text>
+
+    <rect x="264" y="345" width="204" height="150" rx="12" fill="#f3f4f6" stroke="#2563eb" stroke-width="2"/>
+    <text x="366" y="390" font-weight="700" fill="#111827">Split read and</text>
+    <text x="366" y="418" font-weight="700" fill="#111827">write planes</text>
+    <text x="366" y="446">reader ≠ actor</text>
+
+    <rect x="498" y="345" width="204" height="150" rx="12" fill="#f3f4f6" stroke="#2563eb" stroke-width="2"/>
+    <text x="600" y="390" font-weight="700" fill="#111827">Log the trajectory</text>
+    <text x="600" y="418">and watch every</text>
+    <text x="600" y="446">tool call</text>
+
+    <rect x="732" y="345" width="204" height="150" rx="12" fill="#f3f4f6" stroke="#2563eb" stroke-width="2"/>
+    <text x="834" y="390" font-weight="700" fill="#111827">Least privilege</text>
+    <text x="834" y="418">token cannot</text>
+    <text x="834" y="446">read secrets</text>
+
+    <rect x="966" y="345" width="204" height="150" rx="12" fill="#f3f4f6" stroke="#2563eb" stroke-width="2"/>
+    <text x="1068" y="390" font-weight="700" fill="#111827">Egress allowlist</text>
+    <text x="1068" y="418">+ human approval</text>
+    <text x="1068" y="446">before publishing</text>
+  </g>
+</svg>

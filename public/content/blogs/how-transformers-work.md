@@ -94,6 +94,10 @@ Four lines. Walk through them:
 
 `weights @ V` is the retrieval: a weighted average of every token's value vector.
 
+![Scaled dot-product attention pipeline from token vectors to Q, K, V, the scaled score matrix and a softmax-weighted sum, with example weights for the query of the token it](/assets/images/blog/diagrams/how-transformers-work-1.svg)
+
+*Attention end to end, with illustrative weights for the query of “it”. Diagram: Big Matrix Solutions, based on [Attention Is All You Need](https://arxiv.org/abs/1706.03762).*
+
 ### Why causal masking matters
 
 For a model predicting the next token, letting position 3 attend to position 7 would be cheating. It would see the answer during training.
@@ -106,6 +110,10 @@ scores = scores.masked_fill(mask, float('-inf'))
 ```
 
 This is the entire difference between an encoder (bidirectional, sees everything, good for classification) and a decoder (causal, sees only the past, good for generation). One triangular matrix.
+
+![Six by six causal attention mask over the sentence The cat sat on the mat, with future positions above the diagonal set to minus infinity](/assets/images/blog/diagrams/how-transformers-work-2.svg)
+
+*The causal mask: future positions are set to −∞ before the softmax. Diagram: Big Matrix Solutions, based on [Attention Is All You Need](https://arxiv.org/abs/1706.03762).*
 
 ### Why multiple heads
 
@@ -161,6 +169,10 @@ This buys three things:
 - **Gradients flow.** The addition gives backpropagation a direct path from the loss to every layer, which is what makes 100-layer networks trainable at all.
 - **Layers can be gentle.** A layer that finds nothing useful can contribute near-zero and leave the stream unharmed. It does not have to reconstruct its input.
 - **Composition works.** Later layers read what earlier layers wrote. Circuits can span depth, with one layer establishing a feature and a later one using it.
+
+![Residual stream running from the embedding to the output head, with attention and MLP sublayers each reading through RMSNorm and adding their output back](/assets/images/blog/diagrams/how-transformers-work-3.svg)
+
+*The residual stream: each sublayer reads through a norm and adds a correction back. Diagram: Big Matrix Solutions, based on [Attention Is All You Need](https://arxiv.org/abs/1706.03762).*
 
 Layer normalisation stabilises activations to zero mean and unit variance across the feature dimension. Modern models use RMSNorm, a cheaper variant that skips mean-centring, and place it *before* the sublayer rather than after. Pre-norm is more stable at depth, which is why essentially every model since GPT-2 uses it.
 
@@ -226,3 +238,6 @@ If you keep four things:
 Everything else (the exact activation, the norm placement, the head count, the width multiplier) is tuning. The four ideas above are the architecture.
 
 Hero diagram: [Transformer, full architecture](https://commons.wikimedia.org/wiki/File:Transformer%2C_full_architecture.png) by Daniel Voigt Godoy, [CC BY 4.0](https://creativecommons.org/licenses/by/4.0/), via Wikimedia Commons. Scaled and padded to fit; not otherwise altered.
+
+**Media credits**:
+- In-body diagrams (attention, causal mask, residual stream): Big Matrix Solutions, based on [Attention Is All You Need](https://arxiv.org/abs/1706.03762) (Vaswani et al., 2017).

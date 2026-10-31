@@ -6,7 +6,7 @@ comments: "0"
 image: "/assets/images/blog/rag-architecture.webp"
 category: "Tutorial"
 desc: "Chunking, embeddings, vector search, reranking and the failure modes nobody mentions. Plus an honest look at whether long context has made RAG optional."
-date: "Feb 19, 2027"
+date: "Nov 28, 2026"
 tags: ["RAG", "Embeddings", "Vector Search", "Tutorial"]
 ---
 
@@ -48,6 +48,10 @@ Better approaches, roughly in order of effort:
 - **Overlap**: a common trick, typically 10 to 20 percent, so a fact near a boundary appears in both chunks. Cheap insurance against bad cuts.
 
 Two heuristics worth internalising. **Chunk size should match your query granularity.** If users ask narrow factual questions, small chunks retrieve precisely; if they ask questions requiring synthesis across a section, small chunks fragment the answer. And **every chunk should carry its context**: prepend the document title and section heading to the chunk text before embedding. A chunk reading "The limit is 500 requests per minute" is nearly unretrievable on its own and perfectly retrievable as "API Reference > Rate Limits: The limit is 500 requests per minute."
+
+![RAG indexing pipeline: documents are chunked on headings with overlap, embedded with the query model, and stored in HNSW and BM25 indexes, with a bare chunk compared to a contextual chunk](/assets/images/blog/diagrams/how-rag-works-1.svg)
+
+*Indexing, and why a chunk should carry its document title and section heading. Diagram: Big Matrix Solutions, based on [Retrieval-Augmented Generation for Knowledge-Intensive NLP Tasks](https://arxiv.org/abs/2005.11401).*
 
 ### 2. Embedding
 
@@ -101,6 +105,10 @@ top = sorted(scored, reverse=True)[:5]
 ```
 
 Retrieve 50, rerank, keep 5. This two-stage pattern is standard in mature systems and typically the single biggest quality improvement after hybrid search.
+
+![Query-time RAG flow: user query with metadata filter goes to vector search and BM25 in parallel, rank fusion yields about fifty candidates, a cross-encoder reranker keeps five, and the LLM answers with citations](/assets/images/blog/diagrams/how-rag-works-2.svg)
+
+*Query time: hybrid search and rank fusion for recall, a reranker for precision. Diagram: Big Matrix Solutions, based on [Retrieval-Augmented Generation for Knowledge-Intensive NLP Tasks](https://arxiv.org/abs/2005.11401).*
 
 ## The failure modes
 
@@ -166,3 +174,6 @@ The systems that work well are unglamorous. They chunk along real document struc
 The systems that do not work are usually the ones where an embedding model, a vector store, and a prompt were assembled in an afternoon and then never evaluated. That version demos beautifully. It is the reason RAG has a reputation for being disappointing, and the reason the reputation is undeserved.
 
 Hero diagram: [RAG diagram](https://commons.wikimedia.org/wiki/File:RAG_diagram.svg) by Turtlecrown, [CC BY-SA 4.0](https://creativecommons.org/licenses/by-sa/4.0/), via Wikimedia Commons. Rasterised and padded to fit; not otherwise altered.
+
+**Media credits**:
+- In-body diagrams (indexing, query-time retrieval): Big Matrix Solutions, based on [Lewis et al., 2020](https://arxiv.org/abs/2005.11401) and the pipeline described in this article.

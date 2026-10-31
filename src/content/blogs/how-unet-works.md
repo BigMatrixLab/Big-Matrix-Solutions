@@ -6,7 +6,7 @@ comments: "0"
 image: "/assets/images/blog/unet-architecture.webp"
 category: "Tutorial"
 desc: "Eleven years old, still the default for medical segmentation, and quietly running inside every diffusion model. A walkthrough of why skip connections matter."
-date: "Oct 30, 2026"
+date: "Oct 13, 2026"
 tags: ["U-Net", "Computer Vision", "Tutorial", "Medical Imaging"]
 ---
 
@@ -44,6 +44,10 @@ The architecture is a U, and the two arms do different jobs.
 
 So far this is an encoder-decoder, which existed already and produced blurry masks. The part that makes it U-Net is what connects the arms.
 
+![U-Net with three encoder levels of 64, 128 and 256 channels, a 512-channel bottleneck, and three decoder levels, with skip connections concatenating encoder features into the decoder at matching resolution](/assets/images/blog/diagrams/how-unet-works-1.svg)
+
+*The U shape, with channel counts matching the code below. Diagram: Big Matrix Solutions, based on [Ronneberger et al., 2015](https://arxiv.org/abs/1505.04597).*
+
 ## The skip connections are the whole idea
 
 At every level of the decoder, the feature map from the *corresponding encoder level* is concatenated onto the upsampled features before the convolutions run.
@@ -64,6 +68,10 @@ out = self.final_conv(d1)      # -> n_classes per pixel
 ```
 
 Note `cat`, not `+`. This is concatenation along the channel axis, not addition. The distinction matters: a residual connection adds a correction to a signal, while U-Net's skip *hands the decoder two separate sources of information* and lets the following convolutions learn how to combine them.
+
+![Comparison of a residual addition of two same-sized tensors with U-Net concatenation of 256 upsampled channels and 128 encoder channels into 384 channels followed by a convolution to 128](/assets/images/blog/diagrams/how-unet-works-2.svg)
+
+*Addition corrects one signal; concatenation hands the decoder two. Diagram: Big Matrix Solutions, based on [Ronneberger et al., 2015](https://arxiv.org/abs/1505.04597).*
 
 What each source carries is the key:
 
@@ -167,3 +175,6 @@ Every subsequent architecture that does dense prediction well has ended up with 
 Which is usually what it takes for an architecture to still be the default eleven years on.
 
 Hero diagram: [Example architecture of U-Net](https://commons.wikimedia.org/wiki/File:Example_architecture_of_U-Net_for_producing_k_256-by-256_image_masks_for_a_256-by-256_RGB_image.png) by Mehrdad Yazdani, [CC BY-SA 4.0](https://creativecommons.org/licenses/by-sa/4.0/), via Wikimedia Commons. Scaled and padded to fit; not otherwise altered.
+
+**Media credits**:
+- In-body diagrams (U-Net levels, concatenation vs addition): Big Matrix Solutions, based on [U-Net: Convolutional Networks for Biomedical Image Segmentation](https://arxiv.org/abs/1505.04597) (Ronneberger et al., 2015).

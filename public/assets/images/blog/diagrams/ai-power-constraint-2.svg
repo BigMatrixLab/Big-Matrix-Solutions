@@ -1,0 +1,29 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 1200 560" width="1200" height="560" role="img">
+<rect x="1" y="1" width="1198" height="558" fill="#ffffff" rx="16" stroke="#e5e7eb" stroke-width="2"/>
+<title>Instantaneous power draw of single AI sites compared with a nuclear reactor</title>
+<desc>A large nuclear reactor produces about 1 GW. OpenAI Stargate Abilene is planned at 1.2 GW, Meta Louisiana at more than 2 GW, and the largest single training runs in 2030 are forecast at 4 to 16 GW.</desc>
+<defs><marker id="ah" viewBox="0 0 10 10" refX="9" refY="5" markerWidth="8" markerHeight="8" orient="auto-start-reverse"><path d="M0,0 L10,5 L0,10 z" fill="#4b5563"/></marker><marker id="ahr" viewBox="0 0 10 10" refX="9" refY="5" markerWidth="8" markerHeight="8" orient="auto-start-reverse"><path d="M0,0 L10,5 L0,10 z" fill="#ec362e"/></marker></defs>
+<text x="60" y="68" font-family="Inter, Segoe UI, Arial, sans-serif" font-size="30" fill="#111827" text-anchor="start" font-weight="700">One site, one or two reactors</text>
+<text x="60" y="104" font-family="Inter, Segoe UI, Arial, sans-serif" font-size="20" fill="#4b5563" text-anchor="start" font-weight="400">Instantaneous draw in gigawatts, not annual consumption</text>
+<text x="310" y="172" font-family="Inter, Segoe UI, Arial, sans-serif" font-size="20" fill="#111827" text-anchor="end" font-weight="600">Large nuclear reactor</text>
+<rect x="330" y="140" width="50.0" height="46" rx="6" fill="#d1d5db" stroke="none" stroke-width="2"/>
+<text x="394.0" y="171" font-family="Inter, Segoe UI, Arial, sans-serif" font-size="20" fill="#111827" text-anchor="start" font-weight="700">~1 GW</text>
+<text x="310" y="250" font-family="Inter, Segoe UI, Arial, sans-serif" font-size="20" fill="#111827" text-anchor="end" font-weight="600">OpenAI Stargate (Abilene)</text>
+<rect x="330" y="218" width="60.0" height="46" rx="6" fill="#2563eb" stroke="none" stroke-width="2"/>
+<text x="404.0" y="249" font-family="Inter, Segoe UI, Arial, sans-serif" font-size="20" fill="#111827" text-anchor="start" font-weight="700">1.2 GW</text>
+<text x="310" y="328" font-family="Inter, Segoe UI, Arial, sans-serif" font-size="20" fill="#111827" text-anchor="end" font-weight="600">Meta Louisiana</text>
+<rect x="330" y="296" width="100.0" height="46" rx="6" fill="#2563eb" stroke="none" stroke-width="2"/>
+<text x="444.0" y="327" font-family="Inter, Segoe UI, Arial, sans-serif" font-size="20" fill="#111827" text-anchor="start" font-weight="700">2+ GW</text>
+<text x="310" y="406" font-family="Inter, Segoe UI, Arial, sans-serif" font-size="20" fill="#111827" text-anchor="end" font-weight="600">Largest training run, 2030</text>
+<rect x="330" y="374" width="200.0" height="46" rx="6" fill="#ec362e" stroke="none" stroke-width="2"/>
+<rect x="524.0" y="374" width="606.0" height="46" rx="6" fill="#ffffff" stroke="#ec362e" stroke-width="3"/>
+<rect x="330" y="374" width="200.0" height="46" rx="6" fill="#ec362e"/>
+<text x="546.0" y="405" font-family="Inter, Segoe UI, Arial, sans-serif" font-size="20" fill="#111827" text-anchor="start" font-weight="700">4–16 GW forecast</text>
+<line x1="330" y1="460" x2="1130.0" y2="460" stroke="#d1d5db" stroke-width="2"/>
+<text x="330.0" y="490" font-family="Inter, Segoe UI, Arial, sans-serif" font-size="18" fill="#4b5563" text-anchor="middle" font-weight="400">0 GW</text>
+<text x="530.0" y="490" font-family="Inter, Segoe UI, Arial, sans-serif" font-size="18" fill="#4b5563" text-anchor="middle" font-weight="400">4 GW</text>
+<text x="730.0" y="490" font-family="Inter, Segoe UI, Arial, sans-serif" font-size="18" fill="#4b5563" text-anchor="middle" font-weight="400">8 GW</text>
+<text x="930.0" y="490" font-family="Inter, Segoe UI, Arial, sans-serif" font-size="18" fill="#4b5563" text-anchor="middle" font-weight="400">12 GW</text>
+<text x="1130.0" y="490" font-family="Inter, Segoe UI, Arial, sans-serif" font-size="18" fill="#4b5563" text-anchor="middle" font-weight="400">16 GW</text>
+<text x="60" y="530" font-family="Inter, Segoe UI, Arial, sans-serif" font-size="18" fill="#4b5563" text-anchor="start" font-weight="400">Outlined bar: the forecast range from Epoch AI and EPRI.</text>
+</svg>

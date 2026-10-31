@@ -1,0 +1,28 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 1200 650" width="1200" height="650" font-family="Inter, Segoe UI, Arial, sans-serif">
+<rect x="0.5" y="0.5" width="1199" height="649" fill="#ffffff" rx="16" stroke="#e5e7eb"/>
+<title>Hinton's September 2026 timeline</title>
+<desc>Vertical timeline of five dated statements by Geoffrey Hinton in September 2026, from BBC Newsnight around September 9 to the CASP working paper on September 28.</desc>
+<text x="40" y="62" font-size="30" fill="#111827" font-weight="700">Geoffrey Hinton's September 2026</text>
+<text x="40" y="98" font-size="20" fill="#4b5563">Where he spoke and what he said, as reported</text>
+<line x1="150" y1="150" x2="150" y2="580" stroke="#d1d5db" stroke-width="3"/>
+<text x="126" y="186" font-size="22" fill="#ec362e" font-weight="700" text-anchor="end">~Sep 9</text>
+<circle cx="150" cy="178" r="9" fill="#ffffff" stroke="#ec362e" stroke-width="3"/>
+<text x="180" y="186" font-size="21" fill="#111827" font-weight="700">BBC Newsnight</text>
+<text x="180" y="216" font-size="20" fill="#4b5563">A 10% extinction risk “seems not an unreasonable estimate to me”</text>
+<text x="126" y="278" font-size="22" fill="#ec362e" font-weight="700" text-anchor="end">Sep 16</text>
+<circle cx="150" cy="270" r="9" fill="#ffffff" stroke="#ec362e" stroke-width="3"/>
+<text x="180" y="278" font-size="21" fill="#111827" font-weight="700">Capitol Hill briefing</text>
+<text x="180" y="308" font-size="20" fill="#4b5563">Congress has “maybe a year” to act</text>
+<text x="126" y="370" font-size="22" fill="#ec362e" font-weight="700" text-anchor="end">Sep 18</text>
+<circle cx="150" cy="362" r="9" fill="#ffffff" stroke="#ec362e" stroke-width="3"/>
+<text x="180" y="370" font-size="21" fill="#111827" font-weight="700">CNN</text>
+<text x="180" y="400" font-size="20" fill="#4b5563">“we may not get as good a warning shot before they take over”</text>
+<text x="126" y="462" font-size="22" fill="#ec362e" font-weight="700" text-anchor="end">Sep 26</text>
+<circle cx="150" cy="454" r="9" fill="#ffffff" stroke="#ec362e" stroke-width="3"/>
+<text x="180" y="462" font-size="21" fill="#111827" font-weight="700">Fortune, on an Atlantic interview</text>
+<text x="180" y="492" font-size="20" fill="#4b5563">AI “may derive subgoals that cause it to want to get rid of people”</text>
+<text x="126" y="554" font-size="22" fill="#ec362e" font-weight="700" text-anchor="end">Sep 28</text>
+<circle cx="150" cy="546" r="9" fill="#ffffff" stroke="#ec362e" stroke-width="3"/>
+<text x="180" y="554" font-size="21" fill="#111827" font-weight="700">CASP working paper</text>
+<text x="180" y="584" font-size="20" fill="#4b5563">Co-author on the risk of an “intelligence explosion”</text>
+</svg>

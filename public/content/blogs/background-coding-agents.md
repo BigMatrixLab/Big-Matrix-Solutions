@@ -3,10 +3,10 @@ id: "15"
 slug: "asynchronous-delegation-background-coding-agents"
 title: "From Pair Programmer to Colleague: The Year Coding Agents Went Asynchronous"
 comments: "0"
-image: "https://images.unsplash.com/photo-1550439062-609e1531270e?auto=format&fit=crop&q=80&w=800"
+image: "/assets/images/blog/background-coding-agents.webp"
 category: "Software Development"
 desc: "The biggest shift of 2026 was not smarter models. It was agents that accept a task, work while you sleep, and hand you a pull request."
-date: "Oct 23, 2026"
+date: "Oct 11, 2026"
 tags: ["Agentic AI", "Software Development", "Developer Tools", "Automation"]
 ---
 
@@ -44,6 +44,10 @@ The agent works in an isolated environment: a container, a worktree, a fresh bra
 
 Isolation is not optional. An agent working directly in your checkout while you are elsewhere is a category of problem nobody needs. Every serious setup gives each agent its own sandbox.
 
+![OpenHands architecture: an agent produces actions, a Docker sandbox runtime executes them in a bash shell, Python server and browser, and an event stream records every action and observation](/assets/images/blog/background-coding-agents-openhands-architecture.webp)
+
+*An open agent platform’s architecture: the agent proposes actions, a Docker sandbox executes them, and an event stream records every action and observation. Source: [OpenHands, Wang et al.](https://arxiv.org/abs/2407.16741) (CC BY 4.0)*
+
 ### 3. Review a pull request
 
 The output arrives as a diff with a description, in the same review interface you already use for human work. This is the part that makes the whole model socially viable: it slots into an existing process rather than requiring a new one.
@@ -51,6 +55,10 @@ The output arrives as a diff with a description, in the same review interface yo
 ### 4. Iterate through comments
 
 You leave review comments. The agent addresses them and pushes again. The interaction is the same one you have with a junior engineer, which is why it works. The process was already designed for exactly this.
+
+![The delegation loop: write the brief, the agent runs in a sandbox, review the pull request, comment, and the agent iterates](/assets/images/blog/diagrams/background-coding-agents-1.svg)
+
+*Diagram: Big Matrix Solutions, based on the issue-to-pull-request workflow in [GitHub’s Copilot coding agent documentation](https://docs.github.com/en/copilot/concepts/agents/coding-agent/about-coding-agent).*
 
 ## What this is good at
 
@@ -128,3 +136,8 @@ Asynchronous delegation is real and it works, within limits that are now reasona
 The productivity gains are largest on mechanical, verifiable, well-specified work, which is a substantial and unglamorous share of what software teams actually do. They are close to zero on design, ambiguous requirements, and cross-system coordination, and they can go negative when review discipline slips.
 
 The interesting bottleneck has moved from writing code to specifying work and verifying results. That is a genuinely different skill set from the one most engineers were hired for, and the teams getting the most out of this are the ones treating it as a skill to develop rather than a tool to install.
+
+**Media credits**:
+- Hero image: OpenHands user interface screenshots, Figure 1 of [OpenHands: An Open Platform for AI Software Developers as Generalist Agents](https://arxiv.org/abs/2407.16741) (Wang et al.), CC BY 4.0. Placed unaltered on a 16:9 white canvas.
+- In-body figure: OpenHands architecture, Figure 2 of the same [paper](https://arxiv.org/abs/2407.16741), CC BY 4.0. Unaltered.
+- In-body diagram: the delegation loop, Big Matrix Solutions, based on [GitHub’s Copilot coding agent documentation](https://docs.github.com/en/copilot/concepts/agents/coding-agent/about-coding-agent).

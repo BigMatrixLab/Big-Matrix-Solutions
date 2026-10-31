@@ -1,0 +1,46 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 1200 814" width="1200" height="814" role="img">
+<title>Where major AI training-data copyright cases stood in late 2026</title>
+<desc>Table of six cases: Thomson Reuters v. Ross, Bartz v. Anthropic, Kadrey v. Meta, the OpenAI multidistrict litigation, Getty Images v. Stability AI and GEMA v. OpenAI, with court and status as of late 2026.</desc>
+<rect x="0" y="0" width="1200" height="814" fill="#ffffff" rx="16" stroke="#e5e7eb" stroke-width="2"/>
+<text x="60" y="68" font-family="Inter, Segoe UI, Arial, sans-serif" font-size="30" font-weight="700" fill="#111827" text-anchor="start">Training-data cases: status as of late 2026</text>
+<text x="60" y="104" font-family="Inter, Segoe UI, Arial, sans-serif" font-size="19" font-weight="400" fill="#4b5563" text-anchor="start">Red: ruling against the AI developer. Blue: ruling for it. Grey: open or mixed.</text>
+<text x="84" y="150" font-family="Inter, Segoe UI, Arial, sans-serif" font-size="19" font-weight="700" fill="#4b5563" text-anchor="start">Case</text>
+<text x="470" y="150" font-family="Inter, Segoe UI, Arial, sans-serif" font-size="19" font-weight="700" fill="#4b5563" text-anchor="start">Court</text>
+<text x="700" y="150" font-family="Inter, Segoe UI, Arial, sans-serif" font-size="19" font-weight="700" fill="#4b5563" text-anchor="start">Where it stands</text>
+<rect x="60" y="168" width="1080" height="88" rx="12" fill="#ffffff" stroke="#d1d5db" stroke-width="2"/>
+<rect x="60" y="168" width="10" height="88" rx="4" fill="#ec362e"/>
+<text x="84" y="220" font-family="Inter, Segoe UI, Arial, sans-serif" font-size="21" font-weight="700" fill="#111827" text-anchor="start">Thomson Reuters v. Ross</text>
+<text x="470" y="220" font-family="Inter, Segoe UI, Arial, sans-serif" font-size="19" font-weight="400" fill="#4b5563" text-anchor="start">US, 3rd Circuit</text>
+<text x="700" y="206" font-family="Inter, Segoe UI, Arial, sans-serif" font-size="19" font-weight="600" fill="#111827" text-anchor="start">Not fair use; affirmed Sept 2026</text>
+<text x="700" y="236" font-family="Inter, Segoe UI, Arial, sans-serif" font-size="18" font-weight="400" fill="#4b5563" text-anchor="start">Non-generative legal search tool</text>
+<rect x="60" y="272" width="1080" height="88" rx="12" fill="#ffffff" stroke="#d1d5db" stroke-width="2"/>
+<rect x="60" y="272" width="10" height="88" rx="4" fill="#2563eb"/>
+<text x="84" y="324" font-family="Inter, Segoe UI, Arial, sans-serif" font-size="21" font-weight="700" fill="#111827" text-anchor="start">Bartz v. Anthropic</text>
+<text x="470" y="324" font-family="Inter, Segoe UI, Arial, sans-serif" font-size="19" font-weight="400" fill="#4b5563" text-anchor="start">US, N.D. Cal.</text>
+<text x="700" y="310" font-family="Inter, Segoe UI, Arial, sans-serif" font-size="19" font-weight="600" fill="#111827" text-anchor="start">Training fair use; pirated library not</text>
+<text x="700" y="340" font-family="Inter, Segoe UI, Arial, sans-serif" font-size="18" font-weight="400" fill="#4b5563" text-anchor="start">$1.5B class settlement approved July 2026</text>
+<rect x="60" y="376" width="1080" height="88" rx="12" fill="#ffffff" stroke="#d1d5db" stroke-width="2"/>
+<rect x="60" y="376" width="10" height="88" rx="4" fill="#2563eb"/>
+<text x="84" y="428" font-family="Inter, Segoe UI, Arial, sans-serif" font-size="21" font-weight="700" fill="#111827" text-anchor="start">Kadrey v. Meta</text>
+<text x="470" y="428" font-family="Inter, Segoe UI, Arial, sans-serif" font-size="19" font-weight="400" fill="#4b5563" text-anchor="start">US, N.D. Cal.</text>
+<text x="700" y="414" font-family="Inter, Segoe UI, Arial, sans-serif" font-size="19" font-weight="600" fill="#111827" text-anchor="start">Training fair use on that record (2025)</text>
+<text x="700" y="444" font-family="Inter, Segoe UI, Arial, sans-serif" font-size="18" font-weight="400" fill="#4b5563" text-anchor="start">Torrent distribution claim still pending</text>
+<rect x="60" y="480" width="1080" height="88" rx="12" fill="#ffffff" stroke="#d1d5db" stroke-width="2"/>
+<rect x="60" y="480" width="10" height="88" rx="4" fill="#4b5563"/>
+<text x="84" y="532" font-family="Inter, Segoe UI, Arial, sans-serif" font-size="21" font-weight="700" fill="#111827" text-anchor="start">In re OpenAI (NYT and others)</text>
+<text x="470" y="532" font-family="Inter, Segoe UI, Arial, sans-serif" font-size="19" font-weight="400" fill="#4b5563" text-anchor="start">US, S.D.N.Y. MDL</text>
+<text x="700" y="518" font-family="Inter, Segoe UI, Arial, sans-serif" font-size="19" font-weight="600" fill="#111827" text-anchor="start">Fair-use summary judgment briefed</text>
+<text x="700" y="548" font-family="Inter, Segoe UI, Arial, sans-serif" font-size="18" font-weight="400" fill="#4b5563" text-anchor="start">Cross-motions filed Sept 2026</text>
+<rect x="60" y="584" width="1080" height="88" rx="12" fill="#ffffff" stroke="#d1d5db" stroke-width="2"/>
+<rect x="60" y="584" width="10" height="88" rx="4" fill="#4b5563"/>
+<text x="84" y="636" font-family="Inter, Segoe UI, Arial, sans-serif" font-size="21" font-weight="700" fill="#111827" text-anchor="start">Getty Images v. Stability AI</text>
+<text x="470" y="636" font-family="Inter, Segoe UI, Arial, sans-serif" font-size="19" font-weight="400" fill="#4b5563" text-anchor="start">UK, High Court</text>
+<text x="700" y="622" font-family="Inter, Segoe UI, Arial, sans-serif" font-size="19" font-weight="600" fill="#111827" text-anchor="start">Model weights not an infringing copy</text>
+<text x="700" y="652" font-family="Inter, Segoe UI, Arial, sans-serif" font-size="18" font-weight="400" fill="#4b5563" text-anchor="start">Getty given permission to appeal</text>
+<rect x="60" y="688" width="1080" height="88" rx="12" fill="#ffffff" stroke="#d1d5db" stroke-width="2"/>
+<rect x="60" y="688" width="10" height="88" rx="4" fill="#ec362e"/>
+<text x="84" y="740" font-family="Inter, Segoe UI, Arial, sans-serif" font-size="21" font-weight="700" fill="#111827" text-anchor="start">GEMA v. OpenAI</text>
+<text x="470" y="740" font-family="Inter, Segoe UI, Arial, sans-serif" font-size="19" font-weight="400" fill="#4b5563" text-anchor="start">Germany, Munich</text>
+<text x="700" y="726" font-family="Inter, Segoe UI, Arial, sans-serif" font-size="19" font-weight="600" fill="#111827" text-anchor="start">Memorised lyrics infringe (Nov 2025)</text>
+<text x="700" y="756" font-family="Inter, Segoe UI, Arial, sans-serif" font-size="18" font-weight="400" fill="#4b5563" text-anchor="start">First-instance judgment</text>
+</svg>

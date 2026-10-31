@@ -1,0 +1,30 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 1200 560" width="1200" height="560" font-family="Inter, Segoe UI, Arial, sans-serif" role="img">
+<rect x="0.5" y="0.5" width="1199" height="559" rx="16" fill="#ffffff" stroke="#e5e7eb"/>
+<title>Classifier-free guidance as extrapolation</title>
+<desc>From the current noisy sample, the unconditional noise estimate and the prompt-conditioned estimate point in slightly different directions. Their difference is the direction the prompt pulls in. Guidance takes the unconditional estimate and adds the difference times the guidance scale, so a scale above one pushes past the conditional estimate. Shown at scales 1, 2 and 3 for illustration.</desc>
+<defs><marker id="a" viewBox="0 0 10 10" refX="9" refY="5" markerWidth="8" markerHeight="8" orient="auto-start-reverse"><path d="M0,0 L10,5 L0,10 z" fill="#111827"/></marker><marker id="ar" viewBox="0 0 10 10" refX="9" refY="5" markerWidth="8" markerHeight="8" orient="auto-start-reverse"><path d="M0,0 L10,5 L0,10 z" fill="#ec362e"/></marker><marker id="ab" viewBox="0 0 10 10" refX="9" refY="5" markerWidth="8" markerHeight="8" orient="auto-start-reverse"><path d="M0,0 L10,5 L0,10 z" fill="#2563eb"/></marker><marker id="ag" viewBox="0 0 10 10" refX="9" refY="5" markerWidth="8" markerHeight="8" orient="auto-start-reverse"><path d="M0,0 L10,5 L0,10 z" fill="#4b5563"/></marker></defs>
+<text x="600" y="48" font-size="26" fill="#111827" text-anchor="middle" font-weight="bold">Classifier-free guidance: extrapolate along the prompt direction</text>
+<circle cx="110" cy="480" r="7" fill="#111827"/>
+<text x="100" y="514" font-size="18" fill="#111827" text-anchor="start" font-weight="normal">current sample x_t</text>
+<line x1="110" y1="480" x2="326" y2="421" stroke="#4b5563" stroke-width="3" marker-end="url(#ag)"/>
+<line x1="110" y1="480" x2="447" y2="343" stroke="#2563eb" stroke-width="3" marker-end="url(#ab)"/>
+<line x1="330" y1="420" x2="690" y2="180" stroke="#ec362e" stroke-width="3" stroke-dasharray="8 6" marker-end="url(#ar)"/>
+<text x="340" y="454" font-size="20" fill="#4b5563" text-anchor="start" font-weight="bold">ε_uncond</text>
+<text x="290" y="326" font-size="20" fill="#2563eb" text-anchor="start" font-weight="bold">ε_cond</text>
+<circle cx="450" cy="340" r="8" fill="#2563eb"/>
+<text x="468" y="347" font-size="18" fill="#2563eb" text-anchor="start" font-weight="bold">scale 1</text>
+<circle cx="570" cy="260" r="8" fill="#ec362e"/>
+<text x="588" y="267" font-size="18" fill="#ec362e" text-anchor="start" font-weight="bold">scale 2</text>
+<circle cx="690" cy="180" r="8" fill="#ec362e"/>
+<text x="708" y="187" font-size="18" fill="#ec362e" text-anchor="start" font-weight="bold">scale 3</text>
+<text x="860" y="130" font-size="20" fill="#111827" text-anchor="start" font-weight="bold">ε = ε_uncond</text>
+<text x="860" y="158" font-size="20" fill="#111827" text-anchor="start" font-weight="bold">  + s · (ε_cond − ε_uncond)</text>
+<text x="860" y="214" font-size="18" fill="#4b5563" text-anchor="start" font-weight="normal">s = 1: plain conditional</text>
+<text x="860" y="242" font-size="18" fill="#4b5563" text-anchor="start" font-weight="normal">s = 5–8: typical range</text>
+<text x="860" y="270" font-size="18" fill="#4b5563" text-anchor="start" font-weight="normal">s = 15+: oversaturated,</text>
+<text x="860" y="296" font-size="18" fill="#4b5563" text-anchor="start" font-weight="normal">less diverse</text>
+<text x="860" y="352" font-size="18" fill="#4b5563" text-anchor="start" font-weight="normal">Further along the line =</text>
+<text x="860" y="378" font-size="18" fill="#4b5563" text-anchor="start" font-weight="normal">stronger prompt adherence,</text>
+<text x="860" y="404" font-size="18" fill="#4b5563" text-anchor="start" font-weight="normal">narrower distribution.</text>
+<text x="600" y="530" font-size="18" fill="#4b5563" text-anchor="middle" font-weight="normal">Two-dimensional sketch; real noise estimates live in the full image or latent space.</text>
+</svg>

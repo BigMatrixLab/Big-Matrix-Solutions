@@ -1,0 +1,44 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 1200 590" width="1200" height="590" role="img">
+<rect x="1" y="1" width="1198" height="588" fill="#ffffff" rx="16" stroke="#e5e7eb" stroke-width="2"/>
+<title>OCR pipeline versus vision-language model</title>
+<desc>Top: a classic pipeline runs layout detection, then OCR plus separate table and formula recognisers, then reading-order assembly into Markdown or JSON. Bottom: a vision-language model reads the page image and emits Markdown or JSON in one pass. Both should end in schema validation, cross-checks and a human review queue for low-confidence fields.</desc>
+<defs><marker id="ah" viewBox="0 0 10 10" refX="9" refY="5" markerWidth="8" markerHeight="8" orient="auto-start-reverse"><path d="M0,0 L10,5 L0,10 z" fill="#4b5563"/></marker></defs>
+<text x="60" y="64" font-family="Inter, Segoe UI, Arial, sans-serif" font-size="30" fill="#111827" text-anchor="start" font-weight="700">Two ways to turn a page into data</text>
+<text x="60" y="128" font-family="Inter, Segoe UI, Arial, sans-serif" font-size="22" fill="#111827" text-anchor="start" font-weight="700">Pipeline</text>
+<text x="170" y="128" font-family="Inter, Segoe UI, Arial, sans-serif" font-size="20" fill="#4b5563" text-anchor="start" font-weight="400">many specialised stages, each one debuggable</text>
+<rect x="60" y="150" width="140" height="90" rx="10" fill="#ffffff" stroke="#d1d5db" stroke-width="2"/>
+<text x="130.0" y="189.0" font-family="Inter, Segoe UI, Arial, sans-serif" font-size="20" fill="#111827" text-anchor="middle" font-weight="400">Page</text>
+<text x="130.0" y="215.0" font-family="Inter, Segoe UI, Arial, sans-serif" font-size="18" fill="#111827" text-anchor="middle" font-weight="400">image</text>
+<rect x="240" y="150" width="180" height="90" rx="10" fill="#f3f4f6" stroke="#d1d5db" stroke-width="2"/>
+<text x="330.0" y="189.0" font-family="Inter, Segoe UI, Arial, sans-serif" font-size="20" fill="#111827" text-anchor="middle" font-weight="400">Layout</text>
+<text x="330.0" y="215.0" font-family="Inter, Segoe UI, Arial, sans-serif" font-size="18" fill="#111827" text-anchor="middle" font-weight="400">detection</text>
+<rect x="460" y="150" width="210" height="90" rx="10" fill="#f3f4f6" stroke="#d1d5db" stroke-width="2"/>
+<text x="565.0" y="189.0" font-family="Inter, Segoe UI, Arial, sans-serif" font-size="20" fill="#111827" text-anchor="middle" font-weight="400">OCR + table +</text>
+<text x="565.0" y="215.0" font-family="Inter, Segoe UI, Arial, sans-serif" font-size="18" fill="#111827" text-anchor="middle" font-weight="400">formula models</text>
+<rect x="710" y="150" width="170" height="90" rx="10" fill="#f3f4f6" stroke="#d1d5db" stroke-width="2"/>
+<text x="795.0" y="189.0" font-family="Inter, Segoe UI, Arial, sans-serif" font-size="20" fill="#111827" text-anchor="middle" font-weight="400">Reading</text>
+<text x="795.0" y="215.0" font-family="Inter, Segoe UI, Arial, sans-serif" font-size="18" fill="#111827" text-anchor="middle" font-weight="400">order</text>
+<rect x="920" y="150" width="220" height="90" rx="10" fill="#ffffff" stroke="#d1d5db" stroke-width="2"/>
+<text x="1030.0" y="189.0" font-family="Inter, Segoe UI, Arial, sans-serif" font-size="20" fill="#111827" text-anchor="middle" font-weight="400">Markdown</text>
+<text x="1030.0" y="215.0" font-family="Inter, Segoe UI, Arial, sans-serif" font-size="18" fill="#111827" text-anchor="middle" font-weight="400">or JSON</text>
+<line x1="200" y1="195" x2="238" y2="195" stroke="#4b5563" stroke-width="2.5" marker-end="url(#ah)"/>
+<line x1="420" y1="195" x2="458" y2="195" stroke="#4b5563" stroke-width="2.5" marker-end="url(#ah)"/>
+<line x1="670" y1="195" x2="708" y2="195" stroke="#4b5563" stroke-width="2.5" marker-end="url(#ah)"/>
+<line x1="880" y1="195" x2="918" y2="195" stroke="#4b5563" stroke-width="2.5" marker-end="url(#ah)"/>
+<text x="60" y="296" font-family="Inter, Segoe UI, Arial, sans-serif" font-size="22" fill="#111827" text-anchor="start" font-weight="700">Vision-language model</text>
+<text x="318" y="296" font-family="Inter, Segoe UI, Arial, sans-serif" font-size="20" fill="#4b5563" text-anchor="start" font-weight="400">one model reads the page image</text>
+<rect x="60" y="318" width="140" height="90" rx="10" fill="#ffffff" stroke="#d1d5db" stroke-width="2"/>
+<text x="130.0" y="357.0" font-family="Inter, Segoe UI, Arial, sans-serif" font-size="20" fill="#111827" text-anchor="middle" font-weight="400">Page</text>
+<text x="130.0" y="383.0" font-family="Inter, Segoe UI, Arial, sans-serif" font-size="18" fill="#111827" text-anchor="middle" font-weight="400">image</text>
+<rect x="300" y="318" width="520" height="90" rx="10" fill="#ffffff" stroke="#ec362e" stroke-width="2"/>
+<text x="560.0" y="357.0" font-family="Inter, Segoe UI, Arial, sans-serif" font-size="20" fill="#111827" text-anchor="middle" font-weight="700">Vision-language model</text>
+<text x="560.0" y="383.0" font-family="Inter, Segoe UI, Arial, sans-serif" font-size="18" fill="#4b5563" text-anchor="middle" font-weight="400">page in, structured text out</text>
+<rect x="920" y="318" width="220" height="90" rx="10" fill="#ffffff" stroke="#d1d5db" stroke-width="2"/>
+<text x="1030.0" y="357.0" font-family="Inter, Segoe UI, Arial, sans-serif" font-size="20" fill="#111827" text-anchor="middle" font-weight="400">Markdown</text>
+<text x="1030.0" y="383.0" font-family="Inter, Segoe UI, Arial, sans-serif" font-size="18" fill="#111827" text-anchor="middle" font-weight="400">or JSON</text>
+<line x1="200" y1="363" x2="298" y2="363" stroke="#4b5563" stroke-width="2.5" marker-end="url(#ah)"/>
+<line x1="820" y1="363" x2="918" y2="363" stroke="#4b5563" stroke-width="2.5" marker-end="url(#ah)"/>
+<rect x="60" y="452" width="1080" height="100" rx="10" fill="#ffffff" stroke="#2563eb" stroke-width="2"/>
+<text x="80" y="492" font-family="Inter, Segoe UI, Arial, sans-serif" font-size="20" fill="#111827" text-anchor="start" font-weight="700">Either way, finish with:</text>
+<text x="80" y="526" font-family="Inter, Segoe UI, Arial, sans-serif" font-size="20" fill="#111827" text-anchor="start" font-weight="400">schema validation, cross-checks such as totals, and a human queue for low-confidence fields</text>
+</svg>

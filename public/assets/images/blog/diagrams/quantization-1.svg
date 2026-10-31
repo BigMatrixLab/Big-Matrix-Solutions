@@ -1,0 +1,20 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 1200 492" width="1200" height="492" role="img">
+<rect x="1" y="1" width="1198" height="490" fill="#ffffff" rx="16" stroke="#e5e7eb" stroke-width="2"/>
+<title>Model weight memory by precision</title>
+<desc>Bar chart: a 70-billion-parameter model needs 280 GB of weights at FP32, 140 GB at FP16, 70 GB at INT8 and 35 GB at 4 bits.</desc>
+<defs><marker id="ah" viewBox="0 0 10 10" refX="9" refY="5" markerWidth="8" markerHeight="8" orient="auto-start-reverse"><path d="M0,0 L10,5 L0,10 z" fill="#4b5563"/></marker></defs>
+<text x="60" y="70" font-family="Inter, Segoe UI, Arial, sans-serif" font-size="30" fill="#111827" text-anchor="start" font-weight="700" xml:space="preserve">Weight memory for a 70B-parameter model</text>
+<text x="60" y="108" font-family="Inter, Segoe UI, Arial, sans-serif" font-size="20" fill="#4b5563" text-anchor="start" font-weight="400" xml:space="preserve">Parameters × bytes per parameter. Excludes KV cache, activations and scale overhead.</text>
+<text x="60" y="184" font-family="Inter, Segoe UI, Arial, sans-serif" font-size="20" fill="#111827" text-anchor="start" font-weight="700" xml:space="preserve">FP32  (4 bytes)</text>
+<rect x="330" y="150" width="700.0" height="48" rx="6" fill="#d1d5db" stroke="none" stroke-width="0"/>
+<text x="1046.0" y="183" font-family="Inter, Segoe UI, Arial, sans-serif" font-size="22" fill="#111827" text-anchor="start" font-weight="700" xml:space="preserve">280 GB</text>
+<text x="60" y="262" font-family="Inter, Segoe UI, Arial, sans-serif" font-size="20" fill="#111827" text-anchor="start" font-weight="700" xml:space="preserve">FP16 / BF16  (2 bytes)</text>
+<rect x="330" y="228" width="350.0" height="48" rx="6" fill="#d1d5db" stroke="none" stroke-width="0"/>
+<text x="696.0" y="261" font-family="Inter, Segoe UI, Arial, sans-serif" font-size="22" fill="#111827" text-anchor="start" font-weight="700" xml:space="preserve">140 GB</text>
+<text x="60" y="340" font-family="Inter, Segoe UI, Arial, sans-serif" font-size="20" fill="#111827" text-anchor="start" font-weight="700" xml:space="preserve">INT8  (1 byte)</text>
+<rect x="330" y="306" width="175.0" height="48" rx="6" fill="#2563eb" stroke="none" stroke-width="0"/>
+<text x="521.0" y="339" font-family="Inter, Segoe UI, Arial, sans-serif" font-size="22" fill="#111827" text-anchor="start" font-weight="700" xml:space="preserve">70 GB</text>
+<text x="60" y="418" font-family="Inter, Segoe UI, Arial, sans-serif" font-size="20" fill="#111827" text-anchor="start" font-weight="700" xml:space="preserve">4-bit  (0.5 bytes)</text>
+<rect x="330" y="384" width="87.5" height="48" rx="6" fill="#ec362e" stroke="none" stroke-width="0"/>
+<text x="433.5" y="417" font-family="Inter, Segoe UI, Arial, sans-serif" font-size="22" fill="#111827" text-anchor="start" font-weight="700" xml:space="preserve">35 GB</text>
+</svg>

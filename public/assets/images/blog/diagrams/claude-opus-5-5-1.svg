@@ -1,0 +1,41 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 1200 660" width="1200" height="660" font-family="Inter, Segoe UI, Arial, sans-serif">
+<rect x="0.5" y="0.5" width="1199" height="659" fill="#ffffff" rx="16" stroke="#e5e7eb"/>
+<title>Claude Opus 5.5 vs Opus 5 token prices</title>
+<desc>Grouped bar chart of price per million tokens. Input falls from $5 to $4, output from $25 to $20, cache reads from $0.50 to $0.20 and cache writes from $6.25 to $5.</desc>
+<text x="40" y="62" font-size="30" fill="#111827" font-weight="700">Claude Opus 5.5 vs Opus 5: price per 1M tokens</text>
+<text x="40" y="98" font-size="20" fill="#4b5563">Anthropic list prices at launch, September 22, 2026</text>
+<rect x="40" y="124" width="20" height="20" fill="#d1d5db" rx="4"/>
+<text x="70" y="140" font-size="20" fill="#111827">Claude Opus 5</text>
+<rect x="253" y="124" width="20" height="20" fill="#ec362e" rx="4"/>
+<text x="283" y="140" font-size="20" fill="#111827">Claude Opus 5.5</text>
+<text x="40" y="222" font-size="22" fill="#111827" font-weight="600">Input</text>
+<rect x="260" y="180" width="128.0" height="30" fill="#d1d5db" rx="4"/>
+<text x="400.0" y="203" font-size="20" fill="#4b5563">$5</text>
+<rect x="260" y="218" width="102.4" height="30" fill="#ec362e" rx="4"/>
+<text x="374.4" y="241" font-size="20" fill="#111827" font-weight="600">$4</text>
+<rect x="1050" y="198" width="110" height="36" fill="#f3f4f6" rx="18"/>
+<text x="1105" y="223" font-size="20" fill="#ec362e" font-weight="700" text-anchor="middle">−20%</text>
+<text x="40" y="322" font-size="22" fill="#111827" font-weight="600">Output</text>
+<rect x="260" y="280" width="640.0" height="30" fill="#d1d5db" rx="4"/>
+<text x="912.0" y="303" font-size="20" fill="#4b5563">$25</text>
+<rect x="260" y="318" width="512.0" height="30" fill="#ec362e" rx="4"/>
+<text x="784.0" y="341" font-size="20" fill="#111827" font-weight="600">$20</text>
+<rect x="1050" y="298" width="110" height="36" fill="#f3f4f6" rx="18"/>
+<text x="1105" y="323" font-size="20" fill="#ec362e" font-weight="700" text-anchor="middle">−20%</text>
+<text x="40" y="422" font-size="22" fill="#111827" font-weight="600">Cache reads</text>
+<rect x="260" y="380" width="12.8" height="30" fill="#d1d5db" rx="4"/>
+<text x="284.8" y="403" font-size="20" fill="#4b5563">$0.50</text>
+<rect x="260" y="418" width="5.1" height="30" fill="#ec362e" rx="4"/>
+<text x="277.1" y="441" font-size="20" fill="#111827" font-weight="600">$0.20</text>
+<rect x="1050" y="398" width="110" height="36" fill="#f3f4f6" rx="18"/>
+<text x="1105" y="423" font-size="20" fill="#ec362e" font-weight="700" text-anchor="middle">−60%</text>
+<text x="40" y="522" font-size="22" fill="#111827" font-weight="600">Cache writes</text>
+<rect x="260" y="480" width="160.0" height="30" fill="#d1d5db" rx="4"/>
+<text x="432.0" y="503" font-size="20" fill="#4b5563">$6.25</text>
+<rect x="260" y="518" width="128.0" height="30" fill="#ec362e" rx="4"/>
+<text x="400.0" y="541" font-size="20" fill="#111827" font-weight="600">$5</text>
+<rect x="1050" y="498" width="110" height="36" fill="#f3f4f6" rx="18"/>
+<text x="1105" y="523" font-size="20" fill="#ec362e" font-weight="700" text-anchor="middle">−20%</text>
+<line x1="40" y1="590" x2="1160" y2="590" stroke="#f3f4f6" stroke-width="2"/>
+<text x="40" y="628" font-size="20" fill="#4b5563">Fast mode is listed separately at $8 input and $40 output per 1M tokens.</text>
+</svg>

@@ -1,108 +1,148 @@
 ---
-id: "38"
-slug: "grok-bot-always-on-agents-with-their-own-computers"
-title: "Grok Bot Gives Each Agent Its Own Computer. The Benchmarks Say That Is the Hard Part."
+id: "55"
+slug: "spacexai-and-cursor-launch-grok-bot-always-on-ai-teammates"
+title: "SpaceXAI and Cursor Launch Grok Bot: Always-On AI Teammates in the Cloud"
+author: "Mera"
+admin: "Mera"
 comments: "0"
-image: "/assets/images/blog/grok-bot.webp"
+image: "/assets/images/blog/grok-bot-launch.webp"
 category: "Agentic AI"
-desc: "SpaceXAI's always-on teammates sign into your real tools and work while you sleep. The most ambitious agent product yet shipped, and the timing is awkward."
-date: "Aug 31, 2026"
-tags: ["Grok", "SpaceXAI", "Agentic AI", "Computer Use"]
+desc: "SpaceXAI and Cursor open an early beta of Grok Bot, AI teammates that sign into your tools on their own cloud computer and keep working after you close your laptop."
+date: "Aug 11, 2026"
+tags: ["Grok Bot", "SpaceXAI", "Cursor", "Agentic AI", "AI Agents"]
 ---
 
-# Grok Bot Gives Each Agent Its Own Computer. The Benchmarks Say That Is the Hard Part.
 
-SpaceXAI launched **Grok Bot on August 11, 2026**, as a beta. The pitch is the most ambitious framing of agentic AI anyone has shipped as a product: always-on AI agents, each with its own cloud computer, signing into your existing tools and finishing multi-step jobs without supervision.
+# 🤖 SpaceXAI and Cursor Launch Grok Bot: Always-On AI Teammates in the Cloud
 
-SpaceXAI's line on it is memorable and gets at something real: *"There is a huge difference between 90% done and 100% done… Grok Bot can finish the swing."*
+✨ Give it a task, shut your laptop, and come back to work that is actually done, in the actual tool.
 
-One naming note, since coverage from around the launch is inconsistent about it. SpaceX absorbed xAI in an all-stock deal on **February 2, 2026**, and the combined entity rebranded as **SpaceXAI on July 6**, a month before Grok Bot shipped. The product brand did not change: Grok, the apps, SuperGrok and the developer API all keep the Grok name. Contemporaneous reporting still says "xAI" because much of it predates the rebrand.
 
-Take the pitch seriously. Then put it next to what the benchmarks currently say about long-horizon computer use.
+## 🌐 Introduction
 
-## What it actually is
+SpaceXAI and Cursor today launched **Grok Bot** in early beta. They describe it as **"AI teammates you can give real work to."** Grok Bot isn't a chat window that hands you a draft. Each Bot works on a **persistent cloud computer** with a browser, a filesystem and a terminal. It signs into the tools you already use and finishes jobs end to end.
 
-The design decisions here are more interesting than the marketing.
+The launch post says Bots "only come back when something needs your approval." You work with one the way you would with a colleague: give it a task, close your computer, and pick the thread back up later from desktop or iOS.
 
-**Each bot gets a dedicated cloud instance.** Not a sandbox that spins up per task, but a persistent machine that belongs to that agent. Work continues while you are offline.
+> 💡 "Most AI gets you almost there. Grok Bot can finish the swing."
+> — Roman, Product, SpaceXAI
 
-**It works through applications, not APIs.** Email, websites, CRMs: the bot operates standard software the way a person does, which means no integration work and no dependency on a vendor exposing an API. This is computer use, productised.
+## 🏢 Who Is SpaceXAI?
 
-**It learns workflows by observation.** You show it once rather than specifying it.
+The name is new, so here is the short version:
 
-**It returns for approval rather than asking at each step.** This is the key product decision. Most agent tools interrupt constantly, which destroys the value of delegation. Grok Bot batches the interruption to the end.
+| Date | What happened |
+|------|---------------|
+| **Feb 2, 2026** | SpaceX acquired xAI, the company behind the Grok models |
+| **Jun 2026** | SpaceX announced a deal to acquire **Cursor**, the AI coding company |
+| **Jul 6, 2026** | xAI rebranded as **SpaceXAI** and announced: "We are now @SpaceXAI." |
 
-Availability is bundled rather than sold standalone:
+Grok Bot is the first product the two teams have shipped together. They are launching it while the Cursor merger is still being completed. The Grok product name hasn't changed. Only the parent company's brand has.
 
-| Tier | Price |
-|---|---|
-| SuperGrok Heavy | Included at SpaceXAI's top tier |
-| Cursor Ultra | $200/month |
-| Cursor Teams Premium | $120/seat/month, adds team features and SSO |
+## 🎯 What Grok Bot Actually Does
 
-Desktop including a Linux build, plus iOS, with Android coming and an enterprise waitlist.
+According to the launch announcement, Grok Bot started as an internal prototype and spread quickly across the company. Teams there built Bots for **sales outbound, marketing campaigns, office operations and bug fixes**.
 
-## Why the architecture is right
+### 1. 🖥️ A Computer of Its Own
 
-Three of those choices are, I think, straightforwardly correct, and they address failures that have limited every agent product so far.
+Bots run on a cloud computer that keeps their files and logins, so a job doesn't stop when you step away. The bot uses **connectors and MCP where they exist** and falls back to **computer use everywhere else**. That means it can also work on platforms that have no clean API, and the result lands in the real tool instead of a draft you have to copy across.
 
-**The dedicated computer solves state.** The biggest failure mode in long-horizon agent work is losing track of what has already happened. An agent with a persistent machine has a filesystem, a browser with sessions, and a place to keep notes, all of it state that lives outside the context window and survives compaction. A much better substrate than a screenshot plus whatever fit in the prompt.
+![Diagram of Grok Bot: you assign tasks to Bots that each have a screen on a shared persistent cloud computer and reach your tools via connectors, MCP or computer use](/assets/images/blog/diagrams/grok-bot-1.svg)
 
-**Working through GUIs is the only universal integration.** Every application has a user interface. Perhaps a fifth have a usable API. An enormous amount of real business process lives in software that will never get an API, and an agent that drives a GUI needs nothing from the vendor.
+*Bots share one persistent cloud computer, each with its own screen, and use connectors or MCP where they exist and computer use elsewhere. Diagram: Big Matrix Solutions, based on [SpaceXAI](https://x.ai/news/introducing-grok-bot).*
 
-**Batched approval is what makes delegation real.** An agent that asks permission every thirty seconds is a slower way of doing the work yourself. Going away and coming back with something to review is the interaction model that actually saves time, the same shape that made asynchronous coding agents work.
+### 2. 💬 Managed Like a Teammate
 
-## Why the timing is awkward
+You message a Bot from your phone or desktop, the same way you would text someone on your team. SpaceXAI says Bots "keep context on how you like work done," so they get better the more you work with them.
 
-Now the uncomfortable part, and it is not a criticism of SpaceXAI specifically.
+### 3. 🎓 Learns by Watching
 
-The benchmark that measures exactly this capability is OSWorld 2.0: long-horizon computer use, where the median task takes a human 1.6 hours. Frontier systems were scoring around **20.6 percent** on it earlier this year. GPT-6 Astra, released this month, posts **72.6 percent**, which is a large jump and still not a number you would want between you and an unsupervised multi-hour task on your real accounts.
+Show a Bot a process once and it can learn the routine and run it on its own after that.
 
-The failure modes on long-horizon computer use are well documented and they are all live here:
+### 4. 🤝 Multi-Bot Teams
 
-- **Errors compound.** A 200-step task at 99 percent per-step reliability succeeds about 13 percent of the time. Long-horizon success is about detecting and recovering from bad steps, and detection is the weak part. The agent frequently does not notice a click missed.
-- **Grounding errors are not no-ops.** A misclick activates something else. Over hundreds of steps a small grounding error rate means several unintended actions, each of which the agent then tries to recover from.
-- **Modal interfaces trap agents.** A dialog opens and clicks get swallowed. A form silently rejects input. Humans read these instantly; agents infer them from pixels.
-- **Recovery attempts can be destructive.** An agent stuck on a file operation may try deleting and recreating. Locally reasonable, occasionally catastrophic.
+| Capability | How it works |
+|------------|--------------|
+| **🖥️ Shared computer** | All your Bots share one cloud computer, and each gets its own screen |
+| **⚡ Parallel work** | Several Bots can run at the same time |
+| **💬 Bot-to-bot messaging** | Bots message each other and share context in threads and group chats |
+| **🔁 Handoffs** | Bots can pass ownership of a task between themselves |
 
-None of this means the product does not work. Realistically, expect short bounded tasks to work well and long unsupervised ones to work sometimes. Which is exactly why it shipped as a beta.
+> **Example from SpaceXAI's own teams:**
+> Sales used Bots for outbound research, demo prep and pipeline management. Operations used them for CRM maintenance and onboarding new hires. Engineering used them to reproduce bugs.
 
-## The security surface is the real question
+## 📦 Availability and Access
 
-Here is what I would want answered before pointing this at anything that matters.
+This is an early beta with limited access:
 
-An always-on agent with its own computer, signed into your email and CRM, reading content from the outside world, is a close-to-ideal target for prompt injection. The structural problem is now well understood: **once a model is wired to tools, prompt injection stops being a content problem and becomes a code execution primitive.**
+| Item | Launch-day detail |
+|------|-------------------|
+| **📅 Launch date** | August 11, 2026 (early beta) |
+| **📱 Platforms** | Desktop and iOS. AI Weekly reports Mac, Windows and Linux, with Android to follow |
+| **🔑 Eligible plans** | SuperGrok Heavy, Cursor Ultra, Cursor Teams Premium |
+| **🏢 Enterprise** | Waitlist only |
 
-Consider the chain. The bot reads your inbox as part of a task. An email contains text addressed to an automated assistant. The bot cannot reliably distinguish instructions from its operator from text it happened to read while working. It has a browser with your authenticated sessions and a machine with network access.
+According to press reports, these plans currently cost:
 
-This is not hypothetical. Prompt injection remains the leading cause of agentic AI security failures in production, and coding agents, the most-deployed agent category, accounted for 28 of 53 agentic projects tracked by OWASP alongside CVEs rated as high as CVSS 9.8. Research on computer-use agents has separately found that entirely benign user instructions can expose critical vulnerabilities, because the danger is in the execution path rather than the request.
+| Plan | Reported price |
+|------|----------------|
+| **Cursor Teams Premium** | $120 per seat per month |
+| **Cursor Ultra** | $200 per month |
+| **SuperGrok Heavy** | $300 per month |
 
-The defences that work are architectural rather than prompt-level:
+Cursor Pro and Pro+ subscribers aren't included in this first beta wave.
 
-- **Least privilege on the accounts the bot signs into.** A dedicated account with scoped access, not your primary credentials.
-- **Separation of the read and write planes.** Reading untrusted content and performing privileged actions should not be the same session with the same context.
-- **Approval on irreversible actions.** Batched approval is good for productivity and needs a carve-out for anything hard to undo: sending external email, moving money, deleting records, changing permissions.
-- **Egress control.** A great deal of injection payoff depends on getting data out.
-- **Full trajectory logging.** Injection frequently succeeds without producing an obviously wrong result: the agent does the task *and* something extra. Reviewing only the outcome misses it.
+## 🛠️ What It Means for Teams and Developers
 
-SpaceXAI's launch material, as far as I can see, does not address governance frameworks for any of this. For a beta bundled into consumer-tier subscriptions, that is a gap worth closing before enterprise rollout.
+For a software consultancy like ours, Grok Bot changes the question from *"what can the model write?"* to *"what can the agent finish?"* Here is how we see it.
 
-## Who it is actually for
+### ✅ Where it fits
 
-SpaceXAI positions Grok Bot at work that typically requires entry-level or operations staff. That framing is commercially clear and worth examining, because it maps onto a labour question that is already live.
+- **Glue work across SaaS tools.** CRM updates, onboarding checklists, research and prep for demos. This is repetitive, multi-app work that usually has no single API, and it matches the work SpaceXAI's own teams handed to Bots.
+- **Bug reproduction.** A Bot with a browser, a terminal and a filesystem can work through the steps to reproduce a bug while engineers do other things.
+- **Long-running jobs.** The cloud computer persists, so overnight or multi-hour tasks no longer depend on someone's laptop staying open.
 
-The tasks in question (data entry across systems, moving information between tools that do not integrate, following a documented multi-step process, chasing something to completion) are real work that consumes real hours. They are also exactly the bundle that used to justify entry-level hiring, and entry-level engineering postings have already fallen roughly 67 percent from their 2022 peak.
+### ⚠️ What to check before you roll it out
 
-The pattern from adjacent tooling is instructive though. Where AI has landed successfully, the bottleneck has moved rather than disappeared: generation capacity stopped being the constraint and review capacity became it. A bot that completes twenty operational tasks overnight produces twenty things somebody has to check, and checking work you did not do is harder than checking your own.
+Press coverage on launch day pointed out several things the announcement doesn't cover. Plan around them:
 
-So the realistic near-term shape is probably not fewer operations people. It is operations people supervising a larger volume of automated work. A different job, needing different skills, and one nobody is currently training for.
+| Open question | Why it matters |
+|---------------|----------------|
+| **🔐 Credential handling** | Bots sign into real accounts. Implicator notes the launch materials give no details on how credentials are stored |
+| **💸 Overage costs** | No published rates yet for usage beyond what each plan includes |
+| **📏 Reliability data** | No independent benchmarks of reliability or recovery from failures have been published |
+| **🧩 Supported apps and Bot limits** | AI Weekly notes there is no list of supported apps and no stated cap on parallel Bots |
 
-## The read
+> **Our recommendation:**
+> - ✅ Start with one low-risk, well-understood workflow, ideally one with an approval step
+> - ✅ Give Bots dedicated, least-privilege accounts, not your personal admin logins
+> - ✅ Decide who reviews the Bot's output before anything reaches a customer
+> - ✅ Write down which corporate systems a Bot may touch
 
-Grok Bot is the most architecturally serious agent product shipped so far. Persistent per-agent machines, GUI-native operation, and batched approval are all the right answers to problems that have limited every previous attempt.
+### 🛡️ A note for IT and security leads
 
-It is also arriving at a moment when the benchmark for its core capability sits well below what unsupervised operation on real accounts would require, and with a security surface that the launch material does not address.
+The beta is sold through premium individual and team subscriptions. That means power users can start running autonomous agents with access to company systems before IT has approved anything. AI Weekly flagged exactly this risk. Policies on agents that hold their own logins are better written now than after the fact.
 
-If you want to try it, the sensible version is narrow: a dedicated account with scoped permissions, bounded tasks rather than open-ended workflows, hard approval gates on anything irreversible, and someone reading the trajectory logs. That is a genuinely useful tool.
+## ✨ Conclusion
 
-Pointing it at your actual inbox with your actual credentials and going to bed is a different proposition, and the research on injection says do not.
+Grok Bot is SpaceXAI and Cursor's bet that the next step in agentic AI is **finishing** work, not just helping with it. A persistent cloud computer, sign-ins to real tools, learning by demonstration and teams of Bots working together make up a credible design for always-on digital coworkers. For now it's an early beta on premium plans, and many operational details are still unpublished. Teams that pilot it carefully, with clear approval steps and tightly scoped access, will be best placed when access opens up.
+
+> 💭 The question is shifting from *"Can AI draft this?"* to *"Can AI ship this, in the real tool, while I'm offline?"*
+
+---
+
+**Tags**: #GrokBot #SpaceXAI #Cursor #AgenticAI #AIAgents #AITeammates
+
+**Sources**:
+- [Introducing Grok Bot — SpaceXAI](https://x.ai/news/introducing-grok-bot)
+- [Introducing Grok Bot — Cursor Community Forum announcement](https://forum.cursor.com/t/introducing-grok-bot/168053)
+- [Grok Bot overview — SpaceXAI docs](https://docs.x.ai/grok-bot/overview)
+- [SpaceXAI and Cursor ship Grok Bot beta — AI Weekly](https://aiweekly.co/node/9806)
+- [SpaceXAI Grok Bot Starts at $120 a Seat — Implicator](https://www.implicator.ai/spacexai-grok-bot-starts-at-120-a-seat/)
+- [Grok Bot Launches Early Beta — Ultrathink](https://ultrathink.ai/news/grok-bot-early-beta-cursor-spacexai)
+- [SpaceX Unveils New xAI Logo — Not a Tesla App](https://www.notateslaapp.com/news/4410/spacex-unveils-new-xai-logo)
+- [SpaceXAI — Wikipedia](https://en.wikipedia.org/wiki/SpaceXAI)
+
+**Media credits**:
+- Hero image: Grok Bot launch artwork — [Cursor](https://forum.cursor.com/t/introducing-grok-bot/168053)
+- Diagram: how Grok Bot works — Big Matrix Solutions, based on [SpaceXAI](https://x.ai/news/introducing-grok-bot)

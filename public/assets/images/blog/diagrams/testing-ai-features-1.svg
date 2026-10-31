@@ -1,0 +1,58 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 1200 640" width="1200" height="640" role="img" aria-labelledby="t d" font-family="Inter, Segoe UI, Arial, sans-serif">
+  <title id="t">pass@k and pass^k for a 75 percent per-trial success rate</title>
+  <desc id="d">Line chart over k from 1 to 10 trials. pass@k, the chance at least one trial succeeds, rises from 75 percent towards 100 percent. pass^k, the chance every trial succeeds, falls from 75 percent to 42 percent at three trials and about 6 percent at ten.</desc>
+  <rect x="0" y="0" width="1200" height="640" fill="#ffffff" rx="16" stroke="#e5e7eb"/>
+  <text x="600" y="50" text-anchor="middle" font-size="28" font-weight="700" fill="#111827">Same feature, two very different numbers</text>
+  <text x="600" y="84" text-anchor="middle" font-size="18" fill="#4b5563">Per-trial success rate 75%. k = number of trials.</text>
+
+  <!-- plot area: x 140..1040 for k=1..10 (100px per step), y 520 (0%) .. 120 (100%) -->
+  <g stroke="#d1d5db" stroke-width="1">
+    <line x1="140" y1="120" x2="1040" y2="120"/>
+    <line x1="140" y1="220" x2="1040" y2="220"/>
+    <line x1="140" y1="320" x2="1040" y2="320"/>
+    <line x1="140" y1="420" x2="1040" y2="420"/>
+  </g>
+  <line x1="140" y1="520" x2="1040" y2="520" stroke="#4b5563" stroke-width="2"/>
+  <line x1="140" y1="120" x2="140" y2="520" stroke="#4b5563" stroke-width="2"/>
+
+  <g font-size="18" fill="#4b5563" text-anchor="end">
+    <text x="128" y="126">100%</text>
+    <text x="128" y="226">75%</text>
+    <text x="128" y="326">50%</text>
+    <text x="128" y="426">25%</text>
+    <text x="128" y="526">0%</text>
+  </g>
+  <g font-size="18" fill="#4b5563" text-anchor="middle">
+    <text x="140" y="552">1</text>
+    <text x="240" y="552">2</text>
+    <text x="340" y="552">3</text>
+    <text x="440" y="552">4</text>
+    <text x="540" y="552">5</text>
+    <text x="640" y="552">6</text>
+    <text x="740" y="552">7</text>
+    <text x="840" y="552">8</text>
+    <text x="940" y="552">9</text>
+    <text x="1040" y="552">10</text>
+    <text x="590" y="590">trials (k)</text>
+  </g>
+
+  <!-- pass@k = 1 - 0.25^k -->
+  <polyline fill="none" stroke="#2563eb" stroke-width="4" points="140,220 240,145 340,126.3 440,121.6 540,120.4 640,120.1 740,120 840,120 940,120 1040,120"/>
+  <!-- pass^k = 0.75^k -->
+  <polyline fill="none" stroke="#ec362e" stroke-width="4" points="140,220 240,295 340,351.2 440,393.4 540,425.1 640,448.8 740,466.6 840,480 940,489.9 1040,497.5"/>
+
+  <circle cx="340" cy="351.2" r="7" fill="#ec362e"/>
+  <text x="326" y="392" font-size="18" fill="#111827" text-anchor="end">3 trials:</text>
+  <text x="326" y="416" font-size="18" fill="#111827" text-anchor="end">0.75³ ≈ 42%</text>
+  <circle cx="1040" cy="497.5" r="7" fill="#ec362e"/>
+  <text x="1028" y="460" font-size="18" fill="#111827" text-anchor="end">10 trials: ≈ 6%</text>
+
+  <g font-size="20" font-weight="600">
+    <rect x="1060" y="150" width="18" height="18" fill="#2563eb"/>
+    <text x="1084" y="166" fill="#111827">pass@k</text>
+    <text x="1060" y="192" font-size="18" font-weight="400" fill="#4b5563">at least one</text>
+    <rect x="1060" y="380" width="18" height="18" fill="#ec362e"/>
+    <text x="1084" y="396" fill="#111827">pass^k</text>
+    <text x="1060" y="422" font-size="18" font-weight="400" fill="#4b5563">every one</text>
+  </g>
+</svg>

@@ -1,0 +1,29 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 1200 690" width="1200" height="690" role="img">
+<rect x="1" y="1" width="1198" height="688" fill="#ffffff" rx="16" stroke="#e5e7eb" stroke-width="2"/>
+<title>How AI triage delivery affects radiology turnaround</title>
+<desc>Five study results. Pop-up widgets and worklist flags alone did not change wait or turnaround time for intracranial haemorrhage (O&#x27;Neill 2021) and a prospective pop-up deployment showed 147.1 vs 149.9 minutes (Savage 2024). Reprioritising the worklist reduced wait time for flagged head CTs to 12.0 from 15.5 minutes and cut PE-positive CTPA turnaround from 59.9 to 47.6 minutes (Batra 2023).</desc>
+<defs><marker id="ah" viewBox="0 0 10 10" refX="9" refY="5" markerWidth="8" markerHeight="8" orient="auto-start-reverse"><path d="M0,0 L10,5 L0,10 z" fill="#4b5563"/></marker></defs>
+<text x="60" y="70" font-family="Inter, Segoe UI, Arial, sans-serif" font-size="30" fill="#111827" text-anchor="start" font-weight="700" xml:space="preserve">Same flag, different delivery, different result</text>
+<text x="60" y="106" font-family="Inter, Segoe UI, Arial, sans-serif" font-size="20" fill="#4b5563" text-anchor="start" font-weight="400" xml:space="preserve">Published before/after and prospective studies of AI triage in radiology</text>
+<rect x="60" y="140" width="1080" height="84" rx="10" fill="#f3f4f6" stroke="#d1d5db" stroke-width="2"/>
+<text x="84" y="176" font-family="Inter, Segoe UI, Arial, sans-serif" font-size="22" fill="#111827" text-anchor="start" font-weight="700" xml:space="preserve">Pop-up widget on a side monitor</text>
+<text x="84" y="206" font-family="Inter, Segoe UI, Arial, sans-serif" font-size="18" fill="#4b5563" text-anchor="start" font-weight="400" xml:space="preserve">Head CT, ICH (O&#x27;Neill 2021)</text>
+<text x="1116" y="190" font-family="Inter, Segoe UI, Arial, sans-serif" font-size="20" fill="#4b5563" text-anchor="end" font-weight="700" xml:space="preserve">No effect on wait or turnaround</text>
+<rect x="60" y="240" width="1080" height="84" rx="10" fill="#f3f4f6" stroke="#d1d5db" stroke-width="2"/>
+<text x="84" y="276" font-family="Inter, Segoe UI, Arial, sans-serif" font-size="22" fill="#111827" text-anchor="start" font-weight="700" xml:space="preserve">Flag shown in the worklist</text>
+<text x="84" y="306" font-family="Inter, Segoe UI, Arial, sans-serif" font-size="18" fill="#4b5563" text-anchor="start" font-weight="400" xml:space="preserve">Head CT, ICH (O&#x27;Neill 2021)</text>
+<text x="1116" y="290" font-family="Inter, Segoe UI, Arial, sans-serif" font-size="20" fill="#4b5563" text-anchor="end" font-weight="700" xml:space="preserve">No effect on wait or turnaround</text>
+<rect x="60" y="340" width="1080" height="84" rx="10" fill="#ffffff" stroke="#ec362e" stroke-width="2"/>
+<text x="84" y="376" font-family="Inter, Segoe UI, Arial, sans-serif" font-size="22" fill="#111827" text-anchor="start" font-weight="700" xml:space="preserve">Worklist reprioritised</text>
+<text x="84" y="406" font-family="Inter, Segoe UI, Arial, sans-serif" font-size="18" fill="#4b5563" text-anchor="start" font-weight="400" xml:space="preserve">Head CT, ICH (O&#x27;Neill 2021)</text>
+<text x="1116" y="390" font-family="Inter, Segoe UI, Arial, sans-serif" font-size="20" fill="#ec362e" text-anchor="end" font-weight="700" xml:space="preserve">Wait 12.0 min flagged vs 15.5 min</text>
+<rect x="60" y="440" width="1080" height="84" rx="10" fill="#ffffff" stroke="#ec362e" stroke-width="2"/>
+<text x="84" y="476" font-family="Inter, Segoe UI, Arial, sans-serif" font-size="22" fill="#111827" text-anchor="start" font-weight="700" xml:space="preserve">Worklist reprioritised</text>
+<text x="84" y="506" font-family="Inter, Segoe UI, Arial, sans-serif" font-size="18" fill="#4b5563" text-anchor="start" font-weight="400" xml:space="preserve">CT pulmonary angiography (Batra 2023)</text>
+<text x="1116" y="490" font-family="Inter, Segoe UI, Arial, sans-serif" font-size="20" fill="#ec362e" text-anchor="end" font-weight="700" xml:space="preserve">PE+ turnaround 59.9 to 47.6 min</text>
+<rect x="60" y="540" width="1080" height="84" rx="10" fill="#f3f4f6" stroke="#d1d5db" stroke-width="2"/>
+<text x="84" y="576" font-family="Inter, Segoe UI, Arial, sans-serif" font-size="22" fill="#111827" text-anchor="start" font-weight="700" xml:space="preserve">Pop-up widget, prospective</text>
+<text x="84" y="606" font-family="Inter, Segoe UI, Arial, sans-serif" font-size="18" fill="#4b5563" text-anchor="start" font-weight="400" xml:space="preserve">Head CT, ICH (Savage 2024)</text>
+<text x="1116" y="590" font-family="Inter, Segoe UI, Arial, sans-serif" font-size="20" fill="#4b5563" text-anchor="end" font-weight="700" xml:space="preserve">Turnaround 147.1 vs 149.9 min, ns</text>
+<text x="60" y="660" font-family="Inter, Segoe UI, Arial, sans-serif" font-size="20" fill="#4b5563" text-anchor="start" font-weight="400" xml:space="preserve">Red: the AI changed reading order. Grey: it only notified.</text>
+</svg>

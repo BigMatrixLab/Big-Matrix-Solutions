@@ -1,0 +1,113 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 1200 654" width="1200" height="654" role="img">
+<rect x="1" y="1" width="1198" height="652" fill="#ffffff" rx="16" stroke="#e5e7eb" stroke-width="2"/>
+<title>Round-to-nearest quantization and outliers</title>
+<desc>Worked example: eight weights quantized to 4-bit integers with a scale of 0.30 restore with small errors. Replacing one weight with an outlier of 8.40 raises the scale to 1.20 and four small weights round to zero.</desc>
+<defs><marker id="ah" viewBox="0 0 10 10" refX="9" refY="5" markerWidth="8" markerHeight="8" orient="auto-start-reverse"><path d="M0,0 L10,5 L0,10 z" fill="#4b5563"/></marker></defs>
+<text x="60" y="70" font-family="Inter, Segoe UI, Arial, sans-serif" font-size="30" fill="#111827" text-anchor="start" font-weight="700" xml:space="preserve">Round-to-nearest 4-bit quantization of one group</text>
+<text x="60" y="108" font-family="Consolas, Menlo, monospace" font-size="20" fill="#4b5563" text-anchor="start" font-weight="400" xml:space="preserve">scale = max|w| / 7;   q = round(w / scale);   restored = q × scale</text>
+<text x="60" y="160" font-family="Inter, Segoe UI, Arial, sans-serif" font-size="22" fill="#111827" text-anchor="start" font-weight="700" xml:space="preserve">Normal group: scale = 2.10 / 7 = 0.30</text>
+<text x="60" y="212" font-family="Inter, Segoe UI, Arial, sans-serif" font-size="20" fill="#4b5563" text-anchor="start" font-weight="400" xml:space="preserve">weights</text>
+<rect x="270" y="178" width="104" height="50" rx="8" fill="#ffffff" stroke="#d1d5db" stroke-width="2"/>
+<text x="322" y="211" font-family="Consolas, Menlo, monospace" font-size="20" fill="#111827" text-anchor="middle" font-weight="400" xml:space="preserve">0.42</text>
+<rect x="382" y="178" width="104" height="50" rx="8" fill="#ffffff" stroke="#d1d5db" stroke-width="2"/>
+<text x="434" y="211" font-family="Consolas, Menlo, monospace" font-size="20" fill="#111827" text-anchor="middle" font-weight="400" xml:space="preserve">-1.37</text>
+<rect x="494" y="178" width="104" height="50" rx="8" fill="#ffffff" stroke="#d1d5db" stroke-width="2"/>
+<text x="546" y="211" font-family="Consolas, Menlo, monospace" font-size="20" fill="#111827" text-anchor="middle" font-weight="400" xml:space="preserve">0.08</text>
+<rect x="606" y="178" width="104" height="50" rx="8" fill="#ffffff" stroke="#d1d5db" stroke-width="2"/>
+<text x="658" y="211" font-family="Consolas, Menlo, monospace" font-size="20" fill="#111827" text-anchor="middle" font-weight="400" xml:space="preserve">0.91</text>
+<rect x="718" y="178" width="104" height="50" rx="8" fill="#ffffff" stroke="#d1d5db" stroke-width="2"/>
+<text x="770" y="211" font-family="Consolas, Menlo, monospace" font-size="20" fill="#111827" text-anchor="middle" font-weight="400" xml:space="preserve">-0.55</text>
+<rect x="830" y="178" width="104" height="50" rx="8" fill="#ffffff" stroke="#d1d5db" stroke-width="2"/>
+<text x="882" y="211" font-family="Consolas, Menlo, monospace" font-size="20" fill="#111827" text-anchor="middle" font-weight="400" xml:space="preserve">2.10</text>
+<rect x="942" y="178" width="104" height="50" rx="8" fill="#ffffff" stroke="#d1d5db" stroke-width="2"/>
+<text x="994" y="211" font-family="Consolas, Menlo, monospace" font-size="20" fill="#111827" text-anchor="middle" font-weight="400" xml:space="preserve">-0.19</text>
+<rect x="1054" y="178" width="104" height="50" rx="8" fill="#ffffff" stroke="#d1d5db" stroke-width="2"/>
+<text x="1106" y="211" font-family="Consolas, Menlo, monospace" font-size="20" fill="#111827" text-anchor="middle" font-weight="400" xml:space="preserve">0.66</text>
+<text x="60" y="270" font-family="Inter, Segoe UI, Arial, sans-serif" font-size="20" fill="#4b5563" text-anchor="start" font-weight="400" xml:space="preserve">q (int4)</text>
+<rect x="270" y="236" width="104" height="50" rx="8" fill="#f3f4f6" stroke="#d1d5db" stroke-width="2"/>
+<text x="322" y="269" font-family="Consolas, Menlo, monospace" font-size="20" fill="#111827" text-anchor="middle" font-weight="400" xml:space="preserve">1</text>
+<rect x="382" y="236" width="104" height="50" rx="8" fill="#f3f4f6" stroke="#d1d5db" stroke-width="2"/>
+<text x="434" y="269" font-family="Consolas, Menlo, monospace" font-size="20" fill="#111827" text-anchor="middle" font-weight="400" xml:space="preserve">-5</text>
+<rect x="494" y="236" width="104" height="50" rx="8" fill="#f3f4f6" stroke="#d1d5db" stroke-width="2"/>
+<text x="546" y="269" font-family="Consolas, Menlo, monospace" font-size="20" fill="#111827" text-anchor="middle" font-weight="400" xml:space="preserve">0</text>
+<rect x="606" y="236" width="104" height="50" rx="8" fill="#f3f4f6" stroke="#d1d5db" stroke-width="2"/>
+<text x="658" y="269" font-family="Consolas, Menlo, monospace" font-size="20" fill="#111827" text-anchor="middle" font-weight="400" xml:space="preserve">3</text>
+<rect x="718" y="236" width="104" height="50" rx="8" fill="#f3f4f6" stroke="#d1d5db" stroke-width="2"/>
+<text x="770" y="269" font-family="Consolas, Menlo, monospace" font-size="20" fill="#111827" text-anchor="middle" font-weight="400" xml:space="preserve">-2</text>
+<rect x="830" y="236" width="104" height="50" rx="8" fill="#f3f4f6" stroke="#d1d5db" stroke-width="2"/>
+<text x="882" y="269" font-family="Consolas, Menlo, monospace" font-size="20" fill="#111827" text-anchor="middle" font-weight="400" xml:space="preserve">7</text>
+<rect x="942" y="236" width="104" height="50" rx="8" fill="#f3f4f6" stroke="#d1d5db" stroke-width="2"/>
+<text x="994" y="269" font-family="Consolas, Menlo, monospace" font-size="20" fill="#111827" text-anchor="middle" font-weight="400" xml:space="preserve">-1</text>
+<rect x="1054" y="236" width="104" height="50" rx="8" fill="#f3f4f6" stroke="#d1d5db" stroke-width="2"/>
+<text x="1106" y="269" font-family="Consolas, Menlo, monospace" font-size="20" fill="#111827" text-anchor="middle" font-weight="400" xml:space="preserve">2</text>
+<text x="60" y="328" font-family="Inter, Segoe UI, Arial, sans-serif" font-size="20" fill="#4b5563" text-anchor="start" font-weight="400" xml:space="preserve">restored</text>
+<rect x="270" y="294" width="104" height="50" rx="8" fill="#ffffff" stroke="#d1d5db" stroke-width="2"/>
+<text x="322" y="327" font-family="Consolas, Menlo, monospace" font-size="20" fill="#111827" text-anchor="middle" font-weight="400" xml:space="preserve">0.30</text>
+<rect x="382" y="294" width="104" height="50" rx="8" fill="#ffffff" stroke="#d1d5db" stroke-width="2"/>
+<text x="434" y="327" font-family="Consolas, Menlo, monospace" font-size="20" fill="#111827" text-anchor="middle" font-weight="400" xml:space="preserve">-1.50</text>
+<rect x="494" y="294" width="104" height="50" rx="8" fill="#ffffff" stroke="#d1d5db" stroke-width="2"/>
+<text x="546" y="327" font-family="Consolas, Menlo, monospace" font-size="20" fill="#111827" text-anchor="middle" font-weight="400" xml:space="preserve">0.00</text>
+<rect x="606" y="294" width="104" height="50" rx="8" fill="#ffffff" stroke="#d1d5db" stroke-width="2"/>
+<text x="658" y="327" font-family="Consolas, Menlo, monospace" font-size="20" fill="#111827" text-anchor="middle" font-weight="400" xml:space="preserve">0.90</text>
+<rect x="718" y="294" width="104" height="50" rx="8" fill="#ffffff" stroke="#d1d5db" stroke-width="2"/>
+<text x="770" y="327" font-family="Consolas, Menlo, monospace" font-size="20" fill="#111827" text-anchor="middle" font-weight="400" xml:space="preserve">-0.60</text>
+<rect x="830" y="294" width="104" height="50" rx="8" fill="#ffffff" stroke="#d1d5db" stroke-width="2"/>
+<text x="882" y="327" font-family="Consolas, Menlo, monospace" font-size="20" fill="#111827" text-anchor="middle" font-weight="400" xml:space="preserve">2.10</text>
+<rect x="942" y="294" width="104" height="50" rx="8" fill="#ffffff" stroke="#d1d5db" stroke-width="2"/>
+<text x="994" y="327" font-family="Consolas, Menlo, monospace" font-size="20" fill="#111827" text-anchor="middle" font-weight="400" xml:space="preserve">-0.30</text>
+<rect x="1054" y="294" width="104" height="50" rx="8" fill="#ffffff" stroke="#d1d5db" stroke-width="2"/>
+<text x="1106" y="327" font-family="Consolas, Menlo, monospace" font-size="20" fill="#111827" text-anchor="middle" font-weight="400" xml:space="preserve">0.60</text>
+<text x="60" y="392" font-family="Inter, Segoe UI, Arial, sans-serif" font-size="22" fill="#111827" text-anchor="start" font-weight="700" xml:space="preserve">Same group with one outlier (8.40): scale = 1.20</text>
+<text x="60" y="444" font-family="Inter, Segoe UI, Arial, sans-serif" font-size="20" fill="#4b5563" text-anchor="start" font-weight="400" xml:space="preserve">weights</text>
+<rect x="270" y="410" width="104" height="50" rx="8" fill="#ffffff" stroke="#d1d5db" stroke-width="2"/>
+<text x="322" y="443" font-family="Consolas, Menlo, monospace" font-size="20" fill="#111827" text-anchor="middle" font-weight="400" xml:space="preserve">0.42</text>
+<rect x="382" y="410" width="104" height="50" rx="8" fill="#ffffff" stroke="#d1d5db" stroke-width="2"/>
+<text x="434" y="443" font-family="Consolas, Menlo, monospace" font-size="20" fill="#111827" text-anchor="middle" font-weight="400" xml:space="preserve">-1.37</text>
+<rect x="494" y="410" width="104" height="50" rx="8" fill="#ffffff" stroke="#d1d5db" stroke-width="2"/>
+<text x="546" y="443" font-family="Consolas, Menlo, monospace" font-size="20" fill="#111827" text-anchor="middle" font-weight="400" xml:space="preserve">0.08</text>
+<rect x="606" y="410" width="104" height="50" rx="8" fill="#ffffff" stroke="#d1d5db" stroke-width="2"/>
+<text x="658" y="443" font-family="Consolas, Menlo, monospace" font-size="20" fill="#111827" text-anchor="middle" font-weight="400" xml:space="preserve">0.91</text>
+<rect x="718" y="410" width="104" height="50" rx="8" fill="#ffffff" stroke="#d1d5db" stroke-width="2"/>
+<text x="770" y="443" font-family="Consolas, Menlo, monospace" font-size="20" fill="#111827" text-anchor="middle" font-weight="400" xml:space="preserve">-0.55</text>
+<rect x="830" y="410" width="104" height="50" rx="8" fill="#ffffff" stroke="#d1d5db" stroke-width="2"/>
+<text x="882" y="443" font-family="Consolas, Menlo, monospace" font-size="20" fill="#111827" text-anchor="middle" font-weight="400" xml:space="preserve">8.40</text>
+<rect x="942" y="410" width="104" height="50" rx="8" fill="#ffffff" stroke="#d1d5db" stroke-width="2"/>
+<text x="994" y="443" font-family="Consolas, Menlo, monospace" font-size="20" fill="#111827" text-anchor="middle" font-weight="400" xml:space="preserve">-0.19</text>
+<rect x="1054" y="410" width="104" height="50" rx="8" fill="#ffffff" stroke="#d1d5db" stroke-width="2"/>
+<text x="1106" y="443" font-family="Consolas, Menlo, monospace" font-size="20" fill="#111827" text-anchor="middle" font-weight="400" xml:space="preserve">0.66</text>
+<text x="60" y="502" font-family="Inter, Segoe UI, Arial, sans-serif" font-size="20" fill="#4b5563" text-anchor="start" font-weight="400" xml:space="preserve">q (int4)</text>
+<rect x="270" y="468" width="104" height="50" rx="8" fill="#f3f4f6" stroke="#d1d5db" stroke-width="2"/>
+<text x="322" y="501" font-family="Consolas, Menlo, monospace" font-size="20" fill="#111827" text-anchor="middle" font-weight="400" xml:space="preserve">0</text>
+<rect x="382" y="468" width="104" height="50" rx="8" fill="#f3f4f6" stroke="#d1d5db" stroke-width="2"/>
+<text x="434" y="501" font-family="Consolas, Menlo, monospace" font-size="20" fill="#111827" text-anchor="middle" font-weight="400" xml:space="preserve">-1</text>
+<rect x="494" y="468" width="104" height="50" rx="8" fill="#f3f4f6" stroke="#d1d5db" stroke-width="2"/>
+<text x="546" y="501" font-family="Consolas, Menlo, monospace" font-size="20" fill="#111827" text-anchor="middle" font-weight="400" xml:space="preserve">0</text>
+<rect x="606" y="468" width="104" height="50" rx="8" fill="#f3f4f6" stroke="#d1d5db" stroke-width="2"/>
+<text x="658" y="501" font-family="Consolas, Menlo, monospace" font-size="20" fill="#111827" text-anchor="middle" font-weight="400" xml:space="preserve">1</text>
+<rect x="718" y="468" width="104" height="50" rx="8" fill="#f3f4f6" stroke="#d1d5db" stroke-width="2"/>
+<text x="770" y="501" font-family="Consolas, Menlo, monospace" font-size="20" fill="#111827" text-anchor="middle" font-weight="400" xml:space="preserve">0</text>
+<rect x="830" y="468" width="104" height="50" rx="8" fill="#f3f4f6" stroke="#d1d5db" stroke-width="2"/>
+<text x="882" y="501" font-family="Consolas, Menlo, monospace" font-size="20" fill="#111827" text-anchor="middle" font-weight="400" xml:space="preserve">7</text>
+<rect x="942" y="468" width="104" height="50" rx="8" fill="#f3f4f6" stroke="#d1d5db" stroke-width="2"/>
+<text x="994" y="501" font-family="Consolas, Menlo, monospace" font-size="20" fill="#111827" text-anchor="middle" font-weight="400" xml:space="preserve">0</text>
+<rect x="1054" y="468" width="104" height="50" rx="8" fill="#f3f4f6" stroke="#d1d5db" stroke-width="2"/>
+<text x="1106" y="501" font-family="Consolas, Menlo, monospace" font-size="20" fill="#111827" text-anchor="middle" font-weight="400" xml:space="preserve">1</text>
+<text x="60" y="560" font-family="Inter, Segoe UI, Arial, sans-serif" font-size="20" fill="#4b5563" text-anchor="start" font-weight="400" xml:space="preserve">restored</text>
+<rect x="270" y="526" width="104" height="50" rx="8" fill="#ffffff" stroke="#ec362e" stroke-width="2"/>
+<text x="322" y="559" font-family="Consolas, Menlo, monospace" font-size="20" fill="#111827" text-anchor="middle" font-weight="400" xml:space="preserve">0.00</text>
+<rect x="382" y="526" width="104" height="50" rx="8" fill="#ffffff" stroke="#d1d5db" stroke-width="2"/>
+<text x="434" y="559" font-family="Consolas, Menlo, monospace" font-size="20" fill="#111827" text-anchor="middle" font-weight="400" xml:space="preserve">-1.20</text>
+<rect x="494" y="526" width="104" height="50" rx="8" fill="#ffffff" stroke="#ec362e" stroke-width="2"/>
+<text x="546" y="559" font-family="Consolas, Menlo, monospace" font-size="20" fill="#111827" text-anchor="middle" font-weight="400" xml:space="preserve">0.00</text>
+<rect x="606" y="526" width="104" height="50" rx="8" fill="#ffffff" stroke="#d1d5db" stroke-width="2"/>
+<text x="658" y="559" font-family="Consolas, Menlo, monospace" font-size="20" fill="#111827" text-anchor="middle" font-weight="400" xml:space="preserve">1.20</text>
+<rect x="718" y="526" width="104" height="50" rx="8" fill="#ffffff" stroke="#ec362e" stroke-width="2"/>
+<text x="770" y="559" font-family="Consolas, Menlo, monospace" font-size="20" fill="#111827" text-anchor="middle" font-weight="400" xml:space="preserve">0.00</text>
+<rect x="830" y="526" width="104" height="50" rx="8" fill="#ffffff" stroke="#d1d5db" stroke-width="2"/>
+<text x="882" y="559" font-family="Consolas, Menlo, monospace" font-size="20" fill="#111827" text-anchor="middle" font-weight="400" xml:space="preserve">8.40</text>
+<rect x="942" y="526" width="104" height="50" rx="8" fill="#ffffff" stroke="#ec362e" stroke-width="2"/>
+<text x="994" y="559" font-family="Consolas, Menlo, monospace" font-size="20" fill="#111827" text-anchor="middle" font-weight="400" xml:space="preserve">0.00</text>
+<rect x="1054" y="526" width="104" height="50" rx="8" fill="#ffffff" stroke="#d1d5db" stroke-width="2"/>
+<text x="1106" y="559" font-family="Consolas, Menlo, monospace" font-size="20" fill="#111827" text-anchor="middle" font-weight="400" xml:space="preserve">1.20</text>
+<text x="60" y="614" font-family="Inter, Segoe UI, Arial, sans-serif" font-size="20" fill="#111827" text-anchor="start" font-weight="400" xml:space="preserve">One large value stretches the scale; four small weights collapse to zero (red).</text>
+</svg>

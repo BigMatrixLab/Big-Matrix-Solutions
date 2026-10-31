@@ -1,0 +1,30 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 1200 444" width="1200" height="444" role="img" aria-labelledby="t d" font-family="Inter, Segoe UI, Arial, sans-serif">
+  <rect x="0" y="0" width="1200" height="444" fill="#ffffff" rx="16" stroke="#e5e7eb"/>
+  <title id="t">ARC-AGI-3 at launch: who solved what</title>
+  <desc id="d">Horizontal bars: human testers 100 percent, StochasticGoose preview agent 12.58 percent with 18 levels, Blind Squirrel 6.71 percent with 13 levels, frontier language models 0.51 percent.</desc>
+  <text x="40" y="54" font-size="28" fill="#111827" text-anchor="start" font-weight="700">ARC-AGI-3 at launch: who solved what</text>
+  <text x="40" y="90" font-size="20" fill="#4b5563" text-anchor="start">Score on the interactive games, 0 to 100% scale</text>
+  <line x1="370.0" y1="130" x2="370.0" y2="332" stroke="#d1d5db" stroke-dasharray="4 6"/>
+  <line x1="720.0" y1="130" x2="720.0" y2="332" stroke="#d1d5db" stroke-dasharray="4 6"/>
+  <line x1="1070.0" y1="130" x2="1070.0" y2="332" stroke="#d1d5db" stroke-dasharray="4 6"/>
+  <rect x="370" y="140" width="700" height="30" rx="4" fill="#f3f4f6"/>
+  <rect x="370" y="140" width="700.0" height="30" rx="4" fill="#d1d5db"/>
+  <text x="40" y="162" font-size="20" fill="#111827" text-anchor="start">Human testers</text>
+  <text x="1082.0" y="162" font-size="20" fill="#111827" text-anchor="start" font-weight="700">100%</text>
+  <rect x="370" y="192" width="700" height="30" rx="4" fill="#f3f4f6"/>
+  <rect x="370" y="192" width="88.1" height="30" rx="4" fill="#2563eb"/>
+  <text x="40" y="214" font-size="20" fill="#111827" text-anchor="start">StochasticGoose (Tufa Labs)</text>
+  <text x="470.06" y="214" font-size="20" fill="#111827" text-anchor="start" font-weight="700">12.58% · 18 levels</text>
+  <rect x="370" y="244" width="700" height="30" rx="4" fill="#f3f4f6"/>
+  <rect x="370" y="244" width="47.0" height="30" rx="4" fill="#2563eb"/>
+  <text x="40" y="266" font-size="20" fill="#111827" text-anchor="start">Blind Squirrel</text>
+  <text x="428.97" y="266" font-size="20" fill="#111827" text-anchor="start" font-weight="700">6.71% · 13 levels</text>
+  <rect x="370" y="296" width="700" height="30" rx="4" fill="#f3f4f6"/>
+  <rect x="370" y="296" width="3.6" height="30" rx="4" fill="#ec362e"/>
+  <text x="40" y="318" font-size="20" fill="#111827" text-anchor="start">Frontier language models</text>
+  <text x="385.57" y="318" font-size="20" fill="#111827" text-anchor="start" font-weight="700">0.51%</text>
+  <text x="370.0" y="362" font-size="18" fill="#4b5563" text-anchor="middle">0%</text>
+  <text x="720.0" y="362" font-size="18" fill="#4b5563" text-anchor="middle">50%</text>
+  <text x="1070.0" y="362" font-size="18" fill="#4b5563" text-anchor="middle">100%</text>
+  <text x="40" y="402" font-size="18" fill="#4b5563" text-anchor="start">Preview agents: 30-day developer preview, 12 submissions, 8 tested on the private games.</text>
+</svg>

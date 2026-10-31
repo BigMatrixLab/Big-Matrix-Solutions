@@ -1,0 +1,41 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 1200 620" width="1200" height="620" role="img">
+<rect x="1" y="1" width="1198" height="618" fill="#ffffff" rx="16" stroke="#e5e7eb" stroke-width="2"/>
+<title>Speculative decoding draft and verify</title>
+<desc>A draft model proposes five tokens; the target model verifies them in one pass, accepts the first three, rejects the fourth and replaces it with its own token. Expected tokens per round follow (1 - alpha^(gamma+1)) / (1 - alpha).</desc>
+<defs><marker id="ah" viewBox="0 0 10 10" refX="9" refY="5" markerWidth="8" markerHeight="8" orient="auto-start-reverse"><path d="M0,0 L10,5 L0,10 z" fill="#4b5563"/></marker></defs>
+<text x="60" y="70" font-family="Inter, Segoe UI, Arial, sans-serif" font-size="30" fill="#111827" text-anchor="start" font-weight="700" xml:space="preserve">One round of speculative decoding</text>
+<text x="60" y="108" font-family="Inter, Segoe UI, Arial, sans-serif" font-size="20" fill="#4b5563" text-anchor="start" font-weight="400" xml:space="preserve">Draft proposes γ tokens cheaply; the target scores all of them in one forward pass.</text>
+<rect x="60" y="140" width="300" height="90" rx="12" fill="#f3f4f6" stroke="#d1d5db" stroke-width="2"/>
+<text x="210" y="178" font-family="Inter, Segoe UI, Arial, sans-serif" font-size="22" fill="#111827" text-anchor="middle" font-weight="700" xml:space="preserve">Draft model</text>
+<text x="210" y="208" font-family="Inter, Segoe UI, Arial, sans-serif" font-size="20" fill="#4b5563" text-anchor="middle" font-weight="400" xml:space="preserve">small, fast, runs γ times</text>
+<rect x="60" y="300" width="300" height="90" rx="12" fill="#f3f4f6" stroke="#d1d5db" stroke-width="2"/>
+<text x="210" y="338" font-family="Inter, Segoe UI, Arial, sans-serif" font-size="22" fill="#111827" text-anchor="middle" font-weight="700" xml:space="preserve">Target model</text>
+<text x="210" y="368" font-family="Inter, Segoe UI, Arial, sans-serif" font-size="20" fill="#4b5563" text-anchor="middle" font-weight="400" xml:space="preserve">large, runs once</text>
+<rect x="440" y="155" width="120" height="60" rx="8" fill="#ffffff" stroke="#d1d5db" stroke-width="2"/>
+<text x="500" y="193" font-family="Consolas, Menlo, monospace" font-size="22" fill="#111827" text-anchor="middle" font-weight="400" xml:space="preserve">the</text>
+<rect x="575" y="155" width="120" height="60" rx="8" fill="#ffffff" stroke="#d1d5db" stroke-width="2"/>
+<text x="635" y="193" font-family="Consolas, Menlo, monospace" font-size="22" fill="#111827" text-anchor="middle" font-weight="400" xml:space="preserve">cat</text>
+<rect x="710" y="155" width="120" height="60" rx="8" fill="#ffffff" stroke="#d1d5db" stroke-width="2"/>
+<text x="770" y="193" font-family="Consolas, Menlo, monospace" font-size="22" fill="#111827" text-anchor="middle" font-weight="400" xml:space="preserve">sat</text>
+<rect x="845" y="155" width="120" height="60" rx="8" fill="#ffffff" stroke="#d1d5db" stroke-width="2"/>
+<text x="905" y="193" font-family="Consolas, Menlo, monospace" font-size="22" fill="#111827" text-anchor="middle" font-weight="400" xml:space="preserve">on</text>
+<rect x="980" y="155" width="120" height="60" rx="8" fill="#ffffff" stroke="#d1d5db" stroke-width="2"/>
+<text x="1040" y="193" font-family="Consolas, Menlo, monospace" font-size="22" fill="#111827" text-anchor="middle" font-weight="400" xml:space="preserve">a</text>
+<line x1="360" y1="185" x2="430" y2="185" stroke="#4b5563" stroke-width="2" marker-end="url(#ah)"/>
+<line x1="210" y1="230" x2="210" y2="292" stroke="#4b5563" stroke-width="2" marker-end="url(#ah)"/>
+<text x="225" y="268" font-family="Inter, Segoe UI, Arial, sans-serif" font-size="20" fill="#4b5563" text-anchor="start" font-weight="400" xml:space="preserve">verify all γ in parallel</text>
+<rect x="440" y="315" width="120" height="60" rx="8" fill="#2563eb" stroke="none" stroke-width="2"/>
+<text x="500" y="352" font-family="Inter, Segoe UI, Arial, sans-serif" font-size="20" fill="#ffffff" text-anchor="middle" font-weight="700" xml:space="preserve">accept</text>
+<rect x="575" y="315" width="120" height="60" rx="8" fill="#2563eb" stroke="none" stroke-width="2"/>
+<text x="635" y="352" font-family="Inter, Segoe UI, Arial, sans-serif" font-size="20" fill="#ffffff" text-anchor="middle" font-weight="700" xml:space="preserve">accept</text>
+<rect x="710" y="315" width="120" height="60" rx="8" fill="#2563eb" stroke="none" stroke-width="2"/>
+<text x="770" y="352" font-family="Inter, Segoe UI, Arial, sans-serif" font-size="20" fill="#ffffff" text-anchor="middle" font-weight="700" xml:space="preserve">accept</text>
+<rect x="845" y="315" width="120" height="60" rx="8" fill="#ec362e" stroke="none" stroke-width="2"/>
+<text x="905" y="352" font-family="Inter, Segoe UI, Arial, sans-serif" font-size="20" fill="#ffffff" text-anchor="middle" font-weight="700" xml:space="preserve">reject</text>
+<rect x="980" y="315" width="120" height="60" rx="8" fill="#f3f4f6" stroke="#d1d5db" stroke-width="2"/>
+<text x="1040" y="352" font-family="Inter, Segoe UI, Arial, sans-serif" font-size="20" fill="#4b5563" text-anchor="middle" font-weight="700" xml:space="preserve">discard</text>
+<text x="440" y="440" font-family="Inter, Segoe UI, Arial, sans-serif" font-size="22" fill="#111827" text-anchor="start" font-weight="700" xml:space="preserve">Output this round: the cat sat + one corrected token from the target</text>
+<text x="440" y="476" font-family="Inter, Segoe UI, Arial, sans-serif" font-size="20" fill="#4b5563" text-anchor="start" font-weight="400" xml:space="preserve">Worst case: one token per target pass, the same as plain decoding.</text>
+<text x="60" y="540" font-family="Inter, Segoe UI, Arial, sans-serif" font-size="22" fill="#111827" text-anchor="start" font-weight="700" xml:space="preserve">Expected tokens per round = (1 − α^(γ+1)) / (1 − α)   (Leviathan et al.)</text>
+<text x="60" y="578" font-family="Inter, Segoe UI, Arial, sans-serif" font-size="20" fill="#4b5563" text-anchor="start" font-weight="400" xml:space="preserve">α = 0.6, γ = 4  →  2.3 tokens        α = 0.8, γ = 4  →  3.4 tokens        α = 0.9, γ = 4  →  4.1 tokens</text>
+</svg>

@@ -1,0 +1,71 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 1200 600" width="1200" height="600" role="img" aria-labelledby="t d" font-family="Inter, Segoe UI, Arial, sans-serif">
+  <title id="t">A dependency gate for AI-written code</title>
+  <desc id="d">When generated code adds a new dependency, three checks run before install: does the package exist on the registry, is it established rather than newly registered with no history, and is it on the team allowlist. Failing any check stops the install for human review. Passing all three adds it to the lockfile with hashes.</desc>
+  <rect x="0" y="0" width="1200" height="600" fill="#ffffff" rx="16" stroke="#e5e7eb"/>
+  <text x="600" y="54" text-anchor="middle" font-size="28" font-weight="700" fill="#111827">A dependency gate for AI-written code</text>
+
+  <defs>
+    <marker id="arrow" viewBox="0 0 10 10" refX="9" refY="5" markerWidth="7" markerHeight="7" orient="auto-start-reverse">
+      <path d="M0,0 L10,5 L0,10 z" fill="#4b5563"/>
+    </marker>
+    <marker id="arrowRed" viewBox="0 0 10 10" refX="9" refY="5" markerWidth="7" markerHeight="7" orient="auto-start-reverse">
+      <path d="M0,0 L10,5 L0,10 z" fill="#ec362e"/>
+    </marker>
+  </defs>
+
+  <g font-size="18" fill="#4b5563" text-anchor="middle">
+    <rect x="30" y="120" width="190" height="150" rx="12" fill="#f3f4f6" stroke="#d1d5db"/>
+    <text x="125" y="170" font-size="20" font-weight="700" fill="#111827">New import</text>
+    <text x="125" y="202">suggested by</text>
+    <text x="125" y="228">an assistant</text>
+
+    <rect x="260" y="120" width="200" height="150" rx="12" fill="#f3f4f6" stroke="#d1d5db"/>
+    <text x="360" y="170" font-size="20" font-weight="700" fill="#111827">Exists?</text>
+    <text x="360" y="202">on the registry</text>
+    <text x="360" y="228">you install from</text>
+
+    <rect x="500" y="120" width="200" height="150" rx="12" fill="#f3f4f6" stroke="#d1d5db"/>
+    <text x="600" y="170" font-size="20" font-weight="700" fill="#111827">Established?</text>
+    <text x="600" y="202">age, releases,</text>
+    <text x="600" y="228">maintainers</text>
+
+    <rect x="740" y="120" width="200" height="150" rx="12" fill="#f3f4f6" stroke="#d1d5db"/>
+    <text x="840" y="170" font-size="20" font-weight="700" fill="#111827">Allowed?</text>
+    <text x="840" y="202">on the team</text>
+    <text x="840" y="228">allowlist</text>
+
+    <rect x="980" y="120" width="190" height="150" rx="12" fill="#ffffff" stroke="#2563eb" stroke-width="2"/>
+    <text x="1075" y="170" font-size="20" font-weight="700" fill="#111827">Lock it</text>
+    <text x="1075" y="202">pinned version</text>
+    <text x="1075" y="228">plus hashes</text>
+  </g>
+
+  <g stroke="#4b5563" stroke-width="2">
+    <line x1="222" y1="195" x2="257" y2="195" marker-end="url(#arrow)"/>
+    <line x1="462" y1="195" x2="497" y2="195" marker-end="url(#arrow)"/>
+    <line x1="702" y1="195" x2="737" y2="195" marker-end="url(#arrow)"/>
+    <line x1="942" y1="195" x2="977" y2="195" marker-end="url(#arrow)"/>
+  </g>
+  <g font-size="18" fill="#2563eb" font-weight="600" text-anchor="middle">
+    <text x="480" y="112">yes</text>
+    <text x="720" y="112">yes</text>
+    <text x="960" y="112">yes</text>
+  </g>
+
+  <g stroke="#ec362e" stroke-width="3" fill="none">
+    <line x1="360" y1="272" x2="360" y2="392" marker-end="url(#arrowRed)"/>
+    <line x1="600" y1="272" x2="600" y2="392" marker-end="url(#arrowRed)"/>
+    <line x1="840" y1="272" x2="840" y2="392" marker-end="url(#arrowRed)"/>
+  </g>
+  <g font-size="18" fill="#ec362e" font-weight="600">
+    <text x="372" y="338">no</text>
+    <text x="612" y="338">no</text>
+    <text x="852" y="338">no</text>
+  </g>
+
+  <rect x="260" y="396" width="680" height="110" rx="12" fill="#ffffff" stroke="#ec362e" stroke-width="2"/>
+  <text x="600" y="442" text-anchor="middle" font-size="22" font-weight="700" fill="#111827">Stop: a human looks before anything installs</text>
+  <text x="600" y="476" text-anchor="middle" font-size="18" fill="#4b5563">a missing name may be a hallucination; a brand-new one may be a squat</text>
+
+  <text x="600" y="560" text-anchor="middle" font-size="18" fill="#4b5563">Run the gate in CI and in the agent's sandbox, not only on developer laptops.</text>
+</svg>

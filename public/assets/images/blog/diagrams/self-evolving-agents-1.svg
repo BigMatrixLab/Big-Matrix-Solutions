@@ -1,0 +1,40 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 1200 600" width="1200" height="600" role="img" aria-labelledby="t d" font-family="Inter, Segoe UI, Arial, sans-serif">
+  <rect x="0" y="0" width="1200" height="600" fill="#ffffff" rx="16" stroke="#e5e7eb"/>
+  <title id="t">Distilled agent memory: four kinds, read at start, written at end</title>
+  <desc id="d">A versioned, human-readable memory file in the middle holds four kinds of distilled memory: repository facts, kept indefinitely; conventions, the thing re-explained daily; failed approaches, valuable and almost never captured; and task-specific state, which should expire. The agent reads the file at task start and writes distilled lessons to it at task end. Humans can diff it, review it in a pull request and delete a wrong line.</desc>
+  <defs>
+    <marker id="a" viewBox="0 0 10 10" refX="9" refY="5" markerWidth="8" markerHeight="8" orient="auto-start-reverse"><path d="M0,0 L10,5 L0,10 z" fill="#2563eb"/></marker>
+  </defs>
+  <text x="600" y="50" text-anchor="middle" font-size="28" font-weight="700" fill="#111827">Memory that outlives the session</text>
+
+  <rect x="330" y="85" width="540" height="430" rx="14" fill="#f3f4f6" stroke="#d1d5db"/>
+  <text x="600" y="122" text-anchor="middle" font-size="20" font-weight="700" fill="#111827">Memory file (versioned, human-readable)</text>
+  <g font-size="18" fill="#4b5563">
+    <rect x="355" y="140" width="490" height="80" rx="10" fill="#ffffff" stroke="#d1d5db"/>
+    <text x="380" y="173" font-weight="700" fill="#111827">Repository facts</text>
+    <text x="380" y="201">where things live; keep indefinitely</text>
+    <rect x="355" y="230" width="490" height="80" rx="10" fill="#ffffff" stroke="#d1d5db"/>
+    <text x="380" y="263" font-weight="700" fill="#111827">Conventions</text>
+    <text x="380" y="291">what you would otherwise re-explain daily</text>
+    <rect x="355" y="320" width="490" height="80" rx="10" fill="#ffffff" stroke="#ec362e" stroke-width="2.5"/>
+    <text x="380" y="353" font-weight="700" fill="#ec362e">Failed approaches</text>
+    <text x="380" y="381">most valuable, almost never captured</text>
+    <rect x="355" y="410" width="490" height="80" rx="10" fill="#ffffff" stroke="#d1d5db" stroke-dasharray="8 5"/>
+    <text x="380" y="443" font-weight="700" fill="#111827">Task-specific state</text>
+    <text x="380" y="471">ephemeral; should expire</text>
+  </g>
+
+  <g font-size="18" fill="#4b5563" text-anchor="middle">
+    <rect x="30" y="250" width="250" height="110" rx="12" fill="#ffffff" stroke="#2563eb" stroke-width="2"/>
+    <text x="155" y="292" font-size="20" font-weight="700" fill="#111827">Task start</text>
+    <text x="155" y="322">agent reads memory</text>
+    <rect x="920" y="250" width="250" height="110" rx="12" fill="#ffffff" stroke="#2563eb" stroke-width="2"/>
+    <text x="1045" y="292" font-size="20" font-weight="700" fill="#111827">Task end</text>
+    <text x="1045" y="322">agent writes lessons</text>
+  </g>
+  <g stroke="#2563eb" stroke-width="2.5">
+    <line x1="328" y1="305" x2="286" y2="305" marker-end="url(#a)"/>
+    <line x1="918" y1="305" x2="876" y2="305" marker-end="url(#a)"/>
+  </g>
+  <text x="600" y="560" text-anchor="middle" font-size="18" fill="#4b5563">Humans stay in control: diff it, review changes in a pull request, delete a wrong line</text>
+</svg>

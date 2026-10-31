@@ -3,7 +3,7 @@ id: "5"
 slug: "native-adaptive-interfaces-ai-driven-ux-personalization"
 title: "Native Adaptive Interfaces: AI-Driven UX Personalization"
 comments: "09"
-image: "https://images.unsplash.com/photo-1581291518633-83b4ebd1d83e?auto=format&fit=crop&q=80&w=800"
+image: "/assets/images/blog/adaptive-interfaces.webp"
 category: "UI Design"
 desc: "Interfaces that reconfigure themselves in real-time based on user behavior and intent."
 date: "Aug 14, 2026"
@@ -76,6 +76,10 @@ AI considers multiple context factors:
 >
 > This creates a UI that gets better with every interaction!
 
+![Loop of four steps: show a variant, measure time, errors and satisfaction, learn by rewarding what improves metrics, converge gradually per user](/assets/images/blog/diagrams/adaptive-interfaces-1.svg)
+
+*Diagram: Big Matrix Solutions, based on the optimisation process described above.*
+
 ## 🏥 Real-World Applications
 
 ### 1. **Healthcare: Adaptive Clinical Dashboards** 🏥
@@ -117,6 +121,10 @@ Software adapts to user expertise:
 > - ⚡ **Power users**: Dense information, command palette, automation tools, batch operations
 >
 > The system automatically detects proficiency and adjusts complexity accordingly!
+
+![Three interface levels: novice with tooltips and wizards, intermediate with shortcuts and advanced features, power user with dense information and a command palette](/assets/images/blog/diagrams/adaptive-interfaces-2.svg)
+
+*Diagram: Big Matrix Solutions, based on the skill levels described above.*
 
 **Result**: ✅ 50% reduction in support tickets ✅ Faster user onboarding
 
@@ -220,3 +228,7 @@ At Big-Matrix Solutions, we're integrating adaptive UI technology into our healt
 - [Adaptive UI React Library](https://github.com/big-matrix/adaptive-ui-react)
 - [Research Paper: Behavioral UI Adaptation](https://big-matrix.com/research/adaptive-ui)
 - [Design Guide: Ethical Adaptive Interfaces](https://big-matrix.com/guides/adaptive-ui-ethics)
+
+**Media credits**:
+- Hero image: list-detail canonical layout wireframe from the [Android Developers adaptive layouts guide](https://developer.android.com/develop/ui/compose/layouts/adaptive/canonical-layouts) (Google), CC BY 2.5. Placed unaltered on a 16:9 canvas in the image’s own background colour.
+- In-body diagrams: optimisation loop and skill levels, Big Matrix Solutions.

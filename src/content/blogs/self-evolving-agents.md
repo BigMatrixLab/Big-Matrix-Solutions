@@ -3,10 +3,10 @@ id: "16"
 slug: "self-evolving-agents-and-memory-that-compounds"
 title: "Agents That Learn From Yesterday: Inside the Self-Improving Coding Loop"
 comments: "0"
-image: "https://images.unsplash.com/photo-1526374965328-7f61d4dc18c5?auto=format&fit=crop&q=80&w=800"
+image: "/assets/images/blog/self-evolving-agents.webp"
 category: "Agentic AI"
 desc: "Frozen weights, forgotten sessions. The 2026 research push to give coding agents memory that accumulates and behaviour that improves without retraining."
-date: "Nov 20, 2026"
+date: "Oct 31, 2026"
 tags: ["Agentic AI", "Agent Memory", "Self-Improvement", "AI Research"]
 ---
 
@@ -54,6 +54,10 @@ The failed-approaches category is the underrated one. Human engineers carry a la
 
 The practical version of this is unglamorous and effective: a markdown file in the repository that the agent reads on startup and appends to when it learns something durable. It is version-controlled, human-readable, human-editable, and reviewable in a pull request. Teams have found it works better than more sophisticated schemes, largely because when it goes wrong you can just open it and see why.
 
+![Diagram of a versioned memory file holding repository facts, conventions, failed approaches highlighted in red, and expiring task state, read by the agent at task start and written at task end](/assets/images/blog/diagrams/self-evolving-agents-1.svg)
+
+*The four kinds of distilled memory and when the agent touches them. Diagram: Big Matrix Solutions, based on [Sumers et al., CoALA (arXiv:2309.02427)](https://arxiv.org/abs/2309.02427).*
+
 ## Approach two: self-evolving harnesses
 
 A more ambitious line asks whether the agent can improve its own *scaffolding* rather than its knowledge.
@@ -61,6 +65,10 @@ A more ambitious line asks whether the agent can improve its own *scaffolding* r
 The framing here separates two things that usually get conflated. There is the model, which is fixed. And there is the harness around it: the tools it can call, the prompts that structure its work, the retry logic, the verification steps. The harness is code. Code can be modified.
 
 The Darwin Gödel Machine line of work explores exactly this: agents that read their own implementation, propose modifications, evaluate whether the modified version performs better on a benchmark, and keep the improvements. Open-ended evolution of self-improving agents, with the model held constant and the scaffolding under selection.
+
+![DGM archive tree: about 80 numbered agent variants branching from a root, coloured by SWE-bench score, with a bold path leading to a star marking the best agent](/assets/images/blog/self-evolving-agents-dgm-archive.webp)
+
+*The Darwin Gödel Machine archive: every node is a self-modified variant of the coding agent, coloured by SWE-bench score, and the bold path leads to the best one found. Source: [Zhang et al., Darwin Gödel Machine (arXiv:2505.22954)](https://arxiv.org/abs/2505.22954), CC BY 4.0.*
 
 Live-SWE-agent pushes toward doing this during operation rather than in an offline evolution loop. An agent that self-evolves on the fly, adjusting its own approach mid-task based on what is working.
 
@@ -131,3 +139,8 @@ The likeliest near-term shape is not weight updates. It is better memory archite
 The longer-term question is whether the frozen-weights constraint is fundamental or incidental. ARC-AGI-3's brutal frontier scores suggest that in-episode learning, genuinely updating from what you just observed, is a capability current architectures largely lack rather than one they merely lack the plumbing for. If that is right, memory systems are a workaround for something that eventually needs an architectural answer.
 
 For now, the workaround is what we have, and a markdown file in your repo does most of the job.
+
+**Media credits**:
+- Hero image: Figure 1 from Zhang et al., "Darwin Gödel Machine: Open-Ended Evolution of Self-Improving Agents", [arXiv:2505.22954](https://arxiv.org/abs/2505.22954), licensed [CC BY 4.0](https://creativecommons.org/licenses/by/4.0/). Placed on a white 16:9 canvas; figure unaltered.
+- DGM archive tree: figure from the same paper, [CC BY 4.0](https://creativecommons.org/licenses/by/4.0/), unaltered.
+- In-body diagram: Big Matrix Solutions.

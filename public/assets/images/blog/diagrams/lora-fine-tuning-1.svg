@@ -1,0 +1,22 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 1200 600" width="1200" height="600" role="img">
+<rect x="1" y="1" width="1198" height="598" fill="#ffffff" rx="16" stroke="#e5e7eb" stroke-width="2"/>
+<title>LoRA parameter count</title>
+<desc>A 4096 by 4096 weight matrix has 16.8 million parameters. A rank-8 LoRA adapter replaces its update with B (4096 by 8) and A (8 by 4096), 65,536 trainable parameters, 0.39 percent of the full matrix.</desc>
+<defs><marker id="ah" viewBox="0 0 10 10" refX="9" refY="5" markerWidth="8" markerHeight="8" orient="auto-start-reverse"><path d="M0,0 L10,5 L0,10 z" fill="#4b5563"/></marker></defs>
+<text x="60" y="70" font-family="Inter, Segoe UI, Arial, sans-serif" font-size="30" fill="#111827" text-anchor="start" font-weight="700" xml:space="preserve">Trainable parameters for one 4096 × 4096 projection</text>
+<text x="60" y="108" font-family="Inter, Segoe UI, Arial, sans-serif" font-size="20" fill="#4b5563" text-anchor="start" font-weight="400" xml:space="preserve">Full fine-tuning updates W; LoRA trains B (4096 × r) and A (r × 4096) and freezes W.</text>
+<rect x="60" y="150" width="300" height="300" rx="6" fill="#d1d5db" stroke="none" stroke-width="0"/>
+<text x="210" y="290" font-family="Inter, Segoe UI, Arial, sans-serif" font-size="40" fill="#111827" text-anchor="middle" font-weight="700" xml:space="preserve">W</text>
+<text x="210" y="330" font-family="Inter, Segoe UI, Arial, sans-serif" font-size="22" fill="#111827" text-anchor="middle" font-weight="400" xml:space="preserve">4096 × 4096</text>
+<text x="210" y="490" font-family="Inter, Segoe UI, Arial, sans-serif" font-size="22" fill="#111827" text-anchor="middle" font-weight="700" xml:space="preserve">Full: 16,777,216</text>
+<text x="450" y="310" font-family="Inter, Segoe UI, Arial, sans-serif" font-size="26" fill="#4b5563" text-anchor="middle" font-weight="400" xml:space="preserve">vs</text>
+<rect x="560" y="150" width="24" height="300" rx="4" fill="#ec362e" stroke="none" stroke-width="0"/>
+<text x="572" y="480" font-family="Inter, Segoe UI, Arial, sans-serif" font-size="26" fill="#111827" text-anchor="middle" font-weight="700" xml:space="preserve">B</text>
+<rect x="620" y="150" width="300" height="24" rx="4" fill="#2563eb" stroke="none" stroke-width="0"/>
+<text x="770" y="210" font-family="Inter, Segoe UI, Arial, sans-serif" font-size="26" fill="#111827" text-anchor="middle" font-weight="700" xml:space="preserve">A</text>
+<text x="650" y="300" font-family="Inter, Segoe UI, Arial, sans-serif" font-size="22" fill="#111827" text-anchor="start" font-weight="700" xml:space="preserve">r = 8</text>
+<text x="650" y="336" font-family="Inter, Segoe UI, Arial, sans-serif" font-size="20" fill="#4b5563" text-anchor="start" font-weight="400" xml:space="preserve">B: 4096 × 8 = 32,768</text>
+<text x="650" y="368" font-family="Inter, Segoe UI, Arial, sans-serif" font-size="20" fill="#4b5563" text-anchor="start" font-weight="400" xml:space="preserve">A: 8 × 4096 = 32,768</text>
+<text x="790" y="490" font-family="Inter, Segoe UI, Arial, sans-serif" font-size="22" fill="#111827" text-anchor="middle" font-weight="700" xml:space="preserve">LoRA r = 8: 65,536  (0.39%)</text>
+<text x="60" y="560" font-family="Inter, Segoe UI, Arial, sans-serif" font-size="20" fill="#111827" text-anchor="start" font-weight="400" xml:space="preserve">Forward pass: h = W x + (α / r) · B A x.  B starts at zero, so training starts from the base model.</text>
+</svg>

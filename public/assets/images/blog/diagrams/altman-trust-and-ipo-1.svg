@@ -1,0 +1,32 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 1200 742" width="1200" height="742" font-family="Inter, Segoe UI, Arial, sans-serif">
+<rect x="0.5" y="0.5" width="1199" height="741" fill="#ffffff" rx="16" stroke="#e5e7eb"/>
+<title>Altman's September 2026 timeline</title>
+<desc>Vertical timeline of six dated events from September 12 to September 29, 2026: the Fortune IPO interview, the pacing post, the federal framework post, the Dreamforce trust remark, the GPT-6.1 Astra cancellation and DevDay.</desc>
+<text x="40" y="62" font-size="30" fill="#111827" font-weight="700">Sam Altman's September 2026, in order</text>
+<text x="40" y="98" font-size="20" fill="#4b5563">Statements and decisions on safety, regulation and the IPO</text>
+<line x1="150" y1="150" x2="150" y2="672" stroke="#d1d5db" stroke-width="3"/>
+<text x="126" y="186" font-size="22" fill="#ec362e" font-weight="700" text-anchor="end">Sep 12</text>
+<circle cx="150" cy="178" r="9" fill="#ffffff" stroke="#ec362e" stroke-width="3"/>
+<text x="180" y="186" font-size="21" fill="#111827" font-weight="700">Fortune interview</text>
+<text x="180" y="216" font-size="20" fill="#4b5563">IPO “not 2026”; now would be “an ill-advised moment to go public”</text>
+<text x="126" y="278" font-size="22" fill="#ec362e" font-weight="700" text-anchor="end">Sep 12</text>
+<circle cx="150" cy="270" r="9" fill="#ffffff" stroke="#ec362e" stroke-width="3"/>
+<text x="180" y="278" font-size="21" fill="#111827" font-weight="700">Post on X</text>
+<text x="180" y="308" font-size="20" fill="#4b5563">Agrees with Dario Amodei on pacing; OpenAI will adopt independent evaluators</text>
+<text x="126" y="370" font-size="22" fill="#ec362e" font-weight="700" text-anchor="end">Sep 14</text>
+<circle cx="150" cy="362" r="9" fill="#ffffff" stroke="#ec362e" stroke-width="3"/>
+<text x="180" y="370" font-size="21" fill="#111827" font-weight="700">Post on X, reported by CNBC</text>
+<text x="180" y="400" font-size="20" fill="#4b5563">OpenAI would “welcome a federal framework” for frontier AI safety</text>
+<text x="126" y="462" font-size="22" fill="#ec362e" font-weight="700" text-anchor="end">Sep 15</text>
+<circle cx="150" cy="454" r="9" fill="#ffffff" stroke="#ec362e" stroke-width="3"/>
+<text x="180" y="462" font-size="21" fill="#111827" font-weight="700">Dreamforce, San Francisco</text>
+<text x="180" y="492" font-size="20" fill="#4b5563">“The world should trust that we are going to do the right thing”</text>
+<text x="126" y="554" font-size="22" fill="#ec362e" font-weight="700" text-anchor="end">Sep 28</text>
+<circle cx="150" cy="546" r="9" fill="#ffffff" stroke="#ec362e" stroke-width="3"/>
+<text x="180" y="554" font-size="21" fill="#111827" font-weight="700">OpenAI head of safety systems</text>
+<text x="180" y="584" font-size="20" fill="#4b5563">Planned GPT-6.1 Astra release cancelled over safety testing</text>
+<text x="126" y="646" font-size="22" fill="#ec362e" font-weight="700" text-anchor="end">Sep 29</text>
+<circle cx="150" cy="638" r="9" fill="#ffffff" stroke="#ec362e" stroke-width="3"/>
+<text x="180" y="646" font-size="21" fill="#111827" font-weight="700">DevDay, San Francisco</text>
+<text x="180" y="676" font-size="20" fill="#4b5563">No set IPO timeline; CFO Sarah Friar: IPO “not a destination”</text>
+</svg>

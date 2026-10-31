@@ -218,6 +218,36 @@
 .bm-button:hover { background: var(--bm-solid-hover); color: var(--bm-solid-fg); transform: translateY(-1px); }
 .bm-button:hover i { transform: translateX(3px); }
 
+/* In-flight submit. Dimmed rather than restyled, so the button keeps its size
+   and the footer does not reflow mid-request. */
+.bm-button[disabled] {
+  cursor: progress;
+  opacity: 0.62;
+}
+
+.bm-button[disabled]:hover { transform: none; background: var(--bm-solid); }
+
+/* Replaces the arrow while a request is in flight. */
+.bm-button__spinner {
+  display: inline-block;
+  width: 13px;
+  height: 13px;
+  border: 2px solid currentColor;
+  border-top-color: transparent;
+  border-radius: 50%;
+  animation: bm-spin 0.6s linear infinite;
+}
+
+@keyframes bm-spin { to { transform: rotate(360deg); } }
+
+/* Honour the OS setting: pulse the opacity instead of spinning. */
+@media (prefers-reduced-motion: reduce) {
+  .bm-button__spinner {
+    animation: bm-pulse 1.4s ease-in-out infinite;
+  }
+  @keyframes bm-pulse { 50% { opacity: 0.35; } }
+}
+
 /* The accent variant always carries a white label: --bm-orange-fill is the
    step chosen for 4.5:1 against white, in both themes. */
 .bm-button--accent { color: #fff; background: var(--bm-orange-fill); }
@@ -3525,6 +3555,34 @@ a.bm-card__title:hover,
   margin-top: var(--bm-5);
 }
 
+/* Honeypot wrapper. Moved out of view rather than hidden with display:none or
+   visibility:hidden — bots routinely skip those two, but fill anything that
+   looks like a real field. aria-hidden and tabindex="-1" on the input keep it
+   away from screen readers and the tab order. */
+.bm-form__trap {
+  position: absolute;
+  left: -9999px;
+  width: 1px;
+  height: 1px;
+  overflow: hidden;
+}
+
+/* Submit result. Lives in the footer beside the button and shares its baseline.
+   Collapsed while empty so the live region can sit in the DOM from first paint,
+   which is what makes screen readers announce the update reliably. */
+.bm-form__status {
+  flex: 1 1 220px;
+  margin: 0;
+  font-size: var(--bm-fs-sm);
+  line-height: 1.5;
+  color: var(--bm-text-2);
+}
+
+.bm-form__status:empty { display: none; }
+
+.bm-form__status.is-success { color: var(--bm-ok); }
+.bm-form__status.is-error { color: var(--bm-accent-ink); }
+
 /* Direct lines: the one dark panel, so contact details stand out. */
 .bm-contact__aside {
   padding: clamp(24px, 2.4vw, 36px);
@@ -3952,4 +4010,155 @@ a.bm-card__title:hover,
   font-size: var(--bm-fs-xs);
   line-height: 1.4;
   color: var(--bm-accent-ink);
+}
+
+/* --------------------------------------------------------------------------
+   Share. Square icon buttons in the footer-social language, a quiet text
+   link on cards, and a share dialog built from the site's own surfaces.
+   -------------------------------------------------------------------------- */
+
+.bm-share__list { display: flex; flex-wrap: wrap; gap: var(--bm-2); margin: 0; padding: 0; list-style: none; }
+
+.bm-share__btn {
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+  width: 38px;
+  height: 38px;
+  font-size: 15px;
+  color: var(--bm-text-2);
+  background: var(--bm-bg);
+  border: 1px solid var(--bm-line);
+  border-radius: var(--bm-r-sm);
+  cursor: pointer;
+  transition: background var(--bm-dur) var(--bm-ease-inout),
+              border-color var(--bm-dur) var(--bm-ease-inout),
+              color var(--bm-dur) var(--bm-ease-inout);
+}
+
+.bm-share__btn:hover,
+.bm-share__btn:focus-visible {
+  color: #fff;
+  background: var(--bm-orange-fill);
+  border-color: var(--bm-orange-fill);
+}
+
+.bm-share__status {
+  /* Fixed two-line box: messages change length, the layout must not. */
+  height: 2.8em;
+  margin: var(--bm-2) 0 0;
+  overflow: hidden;
+  font-size: var(--bm-fs-xs);
+  line-height: 1.4;
+  color: var(--bm-text-3);
+}
+
+/* Card footer: "Read post" left, "Share" right, both in the text-link style. */
+.bm-card__foot--share { display: flex; align-items: center; justify-content: space-between; gap: var(--bm-3); }
+
+.bm-link--button {
+  font-family: inherit;
+  background: none;
+  border-width: 0 0 1px;
+  border-radius: 0;
+  cursor: pointer;
+}
+
+.bm-post-lead__actions { display: flex; flex-wrap: wrap; align-items: center; gap: var(--bm-3); }
+
+/* Dialog */
+.bm-share-dialog {
+  position: fixed;
+  inset: 0;
+  z-index: 1000;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  padding: var(--bm-5);
+  background: rgba(24, 24, 24, 0.55);
+  -webkit-backdrop-filter: blur(4px);
+  backdrop-filter: blur(4px);
+}
+
+.bm-share-dialog__panel {
+  width: 100%;
+  max-width: 560px;
+  max-height: 86vh;
+  overflow-y: auto;
+  background: var(--bm-bg);
+  border: 1px solid var(--bm-line);
+  border-radius: var(--bm-r);
+  box-shadow: var(--bm-shadow-ink);
+}
+
+.bm-share-dialog__head {
+  display: flex;
+  align-items: flex-start;
+  justify-content: space-between;
+  gap: var(--bm-4);
+  padding: var(--bm-5);
+  border-bottom: 1px solid var(--bm-line);
+}
+
+.bm-share-dialog__head .bm-head__eyebrow { margin-bottom: var(--bm-2); }
+
+.bm-share-dialog__title {
+  margin: 0;
+  font-family: var(--bm-font-display);
+  font-size: var(--bm-fs-h4);
+  font-weight: 600;
+  color: var(--bm-text);
+}
+
+.bm-share-dialog__body { padding: var(--bm-5); }
+.bm-share-dialog__body .bm-preview-note { flex-wrap: nowrap; align-items: flex-start; margin-bottom: var(--bm-4); }
+.bm-share-dialog__body .bm-preview-note i { flex: 0 0 auto; line-height: 1.5; }
+
+.bm-share-dialog__lead { margin: 0 0 var(--bm-5); font-weight: 600; color: var(--bm-text); }
+
+.bm-share-dialog__post {
+  display: grid;
+  grid-template-columns: 140px 1fr;
+  gap: var(--bm-4);
+  margin-bottom: var(--bm-5);
+  padding-bottom: var(--bm-5);
+  border-bottom: 1px solid var(--bm-line);
+}
+
+.bm-share-dialog__post img {
+  width: 100%;
+  aspect-ratio: 16 / 10;
+  object-fit: cover;
+  border: 1px solid var(--bm-line);
+  border-radius: var(--bm-r-sm);
+}
+
+.bm-share-dialog__post .bm-card__title { margin: var(--bm-2) 0; font-size: var(--bm-fs-body); }
+.bm-share-dialog__post .bm-card__text { margin: 0; }
+
+.bm-share-dialog__foot { display: flex; justify-content: flex-end; padding: var(--bm-4) var(--bm-5); border-top: 1px solid var(--bm-line); }
+
+/* Phones: a bottom sheet. */
+@keyframes bm-sheet-up {
+  from { transform: translateY(100%); }
+  to   { transform: translateY(0); }
+}
+
+@media (max-width: 767px) {
+  .bm-share-dialog { align-items: flex-end; padding: 0; overscroll-behavior: contain; }
+
+  .bm-share-dialog__panel {
+    max-width: none;
+    max-height: 88dvh;
+    padding-bottom: env(safe-area-inset-bottom, 0px);
+    border-width: 1px 0 0;
+    border-radius: 20px 20px 0 0;
+    animation: bm-sheet-up 260ms cubic-bezier(0.32, 0.72, 0, 1) both;
+  }
+
+  .bm-share-dialog__post { grid-template-columns: 1fr; }
+}
+
+@media (prefers-reduced-motion: reduce) {
+  .bm-share-dialog__panel { animation: none; }
 }

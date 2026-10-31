@@ -1,0 +1,26 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 1200 540" width="1200" height="540" role="img">
+<rect x="1" y="1" width="1198" height="538" fill="#ffffff" rx="16" stroke="#e5e7eb" stroke-width="2"/>
+<title>Turn-taking and barge-in timeline</title>
+<desc>Timeline of one exchange. The user speaks, then pauses. Voice activity detection waits for a configured silence before ending the turn; the agent then streams audio. Human conversation typically leaves a gap of 0 to 200 milliseconds between turns. If the user speaks while the agent is talking, the agent cancels generation and stops playback.</desc>
+<defs><marker id="ah" viewBox="0 0 10 10" refX="9" refY="5" markerWidth="8" markerHeight="8" orient="auto-start-reverse"><path d="M0,0 L10,5 L0,10 z" fill="#4b5563"/></marker></defs>
+<text x="60" y="64" font-family="Inter, Segoe UI, Arial, sans-serif" font-size="30" fill="#111827" text-anchor="start" font-weight="700">One turn, and an interruption</text>
+<text x="60" y="100" font-family="Inter, Segoe UI, Arial, sans-serif" font-size="20" fill="#4b5563" text-anchor="start" font-weight="400">Every millisecond after the user stops is dead air</text>
+<text x="60" y="172" font-family="Inter, Segoe UI, Arial, sans-serif" font-size="20" fill="#111827" text-anchor="start" font-weight="700">User</text>
+<text x="60" y="272" font-family="Inter, Segoe UI, Arial, sans-serif" font-size="20" fill="#111827" text-anchor="start" font-weight="700">Agent</text>
+<rect x="180" y="145" width="360" height="40" rx="10" fill="#2563eb" stroke="none" stroke-width="2"/>
+<text x="360" y="172" font-family="Inter, Segoe UI, Arial, sans-serif" font-size="20" fill="#ffffff" text-anchor="middle" font-weight="700">speaking</text>
+<rect x="540" y="145" width="150" height="40" rx="10" fill="#f3f4f6" stroke="#d1d5db" stroke-width="2"/>
+<text x="615" y="172" font-family="Inter, Segoe UI, Arial, sans-serif" font-size="18" fill="#4b5563" text-anchor="middle" font-weight="400">silence</text>
+<rect x="760" y="245" width="400" height="40" rx="10" fill="#d1d5db" stroke="none" stroke-width="2"/>
+<text x="960" y="272" font-family="Inter, Segoe UI, Arial, sans-serif" font-size="20" fill="#111827" text-anchor="middle" font-weight="700">agent audio streams</text>
+<rect x="690" y="245" width="70" height="40" rx="10" fill="#ffffff" stroke="#4b5563" stroke-width="2" stroke-dasharray="6 4"/>
+<text x="700" y="312" font-family="Inter, Segoe UI, Arial, sans-serif" font-size="18" fill="#4b5563" text-anchor="start" font-weight="400">time to first audio</text>
+<line x1="540" y1="200" x2="540" y2="320" stroke="#4b5563" stroke-width="2" stroke-dasharray="6 5"/>
+<line x1="690" y1="200" x2="690" y2="320" stroke="#ec362e" stroke-width="3"/>
+<text x="520" y="346" font-family="Inter, Segoe UI, Arial, sans-serif" font-size="18" fill="#4b5563" text-anchor="end" font-weight="400">user stops</text>
+<text x="710" y="346" font-family="Inter, Segoe UI, Arial, sans-serif" font-size="18" fill="#ec362e" text-anchor="start" font-weight="700">VAD ends the turn</text>
+<text x="615" y="378" font-family="Inter, Segoe UI, Arial, sans-serif" font-size="18" fill="#4b5563" text-anchor="middle" font-weight="400">gap set by silence_duration_ms / silenceDurationMs</text>
+<text x="60" y="432" font-family="Inter, Segoe UI, Arial, sans-serif" font-size="20" fill="#111827" text-anchor="start" font-weight="700">Barge-in:</text>
+<text x="170" y="432" font-family="Inter, Segoe UI, Arial, sans-serif" font-size="20" fill="#111827" text-anchor="start" font-weight="400">the user talks over the agent, so cancel generation and stop playback at once</text>
+<text x="60" y="490" font-family="Inter, Segoe UI, Arial, sans-serif" font-size="20" fill="#4b5563" text-anchor="start" font-weight="400">Human turn gaps cluster at 0 to 200 ms (Stivers et al., 2009, ten languages)</text>
+</svg>

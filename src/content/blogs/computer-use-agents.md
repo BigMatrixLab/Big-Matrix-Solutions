@@ -3,10 +3,10 @@ id: "35"
 slug: "computer-use-agents-the-hardest-easy-problem"
 title: "85% on OSWorld, 20% on the Sequel: The Hardest Easy Problem in AI"
 comments: "0"
-image: "https://images.unsplash.com/photo-1516321318423-f06f85e504b3?auto=format&fit=crop&q=80&w=800"
+image: "/assets/images/blog/computer-use-agents.webp"
 category: "Agentic AI"
 desc: "Agents that drive a mouse and keyboard went from 12% to 85% in two years. Then a harder benchmark put the best system at one fifth."
-date: "Mar 19, 2027"
+date: "Dec 06, 2026"
 tags: ["Computer Use", "Agentic AI", "Benchmarks", "Automation"]
 ---
 
@@ -42,6 +42,10 @@ That gap is the entire story, and it is not a benchmark artefact. It is a statem
 The failures on long-horizon computer use are structural rather than perceptual. The agent can see the screen fine. What degrades is everything about maintaining a coherent multi-hour effort.
 
 **Error recovery compounds.** A task with 200 steps at 99 percent per-step reliability succeeds about 13 percent of the time. Long-horizon success is not about being good at steps, it is about detecting and recovering from the bad ones, and detection is the weak part, since the agent frequently does not notice the click missed.
+
+![Bar chart of best computer-use scores, 12 percent on OSWorld in April 2024, 85 percent in June 2026 and 20.6 percent on OSWorld 2.0, beside a panel showing 13 percent success for a 200-step task at 99 percent per-step reliability and 4 misclicks from a 2 percent grounding error rate](/assets/images/blog/diagrams/computer-use-agents-1.svg)
+
+*The benchmark split and the arithmetic behind it: 0.99 to the power 200 is about 13%. Diagram: Big Matrix Solutions, based on [OSWorld (arXiv:2404.07972)](https://arxiv.org/abs/2404.07972) and the figures in this article.*
 
 **State becomes unobservable.** Halfway through a long task, what matters is not on screen. Which files were already processed, which settings were changed, whether that dialog was dismissed or is behind another window. A person holds this implicitly. An agent has a screenshot and whatever survived in its context.
 
@@ -98,6 +102,10 @@ Three directions, and they are converging on the same insight.
 
 **Compositional generalist-specialist designs.** Agent S2 splits a generalist planner from specialists that handle particular applications or interaction types. This is the same conclusion multi-agent work reached: decompose on genuine boundaries, and keep each component's mess out of the others' context.
 
+![Agent S2 framework diagram: a Manager issues subgoals to a chain of Worker steps, and a Mixture of Grounding module routes each action to one of three grounding experts](/assets/images/blog/computer-use-agents-agent-s2.webp)
+
+*Agent S2 separates a Manager that sets subgoals, a Worker that acts, and a Mixture of Grounding experts that turn each action into a screen location. Source: [Agashe et al., Agent S2 (arXiv:2504.00906)](https://arxiv.org/abs/2504.00906), CC BY 4.0.*
+
 **Verifiable training environments.** OpenComputer builds verifiable software worlds for computer-use agents: environments where success is machine-checkable, so you can generate training signal at scale. Given how much of recent reasoning progress came from verifiable rewards, this is likely the highest-leverage direction available.
 
 There is also serious attention on efficiency. Step-level optimisation work targets the 225,000-token problem directly, and it needs to: at current token consumption, long-horizon computer use is expensive enough that the economics only work for genuinely valuable tasks.
@@ -125,3 +133,8 @@ Operating a computer is something hundreds of millions of people do without thin
 What it demands is the combination current systems are worst at: sustained coherence over hundreds of steps, noticing when something went wrong, recovering without making it worse, and holding a model of a system's state that is mostly not visible. Those are the same weaknesses that show up in long-horizon coding, in ARC-AGI-3's interactive environments, and everywhere else agents run for a long time.
 
 Computer use just makes them impossible to hide behind a good final answer.
+
+**Media credits**:
+- Hero image: Figure 1 from Xie et al., "OSWorld: Benchmarking Multimodal Agents for Open-Ended Tasks in Real Computer Environments", [arXiv:2404.07972](https://arxiv.org/abs/2404.07972), licensed [CC BY 4.0](https://creativecommons.org/licenses/by/4.0/). Placed on a white 16:9 canvas; figure unaltered.
+- Agent S2 framework: figure from Agashe et al., "Agent S2: A Compositional Generalist-Specialist Framework for Computer Use Agents", [arXiv:2504.00906](https://arxiv.org/abs/2504.00906), licensed [CC BY 4.0](https://creativecommons.org/licenses/by/4.0/). Resized; otherwise unaltered.
+- In-body diagram: Big Matrix Solutions.

@@ -1,0 +1,36 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 1200 560" width="1200" height="560" role="img">
+<rect x="1" y="1" width="1198" height="558" fill="#ffffff" rx="16" stroke="#e5e7eb" stroke-width="2"/>
+<title>Where each cost lever sits in the request path</title>
+<desc>A request first checks an exact-match cache, then a semantic cache; on a miss a router sends it to a small or large model. Every model call puts its stable prefix first so the provider's prompt cache can reuse it. Work that is not urgent goes to a batch API at a 50 percent discount with results within 24 hours.</desc>
+<defs><marker id="ah" viewBox="0 0 10 10" refX="9" refY="5" markerWidth="8" markerHeight="8" orient="auto-start-reverse"><path d="M0,0 L10,5 L0,10 z" fill="#4b5563"/></marker></defs>
+<text x="60" y="64" font-family="Inter, Segoe UI, Arial, sans-serif" font-size="30" fill="#111827" text-anchor="start" font-weight="700">Where each cost lever sits</text>
+<text x="60" y="100" font-family="Inter, Segoe UI, Arial, sans-serif" font-size="20" fill="#4b5563" text-anchor="start" font-weight="400">Cheapest checks first; the model call is the last resort</text>
+<rect x="40" y="150" width="150" height="110" rx="10" fill="#ffffff" stroke="#d1d5db" stroke-width="2"/>
+<text x="115.0" y="212.0" font-family="Inter, Segoe UI, Arial, sans-serif" font-size="20" fill="#111827" text-anchor="middle" font-weight="700">Request</text>
+<rect x="235" y="150" width="200" height="110" rx="10" fill="#f3f4f6" stroke="#d1d5db" stroke-width="2"/>
+<text x="335.0" y="199.0" font-family="Inter, Segoe UI, Arial, sans-serif" font-size="20" fill="#111827" text-anchor="middle" font-weight="700">Exact cache</text>
+<text x="335.0" y="225.0" font-family="Inter, Segoe UI, Arial, sans-serif" font-size="18" fill="#4b5563" text-anchor="middle" font-weight="400">same input?</text>
+<rect x="480" y="150" width="220" height="110" rx="10" fill="#f3f4f6" stroke="#d1d5db" stroke-width="2"/>
+<text x="590.0" y="199.0" font-family="Inter, Segoe UI, Arial, sans-serif" font-size="20" fill="#111827" text-anchor="middle" font-weight="700">Semantic cache</text>
+<text x="590.0" y="225.0" font-family="Inter, Segoe UI, Arial, sans-serif" font-size="18" fill="#4b5563" text-anchor="middle" font-weight="400">similar enough?</text>
+<rect x="745" y="150" width="170" height="110" rx="10" fill="#ffffff" stroke="#ec362e" stroke-width="2"/>
+<text x="830.0" y="199.0" font-family="Inter, Segoe UI, Arial, sans-serif" font-size="20" fill="#111827" text-anchor="middle" font-weight="700">Router</text>
+<text x="830.0" y="225.0" font-family="Inter, Segoe UI, Arial, sans-serif" font-size="18" fill="#4b5563" text-anchor="middle" font-weight="400">easy or hard?</text>
+<rect x="965" y="130" width="200" height="70" rx="10" fill="#f3f4f6" stroke="#d1d5db" stroke-width="2"/>
+<text x="1065.0" y="172.0" font-family="Inter, Segoe UI, Arial, sans-serif" font-size="20" fill="#111827" text-anchor="middle" font-weight="700">Small model</text>
+<rect x="965" y="210" width="200" height="70" rx="10" fill="#f3f4f6" stroke="#d1d5db" stroke-width="2"/>
+<text x="1065.0" y="252.0" font-family="Inter, Segoe UI, Arial, sans-serif" font-size="20" fill="#111827" text-anchor="middle" font-weight="700">Large model</text>
+<line x1="190" y1="205" x2="233" y2="205" stroke="#4b5563" stroke-width="2.5" marker-end="url(#ah)"/>
+<line x1="435" y1="205" x2="478" y2="205" stroke="#4b5563" stroke-width="2.5" marker-end="url(#ah)"/>
+<line x1="700" y1="205" x2="743" y2="205" stroke="#4b5563" stroke-width="2.5" marker-end="url(#ah)"/>
+<line x1="915" y1="185" x2="963" y2="165" stroke="#4b5563" stroke-width="2.5" marker-end="url(#ah)"/>
+<line x1="915" y1="225" x2="963" y2="245" stroke="#4b5563" stroke-width="2.5" marker-end="url(#ah)"/>
+<text x="335" y="294" font-family="Inter, Segoe UI, Arial, sans-serif" font-size="18" fill="#4b5563" text-anchor="middle" font-weight="400">hit: return stored answer</text>
+<text x="590" y="294" font-family="Inter, Segoe UI, Arial, sans-serif" font-size="18" fill="#4b5563" text-anchor="middle" font-weight="400">hit: return stored answer</text>
+<rect x="40" y="360" width="1125" height="66" rx="10" fill="#ffffff" stroke="#ec362e" stroke-width="2"/>
+<text x="60" y="401" font-family="Inter, Segoe UI, Arial, sans-serif" font-size="20" fill="#111827" text-anchor="start" font-weight="700">Every model call:</text>
+<text x="240" y="401" font-family="Inter, Segoe UI, Arial, sans-serif" font-size="20" fill="#111827" text-anchor="start" font-weight="400">stable prefix first, so the provider's prompt cache can reuse it</text>
+<rect x="40" y="446" width="1125" height="66" rx="10" fill="#ffffff" stroke="#2563eb" stroke-width="2"/>
+<text x="60" y="487" font-family="Inter, Segoe UI, Arial, sans-serif" font-size="20" fill="#111827" text-anchor="start" font-weight="700">Not urgent?</text>
+<text x="195" y="487" font-family="Inter, Segoe UI, Arial, sans-serif" font-size="20" fill="#111827" text-anchor="start" font-weight="400">Send it to a batch API instead: 50% discount, results within 24 hours</text>
+</svg>

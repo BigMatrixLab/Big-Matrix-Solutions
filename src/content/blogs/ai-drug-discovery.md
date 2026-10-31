@@ -3,10 +3,10 @@ id: "12"
 slug: "ai-designed-drugs-reach-the-clinic"
 title: "AI-Designed Drugs Reached the Clinic. The Results Are In, and They Are Complicated."
 comments: "0"
-image: "https://images.unsplash.com/photo-1614935151651-0bea6508db6b?auto=format&fit=crop&q=80&w=800"
+image: "/assets/images/blog/ai-drug-discovery.webp"
 category: "Medical AI"
 desc: "A 98.4 mL lung function improvement, 173 programs in clinical development, and still zero FDA approvals. What the first real data actually says."
-date: "Nov 13, 2026"
+date: "Oct 25, 2026"
 tags: ["Drug Discovery", "Medical AI", "Clinical Trials", "Protein Design"]
 ---
 
@@ -30,6 +30,10 @@ The Phase IIa results:
 | Placebo | −20.3 mL |
 
 Improvement, not a slower decline. In a disease where slowing the decline is the current standard of care, a positive mean change is a meaningfully different kind of result.
+
+![Bar chart: mean FVC change of +98.4 mL with rentosertib 60 mg once daily versus -20.3 mL with placebo](/assets/images/blog/diagrams/ai-drug-discovery-1.svg)
+
+*Diagram: Big Matrix Solutions, based on [the Phase IIa rentosertib trial, Nature Medicine 2025](https://pmc.ncbi.nlm.nih.gov/articles/PMC12353801/).*
 
 Two caveats need to sit right next to that. Phase IIa is a small, early trial designed primarily to establish safety and find a dose, so it is not powered to prove efficacy, and Phase II results have a long history of not surviving Phase III. And a novel target being validated is genuinely exciting precisely because it is genuinely uncertain; TNIK was not on anybody's IPF list before the model put it there.
 
@@ -84,6 +88,10 @@ AI compresses discovery and preclinical work. Clinical trials are gated by biolo
 There is useful work at the margins (patient stratification, site selection, protocol optimisation, synthetic control arms) and it can shave real months off enrolment. But the clinical phase is the majority of both the timeline and the cost, and it is the phase AI has changed least.
 
 So when you see a claim that AI compressed a ten-year process into eighteen months, the accurate translation is usually: *the discovery-through-candidate-nomination portion took eighteen months instead of four or five years.* That is a genuine and valuable achievement. It is not the same claim.
+
+![The four phases of drug development and how much AI has changed each, from target identification (transformed) to clinical trials (barely touched)](/assets/images/blog/diagrams/ai-drug-discovery-2.svg)
+
+*Diagram: Big Matrix Solutions, based on the phase-by-phase assessment in this article; block counts are illustrative.*
 
 ## How these platforms actually work
 
@@ -144,3 +152,8 @@ Discovery is genuinely faster and genuinely better at finding non-obvious target
 Human biology has not become more predictable, clinical trials have not become shorter, and no AI-designed drug has yet been approved. The 173 programs in clinical development are the actual experiment, and it will report over the next three to five years.
 
 If you want one sentence: AI has made it dramatically cheaper to find out whether a drug works, and has not made drugs more likely to work. That is a smaller claim than the headlines and a much better outcome than nothing.
+
+**Media credits**:
+- Hero image: AI-driven target discovery and generative chemistry workflow behind the TNIK inhibitor, Figure 1 from Ren et al., Nature Biotechnology 2024 — [Nature](https://www.nature.com/articles/s41587-024-02143-0), CC BY 4.0, placed on a 16:9 canvas
+- Diagram: rentosertib Phase IIa FVC change — Big Matrix Solutions, based on [Xu et al., Nature Medicine 2025](https://pmc.ncbi.nlm.nih.gov/articles/PMC12353801/)
+- Diagram: where AI helps by phase — Big Matrix Solutions, based on this article's analysis

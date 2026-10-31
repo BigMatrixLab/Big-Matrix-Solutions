@@ -1,0 +1,31 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 1200 720" width="1200" height="720" role="img">
+<rect x="1" y="1" width="1198" height="718" fill="#ffffff" rx="16" stroke="#e5e7eb" stroke-width="2"/>
+<title>Variant prioritisation funnel</title>
+<desc>About four million variants per genome pass through frequency filtering, predicted consequence, pathogenicity prediction, gene-phenotype matching and inheritance-pattern filtering to yield a shortlist for a clinical geneticist.</desc>
+<defs><marker id="ah" viewBox="0 0 10 10" refX="9" refY="5" markerWidth="8" markerHeight="8" orient="auto-start-reverse"><path d="M0,0 L10,5 L0,10 z" fill="#4b5563"/></marker></defs>
+<g font-family="Inter, Segoe UI, Arial, sans-serif">
+<text x="60" y="70" font-size="30" fill="#111827" text-anchor="start" font-weight="700">Variant prioritisation: each stage discards most of what reaches it</text>
+<text x="60" y="106" font-size="20" fill="#4b5563" text-anchor="start">Stage widths are illustrative; the article gives no per-stage counts</text>
+<rect x="60" y="140" width="1080" height="62" rx="8" fill="#ffffff" stroke="#ec362e" stroke-width="2"/>
+<text x="600" y="167" font-size="20" fill="#111827" text-anchor="middle" font-weight="700">~4 million variants per genome</text>
+<text x="600" y="192" font-size="18" fill="#4b5563" text-anchor="middle">start: almost all benign</text>
+<rect x="130" y="214" width="940" height="62" rx="8" fill="#f3f4f6" stroke="#d1d5db" stroke-width="2"/>
+<text x="600" y="241" font-size="20" fill="#111827" text-anchor="middle" font-weight="700">Frequency filtering</text>
+<text x="600" y="266" font-size="18" fill="#4b5563" text-anchor="middle">common in the population → discard (arithmetic, not AI)</text>
+<rect x="200" y="288" width="800" height="62" rx="8" fill="#f3f4f6" stroke="#d1d5db" stroke-width="2"/>
+<text x="600" y="315" font-size="20" fill="#111827" text-anchor="middle" font-weight="700">Predicted consequence</text>
+<text x="600" y="340" font-size="18" fill="#4b5563" text-anchor="middle">does it change, truncate or splice a protein?</text>
+<rect x="260" y="362" width="680" height="62" rx="8" fill="#f3f4f6" stroke="#d1d5db" stroke-width="2"/>
+<text x="600" y="389" font-size="20" fill="#111827" text-anchor="middle" font-weight="700">Pathogenicity prediction</text>
+<text x="600" y="414" font-size="18" fill="#4b5563" text-anchor="middle">is the change damaging? (deep learning earns its place)</text>
+<rect x="320" y="436" width="560" height="62" rx="8" fill="#f3f4f6" stroke="#d1d5db" stroke-width="2"/>
+<text x="600" y="463" font-size="20" fill="#111827" text-anchor="middle" font-weight="700">Gene–phenotype matching</text>
+<text x="600" y="488" font-size="18" fill="#4b5563" text-anchor="middle">does the gene explain this patient's symptoms?</text>
+<rect x="370" y="510" width="460" height="62" rx="8" fill="#f3f4f6" stroke="#d1d5db" stroke-width="2"/>
+<text x="600" y="537" font-size="20" fill="#111827" text-anchor="middle" font-weight="700">Inheritance-pattern filtering</text>
+<text x="600" y="562" font-size="18" fill="#4b5563" text-anchor="middle">trio data: does it fit the family?</text>
+<rect x="470" y="584" width="260" height="56" rx="8" fill="#ec362e"/>
+<text x="600" y="620" font-size="21" fill="#ffffff" text-anchor="middle" font-weight="700">Shortlist for a geneticist</text>
+<text x="60" y="684" font-size="19" fill="#4b5563" text-anchor="start">A causal variant filtered out early cannot be recovered downstream, so the pipeline should stay auditable.</text>
+</g>
+</svg>

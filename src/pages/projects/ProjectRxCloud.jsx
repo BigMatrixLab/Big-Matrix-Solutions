@@ -250,7 +250,7 @@ const ProjectRxCloud = () => {
                         <figure className="bc-hero-figure">
                             <a
                                 className="bc-hero-figure__link"
-                                href="https://rxcloud.care/"
+                                href="https://www.rxcloud.care/"
                                 target="_blank"
                                 rel="noopener noreferrer"
                                 aria-label="Open the live RxCloud platform at rxcloud.care in a new tab"
@@ -602,7 +602,7 @@ const ProjectRxCloud = () => {
                                 Submit the Start your service form to plan a setup. Every doctor site is
                                 a working demo of the public booking loop.
                             </p>
-                            <a className="bc-pub-status" href="https://rxcloud.care/" target="_blank" rel="noopener noreferrer">
+                            <a className="bc-pub-status" href="https://www.rxcloud.care/" target="_blank" rel="noopener noreferrer">
                                 <i className="bi bi-box-arrow-up-right"></i> rxcloud.care
                             </a>
                         </div>

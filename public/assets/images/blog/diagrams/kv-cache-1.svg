@@ -1,0 +1,18 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 1200 520" width="1200" height="520" role="img">
+<rect x="1" y="1" width="1198" height="518" fill="#ffffff" rx="16" stroke="#e5e7eb" stroke-width="2"/>
+<title>KV cache memory versus model weights</title>
+<desc>Bar chart: Llama 3 70B weights take about 140 GB in FP16. A 128K-token KV cache would take 320 GiB with one KV head per query head, and 40 GiB with the model's actual 8 grouped KV heads.</desc>
+<defs><marker id="ah" viewBox="0 0 10 10" refX="9" refY="5" markerWidth="8" markerHeight="8" orient="auto-start-reverse"><path d="M0,0 L10,5 L0,10 z" fill="#4b5563"/></marker></defs>
+<text x="60" y="70" font-family="Inter, Segoe UI, Arial, sans-serif" font-size="30" fill="#111827" text-anchor="start" font-weight="700" xml:space="preserve">KV cache for one sequence, Llama 3 70B shape</text>
+<text x="60" y="108" font-family="Inter, Segoe UI, Arial, sans-serif" font-size="20" fill="#4b5563" text-anchor="start" font-weight="400" xml:space="preserve">2 (K and V) × 80 layers × KV heads × 128 dims × 2 bytes (FP16), per token</text>
+<text x="60" y="150" font-family="Inter, Segoe UI, Arial, sans-serif" font-size="20" fill="#111827" text-anchor="start" font-weight="700" xml:space="preserve">Weights, FP16</text>
+<rect x="60" y="164" width="285.2153667054714" height="44" rx="6" fill="#d1d5db" stroke="none" stroke-width="0"/>
+<text x="361.2153667054714" y="194" font-family="Inter, Segoe UI, Arial, sans-serif" font-size="20" fill="#4b5563" text-anchor="start" font-weight="400" xml:space="preserve">~140 GB</text>
+<text x="60" y="260" font-family="Inter, Segoe UI, Arial, sans-serif" font-size="20" fill="#111827" text-anchor="start" font-weight="700" xml:space="preserve">KV cache, 128K tokens, if it had 64 KV heads (no GQA)</text>
+<rect x="60" y="274" width="699.9999999999999" height="44" rx="6" fill="#ec362e" stroke="none" stroke-width="0"/>
+<text x="775.9999999999999" y="304" font-family="Inter, Segoe UI, Arial, sans-serif" font-size="20" fill="#4b5563" text-anchor="start" font-weight="400" xml:space="preserve">320 GiB  (2.5 MiB per token)</text>
+<text x="60" y="370" font-family="Inter, Segoe UI, Arial, sans-serif" font-size="20" fill="#111827" text-anchor="start" font-weight="700" xml:space="preserve">KV cache, 128K tokens, 8 KV heads (GQA)</text>
+<rect x="60" y="384" width="87.39813736903375" height="44" rx="6" fill="#2563eb" stroke="none" stroke-width="0"/>
+<text x="163.39813736903375" y="414" font-family="Inter, Segoe UI, Arial, sans-serif" font-size="20" fill="#4b5563" text-anchor="start" font-weight="400" xml:space="preserve">40 GiB  (320 KiB per token)</text>
+<text x="60" y="480" font-family="Inter, Segoe UI, Arial, sans-serif" font-size="20" fill="#111827" text-anchor="start" font-weight="400" xml:space="preserve">Grouped-query attention shares each K/V head across 8 query heads: an 8× smaller cache.</text>
+</svg>

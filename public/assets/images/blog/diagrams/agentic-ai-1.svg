@@ -1,0 +1,53 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 1200 600" width="1200" height="600" role="img" aria-labelledby="t d" font-family="Inter, Segoe UI, Arial, sans-serif">
+  <rect x="0" y="0" width="1200" height="600" fill="#ffffff" rx="16" stroke="#e5e7eb"/>
+  <title id="t">The agentic loop: plan, execute, adapt, synthesise</title>
+  <desc id="d">Four phases in a row. Planning creates an execution plan, execution runs each step with tools and stores results in memory, adaptation monitors progress and replans when needed, and synthesis combines results into the final output. A loop arrow returns from adaptation to planning. Memory and tools bands sit underneath.</desc>
+  <defs>
+    <marker id="a" viewBox="0 0 10 10" refX="9" refY="5" markerWidth="8" markerHeight="8" orient="auto-start-reverse"><path d="M0,0 L10,5 L0,10 z" fill="#4b5563"/></marker>
+    <marker id="r" viewBox="0 0 10 10" refX="9" refY="5" markerWidth="8" markerHeight="8" orient="auto-start-reverse"><path d="M0,0 L10,5 L0,10 z" fill="#ec362e"/></marker>
+  </defs>
+  <text x="600" y="54" text-anchor="middle" font-size="28" font-weight="700" fill="#111827">The agentic loop</text>
+
+  <g font-size="18" fill="#4b5563" text-anchor="middle">
+    <rect x="30" y="100" width="250" height="170" rx="12" fill="#f3f4f6" stroke="#d1d5db"/>
+    <text x="155" y="138" fill="#ec362e" font-weight="700">1</text>
+    <text x="155" y="168" font-size="22" font-weight="700" fill="#111827">Plan</text>
+    <text x="155" y="210">reasoning engine</text>
+    <text x="155" y="236">writes the plan</text>
+
+    <rect x="330" y="100" width="250" height="170" rx="12" fill="#f3f4f6" stroke="#d1d5db"/>
+    <text x="455" y="138" fill="#ec362e" font-weight="700">2</text>
+    <text x="455" y="168" font-size="22" font-weight="700" fill="#111827">Execute</text>
+    <text x="455" y="210">tools run each step,</text>
+    <text x="455" y="236">results go to memory</text>
+
+    <rect x="630" y="100" width="250" height="170" rx="12" fill="#f3f4f6" stroke="#d1d5db"/>
+    <text x="755" y="138" fill="#ec362e" font-weight="700">3</text>
+    <text x="755" y="168" font-size="22" font-weight="700" fill="#111827">Adapt</text>
+    <text x="755" y="210">monitor progress,</text>
+    <text x="755" y="236">replan if needed</text>
+
+    <rect x="930" y="100" width="240" height="170" rx="12" fill="#f3f4f6" stroke="#d1d5db"/>
+    <text x="1050" y="138" fill="#ec362e" font-weight="700">4</text>
+    <text x="1050" y="168" font-size="22" font-weight="700" fill="#111827">Synthesise</text>
+    <text x="1050" y="210">combine results</text>
+    <text x="1050" y="236">into the output</text>
+  </g>
+
+  <g stroke="#4b5563" stroke-width="2" fill="none">
+    <line x1="282" y1="185" x2="326" y2="185" marker-end="url(#a)"/>
+    <line x1="582" y1="185" x2="626" y2="185" marker-end="url(#a)"/>
+    <line x1="882" y1="185" x2="926" y2="185" marker-end="url(#a)"/>
+  </g>
+  <path d="M755,272 V320 H155 V276" fill="none" stroke="#ec362e" stroke-width="2.5" marker-end="url(#r)"/>
+  <text x="455" y="352" text-anchor="middle" font-size="18" fill="#ec362e">replan when a step fails or results change</text>
+
+  <g font-size="18" fill="#4b5563">
+    <rect x="30" y="390" width="1140" height="80" rx="12" fill="#ffffff" stroke="#d1d5db"/>
+    <text x="60" y="437" font-size="20" font-weight="700" fill="#111827">Memory</text>
+    <text x="200" y="437">short-term task state  ·  long-term history and patterns  ·  semantic domain knowledge</text>
+    <rect x="30" y="490" width="1140" height="80" rx="12" fill="#ffffff" stroke="#d1d5db"/>
+    <text x="60" y="537" font-size="20" font-weight="700" fill="#111827">Tools</text>
+    <text x="200" y="537">web search  ·  document readers  ·  data analysers  ·  report generators</text>
+  </g>
+</svg>

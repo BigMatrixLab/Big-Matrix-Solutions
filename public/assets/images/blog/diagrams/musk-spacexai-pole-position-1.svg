@@ -1,0 +1,39 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 1200 654" width="1200" height="654" font-family="Inter, Segoe UI, Arial, sans-serif">
+<rect x="0.5" y="0.5" width="1199" height="653" fill="#ffffff" rx="16" stroke="#e5e7eb"/>
+<title>Musk AI forecasts versus outcomes</title>
+<desc>Table-style diagram. Grok 5, targeted for end of 2025 and then Q1 2026, has not been released. Grok 4.6, expected around August 7, shipped August 12. The parity forecast points to late November to late December 2026 and the pole position forecast to around late March 2027; both are pending.</desc>
+<text x="40" y="62" font-size="30" fill="#111827" font-weight="700">Musk's AI dates: claimed vs delivered</text>
+<text x="40" y="98" font-size="20" fill="#4b5563">Status as of early October 2026</text>
+<text x="40" y="150" font-size="20" fill="#4b5563" font-weight="700">Claim</text>
+<text x="430" y="150" font-size="20" fill="#4b5563" font-weight="700">Target</text>
+<text x="760" y="150" font-size="20" fill="#4b5563" font-weight="700">Outcome</text>
+<line x1="40" y1="164" x2="1160" y2="164" stroke="#d1d5db" stroke-width="2"/>
+<rect x="40" y="180" width="1120" height="96" fill="#f3f4f6" rx="10"/>
+<text x="60" y="236" font-size="21" fill="#111827" font-weight="700">Grok 5</text>
+<text x="430" y="222" font-size="19" fill="#111827">End of 2025, then</text>
+<text x="430" y="250" font-size="19" fill="#111827">“Q1 sometime” 2026</text>
+<text x="760" y="222" font-size="19" fill="#111827">Not released yet</text>
+<rect x="760" y="234" width="130" height="32" fill="#ffffff" rx="16" stroke="#ec362e" stroke-width="2"/>
+<text x="825.0" y="256" font-size="18" fill="#ec362e" font-weight="700" text-anchor="middle">Slipped</text>
+<rect x="40" y="284" width="1120" height="96" fill="#ffffff" rx="10"/>
+<text x="60" y="340" font-size="21" fill="#111827" font-weight="700">Grok 4.6</text>
+<text x="430" y="326" font-size="19" fill="#111827">Expected around August 7, 2026</text>
+<text x="760" y="326" font-size="19" fill="#111827">Shipped August 12, 2026</text>
+<rect x="760" y="338" width="130" height="32" fill="#ffffff" rx="16" stroke="#2563eb" stroke-width="2"/>
+<text x="825.0" y="360" font-size="18" fill="#2563eb" font-weight="700" text-anchor="middle">Days late</text>
+<rect x="40" y="388" width="1120" height="96" fill="#f3f4f6" rx="10"/>
+<text x="60" y="444" font-size="21" fill="#111827" font-weight="700">“Fable/GPT-6 level” model</text>
+<text x="430" y="430" font-size="19" fill="#111827">2–3 months from Sep 24:</text>
+<text x="430" y="458" font-size="19" fill="#111827">late Nov–late Dec 2026</text>
+<text x="760" y="430" font-size="19" fill="#111827">Not yet testable</text>
+<rect x="760" y="442" width="130" height="32" fill="#ffffff" rx="16" stroke="#4b5563" stroke-width="2"/>
+<text x="825.0" y="464" font-size="18" fill="#4b5563" font-weight="700" text-anchor="middle">Pending</text>
+<rect x="40" y="492" width="1120" height="96" fill="#ffffff" rx="10"/>
+<text x="60" y="548" font-size="21" fill="#111827" font-weight="700">“Pole position”</text>
+<text x="430" y="534" font-size="19" fill="#111827">~6 months from Sep 24:</text>
+<text x="430" y="562" font-size="19" fill="#111827">around late March 2027</text>
+<text x="760" y="534" font-size="19" fill="#111827">Not yet testable; conditional</text>
+<rect x="760" y="546" width="130" height="32" fill="#ffffff" rx="16" stroke="#4b5563" stroke-width="2"/>
+<text x="825.0" y="568" font-size="18" fill="#4b5563" font-weight="700" text-anchor="middle">Pending</text>
+<text x="40" y="622" font-size="18" fill="#4b5563">Flagship dates have slipped by quarters; point releases by days. Forecasts came with no named benchmark.</text>
+</svg>

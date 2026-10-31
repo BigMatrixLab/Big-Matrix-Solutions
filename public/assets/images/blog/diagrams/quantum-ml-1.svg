@@ -1,0 +1,26 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 1200 460" width="1200" height="460" role="img">
+<rect x="1" y="1" width="1198" height="458" fill="#ffffff" rx="16" stroke="#e5e7eb" stroke-width="2"/>
+<title>Three-phase hybrid quantum-classical architecture</title>
+<desc>Classical preprocessing such as feature engineering and normalisation feeds a quantum processing step for core operations like optimisation and sampling; results go to classical postprocessing for interpretation and visualisation. Hybrid designs are used because current hardware offers about 100 qubits with about 1 percent gate failure rates.</desc>
+<defs><marker id="ah" viewBox="0 0 10 10" refX="9" refY="5" markerWidth="8" markerHeight="8" orient="auto-start-reverse"><path d="M0,0 L10,5 L0,10 z" fill="#4b5563"/></marker><marker id="ahr" viewBox="0 0 10 10" refX="9" refY="5" markerWidth="8" markerHeight="8" orient="auto-start-reverse"><path d="M0,0 L10,5 L0,10 z" fill="#ec362e"/></marker></defs>
+<text x="60" y="68" font-family="Inter, Segoe UI, Arial, sans-serif" font-size="30" fill="#111827" text-anchor="start" font-weight="700">Today’s quantum ML is hybrid</text>
+<text x="60" y="104" font-family="Inter, Segoe UI, Arial, sans-serif" font-size="20" fill="#4b5563" text-anchor="start" font-weight="400">Classical preprocessing, a quantum core, classical postprocessing</text>
+<rect x="60" y="150" width="300" height="200" rx="10" fill="#f3f4f6" stroke="#d1d5db" stroke-width="3"/>
+<text x="210" y="196" font-family="Inter, Segoe UI, Arial, sans-serif" font-size="24" fill="#111827" text-anchor="middle" font-weight="700">Classical</text>
+<text x="210" y="226" font-family="Inter, Segoe UI, Arial, sans-serif" font-size="20" fill="#4b5563" text-anchor="middle" font-weight="400">preprocessing</text>
+<text x="210" y="280" font-family="Inter, Segoe UI, Arial, sans-serif" font-size="19" fill="#111827" text-anchor="middle" font-weight="400">Feature engineering</text>
+<text x="210" y="310" font-family="Inter, Segoe UI, Arial, sans-serif" font-size="19" fill="#111827" text-anchor="middle" font-weight="400">Normalisation</text>
+<rect x="450" y="150" width="300" height="200" rx="10" fill="#f3f4f6" stroke="#ec362e" stroke-width="3"/>
+<text x="600" y="196" font-family="Inter, Segoe UI, Arial, sans-serif" font-size="24" fill="#111827" text-anchor="middle" font-weight="700">Quantum</text>
+<text x="600" y="226" font-family="Inter, Segoe UI, Arial, sans-serif" font-size="20" fill="#4b5563" text-anchor="middle" font-weight="400">processing</text>
+<text x="600" y="280" font-family="Inter, Segoe UI, Arial, sans-serif" font-size="19" fill="#111827" text-anchor="middle" font-weight="400">Optimisation</text>
+<text x="600" y="310" font-family="Inter, Segoe UI, Arial, sans-serif" font-size="19" fill="#111827" text-anchor="middle" font-weight="400">Sampling</text>
+<rect x="840" y="150" width="300" height="200" rx="10" fill="#f3f4f6" stroke="#d1d5db" stroke-width="3"/>
+<text x="990" y="196" font-family="Inter, Segoe UI, Arial, sans-serif" font-size="24" fill="#111827" text-anchor="middle" font-weight="700">Classical</text>
+<text x="990" y="226" font-family="Inter, Segoe UI, Arial, sans-serif" font-size="20" fill="#4b5563" text-anchor="middle" font-weight="400">postprocessing</text>
+<text x="990" y="280" font-family="Inter, Segoe UI, Arial, sans-serif" font-size="19" fill="#111827" text-anchor="middle" font-weight="400">Interpretation</text>
+<text x="990" y="310" font-family="Inter, Segoe UI, Arial, sans-serif" font-size="19" fill="#111827" text-anchor="middle" font-weight="400">Visualisation</text>
+<line x1="364" y1="250" x2="446" y2="250" stroke="#4b5563" stroke-width="2.5" marker-end="url(#ah)"/>
+<line x1="754" y1="250" x2="836" y2="250" stroke="#4b5563" stroke-width="2.5" marker-end="url(#ah)"/>
+<text x="600" y="410" font-family="Inter, Segoe UI, Arial, sans-serif" font-size="20" fill="#ec362e" text-anchor="middle" font-weight="600">Why hybrid today: ~100 qubits available, ~1% gate failure rate</text>
+</svg>

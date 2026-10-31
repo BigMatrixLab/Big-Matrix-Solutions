@@ -3,10 +3,10 @@ id: "27"
 slug: "digital-pathology-foundation-models-2026"
 title: "51 Cleared Devices, 7 That Read a Slide: Digital Pathology's Honest Scorecard"
 comments: "0"
-image: "https://images.unsplash.com/photo-1576086213369-97a306d36557?auto=format&fit=crop&q=80&w=800"
+image: "/assets/images/blog/digital-pathology.webp"
 category: "Medical AI"
 desc: "Foundation models that generalise across stains and scanners, updated CLIA guidance, and a regulatory count that reveals how early this still is."
-date: "Jan 08, 2027"
+date: "Nov 16, 2026"
 tags: ["Medical AI", "Digital Pathology", "Foundation Models", "Oncology"]
 ---
 
@@ -30,6 +30,10 @@ Then look closer: **only seven of those algorithms actually analyse whole-slide 
 | Algorithms that analyse whole-slide images | 7 |
 
 Seven. Against 1,163 cleared algorithms in radiology. That is the honest scorecard, and it says the clinical translation of computational pathology has barely started, despite a research literature that is now enormous.
+
+![Bar chart to scale: 1,163 cleared radiology algorithms, 51 AI/ML devices in pathology-relevant panels, 7 that analyse whole-slide images](/assets/images/blog/diagrams/digital-pathology-1.svg)
+
+*Diagram: Big Matrix Solutions, based on [Innolitics, AI/ML in Digital Pathology: 2026 Snapshot](https://innolitics.com/articles/ai-ml-in-digital-pathology-and-the-software-as-an-ivd-paradigm-snapshot/) and the radiology count cited in this article.*
 
 ## What changed to make it possible
 
@@ -64,6 +68,10 @@ The standard response is **multiple-instance learning**, and it explains both th
 The slide is cut into thousands of small tiles. Each tile passes through the encoder to produce a feature vector. An aggregation step then combines those thousands of vectors into one slide-level prediction. The slide is treated as a *bag* of tiles, and the model learns which tiles matter.
 
 This works, and it introduces a specific difficulty. Labels exist at slide level, as in this slide is malignant, but the diagnostic evidence may occupy a handful of tiles out of ten thousand. The model has to learn which tiles carry the signal without ever being told, from a label that describes the whole bag. That is a weak supervision problem, and it is why pathology models need far more slides than you would expect for the apparent simplicity of the task.
+
+![Multiple-instance learning: a gigapixel whole-slide image is cut into thousands of tiles, each encoded, then aggregated into one slide-level prediction](/assets/images/blog/diagrams/digital-pathology-2.svg)
+
+*Diagram: Big Matrix Solutions, based on the multiple-instance learning approach described in this article; see also [Xu et al., Nature 2024](https://www.nature.com/articles/s41586-024-07441-w).*
 
 It also has consequences for what the models can and cannot see:
 
@@ -111,10 +119,15 @@ Three signals that will tell you whether this is translating.
 
 ## The honest position
 
-Computational pathology in early 2027 is a field where the technology is well ahead of the deployment, and the bottleneck is not the models.
+Computational pathology in late 2026 is a field where the technology is well ahead of the deployment, and the bottleneck is not the models.
 
 Foundation models that generalise across stains and scanners solved the problem that held the field back for a decade. Multimodal systems are producing results on prognostic and treatment-response questions that matter more than classification accuracy. The regulatory and standards groundwork is materially better than it was.
 
 And seven algorithms are cleared to read a slide.
 
 That gap is where the interesting work is. Not in another architecture, but in scanning capacity, storage economics, format standards, reimbursement policy, and the prospective evidence that would justify all of it. None of which will be solved by a better model, and all of which will determine whether the better models ever reach a patient.
+
+**Media credits**:
+- Hero image: Prov-GigaPath tile-level and slide-level encoder architecture, Figure 1 from Xu et al., "A whole-slide foundation model for digital pathology from real-world data", Nature 2024 — [Nature](https://www.nature.com/articles/s41586-024-07441-w), CC BY 4.0, placed on a 16:9 canvas
+- Diagram: FDA device scorecard — Big Matrix Solutions, based on [Innolitics](https://innolitics.com/articles/ai-ml-in-digital-pathology-and-the-software-as-an-ivd-paradigm-snapshot/)
+- Diagram: multiple-instance learning — Big Matrix Solutions

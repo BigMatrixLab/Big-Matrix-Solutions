@@ -1,0 +1,58 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 1200 560" width="1200" height="560" font-family="Inter, Segoe UI, Arial, sans-serif" role="img">
+<rect x="0.5" y="0.5" width="1199" height="559" rx="16" fill="#ffffff" stroke="#e5e7eb"/>
+<title>Top-2 expert routing, worked example</title>
+<desc>A token vector goes through the router, a single linear layer producing one logit per expert (eight experts shown). The two largest logits, expert 3 at 2.1 and expert 5 at 1.4, are selected and softmaxed over just those two, giving weights 0.67 and 0.33. Only those two experts run; the output is their weighted sum.</desc>
+<defs><marker id="a" viewBox="0 0 10 10" refX="9" refY="5" markerWidth="8" markerHeight="8" orient="auto-start-reverse"><path d="M0,0 L10,5 L0,10 z" fill="#111827"/></marker><marker id="ar" viewBox="0 0 10 10" refX="9" refY="5" markerWidth="8" markerHeight="8" orient="auto-start-reverse"><path d="M0,0 L10,5 L0,10 z" fill="#ec362e"/></marker><marker id="ab" viewBox="0 0 10 10" refX="9" refY="5" markerWidth="8" markerHeight="8" orient="auto-start-reverse"><path d="M0,0 L10,5 L0,10 z" fill="#2563eb"/></marker><marker id="ag" viewBox="0 0 10 10" refX="9" refY="5" markerWidth="8" markerHeight="8" orient="auto-start-reverse"><path d="M0,0 L10,5 L0,10 z" fill="#4b5563"/></marker></defs>
+<text x="600" y="48" font-size="26" fill="#111827" text-anchor="middle" font-weight="bold">Top-2 routing: eight experts, two computed</text>
+<rect x="30" y="245" width="130" height="80" rx="10" fill="#f3f4f6" stroke="#d1d5db" stroke-width="2"/>
+<text x="95.0" y="278.3" font-size="18" fill="#111827" text-anchor="middle" font-weight="bold">token x</text>
+<text x="95.0" y="304.3" font-size="18" fill="#4b5563" text-anchor="middle" font-weight="normal">(d_model)</text>
+<rect x="195" y="245" width="150" height="80" rx="10" fill="#f3f4f6" stroke="#d1d5db" stroke-width="2"/>
+<text x="270.0" y="278.3" font-size="18" fill="#111827" text-anchor="middle" font-weight="bold">Router</text>
+<text x="270.0" y="304.3" font-size="18" fill="#4b5563" text-anchor="middle" font-weight="normal">linear d → 8</text>
+<line x1="160" y1="285" x2="193" y2="285" stroke="#111827" stroke-width="2" marker-end="url(#a)"/>
+<line x1="385" y1="330" x2="745" y2="330" stroke="#d1d5db" stroke-width="2"/>
+<text x="565" y="108" font-size="18" fill="#4b5563" text-anchor="middle" font-weight="normal">router logits</text>
+<rect x="395" y="309" width="30" height="21" rx="3" fill="#d1d5db"/>
+<text x="410" y="430" font-size="18" fill="#4b5563" text-anchor="middle" font-weight="normal">E1</text>
+<text x="410" y="456" font-size="18" fill="#4b5563" text-anchor="middle" font-weight="normal">0.3</text>
+<rect x="439" y="330" width="30" height="35" rx="3" fill="#d1d5db"/>
+<text x="454" y="430" font-size="18" fill="#4b5563" text-anchor="middle" font-weight="normal">E2</text>
+<text x="454" y="456" font-size="18" fill="#4b5563" text-anchor="middle" font-weight="normal">-0.5</text>
+<rect x="483" y="183" width="30" height="147" rx="3" fill="#ec362e"/>
+<text x="498" y="430" font-size="18" fill="#111827" text-anchor="middle" font-weight="bold">E3</text>
+<text x="498" y="456" font-size="18" fill="#ec362e" text-anchor="middle" font-weight="normal">2.1</text>
+<rect x="527" y="323" width="30" height="7" rx="3" fill="#d1d5db"/>
+<text x="542" y="430" font-size="18" fill="#4b5563" text-anchor="middle" font-weight="normal">E4</text>
+<text x="542" y="456" font-size="18" fill="#4b5563" text-anchor="middle" font-weight="normal">0.1</text>
+<rect x="571" y="232" width="30" height="98" rx="3" fill="#ec362e"/>
+<text x="586" y="430" font-size="18" fill="#111827" text-anchor="middle" font-weight="bold">E5</text>
+<text x="586" y="456" font-size="18" fill="#ec362e" text-anchor="middle" font-weight="normal">1.4</text>
+<rect x="615" y="330" width="30" height="14" rx="3" fill="#d1d5db"/>
+<text x="630" y="430" font-size="18" fill="#4b5563" text-anchor="middle" font-weight="normal">E6</text>
+<text x="630" y="456" font-size="18" fill="#4b5563" text-anchor="middle" font-weight="normal">-0.2</text>
+<rect x="659" y="288" width="30" height="42" rx="3" fill="#d1d5db"/>
+<text x="674" y="430" font-size="18" fill="#4b5563" text-anchor="middle" font-weight="normal">E7</text>
+<text x="674" y="456" font-size="18" fill="#4b5563" text-anchor="middle" font-weight="normal">0.6</text>
+<rect x="703" y="330" width="30" height="70" rx="3" fill="#d1d5db"/>
+<text x="718" y="430" font-size="18" fill="#4b5563" text-anchor="middle" font-weight="normal">E8</text>
+<text x="718" y="456" font-size="18" fill="#4b5563" text-anchor="middle" font-weight="normal">-1</text>
+<line x1="345" y1="285" x2="383" y2="285" stroke="#111827" stroke-width="2" marker-end="url(#a)"/>
+<rect x="820" y="130" width="170" height="70" rx="10" fill="#ffffff" stroke="#ec362e" stroke-width="2"/>
+<text x="905.0" y="158.3" font-size="18" fill="#111827" text-anchor="middle" font-weight="bold">Expert 3</text>
+<text x="905.0" y="184.3" font-size="18" fill="#4b5563" text-anchor="middle" font-weight="normal">FFN</text>
+<rect x="820" y="350" width="170" height="70" rx="10" fill="#ffffff" stroke="#ec362e" stroke-width="2"/>
+<text x="905.0" y="378.3" font-size="18" fill="#111827" text-anchor="middle" font-weight="bold">Expert 5</text>
+<text x="905.0" y="404.3" font-size="18" fill="#4b5563" text-anchor="middle" font-weight="normal">FFN</text>
+<path d="M498,180 L498,165 L818,165" stroke="#ec362e" stroke-width="2" fill="none" marker-end="url(#ar)"/>
+<path d="M586,229 L586,215 L780,215 L780,385 L818,385" stroke="#ec362e" stroke-width="2" fill="none" marker-end="url(#ar)"/>
+<text x="905" y="228" font-size="20" fill="#ec362e" text-anchor="middle" font-weight="bold">× 0.67</text>
+<text x="905" y="448" font-size="20" fill="#ec362e" text-anchor="middle" font-weight="bold">× 0.33</text>
+<circle cx="1060" cy="275" r="18" fill="#ffffff" stroke="#111827" stroke-width="2"/>
+<text x="1060" y="283" font-size="22" fill="#111827" text-anchor="middle" font-weight="bold">+</text>
+<path d="M990,165 L1060,165 L1060,255" stroke="#111827" stroke-width="2" fill="none" marker-end="url(#a)"/>
+<path d="M990,385 L1060,385 L1060,295" stroke="#111827" stroke-width="2" fill="none" marker-end="url(#a)"/>
+<line x1="1078" y1="275" x2="1120" y2="275" stroke="#111827" stroke-width="2" marker-end="url(#a)"/>
+<text x="1125" y="281" font-size="18" fill="#111827" text-anchor="start" font-weight="bold">out</text>
+<text x="600" y="515" font-size="18" fill="#4b5563" text-anchor="middle" font-weight="normal">Softmax over the two chosen logits: e^0.7 / (e^0.7 + 1) ≈ 0.67. The other six experts are never computed for this token.</text>
+</svg>

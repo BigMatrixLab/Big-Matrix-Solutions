@@ -3,7 +3,7 @@ id: "47"
 slug: "microsoft-healthcare-ai-models-medimageinsight-biogpt"
 title: "Microsoft's Medical AI Bet Is Embeddings, Not Answers"
 comments: "0"
-image: "/assets/images/blog/microsoft-healthcare-ai.webp"
+image: "/assets/images/blog/microsoft-medimageinsight-embedding-search.webp"
 category: "Medical AI"
 desc: "MedImageInsight maps nine imaging modalities into one vector space. It does not diagnose anything, and that is the whole point of the catalogue."
 date: "Sep 29, 2026"
@@ -32,6 +32,10 @@ That last one is the practical argument. Labelled medical data is the binding co
 Microsoft's own framing is exactly this: researchers use the embeddings and build adapters for their specific tasks across radiology, pathology, ophthalmology, dermatology and other modalities.
 
 **Mass General Brigham** is using it to surface additional relevant information during clinical research and to streamline radiologist workflows, which is the cohort-building and similarity-search case, not a diagnostic one.
+
+![A frozen image embedding model with a small task adapter detecting melanoma in a dermoscopy image](/assets/images/blog/microsoft-medimageinsight-task-adapter.webp)
+
+*The adapter pattern: keep the embedding model frozen and train a small task adapter on top. Source: [Microsoft](https://www.microsoft.com/en-us/microsoft-cloud/blog/healthcare/2024/10/10/unlocking-next-generation-ai-capabilities-with-healthcare-ai-models/)*
 
 ## The rest of the catalogue
 
@@ -78,3 +82,6 @@ The honest read is that most serious deployments will end up using both, because
 **Understand what tier you are on.** Open models are for research and prototyping. If patient data touches it in production, you need the premium tier with the HIPAA coverage, and the licensing conversation should happen before the pilot rather than after.
 
 **Do not skip the human-in-the-loop design.** CXRReportGen's visual grounding is a template worth copying whatever model you use. A draft finding a clinician can trace back to pixels is reviewable. One they cannot is just a confident assertion in their workflow, and the evidence on what that does to diagnostic accuracy is not encouraging.
+
+**Media credits**:
+- Hero image (embedding-based similar-image search) and task-adapter figure — [Microsoft](https://www.microsoft.com/en-us/microsoft-cloud/blog/healthcare/2024/10/10/unlocking-next-generation-ai-capabilities-with-healthcare-ai-models/)

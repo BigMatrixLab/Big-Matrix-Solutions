@@ -1,0 +1,35 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 1200 560" width="1200" height="560" role="img">
+<rect x="1" y="1" width="1198" height="558" fill="#ffffff" rx="16" stroke="#e5e7eb" stroke-width="2"/>
+<title>Stages of a factual-recall circuit</title>
+<desc>For the prompt The Eiffel Tower is in the city of: early layers combine the tokens into an entity representation; middle-layer MLPs act as key-value memories and activate a location feature; attention heads move that feature to the answer position; late layers turn it into the token Paris. Suppressing the retrieval feature changes the answer.</desc>
+<defs><marker id="ah" viewBox="0 0 10 10" refX="9" refY="5" markerWidth="8" markerHeight="8" orient="auto-start-reverse"><path d="M0,0 L10,5 L0,10 z" fill="#4b5563"/></marker><marker id="ahr" viewBox="0 0 10 10" refX="9" refY="5" markerWidth="8" markerHeight="8" orient="auto-start-reverse"><path d="M0,0 L10,5 L0,10 z" fill="#ec362e"/></marker></defs>
+<text x="60" y="68" font-family="Inter, Segoe UI, Arial, sans-serif" font-size="30" fill="#111827" text-anchor="start" font-weight="700">“The Eiffel Tower is in the city of ___”</text>
+<text x="60" y="104" font-family="Inter, Segoe UI, Arial, sans-serif" font-size="20" fill="#4b5563" text-anchor="start" font-weight="400">A typical structure attribution analysis finds for fact retrieval</text>
+<rect x="60" y="150" width="250" height="210" rx="10" fill="#f3f4f6" stroke="#d1d5db" stroke-width="2"/>
+<text x="185" y="196" font-family="Inter, Segoe UI, Arial, sans-serif" font-size="22" fill="#111827" text-anchor="middle" font-weight="700">Early layers</text>
+<text x="185" y="244" font-family="Inter, Segoe UI, Arial, sans-serif" font-size="19" fill="#4b5563" text-anchor="middle" font-weight="400">Combine "Eiffel"</text>
+<text x="185" y="274" font-family="Inter, Segoe UI, Arial, sans-serif" font-size="19" fill="#4b5563" text-anchor="middle" font-weight="400">+ "Tower" into</text>
+<text x="185" y="304" font-family="Inter, Segoe UI, Arial, sans-serif" font-size="19" fill="#4b5563" text-anchor="middle" font-weight="400">the landmark</text>
+<line x1="312" y1="255" x2="336" y2="255" stroke="#4b5563" stroke-width="2.5" marker-end="url(#ah)"/>
+<rect x="340" y="150" width="250" height="210" rx="10" fill="#f3f4f6" stroke="#ec362e" stroke-width="3"/>
+<text x="465" y="196" font-family="Inter, Segoe UI, Arial, sans-serif" font-size="22" fill="#111827" text-anchor="middle" font-weight="700">Middle MLPs</text>
+<text x="465" y="244" font-family="Inter, Segoe UI, Arial, sans-serif" font-size="19" fill="#4b5563" text-anchor="middle" font-weight="400">Key-value memory:</text>
+<text x="465" y="274" font-family="Inter, Segoe UI, Arial, sans-serif" font-size="19" fill="#4b5563" text-anchor="middle" font-weight="400">location feature</text>
+<text x="465" y="304" font-family="Inter, Segoe UI, Arial, sans-serif" font-size="19" fill="#4b5563" text-anchor="middle" font-weight="400">activates</text>
+<line x1="592" y1="255" x2="616" y2="255" stroke="#4b5563" stroke-width="2.5" marker-end="url(#ah)"/>
+<rect x="620" y="150" width="250" height="210" rx="10" fill="#f3f4f6" stroke="#d1d5db" stroke-width="2"/>
+<text x="745" y="196" font-family="Inter, Segoe UI, Arial, sans-serif" font-size="22" fill="#111827" text-anchor="middle" font-weight="700">Attention heads</text>
+<text x="745" y="244" font-family="Inter, Segoe UI, Arial, sans-serif" font-size="19" fill="#4b5563" text-anchor="middle" font-weight="400">Copy the feature</text>
+<text x="745" y="274" font-family="Inter, Segoe UI, Arial, sans-serif" font-size="19" fill="#4b5563" text-anchor="middle" font-weight="400">to the answer</text>
+<text x="745" y="304" font-family="Inter, Segoe UI, Arial, sans-serif" font-size="19" fill="#4b5563" text-anchor="middle" font-weight="400">position</text>
+<line x1="872" y1="255" x2="896" y2="255" stroke="#4b5563" stroke-width="2.5" marker-end="url(#ah)"/>
+<rect x="900" y="150" width="250" height="210" rx="10" fill="#f3f4f6" stroke="#d1d5db" stroke-width="2"/>
+<text x="1025" y="196" font-family="Inter, Segoe UI, Arial, sans-serif" font-size="22" fill="#111827" text-anchor="middle" font-weight="700">Late layers</text>
+<text x="1025" y="244" font-family="Inter, Segoe UI, Arial, sans-serif" font-size="19" fill="#4b5563" text-anchor="middle" font-weight="400">Feature to token</text>
+<text x="1025" y="274" font-family="Inter, Segoe UI, Arial, sans-serif" font-size="19" fill="#4b5563" text-anchor="middle" font-weight="400">distribution:</text>
+<text x="1025" y="304" font-family="Inter, Segoe UI, Arial, sans-serif" font-size="19" fill="#4b5563" text-anchor="middle" font-weight="400">"Paris"</text>
+<path d="M 465 364 L 465 420" fill="none" stroke="#ec362e" stroke-width="2.5" marker-end="url(#ahr)"/>
+<text x="465" y="452" font-family="Inter, Segoe UI, Arial, sans-serif" font-size="19" fill="#ec362e" text-anchor="middle" font-weight="600">Suppress this feature and the answer changes;</text>
+<text x="465" y="480" font-family="Inter, Segoe UI, Arial, sans-serif" font-size="19" fill="#ec362e" text-anchor="middle" font-weight="600">amplify it and confidence rises</text>
+<text x="60" y="530" font-family="Inter, Segoe UI, Arial, sans-serif" font-size="18" fill="#4b5563" text-anchor="start" font-weight="400">Testable interventions are what make it a circuit rather than a story.</text>
+</svg>

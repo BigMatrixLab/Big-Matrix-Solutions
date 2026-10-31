@@ -1,0 +1,26 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 1200 326" width="1200" height="326" role="img" aria-labelledby="t d" font-family="Inter, Segoe UI, Arial, sans-serif">
+  <rect x="0" y="0" width="1200" height="326" fill="#ffffff" rx="16" stroke="#e5e7eb"/>
+  <title id="t">The open-weight gap, then and now</title>
+  <desc id="d">Two bar panels. Elo gap between best open-weight and proprietary models fell from about 150 to about 30 points. Artificial Analysis intelligence index gap fell from 13 points twelve months earlier to 6 points.</desc>
+  <text x="40" y="54" font-size="28" fill="#111827" text-anchor="start" font-weight="700">The open-weight gap, then and now</text>
+  <text x="40" y="90" font-size="20" fill="#4b5563" text-anchor="start">Distance between the best open-weight and proprietary models</text>
+  <text x="40" y="140" font-size="22" fill="#111827" text-anchor="start" font-weight="700">Elo gap</text>
+  <rect x="200" y="164" width="220" height="34" rx="4" fill="#f3f4f6"/>
+  <rect x="200" y="164" width="220.0" height="34" rx="4" fill="#d1d5db"/>
+  <text x="40" y="188" font-size="20" fill="#111827" text-anchor="start">Earlier</text>
+  <text x="432.0" y="188" font-size="20" fill="#111827" text-anchor="start" font-weight="700">about 150 points</text>
+  <rect x="200" y="220" width="220" height="34" rx="4" fill="#f3f4f6"/>
+  <rect x="200" y="220" width="44.0" height="34" rx="4" fill="#ec362e"/>
+  <text x="40" y="244" font-size="20" fill="#111827" text-anchor="start">Now</text>
+  <text x="256.0" y="244" font-size="20" fill="#111827" text-anchor="start" font-weight="700">about 30 points</text>
+  <text x="620" y="140" font-size="22" fill="#111827" text-anchor="start" font-weight="700">Artificial Analysis index gap</text>
+  <rect x="780" y="164" width="220" height="34" rx="4" fill="#f3f4f6"/>
+  <rect x="780" y="164" width="220.0" height="34" rx="4" fill="#d1d5db"/>
+  <text x="620" y="188" font-size="20" fill="#111827" text-anchor="start">12 months ago</text>
+  <text x="1012.0" y="188" font-size="20" fill="#111827" text-anchor="start" font-weight="700">13 points</text>
+  <rect x="780" y="220" width="220" height="34" rx="4" fill="#f3f4f6"/>
+  <rect x="780" y="220" width="101.5" height="34" rx="4" fill="#ec362e"/>
+  <text x="620" y="244" font-size="20" fill="#111827" text-anchor="start">Now</text>
+  <text x="893.5384615384615" y="244" font-size="20" fill="#111827" text-anchor="start" font-weight="700">6 points</text>
+  <text x="40" y="296" font-size="18" fill="#4b5563" text-anchor="start">Each panel uses its own scale. Open-weight releases now trail the state of the art by about three months.</text>
+</svg>

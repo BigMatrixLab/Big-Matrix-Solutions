@@ -1,0 +1,39 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 1200 640" width="1200" height="640" role="img" font-family="Inter, Segoe UI, Arial, sans-serif">
+<rect x="1" y="1" width="1198" height="638" fill="#ffffff" rx="16" stroke="#e5e7eb" stroke-width="2"/>
+<title>Three incompatible models for regulating AI therapy</title>
+<desc>Prohibition (Illinois, Nevada, Maine; five states in total), disclosure plus safe harbour (Utah, up to $2,500 per violation), and safety requirements (California, New York, Idaho, Nebraska, Colorado). Nearly every law addresses crisis response.</desc>
+<defs><marker id="ah" viewBox="0 0 10 10" refX="9" refY="5" markerWidth="8" markerHeight="8" orient="auto-start-reverse"><path d="M0,0 L10,5 L0,10 z" fill="#4b5563"/></marker><marker id="ahr" viewBox="0 0 10 10" refX="9" refY="5" markerWidth="8" markerHeight="8" orient="auto-start-reverse"><path d="M0,0 L10,5 L0,10 z" fill="#ec362e"/></marker></defs>
+<text x="600" y="62" font-size="30" font-weight="700" fill="#111827" text-anchor="middle">Three incompatible answers to one question</text>
+<text x="600" y="98" font-size="21" font-weight="400" fill="#4b5563" text-anchor="middle">US state laws on AI mental health chatbots, grouped by regulatory model</text>
+<rect x="40" y="130" width="360" height="380" rx="12" fill="#f3f4f6" stroke="#d1d5db" stroke-width="2"/>
+<text x="220" y="172" font-size="24" font-weight="700" fill="#111827" text-anchor="middle">1. Prohibition</text>
+<text x="220" y="210" font-size="20" font-weight="700" fill="#111827" text-anchor="middle">Illinois, Nevada, Maine</text>
+<text x="220" y="238" font-size="20" font-weight="700" fill="#111827" text-anchor="middle">(five states in total)</text>
+<text x="220" y="300" font-size="20" font-weight="400" fill="#4b5563" text-anchor="middle">Therapy only by a licensed</text>
+<text x="220" y="332" font-size="20" font-weight="400" fill="#4b5563" text-anchor="middle">professional, AI included</text>
+<text x="220" y="364" font-size="20" font-weight="400" fill="#4b5563" text-anchor="middle">Illinois: five-figure fines</text>
+<line x1="70" y1="410" x2="370" y2="410" stroke="#d1d5db" stroke-width="2"/>
+<text x="220" y="446" font-size="20" font-weight="400" fill="#111827" text-anchor="middle">Asks: may software do a</text>
+<text x="220" y="474" font-size="20" font-weight="400" fill="#111827" text-anchor="middle">licensed thing at all?</text>
+<rect x="420" y="130" width="360" height="380" rx="12" fill="#f3f4f6" stroke="#d1d5db" stroke-width="2"/>
+<text x="600" y="172" font-size="24" font-weight="700" fill="#111827" text-anchor="middle">2. Safe harbour</text>
+<text x="600" y="210" font-size="20" font-weight="700" fill="#111827" text-anchor="middle">Utah</text>
+<text x="600" y="300" font-size="20" font-weight="400" fill="#4b5563" text-anchor="middle">Must state it is software</text>
+<text x="600" y="332" font-size="20" font-weight="400" fill="#4b5563" text-anchor="middle">Limits on ads and user data</text>
+<text x="600" y="364" font-size="20" font-weight="400" fill="#4b5563" text-anchor="middle">Up to $2,500 per violation</text>
+<line x1="450" y1="410" x2="750" y2="410" stroke="#d1d5db" stroke-width="2"/>
+<text x="600" y="446" font-size="20" font-weight="400" fill="#111827" text-anchor="middle">Asks: is a regulated version</text>
+<text x="600" y="474" font-size="20" font-weight="400" fill="#111827" text-anchor="middle">better than none?</text>
+<rect x="800" y="130" width="360" height="380" rx="12" fill="#f3f4f6" stroke="#d1d5db" stroke-width="2"/>
+<text x="980" y="172" font-size="24" font-weight="700" fill="#111827" text-anchor="middle">3. Safety duties</text>
+<text x="980" y="210" font-size="20" font-weight="700" fill="#111827" text-anchor="middle">California, New York, Idaho,</text>
+<text x="980" y="238" font-size="20" font-weight="700" fill="#111827" text-anchor="middle">Nebraska, Colorado</text>
+<text x="980" y="300" font-size="20" font-weight="400" fill="#4b5563" text-anchor="middle">Crisis-response protocols</text>
+<text x="980" y="332" font-size="20" font-weight="400" fill="#4b5563" text-anchor="middle">Private lawsuits (CA, NY)</text>
+<text x="980" y="364" font-size="20" font-weight="400" fill="#4b5563" text-anchor="middle">Annual AG report (Colorado)</text>
+<line x1="830" y1="410" x2="1130" y2="410" stroke="#d1d5db" stroke-width="2"/>
+<text x="980" y="446" font-size="20" font-weight="400" fill="#111827" text-anchor="middle">Asks: what happens when a</text>
+<text x="980" y="474" font-size="20" font-weight="400" fill="#111827" text-anchor="middle">user is in crisis?</text>
+<rect x="40" y="540" width="1120" height="70" rx="12" fill="#ffffff" stroke="#ec362e" stroke-width="2"/>
+<text x="600" y="583" font-size="20" font-weight="700" fill="#111827" text-anchor="middle">Shared floor: nearly every law says what must happen when a user expresses suicidal ideation</text>
+</svg>

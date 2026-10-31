@@ -1,0 +1,51 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 1200 520" width="1200" height="520" role="img">
+<title>Where personal data controls sit in an LLM request</title>
+<desc>Five-stage flow from user input through a redaction layer, application logs and the model provider to the response, with the GDPR control that applies at each stage.</desc>
+<rect x="0" y="0" width="1200" height="520" fill="#ffffff" rx="16" stroke="#e5e7eb" stroke-width="2"/>
+<text x="60" y="68" font-family="Inter, Segoe UI, Arial, sans-serif" font-size="30" font-weight="700" fill="#111827" text-anchor="start">An LLM request, and where the controls go</text>
+<text x="60" y="104" font-family="Inter, Segoe UI, Arial, sans-serif" font-size="19" font-weight="400" fill="#4b5563" text-anchor="start">Each hop is a separate processing step with its own purpose and retention</text>
+<rect x="60" y="150" width="196" height="110" rx="12" fill="#ffffff" stroke="#2563eb" stroke-width="2"/>
+<text x="158.0" y="198" font-family="Inter, Segoe UI, Arial, sans-serif" font-size="21" font-weight="700" fill="#111827" text-anchor="middle">User input</text>
+<text x="158.0" y="230" font-family="Inter, Segoe UI, Arial, sans-serif" font-size="18" font-weight="400" fill="#4b5563" text-anchor="middle">may contain PII</text>
+<line x1="259" y1="205" x2="272" y2="205" stroke="#4b5563" stroke-width="3"/>
+<polygon points="271,198 280,205 271,212" fill="#4b5563"/>
+<line x1="158.0" y1="262" x2="158.0" y2="318" stroke="#ec362e" stroke-width="3" stroke-dasharray="6 6"/>
+<rect x="60" y="320" width="196" height="110" rx="12" fill="#f3f4f6" stroke="#ec362e" stroke-width="2"/>
+<text x="158.0" y="366" font-family="Inter, Segoe UI, Arial, sans-serif" font-size="20" font-weight="700" fill="#111827" text-anchor="middle">Minimise</text>
+<text x="158.0" y="398" font-family="Inter, Segoe UI, Arial, sans-serif" font-size="18" font-weight="400" fill="#4b5563" text-anchor="middle">collect less</text>
+<rect x="281" y="150" width="196" height="110" rx="12" fill="#ffffff" stroke="#2563eb" stroke-width="2"/>
+<text x="379.0" y="198" font-family="Inter, Segoe UI, Arial, sans-serif" font-size="21" font-weight="700" fill="#111827" text-anchor="middle">Redaction</text>
+<text x="379.0" y="230" font-family="Inter, Segoe UI, Arial, sans-serif" font-size="18" font-weight="400" fill="#4b5563" text-anchor="middle">detect and mask</text>
+<line x1="480" y1="205" x2="493" y2="205" stroke="#4b5563" stroke-width="3"/>
+<polygon points="492,198 501,205 492,212" fill="#4b5563"/>
+<line x1="379.0" y1="262" x2="379.0" y2="318" stroke="#ec362e" stroke-width="3" stroke-dasharray="6 6"/>
+<rect x="281" y="320" width="196" height="110" rx="12" fill="#f3f4f6" stroke="#ec362e" stroke-width="2"/>
+<text x="379.0" y="366" font-family="Inter, Segoe UI, Arial, sans-serif" font-size="20" font-weight="700" fill="#111827" text-anchor="middle">Pseudonymise</text>
+<text x="379.0" y="398" font-family="Inter, Segoe UI, Arial, sans-serif" font-size="18" font-weight="400" fill="#4b5563" text-anchor="middle">keep the key apart</text>
+<rect x="502" y="150" width="196" height="110" rx="12" fill="#ffffff" stroke="#2563eb" stroke-width="2"/>
+<text x="600.0" y="198" font-family="Inter, Segoe UI, Arial, sans-serif" font-size="21" font-weight="700" fill="#111827" text-anchor="middle">Your logs</text>
+<text x="600.0" y="230" font-family="Inter, Segoe UI, Arial, sans-serif" font-size="18" font-weight="400" fill="#4b5563" text-anchor="middle">prompts, outputs</text>
+<line x1="701" y1="205" x2="714" y2="205" stroke="#4b5563" stroke-width="3"/>
+<polygon points="713,198 722,205 713,212" fill="#4b5563"/>
+<line x1="600.0" y1="262" x2="600.0" y2="318" stroke="#ec362e" stroke-width="3" stroke-dasharray="6 6"/>
+<rect x="502" y="320" width="196" height="110" rx="12" fill="#f3f4f6" stroke="#ec362e" stroke-width="2"/>
+<text x="600.0" y="366" font-family="Inter, Segoe UI, Arial, sans-serif" font-size="20" font-weight="700" fill="#111827" text-anchor="middle">Retention limit</text>
+<text x="600.0" y="398" font-family="Inter, Segoe UI, Arial, sans-serif" font-size="18" font-weight="400" fill="#4b5563" text-anchor="middle">delete on schedule</text>
+<rect x="723" y="150" width="196" height="110" rx="12" fill="#ffffff" stroke="#2563eb" stroke-width="2"/>
+<text x="821.0" y="198" font-family="Inter, Segoe UI, Arial, sans-serif" font-size="21" font-weight="700" fill="#111827" text-anchor="middle">Model provider</text>
+<text x="821.0" y="230" font-family="Inter, Segoe UI, Arial, sans-serif" font-size="18" font-weight="400" fill="#4b5563" text-anchor="middle">processor</text>
+<line x1="922" y1="205" x2="935" y2="205" stroke="#4b5563" stroke-width="3"/>
+<polygon points="934,198 943,205 934,212" fill="#4b5563"/>
+<line x1="821.0" y1="262" x2="821.0" y2="318" stroke="#ec362e" stroke-width="3" stroke-dasharray="6 6"/>
+<rect x="723" y="320" width="196" height="110" rx="12" fill="#f3f4f6" stroke="#ec362e" stroke-width="2"/>
+<text x="821.0" y="366" font-family="Inter, Segoe UI, Arial, sans-serif" font-size="20" font-weight="700" fill="#111827" text-anchor="middle">DPA + no training</text>
+<text x="821.0" y="398" font-family="Inter, Segoe UI, Arial, sans-serif" font-size="18" font-weight="400" fill="#4b5563" text-anchor="middle">region, sub-processors</text>
+<rect x="944" y="150" width="196" height="110" rx="12" fill="#ffffff" stroke="#2563eb" stroke-width="2"/>
+<text x="1042.0" y="198" font-family="Inter, Segoe UI, Arial, sans-serif" font-size="21" font-weight="700" fill="#111827" text-anchor="middle">Response</text>
+<text x="1042.0" y="230" font-family="Inter, Segoe UI, Arial, sans-serif" font-size="18" font-weight="400" fill="#4b5563" text-anchor="middle">to the user</text>
+<line x1="1042.0" y1="262" x2="1042.0" y2="318" stroke="#ec362e" stroke-width="3" stroke-dasharray="6 6"/>
+<rect x="944" y="320" width="196" height="110" rx="12" fill="#f3f4f6" stroke="#ec362e" stroke-width="2"/>
+<text x="1042.0" y="366" font-family="Inter, Segoe UI, Arial, sans-serif" font-size="20" font-weight="700" fill="#111827" text-anchor="middle">Output check</text>
+<text x="1042.0" y="398" font-family="Inter, Segoe UI, Arial, sans-serif" font-size="18" font-weight="400" fill="#4b5563" text-anchor="middle">no leaked PII</text>
+<text x="60" y="480" font-family="Inter, Segoe UI, Arial, sans-serif" font-size="19" font-weight="400" fill="#4b5563" text-anchor="start">GDPR hooks: Art. 5(1)(c) minimisation, 5(1)(e) storage limitation, Art. 28 processors, Art. 32 security</text>
+</svg>

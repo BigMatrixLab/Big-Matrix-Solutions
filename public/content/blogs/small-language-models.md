@@ -3,7 +3,7 @@ id: "6"
 slug: "the-rise-of-specialized-small-language-models-slms"
 title: "The Rise of Specialized Small Language Models (SLMs)"
 comments: "11"
-image: "https://images.unsplash.com/photo-1518770660439-4636190af475?auto=format&fit=crop&q=80&w=800"
+image: "/assets/images/blog/small-language-models.webp"
 category: "Software"
 desc: "Why the industry is moving away from massive models toward efficient, task-specific SLMs."
 date: "Jul 24, 2026"
@@ -44,6 +44,10 @@ SLMs are language models optimized for **efficiency** over raw capability:
 - **Llama 3.1 8B** - Meta's efficient variant, runs on smartphones
 - **Gemma 2B** - Google's ultra-compact model for edge devices
 - **Qwen2.5 7B** - Alibaba's multilingual SLM with strong coding abilities
+
+![Scatter plot of MMLU error rate against model size: Phi models reach lower error at smaller sizes than Llama-2 models trained on the same data](/assets/images/blog/small-language-models-phi-3-scaling.webp)
+
+*Small models trained on better data: MMLU error rate against model size for Phi models versus Llama-2 models trained on the same fixed data. Source: [Phi-3 Technical Report, Microsoft](https://arxiv.org/abs/2404.14219) (CC BY 4.0)*
 
 ## 🎯 When to Use SLMs vs. Giant Models
 
@@ -172,6 +176,10 @@ Smart organizations use **both** SLMs and giant models:
 >
 > This approach optimizes for both cost and quality!
 
+![Routing diagram: about 95 percent of simple queries go to the small model, about 4 percent try the small model and escalate below 85 percent confidence, about 1 percent go to the large model](/assets/images/blog/diagrams/small-language-models-1.svg)
+
+*Diagram: Big Matrix Solutions, based on the routing split described above.*
+
 ## 🔮 The Future of SLMs
 
 ### 📅 2024-2025: SLM Maturity
@@ -208,3 +216,8 @@ At Big-Matrix Solutions, we help organizations design **hybrid AI architectures*
 - [SLM Benchmarks](https://big-matrix.com/research/slm-benchmarks)
 - [SLM Deployment Guide](https://big-matrix.com/guides/deploy-slm)
 - [GitHub: Big-Matrix SLM Toolkit](https://github.com/big-matrix/slm-toolkit)
+
+**Media credits**:
+- Hero image: 4-bit quantised phi-3-mini running natively on an iPhone, Figure 2 of the [Phi-3 Technical Report](https://arxiv.org/abs/2404.14219) (Microsoft), CC BY 4.0. Three screenshots placed unaltered side by side on a 16:9 canvas.
+- In-body figure: Phi data-optimal scaling, Figure 3 of the same [report](https://arxiv.org/abs/2404.14219), CC BY 4.0. Unaltered.
+- In-body diagram: SLM routing, Big Matrix Solutions.

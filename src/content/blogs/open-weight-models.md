@@ -3,10 +3,10 @@ id: "23"
 slug: "open-weight-models-closed-the-gap"
 title: "The Open-Weight Gap Fell From 150 Elo to 30. Here Is What That Actually Buys You."
 comments: "0"
-image: "https://images.unsplash.com/photo-1590959651373-a3db0f38a961?auto=format&fit=crop&q=80&w=800"
+image: "/assets/images/blog/open-weight-models.webp"
 category: "LLM Research"
 desc: "Four of the five leading open-weight models now come from Chinese labs, shipping under MIT and Apache licences roughly three months behind the frontier."
-date: "Dec 04, 2026"
+date: "Nov 06, 2026"
 tags: ["Open Weights", "LLM", "DeepSeek", "Model Licensing"]
 ---
 
@@ -17,6 +17,10 @@ Two years ago, the case for open-weight models was mostly ideological. You accep
 That calculus has changed, and the numbers are unusually clean about it.
 
 The Elo gap between the best open-weight models and the proprietary frontier has compressed from roughly **150 points to about 30**. On Artificial Analysis's intelligence index, the gap narrowed to **six points, down from thirteen** twelve months earlier. Open-weight releases now trail the state of the art by around **three months** on average, the smallest lag anyone has measured.
+
+![Bar chart: the Elo gap between open-weight and proprietary models fell from about 150 to about 30 points, and the Artificial Analysis index gap fell from 13 to 6 points](/assets/images/blog/diagrams/open-weight-models-1.svg)
+
+*Diagram: Big Matrix Solutions, based on the Elo and [Artificial Analysis](https://artificialanalysis.ai/) figures quoted above.*
 
 Thirty Elo points is not nothing. It is also not the chasm it was. For a large class of production work, it is inside the noise of your own prompt engineering.
 
@@ -82,6 +86,10 @@ The most capable open-weight models of 2026 are **trillion-parameter mixture-of-
 
 For a hosted API, that trade is excellent: memory cost is fixed and amortised across thousands of concurrent requests. For a single-tenant deployment, it is close to inverted. You pay the full residency cost of a trillion parameters to get the throughput of the thirty billion you activate, with no other traffic to spread it over.
 
+![Grid of 100 squares showing all of a trillion-parameter mixture-of-experts model resident in memory while about 3 percent, roughly 30 billion parameters, is active per token](/assets/images/blog/diagrams/open-weight-models-2.svg)
+
+*Diagram: Big Matrix Solutions, based on the parameter counts in this article.*
+
 So "you can download it" and "you can run it" are different claims. A headline open-weight release may need a small cluster to load, and the practical consequence is a fork in the road:
 
 | Your situation | Realistic option |
@@ -132,3 +140,7 @@ If open weights are three months behind and permissively licensed, then any capa
 That is a materially different competitive landscape from 2024, when access to the model *was* the product.
 
 For anyone building on top, it is straightforwardly good news. The floor rose, the price fell, and the switching cost between vendors dropped because there is now a credible, permissively licensed alternative in every tier. The main risk is the one that has always attended cheap infrastructure: mistaking "we can run this ourselves" for "we should."
+
+**Media credits**:
+- Hero image: "Open-weight models lag state-of-the-art by around 3 months on average", [Epoch AI](https://epoch.ai/data-insights/open-weights-vs-closed-weights-models), licensed [CC BY 4.0](https://creativecommons.org/licenses/by/4.0/). Placed on a white 16:9 canvas; chart unaltered.
+- In-body diagrams: Big Matrix Solutions.

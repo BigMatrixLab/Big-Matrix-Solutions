@@ -1,0 +1,49 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 1200 600" width="1200" height="600" role="img" aria-labelledby="t d" font-family="Inter, Segoe UI, Arial, sans-serif">
+  <title id="t">Three layers of pull request review</title>
+  <desc id="d">A pull request passes through deterministic checks first, then an AI reviewer that leaves comments but never approves, then a human reviewer who owns intent, design and risk and gives the approval.</desc>
+  <rect x="0" y="0" width="1200" height="600" fill="#ffffff" rx="16" stroke="#e5e7eb"/>
+  <text x="600" y="54" text-anchor="middle" font-size="28" font-weight="700" fill="#111827">Three layers of pull request review</text>
+
+  <defs>
+    <marker id="arrow" viewBox="0 0 10 10" refX="9" refY="5" markerWidth="8" markerHeight="8" orient="auto-start-reverse">
+      <path d="M0,0 L10,5 L0,10 z" fill="#4b5563"/>
+    </marker>
+  </defs>
+
+  <g font-size="18" fill="#4b5563" text-anchor="middle">
+    <rect x="30" y="100" width="340" height="400" rx="12" fill="#f3f4f6" stroke="#d1d5db"/>
+    <text x="200" y="146" font-size="22" font-weight="700" fill="#111827">1. Deterministic checks</text>
+    <text x="200" y="178" fill="#2563eb">fast, cheap, binary</text>
+    <text x="200" y="232">build and type checker</text>
+    <text x="200" y="266">linters and formatters</text>
+    <text x="200" y="300">test suite</text>
+    <text x="200" y="334">static security analysis</text>
+    <text x="200" y="368">dependency policy</text>
+    <text x="200" y="440" fill="#111827" font-weight="600">Blocks the merge</text>
+
+    <rect x="430" y="100" width="340" height="400" rx="12" fill="#f3f4f6" stroke="#d1d5db"/>
+    <text x="600" y="146" font-size="22" font-weight="700" fill="#111827">2. AI reviewer</text>
+    <text x="600" y="178" fill="#2563eb">reads the diff in context</text>
+    <text x="600" y="232">missing error handling</text>
+    <text x="600" y="266">unhandled edge cases</text>
+    <text x="600" y="300">convention drift</text>
+    <text x="600" y="334">copy-paste mistakes</text>
+    <text x="600" y="368">stale comments and docs</text>
+    <text x="600" y="440" fill="#111827" font-weight="600">Comments, never approves</text>
+
+    <rect x="830" y="100" width="340" height="400" rx="12" fill="#ffffff" stroke="#ec362e" stroke-width="2"/>
+    <text x="1000" y="146" font-size="22" font-weight="700" fill="#111827">3. Human reviewer</text>
+    <text x="1000" y="178" fill="#ec362e">owns the decision</text>
+    <text x="1000" y="232">is this the right change?</text>
+    <text x="1000" y="266">design and boundaries</text>
+    <text x="1000" y="300">business rules</text>
+    <text x="1000" y="334">what is missing from the diff</text>
+    <text x="1000" y="368">risk and rollout</text>
+    <text x="1000" y="440" fill="#111827" font-weight="600">Gives the approval</text>
+  </g>
+
+  <line x1="372" y1="300" x2="426" y2="300" stroke="#4b5563" stroke-width="2" marker-end="url(#arrow)"/>
+  <line x1="772" y1="300" x2="826" y2="300" stroke="#4b5563" stroke-width="2" marker-end="url(#arrow)"/>
+
+  <text x="600" y="560" text-anchor="middle" font-size="18" fill="#4b5563">Each layer filters what reaches the next. Only the last one decides.</text>
+</svg>

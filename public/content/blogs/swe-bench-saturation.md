@@ -3,7 +3,7 @@ id: "14"
 slug: "swe-bench-is-solved-what-comes-next"
 title: "SWE-bench Is Solved. So Why Do Coding Agents Still Break Your Repo?"
 comments: "0"
-image: "https://images.unsplash.com/photo-1487058792275-0ad4aaf24ca7?auto=format&fit=crop&q=80&w=800"
+image: "/assets/images/blog/swe-bench-hero.webp"
 category: "Agentic AI"
 desc: "Scores above 95% on the benchmark that defined the field, and OpenAI publicly declaring it dead. The gap between passing a test and doing the job."
 date: "Sep 25, 2026"
@@ -34,6 +34,10 @@ But look closely at the shape of the task, because the shape is where the gap li
 - **The repository is public and popular**: which means it is also thoroughly represented in training data, along with its issues, its discussions, and frequently the accepted fix.
 
 That last point is the one that eventually killed it.
+
+![SWE-bench task: a GitHub issue and codebase go to a model, which generates a pull request that is checked by unit tests](/assets/images/blog/swe-bench-teaser.webp)
+
+*The SWE-bench task: issue and codebase in, generated patch out, graded by the repository's own unit tests. Source: [SWE-bench](https://github.com/SWE-bench/SWE-bench)*
 
 ## The benchmark died of fame
 
@@ -132,3 +136,6 @@ What it does not cover is deciding what to build, working out what a ticket mean
 The field is now rebuilding evaluation around the harder parts: full issue cycles, plan compliance, long horizons, multiple languages, contamination-resistant task generation. Scores on the new benchmarks are much lower, which is exactly what a useful benchmark looks like.
 
 Expect the numbers to get worse before they get better. That is the good outcome.
+
+**Media credits**:
+- Hero image and task figure — [SWE-bench (Princeton and Stanford)](https://github.com/SWE-bench/SWE-bench)

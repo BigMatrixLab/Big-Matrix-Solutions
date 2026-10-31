@@ -1,0 +1,80 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 1200 500" width="1200" height="500" role="img" aria-labelledby="t d" font-family="Inter, Segoe UI, Arial, sans-serif">
+  <rect x="0" y="0" width="1200" height="500" fill="#ffffff" rx="16" stroke="#e5e7eb"/>
+  <title id="t">Five multi-agent orchestration topologies</title>
+  <desc id="d">Five small diagrams. Sequential pipeline: four agents in a chain, where an error in one stage poisons the rest. Supervisor: one manager agent delegating to three subagents. Parallel fan-out: a split into three independent agents and a merge. Debate or ensemble: three agents answer independently and a judge picks or synthesises. Event-driven: agents attached to a shared event bus, the hardest to debug.</desc>
+  <defs>
+    <marker id="a" viewBox="0 0 10 10" refX="9" refY="5" markerWidth="7" markerHeight="7" orient="auto-start-reverse"><path d="M0,0 L10,5 L0,10 z" fill="#4b5563"/></marker>
+  </defs>
+  <text x="600" y="50" text-anchor="middle" font-size="28" font-weight="700" fill="#111827">Five topologies cover nearly everything</text>
+
+  <g fill="#f3f4f6" stroke="#d1d5db">
+    <rect x="30" y="80" width="216" height="390" rx="12"/>
+    <rect x="261" y="80" width="216" height="390" rx="12"/>
+    <rect x="492" y="80" width="216" height="390" rx="12"/>
+    <rect x="723" y="80" width="216" height="390" rx="12"/>
+    <rect x="954" y="80" width="216" height="390" rx="12"/>
+  </g>
+  <g font-size="20" font-weight="700" fill="#111827" text-anchor="middle">
+    <text x="138" y="118">Sequential</text>
+    <text x="369" y="118">Supervisor</text>
+    <text x="600" y="118">Fan-out</text>
+    <text x="831" y="118">Debate</text>
+    <text x="1062" y="118">Event-driven</text>
+  </g>
+
+  <g stroke="#4b5563" stroke-width="2" fill="none">
+    <line x1="80" y1="255" x2="94" y2="255" marker-end="url(#a)"/>
+    <line x1="132" y1="255" x2="146" y2="255" marker-end="url(#a)"/>
+    <line x1="184" y1="255" x2="198" y2="255" marker-end="url(#a)"/>
+
+    <line x1="369" y1="208" x2="309" y2="292"/>
+    <line x1="369" y1="208" x2="369" y2="292"/>
+    <line x1="369" y1="208" x2="429" y2="292"/>
+
+    <line x1="600" y1="188" x2="540" y2="237"/>
+    <line x1="600" y1="188" x2="600" y2="237"/>
+    <line x1="600" y1="188" x2="660" y2="237"/>
+    <line x1="540" y1="273" x2="600" y2="322"/>
+    <line x1="600" y1="273" x2="600" y2="322"/>
+    <line x1="660" y1="273" x2="600" y2="322"/>
+
+    <line x1="771" y1="218" x2="831" y2="302"/>
+    <line x1="831" y1="218" x2="831" y2="302"/>
+    <line x1="891" y1="218" x2="831" y2="302"/>
+
+    <line x1="1002" y1="208" x2="1002" y2="247"/>
+    <line x1="1062" y1="208" x2="1062" y2="247"/>
+    <line x1="1122" y1="208" x2="1122" y2="247"/>
+    <line x1="1032" y1="273" x2="1032" y2="312"/>
+    <line x1="1092" y1="273" x2="1092" y2="312"/>
+  </g>
+
+  <g fill="#ffffff" stroke="#4b5563" stroke-width="2">
+    <circle cx="62" cy="255" r="18"/><circle cx="114" cy="255" r="18" stroke="#ec362e" stroke-width="3"/><circle cx="166" cy="255" r="18"/><circle cx="218" cy="255" r="18"/>
+    <circle cx="309" cy="310" r="18"/><circle cx="369" cy="310" r="18"/><circle cx="429" cy="310" r="18"/>
+    <circle cx="540" cy="255" r="18"/><circle cx="600" cy="255" r="18"/><circle cx="660" cy="255" r="18"/>
+    <circle cx="771" cy="200" r="18"/><circle cx="831" cy="200" r="18"/><circle cx="891" cy="200" r="18"/>
+    <circle cx="1002" cy="190" r="18"/><circle cx="1062" cy="190" r="18"/><circle cx="1122" cy="190" r="18"/>
+    <circle cx="1032" cy="330" r="18"/><circle cx="1092" cy="330" r="18"/>
+  </g>
+  <g fill="#ec362e">
+    <circle cx="369" cy="190" r="20"/>
+    <rect x="585" y="155" width="30" height="30" rx="4"/>
+    <rect x="585" y="322" width="30" height="30" rx="4"/>
+    <circle cx="831" cy="320" r="20"/>
+  </g>
+  <rect x="984" y="250" width="156" height="22" rx="6" fill="#2563eb"/>
+
+  <g font-size="18" fill="#4b5563" text-anchor="middle">
+    <text x="138" y="400">one bad stage</text>
+    <text x="138" y="426">poisons the rest</text>
+    <text x="369" y="400">decompose, delegate,</text>
+    <text x="369" y="426">assemble</text>
+    <text x="600" y="400">independent units,</text>
+    <text x="600" y="426">wall-clock wins</text>
+    <text x="831" y="400">a judge picks</text>
+    <text x="831" y="426">or synthesises</text>
+    <text x="1062" y="400">react to a bus;</text>
+    <text x="1062" y="426">hardest to debug</text>
+  </g>
+</svg>

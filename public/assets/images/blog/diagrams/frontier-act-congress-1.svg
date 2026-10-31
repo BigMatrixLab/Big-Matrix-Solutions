@@ -1,0 +1,21 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 1200 690" width="1200" height="690" font-family="Inter, Segoe UI, Arial, sans-serif">
+<rect x="0.5" y="0.5" width="1199" height="689" fill="#ffffff" rx="16" stroke="#e5e7eb"/>
+<title>FRONTIER Act developer tiers</title>
+<desc>Nested boxes showing the bill's three tiers: frontier developers above 10^26 training operations, large frontier developers adding revenue and spend tests of $50M and $1B, and very large frontier developers adding $5B and $10B tests, with their obligations.</desc>
+<text x="40" y="62" font-size="30" fill="#111827" font-weight="700">FRONTIER Act (H.R. 9925): three tiers of developer</text>
+<text x="40" y="98" font-size="20" fill="#4b5563">Tests are cumulative: each inner tier also meets every outer test</text>
+<rect x="40" y="140" width="1120" height="470" fill="#f3f4f6" rx="18" stroke="#d1d5db" stroke-width="2"/>
+<text x="70" y="184" font-size="24" fill="#111827" font-weight="700">Frontier developer</text>
+<text x="70" y="216" font-size="20" fill="#4b5563">Trained, or started training, a model using more than 10²⁶ operations</text>
+<text x="70" y="246" font-size="20" fill="#111827">Transparency report before deployment · critical incident reporting</text>
+<rect x="100" y="276" width="1030" height="310" fill="#ffffff" rx="16" stroke="#d1d5db" stroke-width="2"/>
+<text x="130" y="318" font-size="23" fill="#111827" font-weight="700">Large frontier developer</text>
+<text x="130" y="350" font-size="20" fill="#4b5563">Plus over $50M gross revenue and $1B+ AI development spend over 36 months</text>
+<text x="130" y="380" font-size="20" fill="#111827">Publish and follow a “frontier AI framework” for catastrophic risk</text>
+<rect x="160" y="408" width="940" height="154" fill="#ffffff" rx="14" stroke="#ec362e" stroke-width="3"/>
+<text x="190" y="448" font-size="22" fill="#ec362e" font-weight="700">Very large frontier developer</text>
+<text x="190" y="480" font-size="20" fill="#4b5563">Plus over $5B gross revenue and $10B+ AI development spend over 36 months</text>
+<text x="190" y="512" font-size="20" fill="#111827">Retain a licensed Independent Verification Organization (IVO),</text>
+<text x="190" y="540" font-size="20" fill="#111827">assessed at least every six months</text>
+<text x="40" y="652" font-size="19" fill="#4b5563">Incident reports: within 72 hours, or 24 hours if there is an imminent risk of death or serious injury.</text>
+</svg>

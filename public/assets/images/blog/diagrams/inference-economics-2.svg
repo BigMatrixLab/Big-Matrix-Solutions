@@ -1,0 +1,33 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 1200 520" width="1200" height="520" role="img">
+<rect x="1" y="1" width="1198" height="518" fill="#ffffff" rx="16" stroke="#e5e7eb" stroke-width="2"/>
+<title>Prefix caching: computing a shared prompt prefix once</title>
+<desc>Without prefix caching, a 20,000-token shared preamble is recomputed for every request. With prefix caching, its key and value tensors are computed once and reused, and only each request’s new tokens are processed.</desc>
+<defs><marker id="ah" viewBox="0 0 10 10" refX="9" refY="5" markerWidth="8" markerHeight="8" orient="auto-start-reverse"><path d="M0,0 L10,5 L0,10 z" fill="#4b5563"/></marker><marker id="ahr" viewBox="0 0 10 10" refX="9" refY="5" markerWidth="8" markerHeight="8" orient="auto-start-reverse"><path d="M0,0 L10,5 L0,10 z" fill="#ec362e"/></marker></defs>
+<text x="60" y="68" font-family="Inter, Segoe UI, Arial, sans-serif" font-size="30" fill="#111827" text-anchor="start" font-weight="700">Reusing the KV cache for a shared prefix</text>
+<text x="60" y="104" font-family="Inter, Segoe UI, Arial, sans-serif" font-size="20" fill="#4b5563" text-anchor="start" font-weight="400">A 20,000-token preamble: per-request cost becomes a one-time cost</text>
+<text x="60" y="150" font-family="Inter, Segoe UI, Arial, sans-serif" font-size="22" fill="#111827" text-anchor="start" font-weight="700">Without prefix caching</text>
+<text x="60" y="198" font-family="Inter, Segoe UI, Arial, sans-serif" font-size="20" fill="#111827" text-anchor="start" font-weight="600">Request 1</text>
+<rect x="230" y="166" width="600" height="46" rx="6" fill="#2563eb" stroke="none" stroke-width="2"/>
+<text x="530" y="197" font-family="Inter, Segoe UI, Arial, sans-serif" font-size="18" fill="#ffffff" text-anchor="middle" font-weight="600">shared prefix (20,000 tokens) — recomputed</text>
+<rect x="840" y="166" width="120" height="46" rx="6" fill="#ec362e" stroke="none" stroke-width="2"/>
+<text x="900" y="197" font-family="Inter, Segoe UI, Arial, sans-serif" font-size="18" fill="#ffffff" text-anchor="middle" font-weight="700">new</text>
+<text x="60" y="254" font-family="Inter, Segoe UI, Arial, sans-serif" font-size="20" fill="#111827" text-anchor="start" font-weight="600">Request 2</text>
+<rect x="230" y="222" width="600" height="46" rx="6" fill="#2563eb" stroke="none" stroke-width="2"/>
+<text x="530" y="253" font-family="Inter, Segoe UI, Arial, sans-serif" font-size="18" fill="#ffffff" text-anchor="middle" font-weight="600">shared prefix (20,000 tokens) — recomputed</text>
+<rect x="840" y="222" width="120" height="46" rx="6" fill="#ec362e" stroke="none" stroke-width="2"/>
+<text x="900" y="253" font-family="Inter, Segoe UI, Arial, sans-serif" font-size="18" fill="#ffffff" text-anchor="middle" font-weight="700">new</text>
+<text x="60" y="320" font-family="Inter, Segoe UI, Arial, sans-serif" font-size="22" fill="#111827" text-anchor="start" font-weight="700">With prefix caching</text>
+<rect x="230" y="336" width="600" height="46" rx="6" fill="#2563eb" stroke="none" stroke-width="2"/>
+<text x="530" y="367" font-family="Inter, Segoe UI, Arial, sans-serif" font-size="18" fill="#ffffff" text-anchor="middle" font-weight="600">shared prefix — computed once</text>
+<rect x="840" y="336" width="120" height="46" rx="6" fill="#ec362e" stroke="none" stroke-width="2"/>
+<text x="900" y="367" font-family="Inter, Segoe UI, Arial, sans-serif" font-size="18" fill="#ffffff" text-anchor="middle" font-weight="700">new</text>
+<text x="60" y="367" font-family="Inter, Segoe UI, Arial, sans-serif" font-size="20" fill="#111827" text-anchor="start" font-weight="600">Request 1</text>
+<text x="60" y="424" font-family="Inter, Segoe UI, Arial, sans-serif" font-size="20" fill="#111827" text-anchor="start" font-weight="600">Request 2+</text>
+<rect x="230" y="392" width="600" height="46" rx="6" fill="#f3f4f6" stroke="#d1d5db" stroke-width="2"/>
+<text x="530" y="423" font-family="Inter, Segoe UI, Arial, sans-serif" font-size="18" fill="#4b5563" text-anchor="middle" font-weight="600">shared prefix (20,000 tokens) — cached</text>
+<rect x="840" y="392" width="120" height="46" rx="6" fill="#ec362e" stroke="none" stroke-width="2"/>
+<text x="900" y="423" font-family="Inter, Segoe UI, Arial, sans-serif" font-size="18" fill="#ffffff" text-anchor="middle" font-weight="700">new</text>
+<text x="980" y="199" font-family="Inter, Segoe UI, Arial, sans-serif" font-size="20" fill="#111827" text-anchor="start" font-weight="700">Pay twice</text>
+<text x="980" y="425" font-family="Inter, Segoe UI, Arial, sans-serif" font-size="20" fill="#ec362e" text-anchor="start" font-weight="700">Pay once</text>
+<text x="60" y="488" font-family="Inter, Segoe UI, Arial, sans-serif" font-size="18" fill="#4b5563" text-anchor="start" font-weight="400">Put the stable part of the prompt first so it forms a reusable prefix.</text>
+</svg>

@@ -1,0 +1,31 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 1200 472" width="1200" height="472" role="img" aria-labelledby="t d" font-family="Inter, Segoe UI, Arial, sans-serif">
+  <rect x="0" y="0" width="1200" height="472" fill="#ffffff" rx="16" stroke="#e5e7eb"/>
+  <title id="t">Saturated at the top, near zero on novelty</title>
+  <desc id="d">Horizontal bars: MATH-500 around 96 percent, GPQA Diamond in the mid-nineties, SWE-bench Verified tracked scores above 95 percent, and ARC-AGI-3 frontier AI systems at 0.51 percent at launch.</desc>
+  <text x="40" y="54" font-size="28" fill="#111827" text-anchor="start" font-weight="700">Saturated at the top, near zero on novelty</text>
+  <text x="40" y="90" font-size="20" fill="#4b5563" text-anchor="start">Frontier-model scores as described in the article, 0 to 100% scale</text>
+  <line x1="370.0" y1="130" x2="370.0" y2="332" stroke="#d1d5db" stroke-dasharray="4 6"/>
+  <line x1="720.0" y1="130" x2="720.0" y2="332" stroke="#d1d5db" stroke-dasharray="4 6"/>
+  <line x1="1070.0" y1="130" x2="1070.0" y2="332" stroke="#d1d5db" stroke-dasharray="4 6"/>
+  <rect x="370" y="140" width="700" height="30" rx="4" fill="#f3f4f6"/>
+  <rect x="370" y="140" width="672.0" height="30" rx="4" fill="#d1d5db"/>
+  <text x="40" y="162" font-size="20" fill="#111827" text-anchor="start">MATH-500</text>
+  <text x="1054.0" y="162" font-size="20" fill="#111827" text-anchor="start" font-weight="700">about 96%</text>
+  <rect x="370" y="192" width="700" height="30" rx="4" fill="#f3f4f6"/>
+  <rect x="370" y="192" width="665.0" height="30" rx="4" fill="#d1d5db"/>
+  <text x="40" y="214" font-size="20" fill="#111827" text-anchor="start">GPQA Diamond</text>
+  <text x="1047.0" y="214" font-size="20" fill="#111827" text-anchor="start" font-weight="700">mid-90s</text>
+  <rect x="370" y="244" width="700" height="30" rx="4" fill="#f3f4f6"/>
+  <rect x="370" y="244" width="665.0" height="30" rx="4" fill="#d1d5db"/>
+  <text x="40" y="266" font-size="20" fill="#111827" text-anchor="start">SWE-bench Verified</text>
+  <text x="1047.0" y="266" font-size="20" fill="#111827" text-anchor="start" font-weight="700">above 95%</text>
+  <rect x="370" y="296" width="700" height="30" rx="4" fill="#f3f4f6"/>
+  <rect x="370" y="296" width="3.6" height="30" rx="4" fill="#ec362e"/>
+  <text x="40" y="318" font-size="20" fill="#111827" text-anchor="start">ARC-AGI-3 (frontier AI)</text>
+  <text x="385.57" y="318" font-size="20" fill="#111827" text-anchor="start" font-weight="700">0.51%</text>
+  <text x="370.0" y="362" font-size="18" fill="#4b5563" text-anchor="middle">0%</text>
+  <text x="720.0" y="362" font-size="18" fill="#4b5563" text-anchor="middle">50%</text>
+  <text x="1070.0" y="362" font-size="18" fill="#4b5563" text-anchor="middle">100%</text>
+  <text x="40" y="402" font-size="18" fill="#4b5563" text-anchor="start">Grey bars are approximate levels ("around", "mid-90s", "above") as stated in the text.</text>
+  <text x="40" y="430" font-size="18" fill="#4b5563" text-anchor="start">ARC-AGI-3 figure is the March 2026 launch result.</text>
+</svg>

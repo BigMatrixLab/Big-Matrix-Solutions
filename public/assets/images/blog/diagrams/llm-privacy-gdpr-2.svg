@@ -1,0 +1,22 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 1200 640" width="1200" height="640" role="img">
+<title>EDPB Opinion 28/2024: what happens when a model was trained unlawfully</title>
+<desc>Three scenarios from EDPB Opinion 28/2024 on the consequences of unlawful processing during AI model development, and what each means for the deployer.</desc>
+<rect x="0" y="0" width="1200" height="640" fill="#ffffff" rx="16" stroke="#e5e7eb" stroke-width="2"/>
+<text x="60" y="68" font-family="Inter, Segoe UI, Arial, sans-serif" font-size="30" font-weight="700" fill="#111827" text-anchor="start">If a model was trained unlawfully, who carries it?</text>
+<text x="60" y="104" font-family="Inter, Segoe UI, Arial, sans-serif" font-size="19" font-weight="400" fill="#4b5563" text-anchor="start">Three scenarios in EDPB Opinion 28/2024 (adopted 17 December 2024)</text>
+<rect x="60" y="140" width="1080" height="128" rx="12" fill="#ffffff" stroke="#2563eb" stroke-width="2"/>
+<rect x="60" y="140" width="12" height="128" rx="4" fill="#2563eb"/>
+<text x="96" y="184" font-family="Inter, Segoe UI, Arial, sans-serif" font-size="22" font-weight="700" fill="#2563eb" text-anchor="start">Scenario 1</text>
+<text x="260" y="184" font-family="Inter, Segoe UI, Arial, sans-serif" font-size="21" font-weight="600" fill="#111827" text-anchor="start">Model keeps personal data; same controller deploys it</text>
+<text x="260" y="230" font-family="Inter, Segoe UI, Arial, sans-serif" font-size="20" font-weight="400" fill="#4b5563" text-anchor="start">Whether unlawful training taints deployment: case by case</text>
+<rect x="60" y="290" width="1080" height="128" rx="12" fill="#ffffff" stroke="#ec362e" stroke-width="2"/>
+<rect x="60" y="290" width="12" height="128" rx="4" fill="#ec362e"/>
+<text x="96" y="334" font-family="Inter, Segoe UI, Arial, sans-serif" font-size="22" font-weight="700" fill="#ec362e" text-anchor="start">Scenario 2</text>
+<text x="260" y="334" font-family="Inter, Segoe UI, Arial, sans-serif" font-size="21" font-weight="600" fill="#111827" text-anchor="start">Model keeps personal data; another controller deploys it</text>
+<text x="260" y="380" font-family="Inter, Segoe UI, Arial, sans-serif" font-size="20" font-weight="400" fill="#4b5563" text-anchor="start">Deployer must assess whether the model was lawfully developed</text>
+<rect x="60" y="440" width="1080" height="128" rx="12" fill="#ffffff" stroke="#2563eb" stroke-width="2"/>
+<rect x="60" y="440" width="12" height="128" rx="4" fill="#2563eb"/>
+<text x="96" y="484" font-family="Inter, Segoe UI, Arial, sans-serif" font-size="22" font-weight="700" fill="#2563eb" text-anchor="start">Scenario 3</text>
+<text x="260" y="484" font-family="Inter, Segoe UI, Arial, sans-serif" font-size="21" font-weight="600" fill="#111827" text-anchor="start">Model is anonymised before deployment</text>
+<text x="260" y="530" font-family="Inter, Segoe UI, Arial, sans-serif" font-size="20" font-weight="400" fill="#4b5563" text-anchor="start">GDPR does not apply to the model's operation; new data in use is covered</text>
+</svg>
