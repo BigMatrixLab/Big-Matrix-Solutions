@@ -1,0 +1,321 @@
+{
+  "company": {
+    "name": "Big-Matrix Solutions",
+    "website": "https://big-matrix.com",
+    "email": "contact@big-matrix.com",
+    "phone": "+880 1339 870730",
+    "phoneHref": "tel:+8801339870730",
+    "address": "Bashundhara R/A, Dhaka 1229, Bangladesh",
+    "linkedin": "https://www.linkedin.com/company/big-matrix-solutions/",
+    "github": "https://github.com/BigMatrixLab"
+  },
+  "documents": [
+    {
+      "slug": "privacy-policy",
+      "title": "Privacy Policy",
+      "short": "Privacy",
+      "description": "How Big-Matrix Solutions collects, uses, shares and protects personal information on big-matrix.com and in our products and services.",
+      "updated": "8 November 2026",
+      "intro": [
+        "This Privacy Policy explains how Big-Matrix Solutions (\"we\", \"us\" or \"our\") collects, uses, shares and protects information about you (\"you\" or \"your\") when you visit our website, https://big-matrix.com, contact us, or buy or use our software products and services.",
+        "By using our website or services, you agree to the practices described in this policy."
+      ],
+      "sections": [
+        {
+          "heading": "Information we collect",
+          "paragraphs": ["We collect only the information we need to answer you, provide our services and run our business:"],
+          "list": [
+            "Contact details you give us, such as your name, email address, phone number and organisation, when you use our contact form, email or call us.",
+            "Account details when you sign up for one of our products, such as your name, email address, organisation and login details.",
+            "Order and billing details when you buy a subscription or service, such as the plan, amount, invoice and transaction reference.",
+            "Job application details, such as your CV and contact information, when you apply for a role with us.",
+            "Technical information, such as your browser type, device and the pages you visit, which our hosting provider records in standard server logs."
+          ]
+        },
+        {
+          "heading": "Payment information",
+          "paragraphs": [
+            "Online payments are processed by secure, licensed payment gateways. Your card, bank or mobile financial service (MFS) details are entered directly with the payment provider. We do not see or store your full card number, PIN or account password; we only receive confirmation of the payment and a transaction reference."
+          ]
+        },
+        {
+          "heading": "Data in our healthcare and business products",
+          "paragraphs": [
+            "Some of our products, such as clinic management, medical imaging and diagnostic software, process data that our clients enter, including patient records and medical images. We process that data only on our client's instructions and to provide the service they have contracted, under the terms of our agreement with them. The clinic, hospital or organisation that uses our product remains responsible for that data and for the consent of the people it belongs to."
+          ]
+        },
+        {
+          "heading": "How we use your information",
+          "paragraphs": ["We use your information to:"],
+          "list": [
+            "Respond to your questions and requests.",
+            "Set up, deliver and support the products and services you buy.",
+            "Process payments, issue invoices and handle refunds.",
+            "Send you service messages about your account, order or subscription.",
+            "Improve our website, products and services.",
+            "Consider your job application.",
+            "Meet our legal, accounting and security obligations."
+          ],
+          "after": ["We send marketing messages only if you have agreed to receive them, and you can opt out at any time."]
+        },
+        {
+          "heading": "How we share information",
+          "paragraphs": ["We do not sell your personal information. We share it only with:"],
+          "list": [
+            "Service providers who help us run our website and services, such as our hosting provider, email delivery provider and payment gateways. They may use your information only to provide their service to us.",
+            "Professional advisers, such as accountants and lawyers, where needed.",
+            "Government or law enforcement authorities when the law requires it, or to protect our rights, our users or the public."
+          ],
+          "ordered": true
+        },
+        {
+          "heading": "Data security",
+          "paragraphs": [
+            "We use appropriate technical and organisational measures to protect your information, including encrypted connections (HTTPS), access controls and secure hosting. No method of transmission over the internet or electronic storage is completely secure, so we cannot guarantee absolute security, but we work to protect your information and to respond quickly to any incident."
+          ]
+        },
+        {
+          "heading": "How long we keep information",
+          "paragraphs": [
+            "We keep personal information only for as long as we need it for the purposes in this policy, or as long as the law requires, for example for tax and accounting records. When we no longer need it, we delete or anonymise it."
+          ]
+        },
+        {
+          "heading": "Cookies and browser storage",
+          "paragraphs": [
+            "Our website does not use advertising or tracking cookies. It stores a few small preferences in your browser, such as your choice of light or dark theme, so the site looks the way you left it. Our products may use cookies that are needed to keep you signed in. You can clear or block these in your browser settings, although some features may then not work."
+          ]
+        },
+        {
+          "heading": "Your rights",
+          "paragraphs": ["You can ask us to:"],
+          "list": [
+            "Give you a copy of the personal information we hold about you.",
+            "Correct information that is wrong or incomplete.",
+            "Delete your information, where we are not required to keep it.",
+            "Stop using your information for marketing.",
+            "Object to or restrict other uses of your information."
+          ],
+          "after": ["To make a request, email us at contact@big-matrix.com. We will reply within 30 days."]
+        },
+        {
+          "heading": "Children",
+          "paragraphs": [
+            "Our website and services are intended for businesses and professionals. We do not knowingly collect personal information from children under 18 except where a client's service, such as a clinic system, records it on that client's instructions."
+          ]
+        },
+        {
+          "heading": "Links to other websites",
+          "paragraphs": [
+            "Our website may link to other websites, such as our product sites or social media pages. Their own privacy policies apply when you visit them."
+          ]
+        },
+        {
+          "heading": "Changes to this policy",
+          "paragraphs": [
+            "We may update this Privacy Policy from time to time. We will post the updated policy on this page with a new \"last updated\" date. If the changes are significant, we will let our customers know by email."
+          ]
+        },
+        {
+          "heading": "Contact us",
+          "paragraphs": ["If you have questions or requests about this Privacy Policy or your personal information, contact us:"],
+          "contact": true
+        }
+      ]
+    },
+    {
+      "slug": "refund-policy",
+      "title": "Refund Policy",
+      "short": "Refunds",
+      "description": "When and how Big-Matrix Solutions refunds payments for its software subscriptions and digital services.",
+      "updated": "8 November 2026",
+      "intro": [
+        "Thank you for choosing Big-Matrix Solutions. We want you to be satisfied with our software and services. This Refund Policy explains when you can get a refund and how to request one. Please read it carefully before you make a payment."
+      ],
+      "sections": [
+        {
+          "heading": "What this policy covers",
+          "paragraphs": [
+            "This policy applies to payments made to Big-Matrix Solutions for our software subscriptions, licences and digital services bought through our website or our products. Custom software development and other project work are covered by the refund terms in the signed agreement or quotation for that project; where those terms say nothing about refunds, this policy applies."
+          ]
+        },
+        {
+          "heading": "Eligibility for a refund",
+          "paragraphs": ["You are eligible for a full refund if:"],
+          "list": [
+            "You were charged more than once for the same order, or charged an incorrect amount.",
+            "We could not deliver or activate the service you paid for, as described in our Delivery Policy.",
+            "The service has a technical problem that stops you from using it, and we cannot fix it within 7 working days of your report.",
+            "You cancel a new subscription within 7 days of your first payment."
+          ],
+          "after": ["Refund requests must be made within 7 days of the payment, except for duplicate or incorrect charges, which you can report at any time."]
+        },
+        {
+          "heading": "Non-refundable payments",
+          "paragraphs": ["We cannot refund:"],
+          "list": [
+            "Subscription periods that have already started, after the first 7 days. You can cancel at any time to stop the next renewal, and you keep access until the end of the period you paid for.",
+            "Work already completed and accepted under a custom project, including paid project milestones.",
+            "Services that were delivered and used as described, where the request is based on a change of mind after the first 7 days."
+          ]
+        },
+        {
+          "heading": "How to request a refund",
+          "paragraphs": [
+            "Email us at contact@big-matrix.com, or call +880 1339 870730, with:"
+          ],
+          "list": [
+            "Your name and the email address on your account or order.",
+            "The invoice, order or transaction reference number.",
+            "The reason for your request."
+          ],
+          "after": [
+            "We will confirm that we have received your request within 2 working days, review it, and tell you whether it is approved within 7 working days."
+          ]
+        },
+        {
+          "heading": "How refunds are paid",
+          "paragraphs": [
+            "Approved refunds are paid to the original payment method: the same card, bank account or mobile financial service (MFS) account you paid with. We start the refund within 3 working days of approval. Depending on your bank or MFS provider, the money usually reaches your account within 7 to 10 working days."
+          ]
+        },
+        {
+          "heading": "Late or missing refunds",
+          "paragraphs": [
+            "If you have not received an approved refund within 10 working days, please check your bank or MFS account again, then contact your card issuer, bank or MFS provider, as it can take some time before a refund is posted. If you have done this and still have not received your refund, contact us at contact@big-matrix.com and we will follow it up with the payment provider."
+          ]
+        },
+        {
+          "heading": "Changes to this policy",
+          "paragraphs": [
+            "We may update this Refund Policy from time to time. Changes take effect when we post them on this page. The policy in force on the date of your payment applies to that payment."
+          ]
+        },
+        {
+          "heading": "Contact us",
+          "paragraphs": ["If you have any questions about this Refund Policy, contact us:"],
+          "contact": true
+        }
+      ]
+    },
+    {
+      "slug": "delivery-policy",
+      "title": "Delivery Policy",
+      "short": "Delivery",
+      "description": "How and when Big-Matrix Solutions delivers its software subscriptions, licences and digital services after payment.",
+      "updated": "8 November 2026",
+      "intro": [
+        "Thank you for choosing Big-Matrix Solutions. This Delivery Policy explains how we deliver the software products and services you buy from us. By placing an order, you agree to the terms below."
+      ],
+      "sections": [
+        {
+          "heading": "What we deliver",
+          "paragraphs": [
+            "Big-Matrix Solutions sells software and digital services: subscriptions to our cloud (SaaS) products, software licences, and software development and support services. We do not sell or ship physical goods, so there are no shipping charges."
+          ]
+        },
+        {
+          "heading": "How we deliver",
+          "list": [
+            "Cloud products (SaaS): we activate your account, or upgrade your existing account, and send your login details and a confirmation to your registered email address.",
+            "Software licences and installable software: we send the licence key and a secure download link to your registered email address, or install the software for you where that is part of your order.",
+            "Development and support services: we deliver the work as agreed in your quotation or contract, through our project channels, with each milestone confirmed in writing."
+          ]
+        },
+        {
+          "heading": "Delivery time",
+          "list": [
+            "Cloud subscriptions are usually activated immediately after your payment is confirmed, and always within 24 hours.",
+            "Software licences and download links are sent within 1 working day of payment confirmation.",
+            "Installation, setup and custom work follow the timeline agreed in your quotation or contract."
+          ],
+          "after": ["Our working days are Sunday to Thursday, excluding public holidays in Bangladesh."]
+        },
+        {
+          "heading": "Delivery area",
+          "paragraphs": [
+            "Our software and digital services are delivered online, so they are available to customers anywhere in Bangladesh and abroad. On-site installation or training, where offered, is arranged with you and may carry travel costs, which we will agree with you in advance."
+          ]
+        },
+        {
+          "heading": "Delivery confirmation",
+          "paragraphs": [
+            "When your order is delivered, we send a confirmation email to your registered address with your order details and how to access your product or service. Please check your spam or junk folder if you do not see it."
+          ]
+        },
+        {
+          "heading": "Your responsibility",
+          "paragraphs": [
+            "Please give us a correct and active email address and phone number when you order. We are not responsible for delays caused by incorrect contact details, and we may need to verify your identity before we deliver account access or licence keys."
+          ]
+        },
+        {
+          "heading": "Delays and non-delivery",
+          "paragraphs": [
+            "We work to meet every delivery time, but a payment verification check, a technical issue or circumstances outside our control can occasionally cause a delay. If that happens, we will contact you with an updated time. If you have not received your product or service within the times above, contact us and we will resolve it promptly. If we cannot deliver what you paid for, you are entitled to a full refund, as described in our Refund Policy."
+          ]
+        },
+        {
+          "heading": "Contact us",
+          "paragraphs": ["If you have any questions about your order or this Delivery Policy, contact us:"],
+          "contact": true
+        }
+      ]
+    },
+    {
+      "slug": "about",
+      "title": "About Big-Matrix Solutions",
+      "short": "About",
+      "description": "Who Big-Matrix Solutions is, what we build, and why hospitals and businesses choose us.",
+      "updated": "8 November 2026",
+      "intro": [
+        "Big-Matrix Solutions is a software company based in Dhaka, Bangladesh. We build software for healthcare and business: AI diagnostics, hospital systems, SaaS platforms and e-commerce. More than ten of our systems are running in production, with five clinical partners and support around the clock."
+      ],
+      "sections": [
+        {
+          "heading": "Our mission",
+          "paragraphs": [
+            "Our mission is to engineer advanced AI platforms that transform how the world operates. We build diagnostic tools that support clinicians, software that keeps hospitals and businesses running without waiting on manual steps, and systems grounded in research and careful validation. Through our commitment to quality and to the people who use our software, we aim to make reliable, intelligent technology available to every clinic, hospital and business we work with."
+          ]
+        },
+        {
+          "heading": "What we offer",
+          "paragraphs": ["We design, build and support software in four areas:"],
+          "list": [
+            "AI diagnostics: AI that supports clinicians in diagnosis, including medical imaging, segmentation and drafted reports.",
+            "Hospital systems: software for patient flow, records and daily operations.",
+            "SaaS platforms: cloud products that scale with our customers.",
+            "E-commerce: online stores built to sell and scale."
+          ],
+          "after": [
+            "Our products include RxCloud for clinic and practice management, Auto Contouring Software for radiotherapy planning, Lung CT Segmentation & Report Generation, the X-Ray Segmentation Editor, DicomViewer, LINAC QA Guardian, Scriptor and IELTS Tutors."
+          ]
+        },
+        {
+          "heading": "Why choose us",
+          "list": [
+            "Proven in production: more than ten of our systems are running in production today.",
+            "Built with clinicians: we work with five clinical partners, so our healthcare software is shaped by the people who use it.",
+            "Support around the clock: our team provides 24/7 support coverage for the systems we run.",
+            "Secure by design: we protect your data with encrypted connections and access controls, and online payments go through secure, licensed payment gateways.",
+            "Backed by research: every model is backed by research and mathematical validation before it reaches a patient."
+          ]
+        },
+        {
+          "heading": "Our commitment",
+          "paragraphs": [
+            "We are committed to lasting relationships with our customers, built on software that works, honest communication and dependable support. We keep improving our products and exploring new technology so that what we build continues to meet our customers' changing needs."
+          ]
+        },
+        {
+          "heading": "Connect with us",
+          "paragraphs": [
+            "Follow us on LinkedIn (linkedin.com/company/big-matrix-solutions) and GitHub (github.com/BigMatrixLab) for our latest work and updates. For any enquiry, contact us:"
+          ],
+          "contact": true,
+          "after": ["Thank you for choosing Big-Matrix Solutions. We appreciate your trust in our work."]
+        }
+      ]
+    }
+  ]
+}

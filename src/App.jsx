@@ -29,6 +29,7 @@ import CareerDetails from './pages/CareerDetails';
 import Faqs from './pages/Faqs';
 import Mission from './pages/Mission';
 import Contact from './pages/Contact';
+import LegalPage from './pages/LegalPage';
 import NotFound from './pages/NotFound';
 import Forbidden from './pages/Forbidden';
 import ServerError from './pages/ServerError';
@@ -90,6 +91,9 @@ function App() {
             <Route path="/faqs" element={<Faqs />} />
             <Route path="/mission" element={<Mission />} />
             <Route path="/contact" element={<Contact />} />
+            <Route path="/privacy-policy" element={<LegalPage slug="privacy-policy" />} />
+            <Route path="/refund-policy" element={<LegalPage slug="refund-policy" />} />
+            <Route path="/delivery-policy" element={<LegalPage slug="delivery-policy" />} />
 
             {/* Error pages. 403 and 500 are addressable so hosting rules and
                 internal tools can redirect to them; anything unmatched is a 404.
