@@ -11,6 +11,14 @@ const COMPANY_LINKS = [
     { to: '/contact', label: 'Contact' },
 ];
 
+// Policy pages (pages/LegalPage.jsx, content in data/legal.json).
+const LEGAL_LINKS = [
+    { to: '/about', label: 'About Us' },
+    { to: '/privacy-policy', label: 'Privacy Policy' },
+    { to: '/refund-policy', label: 'Refund Policy' },
+    { to: '/delivery-policy', label: 'Delivery Policy' },
+];
+
 const SERVICE_LINKS = [
     { to: '/service/ai-machine-learning', label: 'AI & ML Engineering' },
     { to: '/service/big-data-analytics', label: 'Big Data Analytics' },
@@ -84,6 +92,13 @@ const FooterArea = () => {
                     <p className="bm-footer__copy">
                         © {new Date().getFullYear()} Big-Matrix Solutions. All rights reserved.
                     </p>
+                    <nav aria-label="Legal">
+                        <ul className="bm-footer__legal">
+                            {LEGAL_LINKS.map((link) => (
+                                <li key={link.to}><Link to={link.to}>{link.label}</Link></li>
+                            ))}
+                        </ul>
+                    </nav>
                     <ul className="bm-footer__social">
                         {SOCIAL_LINKS.map((social) => (
                             <li key={social.href}>
