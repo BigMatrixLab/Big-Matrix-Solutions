@@ -1,7 +1,9 @@
 """Build the company-document PDFs in public/documents from src/data/legal.json.
 
-Each document is typeset as HTML, printed to A4 with Playwright (Edge), and
-then laid on top of the company letterhead (docs/letterhead/), page by page.
+Each document is typeset as HTML and printed to A4 with Playwright (Edge).
+The letterhead (scripts/legal_letterhead.py) is then printed with one sheet
+per page, numbered "Page X of Y", and laid under the text page by page. A
+blank copy of the letterhead is written to docs/letterhead/.
 The website renders the same JSON, so the PDFs and the pages always match.
 
     pip install playwright pymupdf
@@ -17,17 +19,20 @@ from pathlib import Path
 import pymupdf
 from playwright.sync_api import sync_playwright
 
+from legal_letterhead import letterhead_html
+
 ROOT = Path(__file__).resolve().parent.parent
 DATA = ROOT / 'src' / 'data' / 'legal.json'
-LETTERHEAD = ROOT / 'docs' / 'letterhead' / 'big-matrix-solutions-letterhead.pdf'
+BLANK = ROOT / 'docs' / 'letterhead' / 'big-matrix-solutions-letterhead.pdf'
 OUT = ROOT / 'public' / 'documents'
 
 # Content area inside the letterhead: below the header rule, above the
-# footer band, aligned with the logo and the rule's ends.
-MARGIN = {'top': '44mm', 'bottom': '26mm', 'left': '21mm', 'right': '21mm'}
+# footer line, aligned with the logo and the rule's ends.
+MARGIN = {'top': '48mm', 'bottom': '24mm', 'left': '21mm', 'right': '21mm'}
 
-CSS = """
-@import url('https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700&family=Inter+Tight:wght@600;700&family=JetBrains+Mono:wght@500&display=swap');
+FONTS = "@import url('https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700&family=Inter+Tight:wght@600;700&family=JetBrains+Mono:wght@400;500&display=swap');\n"
+
+CSS = FONTS + """
 * { box-sizing: border-box; }
 html { -webkit-print-color-adjust: exact; print-color-adjust: exact; }
 body { margin: 0; font-family: 'Inter', 'Segoe UI', sans-serif; font-size: 10pt;
@@ -62,15 +67,6 @@ dt { width: 58pt; flex: none; font-family: 'JetBrains Mono', monospace; font-siz
      letter-spacing: .12em; text-transform: uppercase; color: #6b7280; line-height: 2.2; }
 dd { margin: 0; font-weight: 600; color: #111318; }
 """
-
-FOOTER = """
-<div style="width:100%; padding:0 21mm 13mm; font-family:Segoe UI, sans-serif; font-size:7pt;
-            color:#8a8f98; display:flex; justify-content:space-between;">
-  <span>Big-Matrix Solutions &middot; {title}</span>
-  <span>Page <span class="pageNumber"></span> of <span class="totalPages"></span></span>
-</div>
-"""
-
 
 def inline(text, company):
     """Escape, then link the email, phone and website, as the site does."""
@@ -118,13 +114,14 @@ def build_html(doc, company):
             f'<style>{CSS}</style></head><body>{"".join(parts)}</body></html>')
 
 
-def on_letterhead(content_pdf, target):
-    """Put the letterhead under every page of the typeset document."""
-    pad = pymupdf.open(LETTERHEAD)
-    doc = pymupdf.open(stream=content_pdf, filetype='pdf')
-    for page in doc:
-        page.show_pdf_page(page.rect, pad, 0, overlay=False)
-    doc.set_metadata({'title': target.stem, 'author': 'Big-Matrix Solutions',
+def render(page, markup, **pdf_options):
+    page.set_content(markup, wait_until='networkidle')
+    page.evaluate('document.fonts.ready')
+    return page.pdf(**pdf_options)
+
+
+def save(doc, target, title):
+    doc.set_metadata({'title': title, 'author': 'Big-Matrix Solutions',
                       'creator': 'Big-Matrix Solutions', 'producer': 'Big-Matrix Solutions'})
     doc.save(target, garbage=4, deflate=True)
 
@@ -133,17 +130,24 @@ def main():
     data = json.loads(DATA.read_text(encoding='utf-8'))
     company = data['company']
     OUT.mkdir(parents=True, exist_ok=True)
+    sheet = {'format': 'A4', 'print_background': True, 'prefer_css_page_size': True}
     with sync_playwright() as pw:
         browser = pw.chromium.launch(channel='msedge')
         page = browser.new_page()
+
+        blank = render(page, letterhead_html(company, fonts_css=FONTS), **sheet)
+        save(pymupdf.open(stream=blank, filetype='pdf'), BLANK, f'{company["name"]} letterhead')
+        print('wrote', BLANK.relative_to(ROOT))
+
         for doc in data['documents']:
-            page.set_content(build_html(doc, company), wait_until='networkidle')
-            page.evaluate('document.fonts.ready')
-            pdf = page.pdf(format='A4', margin=MARGIN, print_background=False,
-                           display_header_footer=True, header_template='<span></span>',
-                           footer_template=FOOTER.format(title=html.escape(doc['title'])))
+            text = pymupdf.open(stream=render(page, build_html(doc, company), format='A4',
+                                              margin=MARGIN, print_background=False), filetype='pdf')
+            pad = pymupdf.open(stream=render(page, letterhead_html(company, len(text), FONTS), **sheet),
+                               filetype='pdf')
+            for i, text_page in enumerate(text):
+                text_page.show_pdf_page(text_page.rect, pad, i, overlay=False)
             target = OUT / f'big-matrix-solutions-{doc["slug"]}.pdf'
-            on_letterhead(pdf, target)
+            save(text, target, f'{doc["title"]} | {company["name"]}')
             print('wrote', target.relative_to(ROOT))
         browser.close()
 

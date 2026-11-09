@@ -5,7 +5,8 @@
     "email": "contact@big-matrix.com",
     "phone": "+880 1339 870730",
     "phoneHref": "tel:+8801339870730",
-    "address": "Bashundhara R/A, Dhaka 1229, Bangladesh",
+    "address": "Section# 11, Block# A, Mainroad# 3, Plot# 10, Pallabi, Mirpur, Dhaka - 1216, Bangladesh",
+    "addressLines": ["Section# 11, Block# A, Mainroad# 3,", "Plot# 10, Pallabi, Mirpur, Dhaka - 1216"],
     "linkedin": "https://www.linkedin.com/company/big-matrix-solutions/",
     "github": "https://github.com/BigMatrixLab"
   },
