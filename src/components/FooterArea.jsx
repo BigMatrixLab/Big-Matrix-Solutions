@@ -11,9 +11,9 @@ const COMPANY_LINKS = [
     { to: '/contact', label: 'Contact' },
 ];
 
-// Policy pages (pages/LegalPage.jsx, content in data/legal.json).
+// Company documents (pages/LegalPage.jsx, content in data/legal.json).
 const LEGAL_LINKS = [
-    { to: '/about', label: 'About Us' },
+    { to: '/about-us', label: 'About Us' },
     { to: '/privacy-policy', label: 'Privacy Policy' },
     { to: '/refund-policy', label: 'Refund Policy' },
     { to: '/delivery-policy', label: 'Delivery Policy' },

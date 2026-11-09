@@ -4164,22 +4164,25 @@ a.bm-card__title:hover,
 }
 
 /* --------------------------------------------------------------------------
-   Policy pages (pages/LegalPage.jsx) and the About page's company profile
+   Company documents (pages/LegalPage.jsx): section index | document | rail
+   The right rail reuses the solution-detail rail (.bm-doc__aside etc.).
    -------------------------------------------------------------------------- */
 
 .bm-legal {
   display: grid;
-  grid-template-columns: minmax(0, 260px) minmax(0, 1fr);
-  gap: clamp(32px, 2rem + 3vw, 80px);
+  grid-template-columns: minmax(0, 220px) minmax(0, 1fr) minmax(260px, 300px);
+  gap: clamp(28px, 1rem + 2.5vw, 64px);
   align-items: start;
 }
 
-.bm-legal__aside {
+.bm-legal__toc-wrap {
   position: sticky;
   top: calc(var(--bm-header-h) + var(--bm-announce-h, 0px) + var(--bm-5));
   display: flex;
   flex-direction: column;
-  gap: var(--bm-4);
+  gap: var(--bm-3);
+  max-height: calc(100vh - var(--bm-header-h) - var(--bm-announce-h, 0px) - var(--bm-6));
+  max-height: calc(100dvh - var(--bm-header-h) - var(--bm-announce-h, 0px) - var(--bm-6));
 }
 
 .bm-legal__label {
@@ -4191,33 +4194,60 @@ a.bm-card__title:hover,
   color: var(--bm-text-3);
 }
 
-.bm-legal__toc,
-.bm-legal__policies { margin: 0; padding: 0; list-style: none; border-left: 1px solid var(--bm-line); }
+.bm-legal__toc {
+  min-height: 0;
+  margin: 0;
+  padding: 0;
+  overflow-y: auto;
+  overscroll-behavior: contain;
+  scrollbar-width: thin;
+  scrollbar-color: var(--bm-line-strong) transparent;
+  list-style: none;
+  border-left: 1px solid var(--bm-line);
+}
 
-.bm-legal__toc a,
-.bm-legal__policies a,
-.bm-legal__policies span {
+.bm-legal__toc a {
   display: flex;
   gap: var(--bm-2);
-  padding: 6px 0 6px var(--bm-4);
+  padding: 7px var(--bm-2) 7px var(--bm-4);
   margin-left: -1px;
   font-size: var(--bm-fs-xs);
   line-height: 1.4;
   color: var(--bm-text-2);
   text-decoration: none;
   border-left: 2px solid transparent;
+  transition: color var(--bm-dur) var(--bm-ease-inout),
+              background var(--bm-dur) var(--bm-ease-inout),
+              border-color var(--bm-dur) var(--bm-ease-inout);
 }
 
-.bm-legal__toc a span { font-family: var(--bm-font-mono); color: var(--bm-text-3); }
-.bm-legal__toc a:hover,
-.bm-legal__policies a:hover { color: var(--bm-text); border-left-color: var(--bm-line-strong); }
-.bm-legal__policies span[aria-current] { font-weight: 600; color: var(--bm-text); border-left-color: var(--bm-accent); }
-.bm-legal__pdf { align-self: flex-start; }
+.bm-legal__toc a span { flex: 0 0 auto; font-family: var(--bm-font-mono); color: var(--bm-text-3); }
+.bm-legal__toc a:hover { color: var(--bm-text); border-left-color: var(--bm-line-strong); }
 
-.bm-legal__body { max-width: 72ch; }
+.bm-legal__toc a.is-current {
+  font-weight: 600;
+  color: var(--bm-text);
+  background: var(--bm-surface);
+  border-left-color: var(--bm-orange);
+}
+
+.bm-legal__toc a.is-current span { color: var(--bm-orange-ink); }
+
+/* The rail's link points forward, so its arrow moves forward on hover. */
+.bm-legal__rail .bm-doc__back:hover i { transform: translateX(3px); }
+.bm-legal__rail .bm-doc__contact-cta { margin-top: var(--bm-5); }
+
+.bm-legal__body { min-width: 0; }
 .bm-legal__body p,
-.bm-legal__body li { line-height: 1.7; color: var(--bm-text-2); }
-.bm-legal__body a { color: var(--bm-accent-ink); }
+.bm-legal__body li {
+  line-height: 1.7;
+  color: var(--bm-text-2);
+  text-align: justify;
+  text-justify: inter-word;
+  hyphens: auto;
+  -webkit-hyphens: auto;
+}
+.bm-legal__body a { color: var(--bm-accent-ink); hyphens: none; -webkit-hyphens: none; }
 
 .bm-legal__updated {
   margin: 0 0 var(--bm-5);
@@ -4285,41 +4315,16 @@ a.bm-card__title:hover,
 .bm-legal__contact a { font-weight: inherit; color: var(--bm-text); text-decoration: none; }
 .bm-legal__contact a:hover { color: var(--bm-accent-ink); }
 
-@media (max-width: 991px) {
-  .bm-legal { grid-template-columns: minmax(0, 1fr); }
-  .bm-legal__aside { position: static; }
-  .bm-legal__toc { display: none; }
-  .bm-legal__aside > .bm-legal__label:first-child { display: none; }
+/* Narrower desktops: the section index goes, the rail stays. */
+@media (max-width: 1199px) {
+  .bm-legal { grid-template-columns: minmax(0, 1fr) minmax(240px, 280px); }
+  .bm-legal__toc-wrap { display: none; }
 }
 
-/* About: company profile */
-.bm-about__mission { max-width: 72ch; margin: var(--bm-5) 0 0; line-height: 1.7; color: var(--bm-text-2); }
-.bm-about__subhead {
-  margin: var(--bm-7) 0 var(--bm-5);
-  font-family: var(--bm-font-mono);
-  font-size: var(--bm-fs-label);
-  font-weight: 500;
-  letter-spacing: var(--bm-track-label);
-  text-transform: uppercase;
-  color: var(--bm-text-3);
-}
-.bm-about__products { max-width: 80ch; margin: var(--bm-5) 0 0; color: var(--bm-text-2); }
-.bm-about__text { max-width: 60ch; line-height: 1.7; color: var(--bm-text-2); }
-.bm-about__text a { color: var(--bm-accent-ink); }
-.bm-about__connect {
-  display: grid;
-  grid-template-columns: minmax(0, 1.1fr) minmax(0, 0.9fr);
-  gap: clamp(32px, 2rem + 3vw, 80px);
-  align-items: start;
-}
-.bm-about__contact {
-  padding: var(--bm-6);
-  background: var(--bm-elevated);
-  border: 1px solid var(--bm-line);
-  border-radius: var(--bm-r);
-}
+/* Tablet and phone: one column, the rail follows the document. */
 @media (max-width: 991px) {
-  .bm-about__connect { grid-template-columns: minmax(0, 1fr); }
+  .bm-legal { grid-template-columns: minmax(0, 1fr); }
+  .bm-legal__rail { position: static; max-height: none; }
 }
 
 /* Footer: policy links in the bottom bar */

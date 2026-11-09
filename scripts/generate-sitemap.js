@@ -80,7 +80,7 @@ export function generateSitemap() {
     // repository. Nothing links to either one. Submitting them would ask Google
     // to index boilerplate, which weighs against the whole domain. Add them back
     // here once they carry real content, and drop `noindex` from their pages.
-    ['/', '/about', '/service', '/project', '/blog', '/careers', '/contact', '/privacy-policy', '/refund-policy', '/delivery-policy']
+    ['/', '/about', '/service', '/project', '/blog', '/careers', '/contact', '/about-us', '/privacy-policy', '/refund-policy', '/delivery-policy']
         .forEach((path) => add(path));
 
     readContent('services').forEach((s) => add(`/service/${s.slug}`));

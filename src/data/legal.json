@@ -263,8 +263,8 @@
       ]
     },
     {
-      "slug": "about",
-      "title": "About Big-Matrix Solutions",
+      "slug": "about-us",
+      "title": "About Us",
       "short": "About",
       "description": "Who Big-Matrix Solutions is, what we build, and why hospitals and businesses choose us.",
       "updated": "8 November 2026",
@@ -310,7 +310,11 @@
         {
           "heading": "Connect with us",
           "paragraphs": [
-            "Follow us on LinkedIn (linkedin.com/company/big-matrix-solutions) and GitHub (github.com/BigMatrixLab) for our latest work and updates. For any enquiry, contact us:"
+            "Follow us for our latest work and updates, or contact us directly with any enquiry:"
+          ],
+          "list": [
+            "LinkedIn: linkedin.com/company/big-matrix-solutions",
+            "GitHub: github.com/BigMatrixLab"
           ],
           "contact": true,
           "after": ["Thank you for choosing Big-Matrix Solutions. We appreciate your trust in our work."]

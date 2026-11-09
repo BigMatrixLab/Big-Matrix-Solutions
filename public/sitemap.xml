@@ -23,6 +23,18 @@
         <loc>https://big-matrix.com/contact</loc>
     </url>
     <url>
+        <loc>https://big-matrix.com/about-us</loc>
+    </url>
+    <url>
+        <loc>https://big-matrix.com/privacy-policy</loc>
+    </url>
+    <url>
+        <loc>https://big-matrix.com/refund-policy</loc>
+    </url>
+    <url>
+        <loc>https://big-matrix.com/delivery-policy</loc>
+    </url>
+    <url>
         <loc>https://big-matrix.com/service/agentic-ai-llm-engineering</loc>
     </url>
     <url>
@@ -95,6 +107,22 @@
         <lastmod>2026-07-30</lastmod>
     </url>
     <url>
+        <loc>https://big-matrix.com/blog/ai-designed-drugs-reach-the-clinic</loc>
+        <lastmod>2026-10-24</lastmod>
+    </url>
+    <url>
+        <loc>https://big-matrix.com/blog/sam-altman-trust-safety-openai-ipo</loc>
+        <lastmod>2026-10-22</lastmod>
+    </url>
+    <url>
+        <loc>https://big-matrix.com/blog/ambient-ai-scribes-randomized-trial-results</loc>
+        <lastmod>2026-11-07</lastmod>
+    </url>
+    <url>
+        <loc>https://big-matrix.com/blog/dario-amodei-we-must-pace-the-frontier</loc>
+        <lastmod>2026-10-20</lastmod>
+    </url>
+    <url>
         <loc>https://big-matrix.com/blog/asynchronous-delegation-background-coding-agents</loc>
         <lastmod>2026-10-10</lastmod>
     </url>
@@ -117,6 +145,10 @@
     <url>
         <loc>https://big-matrix.com/blog/llms-outperform-physicians-clinical-reasoning</loc>
         <lastmod>2026-10-08</lastmod>
+    </url>
+    <url>
+        <loc>https://big-matrix.com/blog/frontier-act-congress-federal-ai-oversight-explained</loc>
+        <lastmod>2026-11-01</lastmod>
     </url>
     <url>
         <loc>https://big-matrix.com/blog/the-frontier-model-landscape-september-2026</loc>
@@ -159,8 +191,32 @@
         <lastmod>2026-08-24</lastmod>
     </url>
     <url>
+        <loc>https://big-matrix.com/blog/geoffrey-hinton-maybe-a-year-ai-regulation-deadline</loc>
+        <lastmod>2026-10-26</lastmod>
+    </url>
+    <url>
+        <loc>https://big-matrix.com/blog/how-jepa-works-predicting-in-latent-space</loc>
+        <lastmod>2026-11-03</lastmod>
+    </url>
+    <url>
         <loc>https://big-matrix.com/blog/how-transformers-work-a-practical-walkthrough</loc>
         <lastmod>2026-10-01</lastmod>
+    </url>
+    <url>
+        <loc>https://big-matrix.com/blog/how-unet-works-image-segmentation-explained</loc>
+        <lastmod>2026-10-12</lastmod>
+    </url>
+    <url>
+        <loc>https://big-matrix.com/blog/openai-hugging-face-agent-swarm-breach-lawsuit</loc>
+        <lastmod>2026-10-16</lastmod>
+    </url>
+    <url>
+        <loc>https://big-matrix.com/blog/the-new-economics-of-llm-inference-2026</loc>
+        <lastmod>2026-10-18</lastmod>
+    </url>
+    <url>
+        <loc>https://big-matrix.com/blog/intelligence-explosion-paper-automating-ai-research</loc>
+        <lastmod>2026-10-14</lastmod>
     </url>
     <url>
         <loc>https://big-matrix.com/blog/kimi-k3-largest-open-weights-model</loc>
@@ -195,12 +251,20 @@
         <lastmod>2026-09-28</lastmod>
     </url>
     <url>
+        <loc>https://big-matrix.com/blog/musk-spacexai-pole-position-reality-check</loc>
+        <lastmod>2026-10-28</lastmod>
+    </url>
+    <url>
         <loc>https://big-matrix.com/blog/nadella-copilot-new-os-for-work-microsoft-strategy</loc>
         <lastmod>2026-10-02</lastmod>
     </url>
     <url>
         <loc>https://big-matrix.com/blog/nvidia-acquires-hugging-face-what-it-means-for-open-weights</loc>
         <lastmod>2026-09-07</lastmod>
+    </url>
+    <url>
+        <loc>https://big-matrix.com/blog/open-weight-models-closed-the-gap</loc>
+        <lastmod>2026-11-05</lastmod>
     </url>
     <url>
         <loc>https://big-matrix.com/blog/openai-decisions-api-gpt-6-luna-picks-from-your-answers</loc>
@@ -211,8 +275,16 @@
         <lastmod>2026-09-28</lastmod>
     </url>
     <url>
+        <loc>https://big-matrix.com/blog/prompt-injection-is-the-agentic-security-story</loc>
+        <lastmod>2026-11-09</lastmod>
+    </url>
+    <url>
         <loc>https://big-matrix.com/blog/quantum-enhanced-machine-learning-breaking-the-compute-barrier</loc>
         <lastmod>2026-08-06</lastmod>
+    </url>
+    <url>
+        <loc>https://big-matrix.com/blog/self-evolving-agents-and-memory-that-compounds</loc>
+        <lastmod>2026-10-30</lastmod>
     </url>
     <url>
         <loc>https://big-matrix.com/blog/the-rise-of-specialized-small-language-models-slms</loc>

@@ -1,15 +1,21 @@
+import { useEffect, useRef } from 'react';
 import { Link } from 'react-router-dom';
 import Breadcrumb from '../components/Breadcrumb';
 import Seo from '../components/Seo';
 import LEGAL from '../data/legal.json';
+import useScrollSpy from '../utils/useScrollSpy';
 
 /**
- * Policy pages (privacy, refund, delivery), rendered from data/legal.json. The
- * same file builds the letterhead Word/PDF versions, so the website and the
- * documents never drift apart. The PDF of each policy is in public/documents.
+ * Company documents (about us, privacy, refund, delivery), rendered from
+ * data/legal.json. The same file builds the letterhead PDFs in
+ * public/documents (scripts/build-legal-pdfs.py), so the website and the
+ * documents never drift apart.
+ *
+ * Layout: section index on the left that follows the scroll, the document in
+ * the centre, and the solution-detail rail on the right (related documents
+ * and the PDF download).
  */
 const { company, documents } = LEGAL;
-const POLICIES = documents.filter((doc) => doc.slug !== 'about');
 
 /** "contact@big-matrix.com" and "+880 …" inside running text become links. */
 const linkify = (text) =>
@@ -29,7 +35,7 @@ const ListItem = ({ text }) => {
     return <li>{linkify(text)}</li>;
 };
 
-export const ContactRows = () => (
+const ContactRows = () => (
     <dl className="bm-legal__contact">
         <div><dt>Email</dt><dd><a href={`mailto:${company.email}`}>{company.email}</a></dd></div>
         <div><dt>Phone</dt><dd><a href={company.phoneHref}>{company.phone}</a></dd></div>
@@ -37,8 +43,39 @@ export const ContactRows = () => (
     </dl>
 );
 
+const pad = (n) => String(n).padStart(2, '0');
+const sectionId = (i) => `s${i + 1}`;
+
+/** Scrolls to a section without the jump, and keeps the hash in the URL. */
+const goTo = (event, id) => {
+    const el = document.getElementById(id);
+    if (!el) return;
+    event.preventDefault();
+    const reduce = window.matchMedia('(prefers-reduced-motion: reduce)').matches;
+    el.scrollIntoView({ behavior: reduce ? 'auto' : 'smooth', block: 'start' });
+    window.history.replaceState(null, '', `#${id}`);
+};
+
 const LegalPage = ({ slug }) => {
     const doc = documents.find((item) => item.slug === slug);
+    const ids = doc ? doc.sections.map((_, i) => sectionId(i)) : [];
+    const active = useScrollSpy(ids);
+
+    const tocRef = useRef(null);
+    const activeRef = useRef(null);
+
+    // The index can scroll inside its sticky column on short screens; keep the
+    // highlighted entry in view without moving the page.
+    useEffect(() => {
+        const list = tocRef.current;
+        const item = activeRef.current;
+        if (!list || !item || list.scrollHeight <= list.clientHeight) return;
+        const top = item.offsetTop - list.offsetTop;
+        if (top < list.scrollTop || top + item.offsetHeight > list.scrollTop + list.clientHeight) {
+            list.scrollTop = top - list.clientHeight / 2;
+        }
+    }, [active]);
+
     if (!doc) return null;
     const pdf = `/documents/big-matrix-solutions-${doc.slug}.pdf`;
 
@@ -49,37 +86,28 @@ const LegalPage = ({ slug }) => {
 
             <section className="bm-section">
                 <div className="bm-container bm-legal">
-                    <aside className="bm-legal__aside" aria-label="Policy navigation">
+                    <nav className="bm-legal__toc-wrap" aria-label="On this page">
                         <p className="bm-legal__label">On this page</p>
-                        <ol className="bm-legal__toc">
-                            {doc.sections.map((section, i) => (
-                                <li key={section.heading}>
-                                    <a href={`#s${i + 1}`}>
-                                        <span>{String(i + 1).padStart(2, '0')}</span>
-                                        {section.heading}
-                                    </a>
-                                </li>
-                            ))}
+                        <ol className="bm-legal__toc" ref={tocRef}>
+                            {doc.sections.map((section, i) => {
+                                const id = sectionId(i);
+                                const current = id === active;
+                                return (
+                                    <li key={section.heading} ref={current ? activeRef : undefined}>
+                                        <a
+                                            href={`#${id}`}
+                                            onClick={(event) => goTo(event, id)}
+                                            className={current ? 'is-current' : undefined}
+                                            aria-current={current ? 'location' : undefined}
+                                        >
+                                            <span>{pad(i + 1)}</span>
+                                            {section.heading}
+                                        </a>
+                                    </li>
+                                );
+                            })}
                         </ol>
-
-                        <a className="bm-button bm-button--ghost bm-legal__pdf" href={pdf} download>
-                            <i className="bi bi-file-earmark-pdf" aria-hidden="true"></i>
-                            Download PDF
-                        </a>
-
-                        <p className="bm-legal__label">Policies</p>
-                        <ul className="bm-legal__policies">
-                            {POLICIES.map((item) => (
-                                <li key={item.slug}>
-                                    {item.slug === doc.slug ? (
-                                        <span aria-current="page">{item.title}</span>
-                                    ) : (
-                                        <Link to={`/${item.slug}`}>{item.title}</Link>
-                                    )}
-                                </li>
-                            ))}
-                        </ul>
-                    </aside>
+                    </nav>
 
                     <article className="bm-legal__body">
                         <p className="bm-legal__updated">Last updated: {doc.updated}</p>
@@ -90,9 +118,9 @@ const LegalPage = ({ slug }) => {
                         {doc.sections.map((section, i) => {
                             const List = section.ordered ? 'ol' : 'ul';
                             return (
-                                <section className="bm-legal__section" id={`s${i + 1}`} key={section.heading}>
+                                <section className="bm-legal__section" id={sectionId(i)} key={section.heading}>
                                     <h2>
-                                        <span className="bm-legal__num">{String(i + 1).padStart(2, '0')}</span>
+                                        <span className="bm-legal__num">{pad(i + 1)}</span>
                                         {section.heading}
                                     </h2>
                                     {(section.paragraphs || []).map((text) => <p key={text}>{linkify(text)}</p>)}
@@ -107,6 +135,54 @@ const LegalPage = ({ slug }) => {
                             );
                         })}
                     </article>
+
+                    <aside className="bm-doc__aside bm-legal__rail">
+                        <nav className="bm-doc__index" aria-label="Related documents">
+                            <p className="bm-doc__index-label">Related documents</p>
+                            <ul>
+                                {documents.map((item, i) => {
+                                    const current = item.slug === doc.slug;
+                                    return (
+                                        <li key={item.slug}>
+                                            <Link
+                                                to={`/${item.slug}`}
+                                                className={current ? 'is-current' : undefined}
+                                                aria-current={current ? 'page' : undefined}
+                                            >
+                                                <em>{pad(i + 1)}</em>
+                                                <span>{item.title}</span>
+                                            </Link>
+                                        </li>
+                                    );
+                                })}
+                            </ul>
+                        </nav>
+
+                        <div className="bm-doc__contact">
+                            <p className="bm-doc__contact-label">Official copy</p>
+                            <p className="bm-doc__contact-copy">
+                                Download the {doc.title} on Big-Matrix Solutions letterhead, to
+                                keep or to share.
+                            </p>
+                            <a className="bm-doc__contact-line" href={company.phoneHref}>
+                                <i className="bi bi-telephone-fill" aria-hidden="true"></i>
+                                <span>{company.phone}</span>
+                            </a>
+                            <a className="bm-doc__contact-line" href={`mailto:${company.email}`}>
+                                <i className="bi bi-envelope-fill" aria-hidden="true"></i>
+                                <span>{company.email}</span>
+                            </a>
+                            <a className="bm-doc__contact-cta" href={pdf} download>
+                                <i className="bi bi-file-earmark-pdf" aria-hidden="true"></i>
+                                Download PDF
+                            </a>
+                        </div>
+
+                        <Link to="/contact" className="bm-doc__back">
+                            Questions? Contact us
+                            <i className="bi bi-arrow-right" aria-hidden="true"></i>
+                        </Link>
+                    </aside>
                 </div>
             </section>
         </>
