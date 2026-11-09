@@ -41,7 +41,7 @@ body { margin: 0; font-family: 'Inter', 'Segoe UI', sans-serif; color: #2b2f36; 
 
 .head { position: absolute; top: 11mm; left: 21mm; right: 21mm;
         display: flex; justify-content: space-between; align-items: center; }
-.logo { height: 12.5mm; display: block; }
+.logo { height: 16mm; display: block; }
 .contact { margin: 0; padding: 0; list-style: none; text-align: right; }
 .contact li { display: flex; justify-content: flex-end; align-items: flex-start; gap: 2.4mm;
               font-size: 7.6pt; line-height: 1.45; color: #3a3f47; letter-spacing: .005em; }
