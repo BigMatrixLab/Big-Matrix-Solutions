@@ -1272,7 +1272,8 @@ a.bm-card__title:hover,
    content starts where that hairline used to sit. */
 .bm-footer__top {
   display: grid;
-  grid-template-columns: minmax(0, 1.4fr) repeat(3, minmax(0, 1fr));
+  /* brand | company | solutions | documents | contact (wider, for the email) */
+  grid-template-columns: minmax(0, 1.3fr) repeat(3, minmax(0, 1fr)) minmax(0, 1.25fr);
   gap: var(--bm-6) var(--bm-5);
   padding-top: 0;
   padding-bottom: clamp(40px, 2rem + 2vw, 64px);
@@ -4221,7 +4222,7 @@ a.bm-card__title:hover,
               border-color var(--bm-dur) var(--bm-ease-inout);
 }
 
-.bm-legal__toc a span { flex: 0 0 auto; font-family: var(--bm-font-mono); color: var(--bm-text-3); }
+.bm-legal__toc a span { flex: 0 0 auto; font-variant-numeric: tabular-nums; color: var(--bm-text-3); }
 .bm-legal__toc a:hover { color: var(--bm-text); border-left-color: var(--bm-line-strong); }
 
 .bm-legal__toc a.is-current {
@@ -4236,6 +4237,13 @@ a.bm-card__title:hover,
 /* The rail's link points forward, so its arrow moves forward on hover. */
 .bm-legal__rail .bm-doc__back:hover i { transform: translateX(3px); }
 .bm-legal__rail .bm-doc__contact-cta { margin-top: var(--bm-5); }
+.bm-legal__rail .bm-doc__index a em {
+  font-family: inherit !important;
+  font-size: inherit;
+  font-weight: inherit;
+  letter-spacing: 0;
+  font-variant-numeric: tabular-nums;
+}
 
 .bm-legal__body { min-width: 0; }
 .bm-legal__body p,
@@ -4276,7 +4284,13 @@ a.bm-card__title:hover,
   color: var(--bm-text);
 }
 
-.bm-legal__num { font-family: var(--bm-font-mono); font-size: 0.8rem; font-weight: 500; color: var(--bm-accent-ink); }
+/* Numbers match their titles: same font, size and weight, only the colour differs. */
+.bm-legal__num {
+  font: inherit;
+  font-family: var(--bm-font-display) !important;
+  font-variant-numeric: tabular-nums;
+  color: var(--bm-accent-ink);
+}
 
 .bm-legal__ul,
 .bm-legal__ol { margin: 0 0 var(--bm-4); padding-left: 1.25rem; }
@@ -4290,7 +4304,8 @@ a.bm-card__title:hover,
   height: 6px;
   background: var(--bm-accent);
 }
-.bm-legal__ol li { margin-bottom: var(--bm-2); padding-left: 4px; }
+/* The global reset sets list-style: none on ol and li; numbered lists need it back. */
+.bm-legal__ol li { list-style: decimal; margin-bottom: var(--bm-2); padding-left: 4px; }
 .bm-legal__ol li::marker { font-weight: 600; color: var(--bm-accent-ink); }
 .bm-legal__body strong { color: var(--bm-text); }
 
@@ -4326,15 +4341,3 @@ a.bm-card__title:hover,
   .bm-legal { grid-template-columns: minmax(0, 1fr); }
   .bm-legal__rail { position: static; max-height: none; }
 }
-
-/* Footer: policy links in the bottom bar */
-.bm-footer__legal {
-  display: flex;
-  flex-wrap: wrap;
-  gap: var(--bm-2) var(--bm-5);
-  margin: 0;
-  padding: 0;
-  list-style: none;
-}
-.bm-footer__legal a { font-size: var(--bm-fs-xs); color: rgba(255, 255, 255, 0.7); text-decoration: none; }
-.bm-footer__legal a:hover { color: #fff; text-decoration: underline; text-underline-offset: 3px; }

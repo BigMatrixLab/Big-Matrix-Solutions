@@ -1,7 +1,7 @@
 """Big-Matrix Solutions letterhead, drawn as HTML for build-legal-pdfs.py.
 
 One A4 sheet per page: logo and contact block on top, a hairline with a red
-accent under the logo, a footer line with the company address and
+accent under the logo, a footer line with the company name and
 "Page X of Y", and the red and black band along the bottom edge.
 """
 import base64
@@ -75,13 +75,12 @@ def sheet(company, logo, page=None, total=None):
              (icon('globe'), html.escape(company['website'].replace('https://', '')))]
     contact = ''.join(f'<li><span>{text}</span>{svg}</li>' for svg, text in lines)
     number = f'Page <b>{page}</b> of <b>{total}</b>' if page else ''
-    address = html.escape(company['addressLines'][-1])
     return (
         '<div class="sheet">'
         f'<div class="head"><img class="logo" src="{logo}" alt="{html.escape(company["name"])}">'
         f'<ul class="contact">{contact}</ul></div>'
         '<div class="rule"></div>'
-        f'<div class="foot"><span>{html.escape(company["name"])} &middot; {address}</span>'
+        f'<div class="foot"><span>{html.escape(company["name"])}</span>'
         f'<span>{number}</span></div>'
         '<div class="band"><span></span><span></span></div>'
         '</div>'

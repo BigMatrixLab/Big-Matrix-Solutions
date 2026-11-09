@@ -2,7 +2,6 @@ import React from 'react';
 import { Link } from 'react-router-dom';
 
 const COMPANY_LINKS = [
-    { to: '/about', label: 'About' },
     { to: '/project', label: 'Products' },
     // Team is parked — /team now returns the 404 page. Restore when it is back.
     // { to: '/team', label: 'Team' },
@@ -69,6 +68,15 @@ const FooterArea = () => {
                         </ul>
                     </nav>
 
+                    <nav aria-label="Documents">
+                        <h2 className="bm-footer__title">Documents</h2>
+                        <ul className="bm-footer__list">
+                            {LEGAL_LINKS.map((link) => (
+                                <li key={link.to}><Link to={link.to}>{link.label}</Link></li>
+                            ))}
+                        </ul>
+                    </nav>
+
                     <div>
                         <h2 className="bm-footer__title">Contact</h2>
                         <ul className="bm-footer__contact">
@@ -92,13 +100,6 @@ const FooterArea = () => {
                     <p className="bm-footer__copy">
                         © {new Date().getFullYear()} Big-Matrix Solutions. All rights reserved.
                     </p>
-                    <nav aria-label="Legal">
-                        <ul className="bm-footer__legal">
-                            {LEGAL_LINKS.map((link) => (
-                                <li key={link.to}><Link to={link.to}>{link.label}</Link></li>
-                            ))}
-                        </ul>
-                    </nav>
                     <ul className="bm-footer__social">
                         {SOCIAL_LINKS.map((social) => (
                             <li key={social.href}>

@@ -49,8 +49,8 @@ p { margin: 0 0 7pt; }
 section { margin-top: 13pt; padding-top: 9pt; border-top: .6pt solid #e3e5e8; }
 h2 { margin: 0 0 6pt; font-family: 'Inter Tight', 'Inter', sans-serif; font-size: 12pt;
      font-weight: 700; color: #111318; break-after: avoid; page-break-after: avoid; }
-h2 .num { display: inline-block; min-width: 20pt; font-family: 'JetBrains Mono', monospace;
-          font-size: 8.5pt; font-weight: 500; color: #ec362e; }
+h2 .num { display: inline-block; min-width: 22pt; font: inherit; font-variant-numeric: tabular-nums;
+          color: #ec362e; }
 ul, ol { margin: 0 0 8pt; padding-left: 15pt; }
 li { margin-bottom: 4pt; }
 ul li { list-style: none; position: relative; }
