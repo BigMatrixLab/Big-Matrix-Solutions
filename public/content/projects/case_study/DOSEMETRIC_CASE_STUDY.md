@@ -1,10 +1,10 @@
-# LINAC QA Guardian — Product Case Study
+# Dosemetric — Product Case Study
 
-> Source material for the `/project/linac-qa-guardian` showcase page (`src/pages/projects/ProjectLinacQAGuardian.jsx`).
+> Source material for the `/project/dosemetric` showcase page (`src/pages/projects/ProjectDosemetric.jsx`).
 
 ## Overview
 
-LINAC QA Guardian is a web application for the Radiation Oncology Department at Labaid Cancer Hospital. It manages the daily, weekly and monthly quality assurance checks run on the department's linear accelerators: who performs each section, when it is due, what was measured, and who verified it. Technologists fill in the checks, medical physicists review and sign them off, and administrators plan the schedule and maintain the forms.
+Dosemetric is a web application for the Radiation Oncology Department at Labaid Cancer Hospital. It manages the daily, weekly and monthly quality assurance checks run on the department's linear accelerators: who performs each section, when it is due, what was measured, and who verified it. Technologists fill in the checks, medical physicists review and sign them off, and administrators plan the schedule and maintain the forms.
 
 The core design decision is that every QA form is versioned data rather than a fixed screen. The department's three standard QA documents are built in, a form builder lets administrators adapt them without code changes, and each assignment is pinned to the form version it was issued with, so changing a form never alters past records.
 
@@ -12,7 +12,7 @@ The core design decision is that every QA form is versioned data rather than a f
 
 | | |
 |---|---|
-| **Product** | LINAC QA Guardian |
+| **Product** | Dosemetric |
 | **Category** | Medical Physics / Radiotherapy QA |
 | **Client** | Labaid Cancer Hospital & Super Speciality Center |
 | **Timeline** | May 2026 – October 2026 |

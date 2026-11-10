@@ -21,7 +21,7 @@ const PRODUCTS = [
     { to: '/project/lung-ct-report-generation', label: 'Lung CT Report Generation' },
     { to: '/project/x-ray-segmentation-editor', label: 'X-Ray Segmentation Editor' },
     { to: '/project/dicomviewer', label: 'DicomViewer' },
-    { to: '/project/linac-qa-guardian', label: 'LINAC QA Guardian' },
+    { to: '/project/dosemetric', label: 'Dosemetric' },
     { to: '/project/scriptor', label: 'Scriptor' },
     { to: '/project/ielts-tutors', label: 'IELTS Tutors' },
 ];

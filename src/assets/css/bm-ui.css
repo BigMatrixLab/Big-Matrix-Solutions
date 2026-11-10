@@ -4372,6 +4372,7 @@ a.bm-card__title:hover,
 
 /* "Who we are" intro runs the full container width. */
 .bm-about__intro .bm-head { grid-template-columns: minmax(0, 1fr); }
+.bm-about__intro .bm-head__title,
 .bm-about__intro .bm-head__lead { max-width: none; }
 
 .bm-about__connect {

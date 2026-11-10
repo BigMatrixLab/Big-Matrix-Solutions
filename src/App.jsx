@@ -21,7 +21,7 @@ import ProjectLungCTReport from './pages/projects/ProjectLungCTReport';
 import ProjectIELTSTutors from './pages/projects/ProjectIELTSTutors';
 import ProjectRxCloud from './pages/projects/ProjectRxCloud';
 import ProjectDicomViewer from './pages/projects/ProjectDicomViewer';
-import ProjectLinacQAGuardian from './pages/projects/ProjectLinacQAGuardian';
+import ProjectDosemetric from './pages/projects/ProjectDosemetric';
 import Blog from './pages/Blog';
 import BlogDetails from './pages/BlogDetails';
 import Careers from './pages/Careers';
@@ -82,7 +82,9 @@ function App() {
             <Route path="/project/ielts-tutors" element={<ProjectIELTSTutors />} />
             <Route path="/project/rxcloud" element={<ProjectRxCloud />} />
             <Route path="/project/dicomviewer" element={<ProjectDicomViewer />} />
-            <Route path="/project/linac-qa-guardian" element={<ProjectLinacQAGuardian />} />
+            <Route path="/project/dosemetric" element={<ProjectDosemetric />} />
+            {/* Old name of Dosemetric; keeps shared links working. */}
+            <Route path="/project/linac-qa-guardian" element={<Navigate to="/project/dosemetric" replace />} />
             <Route path="/project/:slug" element={<ProjectDetails />} />
             <Route path="/blog" element={<Blog />} />
             <Route path="/blog/:slug" element={<BlogDetails />} />

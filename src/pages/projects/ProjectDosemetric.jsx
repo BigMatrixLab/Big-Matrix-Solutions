@@ -11,7 +11,7 @@ const heroStats = [
 ];
 
 const projectFacts = [
-    { icon: 'bi bi-box', label: 'Product', value: 'LINAC QA Guardian' },
+    { icon: 'bi bi-box', label: 'Product', value: 'Dosemetric' },
     { icon: 'bi bi-tag', label: 'Category', value: 'Medical Physics / Radiotherapy QA' },
     { icon: 'bi bi-hospital', label: 'Client', value: 'Labaid Cancer Hospital & Super Speciality Center' },
     { icon: 'bi bi-person-badge', label: 'Users', value: 'Technologists, medical physicists, administrators' },
@@ -19,6 +19,7 @@ const projectFacts = [
     { icon: 'bi bi-calendar3', label: 'Timeline', value: 'May 2026 – October 2026' },
     { icon: 'bi bi-hourglass-split', label: 'Status', value: 'In development' },
     { icon: 'bi bi-building', label: 'Developed By', value: 'Big-Matrix Solutions' },
+    { icon: 'bi bi-globe', label: 'Live URL', value: 'dosemetric.big-matrix.com' },
 ];
 
 const problems = [
@@ -186,13 +187,13 @@ const Checklist = ({ items, cols }) => (
     </div>
 );
 
-const ProjectLinacQAGuardian = () => {
+const ProjectDosemetric = () => {
     return (
         <>
             <Seo
-                title="LINAC QA Guardian"
+                title="Dosemetric"
                 description="Web platform that schedules, records and signs off daily, weekly and monthly linear accelerator QA, with live tolerance checks and version-controlled forms."
-                path="/project/linac-qa-guardian"
+                path="/project/dosemetric"
             />
         <div className="bc-showcase">
 
@@ -204,7 +205,7 @@ const ProjectLinacQAGuardian = () => {
                             <span className="bc-hero-badge">
                                 <i className="bi bi-radioactive"></i> Medical Physics / Radiotherapy QA
                             </span>
-                            <h1>LINAC QA Guardian: Linear Accelerator QA, Scheduled, Recorded And Signed Off</h1>
+                            <h1>Dosemetric: Linear Accelerator QA, Scheduled, Recorded And Signed Off</h1>
                             <p className="bc-hero-sub">
                                 A web application for the Radiation Oncology Department at Labaid Cancer Hospital. It
                                 manages the daily, weekly and monthly QA checks run on the department&apos;s linear
@@ -213,7 +214,7 @@ const ProjectLinacQAGuardian = () => {
                             </p>
                         </div>
                         <figure className="bc-hero-figure">
-                            <img src="/assets/images/projects/QA Guardian.png" alt="LINAC QA Guardian dashboard" />
+                            <img src="/assets/images/projects/Dosemetric.png" alt="Dosemetric dashboard" />
                             <figcaption className="bc-figure-tag">
                                 <i className="bi bi-layers"></i>
                                 <span>
@@ -470,4 +471,4 @@ const ProjectLinacQAGuardian = () => {
     );
 };
 
-export default ProjectLinacQAGuardian;
+export default ProjectDosemetric;
