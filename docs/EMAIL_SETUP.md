@@ -25,7 +25,6 @@ src/pages/Contact.jsx        the form
 .dev.vars                    your local token (gitignored)
 .dev.vars.example            the template, committed
 ```
-
 ---
 
 ## Step 1 — Get the Mailtrap API token
