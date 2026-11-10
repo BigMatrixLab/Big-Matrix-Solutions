@@ -69,7 +69,7 @@ const AboutOne = () => {
                 breadcrumbItem="About"
             />
 
-            <section className="bm-section">
+            <section className="bm-section bm-about__intro">
                 <div className="bm-container">
                     <SectionHead
                         eyebrow="Who we are"
