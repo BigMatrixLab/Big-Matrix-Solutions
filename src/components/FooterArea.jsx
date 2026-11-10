@@ -90,7 +90,7 @@ const FooterArea = () => {
                             </li>
                             <li>
                                 <i className="bi bi-geo-alt" aria-hidden="true"></i>
-                                <span>Bashundhara, Dhaka-1229,<br />Bangladesh</span>
+                                <span>Plot# 10, Pallabi, Mirpur,<br />Dhaka - 1216, Bangladesh</span>
                             </li>
                         </ul>
                     </div>

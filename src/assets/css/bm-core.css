@@ -106,7 +106,6 @@ h1, h2, h3, h4, h5, h6,
   font-weight: 600;
   line-height: var(--bm-lh-tight);
   letter-spacing: var(--bm-track-heading);
-  text-wrap: balance;
 }
 
 h1 { font-size: var(--bm-fs-h1); }
@@ -118,6 +117,36 @@ p {
   color: var(--bm-text-2);
   line-height: var(--bm-lh-body);
   letter-spacing: var(--bm-track-body);
+}
+
+/* Body copy is justified across the site; headings stay left-aligned with
+   ordinary wrapping. Text is never balanced (no text-wrap: balance). */
+p, li, dd, blockquote, figcaption {
+  text-align: justify;
+  text-justify: inter-word;
+  hyphens: auto;
+  -webkit-hyphens: auto;
+}
+
+p a, li a, dd a { hyphens: none; -webkit-hyphens: none; }
+
+/* Components that set their own paragraphs to left-aligned are justified too. */
+body :is(
+  .bm-footer__blurb,
+  .bm-head__lead,
+  .bm-row__text,
+  .bm-card__text,
+  .bm-work__text,
+  .bm-bento__text,
+  .bm-voice__text,
+  .bm-catalogue__label p,
+  .bm-doc__contact-copy,
+  .bm-lab__body,
+  .bm-show__text,
+  .bm-lead-post__excerpt,
+  .bm-post-lead__text
+) {
+  text-align: justify;
 }
 
 a {
@@ -535,7 +564,6 @@ textarea:focus {
   line-height: 1.04;
   letter-spacing: var(--bm-track-display);
   color: #fff;
-  text-wrap: balance;
 }
 
 /* --------------------------------------------------------------------------

@@ -135,7 +135,6 @@
   line-height: 1.06;
   letter-spacing: var(--bm-track-display);
   color: var(--bm-text);
-  text-wrap: balance;
 }
 
 .bm-head__lead {
@@ -778,7 +777,6 @@ a.bm-card__title:hover,
   line-height: 0.98;
   letter-spacing: -0.04em;
   color: var(--bm-text);
-  text-wrap: balance;
 }
 
 /* Heavier than the rest of the headline, so the accent word carries weight as
@@ -1095,7 +1093,6 @@ a.bm-card__title:hover,
   line-height: 1.14;
   letter-spacing: var(--bm-track-heading);
   color: var(--bm-text);
-  text-wrap: balance;
 }
 
 .bm-lab__body {
@@ -2226,7 +2223,6 @@ a.bm-card__title:hover,
   line-height: 1.16;
   letter-spacing: var(--bm-track-heading);
   color: var(--bm-text);
-  text-wrap: balance;
 }
 
 .bm-work__title a { color: inherit; }
@@ -2794,8 +2790,8 @@ a.bm-card__title:hover,
 
 .bm-close__panel {
   position: relative;
-  padding: clamp(48px, 3rem + 4vw, 96px) var(--bm-6) clamp(72px, 4rem + 4vw, 120px);
-  text-align: center;
+  padding: clamp(48px, 3rem + 4vw, 96px) clamp(24px, 1rem + 4vw, 80px) clamp(72px, 4rem + 4vw, 120px);
+  text-align: left;
   background: var(--bm-orange-deep);
   border-radius: var(--bm-r-lg);
   overflow: hidden;
@@ -2841,7 +2837,7 @@ a.bm-card__title:hover,
 
 .bm-close__title {
   max-width: 20ch;
-  margin: 0 auto var(--bm-5);
+  margin: 0 0 var(--bm-5);
   font-family: var(--bm-font-display) !important;
   font-size: clamp(2rem, 1.3rem + 2.6vw, 3.5rem);
   font-weight: 600;
@@ -2852,14 +2848,14 @@ a.bm-card__title:hover,
 
 .bm-close__text {
   max-width: 58ch;
-  margin: 0 auto var(--bm-6);
+  margin: 0 0 var(--bm-6);
   font-size: var(--bm-fs-lead);
   line-height: 1.6;
   color: #fff;
-  text-align: center;
+  text-align: justify;
 }
 
-.bm-close__actions { display: flex; flex-wrap: wrap; justify-content: center; gap: var(--bm-3); }
+.bm-close__actions { display: flex; flex-wrap: wrap; justify-content: flex-start; gap: var(--bm-3); }
 
 /* On the slab: white fill with deep-orange label reads at 5:1. */
 .bm-close__actions .bm-button {
@@ -2903,9 +2899,10 @@ a.bm-card__title:hover,
   animation: bmGlyphDrift 9s var(--bm-ease-inout) infinite;
 }
 
-.bm-close__glyph:nth-child(1) { top: 12%; left: 6%;  transform: rotate(-18deg); animation-delay: 0s; }
-.bm-close__glyph:nth-child(2) { top: 34%; left: 14%; transform: rotate(12deg);  animation-delay: -1.4s; }
-.bm-close__glyph:nth-child(3) { top: 62%; left: 8%;  transform: rotate(-8deg);  animation-delay: -2.8s; }
+/* Copy is left-aligned, so every tile sits in the open right half. */
+.bm-close__glyph:nth-child(1) { top: 9%;  right: 34%; transform: rotate(-18deg); animation-delay: 0s; }
+.bm-close__glyph:nth-child(2) { top: 40%; right: 26%; transform: rotate(12deg);  animation-delay: -1.4s; }
+.bm-close__glyph:nth-child(3) { top: 70%; right: 30%; transform: rotate(-8deg);  animation-delay: -2.8s; }
 .bm-close__glyph:nth-child(4) { top: 14%; right: 8%; transform: rotate(16deg);  animation-delay: -4.2s; }
 .bm-close__glyph:nth-child(5) { top: 40%; right: 15%; transform: rotate(-14deg); animation-delay: -5.6s; }
 .bm-close__glyph:nth-child(6) { top: 66%; right: 6%; transform: rotate(9deg);   animation-delay: -7s; }
@@ -2919,7 +2916,7 @@ a.bm-card__title:hover,
   .bm-close__glyph { animation: none; }
 }
 
-@media (max-width: 991px) {
+@media (max-width: 1199px) {
   .bm-close__glyph:nth-child(2),
   .bm-close__glyph:nth-child(5) { display: none; }
 }
@@ -3454,7 +3451,6 @@ a.bm-card__title:hover,
   line-height: 1.14;
   letter-spacing: var(--bm-track-heading);
   color: var(--bm-text);
-  text-wrap: balance;
 }
 
 .bm-post-lead__title a { color: inherit; }

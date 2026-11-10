@@ -1934,9 +1934,8 @@
 
 .bc-showcase .bc-hero-badge i { color: var(--bm-orange-on-ink) !important; }
 
-/* Project pages: text runs the full width of its container. The global
-   `text-wrap: balance` on headings (bm-core.css) and the measure caps on the
-   hero lead and section intros are switched off here only. */
+/* Project pages: text runs the full width of its container. The measure caps
+   on the hero lead and section intros are switched off here only. */
 .bc-showcase h1,
 .bc-showcase h2,
 .bc-showcase h3,

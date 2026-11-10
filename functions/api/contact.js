@@ -51,7 +51,7 @@ const DEFAULTS = {
     fromName: 'Big-Matrix Solutions',
     siteUrl: 'https://big-matrix.com',
     phone: '+880 1339 870730',
-    address: 'Bashundhara R/A, Dhaka 1229, Bangladesh',
+    address: 'Section# 11, Block# A, Mainroad# 3, Plot# 10, Pallabi, Mirpur, Dhaka - 1216, Bangladesh',
 };
 
 /** Dev origins allowed to post here, on top of the deployment's own origin. */
