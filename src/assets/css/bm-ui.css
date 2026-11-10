@@ -4339,36 +4339,8 @@ a.bm-card__title:hover,
 }
 
 /* --------------------------------------------------------------------------
-   About page (pages/AboutOne.jsx): products row and "Connect with us"
+   About page (pages/AboutOne.jsx): intro width and "Connect with us"
    -------------------------------------------------------------------------- */
-
-.bm-about__products {
-  margin-top: var(--bm-6);
-  padding-top: var(--bm-5);
-  border-top: 1px solid var(--bm-line);
-}
-.bm-about__products ul {
-  display: flex;
-  flex-wrap: wrap;
-  gap: var(--bm-2);
-  margin: 0;
-  padding: 0;
-  list-style: none;
-}
-.bm-about__products a {
-  display: inline-flex;
-  align-items: center;
-  min-height: 36px;
-  padding: 6px 14px;
-  font-size: var(--bm-fs-sm);
-  color: var(--bm-text-2);
-  background: var(--bm-elevated);
-  border: 1px solid var(--bm-line);
-  border-radius: 999px;
-  transition: color var(--bm-dur) var(--bm-ease-inout),
-              border-color var(--bm-dur) var(--bm-ease-inout);
-}
-.bm-about__products a:hover { color: var(--bm-orange-ink); border-color: var(--bm-orange); }
 
 /* "Who we are" intro runs the full container width. */
 .bm-about__intro .bm-head { grid-template-columns: minmax(0, 1fr); }

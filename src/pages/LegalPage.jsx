@@ -14,10 +14,13 @@ import useScrollSpy from '../utils/useScrollSpy';
  * documents never drift apart.
  *
  * Layout: section index on the left that follows the scroll, the document in
- * the centre, and the solution-detail rail on the right (related documents
+ * the centre, and the solution-detail rail on the right (related pages
  * and the PDF download).
  */
 const { company, documents } = LEGAL;
+
+/* The rail lists the policies only; About Us lives in the main navigation. */
+const RELATED = documents.filter((item) => item.slug !== 'about-us');
 
 /** "contact@big-matrix.com" and "+880 …" inside running text become links. */
 const linkify = (text) =>
@@ -131,10 +134,10 @@ const LegalPage = ({ slug }) => {
                     </article>
 
                     <aside className="bm-doc__aside bm-legal__rail">
-                        <nav className="bm-doc__index" aria-label="Related documents">
-                            <p className="bm-doc__index-label">Related documents</p>
+                        <nav className="bm-doc__index" aria-label="Related pages">
+                            <p className="bm-doc__index-label">Related pages</p>
                             <ul>
-                                {documents.map((item, i) => {
+                                {RELATED.map((item, i) => {
                                     const current = item.slug === doc.slug;
                                     return (
                                         <li key={item.slug}>

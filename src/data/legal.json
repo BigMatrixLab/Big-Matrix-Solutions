@@ -8,7 +8,7 @@
     "address": "Section# 11, Block# A, Mainroad# 3, Plot# 10, Pallabi, Mirpur, Dhaka - 1216, Bangladesh",
     "addressLines": ["Section# 11, Block# A, Mainroad# 3,", "Plot# 10, Pallabi, Mirpur, Dhaka - 1216"],
     "linkedin": "https://www.linkedin.com/company/big-matrix-solutions/",
-    "github": "https://github.com/BigMatrixLab"
+    "facebook": "https://www.facebook.com/BigMatrix.Solutions"
   },
   "documents": [
     {
@@ -316,7 +316,7 @@
           ],
           "list": [
             "LinkedIn: linkedin.com/company/big-matrix-solutions",
-            "GitHub: github.com/BigMatrixLab"
+            "Facebook: facebook.com/BigMatrix.Solutions"
           ],
           "contact": true,
           "after": ["Thank you for choosing Big-Matrix Solutions. We appreciate your trust in our work."]

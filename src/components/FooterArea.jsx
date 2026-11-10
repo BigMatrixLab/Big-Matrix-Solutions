@@ -28,7 +28,6 @@ const SERVICE_LINKS = [
 
 const SOCIAL_LINKS = [
     { href: 'https://www.linkedin.com/company/big-matrix-solutions/', label: 'LinkedIn', icon: 'bi-linkedin' },
-    { href: 'https://github.com/BigMatrixLab', label: 'GitHub', icon: 'bi-github' },
     { href: 'https://www.facebook.com/BigMatrix.Solutions', label: 'Facebook', icon: 'bi-facebook' },
 ];
 
@@ -68,8 +67,8 @@ const FooterArea = () => {
                         </ul>
                     </nav>
 
-                    <nav aria-label="Documents">
-                        <h2 className="bm-footer__title">Documents</h2>
+                    <nav aria-label="Policy">
+                        <h2 className="bm-footer__title">Policy</h2>
                         <ul className="bm-footer__list">
                             {LEGAL_LINKS.map((link) => (
                                 <li key={link.to}><Link to={link.to}>{link.label}</Link></li>
@@ -90,7 +89,11 @@ const FooterArea = () => {
                             </li>
                             <li>
                                 <i className="bi bi-geo-alt" aria-hidden="true"></i>
-                                <span>Plot# 10, Pallabi, Mirpur,<br />Dhaka - 1216, Bangladesh</span>
+                                <span>
+                                    Section# 11, Block# A, Mainroad# 3,<br />
+                                    Plot# 10, Pallabi, Mirpur,<br />
+                                    Dhaka - 1216, Bangladesh
+                                </span>
                             </li>
                         </ul>
                     </div>

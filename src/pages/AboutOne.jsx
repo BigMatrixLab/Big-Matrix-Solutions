@@ -1,5 +1,4 @@
 import React from 'react';
-import { Link } from 'react-router-dom';
 import Breadcrumb from '../components/Breadcrumb';
 import SectionHead from '../components/SectionHead';
 import TestimonialArea from '../components/TestimonialArea';
@@ -15,20 +14,9 @@ const ABOUT = LEGAL.documents.find((doc) => doc.slug === 'about-us');
 const section = (heading) => ABOUT.sections.find((item) => item.heading === heading);
 const PROFILE_PDF = '/documents/big-matrix-solutions-about-us.pdf';
 
-const PRODUCTS = [
-    { to: '/project/rxcloud', label: 'RxCloud' },
-    { to: '/project/auto-contouring', label: 'Auto Contouring' },
-    { to: '/project/lung-ct-report-generation', label: 'Lung CT Report Generation' },
-    { to: '/project/x-ray-segmentation-editor', label: 'X-Ray Segmentation Editor' },
-    { to: '/project/dicomviewer', label: 'DicomViewer' },
-    { to: '/project/dosemetric', label: 'Dosemetric' },
-    { to: '/project/scriptor', label: 'Scriptor' },
-    { to: '/project/ielts-tutors', label: 'IELTS Tutors' },
-];
-
 const FOLLOW = [
     { href: LEGAL.company.linkedin, label: 'LinkedIn', icon: 'bi-linkedin' },
-    { href: LEGAL.company.github, label: 'GitHub', icon: 'bi-github' },
+    { href: LEGAL.company.facebook, label: 'Facebook', icon: 'bi-facebook' },
 ];
 
 const PRACTICE_AREAS = [
@@ -88,15 +76,6 @@ const AboutOne = () => {
                                 </div>
                             </article>
                         ))}
-                    </div>
-
-                    <div className="bm-about__products">
-                        <p className="bm-head__eyebrow">Our products</p>
-                        <ul>
-                            {PRODUCTS.map((product) => (
-                                <li key={product.to}><Link to={product.to}>{product.label}</Link></li>
-                            ))}
-                        </ul>
                     </div>
                 </div>
             </section>
