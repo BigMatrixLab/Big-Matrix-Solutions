@@ -2,6 +2,7 @@ import React from 'react';
 import { Link } from 'react-router-dom';
 
 const COMPANY_LINKS = [
+    { to: '/about', label: 'About Us' },
     { to: '/project', label: 'Products' },
     // Team is parked — /team now returns the 404 page. Restore when it is back.
     // { to: '/team', label: 'Team' },
@@ -12,7 +13,6 @@ const COMPANY_LINKS = [
 
 // Company documents (pages/LegalPage.jsx, content in data/legal.json).
 const LEGAL_LINKS = [
-    { to: '/about-us', label: 'About Us' },
     { to: '/privacy-policy', label: 'Privacy Policy' },
     { to: '/refund-policy', label: 'Refund Policy' },
     { to: '/delivery-policy', label: 'Delivery Policy' },
@@ -29,7 +29,7 @@ const SERVICE_LINKS = [
 const SOCIAL_LINKS = [
     { href: 'https://www.linkedin.com/company/big-matrix-solutions/', label: 'LinkedIn', icon: 'bi-linkedin' },
     { href: 'https://github.com/BigMatrixLab', label: 'GitHub', icon: 'bi-github' },
-    { href: 'https://big-matrix.com', label: 'Big-Matrix Research & Development Lab', icon: 'bi-globe2' },
+    { href: 'https://www.facebook.com/BigMatrix.Solutions', label: 'Facebook', icon: 'bi-facebook' },
 ];
 
 const FooterArea = () => {

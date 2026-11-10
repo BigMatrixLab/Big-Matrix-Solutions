@@ -265,6 +265,7 @@
     },
     {
       "slug": "about-us",
+      "path": "/about",
       "title": "About Us",
       "short": "About",
       "description": "Who Big-Matrix Solutions is, what we build, and why hospitals and businesses choose us.",

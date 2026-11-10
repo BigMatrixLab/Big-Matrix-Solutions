@@ -1,10 +1,11 @@
 import React from 'react';
-import { Target, Eye, Sparkles, Check } from 'lucide-react';
+import { Target, Eye, Sparkles, ShieldCheck, Check } from 'lucide-react';
 
 const ICONS = {
     target: Target,
     eye: Eye,
     stars: Sparkles,
+    shield: ShieldCheck,
 };
 
 /**

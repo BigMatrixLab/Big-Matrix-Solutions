@@ -1,13 +1,15 @@
 import { useEffect, useRef } from 'react';
 import { Link } from 'react-router-dom';
 import Breadcrumb from '../components/Breadcrumb';
+import ContactRows from '../components/ContactRows';
 import Seo from '../components/Seo';
 import LEGAL from '../data/legal.json';
 import useScrollSpy from '../utils/useScrollSpy';
 
 /**
- * Company documents (about us, privacy, refund, delivery), rendered from
- * data/legal.json. The same file builds the letterhead PDFs in
+ * Company documents (privacy, refund, delivery), rendered from
+ * data/legal.json. The About Us document has no page of its own: its content
+ * is on the main About page, and its `path` points there. The same file builds the letterhead PDFs in
  * public/documents (scripts/build-legal-pdfs.py), so the website and the
  * documents never drift apart.
  *
@@ -34,14 +36,6 @@ const ListItem = ({ text }) => {
     }
     return <li>{linkify(text)}</li>;
 };
-
-const ContactRows = () => (
-    <dl className="bm-legal__contact">
-        <div><dt>Email</dt><dd><a href={`mailto:${company.email}`}>{company.email}</a></dd></div>
-        <div><dt>Phone</dt><dd><a href={company.phoneHref}>{company.phone}</a></dd></div>
-        <div><dt>Address</dt><dd>{company.address}</dd></div>
-    </dl>
-);
 
 const pad = (n) => String(n).padStart(2, '0');
 const sectionId = (i) => `s${i + 1}`;
@@ -145,7 +139,7 @@ const LegalPage = ({ slug }) => {
                                     return (
                                         <li key={item.slug}>
                                             <Link
-                                                to={`/${item.slug}`}
+                                                to={item.path || `/${item.slug}`}
                                                 className={current ? 'is-current' : undefined}
                                                 aria-current={current ? 'page' : undefined}
                                             >

@@ -1,5 +1,5 @@
 ﻿import React, { useEffect } from 'react';
-import { Routes, Route } from 'react-router-dom';
+import { Routes, Route, Navigate } from 'react-router-dom';
 import Layout from './components/Layout';
 import Home from './pages/Home';
 import AboutOne from './pages/AboutOne';
@@ -91,7 +91,8 @@ function App() {
             <Route path="/faqs" element={<Faqs />} />
             <Route path="/mission" element={<Mission />} />
             <Route path="/contact" element={<Contact />} />
-            <Route path="/about-us" element={<LegalPage slug="about-us" />} />
+            {/* About Us lives on the main About page; the old link redirects. */}
+            <Route path="/about-us" element={<Navigate to="/about" replace />} />
             <Route path="/privacy-policy" element={<LegalPage slug="privacy-policy" />} />
             <Route path="/refund-policy" element={<LegalPage slug="refund-policy" />} />
             <Route path="/delivery-policy" element={<LegalPage slug="delivery-policy" />} />

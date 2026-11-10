@@ -4341,3 +4341,58 @@ a.bm-card__title:hover,
   .bm-legal { grid-template-columns: minmax(0, 1fr); }
   .bm-legal__rail { position: static; max-height: none; }
 }
+
+/* --------------------------------------------------------------------------
+   About page (pages/AboutOne.jsx): products row and "Connect with us"
+   -------------------------------------------------------------------------- */
+
+.bm-about__products {
+  margin-top: var(--bm-6);
+  padding-top: var(--bm-5);
+  border-top: 1px solid var(--bm-line);
+}
+.bm-about__products ul {
+  display: flex;
+  flex-wrap: wrap;
+  gap: var(--bm-2);
+  margin: 0;
+  padding: 0;
+  list-style: none;
+}
+.bm-about__products a {
+  display: inline-flex;
+  align-items: center;
+  min-height: 36px;
+  padding: 6px 14px;
+  font-size: var(--bm-fs-sm);
+  color: var(--bm-text-2);
+  background: var(--bm-elevated);
+  border: 1px solid var(--bm-line);
+  border-radius: 999px;
+  transition: color var(--bm-dur) var(--bm-ease-inout),
+              border-color var(--bm-dur) var(--bm-ease-inout);
+}
+.bm-about__products a:hover { color: var(--bm-orange-ink); border-color: var(--bm-orange); }
+
+.bm-about__connect {
+  display: grid;
+  grid-template-columns: minmax(0, 1.1fr) minmax(0, 0.9fr);
+  gap: clamp(32px, 2rem + 3vw, 80px);
+  align-items: start;
+}
+.bm-about__connect .bm-head { margin-bottom: var(--bm-5); }
+.bm-about__follow { display: flex; flex-wrap: wrap; gap: var(--bm-3); margin: 0; padding: 0; list-style: none; }
+.bm-about__contact {
+  display: flex;
+  flex-direction: column;
+  align-items: flex-start;
+  padding: var(--bm-6);
+  background: var(--bm-elevated);
+  border: 1px solid var(--bm-line);
+  border-radius: var(--bm-r);
+}
+.bm-about__contact .bm-legal__contact { align-self: stretch; margin-top: 0; }
+
+@media (max-width: 991px) {
+  .bm-about__connect { grid-template-columns: minmax(0, 1fr); }
+}

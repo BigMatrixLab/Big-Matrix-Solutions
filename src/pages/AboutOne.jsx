@@ -1,10 +1,35 @@
 import React from 'react';
+import { Link } from 'react-router-dom';
 import Breadcrumb from '../components/Breadcrumb';
 import SectionHead from '../components/SectionHead';
 import TestimonialArea from '../components/TestimonialArea';
 import ValueSection from '../components/ValueSection';
 import CtaBand from '../components/CtaBand';
 import Seo from '../components/Seo';
+import ContactRows from '../components/ContactRows';
+import LEGAL from '../data/legal.json';
+
+/* Company profile text from the About Us document (data/legal.json), which
+   also builds the company profile PDF, so the page and the PDF stay in step. */
+const ABOUT = LEGAL.documents.find((doc) => doc.slug === 'about-us');
+const section = (heading) => ABOUT.sections.find((item) => item.heading === heading);
+const PROFILE_PDF = '/documents/big-matrix-solutions-about-us.pdf';
+
+const PRODUCTS = [
+    { to: '/project/rxcloud', label: 'RxCloud' },
+    { to: '/project/auto-contouring', label: 'Auto Contouring' },
+    { to: '/project/lung-ct-report-generation', label: 'Lung CT Report Generation' },
+    { to: '/project/x-ray-segmentation-editor', label: 'X-Ray Segmentation Editor' },
+    { to: '/project/dicomviewer', label: 'DicomViewer' },
+    { to: '/project/linac-qa-guardian', label: 'LINAC QA Guardian' },
+    { to: '/project/scriptor', label: 'Scriptor' },
+    { to: '/project/ielts-tutors', label: 'IELTS Tutors' },
+];
+
+const FOLLOW = [
+    { href: LEGAL.company.linkedin, label: 'LinkedIn', icon: 'bi-linkedin' },
+    { href: LEGAL.company.github, label: 'GitHub', icon: 'bi-github' },
+];
 
 const PRACTICE_AREAS = [
    
@@ -47,8 +72,9 @@ const AboutOne = () => {
             <section className="bm-section">
                 <div className="bm-container">
                     <SectionHead
-                        eyebrow="Practice areas"
+                        eyebrow="Who we are"
                         title="Four disciplines, one engineering standard"
+                        lead={ABOUT.intro[0]}
                     />
                     <div className="bm-grid bm-grid--4">
                         {PRACTICE_AREAS.map((area) => (
@@ -62,6 +88,15 @@ const AboutOne = () => {
                                 </div>
                             </article>
                         ))}
+                    </div>
+
+                    <div className="bm-about__products">
+                        <p className="bm-head__eyebrow">Our products</p>
+                        <ul>
+                            {PRODUCTS.map((product) => (
+                                <li key={product.to}><Link to={product.to}>{product.label}</Link></li>
+                            ))}
+                        </ul>
                     </div>
                 </div>
             </section>
@@ -117,6 +152,51 @@ const AboutOne = () => {
                         ]}
                         reversed={true}
                     />
+
+                    {/* Why choose us, and our commitment */}
+                    <ValueSection
+                        icon="shield"
+                        title="Why choose us"
+                        headline="What you can count on."
+                        description={section('Our commitment').paragraphs[0]}
+                        items={section('Why choose us').list}
+                        reversed={false}
+                    />
+                </div>
+            </section>
+
+            <section className="bm-section">
+                <div className="bm-container bm-about__connect">
+                    <div>
+                        <SectionHead
+                            eyebrow="Connect with us"
+                            title="Follow our work, or talk to us directly"
+                            lead="Follow us for our latest work and updates, or contact us directly with any enquiry. Thank you for choosing Big-Matrix Solutions; we appreciate your trust in our work."
+                        />
+                        <ul className="bm-about__follow">
+                            {FOLLOW.map((item) => (
+                                <li key={item.href}>
+                                    <a
+                                        className="bm-button bm-button--ghost"
+                                        href={item.href}
+                                        target="_blank"
+                                        rel="noopener noreferrer"
+                                    >
+                                        <i className={`bi ${item.icon}`} aria-hidden="true"></i>
+                                        {item.label}
+                                    </a>
+                                </li>
+                            ))}
+                        </ul>
+                    </div>
+                    <div className="bm-about__contact">
+                        <p className="bm-head__eyebrow">Contact</p>
+                        <ContactRows />
+                        <a className="bm-button bm-button--ghost" href={PROFILE_PDF} download>
+                            <i className="bi bi-file-earmark-pdf" aria-hidden="true"></i>
+                            Company profile (PDF)
+                        </a>
+                    </div>
                 </div>
             </section>
 
