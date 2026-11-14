@@ -86,11 +86,7 @@ def list_item(text, company):
 
 def company_rows(company):
     """Legal identity rows, the same as src/components/CompanyRows.jsx."""
-    rows = [
-        ('Legal name', company['legalName']),
-        ('Registration', f'{company["registration"]}, RJSC Reg. No. {company["rjscRegNo"]}'
-                         f' ({company["incorporated"]})'),
-    ]
+    rows = [('Legal name', company['legalName'])]
     if company.get('tradeLicenseNo'):
         rows.append(('Trade licence', f'{company["tradeLicenseNo"]} ({company["tradeLicenseAuthority"]})'))
     rows.append(('Registered office', company['address']))

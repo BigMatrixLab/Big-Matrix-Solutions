@@ -3,16 +3,12 @@ import LEGAL from '../data/legal.json';
 const { company } = LEGAL;
 
 /**
- * Legal identity of the company (name, RJSC registration, trade licence,
- * registered office) as a labelled list. Used by the policy pages and the
- * About page; scripts/build-legal-pdfs.py prints the same rows in the PDFs.
+ * Legal identity of the company (name, trade licence, registered office) as
+ * a labelled list. Used by the policy pages and the About page;
+ * scripts/build-legal-pdfs.py prints the same rows in the PDFs.
  */
 const COMPANY_ROWS = [
     { label: 'Legal name', value: company.legalName },
-    {
-        label: 'Registration',
-        value: `${company.registration}, RJSC Reg. No. ${company.rjscRegNo} (${company.incorporated})`,
-    },
     ...(company.tradeLicenseNo
         ? [{ label: 'Trade licence', value: `${company.tradeLicenseNo} (${company.tradeLicenseAuthority})` }]
         : []),

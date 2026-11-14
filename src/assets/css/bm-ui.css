@@ -1347,8 +1347,6 @@ a.bm-card__title:hover,
 }
 
 .bm-footer__copy { margin: 0; font-size: var(--bm-fs-xs); color: rgba(255, 255, 255, 0.5); text-align: left; }
-.bm-footer__id { white-space: nowrap; }
-
 .bm-footer__social { display: flex; gap: var(--bm-2); margin: 0; padding: 0; list-style: none; }
 
 .bm-footer__social a {

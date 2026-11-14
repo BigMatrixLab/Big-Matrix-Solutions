@@ -106,10 +106,6 @@ const FooterArea = () => {
                 <div className="bm-footer__bottom">
                     <p className="bm-footer__copy">
                         © {new Date().getFullYear()} {company.legalName} All rights reserved.
-                        <br />
-                        <span className="bm-footer__id">RJSC Reg. No. {company.rjscRegNo}</span>
-                        {' · '}
-                        <span className="bm-footer__id">Trade Licence No. {company.tradeLicenseNo}</span>
                     </p>
                     <ul className="bm-footer__social">
                         {SOCIAL_LINKS.map((social) => (
