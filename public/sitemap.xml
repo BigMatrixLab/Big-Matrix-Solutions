@@ -23,6 +23,9 @@
         <loc>https://big-matrix.com/contact</loc>
     </url>
     <url>
+        <loc>https://big-matrix.com/terms-and-conditions</loc>
+    </url>
+    <url>
         <loc>https://big-matrix.com/privacy-policy</loc>
     </url>
     <url>
@@ -192,6 +195,10 @@
         <lastmod>2026-10-26</lastmod>
     </url>
     <url>
+        <loc>https://big-matrix.com/blog/how-diffusion-models-work</loc>
+        <lastmod>2026-11-11</lastmod>
+    </url>
+    <url>
         <loc>https://big-matrix.com/blog/how-jepa-works-predicting-in-latent-space</loc>
         <lastmod>2026-11-03</lastmod>
     </url>
@@ -278,6 +285,10 @@
     <url>
         <loc>https://big-matrix.com/blog/quantum-enhanced-machine-learning-breaking-the-compute-barrier</loc>
         <lastmod>2026-08-06</lastmod>
+    </url>
+    <url>
+        <loc>https://big-matrix.com/blog/rlvr-how-reasoning-models-got-good</loc>
+        <lastmod>2026-11-13</lastmod>
     </url>
     <url>
         <loc>https://big-matrix.com/blog/self-evolving-agents-and-memory-that-compounds</loc>

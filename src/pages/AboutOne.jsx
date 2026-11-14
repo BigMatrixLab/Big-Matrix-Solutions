@@ -6,6 +6,7 @@ import ValueSection from '../components/ValueSection';
 import CtaBand from '../components/CtaBand';
 import Seo from '../components/Seo';
 import ContactRows from '../components/ContactRows';
+import CompanyRows from '../components/CompanyRows';
 import LEGAL from '../data/legal.json';
 
 /* Company profile text from the About Us document (data/legal.json), which
@@ -76,6 +77,11 @@ const AboutOne = () => {
                                 </div>
                             </article>
                         ))}
+                    </div>
+
+                    <div className="bm-about__company">
+                        <p className="bm-head__eyebrow">Company details</p>
+                        <CompanyRows />
                     </div>
                 </div>
             </section>

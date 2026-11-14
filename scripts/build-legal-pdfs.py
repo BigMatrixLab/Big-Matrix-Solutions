@@ -66,6 +66,7 @@ dl div { display: flex; gap: 12pt; padding: 5pt 0; border-bottom: .6pt solid #e3
 dt { width: 58pt; flex: none; font-family: 'JetBrains Mono', monospace; font-size: 7pt;
      letter-spacing: .12em; text-transform: uppercase; color: #6b7280; line-height: 2.2; }
 dd { margin: 0; font-weight: 600; color: #111318; }
+dl.wide dt { width: 82pt; }
 """
 
 def inline(text, company):
@@ -81,6 +82,19 @@ def list_item(text, company):
     if 0 < at < 48:
         return f'<li><strong>{html.escape(text[:at])}:</strong> {inline(text[at + 2:], company)}</li>'
     return f'<li>{inline(text, company)}</li>'
+
+
+def company_rows(company):
+    """Legal identity rows, the same as src/components/CompanyRows.jsx."""
+    rows = [
+        ('Legal name', company['legalName']),
+        ('Registration', f'{company["registration"]}, RJSC Reg. No. {company["rjscRegNo"]}'
+                         f' ({company["incorporated"]})'),
+    ]
+    if company.get('tradeLicenseNo'):
+        rows.append(('Trade licence', f'{company["tradeLicenseNo"]} ({company["tradeLicenseAuthority"]})'))
+    rows.append(('Registered office', company['address']))
+    return rows
 
 
 def build_html(doc, company):
@@ -107,6 +121,10 @@ def build_html(doc, company):
                 f'<div><dt>Address</dt><dd>{html.escape(company["address"])}</dd></div>'
                 '</dl>'
             )
+        if s.get('company'):
+            parts.append('<dl class="wide">' + ''.join(
+                f'<div><dt>{html.escape(k)}</dt><dd>{html.escape(v)}</dd></div>'
+                for k, v in company_rows(company)) + '</dl>')
         parts += [f'<p>{inline(t, company)}</p>' for t in s.get('after', [])]
         parts.append('</section>')
     return (f'<!doctype html><html lang="en"><head><meta charset="utf-8">'

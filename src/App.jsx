@@ -95,6 +95,8 @@ function App() {
             <Route path="/contact" element={<Contact />} />
             {/* About Us lives on the main About page; the old link redirects. */}
             <Route path="/about-us" element={<Navigate to="/about" replace />} />
+            <Route path="/terms-and-conditions" element={<LegalPage slug="terms-and-conditions" />} />
+            <Route path="/terms" element={<Navigate to="/terms-and-conditions" replace />} />
             <Route path="/privacy-policy" element={<LegalPage slug="privacy-policy" />} />
             <Route path="/refund-policy" element={<LegalPage slug="refund-policy" />} />
             <Route path="/delivery-policy" element={<LegalPage slug="delivery-policy" />} />

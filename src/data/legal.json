@@ -1,6 +1,12 @@
 {
   "company": {
     "name": "Big-Matrix Solutions",
+    "legalName": "Big-Matrix Solutions Ltd.",
+    "registration": "Incorporated in Bangladesh under the Companies Act, 1994",
+    "rjscRegNo": "C-211514/2026",
+    "incorporated": "1 July 2026",
+    "tradeLicenseNo": "TRAD/DNCC/011096/2026",
+    "tradeLicenseAuthority": "Dhaka North City Corporation",
     "website": "https://big-matrix.com",
     "email": "contact@big-matrix.com",
     "phone": "+880 1339 870730",
@@ -12,13 +18,143 @@
   },
   "documents": [
     {
+      "slug": "terms-and-conditions",
+      "title": "Terms and Conditions",
+      "short": "Terms",
+      "description": "The terms that apply when you use big-matrix.com or buy and use the software products and services of Big-Matrix Solutions Ltd.",
+      "updated": "14 November 2026",
+      "intro": [
+        "These Terms and Conditions apply when you visit our website, https://big-matrix.com, or buy or use the software products and services of Big-Matrix Solutions Ltd. (\"Big-Matrix Solutions\", \"we\", \"us\" or \"our\"). Please read them carefully before you place an order."
+      ],
+      "sections": [
+        {
+          "heading": "Who we are",
+          "paragraphs": [
+            "Big-Matrix Solutions Ltd. is a private limited company incorporated in Bangladesh under the Companies Act, 1994. Our company details are:"
+          ],
+          "company": true
+        },
+        {
+          "heading": "Accepting these terms",
+          "paragraphs": [
+            "By using our website, creating an account or placing an order, you agree to these Terms and Conditions, our Privacy Policy, our Refund Policy and our Delivery Policy. If you are acting for an organisation, you confirm that you are authorised to accept these terms on its behalf. If you do not agree, please do not use our website or services."
+          ]
+        },
+        {
+          "heading": "Our products and services",
+          "paragraphs": [
+            "We sell software and digital services online: subscriptions to our cloud (SaaS) products, software licences, and software development and support services. We do not sell physical goods. Custom development projects are also governed by the signed agreement or quotation for that project; where it differs from these terms, the signed agreement applies."
+          ]
+        },
+        {
+          "heading": "Your account",
+          "list": [
+            "Give us accurate and complete information, and keep it up to date.",
+            "Keep your login details secure and do not share them outside your organisation.",
+            "Tell us straight away at contact@big-matrix.com if you think someone has used your account without permission.",
+            "You are responsible for activity that takes place under your account."
+          ]
+        },
+        {
+          "heading": "Orders, prices and payment",
+          "list": [
+            "Prices are shown in Bangladeshi Taka (BDT) unless we state otherwise, and include or exclude VAT as shown at checkout or in your quotation.",
+            "Online payments are processed by secure, licensed payment gateways. We do not see or store your full card number, PIN or account password.",
+            "Your order is confirmed when we receive confirmation of your payment.",
+            "We may decline or cancel an order, for example if a price was shown in error or a payment cannot be verified. If we cancel an order you have paid for, we refund the full amount."
+          ]
+        },
+        {
+          "heading": "Subscriptions and renewal",
+          "paragraphs": [
+            "Subscriptions run for the billing period you choose. Where your plan renews automatically, we tell you this before you pay. You can cancel at any time to stop the next renewal, and you keep access until the end of the period you have paid for."
+          ]
+        },
+        {
+          "heading": "Delivery",
+          "paragraphs": [
+            "Our products and services are delivered online. Cloud subscriptions are activated within 24 hours of payment confirmation, and licences and download links are sent within 1 working day. Full details are in our Delivery Policy."
+          ]
+        },
+        {
+          "heading": "Refunds",
+          "paragraphs": [
+            "You can request a refund in the cases set out in our Refund Policy. Approved refunds are completed within 7 to 10 working days and are paid to your original payment method."
+          ]
+        },
+        {
+          "heading": "Acceptable use",
+          "paragraphs": ["When you use our website, products or services, you must not:"],
+          "list": [
+            "Break any law or use them for fraud or any other unlawful purpose.",
+            "Try to gain unauthorised access to our systems or other users' data, or interfere with their security or performance.",
+            "Copy, modify, resell or reverse engineer our software, except where the law allows it or we agree in writing.",
+            "Upload malware or content that infringes the rights of others."
+          ]
+        },
+        {
+          "heading": "Your data and privacy",
+          "paragraphs": [
+            "We handle personal information as described in our Privacy Policy. Where you use our healthcare or business products to store your own clients' or patients' data, you remain responsible for that data and for the consent of the people it belongs to, and we process it only on your instructions."
+          ]
+        },
+        {
+          "heading": "Intellectual property",
+          "paragraphs": [
+            "Our website, software, designs and content belong to Big-Matrix Solutions Ltd. or our licensors. Buying a subscription or licence gives you the right to use the software under these terms; it does not transfer ownership. Your own data remains yours. Ownership of custom development work is set out in the agreement for that project."
+          ]
+        },
+        {
+          "heading": "Clinical and professional use",
+          "paragraphs": [
+            "Our diagnostic, imaging and AI tools support qualified professionals; they do not replace clinical or professional judgement. Decisions about patient care remain the responsibility of the treating clinician."
+          ]
+        },
+        {
+          "heading": "Availability and support",
+          "paragraphs": [
+            "We work to keep our website and services available and secure, but we cannot guarantee that they will always be uninterrupted or error-free. We may carry out maintenance, and we will try to give notice of planned downtime that affects your service."
+          ]
+        },
+        {
+          "heading": "Limitation of liability",
+          "paragraphs": [
+            "To the extent the law allows, we are not liable for indirect or consequential loss, such as loss of profit, revenue or data, arising from your use of our website or services. Our total liability for any claim is limited to the amount you paid us for the service concerned in the 12 months before the claim. Nothing in these terms limits liability that cannot be limited under the laws of Bangladesh."
+          ]
+        },
+        {
+          "heading": "Suspension and termination",
+          "paragraphs": [
+            "We may suspend or close an account that breaks these terms, fails to pay, or puts our systems or other users at risk. Where we can, we will tell you first and give you a chance to fix the problem. You can stop using our services and close your account at any time."
+          ]
+        },
+        {
+          "heading": "Changes to these terms",
+          "paragraphs": [
+            "We may update these Terms and Conditions from time to time. Changes take effect when we post them on this page with a new \"last updated\" date. The terms in force on the date of your order apply to that order."
+          ]
+        },
+        {
+          "heading": "Governing law",
+          "paragraphs": [
+            "These terms are governed by the laws of Bangladesh. We will try to settle any disagreement with you by discussion first. If we cannot, the courts of Dhaka, Bangladesh, have jurisdiction."
+          ]
+        },
+        {
+          "heading": "Contact us",
+          "paragraphs": ["If you have any questions about these Terms and Conditions, contact us:"],
+          "contact": true
+        }
+      ]
+    },
+    {
       "slug": "privacy-policy",
       "title": "Privacy Policy",
       "short": "Privacy",
       "description": "How Big-Matrix Solutions collects, uses, shares and protects personal information on big-matrix.com and in our products and services.",
-      "updated": "8 November 2026",
+      "updated": "14 November 2026",
       "intro": [
-        "This Privacy Policy explains how Big-Matrix Solutions (\"we\", \"us\" or \"our\") collects, uses, shares and protects information about you (\"you\" or \"your\") when you visit our website, https://big-matrix.com, contact us, or buy or use our software products and services.",
+        "This Privacy Policy explains how Big-Matrix Solutions Ltd. (\"Big-Matrix Solutions\", \"we\", \"us\" or \"our\") collects, uses, shares and protects information about you (\"you\" or \"your\") when you visit our website, https://big-matrix.com, contact us, or buy or use our software products and services.",
         "By using our website or services, you agree to the practices described in this policy."
       ],
       "sections": [
@@ -129,9 +265,10 @@
       "title": "Refund Policy",
       "short": "Refunds",
       "description": "When and how Big-Matrix Solutions refunds payments for its software subscriptions and digital services.",
-      "updated": "8 November 2026",
+      "updated": "14 November 2026",
       "intro": [
-        "Thank you for choosing Big-Matrix Solutions. We want you to be satisfied with our software and services. This Refund Policy explains when you can get a refund and how to request one. Please read it carefully before you make a payment."
+        "Thank you for choosing Big-Matrix Solutions Ltd. We want you to be satisfied with our software and services. This Refund Policy explains when you can get a refund and how to request one. Please read it carefully before you make a payment.",
+        "Refund timeline: approved refunds are completed within 7 to 10 working days."
       ],
       "sections": [
         {
@@ -171,19 +308,23 @@
             "The reason for your request."
           ],
           "after": [
-            "We will confirm that we have received your request within 2 working days, review it, and tell you whether it is approved within 7 working days."
+            "We will confirm that we have received your request within 1 working day, review it, and tell you whether it is approved within 3 working days."
           ]
         },
         {
           "heading": "How refunds are paid",
           "paragraphs": [
-            "Approved refunds are paid to the original payment method: the same card, bank account or mobile financial service (MFS) account you paid with. We start the refund within 3 working days of approval. Depending on your bank or MFS provider, the money usually reaches your account within 7 to 10 working days."
+            "Approved refunds are paid to the original payment method: the same card, bank account or mobile financial service (MFS) account you paid with."
+          ],
+          "list": [
+            "Standard refund timeline: every approved refund is completed within 7 to 10 working days of approval.",
+            "Within that time we send the refund to your payment provider, and your bank or MFS provider posts it to your account."
           ]
         },
         {
           "heading": "Late or missing refunds",
           "paragraphs": [
-            "If you have not received an approved refund within 10 working days, please check your bank or MFS account again, then contact your card issuer, bank or MFS provider, as it can take some time before a refund is posted. If you have done this and still have not received your refund, contact us at contact@big-matrix.com and we will follow it up with the payment provider."
+            "If you have not received an approved refund within 10 working days of approval, please check your bank or MFS account again, then contact your card issuer, bank or MFS provider, as it can take some time before a refund is posted. If you have done this and still have not received your refund, contact us at contact@big-matrix.com and we will follow it up with the payment provider."
           ]
         },
         {
@@ -204,9 +345,9 @@
       "title": "Delivery Policy",
       "short": "Delivery",
       "description": "How and when Big-Matrix Solutions delivers its software subscriptions, licences and digital services after payment.",
-      "updated": "8 November 2026",
+      "updated": "14 November 2026",
       "intro": [
-        "Thank you for choosing Big-Matrix Solutions. This Delivery Policy explains how we deliver the software products and services you buy from us. By placing an order, you agree to the terms below."
+        "Thank you for choosing Big-Matrix Solutions Ltd. This Delivery Policy explains how we deliver the software products and services you buy from us. By placing an order, you agree to the terms below."
       ],
       "sections": [
         {
@@ -269,9 +410,9 @@
       "title": "About Us",
       "short": "About",
       "description": "Who Big-Matrix Solutions is, what we build, and why hospitals and businesses choose us.",
-      "updated": "8 November 2026",
+      "updated": "14 November 2026",
       "intro": [
-        "Big-Matrix Solutions is a software company based in Dhaka, Bangladesh. We build software for healthcare and business: AI diagnostics, hospital systems, SaaS platforms and e-commerce. More than ten of our systems are running in production, with five clinical partners and support around the clock."
+        "Big-Matrix Solutions Ltd. is a software company based in Dhaka, Bangladesh. We build software for healthcare and business: AI diagnostics, hospital systems, SaaS platforms and e-commerce. More than ten of our systems are running in production, with five clinical partners and support around the clock."
       ],
       "sections": [
         {
@@ -308,6 +449,10 @@
           "paragraphs": [
             "We are committed to lasting relationships with our customers, built on software that works, honest communication and dependable support. We keep improving our products and exploring new technology so that what we build continues to meet our customers' changing needs."
           ]
+        },
+        {
+          "heading": "Company details",
+          "company": true
         },
         {
           "heading": "Connect with us",

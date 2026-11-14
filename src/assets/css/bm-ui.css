@@ -1346,7 +1346,8 @@ a.bm-card__title:hover,
   border-top: 1px solid var(--bm-line-ink);
 }
 
-.bm-footer__copy { margin: 0; font-size: var(--bm-fs-xs); color: rgba(255, 255, 255, 0.5); }
+.bm-footer__copy { margin: 0; font-size: var(--bm-fs-xs); color: rgba(255, 255, 255, 0.5); text-align: left; }
+.bm-footer__id { white-space: nowrap; }
 
 .bm-footer__social { display: flex; gap: var(--bm-2); margin: 0; padding: 0; list-style: none; }
 
@@ -4325,6 +4326,11 @@ a.bm-card__title:hover,
 .bm-legal__contact dd { margin: 0; font-weight: 600; color: var(--bm-text); }
 .bm-legal__contact a { font-weight: inherit; color: var(--bm-text); text-decoration: none; }
 .bm-legal__contact a:hover { color: var(--bm-accent-ink); }
+/* Company details: longer labels ("Registered office"). */
+.bm-legal__contact--wide > div { grid-template-columns: 150px minmax(0, 1fr); }
+@media (max-width: 575px) {
+  .bm-legal__contact--wide > div { grid-template-columns: minmax(0, 1fr); gap: 2px; }
+}
 
 /* Narrower desktops: the section index goes, the rail stays. */
 @media (max-width: 1199px) {
@@ -4341,6 +4347,13 @@ a.bm-card__title:hover,
 /* --------------------------------------------------------------------------
    About page (pages/AboutOne.jsx): intro width and "Connect with us"
    -------------------------------------------------------------------------- */
+
+.bm-about__company {
+  margin-top: var(--bm-6);
+  padding-top: var(--bm-5);
+  border-top: 1px solid var(--bm-line);
+}
+.bm-about__company .bm-legal__contact { margin-bottom: 0; }
 
 /* "Who we are" intro runs the full container width. */
 .bm-about__intro .bm-head { grid-template-columns: minmax(0, 1fr); }

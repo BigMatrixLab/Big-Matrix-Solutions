@@ -80,7 +80,7 @@ def sheet(company, logo, page=None, total=None):
         f'<div class="head"><img class="logo" src="{logo}" alt="{html.escape(company["name"])}">'
         f'<ul class="contact">{contact}</ul></div>'
         '<div class="rule"></div>'
-        f'<div class="foot"><span>{html.escape(company["name"])}</span>'
+        f'<div class="foot"><span>{html.escape(company.get("legalName", company["name"]))}</span>'
         f'<span>{number}</span></div>'
         '<div class="band"><span></span><span></span></div>'
         '</div>'

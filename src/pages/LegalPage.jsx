@@ -2,6 +2,7 @@ import { useEffect, useRef } from 'react';
 import { Link } from 'react-router-dom';
 import Breadcrumb from '../components/Breadcrumb';
 import ContactRows from '../components/ContactRows';
+import CompanyRows from '../components/CompanyRows';
 import Seo from '../components/Seo';
 import LEGAL from '../data/legal.json';
 import useScrollSpy from '../utils/useScrollSpy';
@@ -127,6 +128,7 @@ const LegalPage = ({ slug }) => {
                                         </List>
                                     )}
                                     {section.contact && <ContactRows />}
+                                    {section.company && <CompanyRows />}
                                     {(section.after || []).map((text) => <p key={text}>{linkify(text)}</p>)}
                                 </section>
                             );

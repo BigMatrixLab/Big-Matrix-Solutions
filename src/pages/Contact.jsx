@@ -149,7 +149,7 @@ const DIRECT_LINES = [
     },
     {
         icon: 'bi bi-geo-alt-fill',
-        label: 'Office',
+        label: 'Registered office',
         value: 'Section# 11, Block# A, Mainroad# 3, Plot# 10, Pallabi, Mirpur, Dhaka - 1216, Bangladesh',
     },
     {

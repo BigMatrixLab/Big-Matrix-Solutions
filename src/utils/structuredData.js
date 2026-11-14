@@ -48,6 +48,7 @@ export const organisation = () => ({
     '@type': 'Organization',
     '@id': ORG_ID,
     name: BRAND,
+    legalName: 'Big-Matrix Solutions Ltd.',
     url: SITE,
     logo: LOGO,
     description:

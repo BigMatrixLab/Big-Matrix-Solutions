@@ -1,5 +1,8 @@
 import React from 'react';
 import { Link } from 'react-router-dom';
+import LEGAL from '../data/legal.json';
+
+const { company } = LEGAL;
 
 const COMPANY_LINKS = [
     { to: '/about', label: 'About Us' },
@@ -13,6 +16,7 @@ const COMPANY_LINKS = [
 
 // Company documents (pages/LegalPage.jsx, content in data/legal.json).
 const LEGAL_LINKS = [
+    { to: '/terms-and-conditions', label: 'Terms and Conditions' },
     { to: '/privacy-policy', label: 'Privacy Policy' },
     { to: '/refund-policy', label: 'Refund Policy' },
     { to: '/delivery-policy', label: 'Delivery Policy' },
@@ -101,7 +105,11 @@ const FooterArea = () => {
 
                 <div className="bm-footer__bottom">
                     <p className="bm-footer__copy">
-                        © {new Date().getFullYear()} Big-Matrix Solutions. All rights reserved.
+                        © {new Date().getFullYear()} {company.legalName} All rights reserved.
+                        <br />
+                        <span className="bm-footer__id">RJSC Reg. No. {company.rjscRegNo}</span>
+                        {' · '}
+                        <span className="bm-footer__id">Trade Licence No. {company.tradeLicenseNo}</span>
                     </p>
                     <ul className="bm-footer__social">
                         {SOCIAL_LINKS.map((social) => (
