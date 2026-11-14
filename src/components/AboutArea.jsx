@@ -45,8 +45,10 @@ const AboutArea = () => {
           <figure className="bm-lab__visual">
             <span className="bm-lab__tag">R&amp;D facility</span>
             <img
-              src="/assets/images/home-2/about-thumb.png"
+              src="/assets/images/home-2/about-thumb.webp"
               alt="Big-Matrix research and development lab"
+              width="1000"
+              height="675"
               loading="lazy"
             />
           </figure>

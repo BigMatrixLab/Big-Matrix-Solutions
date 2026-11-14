@@ -255,7 +255,7 @@ const ProjectRxCloud = () => {
                                 rel="noopener noreferrer"
                                 aria-label="Open the live RxCloud platform at rxcloud.care in a new tab"
                             >
-                                <img src="/assets/images/projects/RXCloud.png" alt="RxCloud Platform" />
+                                <img fetchpriority="high" src="/assets/images/projects/RXCloud.webp" alt="RxCloud Platform" />
                                 <span className="bc-hero-figure__cue">
                                     <i className="bi bi-box-arrow-up-right" aria-hidden="true"></i>
                                     Open live site

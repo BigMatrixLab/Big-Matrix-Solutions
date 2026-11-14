@@ -8,6 +8,7 @@ import Seo from '../components/Seo';
 import ContactRows from '../components/ContactRows';
 import CompanyRows from '../components/CompanyRows';
 import LEGAL from '../data/legal.json';
+import { graph, organisation, webPage } from '../utils/structuredData';
 
 /* Company profile text from the About Us document (data/legal.json), which
    also builds the company profile PDF, so the page and the PDF stay in step. */
@@ -52,6 +53,7 @@ const AboutOne = () => {
                 title="About the company"
                 description="A research and development company that ships production software. Who we are, how we work, and the practice areas we build in."
                 path="/about"
+                schema={graph(organisation(), webPage('AboutPage', 'About Big-Matrix Solutions', '/about'))}
             />
             <Breadcrumb
                 pageTitle="A company that ships production software"

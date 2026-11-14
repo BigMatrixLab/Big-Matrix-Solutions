@@ -1,57 +1,60 @@
-﻿import React, { useEffect } from 'react';
+﻿import React, { lazy, useEffect } from 'react';
 import { Routes, Route, Navigate } from 'react-router-dom';
 import Layout from './components/Layout';
 import Home from './pages/Home';
-import AboutOne from './pages/AboutOne';
-import Services from './pages/Services';
-import ServiceDetails from './pages/ServiceDetails';
+// Eager: the error boundary renders it when anything else fails to load.
+import ServerError from './pages/ServerError';
+import ErrorBoundary from './components/ErrorBoundary';
+import ScrollToTopOnNavigation from './components/ScrollToTopOnNavigation';
+
+// Every page except Home is loaded on demand, so a visitor downloads only
+// the code for the page they open. Pre-rendered HTML shows the page before
+// its code arrives (scripts/prerender.js, src/main.jsx).
+const AboutOne = lazy(() => import('./pages/AboutOne'));
+const Services = lazy(() => import('./pages/Services'));
+const ServiceDetails = lazy(() => import('./pages/ServiceDetails'));
 // Team is parked: pages are kept in src/pages, routes are disabled so /team
 // falls through to the 404 handler. Re-enable the import and the two routes
 // below to bring the section back.
 // import Team from './pages/Team';
 // import TeamDetails from './pages/TeamDetails';
-import Project from './pages/Project';
-import ProjectDetails from './pages/ProjectDetails';
-import ProjectBreastCancer from './pages/projects/ProjectBreastCancer';
-import ProjectManagement from './pages/projects/ProjectManagement';
-import ProjectXRaySegmentation from './pages/projects/ProjectXRaySegmentation';
-import ProjectScriptor from './pages/projects/ProjectScriptor';
-import ProjectAutoContouring from './pages/projects/ProjectAutoContouring';
-import ProjectLungCTReport from './pages/projects/ProjectLungCTReport';
-import ProjectIELTSTutors from './pages/projects/ProjectIELTSTutors';
-import ProjectRxCloud from './pages/projects/ProjectRxCloud';
-import ProjectDicomViewer from './pages/projects/ProjectDicomViewer';
-import ProjectDosemetric from './pages/projects/ProjectDosemetric';
-import Blog from './pages/Blog';
-import BlogDetails from './pages/BlogDetails';
-import Careers from './pages/Careers';
-import CareerDetails from './pages/CareerDetails';
-import Faqs from './pages/Faqs';
-import Mission from './pages/Mission';
-import Contact from './pages/Contact';
-import LegalPage from './pages/LegalPage';
-import NotFound from './pages/NotFound';
-import Forbidden from './pages/Forbidden';
-import ServerError from './pages/ServerError';
-import ErrorBoundary from './components/ErrorBoundary';
-import ScrollToTopOnNavigation from './components/ScrollToTopOnNavigation';
+const Project = lazy(() => import('./pages/Project'));
+const ProjectDetails = lazy(() => import('./pages/ProjectDetails'));
+const ProjectBreastCancer = lazy(() => import('./pages/projects/ProjectBreastCancer'));
+const ProjectManagement = lazy(() => import('./pages/projects/ProjectManagement'));
+const ProjectXRaySegmentation = lazy(() => import('./pages/projects/ProjectXRaySegmentation'));
+const ProjectScriptor = lazy(() => import('./pages/projects/ProjectScriptor'));
+const ProjectAutoContouring = lazy(() => import('./pages/projects/ProjectAutoContouring'));
+const ProjectLungCTReport = lazy(() => import('./pages/projects/ProjectLungCTReport'));
+const ProjectIELTSTutors = lazy(() => import('./pages/projects/ProjectIELTSTutors'));
+const ProjectRxCloud = lazy(() => import('./pages/projects/ProjectRxCloud'));
+const ProjectDicomViewer = lazy(() => import('./pages/projects/ProjectDicomViewer'));
+const ProjectDosemetric = lazy(() => import('./pages/projects/ProjectDosemetric'));
+const Blog = lazy(() => import('./pages/Blog'));
+const BlogDetails = lazy(() => import('./pages/BlogDetails'));
+const Careers = lazy(() => import('./pages/Careers'));
+const CareerDetails = lazy(() => import('./pages/CareerDetails'));
+const Faqs = lazy(() => import('./pages/Faqs'));
+const Mission = lazy(() => import('./pages/Mission'));
+const Contact = lazy(() => import('./pages/Contact'));
+const LegalPage = lazy(() => import('./pages/LegalPage'));
+const NotFound = lazy(() => import('./pages/NotFound'));
+const Forbidden = lazy(() => import('./pages/Forbidden'));
 
 function App() {
   useEffect(() => {
-    // Handle Loader - show for at least one full sequence (3 seconds)
-    const timer = setTimeout(() => {
-      const preloader = document.getElementById('preloader');
-      if (preloader) {
-        // Add the loaded class to trigger CSS transition
-        document.body.classList.add('loaded');
-        
-        // Remove from DOM entirely after transition finishes
-        setTimeout(() => {
-          preloader.style.display = 'none';
-        }, 600);
-      }
-    }, 3000);
+    // The preloader only exists on pages that were not pre-rendered (the app
+    // shell, local dev). It used to stay for a fixed 3 seconds; it now fades as
+    // soon as the app has mounted. Pre-rendered pages ship without it
+    // (scripts/prerender.js), so their content shows on first paint.
+    const preloader = document.getElementById('preloader');
+    document.body.classList.add('loaded');
+    if (!preloader) return undefined;
 
+    // Remove from the layout once the CSS fade has finished.
+    const timer = setTimeout(() => {
+      preloader.style.display = 'none';
+    }, 600);
     return () => clearTimeout(timer);
   }, []);
 

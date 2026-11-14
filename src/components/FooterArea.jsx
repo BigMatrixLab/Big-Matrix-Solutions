@@ -11,6 +11,7 @@ const COMPANY_LINKS = [
     // { to: '/team', label: 'Team' },
     { to: '/blog', label: 'Insights' },
     { to: '/careers', label: 'Careers' },
+    { to: '/faqs', label: 'FAQs' },
     { to: '/contact', label: 'Contact' },
 ];
 
@@ -41,8 +42,8 @@ const FooterArea = () => {
             <div className="bm-container">
                 <div className="bm-footer__top">
                     <div>
-                        <Link to="/" className="bm-footer__brand">
-                            <img src="/assets/images/bm_new_logo.png" alt="" aria-hidden="true" />
+                        <Link to="/" className="bm-footer__brand" aria-label="Big-Matrix Solutions home">
+                            <img src="/assets/images/bm_new_logo.webp" alt="" aria-hidden="true" width="183" height="48" loading="lazy" />
                             {/* <span className="bm-footer__wordmark">
                                 <span>Big-Matrix</span><br />Solutions
                             </span> */}
@@ -105,7 +106,8 @@ const FooterArea = () => {
 
                 <div className="bm-footer__bottom">
                     <p className="bm-footer__copy">
-                        © {new Date().getFullYear()} {company.legalName} All rights reserved.
+                        {/* The year can differ from the pre-rendered HTML around New Year. */}
+                        © <span suppressHydrationWarning>{new Date().getFullYear()}</span> {company.legalName} All rights reserved.
                     </p>
                     <ul className="bm-footer__social">
                         {SOCIAL_LINKS.map((social) => (

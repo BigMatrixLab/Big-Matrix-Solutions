@@ -1,4 +1,23 @@
 import { Helmet } from 'react-helmet-async';
+import { projectData } from '../data/content';
+import { graph, softwareApplication, breadcrumbs } from '../utils/structuredData';
+
+/* Product pages are hand-built (src/pages/projects), so their
+   SoftwareApplication markup is derived here from the project's markdown
+   front matter instead of being repeated in each page. */
+const productSchema = (path) => {
+    const slug = path.match(/^\/project\/([^/]+)$/)?.[1];
+    const item = slug && projectData.find((p) => p.slug === slug);
+    if (!item) return undefined;
+    return graph(
+        softwareApplication(item),
+        breadcrumbs([
+            { name: 'Home', path: '/' },
+            { name: 'Products', path: '/project' },
+            { name: item.title, path },
+        ]),
+    );
+};
 
 /**
  * Per-page title, description and canonical URL.
@@ -43,7 +62,8 @@ const clamp = (text, max) => {
  * @param schema      JSON-LD object from src/utils/structuredData.js. Rendered
  *                    as one application/ld+json block.
  */
-const Seo = ({ title, description, path = '/', noindex = false, schema }) => {
+const Seo = ({ title, description, path = '/', noindex = false, schema: given }) => {
+    const schema = given || (noindex ? undefined : productSchema(path));
     // ~60 characters is the practical SERP limit. Short titles get the brand
     // suffix for recognition; a long article headline is more useful than the
     // brand, so it stands alone rather than being truncated to make room.

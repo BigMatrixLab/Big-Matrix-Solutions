@@ -269,7 +269,7 @@ const ProjectBreastCancer = () => {
                             </p>
                         </div>
                         <figure className="bc-hero-figure">
-                            <img src="/assets/images/projects/Rad analysis.png" alt="Multimodal AI for Breast Cancer Diagnosis" />
+                            <img fetchpriority="high" src="/assets/images/projects/Rad analysis.webp" alt="Multimodal AI for Breast Cancer Diagnosis" />
                             <figcaption className="bc-figure-tag">
                                 <i className="bi bi-shield-check"></i>
                                 <span>

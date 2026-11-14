@@ -2,7 +2,7 @@
 id: "7"
 title: "X-Ray Segmentation Editor"
 category: "Medical AI Tools"
-image: "/assets/images/projects/x-ray-segmentation-editor.png"
+image: "/assets/images/projects/x-ray-segmentation-editor.webp"
 slug: "x-ray-segmentation-editor"
 desc: "Purpose-built annotation for X-ray imaging, giving clinicians a fast way to produce the labelled data diagnostic models depend on."
 client: "Healthcare Partner"
@@ -14,7 +14,7 @@ location: "https://segmentation-editor.pages.dev/"
 # X-Ray Segmentation Editor
 
 
-![X-Ray Segmentation Editor Platform](/assets/images/projects/x-ray-segmentation-editor.png)
+![X-Ray Segmentation Editor Platform](/assets/images/projects/x-ray-segmentation-editor.webp)
 
 ## Project Overview
 

@@ -2,7 +2,7 @@
 id: "8"
 title: "Big-Matrix Project Management Platform"
 category: "Project Management"
-image: "/assets/images/projects/PM-Dashboard.jpeg"
+image: "/assets/images/projects/PM-Dashboard.webp"
 slug: "bm-project-management"
 desc: "The board our own engineers run on: task tracking, deadlines and team coordination across every project in the lab."
 client: "Big-Matrix Solutions (Internal R&D)"
@@ -12,7 +12,7 @@ location: "https://pm.big-matrix.com/"
 
 # Project Management Platform
 
-![Project Management Dashboard](/assets/images/projects/PM-Dashboard.jpeg)
+![Project Management Dashboard](/assets/images/projects/PM-Dashboard.webp)
 
 ## Project Overview
 

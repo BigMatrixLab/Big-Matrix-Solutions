@@ -1,0 +1,6 @@
+# Cloudflare Pages redirects. Old URLs that the app used to redirect in the
+# browser; with pre-rendered pages and a real 404.html they need a server-side
+# 301 so search engines and shared links follow them.
+/about-us                    /about                  301
+/terms                       /terms-and-conditions   301
+/project/linac-qa-guardian   /project/dosemetric     301

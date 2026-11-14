@@ -204,7 +204,7 @@ const ProjectDicomViewer = () => {
                             </p>
                         </div>
                         <figure className="bc-hero-figure">
-                            <img src="/assets/images/projects/Dicom Viewer.png" alt="DicomViewer showing a CT study in the main reading window" />
+                            <img fetchpriority="high" src="/assets/images/projects/Dicom Viewer.webp" alt="DicomViewer showing a CT study in the main reading window" />
                             <figcaption className="bc-figure-tag">
                                 <i className="bi bi-file-earmark-binary"></i>
                                 <span>

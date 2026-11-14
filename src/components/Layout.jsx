@@ -1,3 +1,4 @@
+import { Suspense } from 'react';
 import { Outlet } from 'react-router-dom';
 import Header from './Header';
 import MobileMenu from './MobileMenu';
@@ -11,7 +12,10 @@ const Layout = () => {
             <Header />
             <MobileMenu />
             <main id="main-content">
-                <Outlet />
+                {/* Pages load on demand (App.jsx); header and footer stay put. */}
+                <Suspense fallback={null}>
+                    <Outlet />
+                </Suspense>
             </main>
             <FooterArea />
             <ScrollToTop />

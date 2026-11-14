@@ -278,7 +278,7 @@ const ProjectScriptor = () => {
                                 rel="noopener noreferrer"
                                 aria-label="Open the live Scriptor workspace at scriptor.space in a new tab"
                             >
-                                <img src="/assets/images/projects/Scriptor.png" alt="Scriptor Workspace" />
+                                <img fetchpriority="high" src="/assets/images/projects/Scriptor.webp" alt="Scriptor Workspace" />
                                 <span className="bc-hero-figure__cue">
                                     <i className="bi bi-box-arrow-up-right" aria-hidden="true"></i>
                                     Open live site

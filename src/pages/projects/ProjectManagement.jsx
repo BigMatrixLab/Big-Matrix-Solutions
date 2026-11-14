@@ -255,7 +255,7 @@ const ProjectManagement = () => {
                                 rel="noopener noreferrer"
                                 aria-label="Open the live Big-Matrix project management platform in a new tab"
                             >
-                                <img src="/assets/images/projects/PM-Dashboard.jpeg" alt="Big-Matrix Project Management Platform" />
+                                <img fetchpriority="high" src="/assets/images/projects/PM-Dashboard.webp" alt="Big-Matrix Project Management Platform" />
                                 <span className="bc-hero-figure__cue">
                                     <i className="bi bi-box-arrow-up-right" aria-hidden="true"></i>
                                     Open live site

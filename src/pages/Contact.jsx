@@ -2,6 +2,7 @@ import { useEffect, useRef, useState } from 'react';
 import Breadcrumb from '../components/Breadcrumb';
 import SectionHead from '../components/SectionHead';
 import Seo from '../components/Seo';
+import { graph, organisation, webPage } from '../utils/structuredData';
 
 const SUBJECTS = [
     { value: 'research', label: 'Research collaboration' },
@@ -256,6 +257,7 @@ const Contact = () => {
                 title="Contact"
                 description="Talk to the engineering team. Tell us the constraints and we will map them to an architecture."
                 path="/contact"
+                schema={graph(organisation(), webPage('ContactPage', 'Contact Big-Matrix Solutions', '/contact'))}
             />
             <Breadcrumb pageTitle="Talk to the engineering team" breadcrumbItem="Contact" />
 

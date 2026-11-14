@@ -248,8 +248,8 @@ const ProjectLungCTReport = () => {
                             </p>
                         </div>
                         <figure className="bc-hero-figure">
-                            <img
-                                src="/assets/images/projects/lung ct segmentation and report generation.png"
+                            <img fetchpriority="high"
+                                src="/assets/images/projects/lung ct segmentation and report generation.webp"
                                 alt="Lung CT Segmentation and Report Generation"
                             />
                             <figcaption className="bc-figure-tag">

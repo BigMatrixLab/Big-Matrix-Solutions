@@ -1,4 +1,4 @@
-import { useEffect, useRef, memo } from 'react';
+import { useEffect, useId, useRef, memo } from 'react';
 import './DotField.css';
 
 /**
@@ -56,7 +56,9 @@ const DotField = memo(({
     };
 
     const rebuildRef = useRef(null);
-    const glowIdRef = useRef(`dot-field-glow-${Math.random().toString(36).slice(2, 9)}`);
+    // useId, not Math.random: the id must be the same in the pre-rendered HTML
+    // and in the browser, or hydration fails.
+    const glowIdRef = useRef(`dot-field-glow-${useId().replace(/:/g, '')}`);
 
     useEffect(() => {
         const canvas = canvasRef.current;

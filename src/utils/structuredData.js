@@ -11,6 +11,9 @@
  * both accurate and consistent with how the posts sign their own quotes.
  */
 
+import LEGAL from '../data/legal.json';
+
+const COMPANY = LEGAL.company;
 const SITE = 'https://big-matrix.com';
 const BRAND = 'Big-Matrix Solutions';
 const LOGO = `${SITE}/assets/images/big_matrix_cube.png`;
@@ -48,17 +51,63 @@ export const organisation = () => ({
     '@type': 'Organization',
     '@id': ORG_ID,
     name: BRAND,
-    legalName: 'Big-Matrix Solutions Ltd.',
+    legalName: COMPANY.legalName,
     url: SITE,
     logo: LOGO,
     description:
-        'Research and development lab building production AI systems for healthcare, industry and public infrastructure.',
+        'Software company in Dhaka, Bangladesh, building AI diagnostics, hospital systems, SaaS platforms and industrial automation.',
+    email: COMPANY.email,
+    telephone: COMPANY.phone.replace(/\s+/g, ''),
+    address: {
+        '@type': 'PostalAddress',
+        streetAddress: 'Section# 11, Block# A, Mainroad# 3, Plot# 10, Pallabi',
+        addressLocality: 'Mirpur, Dhaka',
+        postalCode: '1216',
+        addressCountry: 'BD',
+    },
+    contactPoint: {
+        '@type': 'ContactPoint',
+        contactType: 'customer support',
+        email: COMPANY.email,
+        telephone: COMPANY.phone.replace(/\s+/g, ''),
+        areaServed: 'Worldwide',
+    },
     // Kept in step with SOCIAL_LINKS in src/components/FooterArea.jsx.
-    sameAs: [
-        'https://www.linkedin.com/company/big-matrix-solutions/',
-        'https://www.facebook.com/BigMatrix.Solutions',
-    ],
+    sameAs: [COMPANY.linkedin, COMPANY.facebook],
 });
+
+/** A page about the company, the contact page or the FAQ page. */
+export const webPage = (type, name, path) => ({
+    '@type': type,
+    name,
+    url: `${SITE}${path}`,
+    about: { '@id': ORG_ID },
+    publisher: { '@id': ORG_ID },
+});
+
+/** FAQ page: the same question and answer pairs the page shows. */
+export const faqPage = (items) => ({
+    '@type': 'FAQPage',
+    mainEntity: items.map(({ q, a }) => ({
+        '@type': 'Question',
+        name: q,
+        acceptedAnswer: { '@type': 'Answer', text: a },
+    })),
+});
+
+/** A product page (src/content/projects). */
+export const softwareApplication = (item) =>
+    compact({
+        '@type': 'SoftwareApplication',
+        name: item.title,
+        description: item.desc,
+        image: absolute(item.image),
+        applicationCategory: 'BusinessApplication',
+        applicationSubCategory: item.category,
+        operatingSystem: 'Web',
+        url: `${SITE}/project/${item.slug}`,
+        publisher: { '@id': ORG_ID },
+    });
 
 export const website = () => ({
     '@type': 'WebSite',

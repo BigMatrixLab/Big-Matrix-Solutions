@@ -22,19 +22,32 @@ const isLive = (post) => {
     return Number.isNaN(at) || at <= Date.now();
 };
 
-export async function onRequestGet({ request, params, env, next }) {
-    const response = await next();
-    const type = response.headers.get('content-type') || '';
-    if (!response.ok || !type.includes('text/html')) return response;
-
-    let post;
+const readPost = async (request, env, slug) => {
     try {
         const manifest = await env.ASSETS.fetch(new URL('/og/blog.json', request.url));
-        if (!manifest.ok) return response;
-        post = (await manifest.json())[params.slug];
+        return manifest.ok ? (await manifest.json())[slug] : null;
     } catch {
-        return response;
+        return null;
     }
+};
+
+export async function onRequestGet({ request, params, env, next }) {
+    let response = await next();
+    const post = await readPost(request, env, params.slug);
+
+    // Pages are pre-rendered at build time (scripts/prerender.js). A post whose
+    // date passed after the last build has no page yet, so Pages answers with
+    // 404.html. Serve the app shell with 200 instead; the browser renders the
+    // post exactly as before, and the next build pre-renders it.
+    if (response.status === 404) {
+        if (!post || !post.title || !isLive(post)) return response;
+        const shell = await env.ASSETS.fetch(new URL('/app-shell', request.url));
+        if (!shell.ok) return response;
+        response = new Response(shell.body, { status: 200, headers: shell.headers });
+    }
+
+    const type = response.headers.get('content-type') || '';
+    if (!response.ok || !type.includes('text/html')) return response;
     if (!post || !post.title || !isLive(post)) return response;
 
     const url = `${SITE}/blog/${params.slug}`;

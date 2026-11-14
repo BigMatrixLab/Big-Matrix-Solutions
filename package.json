@@ -5,7 +5,7 @@
   "type": "module",
   "scripts": {
     "dev": "node scripts/sync-content.js && node scripts/generate-sitemap.js && node scripts/generate-og-manifest.js && node scripts/blog-images.js && vite",
-    "build": "node scripts/sync-content.js && node scripts/generate-sitemap.js && node scripts/generate-og-manifest.js && node scripts/blog-images.js && vite build",
+    "build": "node scripts/sync-content.js && node scripts/generate-sitemap.js && node scripts/generate-og-manifest.js && node scripts/blog-images.js && vite build && node scripts/prerender.js",
     "images:optimise": "node scripts/blog-images.js --optimise",
     "lint": "eslint .",
     "preview": "vite preview"

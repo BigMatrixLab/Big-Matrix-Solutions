@@ -279,7 +279,7 @@ const ProjectXRaySegmentation = () => {
                                 rel="noopener noreferrer"
                                 aria-label="Open the live X-Ray Segmentation Editor in a new tab"
                             >
-                                <img src="/assets/images/projects/x-ray-segmentation-editor.png" alt="X-Ray Segmentation Editor workspace" />
+                                <img fetchpriority="high" src="/assets/images/projects/x-ray-segmentation-editor.webp" alt="X-Ray Segmentation Editor workspace" />
                                 <span className="bc-hero-figure__cue">
                                     <i className="bi bi-box-arrow-up-right" aria-hidden="true"></i>
                                     Open live demo

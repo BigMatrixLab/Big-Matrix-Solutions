@@ -21,7 +21,7 @@ import './assets/css/bm-ui.css'
    in the purchased template and third-party CSS that tokens cannot reach. */
 import './assets/css/bm-theme.css'
 
-ReactDOM.createRoot(document.getElementById('root')).render(
+const app = (
   <React.StrictMode>
     <HelmetProvider>
       <ThemeProvider>
@@ -30,5 +30,15 @@ ReactDOM.createRoot(document.getElementById('root')).render(
         </BrowserRouter>
       </ThemeProvider>
     </HelmetProvider>
-  </React.StrictMode>,
+  </React.StrictMode>
 )
+
+/* Production pages arrive pre-rendered (scripts/prerender.js): hydrate them so
+   React adopts the HTML already on screen instead of repainting it. The app
+   shell and the dev server have an empty #root and render from scratch. */
+const container = document.getElementById('root')
+if (container.hasChildNodes()) {
+  ReactDOM.hydrateRoot(container, app)
+} else {
+  ReactDOM.createRoot(container).render(app)
+}

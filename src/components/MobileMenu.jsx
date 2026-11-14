@@ -38,7 +38,7 @@ const MobileMenu = () => {
                 <div className="bm-container">
                     <div className="bm-nav__inner">
                         <Link to="/" className="bm-nav__logo" aria-label="Big-Matrix Solutions — home">
-                            <img src="/assets/images/bm_new_logo.png" alt="Big-Matrix Solutions" />
+                            <img src="/assets/images/bm_new_logo.webp" alt="Big-Matrix Solutions" width="152" height="40" loading="lazy" />
                         </Link>
                         {/* Toggle sits outside the drawer so the theme can be
                             changed without opening the menu. */}

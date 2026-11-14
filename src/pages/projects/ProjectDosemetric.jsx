@@ -214,7 +214,7 @@ const ProjectDosemetric = () => {
                             </p>
                         </div>
                         <figure className="bc-hero-figure">
-                            <img src="/assets/images/projects/Dosemetric.png" alt="Dosemetric dashboard" />
+                            <img fetchpriority="high" src="/assets/images/projects/Dosemetric.webp" alt="Dosemetric dashboard" />
                             <figcaption className="bc-figure-tag">
                                 <i className="bi bi-layers"></i>
                                 <span>

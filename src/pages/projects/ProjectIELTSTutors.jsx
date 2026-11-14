@@ -146,7 +146,7 @@ const ProjectIELTSTutors = () => {
                             </p>
                         </div>
                         <figure className="bc-hero-figure">
-                            <img src="/assets/images/projects/IELTS.png" alt="IELTS Tutors App" />
+                            <img fetchpriority="high" src="/assets/images/projects/IELTS.webp" alt="IELTS Tutors App" />
                             <figcaption className="bc-figure-tag">
                                 <i className="bi bi-stars"></i>
                                 <span>

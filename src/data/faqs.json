@@ -1,0 +1,42 @@
+[
+  {
+    "q": "What does Big-Matrix Solutions do?",
+    "a": "Big-Matrix Solutions Ltd. is a software company in Dhaka, Bangladesh. We build software for healthcare and business: AI diagnostics, hospital systems, SaaS platforms, industrial automation and e-commerce. More than ten of our systems are running in production, with five clinical partners."
+  },
+  {
+    "q": "Where is Big-Matrix Solutions located?",
+    "a": "Our registered office is at Section# 11, Block# A, Mainroad# 3, Plot# 10, Pallabi, Mirpur, Dhaka - 1216, Bangladesh. Our trade licence number is TRAD/DNCC/011096/2026, issued by Dhaka North City Corporation."
+  },
+  {
+    "q": "What products do you offer?",
+    "a": "Our products include RxCloud for clinic and practice management, Auto Contouring Software for radiotherapy planning, Lung CT Segmentation and Report Generation, the X-Ray Segmentation Editor, DicomViewer, Dosemetric, Scriptor and IELTS Tutors."
+  },
+  {
+    "q": "Do you build custom software?",
+    "a": "Yes. We design, build and support custom software in AI and machine learning, big data analytics, enterprise and SaaS platforms, industrial automation, and cloud and DevOps. Custom projects follow a written quotation or agreement with agreed milestones."
+  },
+  {
+    "q": "How can I pay?",
+    "a": "Online payments go through secure, licensed payment gateways, so you can pay by card, bank or mobile financial service (MFS). Prices are in Bangladeshi Taka (BDT) unless stated otherwise. We never see or store your full card number, PIN or account password."
+  },
+  {
+    "q": "How long does a refund take?",
+    "a": "Approved refunds are completed within 7 to 10 working days and are paid back to your original payment method. We confirm your request within 1 working day and tell you whether it is approved within 3 working days. The full conditions are in our Refund Policy."
+  },
+  {
+    "q": "How and when is my order delivered?",
+    "a": "Everything we sell is delivered online; we do not ship physical goods. Cloud subscriptions are activated within 24 hours of payment confirmation, and software licences and download links are sent within 1 working day. Custom work follows the timeline in your quotation."
+  },
+  {
+    "q": "Do you provide support?",
+    "a": "Yes. Our team provides 24/7 support coverage for the systems we run. For anything else, email contact@big-matrix.com or call +880 1339 870730. Our working days are Sunday to Thursday, excluding public holidays in Bangladesh."
+  },
+  {
+    "q": "How do you protect my data?",
+    "a": "We use encrypted connections (HTTPS), access controls and secure hosting. In our healthcare and business products, we process client and patient data only on our client's instructions. Full details are in our Privacy Policy."
+  },
+  {
+    "q": "Do your AI tools replace doctors?",
+    "a": "No. Our diagnostic, imaging and AI tools support qualified professionals; they do not replace clinical judgement. Decisions about patient care stay with the treating clinician."
+  }
+]

@@ -3,6 +3,11 @@ import { PARTNERS } from '../data/partners';
 import DotField from './DotField';
 import { useTheme } from '../context/themeStore';
 
+/* Cloudinary serves the partner logos; ask it for WebP/AVIF at the display
+   size (208x96 box) instead of the full-size PNG. Other hosts pass through. */
+const logoSrc = (url) =>
+    url.includes('res.cloudinary.com/') ? url.replace('/upload/', '/upload/f_auto,q_auto,w_320/') : url;
+
 const FACTS = [
     { value: '10+', label: 'Systems in production' },
     { value: '5', label: 'Clinical partners' },
@@ -87,7 +92,7 @@ const Hero = () => {
                             <div className="bm-logos__rail">
                                 {[...PARTNERS, ...PARTNERS].map((partner, index) => (
                                     <div className="bm-logos__item" key={`${partner.id}-${index}`}>
-                                        <img src={partner.logo} alt={partner.name} />
+                                        <img src={logoSrc(partner.logo)} alt={partner.name} loading="lazy" />
                                     </div>
                                 ))}
                             </div>

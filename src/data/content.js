@@ -1,9 +1,10 @@
 import { loadContent } from '../utils/contentLoader';
 
-// Glob imports for markdown files
-const projectModules = import.meta.glob('/src/content/projects/*.md', { as: 'raw', eager: true });
-const blogModules = import.meta.glob('/src/content/blogs/*.md', { as: 'raw', eager: true });
-const serviceModules = import.meta.glob('/src/content/services/*.md', { as: 'raw', eager: true });
+// Front matter only (see the md-frontmatter-only plugin in vite.config.js):
+// listings need titles, dates and summaries, not the article bodies.
+const projectModules = import.meta.glob('/src/content/projects/*.md', { query: '?frontmatter', import: 'default', eager: true });
+const blogModules = import.meta.glob('/src/content/blogs/*.md', { query: '?frontmatter', import: 'default', eager: true });
+const serviceModules = import.meta.glob('/src/content/services/*.md', { query: '?frontmatter', import: 'default', eager: true });
 
 // Export the parsed data
 export const projectData = loadContent(projectModules, 'projects');

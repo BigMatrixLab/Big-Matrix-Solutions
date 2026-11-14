@@ -272,7 +272,7 @@ const ProjectAutoContouring = () => {
                             </p>
                         </div>
                         <figure className="bc-hero-figure">
-                            <img src="/assets/images/projects/auto contouring software.png" alt="Auto Contouring Software" />
+                            <img fetchpriority="high" src="/assets/images/projects/auto contouring software.webp" alt="Auto Contouring Software" />
                             <figcaption className="bc-figure-tag">
                                 <i className="bi bi-shield-check"></i>
                                 <span>

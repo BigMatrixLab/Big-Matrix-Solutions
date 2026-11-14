@@ -2,7 +2,7 @@
 id: "2"
 title: "Multimodal AI for Breast Cancer Diagnosis"
 category: "AI in Healthcare"
-image: "/assets/images/projects/Rad analysis.png"
+image: "/assets/images/projects/Rad analysis.webp"
 slug: "nsu_ctrg_2021_2022_breast_cancer"
 desc: "Multimodal AI that segments mammograms and drafts the diagnostic report, turning raw imaging into findings a radiologist can act on."
 client: "North South University"
