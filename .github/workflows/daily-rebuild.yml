@@ -1,0 +1,35 @@
+# Rebuilds the site on Cloudflare Pages once a day.
+#
+# Blog posts are scheduled by date. The build pre-renders them and adds them
+# to the sitemap and llms.txt only when it runs after their date, so a daily
+# build makes each post appear on its publish date.
+#
+# The build is started through a Cloudflare Pages deploy hook. Its URL is a
+# secret: it lives in the repository secret CLOUDFLARE_DEPLOY_HOOK_URL
+# (Settings -> Secrets and variables -> Actions), never in this file. Until that
+# secret exists, the job skips with a warning instead of failing.
+
+name: Daily rebuild
+
+on:
+  schedule:
+    - cron: '10 0 * * *' # every day at 00:10 UTC (06:10 in Dhaka)
+  workflow_dispatch: # manual run from the Actions tab
+
+permissions: {}
+
+jobs:
+  rebuild:
+    runs-on: ubuntu-latest
+    timeout-minutes: 5
+    steps:
+      - name: Trigger Cloudflare Pages build
+        env:
+          HOOK: ${{ secrets.CLOUDFLARE_DEPLOY_HOOK_URL }}
+        run: |
+          if [ -z "$HOOK" ]; then
+            echo "::warning::CLOUDFLARE_DEPLOY_HOOK_URL is not set; nothing to trigger."
+            exit 0
+          fi
+          curl -fsS -X POST "$HOOK" > /dev/null
+          echo "Cloudflare Pages build triggered."
