@@ -31,5 +31,12 @@ jobs:
             echo "::warning::CLOUDFLARE_DEPLOY_HOOK_URL is not set; nothing to trigger."
             exit 0
           fi
-          curl -fsS -X POST "$HOOK" > /dev/null
+          # Take only the Cloudflare URL from the secret, so a pasted line break,
+          # space, quotes or a whole "curl -X POST ..." line do not break it.
+          URL=$(printf '%s' "$HOOK" | tr -d '\r' | grep -oE 'https://api\.cloudflare\.com/client/v4/pages/webhooks/deploy_hooks/[A-Za-z0-9_-]+' | head -n 1 || true)
+          if [ -z "$URL" ]; then
+            echo "::error::CLOUDFLARE_DEPLOY_HOOK_URL does not contain a Cloudflare deploy hook URL (https://api.cloudflare.com/client/v4/pages/webhooks/deploy_hooks/...). Re-paste the URL from Cloudflare."
+            exit 1
+          fi
+          curl -fsS -X POST "$URL" > /dev/null
           echo "Cloudflare Pages build triggered."
